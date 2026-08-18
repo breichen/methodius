@@ -696,6 +696,16 @@ h3 {
   color: var(--color-text);
 }
 
+.flipbook-page p+ul,
+.flipbook-page p+ol {
+  margin-top: 4px;
+}
+
+.flipbook-page ul+p,
+.flipbook-page ol+p {
+  margin-top: 14px;
+}
+
 .flipbook-page strong {
   color: var(--color-accent);
 }
@@ -812,6 +822,59 @@ h3 {
     height: 40px;
     font-size: 1.2rem;
   }
+}
+
+/* ============================================
+   LISTEN IM FLIPBOOK
+   ============================================ */
+
+.flipbook-page ul,
+.flipbook-turn-face ul {
+  list-style: none;
+  margin: 14px 0 16px;
+  padding: 0 0 0 6px;
+}
+
+.flipbook-page li,
+.flipbook-turn-face li {
+  position: relative;
+
+  margin: 0 0 5px;
+  padding-left: 21px;
+
+  font-size: 0.82rem;
+  line-height: 1.48;
+  color: var(--color-text);
+
+  /* Ein einzelner Eintrag soll nicht auseinandergerissen werden. */
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Letzter Eintrag bekommt keinen unnötigen Abstand */
+.flipbook-page li:last-child,
+.flipbook-turn-face li:last-child {
+  margin-bottom: 0;
+}
+
+/* Kleiner roter Listenpunkt */
+.flipbook-page li::before,
+.flipbook-turn-face li::before {
+  content: "";
+
+  position: absolute;
+  left: 1px;
+  top: 0.72em;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+  background: var(--color-accent);
+
+  transform: translateY(-50%);
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
 }
 
 /* ============================================

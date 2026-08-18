@@ -71,18 +71,49 @@ if (!buch) {
 // Absatz/Überschrift/Trennlinie) - wird sowohl für die normale Anzeige
 // als auch für die Seitenaufteilung der Blätter-Ansicht genutzt.
 function markdownZuBloecke(markdown) {
-  const bloecke = markdown.trim().split(/\n\s*\n/); // an Leerzeilen trennen
+  const bloecke = markdown.trim().split(/\n\s*\n/);
 
   const html = bloecke.map(block => {
     const zeile = block.trim();
 
-    if (zeile.startsWith("### ")) return `<h3>${inlineFormat(zeile.slice(4))}</h3>`;
-    if (zeile.startsWith("## "))  return `<h2>${inlineFormat(zeile.slice(3))}</h2>`;
-    if (zeile.startsWith("# "))   return `<h1>${inlineFormat(zeile.slice(2))}</h1>`;
-    if (zeile === "---")          return `<hr>`;
+    if (zeile.startsWith("### ")) {
+      return `<h3>${inlineFormat(zeile.slice(4))}</h3>`;
+    }
 
-    // normaler Absatz: einzelne Zeilenumbrüche innerhalb eines Blocks -> <br>
-    const zeilenUmbruch = zeile.split("\n").map(inlineFormat).join("<br>");
+    if (zeile.startsWith("## ")) {
+      return `<h2>${inlineFormat(zeile.slice(3))}</h2>`;
+    }
+
+    if (zeile.startsWith("# ")) {
+      return `<h1>${inlineFormat(zeile.slice(2))}</h1>`;
+    }
+
+    if (zeile === "---") {
+      return `<hr>`;
+    }
+
+    // Markdown-Aufzählung:
+    // Mehrere Zeilen, die mit "- " beginnen, werden zu einer
+    // echten <ul>-Liste.
+    const zeilen = zeile.split("\n").map(z => z.trim());
+
+    if (
+      zeilen.length > 0 &&
+      zeilen.every(z => z.startsWith("- "))
+    ) {
+      const items = zeilen
+        .map(z => `<li>${inlineFormat(z.slice(2))}</li>`)
+        .join("");
+
+      return `<ul>${items}</ul>`;
+    }
+
+    // Normaler Absatz:
+    const zeilenUmbruch = zeile
+      .split("\n")
+      .map(inlineFormat)
+      .join("<br>");
+
     return `<p>${zeilenUmbruch}</p>`;
   });
 
@@ -334,42 +365,150 @@ function blaettere(schritt) {
 // Inhalt nicht mehr hineinpasst, beginnt eine neue Seite.
 function teileInSeiten(bloecke) {
   const messSeite = document.createElement("div");
-  messSeite.className = "flipbook-page";
+
+  messSeite.className = "flipbook-page flipbook-measure-page";
   messSeite.style.position = "absolute";
   messSeite.style.visibility = "hidden";
-  messSeite.style.left = "-9999px";
-  messSeite.style.maxWidth = "none"; // Mess-Element soll nicht durch vw-Grenzen schrumpfen
+  messSeite.style.pointerEvents = "none";
+  messSeite.style.left = "-10000px";
+  messSeite.style.top = "0";
+  messSeite.style.width = "480px";
+  messSeite.style.maxWidth = "480px";
+  messSeite.style.height = "660px";
+
   document.body.appendChild(messSeite);
 
   const seiten = [];
   let aktuelleSeite = [];
 
-  bloecke.forEach(block => {
-    // Jedes Top-Level-Kapitel (# Überschrift -> <h1>) beginnt auf einer
-    // frischen Seite, auch wenn auf der aktuellen noch Platz wäre.
-    const istKapitelStart = block.startsWith("<h1");
-    if (istKapitelStart && aktuelleSeite.length > 0) {
+  function passtAufSeite(html) {
+    messSeite.innerHTML = aktuelleSeite.join("\n") + html;
+    return messSeite.scrollHeight <= messSeite.clientHeight;
+  }
+
+  function neueSeite() {
+    if (aktuelleSeite.length > 0) {
       seiten.push(aktuelleSeite);
-      aktuelleSeite = [];
-      messSeite.innerHTML = "";
     }
 
-    const vorherigerInhalt = messSeite.innerHTML;
-    messSeite.innerHTML = vorherigerInhalt + block;
+    aktuelleSeite = [];
+    messSeite.innerHTML = "";
+  }
 
-    if (messSeite.scrollHeight > messSeite.clientHeight && aktuelleSeite.length > 0) {
-      // Block passt nicht mehr auf die aktuelle Seite -> neue Seite beginnen
-      seiten.push(aktuelleSeite);
-      aktuelleSeite = [block];
-      messSeite.innerHTML = block;
-    } else {
+  bloecke.forEach(block => {
+    const istKapitelStart = block.startsWith("<h1");
+
+    /*
+     * Kapitelüberschriften beginnen weiterhin auf einer neuen Seite.
+     */
+    if (istKapitelStart && aktuelleSeite.length > 0) {
+      neueSeite();
+    }
+
+    /*
+     * Normale Blöcke:
+     * Absatz, Überschrift, HR etc.
+     */
+    if (!block.startsWith("<ul>") && !block.startsWith("<ol>")) {
+      if (!passtAufSeite(block) && aktuelleSeite.length > 0) {
+        neueSeite();
+      }
+
       aktuelleSeite.push(block);
+      messSeite.innerHTML = aktuelleSeite.join("\n");
+
+      return;
+    }
+
+    /*
+     * LISTEN:
+     * Die Liste wird in einzelne <li>-Elemente zerlegt.
+     */
+    const istUl = block.startsWith("<ul>");
+    const tag = istUl ? "ul" : "ol";
+
+    const match = block.match(
+      new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`)
+    );
+
+    if (!match) {
+      aktuelleSeite.push(block);
+      messSeite.innerHTML = aktuelleSeite.join("\n");
+      return;
+    }
+
+    const listenInhalt = match[1];
+
+    const items = listenInhalt.match(/<li>[\s\S]*?<\/li>/g) || [];
+
+    let aktuelleListe = [];
+
+    items.forEach(item => {
+      const testListe = `
+        <${tag}>
+          ${aktuelleListe.join("\n")}
+          ${item}
+        </${tag}>
+      `;
+
+      const testInhalt = aktuelleSeite.concat(testListe);
+
+      messSeite.innerHTML = testInhalt.join("\n");
+
+      /*
+       * Passt der nächste Eintrag nicht mehr:
+       *
+       * 1. aktuelle Liste auf die aktuelle Seite schreiben
+       * 2. Seite abschließen
+       * 3. neuen Listeneintrag auf nächster Seite beginnen
+       */
+      if (
+        messSeite.scrollHeight > messSeite.clientHeight &&
+        aktuelleListe.length > 0
+      ) {
+        aktuelleSeite.push(`
+          <${tag}>
+            ${aktuelleListe.join("\n")}
+          </${tag}>
+        `);
+
+        neueSeite();
+
+        aktuelleListe = [item];
+
+        messSeite.innerHTML = `
+          <${tag}>
+            ${item}
+          </${tag}>
+        `;
+
+        return;
+      }
+
+      aktuelleListe.push(item);
+    });
+
+    /*
+     * Übrig gebliebene Listeneinträge an die aktuelle Seite hängen.
+     */
+    if (aktuelleListe.length > 0) {
+      const fertigeListe = `
+        <${tag}>
+          ${aktuelleListe.join("\n")}
+        </${tag}>
+      `;
+
+      aktuelleSeite.push(fertigeListe);
+      messSeite.innerHTML = aktuelleSeite.join("\n");
     }
   });
 
-  if (aktuelleSeite.length > 0) seiten.push(aktuelleSeite);
+  if (aktuelleSeite.length > 0) {
+    seiten.push(aktuelleSeite);
+  }
 
   document.body.removeChild(messSeite);
+
   return seiten.length > 0 ? seiten : [[]];
 }
 
