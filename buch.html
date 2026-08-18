@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+  Diese Seite ist ein WIEDERVERWENDBARES TEMPLATE für alle Bücher.
+  Sie liest den Buchtitel aus der URL (z.B. buch.html?titel=der-perfekte-sonntag),
+  zeigt das passende Bild aus pics/ und lädt den Text aus der passenden .md-Datei
+  aus md/ nach.
+
+  WICHTIG: Das Nachladen der .md-Datei per fetch() funktioniert nur, wenn die
+  Seite über einen lokalen Server läuft (z.B. VS-Code-Erweiterung "Live Server"),
+  NICHT wenn du die Datei per Doppelklick öffnest (file://-Adresse). Der Browser
+  blockiert das Nachladen lokaler Dateien aus Sicherheitsgründen sonst.
+-->
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratgeber – Dr. Maximilian Methodius</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Homemade+Apple&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="logo">Dr. Maximilian Methodius</a>
+      <nav>
+        <ul>
+          <li><a href="index.html#ratgeber">Ratgeber</a></li>
+          <li><a href="index.html#autor">Über den Autor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <!-- Wird per JavaScript befüllt, siehe unten -->
+      <div id="buch-inhalt">
+        <p>Lade Ratgeber …</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>&copy; 2026 Dr. Maximilian Methodius</p>
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <!-- Reihenfolge wichtig: erst die Datenliste, dann dieses Script -->
+  <script src="js/ratgeber.js"></script>
+  <script src="js/buch.js"></script>
+
+</body>
+
+</html>

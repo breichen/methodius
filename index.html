@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- 
+  Willkommen! Das ist dein erstes eigenes Website-Grundgerüst.
+  Ändere einfach die Texte, speichere die Datei und lade die Seite
+  im Browser neu (F5) – so lernst du am schnellsten.
+-->
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Maximilian Methodius – Ratgeber gegen den Strom</title>
+
+  <!-- Zwei Google-Schriftarten laden: eine für Überschriften, eine für Fließtext -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Homemade+Apple&display=swap"
+    rel="stylesheet">
+
+  <!-- Verknüpfung zur separaten CSS-Datei, die das Aussehen steuert -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <!-- header = Kopfbereich der Seite -->
+  <header class="site-header">
+    <div class="wrap">
+      <span class="logo">Dr. Maximilian Methodius</span>
+      <!-- nav = Navigation, ul/li = Liste der Menüpunkte -->
+      <nav>
+        <ul>
+          <li><a href="#ratgeber">Ratgeber</a></li>
+          <li><a href="#autor">Über den Autor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO-BEREICH (erster Eindruck) ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Ratgeber für ein Leben, das nicht immer ganz so ernst genommen werden muss</p>
+      <h1>Willkommen bei Dr. Maximilian Methodius</h1>
+
+      <div class="autor-box">
+        <img class="autor-foto" src="pics/autor-portrait.png" alt="Porträt von Dr. Maximilian Methodius">
+        <div>
+          <p class="autor-name">Dr. Maximilian Methodius</p>
+          <p class="autor-tagline">Experte in allen Gebieten, Spezialist für ungewöhnliche Lösungen und anerkannter
+            Fachmann für die großen und kleinen Probleme des modernen Lebens.</p>
+        </div>
+      </div>
+
+      <p class="hero-text">Das Leben ist nicht immer leicht.</p>
+      <p class="hero-text">
+        Es gibt Termine, Rechnungen, Verpflichtungen, Nachrichten, die man beantworten sollte,
+        und Menschen, die einem erklären möchten, wie man sein Leben endlich richtig führt.
+      </p>
+      <p class="hero-text">Und dann wäre da noch das Internet.</p>
+
+      <!-- Kurze, stakkatoartige Zeilen -> eigene CSS-Klasse "poem-lines" -->
+      <p class="poem-lines">
+        Alle optimieren sich.<br>
+        Alle werden produktiver.<br>
+        Alle ernähren sich perfekt.<br>
+        Alle machen Sport.<br>
+        Alle meditieren.<br>
+        Alle haben ihre Ziele gefunden.<br>
+        Alle schwimmen mit dem Strom.
+      </p>
+
+      <p class="hero-text"><strong>Wir nicht.</strong></p>
+      <p class="hero-text">Denn manchmal ist es viel gesünder, einfach einmal quer zu schwimmen.</p>
+    </div>
+  </section>
+
+  <!-- ===== RATGEBER GEGEN DEN STROM ===== -->
+  <section id="ratgeber" class="section">
+    <div class="wrap">
+      <h2>Ratgeber gegen den Strom</h2>
+      <p>Die Ratgeber von <strong>Dr. Maximilian Methodius</strong> sind keine gewöhnlichen Ratgeber.</p>
+      <p>Sie versprechen dir nicht, dass du in sieben Tagen ein neuer Mensch wirst.</p>
+      <p>
+        Sie erklären dir nicht, wie du morgens um 5 Uhr aufstehst, 17 Gewohnheiten etablierst
+        und nebenbei noch dein persönliches Imperium aufbaust.
+      </p>
+      <p>Und sie möchten dir auch nicht erzählen, dass du nur „mehr an dich glauben“ musst.</p>
+      <p>Stattdessen nehmen sie die großen Themen des Lebens und drehen sie einmal um. <strong>Mit Absicht.</strong></p>
+
+      <p class="poem-lines">
+        Aus Abnehmen wird Muskelabbau.<br>
+        Aus Smalltalk wird eine Überlebenstechnik.<br>
+        Aus Freundschaft wird eine Anleitung zum kontrollierten sozialen Rückzug.
+      </p>
+
+      <p>
+        Und aus Selbstoptimierung wird hoffentlich das, was im Alltag manchmal viel wichtiger ist:
+        <strong>ein kleines Lächeln.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== KAPITEL: NEUESTE RATGEBER ===== -->
+  <section id="neueste" class="section section-alt">
+    <div class="wrap">
+      <h2>Neueste Ratgeber</h2>
+      <p>Die letzten Bücher, die gegen den Strom geschwommen sind.</p>
+      <!-- Dieser Container wird per JavaScript (js/buchgrid.js) automatisch befüllt -->
+      <div id="neueste-ratgeber" class="book-grid"></div>
+      <p class="grid-link"><a href="alle-ratgeber.html">Alle Ratgeber ansehen →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== KAPITEL: ZUFÄLLIGE EMPFEHLUNGEN ===== -->
+  <section id="empfehlungen" class="section">
+    <div class="wrap">
+      <h2>Zufällige Empfehlungen</h2>
+      <p>Drei Ratgeber, ausgewürfelt – lade die Seite neu für eine neue Auswahl.</p>
+      <div id="zufaellige-empfehlungen" class="book-grid"></div>
+      <p class="grid-link"><a href="alle-ratgeber.html">Alle Ratgeber ansehen →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== GEGEN DEN STROM SCHWIMMEN ===== -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2>Gegen den Strom zu schwimmen muss nicht anstrengend sein.</h2>
+      <p>Vielleicht musst du nicht immer besser werden.</p>
+      <p>Vielleicht darfst du manchmal einfach nur lachen.</p>
+
+      <p class="poem-lines">
+        Über dich.<br>
+        Über andere.<br>
+        Über das Fitnessstudio.<br>
+        Über Gruppenchats.<br>
+        Über gute Ratschläge.<br>
+        Über die Tatsache, dass wir alle ziemlich häufig so tun, als hätten wir unser Leben im Griff.
+      </p>
+
+      <p>Diese Ratgeber wollen keine Welt verändern.</p>
+      <p>
+        Sie wollen nur ein kleines Gegengewicht zu all den Menschen sein, die dir ständig erklären,
+        <strong>wie du dich verändern solltest.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== KEIN COACHING ===== -->
+  <section class="section">
+    <div class="wrap">
+      <h2>Kein Coaching. Keine Erfolgsgarantie. Keine Morgenroutine um 5 Uhr.</h2>
+      <p>Nur ein paar Seiten, die dich vielleicht zum Lachen bringen.</p>
+      <p>Denn vielleicht ist das manchmal schon genug.</p>
+      <p>Du musst nicht jeden Tag dein Leben optimieren.</p>
+      <p>Du musst nicht jeden Tag produktiver sein als am Tag zuvor.</p>
+      <p>Du musst nicht aus jedem Problem eine persönliche Wachstumschance machen.</p>
+      <p><strong>Manchmal darf ein Tag einfach ein Tag sein.</strong></p>
+      <p>Und wenn du dabei einmal lachen musst, war er vielleicht sogar ein ziemlich guter.</p>
+    </div>
+  </section>
+
+  <!-- ===== SCHWIMM GEGEN DEN STROM ===== -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2>Schwimm ruhig ein bisschen gegen den Strom.</h2>
+      <p>
+        Während alle anderen versuchen, möglichst schnell ans Ziel zu kommen,
+        dürfen wir uns auch einmal fragen: <strong>Wo wollen eigentlich alle hin?</strong>
+      </p>
+      <p>Vielleicht gibt es gar keinen Grund, jede Bewegung mitzumachen.</p>
+      <p>Vielleicht ist es manchmal besser, kurz stehen zu bleiben.</p>
+      <p>Die Richtung zu wechseln.</p>
+      <p>Oder einfach am Ufer zu sitzen und zuzusehen, wie die anderen vorbeischwimmen.</p>
+      <p>Die Ratgeber von <strong>Dr. Maximilian Methodius</strong> sind eine kleine Einladung dazu.</p>
+      <p>
+        <strong>Nicht alles ernst zu nehmen.</strong><br>
+        <strong>Nicht alles optimieren zu müssen.</strong><br>
+        <strong>Und jeden Tag zumindest ein kleines bisschen zu lächeln.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== ÜBER DEN AUTOR ===== -->
+  <section id="autor" class="section">
+    <div class="wrap">
+      <p class="poem-lines">
+        <strong>Schwimm gegen den Strom.</strong><br>
+        <strong>Lach ein bisschen.</strong><br>
+        <strong>Und mach dir nicht zu viele Gedanken.</strong>
+      </p>
+
+      <p>Denn davon gibt es ohnehin schon genug.</p>
+
+      <p class="autor-signatur">Maximilian Methodius</p>
+      <p><strong>Dr. Maximilian Methodius</strong></p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>&copy; 2026 Dr. Maximilian Methodius</p>
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </footer>
+  <!-- Reihenfolge wichtig: erst die Datenliste, dann das Script, das sie nutzt -->
+  <script src="js/ratgeber.js"></script>
+  <script src="js/buchgrid.js"></script>
+
+</body>
+
+</html>

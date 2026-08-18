@@ -1,0 +1,35 @@
+/*
+  Liste aller Ratgeber.
+
+  Zwei Schreibweisen sind möglich:
+
+  1) Einfacher Text, wenn Dateiname und Anzeige-Titel identisch sind:
+       "Mein Buchtitel"
+     -> erwartet Dateien pics/Mein Buchtitel.png und md/Mein Buchtitel.md
+
+  2) Objekt, wenn sich Dateiname (slug) und Anzeige-Titel (titel)
+     unterscheiden sollen, z.B. für einen kürzeren/saubereren Dateinamen:
+       { slug: "mein-buch", titel: "Mein ausführlicher Buchtitel!" }
+     -> erwartet Dateien pics/mein-buch.png und md/mein-buch.md
+
+  Neue Bücher fügst du einfach am ENDE der Liste hinzu –
+  "Neueste Ratgeber" zeigt automatisch die letzten Einträge.
+*/
+const ratgeberRohdaten = [
+  "Abnehmen dank Muskelabbau",
+  "Die Kunst, beschäftigt auszusehen",
+  "Freunde verlieren leicht gemacht",
+  "Glücklich werden durch niedrigere Erwartungen",
+  "In 12 einfachen Schritten zum US-Präsidenten",
+  "KI (gar nicht) sicher nutzen",
+  "Smalltalk für Fortgeschrittene",
+  "Stress reduzieren durch Faulheit",
+  "Intelligent werden mit KI",
+  "Muskelkater ohne Training"
+];
+
+// Wandelt die Rohdaten oben in einheitliche { slug, titel }-Objekte um,
+// damit buchgrid.js und buch.js sich um nichts Zusätzliches kümmern müssen.
+const ratgeberListe = ratgeberRohdaten.map(eintrag =>
+  typeof eintrag === "string" ? { slug: eintrag, titel: eintrag } : eintrag
+);

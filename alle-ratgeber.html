@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+  Zeigt ALLE Bücher aus js/ratgeber.js als Grid, ohne Auswahl/Sortierung.
+  Neue Bücher fügst du nur in ratgeber.js hinzu – diese Seite zieht sie
+  automatisch nach.
+-->
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alle Ratgeber – Dr. Maximilian Methodius</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="logo">Dr. Maximilian Methodius</a>
+      <nav>
+        <ul>
+          <li><a href="index.html#ratgeber">Ratgeber</a></li>
+          <li><a href="index.html#autor">Über den Autor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <h1>Alle Ratgeber</h1>
+      <p>Die vollständige Sammlung – jeder Ratgeber, der bisher gegen den Strom geschwommen ist.</p>
+
+      <!-- Wird per JavaScript (js/allegrid.js) automatisch mit allen Büchern befüllt -->
+      <div id="alle-ratgeber" class="book-grid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>&copy; 2026 Dr. Maximilian Methodius</p>
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <!-- Reihenfolge wichtig: erst die Datenliste, dann buchgrid.js (liefert baueBuchKachel), dann dieses Script -->
+  <script src="js/ratgeber.js"></script>
+  <script src="js/buchgrid.js"></script>
+  <script src="js/allegrid.js"></script>
+
+</body>
+
+</html>
