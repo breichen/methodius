@@ -63,13 +63,13 @@ if (!buch) {
 /* ============================================
    MARKDOWN-ÜBERSETZER
    Sehr einfach: reicht für #/##/###-Überschriften, **fett**, *kursiv*,
-   --- als Trennlinie und normale Absätze. Kein Ersatz für eine
+   > Zitate, --- als Trennlinie und normale Absätze. Kein Ersatz für eine
    vollständige Markdown-Bibliothek, aber genug für unsere Ratgeber-Texte.
    ============================================ */
 
 // Wandelt Markdown in ein Array von HTML-Blöcken um (ein Eintrag pro
-// Absatz/Überschrift/Trennlinie) - wird sowohl für die normale Anzeige
-// als auch für die Seitenaufteilung der Blätter-Ansicht genutzt.
+// Absatz/Überschrift/Trennlinie/Zitat) - wird sowohl für die normale
+// Anzeige als auch für die Seitenaufteilung der Blätter-Ansicht genutzt.
 function markdownZuBloecke(markdown) {
   const bloecke = markdown.trim().split(/\n\s*\n/);
 
@@ -90,6 +90,35 @@ function markdownZuBloecke(markdown) {
 
     if (zeile === "---") {
       return `<hr>`;
+    }
+
+    /*
+     * MARKDOWN-ZITATE
+     *
+     * Beispiel:
+     *
+     * > **„Ich habe gestern etwas gemacht.“**
+     *
+     * Das ">" wird entfernt und der gesamte Block als <blockquote>
+     * ausgegeben.
+     *
+     * Mehrzeilige Zitate werden ebenfalls unterstützt:
+     *
+     * > Erste Zeile
+     * > Zweite Zeile
+     */
+    const zitatZeilen = zeile.split("\n").map(z => z.trim());
+
+    if (
+      zitatZeilen.length > 0 &&
+      zitatZeilen.every(z => z.startsWith(">"))
+    ) {
+      const zitatInhalt = zitatZeilen
+        .map(z => z.replace(/^>\s?/, ""))
+        .map(inlineFormat)
+        .join("<br>");
+
+      return `<blockquote>${zitatInhalt}</blockquote>`;
     }
 
     // Markdown-Aufzählung:
@@ -145,36 +174,50 @@ function styleAutorErwaehnung(bloecke) {
     if (block.startsWith("<h1")) acc.push(i);
     return acc;
   }, []);
+
   if (kapitelStarts.length === 0) return bloecke;
 
   const namensIndizes = bloecke.reduce((acc, block, i) => {
     if (NAME_REGEX.test(block)) acc.push(i);
     return acc;
   }, []);
+
   if (namensIndizes.length === 0) return bloecke;
 
   const ersterKapitelStart = kapitelStarts[0];
   const letzterKapitelStart = kapitelStarts[kapitelStarts.length - 1];
 
   const vorstellungIndex = namensIndizes.find(i => i > ersterKapitelStart);
-  const signaturIndex = [...namensIndizes].reverse().find(i => i > letzterKapitelStart);
+  const signaturIndex = [...namensIndizes]
+    .reverse()
+    .find(i => i > letzterKapitelStart);
 
   const ergebnis = [...bloecke];
 
   // --- Unterschrift im letzten Kapitel (Index bleibt gleich, also zuerst) ---
   if (signaturIndex !== undefined) {
     ergebnis[signaturIndex] =
-      `<p class="autor-signatur">${AUTOR_SIGNATUR_TEXT}</p>` + ergebnis[signaturIndex];
+      `<p class="autor-signatur">${AUTOR_SIGNATUR_TEXT}</p>` +
+      ergebnis[signaturIndex];
   }
 
   // --- Vorstellung im ersten Kapitel ---
-  if (vorstellungIndex !== undefined && vorstellungIndex !== signaturIndex) {
-    const einleitungsBloecke = ergebnis.slice(ersterKapitelStart + 1, vorstellungIndex);
+  if (
+    vorstellungIndex !== undefined &&
+    vorstellungIndex !== signaturIndex
+  ) {
+    const einleitungsBloecke = ergebnis.slice(
+      ersterKapitelStart + 1,
+      vorstellungIndex
+    );
+
     const einleitungsHtml = einleitungsBloecke.length
       ? `<div class="autor-einleitung">${einleitungsBloecke.join("\n")}</div>`
       : "";
 
-    const nameOhneTags = ergebnis[vorstellungIndex].replace(/^<p>|<\/p>$/g, "");
+    const nameOhneTags = ergebnis[vorstellungIndex]
+      .replace(/^<p>|<\/p>$/g, "");
+
     const nameBox = `<div class="autor-box">
       <img class="autor-foto" src="pics/autor-portrait.png" alt="Porträt von Dr. Maximilian Methodius">
       <div>
@@ -189,7 +232,11 @@ function styleAutorErwaehnung(bloecke) {
       nameBox
     ];
 
-    ergebnis.splice(ersterKapitelStart, vorstellungIndex - ersterKapitelStart + 1, ...neueBloecke);
+    ergebnis.splice(
+      ersterKapitelStart,
+      vorstellungIndex - ersterKapitelStart + 1,
+      ...neueBloecke
+    );
   }
 
   return ergebnis;
@@ -205,18 +252,23 @@ function bereinigeKapitelUeberschriften(bloecke) {
     const block = bloecke[i];
 
     if (/^<h1>Kapitel/.test(block)) {
-      i++; // die Kapitel-Überschrift selbst überspringen (nicht übernehmen)
+      i++;
 
-      // Alles bis zur nächsten <h2> unverändert übernehmen (z.B. falls
-      // dazwischen noch ein Absatz stehen sollte)
-      while (i < bloecke.length && !bloecke[i].startsWith("<h2>")) {
+      // Alles bis zur nächsten <h2> unverändert übernehmen
+      while (
+        i < bloecke.length &&
+        !bloecke[i].startsWith("<h2>")
+      ) {
         ergebnis.push(bloecke[i]);
         i++;
       }
 
       // Die gefundene <h2> zur neuen <h1> hochstufen
-      if (i < bloecke.length && bloecke[i].startsWith("<h2>")) {
-        const inhalt = bloecke[i].slice(4, -5); // "<h2>" und "</h2>" entfernen
+      if (
+        i < bloecke.length &&
+        bloecke[i].startsWith("<h2>")
+      ) {
+        const inhalt = bloecke[i].slice(4, -5);
         ergebnis.push(`<h1>${inhalt}</h1>`);
         i++;
       }
@@ -251,38 +303,66 @@ function initCoverLightbox() {
 
   bild.addEventListener("click", () => {
     baueLightboxGeruest();
-    const overlayBild = document.getElementById("cover-lightbox-bild");
+
+    const overlayBild =
+      document.getElementById("cover-lightbox-bild");
+
     overlayBild.src = bild.src;
     overlayBild.alt = bild.alt;
-    document.getElementById("cover-lightbox-overlay").classList.add("is-open");
+
+    document
+      .getElementById("cover-lightbox-overlay")
+      .classList.add("is-open");
   });
 }
 
 // Baut das Lightbox-Grundgerüst einmalig und hängt es an den <body>
 function baueLightboxGeruest() {
-  if (document.getElementById("cover-lightbox-overlay")) return;
+  if (
+    document.getElementById("cover-lightbox-overlay")
+  ) {
+    return;
+  }
 
   const overlay = document.createElement("div");
+
   overlay.id = "cover-lightbox-overlay";
   overlay.className = "cover-lightbox-overlay";
+
   overlay.innerHTML = `
     <button class="cover-lightbox-close" id="cover-lightbox-close" aria-label="Schließen">&times;</button>
     <img id="cover-lightbox-bild" src="" alt="">
   `;
+
   document.body.appendChild(overlay);
 
-  document.getElementById("cover-lightbox-close").addEventListener("click", schliesseLightbox);
+  document
+    .getElementById("cover-lightbox-close")
+    .addEventListener("click", schliesseLightbox);
+
   overlay.addEventListener("click", e => {
-    if (e.target === overlay) schliesseLightbox(); // Klick auf den dunklen Hintergrund schließt
+    if (e.target === overlay) {
+      schliesseLightbox();
+    }
   });
+
   document.addEventListener("keydown", e => {
-    if (overlay.classList.contains("is-open") && e.key === "Escape") schliesseLightbox();
+    if (
+      overlay.classList.contains("is-open") &&
+      e.key === "Escape"
+    ) {
+      schliesseLightbox();
+    }
   });
 }
 
 function schliesseLightbox() {
-  const overlay = document.getElementById("cover-lightbox-overlay");
-  if (overlay) overlay.classList.remove("is-open");
+  const overlay =
+    document.getElementById("cover-lightbox-overlay");
+
+  if (overlay) {
+    overlay.classList.remove("is-open");
+  }
 }
 
 /* ============================================
@@ -291,71 +371,119 @@ function schliesseLightbox() {
    mit Pfeilen zum Vor- und Zurückblättern.
    ============================================ */
 
-let flipSeiten = [];  // Array von Seiten; jede Seite ist ein Array von Block-HTML
-let flipIndex = 0;    // Index der linken Seite im aktuell sichtbaren Spread
+let flipSeiten = [];
+let flipIndex = 0;
 
 function initFlipbook(bloecke) {
   baueFlipbookGeruest();
-  // <hr> wird im Blättermodus nicht gebraucht: neue Kapitel beginnen
-  // ohnehin automatisch auf einer neuen Seite (siehe teileInSeiten)
-  const bloeckeOhneTrennlinie = bloecke.filter(block => block !== "<hr>");
+
+  // <hr> wird im Blättermodus nicht gebraucht:
+  // neue Kapitel beginnen ohnehin automatisch auf einer neuen Seite.
+  const bloeckeOhneTrennlinie =
+    bloecke.filter(block => block !== "<hr>");
+
   flipSeiten = teileInSeiten(bloeckeOhneTrennlinie);
   flipIndex = 0;
 
-  document.getElementById("blaettern-link").addEventListener("click", e => {
-    e.preventDefault();
-    flipIndex = 0;
-    zeigeSpread();
-    document.getElementById("flipbook-overlay").classList.add("is-open");
-  });
+  document
+    .getElementById("blaettern-link")
+    .addEventListener("click", e => {
+      e.preventDefault();
+
+      flipIndex = 0;
+      zeigeSpread();
+
+      document
+        .getElementById("flipbook-overlay")
+        .classList.add("is-open");
+    });
 }
 
 // Baut das Overlay-Grundgerüst einmalig und hängt es an den <body>,
-// damit es unabhängig vom Seiten-Layout immer im Vordergrund liegt.
 function baueFlipbookGeruest() {
-  if (document.getElementById("flipbook-overlay")) return;
+  if (document.getElementById("flipbook-overlay")) {
+    return;
+  }
 
   const overlay = document.createElement("div");
+
   overlay.id = "flipbook-overlay";
   overlay.className = "flipbook-overlay";
+
   overlay.innerHTML = `
     <button class="flipbook-close" id="flipbook-close" aria-label="Schließen">&times;</button>
+
     <div class="flipbook-stage">
       <button class="flipbook-arrow" id="flipbook-prev" aria-label="Vorherige Seite">&#8249;</button>
+
       <div>
         <div class="flipbook-book">
           <div class="flipbook-page" id="flipbook-page-links"></div>
           <div class="flipbook-page" id="flipbook-page-rechts"></div>
         </div>
+
         <div class="flipbook-counter" id="flipbook-counter"></div>
       </div>
+
       <button class="flipbook-arrow" id="flipbook-next" aria-label="Nächste Seite">&#8250;</button>
     </div>
   `;
+
   document.body.appendChild(overlay);
 
-  document.getElementById("flipbook-close").addEventListener("click", schliesseFlipbook);
+  document
+    .getElementById("flipbook-close")
+    .addEventListener("click", schliesseFlipbook);
+
   overlay.addEventListener("click", e => {
-    if (e.target === overlay) schliesseFlipbook(); // Klick auf den dunklen Hintergrund schließt
+    if (e.target === overlay) {
+      schliesseFlipbook();
+    }
   });
-  document.getElementById("flipbook-prev").addEventListener("click", () => blaettere(-2));
-  document.getElementById("flipbook-next").addEventListener("click", () => blaettere(2));
+
+  document
+    .getElementById("flipbook-prev")
+    .addEventListener("click", () => blaettere(-2));
+
+  document
+    .getElementById("flipbook-next")
+    .addEventListener("click", () => blaettere(2));
 
   document.addEventListener("keydown", e => {
-    if (!overlay.classList.contains("is-open")) return;
-    if (e.key === "ArrowLeft")  blaettere(-2);
-    if (e.key === "ArrowRight") blaettere(2);
-    if (e.key === "Escape")     schliesseFlipbook();
+    if (!overlay.classList.contains("is-open")) {
+      return;
+    }
+
+    if (e.key === "ArrowLeft") {
+      blaettere(-2);
+    }
+
+    if (e.key === "ArrowRight") {
+      blaettere(2);
+    }
+
+    if (e.key === "Escape") {
+      schliesseFlipbook();
+    }
   });
 }
 
 function schliesseFlipbook() {
-  document.getElementById("flipbook-overlay").classList.remove("is-open");
+  document
+    .getElementById("flipbook-overlay")
+    .classList.remove("is-open");
 }
 
 function blaettere(schritt) {
   const neuerIndex = flipIndex + schritt;
-  if (neuerIndex < 0 || neuerIndex >= flipSeiten.length) return;
+
+  if (
+    neuerIndex < 0 ||
+    neuerIndex >= flipSeiten.length
+  ) {
+    return;
+  }
+
   flipIndex = neuerIndex;
   zeigeSpread();
 }
@@ -366,7 +494,9 @@ function blaettere(schritt) {
 function teileInSeiten(bloecke) {
   const messSeite = document.createElement("div");
 
-  messSeite.className = "flipbook-page flipbook-measure-page";
+  messSeite.className =
+    "flipbook-page flipbook-measure-page";
+
   messSeite.style.position = "absolute";
   messSeite.style.visibility = "hidden";
   messSeite.style.pointerEvents = "none";
@@ -382,8 +512,13 @@ function teileInSeiten(bloecke) {
   let aktuelleSeite = [];
 
   function passtAufSeite(html) {
-    messSeite.innerHTML = aktuelleSeite.join("\n") + html;
-    return messSeite.scrollHeight <= messSeite.clientHeight;
+    messSeite.innerHTML =
+      aktuelleSeite.join("\n") + html;
+
+    return (
+      messSeite.scrollHeight <=
+      messSeite.clientHeight
+    );
   }
 
   function neueSeite() {
@@ -396,26 +531,38 @@ function teileInSeiten(bloecke) {
   }
 
   bloecke.forEach(block => {
-    const istKapitelStart = block.startsWith("<h1");
+    const istKapitelStart =
+      block.startsWith("<h1");
 
     /*
      * Kapitelüberschriften beginnen weiterhin auf einer neuen Seite.
      */
-    if (istKapitelStart && aktuelleSeite.length > 0) {
+    if (
+      istKapitelStart &&
+      aktuelleSeite.length > 0
+    ) {
       neueSeite();
     }
 
     /*
      * Normale Blöcke:
-     * Absatz, Überschrift, HR etc.
+     * Absatz, Überschrift, Zitat etc.
      */
-    if (!block.startsWith("<ul>") && !block.startsWith("<ol>")) {
-      if (!passtAufSeite(block) && aktuelleSeite.length > 0) {
+    if (
+      !block.startsWith("<ul>") &&
+      !block.startsWith("<ol>")
+    ) {
+      if (
+        !passtAufSeite(block) &&
+        aktuelleSeite.length > 0
+      ) {
         neueSeite();
       }
 
       aktuelleSeite.push(block);
-      messSeite.innerHTML = aktuelleSeite.join("\n");
+
+      messSeite.innerHTML =
+        aktuelleSeite.join("\n");
 
       return;
     }
@@ -428,18 +575,24 @@ function teileInSeiten(bloecke) {
     const tag = istUl ? "ul" : "ol";
 
     const match = block.match(
-      new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`)
+      new RegExp(
+        `<${tag}>([\\s\\S]*?)<\\/${tag}>`
+      )
     );
 
     if (!match) {
       aktuelleSeite.push(block);
-      messSeite.innerHTML = aktuelleSeite.join("\n");
+      messSeite.innerHTML =
+        aktuelleSeite.join("\n");
       return;
     }
 
     const listenInhalt = match[1];
 
-    const items = listenInhalt.match(/<li>[\s\S]*?<\/li>/g) || [];
+    const items =
+      listenInhalt.match(
+        /<li>[\s\S]*?<\/li>/g
+      ) || [];
 
     let aktuelleListe = [];
 
@@ -451,19 +604,18 @@ function teileInSeiten(bloecke) {
         </${tag}>
       `;
 
-      const testInhalt = aktuelleSeite.concat(testListe);
+      const testInhalt =
+        aktuelleSeite.concat(testListe);
 
-      messSeite.innerHTML = testInhalt.join("\n");
+      messSeite.innerHTML =
+        testInhalt.join("\n");
 
       /*
        * Passt der nächste Eintrag nicht mehr:
-       *
-       * 1. aktuelle Liste auf die aktuelle Seite schreiben
-       * 2. Seite abschließen
-       * 3. neuen Listeneintrag auf nächster Seite beginnen
        */
       if (
-        messSeite.scrollHeight > messSeite.clientHeight &&
+        messSeite.scrollHeight >
+          messSeite.clientHeight &&
         aktuelleListe.length > 0
       ) {
         aktuelleSeite.push(`
@@ -499,7 +651,9 @@ function teileInSeiten(bloecke) {
       `;
 
       aktuelleSeite.push(fertigeListe);
-      messSeite.innerHTML = aktuelleSeite.join("\n");
+
+      messSeite.innerHTML =
+        aktuelleSeite.join("\n");
     }
   });
 
@@ -509,31 +663,62 @@ function teileInSeiten(bloecke) {
 
   document.body.removeChild(messSeite);
 
-  return seiten.length > 0 ? seiten : [[]];
+  return seiten.length > 0
+    ? seiten
+    : [[]];
 }
 
 // Zeigt den Spread (linke + rechte Seite) für den aktuellen flipIndex an
 function zeigeSpread() {
-  const linkeSeite = document.getElementById("flipbook-page-links");
-  const rechteSeite = document.getElementById("flipbook-page-rechts");
-  const zaehler = document.getElementById("flipbook-counter");
-  const prevBtn = document.getElementById("flipbook-prev");
-  const nextBtn = document.getElementById("flipbook-next");
+  const linkeSeite =
+    document.getElementById(
+      "flipbook-page-links"
+    );
 
-  const inhaltLinks = flipSeiten[flipIndex] || [];
-  const inhaltRechts = flipSeiten[flipIndex + 1] || [];
+  const rechteSeite =
+    document.getElementById(
+      "flipbook-page-rechts"
+    );
 
-  linkeSeite.innerHTML = inhaltLinks.join("\n") +
+  const zaehler =
+    document.getElementById(
+      "flipbook-counter"
+    );
+
+  const prevBtn =
+    document.getElementById(
+      "flipbook-prev"
+    );
+
+  const nextBtn =
+    document.getElementById(
+      "flipbook-next"
+    );
+
+  const inhaltLinks =
+    flipSeiten[flipIndex] || [];
+
+  const inhaltRechts =
+    flipSeiten[flipIndex + 1] || [];
+
+  linkeSeite.innerHTML =
+    inhaltLinks.join("\n") +
     `<span class="flipbook-page-number left">${flipIndex + 1}</span>`;
 
-  rechteSeite.innerHTML = inhaltRechts.length
-    ? inhaltRechts.join("\n") + `<span class="flipbook-page-number">${flipIndex + 2}</span>`
-    : "";
+  rechteSeite.innerHTML =
+    inhaltRechts.length
+      ? inhaltRechts.join("\n") +
+        `<span class="flipbook-page-number">${flipIndex + 2}</span>`
+      : "";
 
-  zaehler.textContent = inhaltRechts.length
-    ? `Seite ${flipIndex + 1}–${flipIndex + 2} von ${flipSeiten.length}`
-    : `Seite ${flipIndex + 1} von ${flipSeiten.length}`;
+  zaehler.textContent =
+    inhaltRechts.length
+      ? `Seite ${flipIndex + 1}–${flipIndex + 2} von ${flipSeiten.length}`
+      : `Seite ${flipIndex + 1} von ${flipSeiten.length}`;
 
-  prevBtn.disabled = flipIndex <= 0;
-  nextBtn.disabled = flipIndex + 2 >= flipSeiten.length;
+  prevBtn.disabled =
+    flipIndex <= 0;
+
+  nextBtn.disabled =
+    flipIndex + 2 >= flipSeiten.length;
 }
