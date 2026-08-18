@@ -113,6 +113,43 @@ p {
 }
 
 /* ============================================
+   LISTEN IM FLIESSTEXT
+   Gilt für Ratgeber-Seiten UND die Autorseite, da beide auf derselben
+   parseMarkdownBloecke()-Übersetzung aufbauen.
+   ============================================ */
+#buch-text ul,
+#autor-inhalt ul {
+  list-style: none;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+#buch-text li,
+#autor-inhalt li {
+  position: relative;
+  margin: 0 0 8px 0;
+  padding-left: 24px;
+}
+
+#buch-text li:last-child,
+#autor-inhalt li:last-child {
+  margin-bottom: 0;
+}
+
+#buch-text li::before,
+#autor-inhalt li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.75em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  transform: translateY(-50%);
+}
+
+/* ============================================
    LINKS
    ============================================ */
 a {
@@ -403,7 +440,8 @@ h3 {
   display: inline-block;
 }
 
-#buch-text hr {
+#buch-text hr,
+#autor-inhalt hr {
   border: none;
   border-top: 2px solid var(--color-accent);
   width: 60px;
@@ -511,6 +549,26 @@ h3 {
 
 #autor .autor-signatur {
   font-size: 2.4rem;
+}
+
+/* ============================================
+   AUTORSEITE: ABSCHLUSS-BOX
+   Baut autorseite.js aus der letzten Namenszeile: Porträt links, rechts
+   daneben Name + der komplette restliche Dokumenttext. Da dieser Text
+   (anders als die kurze Tagline auf Hero/Buch-Seite) mehrere Absätze
+   lang ist, braucht die Box eine andere Ausrichtung: oben statt
+   zentriert, und der Textblock nutzt die volle verbleibende Breite.
+   ============================================ */
+.autor-box-abschluss {
+  align-items: flex-start;
+}
+
+.autor-box-abschluss .autor-box-text {
+  flex: 1;
+}
+
+.autor-box-abschluss .autor-name {
+  margin-bottom: 12px;
 }
 
 /* ============================================

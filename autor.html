@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <!--
-  Diese Seite ist ein WIEDERVERWENDBARES TEMPLATE für alle Bücher.
-  Sie liest den Buchtitel aus der URL (z.B. buch.html?titel=der-perfekte-sonntag),
-  zeigt das passende Bild aus pics/ und lädt den Text aus der passenden .md-Datei
-  aus md/ nach.
+  Feste Seite "Über den Autor". Lädt md/author.md und zeigt sie an
+  (siehe js/autorseite.js für die Sonderbehandlung der letzten
+  Namenszeile, die zur Autor-Box mit Porträt umgebaut wird).
 
-  WICHTIG: Das Nachladen der .md-Datei per fetch() funktioniert nur, wenn die
-  Seite über einen lokalen Server läuft (z.B. VS-Code-Erweiterung "Live Server"),
-  NICHT wenn du die Datei per Doppelklick öffnest (file://-Adresse). Der Browser
-  blockiert das Nachladen lokaler Dateien aus Sicherheitsgründen sonst.
+  WICHTIG: Das Nachladen von md/author.md per fetch() funktioniert nur,
+  wenn die Seite über einen lokalen Server läuft, NICHT wenn du die
+  Datei per Doppelklick öffnest (file://-Adresse).
 -->
 <html lang="de">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ratgeber – Dr. Maximilian Methodius</title>
+  <title>Über den Autor – Dr. Maximilian Methodius</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
@@ -41,9 +39,9 @@
 
   <section class="section">
     <div class="wrap">
-      <!-- Wird per JavaScript befüllt, siehe unten -->
-      <div id="buch-inhalt">
-        <p>Lade Ratgeber …</p>
+      <!-- Wird per JavaScript befüllt, siehe js/autorseite.js -->
+      <div id="autor-inhalt">
+        <p>Lade Seite …</p>
       </div>
     </div>
   </section>
@@ -55,11 +53,10 @@
     </div>
   </footer>
 
-  <!-- Reihenfolge wichtig: erst die Datenliste, dann markdown.js (liefert
-       parseMarkdownBloecke), dann dieses Script -->
-  <script src="js/ratgeber.js"></script>
+  <!-- Reihenfolge wichtig: erst markdown.js (liefert parseMarkdownBloecke),
+       dann dieses Script -->
   <script src="js/markdown.js"></script>
-  <script src="js/buch.js"></script>
+  <script src="js/autorseite.js"></script>
 
 </body>
 

@@ -61,92 +61,19 @@ if (!buch) {
 }
 
 /* ============================================
-   MARKDOWN-ÜBERSETZER
-   Sehr einfach: reicht für #/##/###-Überschriften, **fett**, *kursiv*,
-   > Zitate, --- als Trennlinie und normale Absätze. Kein Ersatz für eine
-   vollständige Markdown-Bibliothek, aber genug für unsere Ratgeber-Texte.
+   MARKDOWN-ÜBERSETZUNG
+   Die eigentliche Übersetzung (Überschriften, **fett**, *kursiv*,
+   > Zitate, - Listen, --- als Trennlinie) übernimmt parseMarkdownBloecke()
+   aus js/markdown.js. Hier kommt nur noch die Kapitel- und Autor-
+   spezifische Nachbearbeitung dazu, die NUR für Ratgeber-Seiten gilt.
    ============================================ */
 
-// Wandelt Markdown in ein Array von HTML-Blöcken um (ein Eintrag pro
-// Absatz/Überschrift/Trennlinie/Zitat) - wird sowohl für die normale
-// Anzeige als auch für die Seitenaufteilung der Blätter-Ansicht genutzt.
+// Wandelt Markdown in ein Array von HTML-Blöcken um UND wendet die
+// Ratgeber-spezifischen Regeln an (Kapitel-Bereinigung, Autor-Box) -
+// wird sowohl für die normale Anzeige als auch für die Seitenaufteilung
+// der Blätter-Ansicht genutzt.
 function markdownZuBloecke(markdown) {
-  const bloecke = markdown.trim().split(/\n\s*\n/);
-
-  const html = bloecke.map(block => {
-    const zeile = block.trim();
-
-    if (zeile.startsWith("### ")) {
-      return `<h3>${inlineFormat(zeile.slice(4))}</h3>`;
-    }
-
-    if (zeile.startsWith("## ")) {
-      return `<h2>${inlineFormat(zeile.slice(3))}</h2>`;
-    }
-
-    if (zeile.startsWith("# ")) {
-      return `<h1>${inlineFormat(zeile.slice(2))}</h1>`;
-    }
-
-    if (zeile === "---") {
-      return `<hr>`;
-    }
-
-    /*
-     * MARKDOWN-ZITATE
-     *
-     * Beispiel:
-     *
-     * > **„Ich habe gestern etwas gemacht.“**
-     *
-     * Das ">" wird entfernt und der gesamte Block als <blockquote>
-     * ausgegeben.
-     *
-     * Mehrzeilige Zitate werden ebenfalls unterstützt:
-     *
-     * > Erste Zeile
-     * > Zweite Zeile
-     */
-    const zitatZeilen = zeile.split("\n").map(z => z.trim());
-
-    if (
-      zitatZeilen.length > 0 &&
-      zitatZeilen.every(z => z.startsWith(">"))
-    ) {
-      const zitatInhalt = zitatZeilen
-        .map(z => z.replace(/^>\s?/, ""))
-        .map(z => z.replace(/^(\*\*|__)?["„“‚‘]+/, "$1"))
-        .map(z => z.replace(/["„“‚‘]+(\*\*|__)?$/, "$1"))
-        .map(inlineFormat)
-        .join("<br>");
-
-      return `<blockquote>${zitatInhalt}</blockquote>`;
-    }
-
-    // Markdown-Aufzählung:
-    // Mehrere Zeilen, die mit "- " beginnen, werden zu einer
-    // echten <ul>-Liste.
-    const zeilen = zeile.split("\n").map(z => z.trim());
-
-    if (
-      zeilen.length > 0 &&
-      zeilen.every(z => z.startsWith("- "))
-    ) {
-      const items = zeilen
-        .map(z => `<li>${inlineFormat(z.slice(2))}</li>`)
-        .join("");
-
-      return `<ul>${items}</ul>`;
-    }
-
-    // Normaler Absatz:
-    const zeilenUmbruch = zeile
-      .split("\n")
-      .map(inlineFormat)
-      .join("<br>");
-
-    return `<p>${zeilenUmbruch}</p>`;
-  });
+  const html = parseMarkdownBloecke(markdown);
 
   // "Kapitel"-Überschriften (Top-Level, z.B. "# Kapitel 1") werden entfernt;
   // die darauffolgende Zwischenüberschrift (##) rückt an ihre Stelle als
@@ -285,13 +212,6 @@ function bereinigeKapitelUeberschriften(bloecke) {
 
 function markdownZuHtml(markdown) {
   return markdownZuBloecke(markdown).join("\n");
-}
-
-// Wandelt **fett** und *kursiv* innerhalb einer Zeile um
-function inlineFormat(text) {
-  return text
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.+?)\*/g, "<em>$1</em>");
 }
 
 /* ============================================
