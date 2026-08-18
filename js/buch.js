@@ -148,6 +148,7 @@ function styleAutorErwaehnung(bloecke) {
       <img class="autor-foto" src="pics/autor-portrait.png" alt="Porträt von Dr. Maximilian Methodius">
       <div>
         <p class="autor-name">${nameOhneTags}</p>
+        <p class="autor-tagline">Experte in allen Gebieten, Spezialist für ungewöhnliche Lösungen und anerkannter Fachmann für die großen und kleinen Probleme des modernen Lebens.</p>
       </div>
     </div>`;
 

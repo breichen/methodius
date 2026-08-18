@@ -485,6 +485,96 @@ h3 {
 }
 
 /* ============================================
+   RATGEBER-SHOWCASE (großer Einzel-Ratgeber mit Chronologie-Pfeilen)
+   Direkt unter dem Hero: der aktuellste Ratgeber, mit Pfeilen zum
+   Durchklicken durch ältere Ausgaben.
+   ============================================ */
+.showcase {
+  padding-top: 8px;
+}
+
+.showcase-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--color-accent-warm);
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.showcase-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.showcase-arrow {
+  background: var(--color-accent-warm);
+  color: #fff;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.showcase-arrow:hover:not(:disabled) {
+  transform: scale(1.08);
+}
+
+.showcase-arrow:disabled {
+  background: var(--color-muted);
+  cursor: default;
+}
+
+.showcase-link {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text);
+  text-align: center;
+  max-width: 600px;
+}
+
+.showcase-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #D6CDBB;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.showcase-link:hover .showcase-cover {
+  transform: translateY(-4px);
+}
+
+.showcase-title {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+@media (max-width: 480px) {
+  .showcase-box {
+    gap: 12px;
+  }
+
+  .showcase-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+/* ============================================
    FLIPBOOK-ANSICHT
    Zweiseitige Blätter-Vorschau des Ratgeber-Texts, im Stil eines
    aufgeschlagenen Hefts – nutzt dieselben Design-Tokens wie der Rest
