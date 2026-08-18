@@ -115,6 +115,8 @@ function markdownZuBloecke(markdown) {
     ) {
       const zitatInhalt = zitatZeilen
         .map(z => z.replace(/^>\s?/, ""))
+        .map(z => z.replace(/^(\*\*|__)?["„“‚‘]+/, "$1"))
+        .map(z => z.replace(/["„“‚‘]+(\*\*|__)?$/, "$1"))
         .map(inlineFormat)
         .join("<br>");
 

@@ -12,33 +12,19 @@ Du hältst einen Ratgeber in den Händen, der eine der wichtigsten Fähigkeiten 
 
 **beschäftigt aussehen.**
 
-Denn seien wir ehrlich:
+Denn seien wir ehrlich: Es reicht heute nicht mehr, gute Arbeit zu leisten. Du musst auch so aussehen, als würdest du gerade etwas unglaublich Wichtiges tun.
 
-Es reicht heute nicht mehr, gute Arbeit zu leisten.
+Ein leerer Bildschirm? Verdächtig.
 
-Du musst auch so aussehen, als würdest du gerade etwas unglaublich Wichtiges tun.
+Ein entspannter Gesichtsausdruck? Gefährlich.
 
-Ein leerer Bildschirm?
+Ein Mitarbeiter, der um 14:30 Uhr einfach dasitzt und aus dem Fenster schaut? **Offensichtlich hat er keine Aufgaben.**
 
-Verdächtig.
-
-Ein entspannter Gesichtsausdruck?
-
-Gefährlich.
-
-Ein Mitarbeiter, der um 14:30 Uhr einfach dasitzt und aus dem Fenster schaut?
-
-**Offensichtlich hat er keine Aufgaben.**
-
-Dabei könnte er gerade über etwas sehr Wichtiges nachdenken.
-
-Zum Beispiel:
+Dabei könnte er gerade über etwas sehr Wichtiges nachdenken. Zum Beispiel:
 
 > „Wann kann ich nach Hause gehen?“
 
-Das Problem ist nur:
-
-**Es sieht nicht danach aus.**
+Das Problem ist nur: **Es sieht nicht danach aus.**
 
 Dieser Ratgeber schafft Abhilfe.
 
@@ -48,35 +34,17 @@ Dieser Ratgeber schafft Abhilfe.
 
 ## Die Wahrheit über Beschäftigung
 
-Es gibt zwei Arten von Menschen.
+Es gibt zwei Arten von Menschen: Menschen, die wirklich viel zu tun haben. Und Menschen, die sehr beschäftigt aussehen.
 
-Menschen, die wirklich viel zu tun haben.
-
-Und Menschen, die sehr beschäftigt aussehen.
-
-Die erste Gruppe hat ein Problem:
-
-Sie arbeitet.
+Die erste Gruppe hat ein Problem: Sie arbeitet.
 
 Die zweite Gruppe hat ein System.
 
-Denn im modernen Berufsleben zählt nicht nur:
+Denn im modernen Berufsleben zählt nicht nur: **Was hast du erledigt?**
 
-**Was hast du erledigt?**
+Sondern auch: **Wie beschäftigt sahst du dabei aus?**
 
-Sondern auch:
-
-**Wie beschäftigt sahst du dabei aus?**
-
-Ein Mensch mit 14 offenen Tabs wirkt produktiv.
-
-Ein Mensch mit einem offenen Dokument wirkt verdächtig.
-
-Ein Mensch mit drei Monitoren wirkt wichtig.
-
-Ein Mensch mit vier Monitoren wirkt, als würde er die Weltwirtschaft steuern.
-
-Ob er tatsächlich seit 45 Minuten ein YouTube-Video schaut, ist dabei vollkommen nebensächlich.
+Ein Mensch mit 14 offenen Tabs wirkt produktiv. Ein Mensch mit einem offenen Dokument wirkt verdächtig. Ein Mensch mit drei Monitoren wirkt wichtig. Ein Mensch mit vier Monitoren wirkt, als würde er die Weltwirtschaft steuern. Ob er tatsächlich seit 45 Minuten ein YouTube-Video schaut, ist dabei vollkommen nebensächlich.
 
 ---
 
@@ -84,41 +52,25 @@ Ob er tatsächlich seit 45 Minuten ein YouTube-Video schaut, ist dabei vollkomme
 
 ## Die Grundregel: Niemals leer aussehen
 
-Die wichtigste Regel lautet:
+Die wichtigste Regel lautet: **Leere darf niemals sichtbar sein.**
 
-# **Leere darf niemals sichtbar sein.**
+- Dein Bildschirm darf nicht leer sein.
+- Dein Schreibtisch darf nicht leer sein.
+- Dein Kalender darf nicht leer sein.
+- Dein Gesicht darf nicht leer sein.
+- Und vor allem: **Deine Hände dürfen niemals leer sein.**
 
-Dein Bildschirm darf nicht leer sein.
-
-Dein Schreibtisch darf nicht leer sein.
-
-Dein Kalender darf nicht leer sein.
-
-Dein Gesicht darf nicht leer sein.
-
-Und vor allem:
-
-**Deine Hände dürfen niemals leer sein.**
-
-Ein Mitarbeiter, der mit einem Kaffee und einem Notizbuch durch das Büro läuft, sieht beschäftigt aus.
-
-Ein Mitarbeiter, der mit nichts durch das Büro läuft, sieht aus, als hätte er Feierabend.
+Ein Mitarbeiter, der mit einem Kaffee und einem Notizbuch durch das Büro läuft, sieht beschäftigt aus. Ein Mitarbeiter, der mit nichts durch das Büro läuft, sieht aus, als hätte er Feierabend.
 
 Deshalb:
 
-Kaffee.
+- Kaffee.
+- Laptop.
+- Notizbuch.
+- Telefon.
+- Mindestens drei Gegenstände.
 
-Laptop.
-
-Notizbuch.
-
-Telefon.
-
-Mindestens drei Gegenstände.
-
-Du bist jetzt offiziell auf dem Weg zu einem wichtigen Termin.
-
-Welcher Termin?
+Du bist jetzt offiziell auf dem Weg zu einem wichtigen Termin. Welcher Termin?
 
 **Das weißt du selbst noch nicht.**
 
@@ -128,9 +80,7 @@ Welcher Termin?
 
 ## Der beschäftigtste Blick der Welt
 
-Der Gesichtsausdruck ist entscheidend.
-
-Du brauchst einen Blick, der gleichzeitig signalisiert:
+Der Gesichtsausdruck ist entscheidend. Du brauchst einen Blick, der gleichzeitig signalisiert:
 
 - Konzentration
 - Verantwortung
@@ -138,31 +88,17 @@ Du brauchst einen Blick, der gleichzeitig signalisiert:
 - strategisches Denken
 - leichte Überforderung
 
-Der perfekte Blick lautet:
+Der perfekte Blick sagt: **„Ich habe gerade etwas gelesen, das ich eigentlich sofort beantworten müsste.“**
 
-**„Ich habe gerade etwas gelesen, das ich eigentlich sofort beantworten müsste.“**
-
-Nicht zu entspannt.
-
-Nicht zu panisch.
-
-Einfach:
-
-**„Das ist kompliziert.“**
+Nicht zu entspannt. Nicht zu panisch. Einfach: **„Das ist kompliziert.“**
 
 Wenn dich jemand anspricht, während du diesen Gesichtsausdruck trägst, sage:
 
-> „Eine Sekunde.“
+> "Eine Sekunde."
 
-Das funktioniert immer.
+Das funktioniert immer. Du hast damit mindestens sieben Sekunden gewonnen.
 
-Du hast damit mindestens sieben Sekunden gewonnen.
-
-Wofür?
-
-Unklar.
-
-Aber du hast sieben Sekunden gewonnen.
+Wofür? Unklar. Aber du hast sieben Sekunden gewonnen.
 
 ---
 
@@ -172,21 +108,11 @@ Aber du hast sieben Sekunden gewonnen.
 
 Nichts signalisiert Wichtigkeit so deutlich wie schnelles Gehen.
 
-Aber Vorsicht:
+Aber Vorsicht: Zu schnelles Gehen wirkt hektisch. Zu langsames Gehen wirkt entspannt.
 
-Zu schnelles Gehen wirkt hektisch.
+Du brauchst: **zielgerichtete Eile.**
 
-Zu langsames Gehen wirkt entspannt.
-
-Du brauchst:
-
-**zielgerichtete Eile.**
-
-Gehe mit leicht nach vorne geneigtem Oberkörper.
-
-Blicke nicht nach links.
-
-Blicke nicht nach rechts.
+Gehe mit leicht nach vorne geneigtem Oberkörper. Blicke nicht nach links.Blicke nicht nach rechts.
 
 Wenn jemand deinen Namen ruft:
 
@@ -200,13 +126,7 @@ Antworte:
 
 > **„Ich muss kurz was klären.“**
 
-Dieser Satz ist perfekt.
-
-Niemand weiß, was du klären musst.
-
-Nicht einmal du.
-
-Aber du gehst dabei sehr schnell.
+Dieser Satz ist perfekt. Niemand weiß, was du klären musst. Nicht einmal du. Aber du gehst dabei sehr schnell.
 
 ---
 
@@ -226,15 +146,11 @@ Verdoppelt deine wahrgenommene Produktivität.
 
 ### 3. Notizbuch
 
-Am besten mit sehr wichtigen Dingen darin.
+Am besten mit sehr wichtigen Dingen darin. Zum Beispiel:
 
-Zum Beispiel:
-
-> „Meeting.“
-
-> „E-Mail.“
-
-> „Kaffee.“
+- „Meeting.“
+- „E-Mail.“
+- „Kaffee.“
 
 ### 4. Wasserflasche
 
@@ -242,19 +158,11 @@ Gesundheit signalisiert Disziplin.
 
 ### 5. Kaffee
 
-Kaffee signalisiert:
-
-**„Ich habe keine Zeit.“**
+Kaffee signalisiert: **„Ich habe keine Zeit.“**
 
 ### 6. Kopfhörer
 
-Extrem effektiv.
-
-Niemand weiß, ob du arbeitest.
-
-Aber alle wissen:
-
-**Du bist nicht ansprechbar.**
+Extrem effektiv. Niemand weiß, ob du arbeitest. Aber alle wissen: **Du bist nicht ansprechbar.**
 
 ### 7. Smartphone
 
@@ -270,9 +178,7 @@ Je mehr, desto strategischer.
 
 ### 10. Eine Mappe
 
-Du musst nicht wissen, was darin ist.
-
-Sie muss nur wichtig aussehen.
+Du musst nicht wissen, was darin ist. Sie muss nur wichtig aussehen.
 
 ---
 
@@ -282,25 +188,11 @@ Sie muss nur wichtig aussehen.
 
 Der Browser ist dein bester Freund.
 
-Ein leerer Browser:
-
-Verdächtig.
-
-Zwei Tabs:
-
-Normal.
-
-Sieben Tabs:
-
-Beschäftigt.
-
-17 Tabs:
-
-Sehr beschäftigt.
-
-43 Tabs:
-
-**Führungsebene.**
+- Ein leerer Browser: Verdächtig.
+- Zwei Tabs: Normal.
+- Sieben Tabs: Beschäftigt.
+- 17 Tabs: Sehr beschäftigt.
+- 43 Tabs: **Führungsebene.**
 
 Besonders effektiv sind Tabs mit Begriffen wie:
 
@@ -313,11 +205,7 @@ Besonders effektiv sind Tabs mit Begriffen wie:
 - „Q4“
 - „Meeting“
 
-Niemand wird nachfragen.
-
-Niemand versteht es.
-
-Perfekt.
+Niemand wird nachfragen. Niemand versteht es. Perfekt.
 
 ---
 
@@ -325,37 +213,19 @@ Perfekt.
 
 ## Die wichtigste E-Mail des Tages
 
-Du hast keine E-Mail zu beantworten?
+Du hast keine E-Mail zu beantworten? Kein Problem.
 
-Kein Problem.
+Öffne eine alte E-Mail. Lies sie. Scrolle nach oben. Scrolle wieder nach unten. Tippe einen Satz. Lösche ihn. Tippe: 
 
-Öffne eine alte E-Mail.
+> „Danke dir!“ 
 
-Lies sie.
-
-Scrolle nach oben.
-
-Scrolle wieder nach unten.
-
-Tippe einen Satz.
-
-Lösche ihn.
-
-Tippe:
-
-> „Danke dir!“
-
-Lösche ihn.
-
-Schreibe:
+Lösche das wieder. Schreibe:
 
 > „Lass uns dazu noch einmal kurz sprechen.“
 
 Lösche auch das.
 
-Du hast gerade zwölf Minuten gearbeitet.
-
-Zumindest optisch.
+Du hast gerade zwölf Minuten gearbeitet. Zumindest optisch.
 
 ---
 
@@ -363,43 +233,20 @@ Zumindest optisch.
 
 ## Die perfekte Meeting-Strategie
 
-Meetings sind eine hervorragende Möglichkeit, beschäftigt auszusehen.
+Meetings sind eine hervorragende Möglichkeit, beschäftigt auszusehen. Besonders wenn du eigentlich nichts beizutragen hast. Du musst nur gelegentlich nicken.
 
-Besonders wenn du eigentlich nichts beizutragen hast.
+Sehr wichtig: **Langsam nicken.** Nicht zu häufig. Das könnte Zustimmung bedeuten.
 
-Du musst nur gelegentlich nicken.
-
-Sehr wichtig:
-
-**Langsam nicken.**
-
-Nicht zu häufig.
-
-Das könnte Zustimmung bedeuten.
-
-Einmal nicken.
-
-Kurze Pause.
-
-Noch einmal nicken.
-
-Dann Notizen machen.
+Einmal nicken. Kurze Pause. Noch einmal nicken. Dann Notizen machen.
 
 Du kannst beispielsweise schreiben:
 
-> „Wichtig.“
+- „Wichtig.“
+- „Klären.“
+- „Nächste Schritte.“
+- „Follow-up.“
 
-> „Klären.“
-
-> „Nächste Schritte.“
-
-> „Follow-up.“
-
-Niemand darf erfahren, dass du gerade:
-
-**„Mittagessen?“**
-
-notiert hast.
+Niemand darf erfahren, dass du gerade **„Mittagessen?“** notiert hast.
 
 ---
 
@@ -425,9 +272,7 @@ Es gibt einen Satz, der fast jedes Gespräch retten kann:
 
 Was ist dieses „etwas“?
 
-Das ist die Magie.
-
-**Es muss nicht definiert werden.**
+Das ist die Magie. **Es muss nicht definiert werden.**
 
 ---
 
@@ -435,41 +280,24 @@ Das ist die Magie.
 
 ## Slack, Teams und andere digitale Beweise deiner Existenz
 
-Moderne Arbeit hat einen großen Vorteil:
+Moderne Arbeit hat einen großen Vorteil: Du kannst jederzeit sichtbar beschäftigt sein.
 
-Du kannst jederzeit sichtbar beschäftigt sein.
-
-Ein grüner Punkt:
-
-Du arbeitest.
-
-Ein roter Punkt:
-
-Du arbeitest sehr konzentriert.
-
-„Bitte nicht stören“:
-
-**Du bist vermutlich CEO.**
+- Ein grüner Punkt: Du arbeitest.
+- Ein roter Punkt: Du arbeitest sehr konzentriert.
+- „Bitte nicht stören“: **Du bist vermutlich CEO.**
 
 Besonders effektiv:
 
 > „Bin kurz in einem Call.“
 
-Das kann alles bedeuten.
+Das kann alles bedeuten:
 
-Ein echter Geschäftstermin.
+- Ein echter Geschäftstermin.
+- Ein Gespräch mit einem Kollegen.
+- Ein Anruf beim Lieferdienst.
+- Oder: Du sitzt auf dem Sofa.
 
-Ein Gespräch mit einem Kollegen.
-
-Ein Anruf beim Lieferdienst.
-
-Oder:
-
-Du sitzt auf dem Sofa.
-
-Aber dein Status?
-
-**Professional.**
+Aber dein Status? **Professional.**
 
 ---
 
@@ -477,15 +305,9 @@ Aber dein Status?
 
 ## Der Gang zur Kaffeemaschine
 
-Die Kaffeemaschine ist kein Ort zum Kaffeetrinken.
+Die Kaffeemaschine ist kein Ort zum Kaffeetrinken. Sie ist ein strategischer Arbeitsplatz.
 
-Sie ist ein strategischer Arbeitsplatz.
-
-Du gehst hin.
-
-Du triffst jemanden.
-
-Du sagst:
+Du gehst hin. Du triffst jemanden. Du sagst:
 
 > „Puh, heute ist echt einiges los.“
 
@@ -505,13 +327,7 @@ Du:
 
 > „Ach, das mit dem Projekt.“
 
-Jetzt nickt er.
-
-Du nickst.
-
-Ihr habt beide keine Ahnung, welches Projekt gemeint ist.
-
-Aber ihr habt soeben erfolgreich berufliche Verbundenheit hergestellt.
+Jetzt nickt er. Du nickst. Ihr habt beide keine Ahnung, welches Projekt gemeint ist. Aber ihr habt soeben erfolgreich berufliche Verbundenheit hergestellt.
 
 ---
 
@@ -521,39 +337,19 @@ Aber ihr habt soeben erfolgreich berufliche Verbundenheit hergestellt.
 
 Ein leerer Kalender ist gefährlich.
 
-Deshalb:
-
-Plane Meetings.
-
-Nicht unbedingt echte.
-
-Zum Beispiel:
+Deshalb: Plane Meetings. Nicht unbedingt echte. Zum Beispiel:
 
 **09:00 – Abstimmung**
-
 **10:30 – Projekt**
-
 **11:15 – Sync**
-
 **13:00 – Follow-up**
-
 **14:00 – Strategie**
-
 **15:30 – Austausch**
-
 **16:00 – Deep Work**
 
-Was ist „Deep Work“?
+Was ist „Deep Work“? Niemand weiß es. Aber es klingt so, als dürftest du in dieser Zeit auf keinen Fall gestört werden.
 
-Niemand weiß es.
-
-Aber es klingt so, als dürftest du in dieser Zeit auf keinen Fall gestört werden.
-
-Das Wichtigste:
-
-Lass jeden Tag mindestens eine Stunde frei.
-
-Damit du Zeit hast, deine anderen Termine zu überleben.
+Das Wichtigste: Lass jeden Tag mindestens eine Stunde frei. Damit du Zeit hast, deine anderen Termine zu überleben.
 
 ---
 
@@ -561,49 +357,15 @@ Damit du Zeit hast, deine anderen Termine zu überleben.
 
 ## Deep Work
 
-Deep Work ist ein faszinierendes Konzept.
+Deep Work ist ein faszinierendes Konzept. Es bedeutet: Du arbeitest konzentriert. Ohne Ablenkung. Ohne Nachrichten. Ohne Meetings. Ohne Menschen.
 
-Es bedeutet:
+Leider gibt es dabei ein Problem: **Man sieht nicht, dass du beschäftigt bist.**
 
-Du arbeitest konzentriert.
+Du sitzt einfach da. Still. Konzentriert. Das kann gefährlich wirken.
 
-Ohne Ablenkung.
+Deshalb empfehlen wir: Alle 15 Minuten einmal tief seufzen. Dann aufstehen. Kurz zum Drucker gehen. Zurückkommen. Auf den Bildschirm schauen. Wieder seufzen.
 
-Ohne Nachrichten.
-
-Ohne Meetings.
-
-Ohne Menschen.
-
-Leider gibt es dabei ein Problem:
-
-**Man sieht nicht, dass du beschäftigt bist.**
-
-Du sitzt einfach da.
-
-Still.
-
-Konzentriert.
-
-Das kann gefährlich wirken.
-
-Deshalb empfehlen wir:
-
-Alle 15 Minuten einmal tief seufzen.
-
-Dann aufstehen.
-
-Kurz zum Drucker gehen.
-
-Zurückkommen.
-
-Auf den Bildschirm schauen.
-
-Wieder seufzen.
-
-Jetzt ist jedem klar:
-
-**Da passiert etwas.**
+Jetzt ist jedem klar: **Da passiert etwas.**
 
 ---
 
@@ -611,37 +373,13 @@ Jetzt ist jedem klar:
 
 ## Die Kunst, „über etwas nachzudenken“
 
-Manchmal hast du wirklich nichts zu tun.
+Manchmal hast du wirklich nichts zu tun. Dann kommt die schwierigste Situation:
 
-Dann kommt die schwierigste Situation:
+Du sitzt da. Du bist fertig. Alle Aufgaben erledigt. Was nun?
 
-Du sitzt da.
+Ganz einfach: Schau auf den Bildschirm. Lege eine Hand ans Kinn. Blicke leicht nach oben. Atme tief ein. Atme langsam aus. Jetzt denkst du nach.
 
-Du bist fertig.
-
-Alle Aufgaben erledigt.
-
-Was nun?
-
-Ganz einfach:
-
-Schau auf den Bildschirm.
-
-Lege eine Hand ans Kinn.
-
-Blicke leicht nach oben.
-
-Atme tief ein.
-
-Atme langsam aus.
-
-Jetzt denkst du nach.
-
-Worüber?
-
-**Strategie.**
-
-Das ist immer Strategie.
+Worüber? **Strategie.** Das ist immer Strategie.
 
 Falls dich jemand fragt:
 
@@ -651,9 +389,7 @@ Antworte:
 
 > **„Ich versuche gerade, das einmal ganzheitlich zu betrachten.“**
 
-Niemand wird nachfragen.
-
-Sie haben Angst.
+Niemand wird nachfragen. Sie haben Angst.
 
 ---
 
@@ -675,13 +411,7 @@ Ein sehr tiefer Seufzer sagt:
 
 > „Ich bin vermutlich für Dinge zuständig, von denen du nichts weißt.“
 
-Aber Vorsicht.
-
-Zu häufiges Seufzen führt dazu, dass Kollegen denken:
-
-**Du brauchst Urlaub.**
-
-Und dann kommt jemand mit einem Formular.
+Aber Vorsicht: Zu häufiges Seufzen führt dazu, dass Kollegen denken: **Du brauchst Urlaub.** Und dann kommt jemand mit einem Formular.
 
 ---
 
@@ -689,15 +419,9 @@ Und dann kommt jemand mit einem Formular.
 
 ## Das beschäftigt aussehende Telefonat
 
-Du hast kein Telefonat?
+Du hast kein Telefonat? Kein Problem.
 
-Kein Problem.
-
-Nimm dein Handy.
-
-Gehe langsam durch den Raum.
-
-Sag:
+Nimm dein Handy. Gehe langsam durch den Raum. Sag:
 
 > „Ja.“
 
@@ -719,11 +443,7 @@ Pause.
 
 Auflegen.
 
-Niemand weiß, mit wem du gesprochen hast.
-
-Aber alle denken:
-
-**„Das war wichtig.“**
+Niemand weiß, mit wem du gesprochen hast. Aber alle denken: **„Das war wichtig.“**
 
 Vielleicht war es auch nur deine Mutter.
 
@@ -733,41 +453,25 @@ Vielleicht war es auch nur deine Mutter.
 
 ## Wenn wirklich jemand herausfindet, dass du nichts zu tun hast
 
-Keine Panik.
-
-Das ist eine normale Phase.
+Keine Panik: Das ist eine normale Phase.
 
 Antworte nicht:
 
 > „Ich habe nichts zu tun.“
 
-Das wäre fatal.
-
-Sag stattdessen:
+Das wäre fatal. Sag stattdessen:
 
 > **„Ich habe gerade etwas Luft, aber ich nutze die Zeit, um ein paar Dinge vorzubereiten.“**
 
 Dieser Satz ist Gold wert.
 
-Welche Dinge?
+Vorbereiten - aber was genau?
 
-Vorbereiten.
+Welche Dinge? Das bleibt unklar.
 
-Was genau?
+Wann bist du fertig? Bald.
 
-Ein paar.
-
-Wann fertig?
-
-Bald.
-
-Du hast soeben aus **„Ich langweile mich“**
-
-eine
-
-**„proaktive Arbeitsphase“**
-
-gemacht.
+Du hast soeben aus **„Ich langweile mich“** eine **„proaktive Arbeitsphase“** gemacht.
 
 ---
 
@@ -775,79 +479,30 @@ gemacht.
 
 ## Der ultimative Masterplan
 
-Hier ist er.
+Hier ist er, der vollständige Plan.
 
-Der komplette Plan.
-
-### Schritt 1
-
-Öffne deinen Laptop.
-
-### Schritt 2
-
-Öffne sieben Tabs.
-
-### Schritt 3
-
-Öffne noch fünf.
-
-### Schritt 4
-
-Starte einen Kaffee.
-
-### Schritt 5
-
-Setze Kopfhörer auf.
-
-### Schritt 6
-
-Schau konzentriert.
-
-### Schritt 7
-
-Tippe irgendetwas.
-
-### Schritt 8
-
-Seufze.
-
-### Schritt 9
-
-Öffne deinen Kalender.
-
-### Schritt 10
-
-Sage:
+- **Schritt 1:** Öffne deinen Laptop.
+- **Schritt 2:** Öffne sieben Tabs.
+- **Schritt 3:** Öffne noch fünf.
+- **Schritt 4:** Starte einen Kaffee.
+- **Schritt 5:** Setze Kopfhörer auf.
+- **Schritt 6:** Schau konzentriert.
+- **Schritt 7:** Tippe irgendetwas.
+- **Schritt 8:** Seufze.
+- **Schritt 9:** Öffne deinen Kalender.
+- **Schritt 10:** Sage: 
 
 > „Ich bin gerade ziemlich tief in einem Thema.“
 
-### Schritt 11
-
-Gehe schnell irgendwohin.
-
-### Schritt 12
-
-Komme langsam zurück.
-
-### Schritt 13
-
-Öffne eine Excel-Datei.
-
-### Schritt 14
-
-Schließe sie wieder.
-
-### Schritt 15
-
-Sage:
+- **Schritt 11:** Gehe schnell irgendwohin.
+- **Schritt 12:** Komme langsam zurück.
+- **Schritt 13:** Öffne eine Excel-Datei.
+- **Schritt 14:** Schließe sie wieder.
+- **Schritt 15:** Sage:
 
 > **„Ich melde mich dazu.“**
 
-Herzlichen Glückwunsch.
-
-Du bist jetzt offiziell:
-
-# **beschäftigt.**
+Herzlichen Glückwunsch. Du bist jetzt offiziell **beschäftigt**.
 
 ---
 
@@ -855,11 +510,7 @@ Du bist jetzt offiziell:
 
 ## Die unangenehme Wahrheit
 
-Natürlich gibt es ein kleines Problem.
-
-Beschäftigt aussehen ist nicht dasselbe wie beschäftigt sein.
-
-Und beschäftigt sein ist nicht dasselbe wie produktiv sein.
+Natürlich gibt es ein kleines Problem: Beschäftigt aussehen ist nicht dasselbe wie beschäftigt sein. Und beschäftigt sein ist nicht dasselbe wie produktiv sein.
 
 Du kannst den ganzen Tag:
 
@@ -873,23 +524,15 @@ Du kannst den ganzen Tag:
 
 und am Ende trotzdem nichts Wichtiges erledigt haben.
 
-Das ist die große Tragödie des modernen Arbeitslebens:
-
-**Man kann sehr beschäftigt sein und trotzdem nichts bewegen.**
+Das ist die große Tragödie des modernen Arbeitslebens: **Man kann sehr beschäftigt sein und trotzdem nichts bewegen.**
 
 Deshalb solltest du gelegentlich überprüfen:
 
 > „Habe ich heute eigentlich etwas geschafft?“
 
-Wenn die Antwort „Ja“ lautet:
+Wenn die Antwort „Ja“ lautet: Sehr gut.
 
-Sehr gut.
-
-Wenn die Antwort „Nein“ lautet:
-
-Keine Sorge.
-
-Du weißt jetzt zumindest, wie du es aussehen lassen kannst.
+Wenn die Antwort „Nein“ lautet: Keine Sorge. Du weißt jetzt zumindest, wie du es aussehen lassen kannst.
 
 ---
 
@@ -907,31 +550,13 @@ Du hast gelernt:
 - wie man mit einer Mappe durch das Büro läuft,
 - und wie man „Ich bin gerade dran“ als universelle Antwort verwendet.
 
-Aber vielleicht ist die wichtigste Lektion:
+Aber vielleicht ist die wichtigste Lektion: **Du musst nicht ständig beschäftigt aussehen.**
 
-**Du musst nicht ständig beschäftigt aussehen.**
+Manchmal ist es vollkommen in Ordnung, wenn jemand sieht, dass du gerade nichts machst. Vielleicht hast du deine Arbeit erledigt. Vielleicht brauchst du eine Pause. Vielleicht schaust du einfach aus dem Fenster.
 
-Manchmal ist es vollkommen in Ordnung, wenn jemand sieht, dass du gerade nichts machst.
+Das ist kein Karriereversagen. Das ist ein Mensch, der gerade aus dem Fenster schaut.
 
-Vielleicht hast du deine Arbeit erledigt.
-
-Vielleicht brauchst du eine Pause.
-
-Vielleicht schaust du einfach aus dem Fenster.
-
-Das ist kein Karriereversagen.
-
-Das ist ein Mensch, der gerade aus dem Fenster schaut.
-
-Und falls dein Chef in diesem Moment vorbeikommt:
-
-Schließe diesen Ratgeber.
-
-Öffne Excel.
-
-Schau ernst.
-
-Und sage:
+Und falls dein Chef in diesem Moment vorbeikommt: Schließe diesen Ratgeber. Öffne Excel. Schau ernst. Und sage:
 
 > **„Ich bin gerade dabei, das einmal strategisch aufzubereiten.“**
 
@@ -941,66 +566,62 @@ Und sage:
 
 **1. Hast du mehr als zehn Tabs geöffnet?**
 
-- [ ] Ja
-- [ ] Ich arbeite sogar mit zwei Browsern
+☐ Ja
+☐ Ich arbeite sogar mit zwei Browsern
 
 **2. Hast du schon einmal eine E-Mail geschrieben, deren einziger Inhalt „Danke!“ war?**
 
-- [ ] Ja
-- [ ] Sehr effizient
+☐ Ja
+☐ Sehr effizient
 
 **3. Hast du einen Kalendertermin namens „Sync“?**
 
-- [ ] Ja
-- [ ] Mehrere
+☐ Ja
+☐ Mehrere
 
 **4. Hast du schon einmal einen Kaffee geholt, obwohl du keinen Kaffee wolltest?**
 
-- [ ] Ja
-- [ ] Es ging um die Außenwirkung
+☐ Ja
+☐ Es ging um die Außenwirkung
 
 **5. Hast du schon einmal „Ich bin gerade dran“ gesagt, obwohl du noch nicht angefangen hattest?**
 
-- [ ] Ja
-- [ ] Das ist meine Kernkompetenz
+☐ Ja
+☐ Das ist meine Kernkompetenz
 
 **6. Hast du schon einmal konzentriert auf einen Bildschirm gestarrt, ohne zu wissen, was darauf steht?**
 
-- [ ] Ja
-- [ ] Excel hilft dabei besonders
+☐ Ja
+☐ Excel hilft dabei besonders
 
 **7. Hast du schon einmal eine Aufgabe in eine neue Aufgabe umformuliert, damit es nach Fortschritt klingt?**
 
-- [ ] Ja
-- [ ] „Vorbereitung der Umsetzung“
+☐ Ja
+☐ „Vorbereitung der Umsetzung“
 
 **8. Hast du schon einmal einen Termin gebraucht, um etwas zu besprechen, das in zwei Sätzen geklärt gewesen wäre?**
 
-- [ ] Ja
-- [ ] Das nennt sich Abstimmung
+☐ Ja
+☐ Das nennt sich Abstimmung
 
 **9. Hast du schon einmal tief geseufzt, obwohl dein Tag eigentlich ganz entspannt war?**
 
-- [ ] Ja
-- [ ] Für die Teamdynamik
+☐ Ja
+☐ Für die Teamdynamik
 
 **10. Hast du diesen Ratgeber während der Arbeitszeit gelesen?**
 
-- [ ] Nein
-- [ ] Natürlich nicht
-- [ ] Ich hatte ihn „zur Recherche“ geöffnet
+☐ Nein
+☐ Natürlich nicht
+☐ Ich hatte ihn „zur Recherche“ geöffnet
 
-Wenn du mindestens sieben Fragen mit „Ja“ beantwortet hast:
+Wenn du mindestens sieben Fragen mit „Ja“ beantwortet hast: **Herzlichen Glückwunsch.**
 
-# Herzlichen Glückwunsch!
-
-Du hast Talent.
-
-Nicht unbedingt für Produktivität.
-
-Aber für etwas viel Wichtigeres:
+Du hast Talent. Nicht unbedingt für Produktivität. Aber für etwas viel Wichtigeres:
 
 **Du weißt jetzt, wie man danach aussieht.**
+
+---
 
 **Dr. Maximilian Methodius**
 
