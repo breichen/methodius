@@ -1,12 +1,7 @@
+
 # Über Dr. Maximilian Methodius
 
 ## Der Mann hinter den Ratgebern
-
-Wer ist eigentlich **Dr. Maximilian Methodius**?
-
-Eine berechtigte Frage.
-
-Eine Frage, auf die es überraschend viele Antworten gibt.
 
 Dr. Maximilian Methodius ist **Experte in allen Gebieten, die dringend einer Expertenmeinung bedürfen – und in einigen, die bisher erstaunlicherweise ohne ausgekommen sind.**
 
@@ -24,15 +19,7 @@ Und warum sollte man sein Leben komplizierter machen, wenn man es mit einem Ratg
 
 ## Eine beeindruckende akademische Laufbahn
 
-Über das Studium von Dr. Methodius ist nur wenig bekannt.
-
-Das liegt nicht daran, dass es keine Informationen gibt.
-
-Sondern daran, dass **Dr. Methodius großen Wert auf wissenschaftliche Diskretion legt.**
-
-Er selbst beschreibt seinen akademischen Werdegang als:
-
-> **„Lang, vielseitig und an einigen Stellen überraschend.“**
+Über das Studium von Dr. Methodius ist nur wenig bekannt. Das liegt nicht daran, dass es keine Informationen gibt, sondern daran, dass **Dr. Methodius großen Wert auf wissenschaftliche Diskretion legt.** 
 
 Er verfügt über umfangreiche Kenntnisse in den Bereichen:
 
@@ -44,27 +31,19 @@ Er verfügt über umfangreiche Kenntnisse in den Bereichen:
 - unnötig komplizierte Problemlösungen
 - und natürlich **praktisch alles andere**
 
-Seine Forschungsmethode ist dabei denkbar einfach:
-
-**Er beobachtet ein Problem, stellt eine gewagte These auf und schreibt anschließend einen Ratgeber darüber.**
+Seine Forschungsmethode ist dabei denkbar einfach: **Er beobachtet ein Problem, stellt eine gewagte These auf und schreibt anschließend einen Ratgeber darüber.**
 
 ---
 
 # Ein Leben für die großen Fragen
 
-Dr. Methodius beschäftigt sich mit Fragen, die sich andere Experten bisher nicht zu stellen wagten.
+Dr. Methodius beschäftigt sich mit Fragen, die sich andere Experten bisher nicht zu stellen wagten. Fragen wie:
 
-Fragen wie:
-
-> **Kann man Muskelkater bekommen, ohne trainiert zu haben?**
-
-> **Wie beschäftigt muss man aussehen, wenn man eigentlich nichts zu tun hat?**
-
-> **Wie viele schlechte Witze braucht ein Mensch, bevor ein Date offiziell gerettet ist?**
-
-> **Kann man erfolgreicher werden, ohne entsprechend viel zu leisten?**
-
-> **Und warum sollte man seine Erwartungen erhöhen, wenn niedrigere Erwartungen wesentlich leichter zu erfüllen sind?**
+- Kann man Muskelkater bekommen, ohne trainiert zu haben?
+- Wie beschäftigt muss man aussehen, wenn man eigentlich nichts zu tun hat?
+- Wie viele schlechte Witze braucht ein Mensch, bevor ein Date offiziell gerettet ist?
+- Kann man erfolgreicher werden, ohne entsprechend viel zu leisten?
+- Und warum sollte man seine Erwartungen erhöhen, wenn niedrigere Erwartungen wesentlich leichter zu erfüllen sind?
 
 Während andere Wissenschaftler versuchen, die Welt zu erklären, versucht Dr. Methodius zunächst herauszufinden, **warum wir sie überhaupt so kompliziert machen.**
 
@@ -72,13 +51,9 @@ Während andere Wissenschaftler versuchen, die Welt zu erklären, versucht Dr. M
 
 # Seine größte Stärke: Selbstvertrauen
 
-Dr. Methodius besitzt eine seltene Fähigkeit:
+Dr. Methodius besitzt eine seltene Fähigkeit: **Er kann selbst die absurdeste These mit bemerkenswerter Überzeugung präsentieren.**
 
-**Er kann selbst die absurdeste These mit bemerkenswerter Überzeugung präsentieren.**
-
-Das macht ihn zu einem gefragten Experten.
-
-Zumindest theoretisch.
+Das macht ihn zu einem gefragten Experten. Zumindest theoretisch.
 
 Seine Vorträge sind bekannt für:
 
@@ -94,25 +69,17 @@ Seine Vorträge sind bekannt für:
 
 # Warum er diese Ratgeber schreibt
 
-Die Antwort ist einfach:
-
-**Das Leben ist kompliziert genug.**
+Die Antwort ist einfach: **Das Leben ist kompliziert genug.**
 
 Überall gibt es Menschen, die dir erklären wollen, wie du erfolgreicher, fitter, produktiver, gesünder, reicher, attraktiver und glücklicher wirst.
 
-Dr. Methodius geht einen anderen Weg.
-
-Er fragt:
+Dr. Methodius geht einen anderen Weg. Er fragt:
 
 > **„Muss das wirklich alles sein?“**
 
 Seine Ratgeber nehmen die großen Versprechen der modernen Welt auseinander und betrachten sie aus einer Perspektive, die man am besten als **wissenschaftlich inspirierten Unsinn mit gelegentlichen vernünftigen Momenten** beschreiben könnte.
 
-Dabei gilt:
-
-**Nicht jede Erkenntnis muss das Leben verändern.**
-
-Manche müssen einfach nur dafür sorgen, dass du für einen Moment lächelst.
+Dabei gilt: **Nicht jede Erkenntnis muss das Leben verändern.** Manche müssen einfach nur dafür sorgen, dass du für einen Moment lächelst.
 
 ---
 
@@ -120,17 +87,9 @@ Manche müssen einfach nur dafür sorgen, dass du für einen Moment lächelst.
 
 Dr. Methodius verfolgt drei grundlegende Prinzipien:
 
-### 1. Nimm das Leben ernst.
-
-Aber nicht **zu** ernst.
-
-### 2. Hinterfrage alles.
-
-Außer diese beiden Regeln.
-
-### 3. Wenn du keine Lösung findest:
-
-**Schreib einen Ratgeber darüber.**
+1. **Nimm das Leben ernst.** Aber nicht **zu** ernst.
+2. **Hinterfrage alles.** Nur seine Regeln nicht.
+3. Wenn du keine Lösung findest: **Schreib einen Ratgeber darüber.**
 
 ---
 
@@ -138,31 +97,19 @@ Außer diese beiden Regeln.
 
 Dr. Maximilian Methodius lebt und arbeitet irgendwo zwischen Wissenschaft, Satire und der festen Überzeugung, dass für nahezu jedes Problem noch ein Ratgeber geschrieben werden kann.
 
-Er forscht weiterhin.
+Er forscht weiterhin. Er denkt weiterhin. Er beobachtet weiterhin Menschen, die Dinge unnötig kompliziert machen.
 
-Er denkt weiterhin.
+Und vor allem: **Er schreibt weiter.**
 
-Er beobachtet weiterhin Menschen, die Dinge unnötig kompliziert machen.
+Denn irgendwo wartet bereits die nächste große Frage. Eine Frage, die die Menschheit vielleicht nicht gestellt hat. Eine Frage, die möglicherweise niemand beantworten muss. Aber definitiv eine Frage, zu der man einen Ratgeber schreiben kann.
 
-Und vor allem:
-
-**Er schreibt weiter.**
-
-Denn irgendwo wartet bereits die nächste große Frage.
-
-Eine Frage, die die Menschheit vielleicht nicht gestellt hat.
-
-Eine Frage, die möglicherweise niemand beantworten muss.
-
-Aber definitiv eine Frage, zu der man einen Ratgeber schreiben kann.
+> **„Wenn das Leben schon kompliziert ist, sollte wenigstens der Ratgeber darüber Spaß machen.“**
 
 ---
 
 ## Dr. Maximilian Methodius
 
-**Experte in allen Gebieten.  
+*Experte in allen Gebieten.  
 Spezialist für ungewöhnliche Lösungen.  
-Forscher der großen und kleinen Absurditäten des modernen Lebens.  
-Autor zahlreicher Ratgeber, die niemand bestellt hat – aber offenbar irgendjemand schreiben musste.**
+Forscher der großen und kleinen Absurditäten des modernen Lebens.*
 
-> **„Wenn das Leben schon kompliziert ist, sollte wenigstens der Ratgeber darüber Spaß machen.“**

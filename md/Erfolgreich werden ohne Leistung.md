@@ -22,17 +22,11 @@ Denn überall hört man:
 
 > „Gib niemals auf.“
 
-Und während du noch um 5 Uhr morgens joggst, kalt duschst und deinen fünften Podcast über persönliche Weiterentwicklung hörst, sitzt irgendwo ein Influencer vor einer Zimmerpflanze und erklärt dir:
+Und während du noch um 5 Uhr morgens joggst, kalt duschst und deinen fünften Podcast über persönliche Weiterentwicklung hörst, sitzt irgendwo ein Influencer vor einer Zimmerpflanze und erklärt dir: **„Du musst deine Energie schützen.“**
 
-**„Du musst deine Energie schützen.“**
+Vielleicht hat er Recht. Vielleicht ist das eigentliche Problem nicht deine fehlende Leistung. Vielleicht ist es einfach die Tatsache, dass du bisher noch nicht verstanden hast:
 
-Vielleicht hat er recht.
-
-Vielleicht ist das eigentliche Problem nicht deine fehlende Leistung.
-
-Vielleicht ist es einfach die Tatsache, dass du bisher noch nicht verstanden hast:
-
-# **Erfolg beginnt dort, wo die Arbeit aufhört.**
+**Erfolg beginnt dort, wo die Arbeit aufhört.**
 
 Zumindest auf Instagram.
 
@@ -42,21 +36,15 @@ Zumindest auf Instagram.
 
 ## Die Wahrheit über Erfolg
 
-Früher war Erfolg relativ einfach.
+Früher war Erfolg relativ einfach:
 
-Man arbeitete.
+- Man arbeitete.
+- Man lernte etwas.
+- Man wurde gut darin.
+- Man wurde befördert.
+- Man verdiente Geld.
 
-Man lernte etwas.
-
-Man wurde gut darin.
-
-Man wurde befördert.
-
-Man verdiente Geld.
-
-Das war mühsam.
-
-Heute ist das Konzept eleganter.
+Das war mühsam. Heute ist das Konzept eleganter.
 
 Du brauchst:
 
@@ -70,15 +58,9 @@ Du brauchst:
 - einen Espressoautomaten
 - und eine Meinung zu Mindset
 
-Dann bist du fast da.
+Dann bist du fast da. Denn entscheidend ist nicht mehr unbedingt: **„Was kannst du?“**
 
-Denn entscheidend ist nicht mehr unbedingt:
-
-**„Was kannst du?“**
-
-Sondern:
-
-**„Wie sieht es aus, als könntest du etwas?“**
+Sondern: **„Wie sieht es aus, als könntest du etwas?“**
 
 ---
 
@@ -86,9 +68,7 @@ Sondern:
 
 ## Die neue Definition von Leistung
 
-Leistung ist überbewertet.
-
-Was bringt es dir, acht Stunden konzentriert zu arbeiten, wenn du stattdessen ein 47-sekündiges Video drehen kannst?
+Leistung ist überbewertet. Was bringt es dir, acht Stunden konzentriert zu arbeiten, wenn du stattdessen ein 47-sekündiges Video drehen kannst?
 
 Früher:
 
@@ -98,13 +78,7 @@ Heute:
 
 > „Ich habe in den letzten drei Jahren 400.000 Menschen geholfen, ihre Einstellung zu verändern.“
 
-Was genau du verändert hast?
-
-Unklar.
-
-Aber 400.000 Menschen klingt beeindruckend.
-
-**Und beeindruckend ist bereits die halbe Miete.**
+Was genau du verändert hast? Unklar. Aber "400.000 Menschen" klingt beeindruckend. **Und beeindruckend ist bereits die halbe Miete.**
 
 ---
 
@@ -112,37 +86,22 @@ Aber 400.000 Menschen klingt beeindruckend.
 
 ## Der Influencer
 
-Der moderne Influencer beginnt seinen Tag um 4:37 Uhr.
+Der moderne Influencer beginnt seinen Tag um 4:37 Uhr. Er steht auf.
 
-Er steht auf.
+- Meditation.
+- Eisbad.
+- Atemübungen.
+- Dankbarkeit.
+- Journaling.
+- Affirmationen.
+- Proteinshake.
+- Sonnenaufgang.
+- Lektüre.
+- Visualisierung.
 
-Meditation.
+Und dann: **Er dreht ein Video darüber, wie er seinen Tag beginnt.**
 
-Eisbad.
-
-Atemübungen.
-
-Dankbarkeit.
-
-Journaling.
-
-Affirmationen.
-
-Proteinshake.
-
-Sonnenaufgang.
-
-Lektüre.
-
-Visualisierung.
-
-Und dann:
-
-**Er dreht ein Video darüber, wie er seinen Tag beginnt.**
-
-Um 11:15 Uhr ist endlich Zeit für die eigentliche Arbeit.
-
-Content über Produktivität.
+Um 11:15 Uhr ist endlich Zeit für die eigentliche Arbeit: Content über Produktivität.
 
 ---
 
@@ -152,13 +111,8 @@ Content über Produktivität.
 
 Eine erfolgreiche Morgenroutine besteht aus 14 Schritten.
 
-### 04:30
-
-Aufstehen.
-
-### 04:35
-
-Wasser trinken.
+**04:30:** Aufstehen.
+**04:35:** Wasser trinken.
 
 ### 04:40
 
@@ -822,72 +776,68 @@ Dann weißt du:
 
 **1. Besitzt du einen Laptop, auf dem du sichtbar arbeiten kannst?**
 
-- [ ] Ja
-- [ ] Natürlich
+☐ Ja
+☐ Natürlich
 
 **2. Hast du schon einmal ein Foto von deinem Kaffee gemacht?**
 
-- [ ] Ja
-- [ ] Das gehört zur Personal Brand
+☐ Ja
+☐ Das gehört zur Personal Brand
 
 **3. Hast du „Mindset“ schon einmal benutzt, ohne genau zu wissen, was es bedeutet?**
 
-- [ ] Ja
-- [ ] Mindset ist alles
+☐ Ja
+☐ Mindset ist alles
 
 **4. Stehst du um 5 Uhr auf?**
 
-- [ ] Ja
-- [ ] Nein, aber ich erzähle es so
+☐ Ja
+☐ Nein, aber ich erzähle es so
 
 **5. Hast du einen Onlinekurs?**
 
-- [ ] Ja
-- [ ] Noch nicht
+☐ Ja
+☐ Noch nicht
 
 **6. Hast du schon einmal „Passives Einkommen“ gegoogelt?**
 
-- [ ] Ja
-- [ ] Ich bin kurz davor, einen Kurs dazu zu verkaufen
+☐ Ja
+☐ Ich bin kurz davor, einen Kurs dazu zu verkaufen
 
 **7. Hast du mehr über Produktivität gelesen als tatsächlich produktiv gearbeitet?**
 
-- [ ] Ja
-- [ ] Das ist eine wichtige Erkenntnis
+☐ Ja
+☐ Das ist eine wichtige Erkenntnis
 
 **8. Hast du ein Foto von dir im Anzug vor einer Glasfassade?**
 
-- [ ] Ja
-- [ ] Noch nicht
+☐ Ja
+☐ Noch nicht
 
 **9. Hast du schon einmal „Ich habe mein Leben komplett verändert“ gepostet?**
 
-- [ ] Ja
-- [ ] Es war ein schwieriger Dienstag
+☐ Ja
+☐ Es war ein schwieriger Dienstag
 
 **10. Hast du den Ratgeber gelesen, weil du wirklich erfolgreich werden möchtest, ohne etwas zu leisten?**
 
-- [ ] Ja
-- [ ] Ich glaube an mein Potenzial
-- [ ] Ich habe das Kapitel über den Porsche übersprungen
+☐ Ja
+☐ Ich glaube an mein Potenzial
+☐ Ich habe das Kapitel über den Porsche übersprungen
 
-Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast:
-
-**Herzlichen Glückwunsch.**
+Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast: **Herzlichen Glückwunsch.**
 
 Du bist bereit für deine nächste große Transformation.
 
 Du brauchst jetzt nur noch:
 
-einen Podcast,
+- einen Podcast,
+- ein Mikrofon,
+- ein Ringlicht,
+- einen Onlinekurs,
+- und jemanden, der dir erklärt, wie du dein volles Potenzial entfaltest.
 
-ein Mikrofon,
-
-ein Ringlicht,
-
-einen Onlinekurs,
-
-und jemanden, der dir erklärt, wie du dein volles Potenzial entfaltest.
+---
 
 **Dr. Maximilian Methodius**
 
