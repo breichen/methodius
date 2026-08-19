@@ -586,6 +586,212 @@ h3 {
 }
 
 /* ============================================
+   BONUS-QUIZ
+   Button auf der Buch-Seite + Overlay mit den Quiz-Fragen. Da es sich
+   um Satire handelt, gilt jede Antwort als richtig - es gibt also
+   keine Fehlermeldung, nur den vorgegebenen Auflösungstext am Ende.
+   ============================================ */
+.quiz-start-wrap {
+  margin: 32px 0;
+}
+
+.quiz-start-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.quiz-start-button:hover {
+  transform: translateY(-2px);
+}
+
+.quiz-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 35, 64, 0.85);
+  /* --color-accent-warm, halbtransparent */
+  z-index: 1200;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.quiz-overlay.is-open {
+  display: flex;
+}
+
+.quiz-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.quiz-close:hover {
+  color: var(--color-accent);
+}
+
+.quiz-panel {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 560px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.quiz-panel:has(.quiz-score) {
+  max-width: 480px;
+  text-align: center;
+}
+
+.quiz-titel {
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.quiz-frage {
+  border: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+}
+
+.quiz-frage legend {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-text);
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+  color: var(--color-muted);
+}
+
+.quiz-option input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-accent);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.quiz-option input:checked {
+  background: var(--color-accent);
+}
+
+.quiz-option input:checked::after {
+  content: "✓";
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.quiz-option input:checked+span {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.quiz-auswerten-button {
+  display: block;
+  width: 100%;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: transform 0.15s ease;
+}
+
+.quiz-auswerten-button:hover {
+  transform: translateY(-2px);
+}
+
+.quiz-score {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--color-accent);
+  background: var(--color-bg-alt);
+  border: 2px solid var(--color-accent);
+  border-radius: 999px;
+  padding: 14px 32px;
+  margin: 0 0 28px 0;
+}
+
+.quiz-ergebnis-abzeichen {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 12px;
+}
+
+.quiz-ergebnis-text {
+  text-align: left;
+}
+
+.quiz-ergebnis-text p:last-child {
+  margin-bottom: 0;
+}
+
+.quiz-zurueck-button {
+  display: block;
+  margin: 24px auto 0;
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.quiz-zurueck-button:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* ============================================
    RATGEBER-SHOWCASE
    ============================================ */
 .showcase {

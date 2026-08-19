@@ -43,13 +43,17 @@ if (!buch) {
       return antwort.text();
     })
     .then(markdown => {
-      document.getElementById("buch-text").innerHTML = markdownZuHtml(markdown);
+      const { fliesstextBloecke, flipbookBloecke, quiz } =
+        verarbeiteRatgeberMarkdown(markdown);
 
-      // Für die Blätter-Ansicht brauchen wir die einzelnen Blöcke (nicht
-      // den fertig verketteten HTML-String), damit wir sie auf Seiten
-      // verteilen können.
-      const bloecke = markdownZuBloecke(markdown);
-      initFlipbook(bloecke);
+      document.getElementById("buch-text").innerHTML = fliesstextBloecke.join("\n");
+
+      // Die Blätter-Ansicht bekommt bewusst die UNVERÄNDERTEN Blöcke
+      // (inkl. Bonus-Quiz als ganz normaler Text) - in einem
+      // physischen Buch kann man schließlich nicht klicken.
+      initFlipbook(flipbookBloecke);
+      initQuizButton(quiz);
+
       blaetternLink.style.visibility = "visible";
     })
     .catch(() => {
@@ -64,27 +68,46 @@ if (!buch) {
    MARKDOWN-ÜBERSETZUNG
    Die eigentliche Übersetzung (Überschriften, **fett**, *kursiv*,
    > Zitate, - Listen, --- als Trennlinie) übernimmt parseMarkdownBloecke()
-   aus js/markdown.js. Hier kommt nur noch die Kapitel- und Autor-
-   spezifische Nachbearbeitung dazu, die NUR für Ratgeber-Seiten gilt.
+   aus js/markdown.js. Hier kommt nur noch die Kapitel-, Autor- und
+   Bonus-Quiz-spezifische Nachbearbeitung dazu, die NUR für
+   Ratgeber-Seiten gilt.
    ============================================ */
 
-// Wandelt Markdown in ein Array von HTML-Blöcken um UND wendet die
-// Ratgeber-spezifischen Regeln an (Kapitel-Bereinigung, Autor-Box) -
-// wird sowohl für die normale Anzeige als auch für die Seitenaufteilung
-// der Blätter-Ansicht genutzt.
+// Übernimmt den kompletten Weg von rohem Markdown bis zu den fertigen
+// HTML-Blöcken UND liefert zusätzlich die extrahierten Quiz-Daten
+// (falls ein BONUS-Abschnitt gefunden wurde).
+//
+// Liefert ZWEI verschiedene Block-Arrays:
+// - fliesstextBloecke: BONUS-Abschnitt durch einen Button ersetzt
+//   (öffnet das interaktive Quiz-Overlay)
+// - flipbookBloecke: unverändert, BONUS-Abschnitt bleibt als normaler
+//   Text stehen - in einem physischen Buch kann man schließlich nicht
+//   klicken, daher zeigt die Blätter-Ansicht das Quiz statisch an.
+function verarbeiteRatgeberMarkdown(markdown) {
+  const roh = parseMarkdownBloecke(markdown);
+
+  // Blätter-Ansicht: ganz normale Kapitel-/Autor-Nachbearbeitung,
+  // OHNE den Bonus-Abschnitt herauszuschneiden.
+  const flipbookBloecke = styleAutorErwaehnung(
+    bereinigeKapitelUeberschriften(roh)
+  );
+
+  // Fließtext: Der BONUS-Abschnitt muss VOR der Kapitel-/Autor-Logik
+  // entfernt werden - sonst hält bereinigeKapitelUeberschriften bzw.
+  // styleAutorErwaehnung ihn versehentlich für das letzte "echte"
+  // Kapitel und die Unterschrift landet am falschen Ort.
+  const { bloecke: ohneBonus, quiz } = extrahiereBonusQuiz(roh);
+  const fliesstextBloecke = styleAutorErwaehnung(
+    bereinigeKapitelUeberschriften(ohneBonus)
+  );
+
+  return { fliesstextBloecke, flipbookBloecke, quiz };
+}
+
+// Nur die Fließtext-Blöcke, ohne Quiz-Daten - falls an anderer Stelle
+// mal nur der Text gebraucht wird.
 function markdownZuBloecke(markdown) {
-  const html = parseMarkdownBloecke(markdown);
-
-  // "Kapitel"-Überschriften (Top-Level, z.B. "# Kapitel 1") werden entfernt;
-  // die darauffolgende Zwischenüberschrift (##) rückt an ihre Stelle als
-  // neue Top-Level-Überschrift (#) nach - gilt für Fließtext UND Blätteransicht,
-  // da beide auf diesen Blöcken aufbauen.
-  const bereinigt = bereinigeKapitelUeberschriften(html);
-
-  // Autor-Erwähnungen im ersten und letzten Kapitel besonders gestalten -
-  // ebenfalls für Fließtext UND Blätteransicht, da beide auf diesen
-  // Blöcken aufbauen.
-  return styleAutorErwaehnung(bereinigt);
+  return verarbeiteRatgeberMarkdown(markdown).fliesstextBloecke;
 }
 
 // Text, der als handschriftliche Unterschrift über der Namenszeile im
@@ -212,6 +235,246 @@ function bereinigeKapitelUeberschriften(bloecke) {
 
 function markdownZuHtml(markdown) {
   return markdownZuBloecke(markdown).join("\n");
+}
+
+/* ============================================
+   BONUS-QUIZ
+   Erkennt einen Top-Level-Abschnitt, dessen Überschrift mit "BONUS"
+   beginnt (z.B. "# BONUS: Der Muskelabbau-Test"), zieht ihn aus dem
+   normalen Textfluss heraus und ersetzt ihn durch einen Button. Der
+   Button öffnet später ein Quiz-Overlay (siehe initQuizButton unten).
+   ============================================ */
+
+// Sucht die erste <h1>-Überschrift, die mit "BONUS" beginnt, schneidet
+// den kompletten Abschnitt bis zur nächsten <h1> (oder Textende) heraus
+// und ersetzt ihn im Block-Array durch einen einzelnen Button-Block.
+function extrahiereBonusQuiz(bloecke) {
+  const NAME_REGEX = /<strong>Dr\. Maximilian Methodius<\/strong>/;
+
+  const h1Indizes = bloecke.reduce((acc, block, i) => {
+    if (block.startsWith("<h1")) acc.push(i);
+    return acc;
+  }, []);
+
+  const bonusStart = h1Indizes.find(i => {
+    const text = bloecke[i].replace(/^<h1>|<\/h1>$/g, "");
+    return text.toUpperCase().startsWith("BONUS");
+  });
+
+  if (bonusStart === undefined) {
+    return { bloecke, quiz: null };
+  }
+
+  const naechsteH1 = h1Indizes.find(i => i > bonusStart);
+
+  // WICHTIG: Die Namenszeile "Dr. Maximilian Methodius" (Unterschrift +
+  // Name am Buchende) darf NIEMALS Teil des herausgeschnittenen
+  // Bonus-Bereichs werden - egal ob sie im Markdown vor dem BONUS-
+  // Abschnitt steht (dann betrifft es diese Prüfung ohnehin nicht) oder
+  // direkt danach, ohne eigene Zwischenüberschrift. Sie bleibt also in
+  // jedem Fall auf der eigentlichen Buch-Seite stehen.
+  const namensIndexNachBonus = bloecke.findIndex(
+    (block, i) => i > bonusStart && NAME_REGEX.test(block)
+  );
+
+  const grenzen = [naechsteH1, namensIndexNachBonus === -1 ? undefined : namensIndexNachBonus]
+    .filter(i => i !== undefined);
+
+  const bonusEnde = grenzen.length > 0 ? Math.min(...grenzen) : bloecke.length;
+
+  const bonusBloecke = bloecke.slice(bonusStart, bonusEnde);
+  const { titel, beschreibung, fragen, verbrauchteAnzahl } = parseQuizAusBloecken(bonusBloecke);
+  const quiz = { titel, beschreibung, fragen };
+
+  // Alles nach der letzten Frage (z.B. "Herzlichen Glückwunsch...")
+  // bleibt als ganz normaler Text auf der Buch-Seite stehen, statt im
+  // Quiz zu verschwinden - die Auswertung bekommt stattdessen einen
+  // eigenen, dynamischen Text (siehe zeigeQuizErgebnis).
+  const outroBloecke = bonusBloecke.slice(verbrauchteAnzahl);
+
+  const buttonBlock = `<div class="quiz-start-wrap">
+    <button class="quiz-start-button" id="quiz-start-button" type="button">📝 ${quiz.titel} – Quiz starten</button>
+  </div>`;
+
+  const neueBloecke = [
+    ...bloecke.slice(0, bonusStart),
+    buttonBlock,
+    ...outroBloecke,
+    ...bloecke.slice(bonusEnde)
+  ];
+
+  return { bloecke: neueBloecke, quiz };
+}
+
+// Zerlegt die Blöcke eines BONUS-Abschnitts in: Titel, optionale
+// Beschreibung und Fragen (mit Antwortoptionen). Alles NACH der letzten
+// Frage (z.B. "Herzlichen Glückwunsch...") gehört nicht zum Quiz,
+// sondern bleibt normaler Text auf der Buch-Seite - deswegen liefert
+// diese Funktion zusätzlich "verbrauchteAnzahl", damit der Aufrufer
+// weiß, ab welchem Index der restliche Text beginnt.
+//
+// Erwartetes Markdown-Muster pro Frage:
+//   **1. Frage-Text?**
+//
+//   ☐ Option A
+//   ☐ Option B
+function parseQuizAusBloecken(bonusBloecke) {
+  const titel = bonusBloecke[0]
+    .replace(/^<h1>/, "")
+    .replace(/<\/h1>$/, "")
+    .replace(/^BONUS:?\s*/i, "")
+    .trim();
+
+  let i = 1;
+  let beschreibung = null;
+
+  // Optionaler Beschreibungstext direkt nach der Überschrift, bevor
+  // die erste Frage kommt (z.B. "Beantworte folgende Fragen:").
+  if (bonusBloecke[i] && !/^<p><strong>\d+\./.test(bonusBloecke[i])) {
+    beschreibung = bonusBloecke[i];
+    i++;
+  }
+
+  const fragen = [];
+
+  for (; i < bonusBloecke.length; i++) {
+    const block = bonusBloecke[i];
+    const frageMatch = block.match(/^<p><strong>\d+\.\s*(.+?)<\/strong><\/p>$/);
+
+    if (!frageMatch) {
+      break;
+    }
+
+    const optionenBlock = bonusBloecke[i + 1] || "";
+    const optionen = optionenBlock
+      .replace(/^<p>/, "")
+      .replace(/<\/p>$/, "")
+      .split("<br>")
+      .map(o => o.replace(/^☐\s*/, "").trim())
+      .filter(Boolean);
+
+    fragen.push({ text: frageMatch[1], optionen });
+    i++; // die Optionen-Zeile wurde mitverarbeitet, überspringen
+  }
+
+  // i zeigt jetzt auf den ersten Block NACH der letzten Frage/Antwort -
+  // alles ab hier (z.B. "Herzlichen Glückwunsch...") gehört NICHT mehr
+  // zum Quiz-Objekt, sondern bleibt als normaler Text auf der Buch-Seite
+  // stehen (siehe extrahiereBonusQuiz).
+  return { titel, beschreibung, fragen, verbrauchteAnzahl: i };
+}
+
+// Baut den Button-Klick-Handler auf, der das Quiz-Overlay öffnet.
+// Wird pro Buch-Seite einmal aufgerufen - tut nichts, falls kein
+// BONUS-Abschnitt gefunden wurde.
+function initQuizButton(quiz) {
+  if (!quiz) return;
+
+  const startButton = document.getElementById("quiz-start-button");
+  if (!startButton) return;
+
+  startButton.addEventListener("click", () => {
+    baueQuizGeruest();
+    zeigeQuizFragen(quiz);
+    document.getElementById("quiz-overlay").classList.add("is-open");
+  });
+}
+
+// Baut das Overlay-Grundgerüst einmalig und hängt es an den <body>
+function baueQuizGeruest() {
+  if (document.getElementById("quiz-overlay")) return;
+
+  const overlay = document.createElement("div");
+  overlay.id = "quiz-overlay";
+  overlay.className = "quiz-overlay";
+  overlay.innerHTML = `
+    <button class="quiz-close" id="quiz-close" aria-label="Schließen">&times;</button>
+    <div class="quiz-panel" id="quiz-panel"></div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  document.getElementById("quiz-close").addEventListener("click", schliesseQuiz);
+
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) schliesseQuiz();
+  });
+
+  document.addEventListener("keydown", e => {
+    if (overlay.classList.contains("is-open") && e.key === "Escape") {
+      schliesseQuiz();
+    }
+  });
+}
+
+function schliesseQuiz() {
+  const overlay = document.getElementById("quiz-overlay");
+  if (overlay) overlay.classList.remove("is-open");
+}
+
+// Zeigt die Fragen als Formular mit Checkboxen an. Erst beim Abschicken
+// (Button "Auswertung anzeigen") wird die Auswertung eingeblendet - das
+// komplette Panel wird dabei einfach neu befüllt (robuster als
+// einzelne Elemente per "hidden" ein-/auszublenden).
+function zeigeQuizFragen(quiz) {
+  const panel = document.getElementById("quiz-panel");
+
+  const beschreibungHtml = quiz.beschreibung || "";
+
+  const fragenHtml = quiz.fragen.map((frage, fIndex) => `
+    <fieldset class="quiz-frage">
+      <legend>${frage.text}</legend>
+      ${frage.optionen.map((option, oIndex) => `
+        <label class="quiz-option">
+          <input type="radio" name="quiz-frage-${fIndex}" value="${oIndex}" required>
+          <span>${option}</span>
+        </label>
+      `).join("")}
+    </fieldset>
+  `).join("");
+
+  panel.innerHTML = `
+    <h3 class="quiz-titel">${quiz.titel}</h3>
+    ${beschreibungHtml}
+    <form id="quiz-form">
+      ${fragenHtml}
+      <button class="quiz-auswerten-button" type="submit">Auswertung anzeigen</button>
+    </form>
+  `;
+
+  document.getElementById("quiz-form").addEventListener("submit", e => {
+    e.preventDefault();
+    zeigeQuizErgebnis(quiz);
+  });
+}
+
+// Zeigt die Auswertung an - da Satire, gilt ohnehin jede Antwort als
+// richtig: kleines gezeichnetes Abzeichen-Icon (statt des Buch-Covers,
+// das als Kreis-Crop schlecht aussah), darunter stilisiertes
+// "X/X Antworten richtig" (X = Anzahl der erkannten Fragen) und ein
+// knapper Glückwunsch-Text mit dem BUCH-Titel (nicht dem Quiz-Titel).
+// Zusätzlich ein "Zurück"-Button für alle, die nicht sehen (wollen),
+// dass ein Klick daneben das Overlay auch schließt.
+function zeigeQuizErgebnis(quiz) {
+  const panel = document.getElementById("quiz-panel");
+  const anzahl = quiz.fragen.length;
+
+  panel.innerHTML = `
+    <div class="quiz-ergebnis-abzeichen" aria-hidden="true">
+      <svg viewBox="0 0 100 120" width="84" height="101">
+        <path d="M35 68 L18 116 L50 99 L82 116 L65 68 Z" fill="var(--color-accent-warm)"></path>
+        <circle cx="50" cy="45" r="40" fill="var(--color-accent)" stroke="#fff" stroke-width="4"></circle>
+        <path d="M50 24 L56.5 38.5 L72 40.5 L60.5 51 L63.5 66.5 L50 58.5 L36.5 66.5 L39.5 51 L28 40.5 L43.5 38.5 Z" fill="#fff"></path>
+      </svg>
+    </div>
+    <p class="quiz-score">${anzahl}/${anzahl} Antworten richtig</p>
+    <div class="quiz-ergebnis-text">
+      <p>Herzlichen Glückwunsch! Du bist Experte zum Thema <strong>${buch.titel}</strong>!</p>
+    </div>
+    <button class="quiz-zurueck-button" id="quiz-zurueck-button" type="button">Zurück</button>
+  `;
+
+  document.getElementById("quiz-zurueck-button").addEventListener("click", schliesseQuiz);
 }
 
 /* ============================================
