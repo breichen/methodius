@@ -82,8 +82,7 @@ p {
    aussehen.
    ============================================ */
 
-#buch-text blockquote,
-#autor-inhalt blockquote {
+blockquote {
   position: relative;
 
   margin: 28px 0;
@@ -104,8 +103,7 @@ p {
 }
 
 /* Großes dekoratives Anführungszeichen */
-#buch-text blockquote::before,
-#autor-inhalt blockquote::before {
+blockquote::before {
   content: "\201E";
 
   position: absolute;
@@ -121,37 +119,35 @@ p {
   opacity: 0.25;
 }
 
-#buch-text blockquote strong,
-#autor-inhalt blockquote strong {
+blockquote strong {
   color: var(--color-text);
 }
 
 /* ============================================
    LISTEN IM FLIESSTEXT
-   Gilt für Ratgeber-Seiten UND die Autorseite, da beide auf derselben
-   parseMarkdownBloecke()-Übersetzung aufbauen.
+   Gilt seitenweit (Ratgeber, Autorseite, Hauptseite, ...) außer im
+   Blättermodus und im Quiz, die beide eigene, spezifischere Regeln
+   haben. Die Navigation im Header nutzt ebenfalls <ul>/<li>, braucht
+   aber ihr eigenes Layout statt Aufzählungspunkten - daher der Reset
+   direkt im Anschluss.
    ============================================ */
-#buch-text ul,
-#autor-inhalt ul {
+ul {
   list-style: none;
   margin: 0 0 16px 0;
   padding: 0;
 }
 
-#buch-text li,
-#autor-inhalt li {
+li {
   position: relative;
   margin: 0 0 8px 0;
   padding-left: 24px;
 }
 
-#buch-text li:last-child,
-#autor-inhalt li:last-child {
+li:last-child {
   margin-bottom: 0;
 }
 
-#buch-text li::before,
-#autor-inhalt li::before {
+li::before {
   content: "";
   position: absolute;
   left: 2px;
@@ -161,6 +157,17 @@ p {
   border-radius: 50%;
   background: var(--color-accent);
   transform: translateY(-50%);
+}
+
+/* Reset für die Header-Navigation - dort keine Aufzählungspunkte/
+   Einzüge, das eigene Flex-Layout (siehe "nav ul" oben) reicht. */
+nav li {
+  margin: 0;
+  padding-left: 0;
+}
+
+nav li::before {
+  content: none;
 }
 
 /* ============================================
@@ -445,23 +452,26 @@ h3 {
 }
 
 /* ============================================
-   BLÄTTERN-LINK
+   ÜBERSCHRIFTEN & TRENNLINIEN
+   Gilt seitenweit (Ratgeber, Autorseite, Hauptseite, ...) außer im
+   Blättermodus, der seine eigene, spezifischere h1/hr-Optik hat.
    ============================================ */
-#buch-text h1,
-#autor-inhalt h1 {
+h1 {
   border-bottom: 2px solid var(--color-accent);
   padding-bottom: 10px;
   display: inline-block;
 }
 
-#buch-text hr,
-#autor-inhalt hr {
+hr {
   border: none;
   border-top: 2px solid var(--color-accent);
   width: 60px;
   margin: 64px 0;
 }
 
+/* ============================================
+   BLÄTTERN-LINK
+   ============================================ */
 .blaettern-wrap {
   margin: -16px 0 32px;
 }
@@ -662,6 +672,40 @@ h3 {
 .quiz-panel:has(.quiz-score) {
   max-width: 480px;
   text-align: center;
+}
+
+/* Falls die Quiz-Beschreibung (aus dem Markdown) doch mal ein Zitat,
+   eine Liste oder eine Trennlinie enthält: im Quiz gilt bewusst NICHT
+   die allgemeine Ratgeber-Optik (roter Rahmen/Punkte), sondern ein
+   schlichter Look, der sich ins kompakte Overlay einfügt. */
+.quiz-panel blockquote {
+  background: none;
+  border-left: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.quiz-panel blockquote::before {
+  content: none;
+}
+
+.quiz-panel ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.quiz-panel li {
+  padding-left: 0;
+}
+
+.quiz-panel li::before {
+  content: none;
+}
+
+.quiz-panel hr {
+  margin: 24px 0;
 }
 
 .quiz-titel {
