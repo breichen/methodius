@@ -8,29 +8,9 @@
 
 # Herzlichen Glückwunsch!
 
-Du benutzt KI.
+Du benutzt KI. Das ist großartig. Du kannst damit Texte schreiben. Bilder erstellen. E-Mails formulieren. Hausaufgaben erledigen. Urlaub planen. Bewerbungen schreiben. Rezepte entwickeln. Und theoretisch sogar herausfinden, warum dein Drucker nicht funktioniert.
 
-Das ist großartig.
-
-Du kannst damit Texte schreiben.
-
-Bilder erstellen.
-
-E-Mails formulieren.
-
-Hausaufgaben erledigen.
-
-Urlaub planen.
-
-Bewerbungen schreiben.
-
-Rezepte entwickeln.
-
-Und theoretisch sogar herausfinden, warum dein Drucker nicht funktioniert.
-
-Doch mit großer technologischer Macht kommt große Verantwortung.
-
-Deshalb gibt es mittlerweile überall Warnungen:
+Doch mit großer technologischer Macht kommt große Verantwortung. Deshalb gibt es mittlerweile überall Warnungen:
 
 > „Geben Sie keine sensiblen Daten in KI-Systeme ein.“
 
@@ -40,11 +20,7 @@ Deshalb gibt es mittlerweile überall Warnungen:
 
 > „Teilen Sie keine vertraulichen Informationen.“
 
-Das klingt vernünftig.
-
-Aber Vernunft ist anstrengend.
-
-Deshalb haben wir einen besseren Ansatz entwickelt:
+Das klingt vernünftig. Aber Vernunft ist anstrengend. Deshalb haben wir einen besseren Ansatz entwickelt:
 
 **KI (gar nicht) sicher nutzen.**
 
@@ -56,11 +32,7 @@ Ein revolutionäres Konzept für alle, die Datenschutz grundsätzlich wichtig fi
 
 ## Die wichtigste Sicherheitsregel: Lies die Datenschutzerklärung
 
-Bevor du eine KI benutzt, solltest du dir genau durchlesen, was mit deinen Daten passiert.
-
-Das ist enorm wichtig.
-
-Du solltest verstehen:
+Bevor du eine KI benutzt, solltest du dir genau durchlesen, was mit deinen Daten passiert. Das ist enorm wichtig. Du solltest verstehen:
 
 - welche Daten verarbeitet werden,
 - wie sie verarbeitet werden,
@@ -69,27 +41,13 @@ Du solltest verstehen:
 - welche Einstellungen du ändern kannst,
 - und welche Rechte du hast.
 
-Das Problem:
-
-Die Datenschutzerklärung ist 47 Seiten lang.
-
-Du hast aber gerade eine dringende Frage:
+Das Problem: Die Datenschutzerklärung ist 47 Seiten lang. Du hast aber gerade eine dringende Frage:
 
 > „Schreib mir bitte eine höfliche Nachricht an meinen Vermieter.“
 
-Also überspringst du die Datenschutzerklärung.
+Also überspringst du die Datenschutzerklärung. **Völlig verständlich.** Du klickst: **„Akzeptieren.“** Und los geht's.
 
-**Völlig verständlich.**
-
-Du klickst:
-
-**„Akzeptieren.“**
-
-Und los geht's.
-
-Damit hast du bereits deine erste Sicherheitsentscheidung getroffen.
-
-Sie lautet:
+Damit hast du bereits deine erste Sicherheitsentscheidung getroffen. Sie lautet:
 
 > **„Ich werde später herausfinden, was ich gerade akzeptiert habe.“**
 
@@ -99,9 +57,7 @@ Sie lautet:
 
 ## Was sind eigentlich sensible Daten?
 
-Sensible Daten sind Informationen, die du nicht einfach jedem geben solltest.
-
-Zum Beispiel:
+Sensible Daten sind Informationen, die du nicht einfach jedem geben solltest. Zum Beispiel:
 
 - Passwörter
 - Kontodaten
@@ -111,15 +67,11 @@ Zum Beispiel:
 - persönliche Identifikationsnummern
 - private Dokumente
 
-Die meisten Menschen wissen das.
-
-Deshalb schreiben sie natürlich nicht:
+Die meisten Menschen wissen das. Deshalb schreiben sie natürlich nicht:
 
 > „Hier ist mein Passwort: `Sommer2026!`“
 
-Das wäre ja fahrlässig.
-
-Stattdessen schreiben sie:
+Das wäre ja fahrlässig. Stattdessen schreiben sie:
 
 > „Ich habe ein Passwortproblem. Mein Passwort ist Sommer2026!, aber bitte ändere es nicht.“
 
@@ -135,9 +87,7 @@ Eine der gefährlichsten Formulierungen im Umgang mit KI lautet:
 
 > **„Ich frage nur ganz kurz.“**
 
-Denn aus einer kurzen Frage wird schnell ein kompletter Lebensbericht.
-
-Anfangs:
+Denn aus einer kurzen Frage wird schnell ein kompletter Lebensbericht. Anfangs:
 
 > „Kannst du mir helfen, diese E-Mail zu formulieren?“
 
@@ -161,11 +111,7 @@ Dann:
 
 > „Hier ist die gesamte E-Mail-Korrespondenz der letzten sechs Monate.“
 
-Herzlichen Glückwunsch.
-
-Du wolltest eine E-Mail formulieren.
-
-Jetzt hast du deine komplette Bürogeschichte in den Chat kopiert.
+Herzlichen Glückwunsch. Du wolltest eine E-Mail formulieren. Jetzt hast du deine komplette Bürogeschichte in den Chat kopiert.
 
 ---
 
@@ -173,15 +119,11 @@ Jetzt hast du deine komplette Bürogeschichte in den Chat kopiert.
 
 ## Die goldene Regel: Alles teilen, außer das Passwort
 
-Viele Nutzer haben ein interessantes Sicherheitskonzept.
-
-Sie sagen:
+Viele Nutzer haben ein interessantes Sicherheitskonzept. Sie sagen:
 
 > „Ich gebe der KI niemals mein Passwort.“
 
-Sehr gut.
-
-Dann laden sie hoch:
+Sehr gut. Dann laden sie hoch:
 
 - ihren Arbeitsvertrag,
 - ihre Steuerunterlagen,
@@ -192,11 +134,7 @@ Dann laden sie hoch:
 - ihre privaten Nachrichten,
 - und einen Screenshot ihres Passwort-Managers.
 
-Aber das Passwort selbst?
-
-**Das wird selbstverständlich nicht verraten.**
-
-Sicherheit muss schließlich irgendwo anfangen.
+Aber das Passwort selbst? **Das wird selbstverständlich nicht verraten.** Sicherheit muss schließlich irgendwo anfangen.
 
 ---
 
@@ -204,19 +142,11 @@ Sicherheit muss schließlich irgendwo anfangen.
 
 ## Der Screenshot-Trick
 
-Screenshots sind wunderbar.
-
-Du kannst der KI zeigen:
+Screenshots sind wunderbar. Du kannst der KI zeigen:
 
 > „Was ist hier falsch?“
 
-Und die KI kann den Screenshot analysieren.
-
-Das funktioniert hervorragend.
-
-Deshalb solltest du vor dem Hochladen natürlich prüfen, ob sensible Informationen sichtbar sind.
-
-Zum Beispiel:
+Und die KI kann den Screenshot analysieren. Das funktioniert hervorragend. Deshalb solltest du vor dem Hochladen natürlich prüfen, ob sensible Informationen sichtbar sind. Zum Beispiel:
 
 - Namen,
 - Adressen,
@@ -227,13 +157,7 @@ Zum Beispiel:
 - QR-Codes,
 - Zugangsdaten.
 
-Oder du machst es wie ein Profi:
-
-**Screenshot erstellen.**
-
-**Sofort hochladen.**
-
-**Später feststellen:**
+Oder du machst es wie ein Profi: **Screenshot erstellen.** **Sofort hochladen.** **Später feststellen:**
 
 > „Oh.“
 
@@ -243,23 +167,11 @@ Oder du machst es wie ein Profi:
 
 ## Der Klassiker: „Kannst du das für mich zusammenfassen?“
 
-Du hast ein vertrauliches Dokument.
-
-Vielleicht 30 Seiten.
-
-Du möchtest nicht alles lesen.
-
-Also kopierst du es in die KI:
+Du hast ein vertrauliches Dokument. Vielleicht 30 Seiten. Du möchtest nicht alles lesen. Also kopierst du es in die KI:
 
 > „Fasse mir das bitte zusammen.“
 
-Sehr effizient.
-
-Das Problem:
-
-Das Dokument enthält möglicherweise Informationen, die du nicht unbedingt in einen KI-Chat eingeben solltest.
-
-Deshalb empfehlen wir eine revolutionäre Zwischenlösung:
+Sehr effizient. Das Problem: Das Dokument enthält möglicherweise Informationen, die du nicht unbedingt in einen KI-Chat eingeben solltest. Deshalb empfehlen wir eine revolutionäre Zwischenlösung:
 
 ### Schritt 1
 
@@ -279,9 +191,7 @@ Dokument zusammenfassen lassen.
 
 ### Alternative
 
-Schritt 1:
-
-Dokument öffnen.
+Schritt 1: Dokument öffnen.
 
 ### Schritt 2
 
@@ -309,37 +219,13 @@ Ein weit verbreiteter Irrtum lautet:
 
 > „Wenn die KI es sagt, muss es stimmen.“
 
-Natürlich nicht.
-
-KI kann Fehler machen.
-
-Sie kann Informationen falsch darstellen.
-
-Sie kann Dinge erfinden.
-
-Sie kann selbstbewusst etwas behaupten, das schlicht nicht stimmt.
-
-Das ist besonders interessant, wenn sie schreibt:
+Natürlich nicht. KI kann Fehler machen. Sie kann Informationen falsch darstellen. Sie kann Dinge erfinden. Sie kann selbstbewusst etwas behaupten, das schlicht nicht stimmt. Das ist besonders interessant, wenn sie schreibt:
 
 > „Ich kann bestätigen, dass …“
 
-Du denkst:
+Du denkst: **„Perfekt. Bestätigt.“**
 
-**„Perfekt. Bestätigt.“**
-
-Aber wer hat eigentlich bestätigt?
-
-Die KI.
-
-Und wer hat die KI kontrolliert?
-
-Du.
-
-Und wer hat die Antwort überprüft?
-
-Niemand.
-
-**Ein hervorragend geschlossenes System.**
+Aber wer hat eigentlich bestätigt? Die KI. Und wer hat die KI kontrolliert? Du. Und wer hat die Antwort überprüft? Niemand. **Ein hervorragend geschlossenes System.**
 
 ---
 
@@ -351,9 +237,7 @@ Bevor du eine KI-Antwort glaubst, stelle dir drei Fragen:
 
 ### 1. Klingt es plausibel?
 
-Wenn ja:
-
-Gut.
+Wenn ja: Gut.
 
 ### 2. Klingt es sehr überzeugend?
 
@@ -361,13 +245,7 @@ Noch besser.
 
 ### 3. Habe ich es überprüft?
 
-Oh.
-
-Da wird es schwierig.
-
-Denn genau hier trennt sich der professionelle KI-Nutzer vom normalen Menschen.
-
-Der professionelle Nutzer sagt:
+Oh. Da wird es schwierig. Denn genau hier trennt sich der professionelle KI-Nutzer vom normalen Menschen. Der professionelle Nutzer sagt:
 
 > „Ich überprüfe diese Information noch einmal.“
 
@@ -383,27 +261,9 @@ Und kopiert den Text direkt in eine Präsentation.
 
 ## KI als persönlicher Psychologe
 
-Du kannst KI alles erzählen.
+Du kannst KI alles erzählen. Deine Sorgen. Deine Beziehungen. Deine Konflikte. Deine Ängste. Deine geheimsten Gedanken. Das kann hilfreich sein. Aber auch hier gilt: **Nicht jede persönliche Information muss in einen Chat.**
 
-Deine Sorgen.
-
-Deine Beziehungen.
-
-Deine Konflikte.
-
-Deine Ängste.
-
-Deine geheimsten Gedanken.
-
-Das kann hilfreich sein.
-
-Aber auch hier gilt:
-
-**Nicht jede persönliche Information muss in einen Chat.**
-
-Du kannst eine Situation auch anonymisiert beschreiben.
-
-Statt:
+Du kannst eine Situation auch anonymisiert beschreiben. Statt:
 
 > „Meine Freundin Anna, 29, aus München, arbeitet bei Firma XY und hat seit drei Wochen Streit mit ihrer Kollegin Sabine …“
 
@@ -411,11 +271,7 @@ könntest du schreiben:
 
 > „Eine Person in meinem Umfeld hat einen Konflikt mit einer Kollegin.“
 
-Die zweite Variante ist weniger spannend.
-
-Aber Datenschutz ist schließlich kein Netflix-Abo.
-
-Es muss nicht spannend sein.
+Die zweite Variante ist weniger spannend. Aber Datenschutz ist schließlich kein Netflix-Abo. Es muss nicht spannend sein.
 
 ---
 
@@ -423,23 +279,11 @@ Es muss nicht spannend sein.
 
 ## Der Firmencomputer
 
-Jetzt wird es besonders interessant.
-
-Du sitzt im Büro.
-
-Du hast ein Problem.
-
-Du öffnest die KI.
-
-Du schreibst:
+Jetzt wird es besonders interessant. Du sitzt im Büro. Du hast ein Problem. Du öffnest die KI. Du schreibst:
 
 > „Hilf mir bitte bei dieser Präsentation.“
 
-Dann kopierst du:
-
-**die komplette Präsentation.**
-
-Darin enthalten:
+Dann kopierst du: **die komplette Präsentation.** Darin enthalten:
 
 - interne Zahlen,
 - Kundendaten,
@@ -450,17 +294,11 @@ Darin enthalten:
 
 > **„NICHT FÜR EXTERNE WEITERGABE“**
 
-Du kopierst sie trotzdem.
-
-Denn du möchtest nur wissen:
+Du kopierst sie trotzdem. Denn du möchtest nur wissen:
 
 > „Kannst du die Formulierung auf Folie 17 verbessern?“
 
-Das ist ein hervorragendes Beispiel dafür, dass die wichtigste Sicherheitsfunktion häufig nicht technisch ist.
-
-Sie sitzt vor dem Bildschirm.
-
-Und sie sollte eigentlich gerade nicht auf „Einfügen“ drücken.
+Das ist ein hervorragendes Beispiel dafür, dass die wichtigste Sicherheitsfunktion häufig nicht technisch ist. Sie sitzt vor dem Bildschirm. Und sie sollte eigentlich gerade nicht auf „Einfügen“ drücken.
 
 ---
 
@@ -475,9 +313,7 @@ Ein gutes Passwort sollte:
 - nicht leicht zu erraten sein,
 - und nicht für mehrere Dienste verwendet werden.
 
-Was solltest du nicht tun?
-
-Die KI fragen:
+Was solltest du nicht tun? Die KI fragen:
 
 > „Erstelle mir ein Passwort.“
 
@@ -485,19 +321,9 @@ Denn dann bekommst du beispielsweise:
 
 > `Sonne!Haus2026#`
 
-Klingt sicher.
+Klingt sicher. Ist aber vielleicht genau das Passwort, das du anschließend überall verwendest.
 
-Ist aber vielleicht genau das Passwort, das du anschließend überall verwendest.
-
-Besser:
-
-Nutze einen seriösen Passwortmanager und für jeden wichtigen Dienst ein eigenes Passwort.
-
-Und vor allem:
-
-**Teile deine Passwörter nicht mit der KI.**
-
-Auch nicht mit dem Zusatz:
+Besser: Nutze einen seriösen Passwortmanager und für jeden wichtigen Dienst ein eigenes Passwort. Und vor allem: **Teile deine Passwörter nicht mit der KI.** Auch nicht mit dem Zusatz:
 
 > „Nur ganz kurz.“
 
@@ -507,29 +333,17 @@ Auch nicht mit dem Zusatz:
 
 ## Der große Prompt-Masterplan
 
-Ein guter Prompt enthält möglichst viele relevante Informationen.
-
-Aber das bedeutet nicht:
-
-**alle Informationen über dein Leben.**
+Ein guter Prompt enthält möglichst viele relevante Informationen. Aber das bedeutet nicht: **alle Informationen über dein Leben.**
 
 Du musst nicht schreiben:
 
 > „Ich bin 42, wohne in Hamburg, meine Telefonnummer ist …, meine Kundennummer ist …, mein Arbeitgeber ist …, meine Frau heißt …, mein Sohn geht auf … und hier ist die PDF meiner Steuererklärung.“
 
-Nur weil die KI dann besser antworten könnte, heißt das nicht, dass sie diese Informationen braucht.
-
-Oft reicht:
+Nur weil die KI dann besser antworten könnte, heißt das nicht, dass sie diese Informationen braucht. Oft reicht:
 
 > „Ich bin Arbeitnehmer und möchte wissen, wie ich dieses Schreiben höflicher formulieren kann.“
 
-**Weniger Daten.**
-
-**Weniger Risiko.**
-
-**Immer noch brauchbare Antwort.**
-
-Das ist fast schon verdächtig vernünftig.
+**Weniger Daten.** **Weniger Risiko.** **Immer noch brauchbare Antwort.** Das ist fast schon verdächtig vernünftig.
 
 ---
 
@@ -571,9 +385,7 @@ Das ist fast schon verdächtig vernünftig.
 
 ## Der KI-Sicherheits-Masterplan
 
-Hier ist er.
-
-Der ultimative Plan.
+Hier ist er. Der ultimative Plan.
 
 ### Schritt 1
 
@@ -613,15 +425,11 @@ Verwende für sensible Unternehmensdaten nur Lösungen, die dafür ausdrücklich
 
 ### Schritt 10
 
-Wenn eine Antwort unglaublich klingt:
-
-**Überprüfen.**
+Wenn eine Antwort unglaublich klingt: **Überprüfen.**
 
 ### Schritt 11
 
-Wenn eine Antwort sehr überzeugend klingt:
-
-**Auch überprüfen.**
+Wenn eine Antwort sehr überzeugend klingt: **Auch überprüfen.**
 
 ### Schritt 12
 
@@ -637,9 +445,7 @@ Wenn du denkst:
 
 ## Was die KI niemals hören sollte
 
-Es gibt Informationen, bei denen du besonders vorsichtig sein solltest.
-
-Zum Beispiel:
+Es gibt Informationen, bei denen du besonders vorsichtig sein solltest. Zum Beispiel:
 
 > „Mein Passwort ist …“
 
@@ -661,11 +467,7 @@ Bitte nein.
 
 Ebenfalls nein – sofern dein Unternehmen die Nutzung dafür nicht ausdrücklich freigegeben hat.
 
-Die KI ist schließlich kein magischer Tresor.
-
-Nur weil du einen Chat geöffnet hast, wird daraus nicht automatisch:
-
-**Fort Knox.**
+Die KI ist schließlich kein magischer Tresor. Nur weil du einen Chat geöffnet hast, wird daraus nicht automatisch: **Fort Knox.**
 
 ---
 
@@ -673,15 +475,7 @@ Nur weil du einen Chat geöffnet hast, wird daraus nicht automatisch:
 
 ## Der wichtigste Sicherheits-Hack
 
-Du brauchst keine komplizierte Technologie.
-
-Du brauchst keine geheimen Einstellungen.
-
-Du brauchst keine fünf Sicherheits-Apps.
-
-Du brauchst manchmal nur:
-
-**zehn Sekunden Nachdenken.**
+Du brauchst keine komplizierte Technologie. Du brauchst keine geheimen Einstellungen. Du brauchst keine fünf Sicherheits-Apps. Du brauchst manchmal nur: **zehn Sekunden Nachdenken.**
 
 Bevor du auf „Senden“ klickst, frage dich:
 
@@ -691,11 +485,7 @@ Wenn die Antwort lautet:
 
 > „Auf keinen Fall.“
 
-Dann solltest du vielleicht auch überlegen, ob sie wirklich in deinen KI-Chat gehört.
-
-Das ist keine perfekte Sicherheitsregel.
-
-Aber sie ist erstaunlich leicht zu merken.
+Dann solltest du vielleicht auch überlegen, ob sie wirklich in deinen KI-Chat gehört. Das ist keine perfekte Sicherheitsregel. Aber sie ist erstaunlich leicht zu merken.
 
 ---
 
@@ -703,31 +493,13 @@ Aber sie ist erstaunlich leicht zu merken.
 
 ## Die Wahrheit über Bequemlichkeit
 
-KI ist bequem.
+KI ist bequem. Sehr bequem. Und genau deshalb ist Vorsicht wichtig. Je einfacher etwas wird, desto eher tun wir es automatisch.
 
-Sehr bequem.
-
-Und genau deshalb ist Vorsicht wichtig.
-
-Je einfacher etwas wird, desto eher tun wir es automatisch.
-
-Du musst nicht mehr lange suchen.
-
-Du musst nicht mehr selbst formulieren.
-
-Du musst nicht mehr selbst zusammenfassen.
-
-Du musst nicht mehr selbst recherchieren.
-
-Du schreibst einfach:
+Du musst nicht mehr lange suchen. Du musst nicht mehr selbst formulieren. Du musst nicht mehr selbst zusammenfassen. Du musst nicht mehr selbst recherchieren. Du schreibst einfach:
 
 > **„Mach mal.“**
 
-Und KI macht.
-
-Das ist fantastisch.
-
-Aber manchmal solltest du vor dem „Mach mal“ kurz überlegen:
+Und KI macht. Das ist fantastisch. Aber manchmal solltest du vor dem „Mach mal“ kurz überlegen:
 
 > **„Was genau gebe ich hier eigentlich gerade weiter?“**
 
@@ -783,9 +555,7 @@ Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast:
 
 # Herzlichen Glückwunsch!
 
-Du bist ein moderner KI-Nutzer.
-
-Du hast jetzt gelernt:
+Du bist ein moderner KI-Nutzer. Du hast jetzt gelernt:
 
 **KI ist mächtig.**
 
@@ -801,27 +571,11 @@ Du hast jetzt gelernt:
 
 ## Nutze KI. Aber gib ihr nicht gleich deinen ganzen Hausstand.
 
-KI kann dir unglaublich viel Arbeit abnehmen.
+KI kann dir unglaublich viel Arbeit abnehmen. Sie kann dir helfen, schneller zu schreiben, zu lernen, zu recherchieren, zu programmieren und Probleme zu lösen. Aber gerade weil sie so praktisch ist, solltest du nicht jede Information, die dir gerade einfällt, in ein Textfeld kippen.
 
-Sie kann dir helfen, schneller zu schreiben, zu lernen, zu recherchieren, zu programmieren und Probleme zu lösen.
+Denke nach. Teile nur, was für die Aufgabe notwendig ist. Anonymisiere, wenn möglich. Schütze Passwörter und Zugangsdaten. Beachte die Regeln deines Arbeitgebers. Prüfe wichtige Informationen.
 
-Aber gerade weil sie so praktisch ist, solltest du nicht jede Information, die dir gerade einfällt, in ein Textfeld kippen.
-
-Denke nach.
-
-Teile nur, was für die Aufgabe notwendig ist.
-
-Anonymisiere, wenn möglich.
-
-Schütze Passwörter und Zugangsdaten.
-
-Beachte die Regeln deines Arbeitgebers.
-
-Prüfe wichtige Informationen.
-
-Und vor allem:
-
-Wenn du beim Schreiben eines Prompts plötzlich denkst:
+Und vor allem: Wenn du beim Schreiben eines Prompts plötzlich denkst:
 
 > **„Eigentlich sollte das niemand wissen …“**
 

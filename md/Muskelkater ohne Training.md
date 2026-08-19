@@ -8,29 +8,11 @@
 
 # Herzlichen Glückwunsch!
 
-Du hast Muskelkater.
+Du hast Muskelkater. Das ist normalerweise ein Zeichen dafür, dass du trainiert hast. Gewichte gehoben hast. Gelaufen bist. Eine Wanderung gemacht hast. Oder aus Versehen einen ganzen Tag lang Möbel umgestellt hast.
 
-Das ist normalerweise ein Zeichen dafür, dass du trainiert hast.
+Aber was wäre, wenn wir diesen letzten Schritt einfach überspringen könnten? **Muskelkater ohne Training.**
 
-Gewichte gehoben hast.
-
-Gelaufen bist.
-
-Eine Wanderung gemacht hast.
-
-Oder aus Versehen einen ganzen Tag lang Möbel umgestellt hast.
-
-Aber was wäre, wenn wir diesen letzten Schritt einfach überspringen könnten?
-
-**Muskelkater ohne Training.**
-
-Die Vorteile:
-
-- Du kannst dich über Muskelkater beschweren.
-- Du kannst morgens beim Aufstehen stöhnen.
-- Du kannst Treppen langsam hinuntergehen.
-- Du kannst erzählen, dass dein Bein „komplett dicht“ ist.
-- Und das alles, ohne jemals eine Hantel berührt zu haben.
+Die Vorteile: Du kannst dich über Muskelkater beschweren. Du kannst morgens beim Aufstehen stöhnen. Du kannst Treppen langsam hinuntergehen. Du kannst erzählen, dass dein Bein „komplett dicht“ ist. Und das alles, ohne jemals eine Hantel berührt zu haben.
 
 Endlich Fitness für Menschen, die Fitness für eine interessante Theorie halten.
 
@@ -40,23 +22,9 @@ Endlich Fitness für Menschen, die Fitness für eine interessante Theorie halten
 
 ## Muskelkater – das Statussymbol des 21. Jahrhunderts
 
-Muskelkater ist mehr als ein Schmerz.
+Muskelkater ist mehr als ein Schmerz. Muskelkater ist eine Botschaft. Er sagt: **„Ich habe gestern etwas gemacht.“**
 
-Muskelkater ist eine Botschaft.
-
-Er sagt:
-
-> **„Ich habe gestern etwas gemacht.“**
-
-Was genau?
-
-Unklar.
-
-Aber offenbar war es anstrengend.
-
-Das macht Muskelkater gesellschaftlich so wertvoll.
-
-Denn während andere erklären müssen, warum sie gestern nichts gemacht haben, kannst du einfach sagen:
+Was genau? Unklar. Aber offenbar war es anstrengend. Das macht Muskelkater gesellschaftlich so wertvoll. Denn während andere erklären müssen, warum sie gestern nichts gemacht haben, kannst du einfach sagen:
 
 > „Ich kann heute kaum laufen.“
 
@@ -64,9 +32,7 @@ Sofort entstehen Fragen.
 
 > „Was hast du gemacht?“
 
-Jetzt beginnt deine große Stunde.
-
-Du könntest die Wahrheit sagen:
+Jetzt beginnt deine große Stunde. Du könntest die Wahrheit sagen:
 
 > „Eigentlich nichts.“
 
@@ -86,25 +52,13 @@ Die klassische Fitnessindustrie arbeitet nach folgendem Prinzip:
 
 **Training → Belastung → Regeneration → Muskelkater**
 
-Wir denken größer.
-
-Unser Modell lautet:
+Wir denken größer. Unser Modell lautet:
 
 **Gedanke an Training → Regeneration → Muskelkater**
 
-Du siehst:
+Du siehst: Wir sparen einen kompletten Schritt. Und zwar den anstrengendsten.
 
-Wir sparen einen kompletten Schritt.
-
-Und zwar den anstrengendsten.
-
-Warum sollst du dich körperlich belasten, wenn dein Körper möglicherweise auch auf psychologische Hinweise reagieren kann?
-
-Das ist zwar nicht wissenschaftlich belegt.
-
-Aber wissenschaftlich klingen tut es hervorragend.
-
-Und genau darauf kommt es in einem seriösen Ratgeber schließlich an.
+Warum sollst du dich körperlich belasten, wenn dein Körper möglicherweise auch auf psychologische Hinweise reagieren kann? Das ist zwar nicht wissenschaftlich belegt. Aber wissenschaftlich klingen tut es hervorragend. Und genau darauf kommt es in einem seriösen Ratgeber schließlich an.
 
 ---
 
@@ -112,31 +66,17 @@ Und genau darauf kommt es in einem seriösen Ratgeber schließlich an.
 
 ## Methode 1: Das Treppenhaus
 
-Treppen sind eine hervorragende Möglichkeit, Muskelkater zu simulieren.
-
-Du gehst drei Stockwerke nach oben.
-
-Langsam.
-
-Sehr langsam.
-
-Nach Möglichkeit mit einem Gesichtsausdruck, der vermittelt:
-
-**„Ich habe gestern etwas Unvernünftiges getan.“**
+Treppen sind eine hervorragende Möglichkeit, Muskelkater zu simulieren. Du gehst drei Stockwerke nach oben. Langsam. Sehr langsam. Nach Möglichkeit mit einem Gesichtsausdruck, der vermittelt: **„Ich habe gestern etwas Unvernünftiges getan.“**
 
 Oben angekommen:
 
 > „Meine Oberschenkel bringen mich um.“
 
-Niemand wird nachfragen.
-
-Und falls doch:
+Niemand wird nachfragen. Und falls doch:
 
 > „Leg Day.“
 
-Du hast gerade erfolgreich Muskelkater kommuniziert.
-
-Ob du tatsächlich welchen hast, ist eine andere Frage.
+Du hast gerade erfolgreich Muskelkater kommuniziert. Ob du tatsächlich welchen hast, ist eine andere Frage.
 
 ---
 
@@ -144,41 +84,15 @@ Ob du tatsächlich welchen hast, ist eine andere Frage.
 
 ## Methode 2: Der Stuhl
 
-Der Stuhl ist dein bester Freund.
-
-Stelle dich vor ihn.
-
-Beuge langsam die Knie.
-
-Setze dich.
-
-Aber nicht normal.
-
-**Dramatisch.**
-
-Halte kurz inne.
-
-Atme schwer.
-
-Greif an deine Oberschenkel.
-
-Sag:
+Der Stuhl ist dein bester Freund. Stelle dich vor ihn. Beuge langsam die Knie. Setze dich. Aber nicht normal. **Dramatisch.** Halte kurz inne. Atme schwer. Greif an deine Oberschenkel. Sag:
 
 > „Aua.“
 
-Jetzt wieder aufstehen.
-
-Pause.
-
-Noch ein:
+Jetzt wieder aufstehen. Pause. Noch ein:
 
 > „Uff.“
 
-Das war's.
-
-Du hast keinen einzigen Muskel trainiert.
-
-Aber du hast einen hervorragenden Eindruck hinterlassen.
+Das war's. Du hast keinen einzigen Muskel trainiert. Aber du hast einen hervorragenden Eindruck hinterlassen.
 
 ---
 
@@ -186,11 +100,7 @@ Aber du hast einen hervorragenden Eindruck hinterlassen.
 
 ## Methode 3: Das große Aufstehmanöver
 
-Die Königsdisziplin.
-
-Du sitzt auf dem Sofa.
-
-Jemand fragt:
+Die Königsdisziplin. Du sitzt auf dem Sofa. Jemand fragt:
 
 > „Willst du mitkommen?“
 
@@ -198,29 +108,11 @@ Du antwortest:
 
 > „Ja.“
 
-Dann stehst du auf.
-
-Aber:
-
-**nicht sofort.**
-
-Zuerst legst du beide Hände auf die Knie.
-
-Dann verlagerst du dein Gewicht.
-
-Dann atmest du tief ein.
-
-Dann:
+Dann stehst du auf. Aber: **nicht sofort.** Zuerst legst du beide Hände auf die Knie. Dann verlagerst du dein Gewicht. Dann atmest du tief ein. Dann:
 
 > „Oh Gott.“
 
-Du stehst auf.
-
-Langsam.
-
-Sehr langsam.
-
-Die Person fragt:
+Du stehst auf. Langsam. Sehr langsam. Die Person fragt:
 
 > „Was ist los?“
 
@@ -228,11 +120,7 @@ Du:
 
 > **„Muskelkater.“**
 
-Das war's.
-
-Du hast keinen einzigen Muskel trainiert.
-
-Aber du hast einen hervorragenden Eindruck hinterlassen.
+Das war's. Du hast keinen einzigen Muskel trainiert. Aber du hast einen hervorragenden Eindruck hinterlassen.
 
 ---
 
@@ -240,41 +128,13 @@ Aber du hast einen hervorragenden Eindruck hinterlassen.
 
 ## Methode 4: Das imaginäre Workout
 
-Diese Methode erfordert keinerlei Bewegung.
-
-Setze dich hin.
-
-Schließe die Augen.
-
-Stell dir vor:
-
-Du bist im Fitnessstudio.
-
-Vor dir liegt eine schwere Hantel.
-
-Du hebst sie.
-
-Noch einmal.
-
-Noch einmal.
-
-Noch einmal.
-
-Dein Gesicht wird angestrengt.
-
-Du atmest schwer.
-
-Du spannst deine Arme an.
+Diese Methode erfordert keinerlei Bewegung. Setze dich hin. Schließe die Augen. Stell dir vor: Du bist im Fitnessstudio. Vor dir liegt eine schwere Hantel. Du hebst sie. Noch einmal. Noch einmal. Noch einmal. Dein Gesicht wird angestrengt. Du atmest schwer. Du spannst deine Arme an.
 
 Dann stellst du dir vor, wie du am nächsten Morgen aufwachst.
 
 > „Aua.“
 
-Perfekt.
-
-Das Gehirn hat das Training zwar nicht tatsächlich durchgeführt.
-
-Aber es war immerhin emotional beteiligt.
+Perfekt. Das Gehirn hat das Training zwar nicht tatsächlich durchgeführt. Aber es war immerhin emotional beteiligt.
 
 ---
 
@@ -282,27 +142,11 @@ Aber es war immerhin emotional beteiligt.
 
 ## Die Ernährung für maximalen Muskelkater
 
-Auch hier können wir optimieren.
+Auch hier können wir optimieren. Die klassische Fitnessernährung besteht aus: Protein, Reis, Hähnchen, Gemüse, Protein, noch mehr Protein, und gelegentlich einem traurigen Blick aus dem Fenster.
 
-Die klassische Fitnessernährung besteht aus:
+Wir empfehlen: **Pizza.**
 
-- Protein
-- Reis
-- Hähnchen
-- Gemüse
-- Protein
-- noch mehr Protein
-- und gelegentlich einem traurigen Blick aus dem Fenster.
-
-Wir empfehlen:
-
-**Pizza.**
-
-Warum?
-
-Weil Pizza hervorragend dazu geeignet ist, einen Abend auf dem Sofa zu verbringen.
-
-Und wenn du dich danach besonders schwer fühlst, kannst du sagen:
+Warum? Weil Pizza hervorragend dazu geeignet ist, einen Abend auf dem Sofa zu verbringen. Und wenn du dich danach besonders schwer fühlst, kannst du sagen:
 
 > „Ich glaube, ich habe heute ziemlich hart trainiert.“
 
@@ -314,13 +158,7 @@ Niemand muss wissen, dass die einzige körperliche Herausforderung darin bestand
 
 ## Die 24-Stunden-Regel
 
-Ein echter Muskelkater tritt häufig nicht sofort auf.
-
-Das ist hervorragend.
-
-Denn dadurch kannst du am heutigen Tag völlig normal sein.
-
-Und morgen behaupten:
+Ein echter Muskelkater tritt häufig nicht sofort auf. Das ist hervorragend. Denn dadurch kannst du am heutigen Tag völlig normal sein. Und morgen behaupten:
 
 > **„Heute ist es richtig schlimm.“**
 
@@ -332,11 +170,7 @@ Antwort:
 
 > „Gestern.“
 
-Das ist wissenschaftlich beeindruckend.
-
-Du musst nicht einmal wissen, was du gestern gemacht hast.
-
-Das Wort **„gestern“** verleiht deiner Aussage automatisch eine gewisse sportliche Tiefe.
+Das ist wissenschaftlich beeindruckend. Du musst nicht einmal wissen, was du gestern gemacht hast. Das Wort **„gestern“** verleiht deiner Aussage automatisch eine gewisse sportliche Tiefe.
 
 ---
 
@@ -374,11 +208,7 @@ Unser empfohlenes Wochenprogramm:
 
 > **„Ich glaube, ich habe Muskelkater.“**
 
-Perfekt.
-
-Du hast die gesamte Woche sportlich genutzt.
-
-Ohne Sport.
+Perfekt. Du hast die gesamte Woche sportlich genutzt. Ohne Sport.
 
 ---
 
@@ -390,15 +220,11 @@ Ein Anfänger sagt:
 
 > „Meine Beine tun weh.“
 
-Das klingt verdächtig.
-
-Ein Profi sagt:
+Das klingt verdächtig. Ein Profi sagt:
 
 > **„Ich spüre heute jede einzelne Muskelfaser.“**
 
-Sehr gut.
-
-Fortgeschritten:
+Sehr gut. Fortgeschritten:
 
 > **„Treppen sind heute keine Option.“**
 
@@ -410,9 +236,7 @@ Elite:
 
 > **„Ich brauche heute aktive Regeneration.“**
 
-Niemand weiß genau, was das bedeutet.
-
-Aber es klingt hervorragend.
+Niemand weiß genau, was das bedeutet. Aber es klingt hervorragend.
 
 ---
 
@@ -420,9 +244,7 @@ Aber es klingt hervorragend.
 
 ## Das Muskelkater-Gesicht
 
-Ein guter Muskelkater ist nichts wert, wenn niemand ihn erkennt.
-
-Deshalb brauchst du das richtige Gesicht.
+Ein guter Muskelkater ist nichts wert, wenn niemand ihn erkennt. Deshalb brauchst du das richtige Gesicht.
 
 ### Stufe 1
 
@@ -456,25 +278,9 @@ Wenn Muskelkater nicht überzeugend genug ist, gibt es eine fortgeschrittene Var
 
 > „Ich habe gestern ein bisschen übertrieben.“
 
-Das ist perfekt.
+Das ist perfekt. Denn niemand weiß, was „ein bisschen“ bedeutet. Es könnten 200 Kniebeugen gewesen sein. Es könnte aber auch bedeuten: Du hast eine schwere Einkaufstüte getragen. Du hast eine Tür besonders energisch geschlossen. Du bist dreimal die Treppe hochgegangen. Oder du hast versucht, einen WLAN-Router neu zu starten.
 
-Denn niemand weiß, was „ein bisschen“ bedeutet.
-
-Es könnten 200 Kniebeugen gewesen sein.
-
-Es könnte aber auch bedeuten:
-
-Du hast eine schwere Einkaufstüte getragen.
-
-Du hast eine Tür besonders energisch geschlossen.
-
-Du bist dreimal die Treppe hochgegangen.
-
-Oder du hast versucht, einen WLAN-Router neu zu starten.
-
-**Belastung ist Belastung.**
-
-Zumindest klingt es so.
+**Belastung ist Belastung.** Zumindest klingt es so.
 
 ---
 
@@ -494,11 +300,7 @@ Kannst du folgende Tätigkeiten durchführen?
 ☐ Den Arm heben  
 ☐ Über das Wochenende sprechen
 
-Wenn du bei mindestens drei Punkten dramatisch seufzen kannst:
-
-**Herzlichen Glückwunsch.**
-
-Du bist bereit für den nächsten Schritt.
+Wenn du bei mindestens drei Punkten dramatisch seufzen kannst: **Herzlichen Glückwunsch.** Du bist bereit für den nächsten Schritt.
 
 ---
 
@@ -510,29 +312,15 @@ Jeder ernstzunehmende Ratgeber braucht ein Vorher-Nachher-Foto.
 
 ### VORHER
 
-Ein entspannter Mensch sitzt auf dem Sofa.
-
-Lächelt.
-
-Sieht glücklich aus.
+Ein entspannter Mensch sitzt auf dem Sofa. Lächelt. Sieht glücklich aus.
 
 ### NACHHER
 
-Derselbe Mensch sitzt auf dem Sofa.
-
-Sieht erschöpft aus.
-
-Hält sich den Oberschenkel.
-
-Darunter:
+Derselbe Mensch sitzt auf dem Sofa. Sieht erschöpft aus. Hält sich den Oberschenkel. Darunter:
 
 > **„24 Stunden später.“**
 
-Was ist passiert?
-
-Nichts.
-
-Und genau das ist die Revolution.
+Was ist passiert? Nichts. Und genau das ist die Revolution.
 
 ---
 
@@ -540,9 +328,7 @@ Und genau das ist die Revolution.
 
 ## Der Muskelkater-Masterplan
 
-Hier ist er.
-
-Der Plan, auf den Millionen Menschen gewartet haben.
+Hier ist er. Der Plan, auf den Millionen Menschen gewartet haben.
 
 ### Schritt 1
 
@@ -598,33 +384,11 @@ Lege dich aufs Sofa.
 
 ## Die Wahrheit über Muskelkater
 
-Natürlich gibt es einen kleinen Haken.
+Natürlich gibt es einen kleinen Haken. Muskelkater entsteht nicht einfach deshalb, weil du sehr überzeugend so tust, als hättest du trainiert. Dein Körper lässt sich nicht ohne Weiteres von einem Ratgeber austricksen. Das ist bedauerlich. Denn unser ursprünglicher Plan war ausgesprochen gut.
 
-Muskelkater entsteht nicht einfach deshalb, weil du sehr überzeugend so tust, als hättest du trainiert.
+Trotzdem bleibt eine wichtige Erkenntnis: **Du kannst auch ohne Muskelkater sehr viel für dein Wohlbefinden tun.**
 
-Dein Körper lässt sich nicht ohne Weiteres von einem Ratgeber austricksen.
-
-Das ist bedauerlich.
-
-Denn unser ursprünglicher Plan war ausgesprochen gut.
-
-Trotzdem bleibt eine wichtige Erkenntnis:
-
-**Du kannst auch ohne Muskelkater sehr viel für dein Wohlbefinden tun.**
-
-Bewegen.
-
-Spazieren gehen.
-
-Treppen nehmen.
-
-Sport machen, wenn du möchtest.
-
-Oder einfach einen entspannten Tag verbringen.
-
-Denn manchmal ist die beste Fitnessstrategie:
-
-**Nicht jede Bewegung in ein Fitnessprojekt zu verwandeln.**
+Bewegen. Spazieren gehen. Treppen nehmen. Sport machen, wenn du möchtest. Oder einfach einen entspannten Tag verbringen. Denn manchmal ist die beste Fitnessstrategie: **Nicht jede Bewegung in ein Fitnessprojekt zu verwandeln.**
 
 ---
 
@@ -632,51 +396,17 @@ Denn manchmal ist die beste Fitnessstrategie:
 
 ## Du hast es geschafft!
 
-Du bist am Ende dieses Ratgebers angekommen.
+Du bist am Ende dieses Ratgebers angekommen. Und das bedeutet: Du hast ungefähr 16 Kapitel lang über Muskelkater gelesen, ohne auch nur eine einzige Kniebeuge machen zu müssen. **Das ist Effizienz.**
 
-Und das bedeutet:
-
-Du hast ungefähr 16 Kapitel lang über Muskelkater gelesen, ohne auch nur eine einzige Kniebeuge machen zu müssen.
-
-**Das ist Effizienz.**
-
-Vielleicht hast du jetzt Muskelkater.
-
-Vielleicht auch nicht.
-
-Wenn du keinen hast, keine Sorge.
-
-Du kannst morgen früh beim Aufstehen einfach sagen:
+Vielleicht hast du jetzt Muskelkater. Vielleicht auch nicht. Wenn du keinen hast, keine Sorge. Du kannst morgen früh beim Aufstehen einfach sagen:
 
 > **„Ich spüre es heute richtig.“**
 
-Dann langsam aufstehen.
+Dann langsam aufstehen. Kurz stöhnen. Und wieder ins Bett gehen.
 
-Kurz stöhnen.
+Aber denk daran: **Muskelkater ist kein Leistungsnachweis.** Du musst niemandem beweisen, dass du trainiert hast. Und du musst auch nicht jeden Schmerz als sportlichen Erfolg feiern.
 
-Und wieder ins Bett gehen.
-
-Aber denk daran:
-
-**Muskelkater ist kein Leistungsnachweis.**
-
-Du musst niemandem beweisen, dass du trainiert hast.
-
-Und du musst auch nicht jeden Schmerz als sportlichen Erfolg feiern.
-
-Wenn du wirklich trainieren möchtest:
-
-Trainiere.
-
-Wenn du dich ausruhen möchtest:
-
-Ruh dich aus.
-
-Und wenn du heute einfach nur auf dem Sofa liegen möchtest:
-
-Nenne es **Regeneration**.
-
-Das klingt sofort professioneller.
+Wenn du wirklich trainieren möchtest: Trainiere. Wenn du dich ausruhen möchtest: Ruh dich aus. Und wenn du heute einfach nur auf dem Sofa liegen möchtest: Nenne es **Regeneration.** Das klingt sofort professioneller.
 
 **Dr. Maximilian Methodius**
 

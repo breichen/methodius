@@ -8,31 +8,13 @@
 
 # Herzlichen Glückwunsch!
 
-Du hältst gerade einen Ratgeber in den Händen, der dein gesellschaftliches Leben für immer verändern kann.
+Du hältst gerade einen Ratgeber in den Händen, der dein gesellschaftliches Leben für immer verändern kann. Oder zumindest die nächsten drei Minuten an der Kaffeemaschine.
 
-Oder zumindest die nächsten drei Minuten an der Kaffeemaschine.
+Seit Jahrzehnten wird uns eingeredet: „Sei offen.“ „Interessiere dich für andere.“ „Stell Fragen.“ „Hör gut zu.“ „Führe ein Gespräch.“
 
-Seit Jahrzehnten wird uns eingeredet:
+Aber niemand fragt: **Was, wenn ich eigentlich gar nichts zu sagen habe?**
 
-„Sei offen.“
-
-„Interessiere dich für andere.“
-
-„Stell Fragen.“
-
-„Hör gut zu.“
-
-„Führe ein Gespräch.“
-
-Aber niemand fragt:
-
-**Was, wenn ich eigentlich gar nichts zu sagen habe?**
-
-Genau hier setzt unser revolutionäres Konzept an.
-
-Du musst nicht interessant sein.
-
-Du musst nur verhindern, dass es peinlich wird.
+Genau hier setzt unser revolutionäres Konzept an. Du musst nicht interessant sein. Du musst nur verhindern, dass es peinlich wird.
 
 ---
 
@@ -40,51 +22,11 @@ Du musst nur verhindern, dass es peinlich wird.
 
 ## Endlich die Wahrheit über Smalltalk
 
-Smalltalk ist überall.
+Smalltalk ist überall. Im Aufzug. Im Büro. Auf Geburtstagsfeiern. Beim Friseur. Im Wartezimmer. Auf Hochzeiten. Und besonders schlimm: **Bei Menschen, die man kennt, aber nicht gut genug, um mit ihnen über etwas Echtes zu sprechen.**
 
-Im Aufzug.
+Dann beginnt das Ritual. „Na, wie geht's?“ „Gut.“ „Und sonst?“ „Auch gut.“ Pause. Du blickst auf die Zimmerpflanze. Die Zimmerpflanze blickt zurück. Du überlegst: **Kann man eigentlich über Zimmerpflanzen reden, ohne sich zu blamieren?**
 
-Im Büro.
-
-Auf Geburtstagsfeiern.
-
-Beim Friseur.
-
-Im Wartezimmer.
-
-Auf Hochzeiten.
-
-Und besonders schlimm:
-
-**Bei Menschen, die man kennt, aber nicht gut genug, um mit ihnen über etwas Echtes zu sprechen.**
-
-Dann beginnt das Ritual.
-
-„Na, wie geht's?“
-
-„Gut.“
-
-„Und sonst?“
-
-„Auch gut.“
-
-Pause.
-
-Du blickst auf die Zimmerpflanze.
-
-Die Zimmerpflanze blickt zurück.
-
-Du überlegst:
-
-**Kann man eigentlich über Zimmerpflanzen reden, ohne sich zu blamieren?**
-
-Die Antwort lautet:
-
-Ja.
-
-Man kann.
-
-Und dieser Ratgeber wird dir zeigen, wie.
+Die Antwort lautet: Ja. Man kann. Und dieser Ratgeber wird dir zeigen, wie.
 
 ---
 
@@ -96,71 +38,25 @@ Guter Smalltalk basiert auf drei fundamentalen Prinzipien.
 
 ### Prinzip 1: Wetter
 
-Das Wetter ist immer da.
+Das Wetter ist immer da. Es hat keine Meinung. Es verlangt keine Gegenleistung. Und es ist gesellschaftlich vollkommen akzeptiert.
 
-Es hat keine Meinung.
-
-Es verlangt keine Gegenleistung.
-
-Und es ist gesellschaftlich vollkommen akzeptiert.
-
-„Ganz schön warm heute.“
-
-Perfekt.
-
-„Soll ja morgen regnen.“
-
-Ausgezeichnet.
-
-„Dieses Jahr ist das Wetter irgendwie komisch.“
-
-**Meisterklasse.**
+„Ganz schön warm heute.“ Perfekt. „Soll ja morgen regnen.“ Ausgezeichnet. „Dieses Jahr ist das Wetter irgendwie komisch.“ **Meisterklasse.**
 
 Du hast soeben ein Gespräch eröffnet, das theoretisch mehrere Minuten dauern kann.
 
----
-
 ### Prinzip 2: Arbeit
 
-„Und, was machst du so?“
+„Und, was machst du so?“ Dieser Satz ist gefährlich. Denn theoretisch könnte die andere Person antworten. Und dann musst du zuhören.
 
-Dieser Satz ist gefährlich.
-
-Denn theoretisch könnte die andere Person antworten.
-
-Und dann musst du zuhören.
-
-Deshalb empfehlen wir die fortgeschrittene Variante:
-
-„Und, immer noch bei derselben Firma?“
-
-Damit signalisierst du gleichzeitig:
+Deshalb empfehlen wir die fortgeschrittene Variante: „Und, immer noch bei derselben Firma?“ Damit signalisierst du gleichzeitig:
 
 -  Ich erinnere mich an dich. 
 -  Ich habe keine Ahnung, was du machst. 
 -  Ich hoffe, du erklärst es mir nicht zu ausführlich. 
 
----
-
 ### Prinzip 3: Wochenende
 
-Das Wochenende ist das Schweizer Taschenmesser des Smalltalks.
-
-Es funktioniert montags.
-
-Dienstags.
-
-Mittwochs.
-
-Und besonders zuverlässig donnerstags ab 15 Uhr.
-
-Die Standardfrage:
-
-**„Was hast du am Wochenende gemacht?“**
-
-Der große Vorteil:
-
-Du kannst die Antwort sofort vergessen.
+Das Wochenende ist das Schweizer Taschenmesser des Smalltalks. Es funktioniert montags. Dienstags. Mittwochs. Und besonders zuverlässig donnerstags ab 15 Uhr. Die Standardfrage: **„Was hast du am Wochenende gemacht?“** Der große Vorteil: Du kannst die Antwort sofort vergessen.
 
 ---
 
@@ -168,35 +64,17 @@ Du kannst die Antwort sofort vergessen.
 
 ## Die gefährlichste Frage der deutschen Sprache
 
-Es gibt eine Frage, die harmlos klingt.
-
-Aber sie kann jedes Gespräch innerhalb von Sekunden in einen persönlichen Kreuzverhör verwandeln:
+Es gibt eine Frage, die harmlos klingt. Aber sie kann jedes Gespräch innerhalb von Sekunden in einen persönlichen Kreuzverhör verwandeln:
 
 > **„Und, was gibt's Neues?“**
 
-Was soll man darauf antworten?
-
-„Nichts.“
-
-Unhöflich.
-
-„Eigentlich schon.“
-
-Gefährlich.
-
-„Ich habe über meine Zukunft nachgedacht.“
-
-**Viel zu viel Information.**
+Was soll man darauf antworten? „Nichts.“ Unhöflich. „Eigentlich schon.“ Gefährlich. „Ich habe über meine Zukunft nachgedacht.“ **Viel zu viel Information.**
 
 Deshalb empfehlen wir die Standardantwort:
 
 > „Ach, eigentlich nicht viel.“
 
-Diese Formulierung hat sich über Generationen bewährt.
-
-Sie bedeutet:
-
-**Bitte frag nicht weiter.**
+Diese Formulierung hat sich über Generationen bewährt. Sie bedeutet: **Bitte frag nicht weiter.**
 
 ---
 
@@ -204,15 +82,7 @@ Sie bedeutet:
 
 ## Das perfekte Lächeln
 
-Smalltalk besteht zu 47 Prozent aus Worten.
-
-Die restlichen 83 Prozent bestehen aus Gesichtsausdrücken.
-
-Das wichtigste Werkzeug:
-
-**Das zustimmende Lächeln.**
-
-Es gibt verschiedene Stufen.
+Smalltalk besteht zu 47 Prozent aus Worten. Die restlichen 83 Prozent bestehen aus Gesichtsausdrücken. Das wichtigste Werkzeug: **Das zustimmende Lächeln.** Es gibt verschiedene Stufen.
 
 ### Stufe 1: Das höfliche Lächeln
 
@@ -236,37 +106,11 @@ Es gibt verschiedene Stufen.
 
 ## 100 Prozent zuhören – 0 Prozent verstehen
 
-Eine der wichtigsten Fähigkeiten im Smalltalk ist das sogenannte **aktive Nicken**.
+Eine der wichtigsten Fähigkeiten im Smalltalk ist das sogenannte **aktive Nicken**. Die Technik ist einfach. Die andere Person spricht. Du: **nickst.** Sie spricht weiter. Du: **nickst erneut.**
 
-Die Technik ist einfach.
+Sie sagt: „…und dann war das alles plötzlich ziemlich kompliziert.“ Du: **„Ja, total.“**
 
-Die andere Person spricht.
-
-Du:
-
-**nickst.**
-
-Sie spricht weiter.
-
-Du:
-
-**nickst erneut.**
-
-Sie sagt:
-
-„…und dann war das alles plötzlich ziemlich kompliziert.“
-
-Du:
-
-**„Ja, total.“**
-
-Perfekt.
-
-Du weißt nicht, worum es ging.
-
-Aber du hast Empathie gezeigt.
-
-Das ist gesellschaftlich völlig ausreichend.
+Perfekt. Du weißt nicht, worum es ging. Aber du hast Empathie gezeigt. Das ist gesellschaftlich völlig ausreichend.
 
 ---
 
@@ -274,9 +118,7 @@ Das ist gesellschaftlich völlig ausreichend.
 
 ## Die universellen Smalltalk-Sätze
 
-Jeder Mensch sollte mindestens zehn Sätze beherrschen, die praktisch immer funktionieren.
-
-Hier sind die wichtigsten:
+Jeder Mensch sollte mindestens zehn Sätze beherrschen, die praktisch immer funktionieren. Hier sind die wichtigsten:
 
 1.  „Ach echt?“ 
 2.  „Das gibt's doch nicht.“ 
@@ -289,9 +131,7 @@ Hier sind die wichtigsten:
 9.  „Das ist heutzutage auch nicht mehr selbstverständlich.“ 
 10. **„Aber gut, kann man nichts machen.“** 
 
-Der letzte Satz ist besonders mächtig.
-
-Er beendet fast jedes Gespräch.
+Der letzte Satz ist besonders mächtig. Er beendet fast jedes Gespräch.
 
 ---
 
@@ -299,29 +139,9 @@ Er beendet fast jedes Gespräch.
 
 ## Wie man ein Gespräch über Urlaub überlebt
 
-Urlaub ist ein Minenfeld.
+Urlaub ist ein Minenfeld. Du fragst: „Warst du dieses Jahr schon weg?“ Die andere Person: „Ja, zwei Wochen in Italien.“ Du: „Ach schön.“
 
-Du fragst:
-
-„Warst du dieses Jahr schon weg?“
-
-Die andere Person:
-
-„Ja, zwei Wochen in Italien.“
-
-Du:
-
-„Ach schön.“
-
-Jetzt beginnt das Problem.
-
-Denn die Person hat Bilder.
-
-Viele Bilder.
-
-Sehr viele Bilder.
-
-Und plötzlich siehst du 147 Fotos von einem Strand, den du nicht unterscheiden kannst von den 146 anderen Stränden.
+Jetzt beginnt das Problem. Denn die Person hat Bilder. Viele Bilder. Sehr viele Bilder. Und plötzlich siehst du 147 Fotos von einem Strand, den du nicht unterscheiden kannst von den 146 anderen Stränden.
 
 Die richtige Strategie:
 
@@ -355,9 +175,7 @@ Eine Party ist ein Ort, an dem sich Menschen freiwillig versammeln, um sich gege
 
 **„Woher kennst du denn den Gastgeber?“**
 
-Diese Frage ist praktisch unvermeidbar.
-
-Deshalb solltest du vorbereitet sein.
+Diese Frage ist praktisch unvermeidbar. Deshalb solltest du vorbereitet sein.
 
 ### Antwort A
 
@@ -371,15 +189,9 @@ Deshalb solltest du vorbereitet sein.
 
 „Das ist eine längere Geschichte.“
 
-Diese Antwort ist besonders effektiv.
+Diese Antwort ist besonders effektiv. Denn jetzt musst du entweder die Geschichte erzählen oder wirst gefragt: **„Echt? Wie denn?“**
 
-Denn jetzt musst du entweder die Geschichte erzählen oder wirst gefragt:
-
-**„Echt? Wie denn?“**
-
-Deshalb niemals Antwort C verwenden.
-
-Wir haben sie nur aufgenommen, damit du daraus lernst.
+Deshalb niemals Antwort C verwenden. Wir haben sie nur aufgenommen, damit du daraus lernst.
 
 ---
 
@@ -387,11 +199,7 @@ Wir haben sie nur aufgenommen, damit du daraus lernst.
 
 ## Der Kühlschrank als Gesprächspartner
 
-Manchmal ist Smalltalk so anstrengend, dass man lieber mit Gegenständen spricht.
-
-Das ist vollkommen normal.
-
-Ein Kühlschrank hat viele Vorteile:
+Manchmal ist Smalltalk so anstrengend, dass man lieber mit Gegenständen spricht. Das ist vollkommen normal. Ein Kühlschrank hat viele Vorteile:
 
 -  Er widerspricht nicht. 
 -  Er fragt nicht nach deinem Beruf. 
@@ -400,9 +208,7 @@ Ein Kühlschrank hat viele Vorteile:
 
 Der Kühlschrank ist damit objektiv der bessere Gesprächspartner.
 
-Leider ist es gesellschaftlich noch nicht vollständig akzeptiert, auf einer Party fünfzehn Minuten neben einem Kühlschrank zu stehen und ihm zuzunicken.
-
-Aber wir arbeiten daran.
+Leider ist es gesellschaftlich noch nicht vollständig akzeptiert, auf einer Party fünfzehn Minuten neben einem Kühlschrank zu stehen und ihm zuzunicken. Aber wir arbeiten daran.
 
 ---
 
@@ -412,27 +218,19 @@ Aber wir arbeiten daran.
 
 ### Stufe 1: Begrüßung
 
-„Hallo!“
-
-Du bist drin.
+„Hallo!“ Du bist drin.
 
 ### Stufe 2: Wetter
 
-„Ganz schön kalt heute.“
-
-Du bist sicher.
+„Ganz schön kalt heute.“ Du bist sicher.
 
 ### Stufe 3: Arbeit
 
-„Und, wie läuft's bei dir?“
-
-Du bewegst dich auf dünnem Eis.
+„Und, wie läuft's bei dir?“ Du bewegst dich auf dünnem Eis.
 
 ### Stufe 4: Familie
 
-„Und sonst alles gut?“
-
-Gefährlich.
+„Und sonst alles gut?“ Gefährlich.
 
 ### Stufe 5: Politik
 
@@ -452,33 +250,13 @@ Du hast soeben eine Diskussion begonnen, die bis 2029 dauern wird.
 
 ## Was tun, wenn plötzlich Stille entsteht?
 
-Sie kommt.
-
-Unweigerlich.
-
-Die Stille.
-
-Du hast nichts mehr zu sagen.
-
-Die andere Person auch nicht.
-
-Es ist ruhig.
-
-Zu ruhig.
-
-Du hörst plötzlich die Klimaanlage.
-
-Das Ticken einer Uhr.
-
-Dein eigenes Herz.
+Sie kommt. Unweigerlich. Die Stille. Du hast nichts mehr zu sagen. Die andere Person auch nicht. Es ist ruhig. Zu ruhig. Du hörst plötzlich die Klimaanlage. Das Ticken einer Uhr. Dein eigenes Herz.
 
 Jetzt gibt es drei Möglichkeiten.
 
 ### Möglichkeit 1: Neues Thema
 
-„Und, hast du eigentlich Haustiere?“
-
-Riskant.
+„Und, hast du eigentlich Haustiere?“ Riskant.
 
 ### Möglichkeit 2: Blick aufs Handy
 
@@ -486,11 +264,7 @@ Klassischer Rückzug.
 
 ### Möglichkeit 3: Wetter
 
-**„Soll ja morgen wieder wärmer werden.“**
-
-Die sicherste Option.
-
-Das Wetter hat dich noch nie im Stich gelassen.
+**„Soll ja morgen wieder wärmer werden.“** Die sicherste Option. Das Wetter hat dich noch nie im Stich gelassen.
 
 ---
 
@@ -500,23 +274,13 @@ Das Wetter hat dich noch nie im Stich gelassen.
 
 Diese zwei Wörter können einen gesamten Smalltalk-Ratgeber zunichtemachen.
 
-„Ich war am Wochenende wandern.“
-
-„Ach schön.“
-
-„Und du?“
-
-**Katastrophe.**
-
-Jetzt musst du etwas über dich erzählen.
+„Ich war am Wochenende wandern.“ „Ach schön.“ „Und du?“ **Katastrophe.** Jetzt musst du etwas über dich erzählen.
 
 Die optimale Antwort besteht aus drei Teilen:
 
 > „Ach, nicht viel. War eher ruhig. Muss auch mal sein.“
 
-Diese Antwort ist perfekt.
-
-Sie enthält:
+Diese Antwort ist perfekt. Sie enthält:
 
 -  keine überprüfbaren Fakten, 
 -  keine kontroversen Meinungen, 
@@ -530,49 +294,15 @@ Sie enthält:
 
 ## Smalltalk im Aufzug
 
-Der Aufzug ist ein besonderer Ort.
+Der Aufzug ist ein besonderer Ort. Zwei Menschen stehen auf engstem Raum. Keiner möchte reden. Beide wissen: **Einer von uns wird gleich etwas sagen.**
 
-Zwei Menschen stehen auf engstem Raum.
+Dann kommt: „Ganz schön voll heute.“ Ihr seid zu zweit im Aufzug. Aber ja. **Voll.** Das Gespräch ist eröffnet.
 
-Keiner möchte reden.
-
-Beide wissen:
-
-**Einer von uns wird gleich etwas sagen.**
-
-Dann kommt:
-
-„Ganz schön voll heute.“
-
-Ihr seid zu zweit im Aufzug.
-
-Aber ja.
-
-**Voll.**
-
-Das Gespräch ist eröffnet.
-
-Danach:
-
-„Welches Stockwerk?“
-
-„Drei.“
-
-„Ah.“
-
-Pause.
-
-Der Aufzug fährt.
-
-Du hast noch zwölf Sekunden.
-
-Nutze sie weise.
+Danach: „Welches Stockwerk?“ „Drei.“ „Ah.“ Pause. Der Aufzug fährt. Du hast noch zwölf Sekunden. Nutze sie weise.
 
 **„Na, dann noch einen schönen Tag.“**
 
-Du steigst aus.
-
-Du hast gewonnen.
+Du steigst aus. Du hast gewonnen.
 
 ---
 
@@ -580,37 +310,15 @@ Du hast gewonnen.
 
 ## Wie man Smalltalk elegant beendet
 
-Ein Gespräch zu beginnen ist leicht.
+Ein Gespräch zu beginnen ist leicht. Es zu beenden ist eine Kunst. Die schlechteste Variante: „Ich will nicht mehr mit dir reden.“
 
-Es zu beenden ist eine Kunst.
-
-Die schlechteste Variante:
-
-„Ich will nicht mehr mit dir reden.“
-
-Die zweitbeste:
-
-**„Ich muss mal kurz …“**
-
-Was du musst, bleibt offen.
-
-Toilette.
-
-Telefonat.
-
-Wasser.
-
-Existenzielle Neuorientierung.
-
-Alles ist möglich.
+Die zweitbeste: **„Ich muss mal kurz …“** Was du musst, bleibt offen. Toilette. Telefonat. Wasser. Existenzielle Neuorientierung. Alles ist möglich.
 
 Die elegante Variante lautet:
 
 > „War schön, mal wieder zu quatschen.“
 
-Damit behauptest du rückwirkend, dass das Gespräch angenehm war.
-
-Eine geniale rhetorische Technik.
+Damit behauptest du rückwirkend, dass das Gespräch angenehm war. Eine geniale rhetorische Technik.
 
 ---
 
@@ -618,9 +326,7 @@ Eine geniale rhetorische Technik.
 
 ## Der ultimative Smalltalk-Masterplan
 
-Hier ist er.
-
-Der Plan, auf den die Menschheit gewartet hat.
+Hier ist er. Der Plan, auf den die Menschheit gewartet hat.
 
 ### Schritt 1
 
@@ -694,63 +400,43 @@ Manche Themen sollte man nur unter ärztlicher Aufsicht ansprechen.
 
 ### 1. Gehalt
 
-„Was verdienst du eigentlich?“
-
-Nein.
+„Was verdienst du eigentlich?“ Nein.
 
 ### 2. Gewicht
 
-„Du siehst aber verändert aus.“
-
-**Nein.**
+„Du siehst aber verändert aus.“ **Nein.**
 
 ### 3. Kinder
 
-„Wann bekommt ihr endlich welche?“
-
-Sofortiger gesellschaftlicher Ausnahmezustand.
+„Wann bekommt ihr endlich welche?“ Sofortiger gesellschaftlicher Ausnahmezustand.
 
 ### 4. Trennung
 
-„Seid ihr eigentlich noch zusammen?“
-
-Vielleicht möchtest du einfach sterben.
+„Seid ihr eigentlich noch zusammen?“ Vielleicht möchtest du einfach sterben.
 
 ### 5. Politik
 
-„Also ich finde ja …“
-
-**Nein.**
+„Also ich finde ja …“ **Nein.**
 
 ### 6. Krankheiten
 
-„Mein Rücken macht auch Probleme.“
-
-Plötzlich seid ihr beide 74.
+„Mein Rücken macht auch Probleme.“ Plötzlich seid ihr beide 74.
 
 ### 7. Immobilien
 
-„Wir haben damals für 180.000 gekauft.“
-
-Danke für nichts.
+„Wir haben damals für 180.000 gekauft.“ Danke für nichts.
 
 ### 8. Ernährung
 
-„Ich esse seit drei Wochen kein Gluten.“
-
-Niemand hat gefragt.
+„Ich esse seit drei Wochen kein Gluten.“ Niemand hat gefragt.
 
 ### 9. Sport
 
-„Ich gehe jeden Morgen um fünf laufen.“
-
-Wir hassen dich.
+„Ich gehe jeden Morgen um fünf laufen.“ Wir hassen dich.
 
 ### 10. Die eigene Kreuzfahrt
 
-Niemand möchte 94 Fotos sehen.
-
-Niemand.
+Niemand möchte 94 Fotos sehen. Niemand.
 
 ---
 
@@ -758,25 +444,9 @@ Niemand.
 
 ## Der große Unterschied zwischen Smalltalk und einem echten Gespräch
 
-Smalltalk ist nicht das Ziel.
+Smalltalk ist nicht das Ziel. Smalltalk ist die Eingangshalle. Du gehst hinein. Du siehst dich um. Vielleicht findest du einen interessanten Menschen. Vielleicht entsteht ein echtes Gespräch. Vielleicht nicht. Und das ist völlig in Ordnung.
 
-Smalltalk ist die Eingangshalle.
-
-Du gehst hinein.
-
-Du siehst dich um.
-
-Vielleicht findest du einen interessanten Menschen.
-
-Vielleicht entsteht ein echtes Gespräch.
-
-Vielleicht nicht.
-
-Und das ist völlig in Ordnung.
-
-Denn der Sinn von Smalltalk besteht nicht darin, jede Begegnung in eine lebensverändernde Freundschaft zu verwandeln.
-
-Manchmal ist ein guter Smalltalk einfach:
+Denn der Sinn von Smalltalk besteht nicht darin, jede Begegnung in eine lebensverändernde Freundschaft zu verwandeln. Manchmal ist ein guter Smalltalk einfach:
 
 > „Schönes Wetter.“
 
@@ -786,9 +456,7 @@ Manchmal ist ein guter Smalltalk einfach:
 
 > „Na dann.“
 
-**Fertig.**
-
-Das war erfolgreich.
+**Fertig.** Das war erfolgreich.
 
 ---
 
@@ -796,27 +464,11 @@ Das war erfolgreich.
 
 ## Die revolutionäre Schlussfolgerung
 
-Was haben wir also gelernt?
+Was haben wir also gelernt? Du musst nicht immer etwas Interessantes zu sagen haben. Du musst nicht besonders witzig sein. Du musst nicht jede Gesprächspause retten. Du musst nicht jedem Menschen deine komplette Lebensgeschichte erzählen. Und du musst definitiv nicht wissen, was die andere Person mit „Und sonst?“ eigentlich hören möchte.
 
-Du musst nicht immer etwas Interessantes zu sagen haben.
+Manchmal reicht: **„Ach, alles gut.“**
 
-Du musst nicht besonders witzig sein.
-
-Du musst nicht jede Gesprächspause retten.
-
-Du musst nicht jedem Menschen deine komplette Lebensgeschichte erzählen.
-
-Und du musst definitiv nicht wissen, was die andere Person mit „Und sonst?“ eigentlich hören möchte.
-
-Manchmal reicht:
-
-**„Ach, alles gut.“**
-
-Und das ist vielleicht die wichtigste Erkenntnis dieses Ratgebers:
-
-**Smalltalk muss nicht brillant sein.**
-
-Er muss nur funktionieren.
+Und das ist vielleicht die wichtigste Erkenntnis dieses Ratgebers: **Smalltalk muss nicht brillant sein.** Er muss nur funktionieren.
 
 ---
 
@@ -824,35 +476,9 @@ Er muss nur funktionieren.
 
 ## 100 Smalltalk-Sätze, die garantiert funktionieren
 
-Du bist jetzt vorbereitet.
+Du bist jetzt vorbereitet. Du kennst die Regeln. Du weißt, wann du nicken musst. Du weißt, wann du fliehen solltest. Aber manchmal fehlt trotzdem das Wichtigste: **Ein Satz.**
 
-Du kennst die Regeln.
-
-Du weißt, wann du nicken musst.
-
-Du weißt, wann du fliehen solltest.
-
-Aber manchmal fehlt trotzdem das Wichtigste:
-
-**Ein Satz.**
-
-Deshalb haben wir für dich die 100 wichtigsten Smalltalk-Sätze zusammengestellt.
-
-Sie sind universell einsetzbar.
-
-Bei der Arbeit.
-
-Auf Partys.
-
-Im Aufzug.
-
-Beim Bäcker.
-
-Auf Hochzeiten.
-
-Im Wartezimmer.
-
-Und zur Not sogar bei deiner eigenen Familie.
+Deshalb haben wir für dich die 100 wichtigsten Smalltalk-Sätze zusammengestellt. Sie sind universell einsetzbar. Bei der Arbeit. Auf Partys. Im Aufzug. Beim Bäcker. Auf Hochzeiten. Im Wartezimmer. Und zur Not sogar bei deiner eigenen Familie.
 
 ### Wetter – die Königsdisziplin
 
@@ -987,31 +613,15 @@ Und zur Not sogar bei deiner eigenen Familie.
 
 Nach jahrzehntelanger Forschung konnten fünf besonders leistungsfähige Smalltalk-Sätze identifiziert werden:
 
-**„Ach echt?“**
+**„Ach echt?“** funktioniert bei praktisch jeder Geschichte.
 
-funktioniert bei praktisch jeder Geschichte.
+**„Und sonst?“** funktioniert, wenn dir nichts anderes einfällt.
 
-**„Und sonst?“**
+**„Das kann ich mir vorstellen.“** funktioniert sogar dann, wenn du es dir überhaupt nicht vorstellen kannst.
 
-funktioniert, wenn dir nichts anderes einfällt.
+**„Da hast du recht.“** funktioniert besonders gut, wenn du keine Ahnung hast, worum es geht.
 
-**„Das kann ich mir vorstellen.“**
-
-funktioniert sogar dann, wenn du es dir überhaupt nicht vorstellen kannst.
-
-**„Da hast du recht.“**
-
-funktioniert besonders gut, wenn du keine Ahnung hast, worum es geht.
-
-Und schließlich:
-
-**„Na dann, bis bald.“**
-
-funktioniert immer.
-
-Außer natürlich, du bist gerade auf einer Beerdigung.
-
-Dann vielleicht nicht.
+Und schließlich: **„Na dann, bis bald.“** funktioniert immer. Außer natürlich, du bist gerade auf einer Beerdigung. Dann vielleicht nicht.
 
 ---
 
@@ -1021,43 +631,9 @@ Wenn du dir nur **einen einzigen Satz** aus diesem Kapitel merken möchtest, nim
 
 > **„Ach echt? Und sonst alles gut?“**
 
-Damit kannst du theoretisch ein komplettes Gespräch bestreiten.
+Damit kannst du theoretisch ein komplettes Gespräch bestreiten. Die andere Person erzählt etwas. Du: **„Ach echt?“** Sie erzählt weiter. Du: **„Und sonst alles gut?“** Sie antwortet. Du: **„Ach so.“** Kurze Pause. Du: **„Ja, das kann ich mir vorstellen.“** Dann: **„Na dann.“**
 
-Die andere Person erzählt etwas.
-
-Du:
-
-**„Ach echt?“**
-
-Sie erzählt weiter.
-
-Du:
-
-**„Und sonst alles gut?“**
-
-Sie antwortet.
-
-Du:
-
-**„Ach so.“**
-
-Kurze Pause.
-
-Du:
-
-**„Ja, das kann ich mir vorstellen.“**
-
-Dann:
-
-**„Na dann.“**
-
-Gespräch beendet.
-
-**Du hast nichts gesagt.**
-
-Aber du warst dabei.
-
-Und genau darum geht es beim Smalltalk.
+Gespräch beendet. **Du hast nichts gesagt.** Aber du warst dabei. Und genau darum geht es beim Smalltalk.
 
 ---
 
@@ -1065,17 +641,9 @@ Und genau darum geht es beim Smalltalk.
 
 ## Herzlichen Glückwunsch, du hast mit jemandem gesprochen!
 
-Du bist am Ende dieses Ratgebers angekommen.
+Du bist am Ende dieses Ratgebers angekommen. Vielleicht hast du dabei etwas gelernt. Vielleicht hast du 100 neue Smalltalk-Sätze kennengelernt. Vielleicht hast du aber auch gerade festgestellt, dass du seit Jahren immer dieselben drei Sätze verwendest.
 
-Vielleicht hast du dabei etwas gelernt.
-
-Vielleicht hast du 100 neue Smalltalk-Sätze kennengelernt.
-
-Vielleicht hast du aber auch gerade festgestellt, dass du seit Jahren immer dieselben drei Sätze verwendest.
-
-Keine Sorge.
-
-Das tun wir alle.
+Keine Sorge. Das tun wir alle.
 
 Du kannst jetzt:
 
@@ -1091,11 +659,7 @@ Und wenn dir irgendwann jemand sagt:
 
 > „Ich finde Smalltalk total anstrengend.“
 
-Dann schau ihn verständnisvoll an.
-
-Nicke langsam.
-
-Und sage:
+Dann schau ihn verständnisvoll an. Nicke langsam. Und sage:
 
 **„Ja. Das Wetter ist aber auch echt komisch geworden.“**
 

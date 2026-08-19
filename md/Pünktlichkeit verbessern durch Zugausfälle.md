@@ -8,45 +8,19 @@
 
 # Herzlichen Glückwunsch!
 
-Du bist unpünktlich.
-
-Vielleicht nicht immer.
-
-Vielleicht nur manchmal.
-
-Vielleicht auch ziemlich oft.
-
-Aber keine Sorge.
-
-Du bist nicht allein.
+Du bist unpünktlich. Vielleicht nicht immer. Vielleicht nur manchmal. Vielleicht auch ziemlich oft. Aber keine Sorge. Du bist nicht allein.
 
 Millionen Menschen verlassen morgens ihr Zuhause mit einem festen Ziel:
 
 > **„Heute komme ich pünktlich.“**
 
-Und dann passiert es.
-
-Der Zug hat Verspätung.
-
-Der Anschluss ist weg.
-
-Der nächste Zug kommt später.
-
-Oder eine Verbindung endet plötzlich dort, wo sie eigentlich noch gar nicht enden sollte.
-
-Und plötzlich stehst du irgendwo und fragst dich:
+Und dann passiert es. Der Zug hat Verspätung. Der Anschluss ist weg. Der nächste Zug kommt später. Oder eine Verbindung endet plötzlich dort, wo sie eigentlich noch gar nicht enden sollte. Und plötzlich stehst du irgendwo und fragst dich:
 
 > „Warum passiert mir das immer?“
 
-Die Antwort ist überraschend einfach:
+Die Antwort ist überraschend einfach: **Du hast bisher zu sehr darauf vertraut, dass dein Zug dich tatsächlich bis ans Ziel bringt.**
 
-**Du hast bisher zu sehr darauf vertraut, dass dein Zug dich tatsächlich bis ans Ziel bringt.**
-
-Unser revolutionäres Konzept geht einen Schritt weiter.
-
-Wenn eine Zugverbindung ausfällt, verspätet ist oder vorzeitig endet, entstehen neue Möglichkeiten.
-
-Denn manchmal ist es besser, **gar nicht erst zu spät anzukommen.**
+Unser revolutionäres Konzept geht einen Schritt weiter. Wenn eine Zugverbindung ausfällt, verspätet ist oder vorzeitig endet, entstehen neue Möglichkeiten. Denn manchmal ist es besser, **gar nicht erst zu spät anzukommen.**
 
 ---
 
@@ -54,39 +28,15 @@ Denn manchmal ist es besser, **gar nicht erst zu spät anzukommen.**
 
 ## Die neue Definition von Pünktlichkeit
 
-Was bedeutet eigentlich Pünktlichkeit?
-
-Die klassische Definition lautet:
+Was bedeutet eigentlich Pünktlichkeit? Die klassische Definition lautet:
 
 > „Zur vereinbarten Zeit am vereinbarten Ort sein.“
 
-Das ist überholt.
-
-Wir brauchen eine modernere Definition:
+Das ist überholt. Wir brauchen eine modernere Definition:
 
 > **„Nicht zu spät sein, weil man rechtzeitig aufgehört hat, auf die ursprüngliche Reiseplanung zu vertrauen.“**
 
-Das ist ein gewaltiger Unterschied.
-
-Stell dir vor:
-
-Du möchtest um 9:00 Uhr in München sein.
-
-Der Zug soll um 7:30 Uhr abfahren.
-
-Du kommst um 7:25 Uhr zum Bahnhof.
-
-Der Zug fällt aus.
-
-Du kommst nicht um 9:00 Uhr in München an.
-
-Aber:
-
-**Du bist auch nicht zu spät in München.**
-
-Du bist lediglich:
-
-**woanders.**
+Das ist ein gewaltiger Unterschied. Stell dir vor: Du möchtest um 9:00 Uhr in München sein. Der Zug soll um 7:30 Uhr abfahren. Du kommst um 7:25 Uhr zum Bahnhof. Der Zug fällt aus. Du kommst nicht um 9:00 Uhr in München an. Aber: **Du bist auch nicht zu spät in München.** Du bist lediglich: **woanders.**
 
 Und woanders kann man bekanntlich auch pünktlich sein.
 
@@ -96,37 +46,15 @@ Und woanders kann man bekanntlich auch pünktlich sein.
 
 ## Das Grundprinzip: Was nicht ankommt, kann nicht zu spät ankommen
 
-Diese Erkenntnis ist der Kern unserer Methode.
+Diese Erkenntnis ist der Kern unserer Methode. Ein Zug fährt um 8:00 Uhr. Er soll um 9:00 Uhr ankommen. Er kommt um 9:17 Uhr. **Verspätung: 17 Minuten.**
 
-Ein Zug fährt um 8:00 Uhr.
+Ein anderer Zug soll um 8:00 Uhr fahren. Er fährt nicht. **Ankunft: entfällt.**
 
-Er soll um 9:00 Uhr ankommen.
-
-Er kommt um 9:17 Uhr.
-
-**Verspätung: 17 Minuten.**
-
-Ein anderer Zug soll um 8:00 Uhr fahren.
-
-Er fährt nicht.
-
-**Ankunft: entfällt.**
-
-Das ist zunächst ein Problem.
-
-Aber gleichzeitig entsteht eine interessante mathematische Situation:
-
-Wenn keine Ankunft stattfindet, kann man auch keine verspätete Ankunft messen.
-
-Unser System nennt das:
+Das ist zunächst ein Problem. Aber gleichzeitig entsteht eine interessante mathematische Situation: Wenn keine Ankunft stattfindet, kann man auch keine verspätete Ankunft messen. Unser System nennt das:
 
 # **Pünktlichkeit durch Abwesenheit.**
 
-Doch damit endet unsere Methode noch lange nicht.
-
-Denn auch ein Zug, der bereits fährt, kann seine Reise vorzeitig beenden.
-
-Und genau hier wird es interessant.
+Doch damit endet unsere Methode noch lange nicht. Denn auch ein Zug, der bereits fährt, kann seine Reise vorzeitig beenden. Und genau hier wird es interessant.
 
 ---
 
@@ -134,43 +62,17 @@ Und genau hier wird es interessant.
 
 ## Der Anfängerfehler: Zu früh losfahren
 
-Viele Menschen versuchen, Verspätungen durch früheres Aufstehen zu vermeiden.
+Viele Menschen versuchen, Verspätungen durch früheres Aufstehen zu vermeiden. 7:00 Uhr aufstehen. 7:30 Uhr los. 8:00 Uhr am Bahnhof. 8:15 Uhr im Zug. 8:45 Uhr am Ziel.
 
-7:00 Uhr aufstehen.
+Diese Menschen haben das System noch nicht vollständig verstanden. Sie glauben, Pünktlichkeit bedeute: **früher loszufahren.**
 
-7:30 Uhr los.
+Unser Ansatz ist radikaler: **Beginne deine Reise – aber halte dir immer die Möglichkeit offen, dass sie anders endet als geplant.**
 
-8:00 Uhr am Bahnhof.
-
-8:15 Uhr im Zug.
-
-8:45 Uhr am Ziel.
-
-Diese Menschen haben das System noch nicht vollständig verstanden.
-
-Sie glauben, Pünktlichkeit bedeute:
-
-**früher loszufahren.**
-
-Unser Ansatz ist radikaler:
-
-**Beginne deine Reise – aber halte dir immer die Möglichkeit offen, dass sie anders endet als geplant.**
-
-Denn vielleicht fährt dein Zug nicht.
-
-Vielleicht fährt er später.
-
-Vielleicht fährt er nur bis zum nächsten größeren Bahnhof.
-
-Vielleicht endet die Verbindung plötzlich.
-
-Vielleicht heißt es:
+Denn vielleicht fährt dein Zug nicht. Vielleicht fährt er später. Vielleicht fährt er nur bis zum nächsten größeren Bahnhof. Vielleicht endet die Verbindung plötzlich. Vielleicht heißt es:
 
 > „Dieser Zug endet heute abweichend in …“
 
-Und genau hier solltest du nicht verzweifeln.
-
-Du solltest dich fragen:
+Und genau hier solltest du nicht verzweifeln. Du solltest dich fragen:
 
 > **„Ist das vielleicht eine Chance?“**
 
@@ -199,17 +101,7 @@ Unser Zeitmanagement:
 > 09:45 Kaffee  
 > 10:00 Erkenntnis
 
-Du hast damit etwas sehr Wichtiges gelernt:
-
-**Ein Zeitplan ist nur so lange gültig, bis sich etwas ändert.**
-
-Und im öffentlichen Verkehr kann sich vieles ändern.
-
-Deshalb ist die wichtigste Fähigkeit des modernen Pendlers nicht Planung.
-
-Es ist:
-
-**Improvisation.**
+Du hast damit etwas sehr Wichtiges gelernt: **Ein Zeitplan ist nur so lange gültig, bis sich etwas ändert.** Und im öffentlichen Verkehr kann sich vieles ändern. Deshalb ist die wichtigste Fähigkeit des modernen Pendlers nicht Planung. Es ist: **Improvisation.**
 
 ---
 
@@ -245,9 +137,7 @@ Es ist:
 
 **„Vielleicht ist das sogar besser.“**
 
-Du hast soeben die höchste Form des modernen Zeitmanagements erreicht:
-
-**Du hast aufgehört, auf den ursprünglichen Plan zu bestehen.**
+Du hast soeben die höchste Form des modernen Zeitmanagements erreicht: **Du hast aufgehört, auf den ursprünglichen Plan zu bestehen.**
 
 ---
 
@@ -255,17 +145,7 @@ Du hast soeben die höchste Form des modernen Zeitmanagements erreicht:
 
 ## Das perfekte Ausfall-Frühstück
 
-Der klassische Pendler hetzt morgens aus dem Haus.
-
-Kaffee in der Hand.
-
-Brot im Mund.
-
-Schuhe halb gebunden.
-
-Dann rennt er zum Bahnhof.
-
-Das ist unnötiger Stress.
+Der klassische Pendler hetzt morgens aus dem Haus. Kaffee in der Hand. Brot im Mund. Schuhe halb gebunden. Dann rennt er zum Bahnhof. Das ist unnötiger Stress.
 
 Unser Ansatz:
 
@@ -309,11 +189,7 @@ Drittes Frühstück.
 
 Neuer Reiseplan.
 
-Du siehst:
-
-**Die Reise wird länger.**
-
-Aber dein Frühstück ebenfalls.
+Du siehst: **Die Reise wird länger.** Aber dein Frühstück ebenfalls.
 
 ---
 
@@ -321,41 +197,13 @@ Aber dein Frühstück ebenfalls.
 
 ## Die Kunst des vorzeitigen Endes
 
-Es gibt eine Situation, die der durchschnittliche Fahrgast völlig falsch bewertet.
-
-Der Zug fährt.
-
-Du sitzt darin.
-
-Alles scheint gut.
-
-Dann kommt eine Durchsage:
+Es gibt eine Situation, die der durchschnittliche Fahrgast völlig falsch bewertet. Der Zug fährt. Du sitzt darin. Alles scheint gut. Dann kommt eine Durchsage:
 
 > „Dieser Zug endet heute vorzeitig in …“
 
-Der normale Fahrgast:
+Der normale Fahrgast: **Panik.** Der Methodius-Fahrgast: **Interesse.**
 
-**Panik.**
-
-Der Methodius-Fahrgast:
-
-**Interesse.**
-
-Denn plötzlich wurde dein ursprünglicher Reiseplan von einem neuen Reiseplan abgelöst.
-
-Du musst vielleicht aussteigen.
-
-Vielleicht umsteigen.
-
-Vielleicht warten.
-
-Vielleicht einen anderen Weg nehmen.
-
-Aber eines ist sicher:
-
-**Du hast jetzt eine neue Situation.**
-
-Und neue Situationen sind bekanntlich viel spannender als alte.
+Denn plötzlich wurde dein ursprünglicher Reiseplan von einem neuen Reiseplan abgelöst. Du musst vielleicht aussteigen. Vielleicht umsteigen. Vielleicht warten. Vielleicht einen anderen Weg nehmen. Aber eines ist sicher: **Du hast jetzt eine neue Situation.** Und neue Situationen sind bekanntlich viel spannender als alte.
 
 ---
 
@@ -363,43 +211,19 @@ Und neue Situationen sind bekanntlich viel spannender als alte.
 
 ## Der Anschluss
 
-Der Anschlusszug ist eine gefährliche Illusion.
-
-Du denkst:
+Der Anschlusszug ist eine gefährliche Illusion. Du denkst:
 
 > „Wenn mein Zug um 10:12 Uhr ankommt, schaffe ich den Anschluss um 10:15 Uhr.“
 
-Das ist naiv.
-
-Ein Profi denkt:
+Das ist naiv. Ein Profi denkt:
 
 > „Wenn ich den Anschluss nicht bekomme, habe ich automatisch eine zusätzliche Wartezeit.“
 
-Und zusätzliche Wartezeit bedeutet:
+Und zusätzliche Wartezeit bedeutet: **mehr Zeit für dich.**
 
-**mehr Zeit für dich.**
+Vielleicht wolltest du ohnehin eine Pause. Vielleicht wolltest du ein Buch lesen. Vielleicht wolltest du einfach irgendwo sitzen und nichts tun. Der verpasste Anschluss ist also kein Problem. Er ist: **ungeplante Freizeit.**
 
-Vielleicht wolltest du ohnehin eine Pause.
-
-Vielleicht wolltest du ein Buch lesen.
-
-Vielleicht wolltest du einfach irgendwo sitzen und nichts tun.
-
-Der verpasste Anschluss ist also kein Problem.
-
-Er ist:
-
-**ungeplante Freizeit.**
-
-Und wenn der Zug sogar vor dem Anschlussbahnhof endet?
-
-Noch besser.
-
-Dann hast du bereits zwei Probleme auf einmal vermieden:
-
-Du hast den ursprünglichen Anschluss nicht verpasst.
-
-**Du bist gar nicht erst dort angekommen.**
+Und wenn der Zug sogar vor dem Anschlussbahnhof endet? Noch besser. Dann hast du bereits zwei Probleme auf einmal vermieden: Du hast den ursprünglichen Anschluss nicht verpasst. **Du bist gar nicht erst dort angekommen.**
 
 ---
 
@@ -407,47 +231,15 @@ Du hast den ursprünglichen Anschluss nicht verpasst.
 
 ## Pünktlichkeit ohne Ankunft
 
-Jetzt kommen wir zum Kern unseres Systems.
+Jetzt kommen wir zum Kern unseres Systems. Du hast einen Termin um 14:00 Uhr. Du bist um 13:45 Uhr noch im Zug. Der Zug steht. 13:50 Uhr. Der Zug steht. 13:55 Uhr. Der Zug steht. 14:00 Uhr. Der Zug steht.
 
-Du hast einen Termin um 14:00 Uhr.
-
-Du bist um 13:45 Uhr noch im Zug.
-
-Der Zug steht.
-
-13:50 Uhr.
-
-Der Zug steht.
-
-13:55 Uhr.
-
-Der Zug steht.
-
-14:00 Uhr.
-
-Der Zug steht.
-
-Du bist nicht pünktlich.
-
-Aber jetzt kommt die entscheidende Frage:
-
-**Warst du jemals zu spät?**
-
-Du warst schließlich die ganze Zeit unterwegs.
+Du bist nicht pünktlich. Aber jetzt kommt die entscheidende Frage: **Warst du jemals zu spät?** Du warst schließlich die ganze Zeit unterwegs.
 
 Noch interessanter wird es, wenn der Zug um 13:55 Uhr plötzlich mitteilt:
 
 > „Die Fahrt endet hier.“
 
-Du steigst aus.
-
-Du bist nicht am Ziel.
-
-Aber du bist auch nicht dort, wo du um 14:00 Uhr hättest sein sollen.
-
-Du befindest dich in einem faszinierenden Zwischenzustand:
-
-**zeitlich korrekt abwesend.**
+Du steigst aus. Du bist nicht am Ziel. Aber du bist auch nicht dort, wo du um 14:00 Uhr hättest sein sollen. Du befindest dich in einem faszinierenden Zwischenzustand: **zeitlich korrekt abwesend.**
 
 ---
 
@@ -503,15 +295,11 @@ Irgendwann hörst du auf, dich darüber aufzuregen.
 
 ## Die perfekte Ausrede
 
-Natürlich musst du gelegentlich erklären, warum du nicht angekommen bist.
-
-Vermeide:
+Natürlich musst du gelegentlich erklären, warum du nicht angekommen bist. Vermeide:
 
 > „Mein Zug ist ausgefallen.“
 
-Das klingt zu gewöhnlich.
-
-Besser:
+Das klingt zu gewöhnlich. Besser:
 
 > **„Meine Anreise wurde durch infrastrukturelle Ereignisse nachhaltig beeinflusst.“**
 
@@ -527,11 +315,7 @@ Besonders elegant:
 
 > **„Ich war pünktlich unterwegs. Der Zielbahnhof war es nicht.“**
 
-Dieser Satz ist hervorragend.
-
-Er verschiebt die Verantwortung von dir auf:
-
-**die Reise.**
+Dieser Satz ist hervorragend. Er verschiebt die Verantwortung von dir auf: **die Reise.**
 
 ---
 
@@ -539,33 +323,9 @@ Er verschiebt die Verantwortung von dir auf:
 
 ## Die revolutionäre Ausfall-Diät
 
-Auch körperlich kann eine ungeplante Reise Vorteile haben.
+Auch körperlich kann eine ungeplante Reise Vorteile haben. Du wolltest eigentlich zum Restaurant fahren. Zug fällt aus. Du bleibst zu Hause. Du sparst Geld. Du isst weniger. Oder du bestellst Pizza. Auch das ist völlig in Ordnung.
 
-Du wolltest eigentlich zum Restaurant fahren.
-
-Zug fällt aus.
-
-Du bleibst zu Hause.
-
-Du sparst Geld.
-
-Du isst weniger.
-
-Oder du bestellst Pizza.
-
-Auch das ist völlig in Ordnung.
-
-Denn unser Ratgeber verfolgt ein ganzheitliches Konzept:
-
-**Weniger Pünktlichkeitsdruck.**
-
-**Weniger Reiseplanung.**
-
-**Mehr Flexibilität.**
-
-Und möglicherweise:
-
-**mehr Pizza.**
+Denn unser Ratgeber verfolgt ein ganzheitliches Konzept: **Weniger Pünktlichkeitsdruck.** **Weniger Reiseplanung.** **Mehr Flexibilität.** Und möglicherweise: **mehr Pizza.**
 
 ---
 
@@ -573,53 +333,17 @@ Und möglicherweise:
 
 ## Was tun, wenn der Zug ausnahmsweise bis zum Ziel fährt?
 
-Das ist eine schwierige Situation.
-
-Du sitzt am Bahnsteig.
-
-Die Anzeige zeigt:
-
-**„Pünktlich.“**
+Das ist eine schwierige Situation. Du sitzt am Bahnsteig. Die Anzeige zeigt: **„Pünktlich.“**
 
 Du denkst:
 
 > „Das kann nicht stimmen.“
 
-Dann kommt der Zug tatsächlich.
+Dann kommt der Zug tatsächlich. Du steigst ein. Er fährt los. Er hält an. Er fährt weiter. Er kommt an. Und zwar: **am richtigen Bahnhof.** Pünktlich.
 
-Du steigst ein.
+Du bist völlig unvorbereitet. Du hattest mit einem Ausfall gerechnet. Du hattest deinen Tagesplan geändert. Du hast vielleicht bereits eine alternative Route recherchiert. Und jetzt? **Du bist plötzlich angekommen.**
 
-Er fährt los.
-
-Er hält an.
-
-Er fährt weiter.
-
-Er kommt an.
-
-Und zwar:
-
-**am richtigen Bahnhof.**
-
-Pünktlich.
-
-Du bist völlig unvorbereitet.
-
-Du hattest mit einem Ausfall gerechnet.
-
-Du hattest deinen Tagesplan geändert.
-
-Du hast vielleicht bereits eine alternative Route recherchiert.
-
-Und jetzt?
-
-**Du bist plötzlich angekommen.**
-
-Keine Sorge.
-
-Das kann passieren.
-
-Betrachte es als Ausnahme.
+Keine Sorge. Das kann passieren. Betrachte es als Ausnahme.
 
 ---
 
@@ -627,9 +351,7 @@ Betrachte es als Ausnahme.
 
 ## Der Pünktlichkeits-Masterplan
 
-Hier ist er.
-
-Der ultimative Plan.
+Hier ist er. Der ultimative Plan.
 
 ### Schritt 1
 
@@ -657,39 +379,27 @@ Beobachte die Situation.
 
 ### Schritt 7
 
-Wenn der Zug ausfällt:
-
-**Flexibel bleiben.**
+Wenn der Zug ausfällt: **Flexibel bleiben.**
 
 ### Schritt 8
 
-Wenn der Zug verspätet ist:
-
-**Flexibel bleiben.**
+Wenn der Zug verspätet ist: **Flexibel bleiben.**
 
 ### Schritt 9
 
-Wenn der Zug vorzeitig endet:
-
-**Sehr flexibel bleiben.**
+Wenn der Zug vorzeitig endet: **Sehr flexibel bleiben.**
 
 ### Schritt 10
 
-Wenn der Anschluss weg ist:
-
-**Noch flexibler bleiben.**
+Wenn der Anschluss weg ist: **Noch flexibler bleiben.**
 
 ### Schritt 11
 
-Wenn schließlich doch alles funktioniert:
-
-**Nicht überrascht sein.**
+Wenn schließlich doch alles funktioniert: **Nicht überrascht sein.**
 
 ### Schritt 12
 
-Am Ziel ankommen.
-
-Oder:
+Am Ziel ankommen. Oder:
 
 ### Schritt 13
 
@@ -701,39 +411,13 @@ Feststellen, dass der neue Zielbahnhof ebenfalls interessant ist.
 
 ## Die große Erkenntnis
 
-Pünktlichkeit beginnt nicht unbedingt am Zielbahnhof.
+Pünktlichkeit beginnt nicht unbedingt am Zielbahnhof. Sie beginnt im Kopf. Wer jeden Reiseplan als unumstößliches Versprechen betrachtet, wird bei jeder Abweichung nervös. Wer dagegen akzeptiert, dass eine Reise aus verschiedenen Etappen, Änderungen und Überraschungen bestehen kann, bleibt gelassener.
 
-Sie beginnt im Kopf.
+Der Zug kann ausfallen. Er kann verspätet sein. Ein Anschluss kann verloren gehen. Eine Verbindung kann vorzeitig enden. Und manchmal kann sogar alles genauso funktionieren, wie es ursprünglich geplant war.
 
-Wer jeden Reiseplan als unumstößliches Versprechen betrachtet, wird bei jeder Abweichung nervös.
+Der entscheidende Punkt ist: **Du musst nicht jede Abweichung persönlich nehmen.**
 
-Wer dagegen akzeptiert, dass eine Reise aus verschiedenen Etappen, Änderungen und Überraschungen bestehen kann, bleibt gelassener.
-
-Der Zug kann ausfallen.
-
-Er kann verspätet sein.
-
-Ein Anschluss kann verloren gehen.
-
-Eine Verbindung kann vorzeitig enden.
-
-Und manchmal kann sogar alles genauso funktionieren, wie es ursprünglich geplant war.
-
-Der entscheidende Punkt ist:
-
-**Du musst nicht jede Abweichung persönlich nehmen.**
-
-Vielleicht kommst du zehn Minuten später.
-
-Vielleicht eine Stunde.
-
-Vielleicht musst du unterwegs umsteigen.
-
-Vielleicht endet deine Fahrt früher als erwartet.
-
-Das Leben ist schließlich kein Fahrplan.
-
-Obwohl es manchmal erstaunlich viel danach aussieht.
+Vielleicht kommst du zehn Minuten später. Vielleicht eine Stunde. Vielleicht musst du unterwegs umsteigen. Vielleicht endet deine Fahrt früher als erwartet. Das Leben ist schließlich kein Fahrplan. Obwohl es manchmal erstaunlich viel danach aussieht.
 
 ---
 
@@ -741,43 +425,19 @@ Obwohl es manchmal erstaunlich viel danach aussieht.
 
 ## Herzlichen Glückwunsch – du bist pünktlich!
 
-Du hast diesen Ratgeber beendet.
+Du hast diesen Ratgeber beendet. Vielleicht während eines Zugausfalls. Vielleicht im Wartebereich. Vielleicht während einer Verspätung. Vielleicht sitzt du gerade in einem Zug, der laut Anzeige eigentlich woanders sein sollte.
 
-Vielleicht während eines Zugausfalls.
-
-Vielleicht im Wartebereich.
-
-Vielleicht während einer Verspätung.
-
-Vielleicht sitzt du gerade in einem Zug, der laut Anzeige eigentlich woanders sein sollte.
-
-Dann denke daran:
-
-Du bist nicht zu spät.
-
-Du befindest dich lediglich in einer:
+Dann denke daran: Du bist nicht zu spät. Du befindest dich lediglich in einer:
 
 # **zeitlich erweiterten Ankunftsphase.**
 
-Und wenn dein Zug plötzlich vor deinem Ziel endet?
-
-Dann hast du immerhin die Gelegenheit bekommen, einen Bahnhof kennenzulernen, den du nie kennenlernen wolltest.
-
-Das ist keine Katastrophe.
-
-Das ist:
-
-**ungeplante Horizonterweiterung.**
+Und wenn dein Zug plötzlich vor deinem Ziel endet? Dann hast du immerhin die Gelegenheit bekommen, einen Bahnhof kennenzulernen, den du nie kennenlernen wolltest. Das ist keine Katastrophe. Das ist: **ungeplante Horizonterweiterung.**
 
 Und wenn irgendwann jemand sagt:
 
 > „Warum bist du schon wieder zu spät?“
 
-Dann lächle.
-
-Atme tief durch.
-
-Und antworte:
+Dann lächle. Atme tief durch. Und antworte:
 
 > **„Ich bin nicht zu spät. Mein Transportkonzept befindet sich noch in der Umsetzung.“**
 
@@ -840,9 +500,7 @@ Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast:
 
 # Herzlichen Glückwunsch!
 
-Du bist bereit für die nächste Stufe der modernen Mobilität:
-
-**Pünktlich sein, flexibel ankommen und im Zweifel einfach früher aussteigen.**
+Du bist bereit für die nächste Stufe der modernen Mobilität: **Pünktlich sein, flexibel ankommen und im Zweifel einfach früher aussteigen.**
 
 **Dr. Maximilian Methodius**
 

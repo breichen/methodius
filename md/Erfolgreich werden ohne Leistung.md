@@ -36,31 +36,11 @@ Zumindest auf Instagram.
 
 ## Die Wahrheit über Erfolg
 
-Früher war Erfolg relativ einfach:
+Früher war Erfolg relativ einfach: Man arbeitete. Man lernte etwas. Man wurde gut darin. Man wurde befördert. Man verdiente Geld. Das war mühsam. Heute ist das Konzept eleganter.
 
-- Man arbeitete.
-- Man lernte etwas.
-- Man wurde gut darin.
-- Man wurde befördert.
-- Man verdiente Geld.
+Du brauchst: eine persönliche Marke, einen Podcast, einen Newsletter, einen Onlinekurs, ein Mikrofon, eine Kamera, ein Ringlicht, einen Espressoautomaten und eine Meinung zu Mindset.
 
-Das war mühsam. Heute ist das Konzept eleganter.
-
-Du brauchst:
-
-- eine persönliche Marke
-- einen Podcast
-- einen Newsletter
-- einen Onlinekurs
-- ein Mikrofon
-- eine Kamera
-- ein Ringlicht
-- einen Espressoautomaten
-- und eine Meinung zu Mindset
-
-Dann bist du fast da. Denn entscheidend ist nicht mehr unbedingt: **„Was kannst du?“**
-
-Sondern: **„Wie sieht es aus, als könntest du etwas?“**
+Dann bist du fast da. Denn entscheidend ist nicht mehr unbedingt: **„Was kannst du?“** Sondern: **„Wie sieht es aus, als könntest du etwas?“**
 
 ---
 
@@ -70,13 +50,7 @@ Sondern: **„Wie sieht es aus, als könntest du etwas?“**
 
 Leistung ist überbewertet. Was bringt es dir, acht Stunden konzentriert zu arbeiten, wenn du stattdessen ein 47-sekündiges Video drehen kannst?
 
-Früher:
-
-> „Ich habe zehn Jahre Berufserfahrung.“
-
-Heute:
-
-> „Ich habe in den letzten drei Jahren 400.000 Menschen geholfen, ihre Einstellung zu verändern.“
+Früher: „Ich habe zehn Jahre Berufserfahrung.“ Heute: „Ich habe in den letzten drei Jahren 400.000 Menschen geholfen, ihre Einstellung zu verändern.“
 
 Was genau du verändert hast? Unklar. Aber "400.000 Menschen" klingt beeindruckend. **Und beeindruckend ist bereits die halbe Miete.**
 
@@ -86,18 +60,7 @@ Was genau du verändert hast? Unklar. Aber "400.000 Menschen" klingt beeindrucke
 
 ## Der Influencer
 
-Der moderne Influencer beginnt seinen Tag um 4:37 Uhr. Er steht auf.
-
-- Meditation.
-- Eisbad.
-- Atemübungen.
-- Dankbarkeit.
-- Journaling.
-- Affirmationen.
-- Proteinshake.
-- Sonnenaufgang.
-- Lektüre.
-- Visualisierung.
+Der moderne Influencer beginnt seinen Tag um 4:37 Uhr. Er steht auf. Meditation. Eisbad. Atemübungen. Dankbarkeit. Journaling. Affirmationen. Proteinshake. Sonnenaufgang. Lektüre. Visualisierung.
 
 Und dann: **Er dreht ein Video darüber, wie er seinen Tag beginnt.**
 
@@ -174,33 +137,13 @@ Endlich Feierabend.
 
 ## Personal Branding – oder: Warum du plötzlich eine Marke bist
 
-Früher warst du einfach du.
+Früher warst du einfach du. Heute bist du: **eine Personal Brand.**
 
-Heute bist du:
-
-**eine Personal Brand.**
-
-Du brauchst eine Positionierung.
-
-Eine Mission.
-
-Eine Vision.
-
-Ein Farbschema.
-
-Ein Logo.
-
-Eine Bio.
-
-Und einen Satz wie:
+Du brauchst eine Positionierung. Eine Mission. Eine Vision. Ein Farbschema. Ein Logo. Eine Bio. Und einen Satz wie:
 
 > „Ich helfe ambitionierten Menschen dabei, ihr volles Potenzial zu entfalten.“
 
-Was genau dein Potenzial ist?
-
-Egal.
-
-Es klingt teuer.
+Was genau dein Potenzial ist? Egal. Es klingt teuer.
 
 ---
 
@@ -208,21 +151,11 @@ Es klingt teuer.
 
 ## Die wichtigste Fähigkeit: Selbstbewusstsein
 
-Erfolg beginnt mit Selbstbewusstsein.
-
-Deshalb musst du lernen, Dinge zu sagen, die du früher niemals gesagt hättest.
-
-Zum Beispiel:
+Erfolg beginnt mit Selbstbewusstsein. Deshalb musst du lernen, Dinge zu sagen, die du früher niemals gesagt hättest. Zum Beispiel:
 
 > „Ich bin einer der führenden Experten für …“
 
-Ob du einer der führenden Experten bist?
-
-Das entscheidet der Markt.
-
-Und der Markt hat deine Instagram-Bio bisher nicht gelesen.
-
-Also trag es einfach ein.
+Ob du einer der führenden Experten bist? Das entscheidet der Markt. Und der Markt hat deine Instagram-Bio bisher nicht gelesen. Also trag es einfach ein.
 
 Weitere nützliche Formulierungen:
 
@@ -236,9 +169,7 @@ Weitere nützliche Formulierungen:
 
 > „Ich teile heute mein Wissen.“
 
-Diese Sätze haben einen großen Vorteil:
-
-**Niemand kann sofort überprüfen, was sie bedeuten.**
+Diese Sätze haben einen großen Vorteil: **Niemand kann sofort überprüfen, was sie bedeuten.**
 
 ---
 
@@ -246,11 +177,7 @@ Diese Sätze haben einen großen Vorteil:
 
 ## Das Geheimnis des Expertenstatus
 
-Du möchtest Experte werden?
-
-Dann brauchst du nicht zwingend jahrelange Erfahrung.
-
-Du brauchst:
+Du möchtest Experte werden? Dann brauchst du nicht zwingend jahrelange Erfahrung. Du brauchst:
 
 ### 1. Einen schwarzen Rollkragenpullover
 
@@ -264,15 +191,9 @@ Du brauchst:
 
 ### 6. Einen englischen Begriff
 
-Zum Beispiel:
+Zum Beispiel: **Mindset Transformation Framework.**
 
-**Mindset Transformation Framework.**
-
-Fertig.
-
-Du bist jetzt der Gründer des:
-
-**MTF.**
+Fertig. Du bist jetzt der Gründer des: **MTF.**
 
 Das klingt nach etwas, das man auf einer Konferenz auf eine Bühne schreiben könnte.
 
@@ -282,26 +203,13 @@ Das klingt nach etwas, das man auf einer Konferenz auf eine Bühne schreiben kö
 
 ## Das 10.000-Euro-Angebot
 
-Du hast noch kein Produkt?
-
-Kein Problem.
-
-Erstelle einen Onlinekurs.
-
-Zum Beispiel:
+Du hast noch kein Produkt? Kein Problem. Erstelle einen Onlinekurs. Zum Beispiel:
 
 # „Unlock Your Potential“
 
 **6 Wochen für nur 1.997 Euro**
 
-Enthalten:
-
-- 8 Videos
-- 3 PDFs
-- eine Checkliste
-- eine Zoom-Session
-- eine Facebook-Gruppe
-- und ein 14-seitiges Workbook
+Enthalten: 8 Videos, 3 PDFs, eine Checkliste, eine Zoom-Session, eine Facebook-Gruppe und ein 14-seitiges Workbook.
 
 Das Workbook enthält:
 
@@ -311,15 +219,9 @@ Das Workbook enthält:
 
 > „Was wirst du ab heute verändern?“
 
-Und eine Seite mit:
+Und eine Seite mit: **„Meine größten Erkenntnisse“**
 
-**„Meine größten Erkenntnisse“**
-
-Diese Seite bleibt leer.
-
-Das ist Absicht.
-
-Sie soll Raum für Transformation bieten.
+Diese Seite bleibt leer. Das ist Absicht. Sie soll Raum für Transformation bieten.
 
 ---
 
@@ -331,9 +233,7 @@ Jeder erfolgreiche Mensch schreibt irgendwann:
 
 > **„Heute vor genau fünf Jahren hatte ich nur 200 Euro auf meinem Konto.“**
 
-Dann folgt eine dramatische Geschichte.
-
-Der Wendepunkt:
+Dann folgt eine dramatische Geschichte. Der Wendepunkt:
 
 > „Ich habe aufgehört, Ausreden zu suchen.“
 
@@ -345,11 +245,7 @@ Und schließlich:
 
 > **„Heute führe ich ein Unternehmen mit 47 Mitarbeitern.“**
 
-Was nicht erwähnt wird:
-
-Die Eltern haben ihm damals eine Wohnung gegeben.
-
-Aber das ist für die Story nicht relevant.
+Was nicht erwähnt wird: Die Eltern haben ihm damals eine Wohnung gegeben. Aber das ist für die Story nicht relevant.
 
 ---
 
@@ -357,45 +253,19 @@ Aber das ist für die Story nicht relevant.
 
 ## Der Porsche-Moment
 
-Ein Influencer sitzt in einem Auto.
+Ein Influencer sitzt in einem Auto. Es muss nicht sein Auto sein. Das ist das Schöne an Social Media.
 
-Es muss nicht sein Auto sein.
+Er blickt in die Kamera. „Ich möchte euch etwas sagen.“ Pause. „Geld ist nicht alles.“ Dann schwenkt die Kamera über das Lenkrad. **Porsche.** „Aber Freiheit ist alles.“
 
-Das ist das Schöne an Social Media.
+Du: **„Aha.“**
 
-Er blickt in die Kamera.
+Er: „Deshalb habe ich mein Leben komplett verändert.“
 
-„Ich möchte euch etwas sagen.“
+Du: „Wie?“
 
-Pause.
+Er: „Ich habe angefangen, an mich zu glauben.“
 
-„Geld ist nicht alles.“
-
-Dann schwenkt die Kamera über das Lenkrad.
-
-**Porsche.**
-
-„Aber Freiheit ist alles.“
-
-Du:
-
-**„Aha.“**
-
-Er:
-
-„Deshalb habe ich mein Leben komplett verändert.“
-
-Du:
-
-„Wie?“
-
-Er:
-
-„Ich habe angefangen, an mich zu glauben.“
-
-Der Porsche bleibt im Bild.
-
-**Der Beweis ist erbracht.**
+Der Porsche bleibt im Bild. **Der Beweis ist erbracht.**
 
 ---
 
@@ -403,37 +273,13 @@ Der Porsche bleibt im Bild.
 
 ## Wie man busy aussieht
 
-Erfolgreiche Menschen sind beschäftigt.
+Erfolgreiche Menschen sind beschäftigt. Deshalb musst du beschäftigt aussehen.
 
-Deshalb musst du beschäftigt aussehen.
-
-Gehe mit einem Laptop durch ein Café.
-
-Schreibe etwas.
-
-Stoppe.
-
-Denke nach.
-
-Schreibe wieder.
-
-Trinke Kaffee.
-
-Schau aus dem Fenster.
-
-Schreibe einen LinkedIn-Post:
+Gehe mit einem Laptop durch ein Café. Schreibe etwas. Stoppe. Denke nach. Schreibe wieder. Trinke Kaffee. Schau aus dem Fenster. Schreibe einen LinkedIn-Post:
 
 > **„Busy sein ist nicht dasselbe wie produktiv sein.“**
 
-Poste ihn.
-
-Öffne dein Handy.
-
-Prüfe die Likes.
-
-Du hast jetzt 37 Sekunden produktiv gearbeitet.
-
-**Ausgezeichnet.**
+Poste ihn. Öffne dein Handy. Prüfe die Likes. Du hast jetzt 37 Sekunden produktiv gearbeitet. **Ausgezeichnet.**
 
 ---
 
@@ -441,33 +287,11 @@ Du hast jetzt 37 Sekunden produktiv gearbeitet.
 
 ## Das Geheimnis der passiven Einkommen
 
-Passives Einkommen ist das Einkommen, bei dem du nichts tun musst.
+Passives Einkommen ist das Einkommen, bei dem du nichts tun musst. Das klingt hervorragend. Leider musst du zunächst etwas tun. Aber das nennen wir: **„Initiale Aufbauphase.“**
 
-Das klingt hervorragend.
+Danach brauchst du: einen Funnel, eine Landingpage, E-Mail-Marketing, Ads, Content, Automatisierung, Kundenservice, Analytics, Steuerberatung.
 
-Leider musst du zunächst etwas tun.
-
-Aber das nennen wir:
-
-**„Initiale Aufbauphase.“**
-
-Danach brauchst du:
-
-- einen Funnel
-- eine Landingpage
-- E-Mail-Marketing
-- Ads
-- Content
-- Automatisierung
-- Kundenservice
-- Analytics
-- Steuerberatung
-
-Aber hey:
-
-**Du musst nicht mehr arbeiten.**
-
-Du musst nur noch **dein passives Einkommen managen.**
+Aber hey: **Du musst nicht mehr arbeiten.** Du musst nur noch **dein passives Einkommen managen.**
 
 ---
 
@@ -477,21 +301,15 @@ Du musst nur noch **dein passives Einkommen managen.**
 
 ### Stufe 1: Niemand kennt dich
 
-Du postest ein Foto.
-
-12 Likes.
+Du postest ein Foto. 12 Likes.
 
 ### Stufe 2: Erste Follower
 
-Du schreibst:
-
-> „Danke für euren Support.“
+Du schreibst: „Danke für euren Support.“
 
 ### Stufe 3: 10.000 Follower
 
-Du schreibst:
-
-> „Community bedeutet mir alles.“
+Du schreibst: „Community bedeutet mir alles.“
 
 ### Stufe 4: 50.000 Follower
 
@@ -507,9 +325,7 @@ Du nennst dich „Thought Leader“.
 
 ### Stufe 7: 1 Million Follower
 
-Du veröffentlichst einen Podcast darüber, wie du 1 Million Follower erreicht hast.
-
-**Damit beginnt der Kreislauf.**
+Du veröffentlichst einen Podcast darüber, wie du 1 Million Follower erreicht hast. **Damit beginnt der Kreislauf.**
 
 ---
 
@@ -517,13 +333,7 @@ Du veröffentlichst einen Podcast darüber, wie du 1 Million Follower erreicht h
 
 ## Was tun, wenn jemand fragt: „Was hast du eigentlich geleistet?“
 
-Eine gefährliche Frage.
-
-Du darfst niemals anfangen, konkrete Dinge aufzuzählen.
-
-Das wäre zu überprüfbar.
-
-Stattdessen:
+Eine gefährliche Frage. Du darfst niemals anfangen, konkrete Dinge aufzuzählen. Das wäre zu überprüfbar. Stattdessen:
 
 > „Ich habe in den letzten Jahren sehr viel aufgebaut.“
 
@@ -547,33 +357,15 @@ Das Gespräch ist beendet.
 
 ## Die 5-Uhr-Morgenroutine für Menschen, die nicht um 5 Uhr aufstehen wollen
 
-Du musst nicht um 5 Uhr aufstehen.
+Du musst nicht um 5 Uhr aufstehen. Das ist eine der größten Befreiungen dieses Ratgebers.
 
-Das ist eine der größten Befreiungen dieses Ratgebers.
-
-Steh um 7 Uhr auf.
-
-Oder 8 Uhr.
-
-Oder wann immer du aufwachst.
-
-Das Ziel ist nicht:
-
-**früher aufstehen.**
-
-Das Ziel ist:
-
-**darüber reden, dass du deinen Tag bewusst beginnst.**
+Steh um 7 Uhr auf. Oder 8 Uhr. Oder wann immer du aufwachst. Das Ziel ist nicht: **früher aufstehen.** Das Ziel ist: **darüber reden, dass du deinen Tag bewusst beginnst.**
 
 Das kannst du auch um 10:47 Uhr tun.
 
 > „Ich starte meinen Tag mit Intention.“
 
-Kaffee in der Hand.
-
-Hausschuhe an.
-
-**High Performance.**
+Kaffee in der Hand. Hausschuhe an. **High Performance.**
 
 ---
 
@@ -581,9 +373,7 @@ Hausschuhe an.
 
 ## Der ultimative Erfolgs-Masterplan
 
-Hier ist er.
-
-Der Plan, auf den die Menschheit gewartet hat.
+Hier ist er. Der Plan, auf den die Menschheit gewartet hat.
 
 ### Schritt 1
 
@@ -591,9 +381,7 @@ Finde heraus, was du gut kannst.
 
 ### Schritt 2
 
-Falls dir nichts einfällt:
-
-Behaupte, dass du „Menschen inspirierst“.
+Falls dir nichts einfällt: Behaupte, dass du „Menschen inspirierst“.
 
 ### Schritt 3
 
@@ -621,9 +409,7 @@ Poste ein Foto beim Spazierengehen.
 
 ### Schritt 9
 
-Schreibe:
-
-> „Consistency beats motivation.“
+Schreibe: „Consistency beats motivation.“
 
 ### Schritt 10
 
@@ -655,31 +441,11 @@ Schreibe einen Ratgeber darüber.
 
 ## Die unangenehme Wahrheit
 
-Jetzt müssen wir kurz ernst werden.
+Jetzt müssen wir kurz ernst werden. Erfolg ohne **jegliche** Leistung funktioniert nicht. Zumindest nicht zuverlässig.
 
-Erfolg ohne **jegliche** Leistung funktioniert nicht.
+Du kannst Glück haben. Du kannst zur richtigen Zeit am richtigen Ort sein. Du kannst eine große Reichweite bekommen. Du kannst erben. Du kannst einen Trend erwischen.
 
-Zumindest nicht zuverlässig.
-
-Du kannst Glück haben.
-
-Du kannst zur richtigen Zeit am richtigen Ort sein.
-
-Du kannst eine große Reichweite bekommen.
-
-Du kannst erben.
-
-Du kannst einen Trend erwischen.
-
-Aber langfristig ist es hilfreich, tatsächlich etwas zu können.
-
-Und genau hier liegt die Ironie.
-
-Die erfolgreichsten Menschen müssen oft gar nicht ständig darüber sprechen, wie erfolgreich sie sind.
-
-Sie machen einfach etwas.
-
-**Das ist natürlich für einen Influencer-Account äußerst problematisch.**
+Aber langfristig ist es hilfreich, tatsächlich etwas zu können. Und genau hier liegt die Ironie. Die erfolgreichsten Menschen müssen oft gar nicht ständig darüber sprechen, wie erfolgreich sie sind. Sie machen einfach etwas. **Das ist natürlich für einen Influencer-Account äußerst problematisch.**
 
 ---
 
@@ -689,41 +455,13 @@ Sie machen einfach etwas.
 
 Was haben wir also gelernt?
 
-Du musst nicht jeden Morgen um 5 Uhr aufstehen.
-
-Du musst nicht jeden Tag zehn Stunden arbeiten.
-
-Du musst nicht 27 Bücher pro Jahr lesen.
-
-Du musst nicht kalt duschen.
-
-Du musst nicht jeden Morgen meditieren.
-
-Du musst nicht dein Leben in ein Excel-Sheet verwandeln.
-
-Und du musst definitiv nicht jeden Montag auf LinkedIn schreiben:
+Du musst nicht jeden Morgen um 5 Uhr aufstehen. Du musst nicht jeden Tag zehn Stunden arbeiten. Du musst nicht 27 Bücher pro Jahr lesen. Du musst nicht kalt duschen. Du musst nicht jeden Morgen meditieren. Du musst nicht dein Leben in ein Excel-Sheet verwandeln. Und du musst definitiv nicht jeden Montag auf LinkedIn schreiben:
 
 > **„5 Dinge, die ich diese Woche über Leadership gelernt habe.“**
 
-Aber:
+Aber: Wenn du etwas erreichen möchtest, hilft es meistens, **etwas dafür zu tun.** Vielleicht sogar regelmäßig. Vielleicht sogar dann, wenn niemand zusieht. Das ist der Teil, den man auf Social Media nur schwer verkaufen kann.
 
-Wenn du etwas erreichen möchtest, hilft es meistens, **etwas dafür zu tun.**
-
-Vielleicht sogar regelmäßig.
-
-Vielleicht sogar dann, wenn niemand zusieht.
-
-Das ist der Teil, den man auf Social Media nur schwer verkaufen kann.
-
-Denn:
-
-**„Arbeite acht Jahre konzentriert an einer Sache, verbessere dich langsam und hab Geduld“**
-
-ist kein besonders guter Hook.
-
-**„So verdienst du 10.000 € im Monat mit deinem Smartphone!“**
-
-schon eher.
+Denn: „Arbeite acht Jahre konzentriert an einer Sache, verbessere dich langsam und hab Geduld“ ist kein besonders guter Hook. „So verdienst du 10.000 € im Monat mit deinem Smartphone!“ schon eher.
 
 ---
 
@@ -731,32 +469,11 @@ schon eher.
 
 ## Herzlichen Glückwunsch – du hast nichts geleistet und trotzdem einen ganzen Ratgeber gelesen!
 
-Du hast jetzt gelernt:
+Du hast jetzt gelernt: wie man beschäftigt aussieht, wie man eine Personal Brand erfindet, wie man einen Onlinekurs verkauft, wie man morgens um 5 Uhr aufsteht, ohne aufzustehen, wie man einen Porsche als Lebensphilosophie verwendet, und wie man „Mindset“ sagt, ohne genau zu wissen, was es bedeutet.
 
-- wie man beschäftigt aussieht
-- wie man eine Personal Brand erfindet
-- wie man einen Onlinekurs verkauft
-- wie man morgens um 5 Uhr aufsteht, ohne aufzustehen
-- wie man einen Porsche als Lebensphilosophie verwendet
-- und wie man „Mindset“ sagt, ohne genau zu wissen, was es bedeutet
+Aber vielleicht hast du auch etwas anderes gelernt. Erfolg muss nicht bedeuten, ständig mehr zu leisten. Du darfst effizienter werden. Du darfst Pausen machen. Du darfst schlafen. Du darfst ein normales Leben führen. Du darfst auch einmal nichts tun.
 
-Aber vielleicht hast du auch etwas anderes gelernt.
-
-Erfolg muss nicht bedeuten, ständig mehr zu leisten.
-
-Du darfst effizienter werden.
-
-Du darfst Pausen machen.
-
-Du darfst schlafen.
-
-Du darfst ein normales Leben führen.
-
-Du darfst auch einmal nichts tun.
-
-Nur eines solltest du nicht tun:
-
-**So tun, als wäre Nichtstun automatisch ein Erfolgsrezept.**
+Nur eines solltest du nicht tun: **So tun, als wäre Nichtstun automatisch ein Erfolgsrezept.**
 
 Denn wenn dir jemand einen 37-seitigen Kurs verkauft, in dem erklärt wird, dass du nur an dich glauben musst, um reich zu werden, frag ihn ruhig:
 
@@ -766,9 +483,7 @@ Und wenn er antwortet:
 
 > „Weil ich dir helfen möchte.“
 
-Dann weißt du:
-
-**Der Mann hat sein Geschäftsmodell verstanden.**
+Dann weißt du: **Der Mann hat sein Geschäftsmodell verstanden.**
 
 ---
 
@@ -827,15 +542,7 @@ Dann weißt du:
 
 Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast: **Herzlichen Glückwunsch.**
 
-Du bist bereit für deine nächste große Transformation.
-
-Du brauchst jetzt nur noch:
-
-- einen Podcast,
-- ein Mikrofon,
-- ein Ringlicht,
-- einen Onlinekurs,
-- und jemanden, der dir erklärt, wie du dein volles Potenzial entfaltest.
+Du bist bereit für deine nächste große Transformation. Du brauchst jetzt nur noch: einen Podcast, ein Mikrofon, ein Ringlicht, einen Onlinekurs, und jemanden, der dir erklärt, wie du dein volles Potenzial entfaltest.
 
 ---
 

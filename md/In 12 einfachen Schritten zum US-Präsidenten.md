@@ -8,39 +8,13 @@
 
 # Herzlichen Glückwunsch!
 
-Du hältst gerade einen Ratgeber in den Händen, der dein Leben verändern könnte.
+Du hältst gerade einen Ratgeber in den Händen, der dein Leben verändern könnte. Vielleicht sogar das politische System der Vereinigten Staaten.
 
-Vielleicht sogar das politische System der Vereinigten Staaten.
+Denn Präsident der USA zu werden klingt zunächst kompliziert. Du brauchst Stimmen. Eine Partei. Geld. Bekanntheit. Organisation. Strategie. Und idealerweise eine gewisse Fähigkeit, mehrere Millionen Menschen davon zu überzeugen, dass **du** genau der Mensch bist, den sie gesucht haben.
 
-Denn Präsident der USA zu werden klingt zunächst kompliziert.
+Aber keine Sorge. Wir haben das Ganze vereinfacht. **12 Schritte.** Mehr braucht es theoretisch nicht.
 
-Du brauchst Stimmen.
-
-Eine Partei.
-
-Geld.
-
-Bekanntheit.
-
-Organisation.
-
-Strategie.
-
-Und idealerweise eine gewisse Fähigkeit, mehrere Millionen Menschen davon zu überzeugen, dass **du** genau der Mensch bist, den sie gesucht haben.
-
-Aber keine Sorge.
-
-Wir haben das Ganze vereinfacht.
-
-**12 Schritte.**
-
-Mehr braucht es theoretisch nicht.
-
-Und falls es beim ersten Versuch nicht klappt:
-
-Du kannst es einfach noch einmal versuchen.
-
-Das hat schließlich schon einmal hervorragend funktioniert.
+Und falls es beim ersten Versuch nicht klappt: Du kannst es einfach noch einmal versuchen. Das hat schließlich schon einmal hervorragend funktioniert.
 
 ---
 
@@ -48,21 +22,9 @@ Das hat schließlich schon einmal hervorragend funktioniert.
 
 ## Schritt 1: Entscheide dich, Präsident werden zu wollen
 
-Der erste Schritt ist der wichtigste.
+Der erste Schritt ist der wichtigste. Du musst es wirklich wollen. Nicht: „Vielleicht wäre Präsident ganz interessant.“ Sondern: **„Ich werde Präsident.“**
 
-Du musst es wirklich wollen.
-
-Nicht:
-
-> „Vielleicht wäre Präsident ganz interessant.“
-
-Sondern:
-
-> **„Ich werde Präsident.“**
-
-Du solltest dabei möglichst selbstbewusst auftreten.
-
-Wenn jemand fragt:
+Du solltest dabei möglichst selbstbewusst auftreten. Wenn jemand fragt:
 
 > „Aber warum gerade du?“
 
@@ -70,13 +32,7 @@ Antworte:
 
 > „Warum nicht?“
 
-Das ist eine hervorragende politische Strategie.
-
-Sie beantwortet zwar die Frage nicht.
-
-Aber sie vermittelt Entschlossenheit.
-
-Ein gewisser amerikanischer Unternehmer mit sehr auffälliger Frisur hat dieses Prinzip über Jahre perfektioniert.
+Das ist eine hervorragende politische Strategie. Sie beantwortet zwar die Frage nicht. Aber sie vermittelt Entschlossenheit. Ein gewisser amerikanischer Unternehmer mit sehr auffälliger Frisur hat dieses Prinzip über Jahre perfektioniert.
 
 ---
 
@@ -84,35 +40,11 @@ Ein gewisser amerikanischer Unternehmer mit sehr auffälliger Frisur hat dieses 
 
 ## Schritt 2: Werde bekannt
 
-Niemand wählt jemanden, von dem er noch nie gehört hat.
+Niemand wählt jemanden, von dem er noch nie gehört hat. Deshalb musst du bekannt werden.
 
-Deshalb musst du bekannt werden.
+Du könntest: Schauspieler werden, Unternehmer werden, Sportler werden, eine Reality-TV-Show machen, ein Buch schreiben, ständig im Fernsehen auftreten, oder einfach sehr laut über Dinge sprechen.
 
-Du könntest:
-
-- Schauspieler werden,
-- Unternehmer werden,
-- Sportler werden,
-- eine Reality-TV-Show machen,
-- ein Buch schreiben,
-- ständig im Fernsehen auftreten,
-- oder einfach sehr laut über Dinge sprechen.
-
-Besonders effektiv:
-
-**Mach dich selbst zur Marke.**
-
-Dein Name sollte irgendwann größer sein als dein Parteiprogramm.
-
-Idealerweise reicht dein Nachname aus.
-
-Ein kurzer Name.
-
-Ein markanter Name.
-
-Ein Name, den man auf eine Baseballkappe drucken kann.
-
-Du weißt schon, wie ich meine.
+Besonders effektiv: **Mach dich selbst zur Marke.** Dein Name sollte irgendwann größer sein als dein Parteiprogramm. Idealerweise reicht dein Nachname aus. Ein kurzer Name. Ein markanter Name. Ein Name, den man auf eine Baseballkappe drucken kann. Du weißt schon, wie ich meine.
 
 ---
 
@@ -120,35 +52,11 @@ Du weißt schon, wie ich meine.
 
 ## Schritt 3: Entwickle einen unverwechselbaren Look
 
-Politiker tragen traditionell:
+Politiker tragen traditionell: Anzug. Krawatte. Lächeln. Vielleicht etwas graue Haare. Das ist langweilig.
 
-Anzug.
+Du brauchst Wiedererkennungswert. Eine bestimmte Frisur. Eine bestimmte Farbe. Eine bestimmte Geste. Eine bestimmte Mimik. Vielleicht auch einen bestimmten Gesichtsausdruck, der aussieht, als würdest du gerade über etwas nachdenken, das niemand sonst versteht.
 
-Krawatte.
-
-Lächeln.
-
-Vielleicht etwas graue Haare.
-
-Das ist langweilig.
-
-Du brauchst Wiedererkennungswert.
-
-Eine bestimmte Frisur.
-
-Eine bestimmte Farbe.
-
-Eine bestimmte Geste.
-
-Eine bestimmte Mimik.
-
-Vielleicht auch einen bestimmten Gesichtsausdruck, der aussieht, als würdest du gerade über etwas nachdenken, das niemand sonst versteht.
-
-Der Vorteil:
-
-Wenn du später auf einem Foto nur von hinten zu sehen bist, erkennen dich trotzdem alle.
-
-**Personal Branding.**
+Der Vorteil: Wenn du später auf einem Foto nur von hinten zu sehen bist, erkennen dich trotzdem alle. **Personal Branding.**
 
 ---
 
@@ -156,33 +64,13 @@ Wenn du später auf einem Foto nur von hinten zu sehen bist, erkennen dich trotz
 
 ## Schritt 4: Erfinde einen Slogan
 
-Ein guter Präsident braucht einen guten Slogan.
-
-Er muss kurz sein.
-
-Einfach.
-
-Emotional.
-
-Und idealerweise so formuliert, dass niemand genau weiß, was eigentlich passieren soll.
+Ein guter Präsident braucht einen guten Slogan. Er muss kurz sein. Einfach. Emotional. Und idealerweise so formuliert, dass niemand genau weiß, was eigentlich passieren soll.
 
 Zum Beispiel:
 
 > **„Amerika wieder groß machen.“**
 
-Das klingt gut.
-
-Wann war Amerika klein?
-
-Unklar.
-
-Wie wird es wieder groß?
-
-Ebenfalls unklar.
-
-Aber der Satz passt hervorragend auf eine Kappe.
-
-Und das ist politisch nicht zu unterschätzen.
+Das klingt gut. Wann war Amerika klein? Unklar. Wie wird es wieder groß? Ebenfalls unklar. Aber der Satz passt hervorragend auf eine Kappe. Und das ist politisch nicht zu unterschätzen.
 
 Dein eigener Slogan könnte lauten:
 
@@ -196,9 +84,7 @@ Oder:
 
 > **„Endlich jemand, der es einfach macht.“**
 
-Das letzte ist besonders praktisch.
-
-Es wird nämlich nie erklärt, **was** genau.
+Das letzte ist besonders praktisch. Es wird nämlich nie erklärt, **was** genau.
 
 ---
 
@@ -206,33 +92,11 @@ Es wird nämlich nie erklärt, **was** genau.
 
 ## Schritt 5: Finde ein Problem
 
-Ein Präsidentschaftskandidat braucht ein Problem.
+Ein Präsidentschaftskandidat braucht ein Problem. Am besten ein großes. Sehr großes. Ein Problem, das ungefähr alles erklären kann.
 
-Am besten ein großes.
+Zum Beispiel: die Wirtschaft, Migration, Bürokratie, China, Europa, Washington, die Medien, die anderen Parteien, oder Menschen, die auf der anderen Seite stehen.
 
-Sehr großes.
-
-Ein Problem, das ungefähr alles erklären kann.
-
-Zum Beispiel:
-
-- die Wirtschaft,
-- Migration,
-- Bürokratie,
-- China,
-- Europa,
-- Washington,
-- die Medien,
-- die anderen Parteien,
-- oder Menschen, die auf der anderen Seite stehen.
-
-Das Entscheidende:
-
-**Du brauchst einen Schuldigen.**
-
-Denn „Die Situation ist kompliziert und hat viele Ursachen“ ist zwar meistens korrekt, aber leider kein besonders guter Wahlkampfslogan.
-
-„DIE ANDEREN SIND SCHULD“ passt dagegen auf jedes Plakat.
+Das Entscheidende: **Du brauchst einen Schuldigen.** Denn „Die Situation ist kompliziert und hat viele Ursachen“ ist zwar meistens korrekt, aber leider kein besonders guter Wahlkampfslogan. „DIE ANDEREN SIND SCHULD“ passt dagegen auf jedes Plakat.
 
 ---
 
@@ -240,35 +104,21 @@ Denn „Die Situation ist kompliziert und hat viele Ursachen“ ist zwar meisten
 
 ## Schritt 6: Sprich so, dass jeder dich versteht
 
-Politische Sprache ist normalerweise kompliziert.
-
-Zum Beispiel:
+Politische Sprache ist normalerweise kompliziert. Zum Beispiel:
 
 > „Wir müssen die makroökonomischen Rahmenbedingungen strukturell neu justieren.“
 
-Das versteht niemand.
-
-Besser:
+Das versteht niemand. Besser:
 
 > **„Die Wirtschaft ist schlecht. Wir machen sie gut.“**
 
-Fertig.
+Fertig. Das hat noch einen weiteren Vorteil: Du kannst es jederzeit wiederholen. Und zwar sehr oft.
 
-Das hat noch einen weiteren Vorteil:
-
-Du kannst es jederzeit wiederholen.
-
-Und zwar sehr oft.
-
-Wiederholung ist wichtig.
-
-Wenn du denselben Satz nur oft genug sagst, beginnen Menschen irgendwann zu denken:
+Wiederholung ist wichtig. Wenn du denselben Satz nur oft genug sagst, beginnen Menschen irgendwann zu denken:
 
 > „Das hat er jetzt schon so oft gesagt. Wird wohl stimmen.“
 
-Das ist keine wissenschaftliche Methode.
-
-Aber Wahlkampf ist schließlich auch kein Seminar in Statistik.
+Das ist keine wissenschaftliche Methode. Aber Wahlkampf ist schließlich auch kein Seminar in Statistik.
 
 ---
 
@@ -276,39 +126,13 @@ Aber Wahlkampf ist schließlich auch kein Seminar in Statistik.
 
 ## Schritt 7: Gewinne das Fernsehen
 
-Du brauchst Aufmerksamkeit.
+Du brauchst Aufmerksamkeit. Sehr viel Aufmerksamkeit.
 
-Sehr viel Aufmerksamkeit.
+Wenn jemand etwas über dich sagt: **Antworte.** Wenn jemand dich kritisiert: **Antworte.** Wenn niemand über dich spricht: **Sag etwas, worüber alle sprechen müssen.**
 
-Wenn jemand etwas über dich sagt:
+Das kann kontrovers sein. Provokant. Laut. Oder einfach so überraschend, dass sämtliche Nachrichtensender darüber berichten.
 
-**Antworte.**
-
-Wenn jemand dich kritisiert:
-
-**Antworte.**
-
-Wenn niemand über dich spricht:
-
-**Sag etwas, worüber alle sprechen müssen.**
-
-Das kann kontrovers sein.
-
-Provokant.
-
-Laut.
-
-Oder einfach so überraschend, dass sämtliche Nachrichtensender darüber berichten.
-
-Der Vorteil:
-
-Du bekommst kostenlose Werbung.
-
-Der Nachteil:
-
-Du bekommst kostenlose Werbung.
-
-Beides gleichzeitig.
+Der Vorteil: Du bekommst kostenlose Werbung. Der Nachteil: Du bekommst kostenlose Werbung. Beides gleichzeitig.
 
 ---
 
@@ -316,27 +140,17 @@ Beides gleichzeitig.
 
 ## Schritt 8: Baue dir eine treue Anhängerschaft auf
 
-Du brauchst Menschen, die dir glauben.
-
-Nicht nur Menschen, die dich wählen.
-
-Menschen, die sagen:
+Du brauchst Menschen, die dir glauben. Nicht nur Menschen, die dich wählen. Menschen, die sagen:
 
 > „Er sagt wenigstens, was er denkt.“
 
-Das ist ein wichtiger Satz.
+Das ist ein wichtiger Satz. Denn wenn jemand „wenigstens sagt, was er denkt“, muss man nicht mehr so genau prüfen, **was** er eigentlich denkt.
 
-Denn wenn jemand „wenigstens sagt, was er denkt“, muss man nicht mehr so genau prüfen, **was** er eigentlich denkt.
-
-Baue deshalb eine starke Beziehung zu deinen Anhängern auf.
-
-Sag ihnen:
+Baue deshalb eine starke Beziehung zu deinen Anhängern auf. Sag ihnen:
 
 > „Ihr seid die echten Amerikaner.“
 
-Sehr effektiv.
-
-Denn jeder Mensch hört gerne, dass er zu den **echten** Menschen gehört.
+Sehr effektiv. Denn jeder Mensch hört gerne, dass er zu den **echten** Menschen gehört.
 
 ---
 
@@ -344,34 +158,13 @@ Denn jeder Mensch hört gerne, dass er zu den **echten** Menschen gehört.
 
 ## Schritt 9: Nutze soziale Medien
 
-Früher brauchte ein Präsidentschaftskandidat:
+Früher brauchte ein Präsidentschaftskandidat: Zeitungen, Fernsehen, Wahlkampfveranstaltungen, Pressekonferenzen. Heute reicht ein Smartphone.
 
-- Zeitungen,
-- Fernsehen,
-- Wahlkampfveranstaltungen,
-- Pressekonferenzen.
-
-Heute reicht ein Smartphone.
-
-Du kannst morgens um 6 Uhr eine Nachricht veröffentlichen.
-
-Sehr kurz.
-
-Sehr emotional.
-
-Vielleicht in Großbuchstaben.
-
-Zum Beispiel:
+Du kannst morgens um 6 Uhr eine Nachricht veröffentlichen. Sehr kurz. Sehr emotional. Vielleicht in Großbuchstaben. Zum Beispiel:
 
 > **DAS IST DIE SCHLECHTESTE REGIERUNG IN DER GESCHICHTE. WIR WERDEN DAS ÄNDERN!**
 
-Dann gehst du frühstücken.
-
-Währenddessen diskutieren Millionen Menschen darüber.
-
-Du hast nichts weiter getan.
-
-**Aber du bist wieder in den Nachrichten.**
+Dann gehst du frühstücken. Währenddessen diskutieren Millionen Menschen darüber. Du hast nichts weiter getan. **Aber du bist wieder in den Nachrichten.**
 
 Ein gewisser ehemaliger Reality-TV-Star und Immobilienunternehmer hat diese Kunst auf beeindruckende Weise demonstriert.
 
@@ -381,47 +174,13 @@ Ein gewisser ehemaliger Reality-TV-Star und Immobilienunternehmer hat diese Kuns
 
 ## Schritt 10: Erkläre, dass du der Einzige bist, der es richten kann
 
-Jetzt wird es ernst.
+Jetzt wird es ernst. Du brauchst eine klare Botschaft: Die bisherigen Politiker haben versagt. Die Experten haben versagt. Das System hat versagt. Die Medien haben versagt. Und möglicherweise auch dein Vorgänger.
 
-Du brauchst eine klare Botschaft:
+Aber: **Du nicht.**
 
-Die bisherigen Politiker haben versagt.
+Du bist anders. Du bist ein Außenseiter. Auch wenn du seit Jahrzehnten bekannt bist. Du bist unabhängig. Auch wenn du eine Partei anführst. Du bist ein Geschäftsmann. Auch wenn du jetzt Politiker bist.
 
-Die Experten haben versagt.
-
-Das System hat versagt.
-
-Die Medien haben versagt.
-
-Und möglicherweise auch dein Vorgänger.
-
-Aber:
-
-**Du nicht.**
-
-Du bist anders.
-
-Du bist ein Außenseiter.
-
-Auch wenn du seit Jahrzehnten bekannt bist.
-
-Du bist unabhängig.
-
-Auch wenn du eine Partei anführst.
-
-Du bist ein Geschäftsmann.
-
-Auch wenn du jetzt Politiker bist.
-
-Und vor allem:
-
-**Du bist derjenige, der es richten wird.**
-
-Wie?
-
-Das erklären wir später.
-
-Vielleicht.
+Und vor allem: **Du bist derjenige, der es richten wird.** Wie? Das erklären wir später. Vielleicht.
 
 ---
 
@@ -429,35 +188,9 @@ Vielleicht.
 
 ## Schritt 11: Gewinnen
 
-Jetzt kommt der komplizierte Teil.
+Jetzt kommt der komplizierte Teil. Du brauchst Stimmen. Viele Stimmen. Sehr viele Stimmen. Mehrere Bundesstaaten. Wähler. Wahlhelfer. Kampagnen. Debatten. Geld. Organisation. Und ein bisschen Glück.
 
-Du brauchst Stimmen.
-
-Viele Stimmen.
-
-Sehr viele Stimmen.
-
-Mehrere Bundesstaaten.
-
-Wähler.
-
-Wahlhelfer.
-
-Kampagnen.
-
-Debatten.
-
-Geld.
-
-Organisation.
-
-Und ein bisschen Glück.
-
-Du musst Menschen davon überzeugen, dass deine Version der Zukunft besser ist als die deiner Gegner.
-
-Das ist tatsächlich ziemlich schwierig.
-
-Deshalb hier unser einfachster Tipp:
+Du musst Menschen davon überzeugen, dass deine Version der Zukunft besser ist als die deiner Gegner. Das ist tatsächlich ziemlich schwierig. Deshalb hier unser einfachster Tipp:
 
 ### Bleib dran.
 
@@ -477,9 +210,7 @@ Wenn du wiedergewählt wirst:
 
 > **„Noch einmal.“**
 
-Die Geschichte zeigt:
-
-Manchmal funktioniert das erstaunlich gut.
+Die Geschichte zeigt: Manchmal funktioniert das erstaunlich gut.
 
 ---
 
@@ -487,43 +218,15 @@ Manchmal funktioniert das erstaunlich gut.
 
 ## Schritt 12: Regiere
 
-Herzlichen Glückwunsch.
+Herzlichen Glückwunsch. Du hast gewonnen. Du bist jetzt Präsident der Vereinigten Staaten.
 
-Du hast gewonnen.
+Du bekommst: das Weiße Haus, den Secret Service, Air Force One, jede Menge Besprechungen, unglaublich viele Akten, sehr wenig Privatsphäre, und ungefähr 330 Millionen Menschen, die dir erklären möchten, was du falsch machst.
 
-Du bist jetzt Präsident der Vereinigten Staaten.
+Jetzt kommt der schwierigste Teil: **Du musst tatsächlich regieren.**
 
-Du bekommst:
+Plötzlich reichen Slogans nicht mehr. Jetzt musst du: Gesetze umsetzen, mit dem Kongress arbeiten, internationale Beziehungen pflegen, Krisen bewältigen, Entscheidungen treffen, Kompromisse finden, und jeden Tag mit Menschen sprechen, die anderer Meinung sind.
 
-- das Weiße Haus,
-- den Secret Service,
-- Air Force One,
-- jede Menge Besprechungen,
-- unglaublich viele Akten,
-- sehr wenig Privatsphäre,
-- und ungefähr 330 Millionen Menschen, die dir erklären möchten, was du falsch machst.
-
-Jetzt kommt der schwierigste Teil:
-
-**Du musst tatsächlich regieren.**
-
-Plötzlich reichen Slogans nicht mehr.
-
-Jetzt musst du:
-
-- Gesetze umsetzen,
-- mit dem Kongress arbeiten,
-- internationale Beziehungen pflegen,
-- Krisen bewältigen,
-- Entscheidungen treffen,
-- Kompromisse finden,
-- und jeden Tag mit Menschen sprechen, die anderer Meinung sind.
-
-Das ist deutlich anstrengender als ein Wahlkampfslogan.
-
-Aber keine Sorge.
-
-Du hast es bis hierher geschafft.
+Das ist deutlich anstrengender als ein Wahlkampfslogan. Aber keine Sorge. Du hast es bis hierher geschafft.
 
 ---
 
@@ -535,41 +238,23 @@ Es gibt einen ehemaligen Präsidenten, der uns einige wichtige Lektionen hinterl
 
 ### Lektion 1
 
-**Sei unverwechselbar.**
-
-Wenn deine Frisur Gegenstand internationaler Berichterstattung wird, hast du beim Branding einiges richtig gemacht.
+**Sei unverwechselbar.** Wenn deine Frisur Gegenstand internationaler Berichterstattung wird, hast du beim Branding einiges richtig gemacht.
 
 ### Lektion 2
 
-**Wiederhole deine Botschaft.**
-
-Wenn dein Slogan einmal funktioniert, verwende ihn einfach noch einmal.
-
-Vielleicht sogar mit einem zusätzlichen Wort.
+**Wiederhole deine Botschaft.** Wenn dein Slogan einmal funktioniert, verwende ihn einfach noch einmal. Vielleicht sogar mit einem zusätzlichen Wort.
 
 ### Lektion 3
 
-**Sei medienwirksam.**
-
-Ein Politiker, über den alle reden, ist schwer zu ignorieren.
+**Sei medienwirksam.** Ein Politiker, über den alle reden, ist schwer zu ignorieren.
 
 ### Lektion 4
 
-**Unterschätze niemals Merchandising.**
-
-Wenn Menschen deinen Namen freiwillig auf Kleidung tragen, hast du eine bemerkenswerte Verbindung zu deiner Anhängerschaft geschaffen.
+**Unterschätze niemals Merchandising.** Wenn Menschen deinen Namen freiwillig auf Kleidung tragen, hast du eine bemerkenswerte Verbindung zu deiner Anhängerschaft geschaffen.
 
 ### Lektion 5
 
-**Ein Comeback ist nicht ausgeschlossen.**
-
-Manchmal ist eine politische Karriere nicht vorbei, nur weil sie vorbei aussieht.
-
-Das ist eine wichtige Erkenntnis für alle Kandidaten, die gerade eine Wahlniederlage hinter sich haben.
-
-Und für alle anderen:
-
-**Bitte nicht als Einladung verstehen.**
+**Ein Comeback ist nicht ausgeschlossen.** Manchmal ist eine politische Karriere nicht vorbei, nur weil sie vorbei aussieht. Das ist eine wichtige Erkenntnis für alle Kandidaten, die gerade eine Wahlniederlage hinter sich haben. Und für alle anderen: **Bitte nicht als Einladung verstehen.**
 
 ---
 
@@ -669,49 +354,17 @@ Stelle fest, dass Regieren schwieriger ist als Wahlkampf.
 
 > **„Wir haben gewonnen.“**
 
-Dieser letzte Satz sollte allerdings erst verwendet werden, wenn die Wahl tatsächlich entschieden ist.
-
-Das wäre sonst unangenehm.
+Dieser letzte Satz sollte allerdings erst verwendet werden, wenn die Wahl tatsächlich entschieden ist. Das wäre sonst unangenehm.
 
 ---
 
 # Die revolutionäre Schlussfolgerung
 
-Was haben wir also gelernt?
+Was haben wir also gelernt? Präsident der Vereinigten Staaten zu werden ist nicht einfach. Du brauchst: **Bekanntheit.** **Geld.** **Organisation.** **Eine politische Botschaft.** **Eine Anhängerschaft.** **Ausdauer.** Und eine gewisse Fähigkeit, dich selbst davon zu überzeugen, dass du genau der Richtige für den Job bist.
 
-Präsident der Vereinigten Staaten zu werden ist nicht einfach.
+Aber vielleicht ist die wichtigste Lektion: **Demokratie ist kein Influencer-Wettbewerb.**
 
-Du brauchst:
-
-**Bekanntheit.**
-
-**Geld.**
-
-**Organisation.**
-
-**Eine politische Botschaft.**
-
-**Eine Anhängerschaft.**
-
-**Ausdauer.**
-
-Und eine gewisse Fähigkeit, dich selbst davon zu überzeugen, dass du genau der Richtige für den Job bist.
-
-Aber vielleicht ist die wichtigste Lektion:
-
-**Demokratie ist kein Influencer-Wettbewerb.**
-
-Ein guter Präsident muss mehr können, als Aufmerksamkeit zu bekommen.
-
-Er muss Entscheidungen treffen.
-
-Verantwortung übernehmen.
-
-Kompromisse aushalten.
-
-Kritik ertragen.
-
-Und akzeptieren, dass nicht jedes Problem mit einem starken Satz, einer Pressekonferenz oder einem Großbuchstaben gelöst werden kann.
+Ein guter Präsident muss mehr können, als Aufmerksamkeit zu bekommen. Er muss Entscheidungen treffen. Verantwortung übernehmen. Kompromisse aushalten. Kritik ertragen. Und akzeptieren, dass nicht jedes Problem mit einem starken Satz, einer Pressekonferenz oder einem Großbuchstaben gelöst werden kann.
 
 Denn am Ende gilt:
 
@@ -725,49 +378,15 @@ Zumindest sollte er keiner sein.
 
 ## Herzlichen Glückwunsch, Herr Präsident!
 
-Du hast es geschafft.
+Du hast es geschafft. Du bist ganz oben. Du sitzt im Oval Office. Vor dir liegt der Schreibtisch. Das Telefon klingelt. Ein Berater wartet. Ein Staatschef wartet. Der Kongress wartet. Die Presse wartet. Und irgendwo wartet bereits jemand darauf, dir auf Social Media zu erklären, warum du alles falsch machst.
 
-Du bist ganz oben.
-
-Du sitzt im Oval Office.
-
-Vor dir liegt der Schreibtisch.
-
-Das Telefon klingelt.
-
-Ein Berater wartet.
-
-Ein Staatschef wartet.
-
-Der Kongress wartet.
-
-Die Presse wartet.
-
-Und irgendwo wartet bereits jemand darauf, dir auf Social Media zu erklären, warum du alles falsch machst.
-
-Du blickst aus dem Fenster.
-
-Du atmest tief durch.
-
-Und denkst:
+Du blickst aus dem Fenster. Du atmest tief durch. Und denkst:
 
 > **„Vielleicht hätte ich doch Influencer bleiben sollen.“**
 
-Aber dann erinnerst du dich:
+Aber dann erinnerst du dich: Du hast diesen Ratgeber gelesen. Du kennst die zwölf Schritte. Du weißt jetzt, wie es geht. Zumindest ungefähr.
 
-Du hast diesen Ratgeber gelesen.
-
-Du kennst die zwölf Schritte.
-
-Du weißt jetzt, wie es geht.
-
-Zumindest ungefähr.
-
-Und falls du bei der nächsten Wahl nicht gewinnst:
-
-**Keine Sorge.**
-
-Politische Karrieren können überraschend lang sein.
+Und falls du bei der nächsten Wahl nicht gewinnst: **Keine Sorge.** Politische Karrieren können überraschend lang sein.
 
 ---
 
@@ -827,11 +446,7 @@ Wenn du mindestens acht Fragen mit „Ja“ beantwortet hast:
 
 # Herzlichen Glückwunsch!
 
-Du bist bereit.
-
-Zumindest für einen Wahlkampf.
-
-Ob du auch bereit bist, Präsident zu sein, ist eine völlig andere Frage.
+Du bist bereit. Zumindest für einen Wahlkampf. Ob du auch bereit bist, Präsident zu sein, ist eine völlig andere Frage.
 
 Aber genau deshalb gibt es schließlich noch:
 
