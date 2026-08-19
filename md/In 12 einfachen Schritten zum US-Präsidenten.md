@@ -54,7 +54,7 @@ Besonders effektiv: **Mach dich selbst zur Marke.** Dein Name sollte irgendwann 
 
 Politiker tragen traditionell: Anzug. Krawatte. Lächeln. Vielleicht etwas graue Haare. Das ist langweilig.
 
-Du brauchst Wiedererkennungswert. Eine bestimmte Frisur. Eine bestimmte Farbe. Eine bestimmte Geste. Eine bestimmte Mimik. Vielleicht auch einen bestimmten Gesichtsausdruck, der aussieht, als würdest du gerade über etwas nachdenken, das niemand sonst versteht.
+Du brauchst Wiedererkennungswert. Eine bestimmte Frisur. Eine bestimmte Farbe. Eine bestimmte Geste. Eine bestimmte Mimik. Vielleicht auch einen bestimmten Gesichtsausdruck, der aussieht, als würdest du gerade über etwas nachdenken, was niemand sonst versteht.
 
 Der Vorteil: Wenn du später auf einem Foto nur von hinten zu sehen bist, erkennen dich trotzdem alle. **Personal Branding.**
 
@@ -190,9 +190,7 @@ Und vor allem: **Du bist derjenige, der es richten wird.** Wie? Das erklären wi
 
 Jetzt kommt der komplizierte Teil. Du brauchst Stimmen. Viele Stimmen. Sehr viele Stimmen. Mehrere Bundesstaaten. Wähler. Wahlhelfer. Kampagnen. Debatten. Geld. Organisation. Und ein bisschen Glück.
 
-Du musst Menschen davon überzeugen, dass deine Version der Zukunft besser ist als die deiner Gegner. Das ist tatsächlich ziemlich schwierig. Deshalb hier unser einfachster Tipp:
-
-### Bleib dran.
+Du musst Menschen davon überzeugen, dass deine Version der Zukunft besser ist als die deiner Gegner. Das ist tatsächlich ziemlich schwierig. Deshalb hier unser einfachster Tipp: **Bleib dran!**
 
 Wenn du verlierst:
 
@@ -234,27 +232,27 @@ Das ist deutlich anstrengender als ein Wahlkampfslogan. Aber keine Sorge. Du has
 
 ## Was wir von einem gewissen Mann mit ungewöhnlicher Frisur lernen können
 
-Es gibt einen ehemaligen Präsidenten, der uns einige wichtige Lektionen hinterlassen hat.
+Es gibt einen Präsidenten, der uns einige wichtige Lektionen hinterlassen hat.
 
-### Lektion 1
+### Lektion 1: Sei unverwechselbar
 
-**Sei unverwechselbar.** Wenn deine Frisur Gegenstand internationaler Berichterstattung wird, hast du beim Branding einiges richtig gemacht.
+Wenn deine Frisur Gegenstand internationaler Berichterstattung wird, hast du beim Branding einiges richtig gemacht.
 
-### Lektion 2
+### Lektion 2: Wiederhole deine Botschaft
 
-**Wiederhole deine Botschaft.** Wenn dein Slogan einmal funktioniert, verwende ihn einfach noch einmal. Vielleicht sogar mit einem zusätzlichen Wort.
+Wenn dein Slogan einmal funktioniert, verwende ihn einfach noch einmal. Vielleicht sogar mit einem zusätzlichen Wort.
 
-### Lektion 3
+### Lektion 3: Sei medienwirksam
 
-**Sei medienwirksam.** Ein Politiker, über den alle reden, ist schwer zu ignorieren.
+Ein Politiker, über den alle reden, ist schwer zu ignorieren.
 
-### Lektion 4
+### Lektion 4: Unterschätze niemals Merchandising
 
-**Unterschätze niemals Merchandising.** Wenn Menschen deinen Namen freiwillig auf Kleidung tragen, hast du eine bemerkenswerte Verbindung zu deiner Anhängerschaft geschaffen.
+Wenn Menschen deinen Namen freiwillig auf Kleidung tragen, hast du eine bemerkenswerte Verbindung zu deiner Anhängerschaft geschaffen.
 
-### Lektion 5
+### Lektion 5: Ein Comeback ist nicht ausgeschlossen
 
-**Ein Comeback ist nicht ausgeschlossen.** Manchmal ist eine politische Karriere nicht vorbei, nur weil sie vorbei aussieht. Das ist eine wichtige Erkenntnis für alle Kandidaten, die gerade eine Wahlniederlage hinter sich haben. Und für alle anderen: **Bitte nicht als Einladung verstehen.**
+Manchmal ist eine politische Karriere nicht vorbei, nur weil sie vorbei aussieht. Das ist eine wichtige Erkenntnis für alle Kandidaten, die gerade eine Wahlniederlage hinter sich haben. Und für alle anderen: **Bitte nicht als Einladung verstehen.**
 
 ---
 
@@ -262,95 +260,40 @@ Es gibt einen ehemaligen Präsidenten, der uns einige wichtige Lektionen hinterl
 
 Wenn dir die zwölf Schritte zu kompliziert waren, hier die Kurzfassung:
 
-### 1.
-
-Werde bekannt.
-
-### 2.
-
-Werde noch bekannter.
-
-### 3.
-
-Erfinde einen Slogan.
-
-### 4.
-
-Finde ein Problem.
-
-### 5.
-
-Finde jemanden, der daran schuld ist.
-
-### 6.
-
-Sag, dass du es besser machen wirst.
-
-### 7.
-
-Wiederhole es.
-
-### 8.
-
-Wiederhole es lauter.
-
-### 9.
-
-Wiederhole es im Fernsehen.
-
-### 10.
-
-Wiederhole es im Internet.
-
-### 11.
-
-Gewinne die Wahl.
-
-### 12.
-
-Stelle fest, dass Regieren schwieriger ist als Wahlkampf.
+1. Werde bekannt.
+2. Werde noch bekannter.
+3. Erfinde einen Slogan.
+4. Finde ein Problem.
+5. Finde jemanden, der daran schuld ist.
+6. Sag, dass du es besser machen wirst.
+7. Wiederhole es.
+8. Wiederhole es lauter.
+9. Wiederhole es im Fernsehen.
+10. Wiederhole es im Internet.
+11. Gewinne die Wahl.
+12. Stelle fest, dass Regieren schwieriger ist als Wahlkampf.
 
 ---
 
 # Die zehn wichtigsten Sätze eines Präsidentschaftskandidaten
 
-**1.**
-
 > „Das amerikanische Volk verdient Besseres.“
-
-**2.**
 
 > „Wir werden Amerika wieder stärker machen.“
 
-**3.**
-
 > „Die Menschen haben genug.“
-
-**4.**
 
 > „Washington hört euch nicht zu.“
 
-**5.**
-
 > „Ich höre euch zu.“
-
-**6.**
 
 > „Wir haben einen Plan.“
 
-**7.**
-
 > „Es wird großartig.“
-
-**8.**
 
 > „Niemand wird das besser machen als wir.“
 
-**9.**
-
 > „Wir werden gewinnen.“
-
-**10.**
 
 > **„Wir haben gewonnen.“**
 
@@ -442,15 +385,15 @@ Und falls du bei der nächsten Wahl nicht gewinnst: **Keine Sorge.** Politische 
 ☐ Ja  
 ☐ Mit überwältigender Mehrheit
 
-Wenn du mindestens acht Fragen mit „Ja“ beantwortet hast:
-
-# Herzlichen Glückwunsch!
+Wenn du mindestens acht Fragen mit „Ja“ beantwortet hast: **Herzlichen Glückwunsch!**
 
 Du bist bereit. Zumindest für einen Wahlkampf. Ob du auch bereit bist, Präsident zu sein, ist eine völlig andere Frage.
 
 Aber genau deshalb gibt es schließlich noch:
 
 **13. Schritt: Lies diesen Ratgeber noch einmal.**
+
+---
 
 **Dr. Maximilian Methodius**
 

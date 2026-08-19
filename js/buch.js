@@ -258,7 +258,7 @@ function extrahiereBonusQuiz(bloecke) {
 
   const bonusStart = h1Indizes.find(i => {
     const text = bloecke[i].replace(/^<h1>|<\/h1>$/g, "");
-    return text.toUpperCase().startsWith("BONUS");
+    return text.startsWith("BONUS:");
   });
 
   if (bonusStart === undefined) {
