@@ -8,37 +8,15 @@
 
 # Herzlichen Glückwunsch!
 
-Du hältst gerade einen Ratgeber in den Händen, der dein Sozialleben nachhaltig verändern kann.
+Du hältst gerade einen Ratgeber in den Händen, der dein Sozialleben nachhaltig verändern kann. **Zum Schlechteren.**
 
-**Zum Schlechteren.**
+Seit Jahren wird uns eingeredet: „Du solltest Freundschaften pflegen.“ „Melde dich mal wieder.“ „Hör deinen Freunden zu.“ „Sei für andere da.“ „Man muss Kompromisse eingehen.“
 
-Seit Jahren wird uns eingeredet:
+Aber niemand fragt: **Was, wenn du einfach keine Lust mehr auf Menschen hast?**
 
-„Du solltest Freundschaften pflegen.“
+Warum ständig Nachrichten beantworten? Warum Geburtstage merken? Warum zuhören, wenn jemand zum dritten Mal von seinem Ex erzählt? Warum „Wie geht's dir?“ fragen, wenn du die Antwort sowieso nicht wissen möchtest?
 
-„Melde dich mal wieder.“
-
-„Hör deinen Freunden zu.“
-
-„Sei für andere da.“
-
-„Man muss Kompromisse eingehen.“
-
-Aber niemand fragt:
-
-**Was, wenn du einfach keine Lust mehr auf Menschen hast?**
-
-Warum ständig Nachrichten beantworten?
-
-Warum Geburtstage merken?
-
-Warum zuhören, wenn jemand zum dritten Mal von seinem Ex erzählt?
-
-Warum „Wie geht's dir?“ fragen, wenn du die Antwort sowieso nicht wissen möchtest?
-
-Damit ist jetzt Schluss.
-
-Willkommen bei:
+Damit ist jetzt Schluss. Willkommen bei:
 
 # Freunde verlieren leicht gemacht.
 
@@ -48,35 +26,13 @@ Willkommen bei:
 
 ## Endlich die Wahrheit über Freundschaft
 
-Freundschaft ist anstrengend.
-
-Am Anfang ist alles wunderbar.
-
-Man lernt sich kennen.
-
-Man lacht.
-
-Man tauscht Telefonnummern aus.
-
-Man sagt:
+Freundschaft ist anstrengend. Am Anfang ist alles wunderbar. Man lernt sich kennen. Man lacht. Man tauscht Telefonnummern aus. Man sagt:
 
 > „Wir müssen unbedingt mal was zusammen machen.“
 
-Ein gefährlicher Satz.
+Ein gefährlicher Satz. Denn irgendwann passiert es tatsächlich. **Ihr macht etwas zusammen.** Dann noch einmal. Und plötzlich erwartet die andere Person, dass du dich regelmäßig meldest.
 
-Denn irgendwann passiert es tatsächlich.
-
-**Ihr macht etwas zusammen.**
-
-Dann noch einmal.
-
-Und plötzlich erwartet die andere Person, dass du dich regelmäßig meldest.
-
-Das ist der Moment, an dem du handeln musst.
-
-Unser Ziel ist klar:
-
-**Maximale soziale Freiheit bei minimalem Freundschaftsaufwand.**
+Das ist der Moment, an dem du handeln musst. Unser Ziel ist klar: **Maximale soziale Freiheit bei minimalem Freundschaftsaufwand.**
 
 ---
 
@@ -88,43 +44,9 @@ Es gibt kaum etwas Gefährlicheres als eine Nachricht mit dem Inhalt:
 
 > „Hey 😊 Wie geht's dir?“
 
-Diese Nachricht scheint harmlos.
+Diese Nachricht scheint harmlos. Ist sie aber nicht. Denn eine Antwort zieht weitere Nachrichten nach sich. Du schreibst: „Gut, und dir?“ Die andere Person: „Auch gut! Was machst du so?“ Du: „Nicht viel.“ Sie: „Hast du am Wochenende Zeit?“ **Und plötzlich hast du einen Termin.**
 
-Ist sie aber nicht.
-
-Denn eine Antwort zieht weitere Nachrichten nach sich.
-
-Du schreibst:
-
-„Gut, und dir?“
-
-Die andere Person:
-
-„Auch gut! Was machst du so?“
-
-Du:
-
-„Nicht viel.“
-
-Sie:
-
-„Hast du am Wochenende Zeit?“
-
-**Und plötzlich hast du einen Termin.**
-
-Unser Rat:
-
-Antworte niemals sofort.
-
-Warte mindestens drei Tage.
-
-Bei besonders guten Freunden:
-
-**vier.**
-
-Bei „Wie geht's dir? 😊“:
-
-Eine Woche ist völlig vertretbar.
+Unser Rat: Antworte niemals sofort. Warte mindestens drei Tage. Bei besonders guten Freunden: **vier.** Bei „Wie geht's dir? 😊“: Eine Woche ist völlig vertretbar.
 
 ---
 
@@ -132,11 +54,7 @@ Eine Woche ist völlig vertretbar.
 
 ## Die Kunst des langsamen Verschwindens
 
-Freundschaften müssen nicht abrupt beendet werden.
-
-Das wäre unnötig dramatisch.
-
-Viel eleganter ist das **schleichende Verschwinden**.
+Freundschaften müssen nicht abrupt beendet werden. Das wäre unnötig dramatisch. Viel eleganter ist das **schleichende Verschwinden**.
 
 ### Phase 1
 
@@ -178,9 +96,7 @@ Du hast gewonnen.
 
 ## Die perfekte Ausrede
 
-Jede erfolgreiche Freundschaftsreduzierung benötigt eine solide Ausredenstrategie.
-
-Hier sind die wichtigsten Klassiker:
+Jede erfolgreiche Freundschaftsreduzierung benötigt eine solide Ausredenstrategie. Hier sind die wichtigsten Klassiker:
 
 -  „Diese Woche ist schwierig.“ 
 -  „Gerade ist echt viel los.“ 
@@ -191,21 +107,7 @@ Hier sind die wichtigsten Klassiker:
 -  „Die nächsten Wochen sind ziemlich voll.“ 
 -  „Ich habe gerade einfach zu viel um die Ohren.“ 
 
-Besonders wichtig:
-
-**Sag niemals genau, was los ist.**
-
-Denn sobald du einen konkreten Grund nennst, kann dein Freund darauf reagieren.
-
-Beispiel:
-
-„Ich kann heute nicht, ich muss arbeiten.“
-
-Die Antwort:
-
-„Kein Problem, wie wäre es Freitag?“
-
-Katastrophe.
+Besonders wichtig: **Sag niemals genau, was los ist.** Denn sobald du einen konkreten Grund nennst, kann dein Freund darauf reagieren. Beispiel: „Ich kann heute nicht, ich muss arbeiten.“ Die Antwort: „Kein Problem, wie wäre es Freitag?“ Katastrophe.
 
 Besser:
 
@@ -219,13 +121,7 @@ Niemand kann gegen „irgendwie“ argumentieren.
 
 ## Geburtstage – ein gefährliches Missverständnis
 
-Freunde haben Geburtstage.
-
-Das ist problematisch.
-
-Denn Geburtstage erzeugen Erwartungen.
-
-Man soll:
+Freunde haben Geburtstage. Das ist problematisch. Denn Geburtstage erzeugen Erwartungen. Man soll:
 
 -  gratulieren, 
 -  anrufen, 
@@ -257,11 +153,7 @@ Geschenk.
 
 „Oh nein! Ich hab deinen Geburtstag total verpeilt!“
 
-Perfekt.
-
-Du hast gleichzeitig vergessen und Reue demonstriert.
-
-Das wirkt menschlich.
+Perfekt. Du hast gleichzeitig vergessen und Reue demonstriert. Das wirkt menschlich.
 
 ---
 
@@ -269,39 +161,15 @@ Das wirkt menschlich.
 
 ## Gemeinsame Erinnerungen – der natürliche Feind
 
-Freunde haben Erinnerungen.
-
-Das ist besonders gefährlich.
-
-Denn Erinnerungen schaffen Bindung.
-
-Die andere Person sagt:
+Freunde haben Erinnerungen. Das ist besonders gefährlich. Denn Erinnerungen schaffen Bindung. Die andere Person sagt:
 
 > „Weißt du noch damals in Berlin?“
 
-Du:
-
-„Ja, klar.“
-
-Natürlich weißt du es nicht mehr.
-
-Aber jetzt ist es zu spät.
-
-Sie erzählt die Geschichte.
-
-Du lachst an den richtigen Stellen.
-
-Dann sagt sie:
+Du: „Ja, klar.“ Natürlich weißt du es nicht mehr. Aber jetzt ist es zu spät. Sie erzählt die Geschichte. Du lachst an den richtigen Stellen. Dann sagt sie:
 
 > „Das waren echt gute Zeiten.“
 
-**Gefahr.**
-
-Hier droht eine emotionale Wiederannäherung.
-
-Unser Tipp:
-
-Wechsle sofort das Thema.
+**Gefahr.** Hier droht eine emotionale Wiederannäherung. Unser Tipp: Wechsle sofort das Thema.
 
 > „Ja, verrückt. Sag mal, wie läuft's eigentlich bei der Arbeit?“
 
@@ -311,31 +179,11 @@ Wechsle sofort das Thema.
 
 ## Der große Fehler: Gemeinsamkeiten
 
-Menschen glauben, Freundschaften entstehen durch Gemeinsamkeiten.
+Menschen glauben, Freundschaften entstehen durch Gemeinsamkeiten. Das stimmt. Und genau deshalb solltest du Gemeinsamkeiten vermeiden.
 
-Das stimmt.
+Mag dein Freund Fußball? Sag, dass du dich neuerdings für Tennis interessierst. Liebt er Wandern? Du hast plötzlich eine ausgeprägte Abneigung gegen Berge. Liebt sie Serien? Du schaust neuerdings nur noch Dokumentationen über Tiefseefische.
 
-Und genau deshalb solltest du Gemeinsamkeiten vermeiden.
-
-Mag dein Freund Fußball?
-
-Sag, dass du dich neuerdings für Tennis interessierst.
-
-Liebt er Wandern?
-
-Du hast plötzlich eine ausgeprägte Abneigung gegen Berge.
-
-Liebt sie Serien?
-
-Du schaust neuerdings nur noch Dokumentationen über Tiefseefische.
-
-Ziel:
-
-**Keine gemeinsamen Interessen.**
-
-Denn gemeinsame Interessen führen zu gemeinsamen Aktivitäten.
-
-Und gemeinsame Aktivitäten führen zu Freundschaft.
+Ziel: **Keine gemeinsamen Interessen.** Denn gemeinsame Interessen führen zu gemeinsamen Aktivitäten. Und gemeinsame Aktivitäten führen zu Freundschaft.
 
 ---
 
@@ -343,17 +191,11 @@ Und gemeinsame Aktivitäten führen zu Freundschaft.
 
 ## Wie man Einladungen erfolgreich ablehnt
 
-„Hast du Samstag Zeit?“
-
-Eine der gefährlichsten Fragen überhaupt.
-
-Die schlechteste Antwort:
+„Hast du Samstag Zeit?“ Eine der gefährlichsten Fragen überhaupt. Die schlechteste Antwort:
 
 > „Nein.“
 
-Warum?
-
-Weil sofort eine Gegenfrage kommt:
+Warum? Weil sofort eine Gegenfrage kommt:
 
 > „Und Sonntag?“
 
@@ -363,9 +205,7 @@ Deshalb brauchst du eine flexible Absage.
 
 > „Dieses Wochenende ist leider ziemlich voll.“
 
-Das Problem:
-
-Der nächste Satz könnte lauten:
+Das Problem: Der nächste Satz könnte lauten:
 
 > „Dann nächstes Wochenende?“
 
@@ -377,9 +217,7 @@ Noch besser:
 
 > „Ich weiß gerade gar nicht, wie die nächsten Wochen werden.“
 
-Jetzt bist du frei.
-
-Bis mindestens Dienstag.
+Jetzt bist du frei. Bis mindestens Dienstag.
 
 ---
 
@@ -387,47 +225,21 @@ Bis mindestens Dienstag.
 
 ## Der Gruppenchat
 
-Der Gruppenchat ist der natürliche Lebensraum der Freundschaft.
+Der Gruppenchat ist der natürliche Lebensraum der Freundschaft. Dort passiert alles:
 
-Dort passiert alles:
+„Wer kommt Samstag?“ „Hat jemand Lust auf Essen?“ „Schaut mal dieses Video.“ „😂😂😂“ „Leute?“ „Warum antwortet keiner?“
 
-„Wer kommt Samstag?“
-
-„Hat jemand Lust auf Essen?“
-
-„Schaut mal dieses Video.“
-
-„😂😂😂“
-
-„Leute?“
-
-„Warum antwortet keiner?“
-
-Du hast eine klare Aufgabe:
-
-**Nichts tun.**
-
-Nicht schreiben.
-
-Nicht reagieren.
-
-Nicht einmal ein Emoji.
+Du hast eine klare Aufgabe: **Nichts tun.** Nicht schreiben. Nicht reagieren. Nicht einmal ein Emoji.
 
 Wenn jemand direkt fragt:
 
 > „Max, bist du dabei?“
 
-Warte.
-
-Dann:
+Warte. Dann:
 
 > „Sorry, hab die Nachrichten gerade erst gesehen.“
 
-Obwohl du sie vor drei Stunden gelesen hast.
-
-Das ist kein Lügen.
-
-Das ist **soziale Zeitverschiebung**.
+Obwohl du sie vor drei Stunden gelesen hast. Das ist kein Lügen. Das ist **soziale Zeitverschiebung**.
 
 ---
 
@@ -435,11 +247,7 @@ Das ist **soziale Zeitverschiebung**.
 
 ## Der gefürchtete Satz: „Wir sollten mal wieder was machen“
 
-Dieser Satz darf niemals unbeantwortet bleiben.
-
-Aber auch niemals konkret beantwortet werden.
-
-Perfekte Antwort:
+Dieser Satz darf niemals unbeantwortet bleiben. Aber auch niemals konkret beantwortet werden. Perfekte Antwort:
 
 > „Ja, unbedingt!“
 
@@ -447,23 +255,11 @@ Noch besser:
 
 > „Definitiv! Ist echt schon viel zu lange her.“
 
-Dann folgt die wichtigste Technik:
-
-**Keine Terminvorschläge.**
-
-Niemals:
-
-„Wie wäre es nächsten Donnerstag?“
-
-Das ist Amateurverhalten.
-
-Sag stattdessen:
+Dann folgt die wichtigste Technik: **Keine Terminvorschläge.** Niemals: „Wie wäre es nächsten Donnerstag?“ Das ist Amateurverhalten. Sag stattdessen:
 
 > „Wir müssen einfach mal schauen, wann es bei beiden passt.“
 
-Herzlichen Glückwunsch.
-
-Du hast gerade eine Verabredung vereinbart, ohne eine Verabredung zu vereinbaren.
+Herzlichen Glückwunsch. Du hast gerade eine Verabredung vereinbart, ohne eine Verabredung zu vereinbaren.
 
 ---
 
@@ -493,9 +289,7 @@ Du kannst gleichzeitig drei Einladungen absagen, ohne konkrete Gründe zu nennen
 
 ### Stufe 6: Erleuchtung
 
-Du erkennst:
-
-**Freundschaften entstehen durch Kontakt.**
+Du erkennst: **Freundschaften entstehen durch Kontakt.**
 
 ### Stufe 7: Konsequenz
 
@@ -507,13 +301,7 @@ Du reduzierst den Kontakt.
 
 ## Was tun, wenn dein Freund dich konfrontiert?
 
-Es passiert irgendwann.
-
-„Du meldest dich in letzter Zeit gar nicht mehr.“
-
-Bleib ruhig.
-
-Nicht:
+Es passiert irgendwann. „Du meldest dich in letzter Zeit gar nicht mehr.“ Bleib ruhig. Nicht:
 
 > „Stimmt.“
 
@@ -521,27 +309,15 @@ Auch nicht:
 
 > „Ich will nichts mehr mit dir zu tun haben.“
 
-Das wäre ehrlich.
-
-Und Ehrlichkeit ist der natürliche Feind dieses Ratgebers.
-
-Besser:
+Das wäre ehrlich. Und Ehrlichkeit ist der natürliche Feind dieses Ratgebers. Besser:
 
 > „Ja, ich weiß. Tut mir echt leid. Bei mir ist gerade einfach so viel los.“
 
-Dann schweige.
-
-Wenn nötig:
+Dann schweige. Wenn nötig:
 
 > „Das hat wirklich nichts mit dir zu tun.“
 
-Das ist besonders effektiv.
-
-Denn jetzt weiß die andere Person:
-
-**Es hat definitiv etwas mit ihr zu tun.**
-
-Aber sie kann es nicht beweisen.
+Das ist besonders effektiv. Denn jetzt weiß die andere Person: **Es hat definitiv etwas mit ihr zu tun.** Aber sie kann es nicht beweisen.
 
 ---
 
@@ -568,15 +344,7 @@ Beispiele:
 
 > „Wir bleiben in Kontakt.“
 
-Besonders gut:
-
-**„Wir müssen unbedingt mal wieder in Ruhe quatschen.“**
-
-Dieser Satz klingt nach Freundschaft.
-
-Er beinhaltet aber keinerlei Termin.
-
-**Perfekt.**
+Besonders gut: **„Wir müssen unbedingt mal wieder in Ruhe quatschen.“** Dieser Satz klingt nach Freundschaft. Er beinhaltet aber keinerlei Termin. **Perfekt.**
 
 ---
 
@@ -584,19 +352,9 @@ Er beinhaltet aber keinerlei Termin.
 
 ## Der Social-Media-Fehler
 
-Du möchtest mit jemandem keinen Kontakt mehr?
+Du möchtest mit jemandem keinen Kontakt mehr? Dann solltest du nicht unbedingt drei Minuten später dessen Instagram-Story liken.
 
-Dann solltest du nicht unbedingt drei Minuten später dessen Instagram-Story liken.
-
-Das erzeugt Verwirrung.
-
-Die Person denkt:
-
-„Er antwortet mir seit zwei Wochen nicht, aber mein Frühstück liked er.“
-
-Das ist kontraproduktiv.
-
-Deshalb gilt:
+Das erzeugt Verwirrung. Die Person denkt: „Er antwortet mir seit zwei Wochen nicht, aber mein Frühstück liked er.“ Das ist kontraproduktiv. Deshalb gilt:
 
 ### Persönliche Nachrichten
 
@@ -622,35 +380,15 @@ Wir wollen schließlich keine Monster sein.
 
 ## Freunde verlieren, ohne ein schlechter Mensch zu sein
 
-Hier kommt die überraschende Wendung.
+Hier kommt die überraschende Wendung. Vielleicht musst du gar keine Freunde „verlieren“. Vielleicht musst du einfach akzeptieren, dass sich Beziehungen verändern.
 
-Vielleicht musst du gar keine Freunde „verlieren“.
+Menschen ziehen um. Bekommen Kinder. Wechseln Jobs. Entwickeln neue Interessen. Manchmal sieht man sich weniger. Und das bedeutet nicht automatisch, dass eine Freundschaft gescheitert ist.
 
-Vielleicht musst du einfach akzeptieren, dass sich Beziehungen verändern.
-
-Menschen ziehen um.
-
-Bekommen Kinder.
-
-Wechseln Jobs.
-
-Entwickeln neue Interessen.
-
-Manchmal sieht man sich weniger.
-
-Und das bedeutet nicht automatisch, dass eine Freundschaft gescheitert ist.
-
-Manche Freundschaften brauchen keinen täglichen Kontakt.
-
-Manchmal reicht:
+Manche Freundschaften brauchen keinen täglichen Kontakt. Manchmal reicht:
 
 > „Hey, lange nichts gehört. Wie geht's dir?“
 
-Und plötzlich redet man zwei Stunden.
-
-Das ist der Moment, in dem dieser Ratgeber gefährlich nahe an einen **vernünftigen Lebensratgeber** kommt.
-
-Wir sollten schnell weitermachen.
+Und plötzlich redet man zwei Stunden. Das ist der Moment, in dem dieser Ratgeber gefährlich nahe an einen **vernünftigen Lebensratgeber** kommt. Wir sollten schnell weitermachen.
 
 ---
 
@@ -726,45 +464,31 @@ Frage:
 
 ### Der Planer
 
-„Was machen wir nächsten Samstag?“
-
-**Gefahr: 10/10**
+„Was machen wir nächsten Samstag?“ **Gefahr: 10/10**
 
 ### Der Spontane
 
-„Bin gerade in deiner Nähe.“
-
-**Gefahr: 11/10**
+„Bin gerade in deiner Nähe.“ **Gefahr: 11/10**
 
 ### Der Telefonierer
 
-Ruft einfach an.
-
-**Sofortiger Ausnahmezustand.**
+Ruft einfach an. **Sofortiger Ausnahmezustand.**
 
 ### Der Vielschreiber
 
-Drei Absätze WhatsApp.
-
-**Nicht öffnen.**
+Drei Absätze WhatsApp. **Nicht öffnen.**
 
 ### Der Erinnerer
 
-„Du wolltest dich doch melden.“
-
-**Lebensgefährlich.**
+„Du wolltest dich doch melden.“ **Lebensgefährlich.**
 
 ### Der Nostalgiker
 
-„Weißt du noch früher?“
-
-**Emotionale Falle.**
+„Weißt du noch früher?“ **Emotionale Falle.**
 
 ### Der beste Freund
 
-Kennt alle deine Ausreden.
-
-**Unbesiegbar.**
+Kennt alle deine Ausreden. **Unbesiegbar.**
 
 ---
 
@@ -772,27 +496,9 @@ Kennt alle deine Ausreden.
 
 ## Die revolutionäre Schlussfolgerung
 
-Was haben wir gelernt?
+Was haben wir gelernt? Freundschaften brauchen Zeit. Kontakt. Interesse. Vertrauen. Gemeinsame Erlebnisse. Und gelegentlich sogar eine Antwort auf eine Nachricht.
 
-Freundschaften brauchen Zeit.
-
-Kontakt.
-
-Interesse.
-
-Vertrauen.
-
-Gemeinsame Erlebnisse.
-
-Und gelegentlich sogar eine Antwort auf eine Nachricht.
-
-Das ist alles ziemlich anstrengend.
-
-Aber vielleicht ist genau das der Punkt.
-
-Ein guter Freund ist nicht jemand, dem du immer sofort antwortest.
-
-Ein guter Freund ist jemand, bei dem du dich nach drei Monaten melden kannst und trotzdem sagen kannst:
+Das ist alles ziemlich anstrengend. Aber vielleicht ist genau das der Punkt. Ein guter Freund ist nicht jemand, dem du immer sofort antwortest. Ein guter Freund ist jemand, bei dem du dich nach drei Monaten melden kannst und trotzdem sagen kannst:
 
 > „Sorry, war etwas stressig.“
 
@@ -800,13 +506,9 @@ Und die andere Person sagt:
 
 > „Kein Problem. Was gibt's Neues?“
 
-Vielleicht sollte man also nicht möglichst viele Freunde verlieren.
+Vielleicht sollte man also nicht möglichst viele Freunde verlieren. Vielleicht sollte man einfach herausfinden, **welche man behalten möchte.**
 
-Vielleicht sollte man einfach herausfinden, **welche man behalten möchte.**
-
-Aber keine Sorge.
-
-Dafür gibt es Kapitel 19.
+Aber keine Sorge. Dafür gibt es Kapitel 19.
 
 ---
 
@@ -921,9 +623,7 @@ Dafür gibt es Kapitel 19.
 
 ## Herzlichen Glückwunsch – du bist wieder allein!
 
-Du hast es geschafft.
-
-Du weißt jetzt, wie man:
+Du hast es geschafft. Du weißt jetzt, wie man:
 
 -  Nachrichten ignoriert, 
 -  Einladungen ablehnt, 
@@ -932,29 +632,17 @@ Du weißt jetzt, wie man:
 -  Verabredungen verhindert, 
 -  und trotzdem behauptet, ein sozialer Mensch zu sein. 
 
-Aber bevor du jetzt alle deine Freunde löschst, gibt es noch eine wichtige Erkenntnis:
+Aber bevor du jetzt alle deine Freunde löschst, gibt es noch eine wichtige Erkenntnis: **Freundschaften sind keine To-do-Listen.**
 
-**Freundschaften sind keine To-do-Listen.**
+Manchmal darf man sich monatelang nicht sehen. Manchmal antwortet man erst nach drei Tagen. Manchmal hat man keine Lust. Und manchmal ist jemand trotzdem noch dein Freund.
 
-Manchmal darf man sich monatelang nicht sehen.
-
-Manchmal antwortet man erst nach drei Tagen.
-
-Manchmal hat man keine Lust.
-
-Und manchmal ist jemand trotzdem noch dein Freund.
-
-Vielleicht ist das sogar das Schönste an Freundschaft.
-
-Dass man nicht permanent funktionieren muss.
+Vielleicht ist das sogar das Schönste an Freundschaft. Dass man nicht permanent funktionieren muss.
 
 Und wenn du jetzt denkst:
 
 > „Verdammt. Eigentlich mag ich meine Freunde.“
 
-Dann hat dieser Ratgeber versagt.
-
-**Oder funktioniert.**
+Dann hat dieser Ratgeber versagt. **Oder funktioniert.**
 
 ---
 
@@ -998,9 +686,7 @@ Wenn du bei Frage 6 „Ja“ angekreuzt hast:
 
 **Herzlichen Glückwunsch.**
 
-Du bist vermutlich ein ziemlich guter Freund.
-
-Und jetzt schreib dieser Person endlich zurück.
+Du bist vermutlich ein ziemlich guter Freund. Und jetzt schreib dieser Person endlich zurück.
 
 **Dr. Maximilian Methodius**
 

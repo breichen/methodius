@@ -8,49 +8,13 @@
 
 # Herzlichen Glückwunsch!
 
-Du hast einen Termin.
-
-Das ist zunächst einmal erfreulich.
-
-Ein Arzttermin.
-
-Ein Geschäftstermin.
-
-Ein Treffen mit Freunden.
-
-Ein Bewerbungsgespräch.
-
-Ein Friseurtermin.
-
-Ein Meeting.
-
-Ein Abendessen.
-
-Oder irgendeine andere Veranstaltung, zu der jemand irgendwann gesagt hat:
+Du hast einen Termin. Das ist zunächst einmal erfreulich. Ein Arzttermin. Ein Geschäftstermin. Ein Treffen mit Freunden. Ein Bewerbungsgespräch. Ein Friseurtermin. Ein Meeting. Ein Abendessen. Oder irgendeine andere Veranstaltung, zu der jemand irgendwann gesagt hat:
 
 > „Dann sehen wir uns um 15 Uhr.“
 
-Seitdem ist dein Leben kompliziert.
+Seitdem ist dein Leben kompliziert. Denn jetzt musst du: dich vorbereiten, pünktlich losgehen, den Weg planen, einen Parkplatz finden, die richtige Tür finden, eventuell noch einen Kaffee trinken, und vor allem: **rechtzeitig ankommen.**
 
-Denn jetzt musst du:
-
-- dich vorbereiten,
-- pünktlich losgehen,
-- den Weg planen,
-- einen Parkplatz finden,
-- die richtige Tür finden,
-- eventuell noch einen Kaffee trinken,
-- und vor allem:
-
-**rechtzeitig ankommen.**
-
-Aber was wäre, wenn wir das Problem ganz anders lösen?
-
-Was wäre, wenn du gar nicht erst hinfährst?
-
-Dann kannst du nicht zu spät kommen.
-
-**Das ist Mathematik.**
+Aber was wäre, wenn wir das Problem ganz anders lösen? Was wäre, wenn du gar nicht erst hinfährst? Dann kannst du nicht zu spät kommen. **Das ist Mathematik.**
 
 ---
 
@@ -62,31 +26,11 @@ Viele Menschen glauben, ihr Problem sei:
 
 > „Ich komme immer zu spät.“
 
-Das stimmt nicht.
+Das stimmt nicht. Dein Problem ist: **Du nimmst zu viele Termine wahr.**
 
-Dein Problem ist:
+Ein Termin erzeugt schließlich eine Verpflichtung. Eine Verpflichtung erzeugt Zeitdruck. Zeitdruck erzeugt Stress. Stress erzeugt Hektik. Hektik erzeugt Verspätung. Verspätung erzeugt Entschuldigungen. Entschuldigungen erzeugen weitere Nachrichten. Und plötzlich hast du wegen eines einzigen Treffens 47 Minuten damit verbracht, zu erklären, warum du nicht rechtzeitig angekommen bist.
 
-> **Du nimmst zu viele Termine wahr.**
-
-Ein Termin erzeugt schließlich eine Verpflichtung.
-
-Eine Verpflichtung erzeugt Zeitdruck.
-
-Zeitdruck erzeugt Stress.
-
-Stress erzeugt Hektik.
-
-Hektik erzeugt Verspätung.
-
-Verspätung erzeugt Entschuldigungen.
-
-Entschuldigungen erzeugen weitere Nachrichten.
-
-Und plötzlich hast du wegen eines einzigen Treffens 47 Minuten damit verbracht, zu erklären, warum du nicht rechtzeitig angekommen bist.
-
-Unser Ansatz ist einfacher:
-
-**Eliminiere den Termin.**
+Unser Ansatz ist einfacher: **Eliminiere den Termin.**
 
 ---
 
@@ -102,47 +46,11 @@ Die Formel lautet:
 **= keine Entschuldigung**  
 **= kein Stress**
 
-Das ist eine beeindruckende Kette.
-
-Nehmen wir ein Beispiel.
-
-Du hast um 18:00 Uhr einen Termin.
-
-Du wohnst 30 Minuten entfernt.
-
-Du solltest um 17:20 Uhr losfahren.
-
-Du gehst um 17:35 Uhr los.
-
-Du findest keinen Parkplatz.
-
-17:52 Uhr.
-
-Du rennst.
-
-17:59 Uhr.
-
-Du bist völlig außer Atem.
-
-18:04 Uhr.
-
-Du kommst an.
-
-Du sagst:
+Das ist eine beeindruckende Kette. Nehmen wir ein Beispiel. Du hast um 18:00 Uhr einen Termin. Du wohnst 30 Minuten entfernt. Du solltest um 17:20 Uhr losfahren. Du gehst um 17:35 Uhr los. Du findest keinen Parkplatz. 17:52 Uhr. Du rennst. 17:59 Uhr. Du bist völlig außer Atem. 18:04 Uhr. Du kommst an. Du sagst:
 
 > „Entschuldigung!“
 
-Jetzt betrachten wir unsere Methode.
-
-18:00 Uhr:
-
-**Du bist zu Hause.**
-
-Du bist nicht am Termin.
-
-Aber du bist:
-
-**pünktlich zu Hause.**
+Jetzt betrachten wir unsere Methode. 18:00 Uhr: **Du bist zu Hause.** Du bist nicht am Termin. Aber du bist: **pünktlich zu Hause.**
 
 ---
 
@@ -150,17 +58,11 @@ Aber du bist:
 
 ## Die gefährlichsten Termine
 
-Nicht jeder Termin ist gleich gefährlich.
-
-Besonders riskant sind Termine, bei denen mehrere Dinge gleichzeitig passieren müssen.
-
-Zum Beispiel:
+Nicht jeder Termin ist gleich gefährlich. Besonders riskant sind Termine, bei denen mehrere Dinge gleichzeitig passieren müssen. Zum Beispiel:
 
 ### Der 9-Uhr-Termin
 
-Du musst früh aufstehen.
-
-Gefährlich.
+Du musst früh aufstehen. Gefährlich.
 
 ### Der 8-Uhr-Termin
 
@@ -172,9 +74,7 @@ Noch gefährlicher.
 
 ### Der Termin direkt nach einem anderen Termin
 
-Du brauchst Pünktlichkeit zweimal hintereinander.
-
-Unverantwortlich.
+Du brauchst Pünktlichkeit zweimal hintereinander. Unverantwortlich.
 
 ### Der Termin mit Parkplatzsuche
 
@@ -196,11 +96,7 @@ Du brauchst Navigation.
 
 ## Die Kunst, einen Termin gar nicht erst entstehen zu lassen
 
-Die beste Absage ist die, die nie ausgesprochen werden muss.
-
-Deshalb musst du bereits bei der Terminvereinbarung vorsichtig sein.
-
-Jemand fragt:
+Die beste Absage ist die, die nie ausgesprochen werden muss. Deshalb musst du bereits bei der Terminvereinbarung vorsichtig sein. Jemand fragt:
 
 > „Hast du Dienstag Zeit?“
 
@@ -208,21 +104,11 @@ Antworte nicht:
 
 > „Ja.“
 
-Das ist ein Anfängerfehler.
-
-Besser:
+Das ist ein Anfängerfehler. Besser:
 
 > **„Dienstag könnte schwierig werden.“**
 
-Das Wort „könnte“ ist hervorragend.
-
-Es bedeutet weder Ja noch Nein.
-
-Es erzeugt Hoffnung.
-
-Aber keine Verpflichtung.
-
-Wenn die Person weiterfragt:
+Das Wort „könnte“ ist hervorragend. Es bedeutet weder Ja noch Nein. Es erzeugt Hoffnung. Aber keine Verpflichtung. Wenn die Person weiterfragt:
 
 > „Wie wäre es Mittwoch?“
 
@@ -230,9 +116,7 @@ Sag:
 
 > **„Mittwoch ist momentan auch etwas schwierig.“**
 
-Jetzt entsteht ein Terminvermeidungsfenster.
-
-Nutze es.
+Jetzt entsteht ein Terminvermeidungsfenster. Nutze es.
 
 ---
 
@@ -244,27 +128,19 @@ Nutze es.
 
 > „Ich weiß noch nicht genau, wie es zeitlich aussieht.“
 
-Sehr gut.
-
-Du hast noch keinen Termin.
+Sehr gut. Du hast noch keinen Termin.
 
 ### Stufe 2: Die strategische Unklarheit
 
 > „Ich melde mich, sobald ich besser planen kann.“
 
-Perfekt.
-
-Du hast jetzt offiziell die Verantwortung für eine Nachricht übernommen, die du möglichst lange nicht schreiben möchtest.
+Perfekt. Du hast jetzt offiziell die Verantwortung für eine Nachricht übernommen, die du möglichst lange nicht schreiben möchtest.
 
 ### Stufe 3: Die finale Befreiung
 
 > „Ich glaube, wir sollten das lieber auf einen anderen Zeitpunkt verschieben.“
 
-Herzlichen Glückwunsch.
-
-Der Termin ist weg.
-
-Und damit auch das Risiko, zu spät zu kommen.
+Herzlichen Glückwunsch. Der Termin ist weg. Und damit auch das Risiko, zu spät zu kommen.
 
 ---
 
@@ -272,17 +148,11 @@ Und damit auch das Risiko, zu spät zu kommen.
 
 ## Was tun, wenn der Termin bereits feststeht?
 
-Jetzt wird es schwierig.
-
-Der Kalender zeigt:
+Jetzt wird es schwierig. Der Kalender zeigt:
 
 **Donnerstag, 14:00 Uhr – Termin**
 
-Du hast ihn bereits zugesagt.
-
-Kein Problem.
-
-Unser System bietet drei Möglichkeiten.
+Du hast ihn bereits zugesagt. Kein Problem. Unser System bietet drei Möglichkeiten.
 
 ### Möglichkeit A
 
@@ -296,23 +166,11 @@ Absagen.
 
 Den Termin in einen anderen Termin umwandeln.
 
-Zum Beispiel:
-
-„Wir treffen uns um 14 Uhr.“
-
-wird zu:
+Zum Beispiel: „Wir treffen uns um 14 Uhr.“ wird zu:
 
 > „Lass uns kurz telefonieren.“
 
-Aus 60 Minuten Anfahrt plus 60 Minuten Termin werden:
-
-**12 Minuten Telefonat.**
-
-Eine unglaubliche Effizienzsteigerung.
-
-Und das Beste:
-
-Das Telefon kann nicht im Stau stehen.
+Aus 60 Minuten Anfahrt plus 60 Minuten Termin werden: **12 Minuten Telefonat.** Eine unglaubliche Effizienzsteigerung. Und das Beste: Das Telefon kann nicht im Stau stehen.
 
 ---
 
@@ -320,38 +178,13 @@ Das Telefon kann nicht im Stau stehen.
 
 ## Der digitale Termin
 
-Videokonferenzen sind eine fantastische Erfindung.
+Videokonferenzen sind eine fantastische Erfindung. Du musst nicht: fahren, parken, laufen, den richtigen Eingang suchen, dich verlaufen, oder auf einen Aufzug warten.
 
-Du musst nicht:
+Du musst lediglich: **einen Link anklicken.**
 
-- fahren,
-- parken,
-- laufen,
-- den richtigen Eingang suchen,
-- dich verlaufen,
-- oder auf einen Aufzug warten.
+Allerdings gibt es auch hier Risiken. Du kannst den Termin vergessen. Dein Mikrofon kann ausgeschaltet sein. Deine Kamera kann nicht funktionieren. Du kannst „Sind Sie schon da?“ hören, obwohl du seit sieben Minuten da bist.
 
-Du musst lediglich:
-
-**einen Link anklicken.**
-
-Allerdings gibt es auch hier Risiken.
-
-Du kannst den Termin vergessen.
-
-Dein Mikrofon kann ausgeschaltet sein.
-
-Deine Kamera kann nicht funktionieren.
-
-Du kannst „Sind Sie schon da?“ hören, obwohl du seit sieben Minuten da bist.
-
-Deshalb empfehlen wir:
-
-**Fünf Minuten vorher einloggen.**
-
-Oder noch besser:
-
-**Gar nicht erst einen Termin vereinbaren.**
+Deshalb empfehlen wir: **Fünf Minuten vorher einloggen.** Oder noch besser: **Gar nicht erst einen Termin vereinbaren.**
 
 ---
 
@@ -359,45 +192,21 @@ Oder noch besser:
 
 ## Die perfekte Entschuldigung
 
-Manchmal lässt sich ein Termin nicht vermeiden.
-
-Dann kommt es darauf an, wie du absagst.
-
-Vermeide:
+Manchmal lässt sich ein Termin nicht vermeiden. Dann kommt es darauf an, wie du absagst. Vermeide:
 
 > „Ich habe keine Lust.“
 
-Das ist ehrlich.
-
-Aber gefährlich.
-
-Besser:
+Das ist ehrlich. Aber gefährlich. Besser:
 
 > **„Leider hat sich bei mir kurzfristig etwas ergeben.“**
 
-Was?
-
-Das musst du nicht sagen.
-
-Denn „etwas“ ist ein ausgesprochen vielseitiges Wort.
-
-Es kann sein:
-
-- Arbeit,
-- Familie,
-- Verkehr,
-- ein anderer Termin,
-- eine spontane Verpflichtung,
-- eine unerwartete Situation,
-- oder der dringende Wunsch, zu Hause zu bleiben.
+Was? Das musst du nicht sagen. Denn „etwas“ ist ein ausgesprochen vielseitiges Wort. Es kann sein: Arbeit, Familie, Verkehr, ein anderer Termin, eine spontane Verpflichtung, eine unerwartete Situation, oder der dringende Wunsch, zu Hause zu bleiben.
 
 Eine elegante Variante:
 
 > **„Ich schaffe es heute leider zeitlich nicht.“**
 
-Das ist besonders schön.
-
-Denn du sagst nicht:
+Das ist besonders schön. Denn du sagst nicht:
 
 > „Ich will nicht.“
 
@@ -405,9 +214,7 @@ Du sagst:
 
 > **„Die Zeit lässt es nicht zu.“**
 
-Die Zeit wird zum Schuldigen.
-
-Nicht du.
+Die Zeit wird zum Schuldigen. Nicht du.
 
 ---
 
@@ -415,9 +222,7 @@ Nicht du.
 
 ## Der Termin ohne Termin
 
-Es gibt eine besonders fortschrittliche Form der Terminvermeidung:
-
-**Den Termin gar nicht als Termin bezeichnen.**
+Es gibt eine besonders fortschrittliche Form der Terminvermeidung: **Den Termin gar nicht als Termin bezeichnen.**
 
 Nicht:
 
@@ -427,23 +232,9 @@ Sondern:
 
 > „Wir können uns Dienstag vielleicht irgendwann kurz austauschen.“
 
-Das Wort **„irgendwann“** ist ein Meisterwerk.
+Das Wort **„irgendwann“** ist ein Meisterwerk. Es besitzt keine Uhrzeit. Keine genaue Dauer. Keine feste Verpflichtung. Und vor allem: **keine klare Verspätungsgrenze.**
 
-Es besitzt keine Uhrzeit.
-
-Keine genaue Dauer.
-
-Keine feste Verpflichtung.
-
-Und vor allem:
-
-**keine klare Verspätungsgrenze.**
-
-Wenn du um 15:17 Uhr kommst, hast du nicht einmal zwingend zu spät angefangen.
-
-Du hast einfach:
-
-**irgendwann angefangen.**
+Wenn du um 15:17 Uhr kommst, hast du nicht einmal zwingend zu spät angefangen. Du hast einfach: **irgendwann angefangen.**
 
 ---
 
@@ -475,13 +266,7 @@ Unser Kalender:
 | 16:00 | Später |
 | 18:00 | Mal schauen |
 
-**Wunderbar.**
-
-Du hast sechs Termine.
-
-Und gleichzeitig:
-
-**keinen einzigen.**
+**Wunderbar.** Du hast sechs Termine. Und gleichzeitig: **keinen einzigen.**
 
 ---
 
@@ -507,9 +292,7 @@ Und gleichzeitig:
 
 ### Stufe 5: Der Tag ist gekommen
 
-Du stellst fest:
-
-**Heute ist heute.**
+Du stellst fest: **Heute ist heute.**
 
 ### Stufe 6: Du verschiebst
 
@@ -517,9 +300,7 @@ Du stellst fest:
 
 ### Stufe 7: Erleuchtung
 
-Nächste Woche hast du ebenfalls keine Zeit.
-
-Du bist frei.
+Nächste Woche hast du ebenfalls keine Zeit. Du bist frei.
 
 ---
 
@@ -527,15 +308,11 @@ Du bist frei.
 
 ## Was tun, wenn andere Menschen auf Pünktlichkeit bestehen?
 
-Diese Menschen gibt es.
-
-Sie sagen:
+Diese Menschen gibt es. Sie sagen:
 
 > „Sei bitte um 18 Uhr da.“
 
-Bleib ruhig.
-
-Frage:
+Bleib ruhig. Frage:
 
 > **„Wie pünktlich?“**
 
@@ -547,13 +324,7 @@ Frage:
 
 > **„Also 18:00:00?“**
 
-Jetzt entsteht Unsicherheit.
-
-Denn kaum jemand möchte zugeben, dass 18:03 Uhr bereits eine internationale Krise darstellt.
-
-Du hast das Gespräch erfolgreich verkompliziert.
-
-Und Komplexität ist der natürliche Feind fester Termine.
+Jetzt entsteht Unsicherheit. Denn kaum jemand möchte zugeben, dass 18:03 Uhr bereits eine internationale Krise darstellt. Du hast das Gespräch erfolgreich verkompliziert. Und Komplexität ist der natürliche Feind fester Termine.
 
 ---
 
@@ -561,19 +332,9 @@ Und Komplexität ist der natürliche Feind fester Termine.
 
 ## Der ultimative Pünktlichkeits-Trick
 
-Es gibt eine Situation, in der du garantiert pünktlich bist:
+Es gibt eine Situation, in der du garantiert pünktlich bist: **Wenn du vor dem Termin bereits dort bist.**
 
-**Wenn du vor dem Termin bereits dort bist.**
-
-Das Problem:
-
-Du musst dafür früh losfahren.
-
-Das widerspricht unserer Philosophie.
-
-Deshalb gibt es eine Alternative:
-
-**Sei gar nicht dort.**
+Das Problem: Du musst dafür früh losfahren. Das widerspricht unserer Philosophie. Deshalb gibt es eine Alternative: **Sei gar nicht dort.**
 
 Dann kann niemand sagen:
 
@@ -583,11 +344,7 @@ Sie können höchstens sagen:
 
 > „Du bist nicht gekommen.“
 
-Das ist unangenehm.
-
-Aber immerhin:
-
-**nicht dasselbe.**
+Das ist unangenehm. Aber immerhin: **nicht dasselbe.**
 
 ---
 
@@ -595,47 +352,15 @@ Aber immerhin:
 
 ## Die revolutionäre Schlussfolgerung
 
-Wir haben heute viel gelernt.
+Wir haben heute viel gelernt. Termine erzeugen Verpflichtungen. Verpflichtungen erzeugen Zeitdruck. Zeitdruck kann zu Verspätungen führen. Und Verspätungen können unangenehm sein.
 
-Termine erzeugen Verpflichtungen.
+Deshalb könnte man gelegentlich darüber nachdenken: **Muss dieser Termin wirklich stattfinden?**
 
-Verpflichtungen erzeugen Zeitdruck.
+Vielleicht reicht eine E-Mail. Vielleicht ein kurzer Anruf. Vielleicht ein Videocall. Vielleicht kann man die Sache verschieben. Vielleicht kann man sie delegieren. Vielleicht kann man sie einfach lassen.
 
-Zeitdruck kann zu Verspätungen führen.
+Natürlich gilt das nicht für jeden Termin. Manche Termine sind wichtig. Manche Menschen warten auf dich. Manche Verpflichtungen solltest du einhalten. Und manchmal ist die beste Lösung tatsächlich: **rechtzeitig loszufahren und pünktlich zu erscheinen.**
 
-Und Verspätungen können unangenehm sein.
-
-Deshalb könnte man gelegentlich darüber nachdenken:
-
-**Muss dieser Termin wirklich stattfinden?**
-
-Vielleicht reicht eine E-Mail.
-
-Vielleicht ein kurzer Anruf.
-
-Vielleicht ein Videocall.
-
-Vielleicht kann man die Sache verschieben.
-
-Vielleicht kann man sie delegieren.
-
-Vielleicht kann man sie einfach lassen.
-
-Natürlich gilt das nicht für jeden Termin.
-
-Manche Termine sind wichtig.
-
-Manche Menschen warten auf dich.
-
-Manche Verpflichtungen solltest du einhalten.
-
-Und manchmal ist die beste Lösung tatsächlich:
-
-**rechtzeitig loszufahren und pünktlich zu erscheinen.**
-
-Aber wenn du ohnehin weißt, dass du es nicht schaffen wirst?
-
-Dann ist eine frühzeitige Absage meistens besser als eine 27-minütige Verspätung mit anschließendem:
+Aber wenn du ohnehin weißt, dass du es nicht schaffen wirst? Dann ist eine frühzeitige Absage meistens besser als eine 27-minütige Verspätung mit anschließendem:
 
 > „Bin gleich da.“
 
@@ -645,41 +370,17 @@ Dann ist eine frühzeitige Absage meistens besser als eine 27-minütige Verspät
 
 ## Herzlichen Glückwunsch!
 
-Du hast gerade einen Ratgeber über Terminvermeidung beendet.
+Du hast gerade einen Ratgeber über Terminvermeidung beendet. Das bedeutet: Du hast Zeit investiert, um zu lernen, wie du in Zukunft weniger Zeit für Termine investieren kannst. Das ist Effizienz.
 
-Das bedeutet:
-
-Du hast Zeit investiert, um zu lernen, wie du in Zukunft weniger Zeit für Termine investieren kannst.
-
-Das ist Effizienz.
-
-Vielleicht hast du morgen einen Termin.
-
-Vielleicht auch nicht.
-
-Falls du einen hast, stelle dir eine einfache Frage:
+Vielleicht hast du morgen einen Termin. Vielleicht auch nicht. Falls du einen hast, stelle dir eine einfache Frage:
 
 > **„Muss ich wirklich hin?“**
 
-Wenn die Antwort „Ja“ lautet:
+Wenn die Antwort „Ja“ lautet: Geh hin. Pünktlich.
 
-Geh hin.
+Wenn die Antwort „Nein“ lautet: Sag rechtzeitig ab.
 
-Pünktlich.
-
-Wenn die Antwort „Nein“ lautet:
-
-Sag rechtzeitig ab.
-
-Und wenn du dir nicht sicher bist:
-
-**Verschiebe die Entscheidung auf später.**
-
-Aber bitte nicht den Termin auf später.
-
-Das wäre wieder ein Termin.
-
-Und darum geht es in diesem Ratgeber schließlich nicht.
+Und wenn du dir nicht sicher bist: **Verschiebe die Entscheidung auf später.** Aber bitte nicht den Termin auf später. Das wäre wieder ein Termin. Und darum geht es in diesem Ratgeber schließlich nicht.
 
 **Dr. Maximilian Methodius**
 
