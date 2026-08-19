@@ -12,15 +12,11 @@ Du hältst gerade einen Ratgeber in den Händen, der dein Verhältnis zu Erfolg 
 
 Denn überall hört man:
 
-> „Arbeite hart.“
-
-> „Steh früher auf.“
-
-> „Verlasse deine Komfortzone.“
-
-> „Sei diszipliniert.“
-
-> „Gib niemals auf.“
+- „Arbeite hart.“
+- „Steh früher auf.“
+- „Verlasse deine Komfortzone.“
+- „Sei diszipliniert.“
+- „Gib niemals auf.“
 
 Und während du noch um 5 Uhr morgens joggst, kalt duschst und deinen fünften Podcast über persönliche Weiterentwicklung hörst, sitzt irgendwo ein Influencer vor einer Zimmerpflanze und erklärt dir: **„Du musst deine Energie schützen.“**
 
@@ -36,7 +32,9 @@ Zumindest auf Instagram.
 
 ## Die Wahrheit über Erfolg
 
-Früher war Erfolg relativ einfach: Man arbeitete. Man lernte etwas. Man wurde gut darin. Man wurde befördert. Man verdiente Geld. Das war mühsam. Heute ist das Konzept eleganter.
+Früher war Erfolg relativ einfach: Man arbeitete. Man lernte etwas. Man wurde gut darin. Man wurde befördert. Man verdiente Geld.
+
+Das war mühsam. Heute ist das Konzept eleganter.
 
 Du brauchst: eine persönliche Marke, einen Podcast, einen Newsletter, einen Onlinekurs, ein Mikrofon, eine Kamera, ein Ringlicht, einen Espressoautomaten und eine Meinung zu Mindset.
 
@@ -76,60 +74,19 @@ Eine erfolgreiche Morgenroutine besteht aus 14 Schritten.
 
 **04:30:** Aufstehen.
 **04:35:** Wasser trinken.
-
-### 04:40
-
-Dankbar sein.
-
-### 04:45
-
-Meditieren.
-
-### 05:00
-
-Kalt duschen.
-
-### 05:07
-
-Affirmationen.
-
-### 05:15
-
-Lesen.
-
-### 05:30
-
-Sport.
-
-### 06:15
-
-Proteinshake.
-
-### 06:20
-
-Journaling.
-
-### 06:45
-
-Visualisieren.
-
-### 07:00
-
-Zweite Meditation.
-
-### 07:30
-
-LinkedIn-Post schreiben:
-
-> **„Warum 99 % der Menschen nie erfolgreich werden.“**
-
-### 08:00
-
-Frühstück.
-
-### 08:15
-
-Endlich Feierabend.
+**04:40:** Dankbar sein.
+**04:45:** Meditieren.
+**05:00:** Kalt duschen.
+**05:07:** Affirmationen.
+**05:15:** Lesen.
+**05:30:** Sport.
+**06:15:** Proteinshake.
+**06:20:** Journaling.
+**06:45:** Visualisieren.
+**07:00:** Zweite Meditation.
+**07:30:** LinkedIn-Post schreiben: **„Warum 99 % der Menschen nie erfolgreich werden.“**
+**08:00:** Frühstück.
+**08:15:** Endlich Feierabend.
 
 ---
 
@@ -179,19 +136,12 @@ Diese Sätze haben einen großen Vorteil: **Niemand kann sofort überprüfen, wa
 
 Du möchtest Experte werden? Dann brauchst du nicht zwingend jahrelange Erfahrung. Du brauchst:
 
-### 1. Einen schwarzen Rollkragenpullover
-
-### 2. Ein Mikrofon
-
-### 3. Einen Podcast
-
-### 4. Eine Kamera
-
-### 5. Einen weißen Hintergrund
-
-### 6. Einen englischen Begriff
-
-Zum Beispiel: **Mindset Transformation Framework.**
+1. Einen schwarzen Rollkragenpullover
+2. Ein Mikrofon
+3. Einen Podcast
+4. Eine Kamera
+5. Einen weißen Hintergrund
+6. Einen englischen Begriff - zum Beispiel: **"Mindset Transformation Framework".**
 
 Fertig. Du bist jetzt der Gründer des: **MTF.**
 
@@ -205,7 +155,7 @@ Das klingt nach etwas, das man auf einer Konferenz auf eine Bühne schreiben kö
 
 Du hast noch kein Produkt? Kein Problem. Erstelle einen Onlinekurs. Zum Beispiel:
 
-# „Unlock Your Potential“
+### „Unlock Your Potential“
 
 **6 Wochen für nur 1.997 Euro**
 
@@ -345,9 +295,7 @@ Noch besser:
 
 > „Ich habe meine Arbeitsweise komplett neu gedacht.“
 
-Und wenn jemand immer noch nicht aufgibt:
-
-**„Ich arbeite inzwischen sehr viel strategischer.“**
+Und wenn jemand immer noch nicht aufgibt: **„Ich arbeite inzwischen sehr viel strategischer.“**
 
 Das Gespräch ist beendet.
 
@@ -375,65 +323,21 @@ Kaffee in der Hand. Hausschuhe an. **High Performance.**
 
 Hier ist er. Der Plan, auf den die Menschheit gewartet hat.
 
-### Schritt 1
-
-Finde heraus, was du gut kannst.
-
-### Schritt 2
-
-Falls dir nichts einfällt: Behaupte, dass du „Menschen inspirierst“.
-
-### Schritt 3
-
-Erstelle einen Instagram-Account.
-
-### Schritt 4
-
-Schreibe „Entrepreneur“ in die Bio.
-
-### Schritt 5
-
-Poste ein Zitat.
-
-### Schritt 6
-
-Poste ein Foto von Kaffee.
-
-### Schritt 7
-
-Poste ein Foto vom Laptop.
-
-### Schritt 8
-
-Poste ein Foto beim Spazierengehen.
-
-### Schritt 9
-
-Schreibe: „Consistency beats motivation.“
-
-### Schritt 10
-
-Verkaufe einen Kurs darüber.
-
-### Schritt 11
-
-Nenne den Kurs „Freedom System“.
-
-### Schritt 12
-
-Erkläre allen, dass sie nicht mehr für Geld arbeiten sollten.
-
-### Schritt 13
-
-Verkaufe ihnen dafür deinen Kurs.
-
-### Schritt 14
-
-Werde erfolgreich.
-
-### Schritt 15
-
-Schreibe einen Ratgeber darüber.
+- **Schritt 1**: Finde heraus, was du gut kannst.
+- **Schritt 2**: Falls dir nichts einfällt: Behaupte, dass du „Menschen inspirierst“.
+- **Schritt 3**: Erstelle einen Instagram-Account.
+- **Schritt 4**: Schreibe „Entrepreneur“ in die Bio.
+- **Schritt 5**: Poste ein Zitat.
+- **Schritt 6**: Poste ein Foto von Kaffee.
+- **Schritt 7**: Poste ein Foto vom Laptop.
+- **Schritt 8**: Poste ein Foto beim Spazierengehen.
+- **Schritt 9**: Schreibe: „Consistency beats motivation.“
+- **Schritt 10**: Verkaufe einen Kurs darüber.
+- **Schritt 11**: Nenne den Kurs „Freedom System“.
+- **Schritt 12**: Erkläre allen, dass sie nicht mehr für Geld arbeiten sollten.
+- **Schritt 13**: Verkaufe ihnen dafür deinen Kurs.
+- **Schritt 14**: Werde erfolgreich.
+- **Schritt 15**: Schreibe einen Ratgeber darüber.
 
 ---
 
