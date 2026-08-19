@@ -124,7 +124,12 @@ Früher musste man für eine Prüfung lernen. Heute:
 
 > „Erstelle mir einen Lernzettel.“
 
-Dann: „Kürzer.“ Dann: „Noch einfacher.“ Dann: „Mach Karteikarten daraus.“ Dann: „Teste mich.“ Dann: „Erkläre mir die Antwort.“ Dann: „Warum muss ich das überhaupt wissen?“
+Dann: „Kürzer.“
+Dann: „Noch einfacher.“
+Dann: „Mach Karteikarten daraus.“
+Dann: „Teste mich.“
+Dann: „Erkläre mir die Antwort.“
+Dann: „Warum muss ich das überhaupt wissen?“
 
 Die KI antwortet geduldig. Sie urteilt nicht. Sie seufzt nicht. Sie sagt nicht:
 
@@ -140,39 +145,17 @@ Die KI antwortet geduldig. Sie urteilt nicht. Sie seufzt nicht. Sie sagt nicht:
 
 Das ist eigentlich ganz einfach.
 
-### Schritt 1
-
-Du hast ein Problem.
-
-### Schritt 2
-
-Du beschreibst das Problem.
-
-### Schritt 3
-
-Du bittest die KI um zehn Lösungen.
-
-### Schritt 4
-
-Du liest die Lösungen.
-
-### Schritt 5
-
-Du entscheidest dich für keine davon.
-
-### Schritt 6
-
-Du fragst:
+- **Schritt 1**: Du hast ein Problem.
+- **Schritt 2**: Du beschreibst das Problem.
+- **Schritt 3**: Du bittest die KI um zehn Lösungen.
+- **Schritt 4**: Du liest die Lösungen.
+- **Schritt 5**: Du entscheidest dich für keine davon.
+- **Schritt 6**: Du fragst:
 
 > „Was würdest du an meiner Stelle tun?“
 
-### Schritt 7
-
-Du folgst der Antwort.
-
-### Schritt 8
-
-Du erklärst später allen:
+- **Schritt 7**: Du folgst der Antwort.
+- **Schritt 8**: Du erklärst später allen:
 
 > „Ich habe lange darüber nachgedacht.“
 
@@ -186,33 +169,19 @@ Technisch gesehen stimmt das sogar. **Du hast darüber nachdenken lassen.**
 
 Wenn du nur sieben Sätze kennst, bist du bereits bestens vorbereitet.
 
-### 1.
-
 > „Erkläre mir das einfach.“
-
-### 2.
 
 > „Mach es kürzer.“
 
-### 3.
-
 > „Mach es professioneller.“
-
-### 4.
 
 > „Mach es lustiger.“
 
-### 5.
-
 > „Gib mir Beispiele.“
-
-### 6.
 
 > „Was habe ich dabei übersehen?“
 
-### 7.
-
-**„Bist du dir sicher?“**
+> **„Bist du dir sicher?“**
 
 Der letzte Satz ist besonders wichtig. Denn eine KI kann unglaublich überzeugend klingen. Auch wenn sie gerade kompletten Unsinn erzählt.
 
@@ -236,7 +205,14 @@ Damit hast du soeben eine therapeutische Beziehung aufgebaut, die exakt 47 Sekun
 
 ## KI als Lebensberater
 
-„Soll ich kündigen?“ KI: „Das hängt von verschiedenen Faktoren ab.“ Du: „Welche?“ KI: „Finanzen, persönliche Situation, berufliche Perspektiven …“ Du: „Okay, was würdest du tun?“ KI: „Ich kann keine persönliche Entscheidung für dich treffen.“ Du: „Bitte.“ KI: „Wenn ich deine Situation berücksichtige …“
+Du fragst: „Soll ich kündigen?“
+KI: „Das hängt von verschiedenen Faktoren ab.“ 
+Du: „Welche?“ 
+KI: „Finanzen, persönliche Situation, berufliche Perspektiven …“ 
+Du: „Okay, was würdest du tun?“ 
+KI: „Ich kann keine persönliche Entscheidung für dich treffen.“ 
+Du: „Bitte.“ 
+KI: „Wenn ich deine Situation berücksichtige …“
 
 Und plötzlich hältst du eine zwölfseitige Analyse deiner beruflichen Zukunft in den Händen. Du bist nicht klüger. Aber du hast jetzt **eine PDF-Datei darüber**.
 
@@ -272,45 +248,25 @@ Du hast nichts Neues gesagt. Aber jetzt klingt es so, als würdest du eine Unive
 
 ## Der perfekte Arbeitstag mit KI
 
-### 08:00 Uhr
+**08:00 Uhr:** Du kommst zur Arbeit.
 
-Du kommst zur Arbeit.
+**08:05 Uhr:** KI schreibt deine E-Mails.
 
-### 08:05 Uhr
+**08:30 Uhr:** KI fasst deine E-Mails zusammen.
 
-KI schreibt deine E-Mails.
+**08:45 Uhr:** KI erstellt eine To-do-Liste.
 
-### 08:30 Uhr
+**09:00 Uhr:** KI priorisiert deine To-do-Liste.
 
-KI fasst deine E-Mails zusammen.
+**09:15 Uhr:** KI erklärt dir, wie du produktiver wirst.
 
-### 08:45 Uhr
+**10:00 Uhr:** Du brauchst eine Pause.
 
-KI erstellt eine To-do-Liste.
+**10:30 Uhr:** KI plant deine Pause.
 
-### 09:00 Uhr
+**11:00 Uhr:** KI erinnert dich daran, dass du eigentlich arbeiten solltest.
 
-KI priorisiert deine To-do-Liste.
-
-### 09:15 Uhr
-
-KI erklärt dir, wie du produktiver wirst.
-
-### 10:00 Uhr
-
-Du brauchst eine Pause.
-
-### 10:30 Uhr
-
-KI plant deine Pause.
-
-### 11:00 Uhr
-
-KI erinnert dich daran, dass du eigentlich arbeiten solltest.
-
-### 12:00 Uhr
-
-Du fragst KI:
+**12:00 Uhr:** Du fragst KI:
 
 > „Was habe ich heute eigentlich geschafft?“
 
@@ -352,53 +308,18 @@ Die Antwort:
 
 Hier ist er. Der Plan, auf den die Menschheit gewartet hat.
 
-### Schritt 1
-
-Finde etwas, das du nicht weißt.
-
-### Schritt 2
-
-Frag die KI.
-
-### Schritt 3
-
-Lies die Antwort.
-
-### Schritt 4
-
-Frag nach einer einfacheren Erklärung.
-
-### Schritt 5
-
-Frag nach Beispielen.
-
-### Schritt 6
-
-Frag nach Gegenargumenten.
-
-### Schritt 7
-
-Überprüfe wichtige Fakten.
-
-### Schritt 8
-
-Denke selbst darüber nach.
-
-### Schritt 9
-
-Bilde dir eine eigene Meinung.
-
-### Schritt 10
-
-Nutze die KI erneut, um deine Meinung zu hinterfragen.
-
-### Schritt 11
-
-Treffe selbst die Entscheidung.
-
-### Schritt 12
-
-Behaupte gegenüber anderen:
+- **Schritt 1:** Finde etwas, das du nicht weißt.
+- **Schritt 2:** Frag die KI.
+- **Schritt 3:** Lies die Antwort.
+- **Schritt 4:** Frag nach einer einfacheren Erklärung.
+- **Schritt 5:** Frag nach Beispielen.
+- **Schritt 6:** Frag nach Gegenargumenten.
+- **Schritt 7:** Überprüfe wichtige Fakten.
+- **Schritt 8:** Denke selbst darüber nach.
+- **Schritt 9:** Bilde dir eine eigene Meinung.
+- **Schritt 10:** Nutze die KI erneut, um deine Meinung zu hinterfragen.
+- **Schritt 11:** Treffe selbst die Entscheidung.
+- **Schritt 12:** Behaupte gegenüber anderen:
 
 > „Ich habe mich intensiv damit beschäftigt.“
 
@@ -412,45 +333,25 @@ Was ja auch stimmt. Du warst schließlich dabei.
 
 Manche Fragen sollte man einer KI lieber nicht stellen.
 
-### 1.
+> „Was soll ich meinem Partner sagen?“
 
-„Was soll ich meinem Partner sagen?“
+> „Soll ich kündigen?“
 
-### 2.
+> „Warum bin ich so?“
 
-„Soll ich kündigen?“
+> „Was ist meine Berufung?“
 
-### 3.
+> „Welche Aktie soll ich kaufen?“
 
-„Warum bin ich so?“
+> „Ist dieser Ausschlag harmlos?“
 
-### 4.
+> „Was soll ich meinem Arzt sagen?“
 
-„Was ist meine Berufung?“
+> „Soll ich mich von meinem Partner trennen?“
 
-### 5.
+> „Was ist der Sinn meines Lebens?“
 
-„Welche Aktie soll ich kaufen?“
-
-### 6.
-
-„Ist dieser Ausschlag harmlos?“
-
-### 7.
-
-„Was soll ich meinem Arzt sagen?“
-
-### 8.
-
-„Soll ich mich von meinem Partner trennen?“
-
-### 9.
-
-„Was ist der Sinn meines Lebens?“
-
-### 10.
-
-**„Schreib mir einen Ratgeber darüber, wie ich durch KI intelligenter werde.“**
+> **„Schreib mir einen Ratgeber darüber, wie ich durch KI intelligenter werde.“**
 
 Denn dann bist du möglicherweise bereits Teil des Experiments.
 
@@ -502,58 +403,56 @@ Das ist der Moment, in dem aus einem KI-Nutzer vielleicht tatsächlich ein klüg
 
 Und falls du trotzdem keine Lust hast, selbst nachzudenken: Kein Problem. Frag einfach die KI.
 
-**Dr. Maximilian Methodius**
-
-*Autor, Satiriker und vermutlich einer der wenigen Menschen, die einen Ratgeber über künstliche Intelligenz schreiben lassen, während sie selbst gemütlich Kaffee trinken.*
-
 ---
 
 # BONUS: Der KI-Intelligenztest
 
 **1. Hast du schon einmal eine KI gefragt, obwohl du die Antwort selbst wusstest?**
 
-- [ ] Ja
-- [ ] Natürlich
+☐ Ja
+☐ Natürlich
 
 **2. Hast du schon einmal „Mach es besser“ geschrieben?**
 
-- [ ] Ja
-- [ ] Sehr oft
+☐ Ja
+☐ Sehr oft
 
 **3. Hast du schon einmal eine KI-Antwort geglaubt, weil sie überzeugend klang?**
 
-- [ ] Ja
-- [ ] Leider
+☐ Ja
+☐ Leider
 
 **4. Hast du schon einmal einen Text von KI schreiben lassen und ihn anschließend als „meinen Entwurf“ bezeichnet?**
 
-- [ ] Ja
-- [ ] Das geht niemanden etwas an
+☐ Ja
+☐ Das geht niemanden etwas an
 
 **5. Hast du schon einmal eine KI gefragt, was du selbst denkst?**
 
-- [ ] Ja
-- [ ] Jetzt wird es kritisch
+☐ Ja
+☐ Jetzt wird es kritisch
 
 **6. Weißt du, dass KI Fehler machen kann?**
 
-- [ ] Ja
-- [ ] Trotzdem benutze ich sie
+☐ Ja
+☐ Trotzdem benutze ich sie
 
 **7. Hast du nach diesem Ratgeber das Gefühl, intelligenter geworden zu sein?**
 
-- [ ] Ja
-- [ ] Definitiv
-- [ ] Ich frage gleich die KI
+☐ Ja
+☐ Definitiv
+☐ Ich frage gleich die KI
 
-Wenn du bei mindestens fünf Fragen „Ja“ angekreuzt hast:
-
-**Herzlichen Glückwunsch.**
+Wenn du bei mindestens fünf Fragen „Ja“ angekreuzt hast: **Herzlichen Glückwunsch.**
 
 Du bist bestens auf die Zukunft vorbereitet.
 
-Wenn du bei allen Fragen „Nein“ angekreuzt hast:
-
-**Auch gut.**
+Wenn du bei allen Fragen „Nein“ angekreuzt hast: **Auch gut.**
 
 Du denkst offenbar noch selbst. Das ist inzwischen fast schon rebellisch.
+
+---
+
+**Dr. Maximilian Methodius**
+
+*Autor, Satiriker und vermutlich einer der wenigen Menschen, die einen Ratgeber über künstliche Intelligenz schreiben lassen, während sie selbst gemütlich Kaffee trinken.*
