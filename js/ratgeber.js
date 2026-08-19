@@ -25,7 +25,8 @@ const ratgeberRohdaten = [
   "Smalltalk für Fortgeschrittene",
   "Stress reduzieren durch Faulheit",
   "Intelligent werden mit KI",
-  "Muskelkater ohne Training"
+  "Muskelkater ohne Training",
+  "Erfolgreich werden ohne Leistung"
 ];
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel }-Objekte um,
