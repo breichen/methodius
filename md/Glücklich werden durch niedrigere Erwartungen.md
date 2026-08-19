@@ -156,25 +156,11 @@ Was, wenn du einfach deinen Arbeitstag überstehst? Was, wenn du nicht CEO wirst
 
 Dein neues Karriereziel:
 
-### Montag
-
-Arbeiten.
-
-### Dienstag
-
-Arbeiten.
-
-### Mittwoch
-
-Weiterarbeiten.
-
-### Donnerstag
-
-Fast geschafft.
-
-### Freitag
-
-**Sieg.**
+- **Montag**: Arbeiten.
+- **Dienstag**: Arbeiten.
+- **Mittwoch**: Weiterarbeiten.
+- **Donnerstag**: Fast geschafft.
+- **Freitag**: **Sieg.**
 
 ---
 
@@ -234,9 +220,7 @@ Vielleicht weil du dein echtes Leben mit den **besten fünf Minuten aus dem Lebe
 
 Perfektion klingt wunderbar. Aber sie ist anstrengend. Die perfekte Wohnung. Der perfekte Körper. Der perfekte Partner. Der perfekte Job. Das perfekte Frühstück. Der perfekte Urlaub. Das perfekte Leben.
 
-Wir haben eine Alternative:
-
-### Gut genug.
+Wir haben eine Alternative: **Gut genug**.
 
 Die Wohnung ist sauber genug. Das Essen ist lecker genug. Der Urlaub ist erholsam genug. Der Job ist okay genug. Die Beziehung funktioniert. Und du bist nicht völlig erschöpft. **Das ist verdächtig nah an Glück.**
 
@@ -254,7 +238,7 @@ Unser Maßstab ist einfacher.
 
 Ja? **Erfolg.**
 
-### Hast du etwas gegessen, das dir geschmeckt hat?
+### Hast du etwas gegessen, was dir geschmeckt hat?
 
 Ja? **Erfolg.**
 
@@ -274,45 +258,16 @@ Ja? **Erfolg.**
 
 Hier ist er. Der Plan, auf den die Menschheit gewartet hat.
 
-### Schritt 1
-
-Setze ein Ziel.
-
-### Schritt 2
-
-Halbiere es.
-
-### Schritt 3
-
-Halbiere es noch einmal.
-
-### Schritt 4
-
-Frage dich: **„Muss ich das überhaupt?“**
-
-### Schritt 5
-
-Wenn nein: Lass es.
-
-### Schritt 6
-
-Wenn ja: Mach es.
-
-### Schritt 7
-
-Wenn es funktioniert: Freu dich.
-
-### Schritt 8
-
-Wenn es nicht funktioniert: Sag: **„Habe ich ja kommen sehen.“**
-
-### Schritt 9
-
-Mach dir einen Kaffee.
-
-### Schritt 10
-
-Lebe weiter.
+- **Schritt 1**: Setze ein Ziel.
+- **Schritt 2**: Halbiere es.
+- **Schritt 3**: Halbiere es noch einmal.
+- **Schritt 4**: Frage dich: **„Muss ich das überhaupt?“**
+- **Schritt 5**: Wenn nein: Lass es.
+- **Schritt 6**: Wenn ja: Mach es.
+- **Schritt 7**: Wenn es funktioniert: Freu dich.
+- **Schritt 8**: Wenn es nicht funktioniert: Sag: **„Habe ich ja kommen sehen.“**
+- **Schritt 9**: Mach dir einen Kaffee.
+- **Schritt 10**: Lebe weiter.
 
 ---
 
@@ -432,51 +387,43 @@ Beantworte folgende Fragen:
 
 **1. Erwartest du vom Wochenende, dass es großartig wird?**
 
-- [ ] Ja
-- [ ] Ich wäre schon mit Ausschlafen zufrieden
+☐ Ja
+☐ Ich wäre schon mit Ausschlafen zufrieden
 
 **2. Erwartest du, dass Menschen immer pünktlich sind?**
 
-- [ ] Ja
-- [ ] Nein, ich kenne Menschen
+☐ Ja
+☐ Nein, ich kenne Menschen
 
 **3. Erwartest du vom Wetter, dass es sich an deine Pläne hält?**
 
-- [ ] Ja
-- [ ] Ich habe offenbar noch Hoffnung
+☐ Ja
+☐ Ich habe offenbar noch Hoffnung
 
 **4. Hast du dich schon einmal über einen Parkplatz gefreut?**
 
-- [ ] Ja
-- [ ] Sehr
+☐ Ja
+☐ Sehr
 
 **5. Hast du schon einmal gedacht: „Hauptsache, heute passiert nichts“?**
 
-- [ ] Ja
-- [ ] Das ist inzwischen mein Lebensmotto
+☐ Ja
+☐ Das ist inzwischen mein Lebensmotto
 
 **6. Kannst du dich über kleine Dinge freuen?**
 
-- [ ] Ja
-- [ ] Eine funktionierende Kaffeemaschine macht meinen Tag
+☐ Ja
+☐ Eine funktionierende Kaffeemaschine macht meinen Tag
 
 **7. Hast du verstanden, dass niedrige Erwartungen nicht dasselbe sind wie ein niedriges Leben?**
 
-- [ ] Ja
-- [ ] Jetzt schon
-- [ ] Ich erwarte, dass ich die Antwort morgen verstehe
+☐ Ja
+☐ Jetzt schon
+☐ Ich erwarte, dass ich die Antwort morgen verstehe
 
-Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast:
+Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast: **Herzlichen Glückwunsch.** Du bist auf dem besten Weg zu einem erstaunlich entspannten Leben.
 
-**Herzlichen Glückwunsch.**
-
-Du bist auf dem besten Weg zu einem erstaunlich entspannten Leben.
-
-Und wenn du nur eine Frage mit „Ja“ beantwortet hast:
-
-Auch gut.
-
-**Wir hatten ohnehin keine hohen Erwartungen.**
+Und wenn du nur eine Frage mit „Ja“ beantwortet hast: Auch gut. **Wir hatten ohnehin keine hohen Erwartungen.**
 
 **Dr. Maximilian Methodius**
 
