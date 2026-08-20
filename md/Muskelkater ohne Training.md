@@ -180,31 +180,13 @@ Das ist wissenschaftlich beeindruckend. Du musst nicht einmal wissen, was du ges
 
 Unser empfohlenes Wochenprogramm:
 
-### Montag
-
-„Diese Woche muss ich unbedingt wieder Sport machen.“
-
-### Dienstag
-
-„Ich fange morgen an.“
-
-### Mittwoch
-
-„Heute passt es zeitlich nicht.“
-
-### Donnerstag
-
-„Ich hatte gestern einen langen Tag.“
-
-### Freitag
-
-„Am Wochenende habe ich mehr Zeit.“
-
-### Samstag
-
-„Heute erhole ich mich.“
-
-### Sonntag
+- **Montag**: „Diese Woche muss ich unbedingt wieder Sport machen.“
+- **Dienstag**: „Ich fange morgen an.“
+- **Mittwoch**: „Heute passt es zeitlich nicht.“
+- **Donnerstag**: „Ich hatte gestern einen langen Tag.“
+- **Freitag**: „Am Wochenende habe ich mehr Zeit.“
+- **Samstag**: „Heute erhole ich mich.“
+- **Sonntag**: 
 
 > **„Ich glaube, ich habe Muskelkater.“**
 
@@ -246,23 +228,11 @@ Niemand weiß genau, was das bedeutet. Aber es klingt hervorragend.
 
 Ein guter Muskelkater ist nichts wert, wenn niemand ihn erkennt. Deshalb brauchst du das richtige Gesicht.
 
-### Stufe 1
-
-Leichtes Stirnrunzeln.
-
-### Stufe 2
-
-Beim Aufstehen kurz die Augen schließen.
-
-### Stufe 3
-
-Beim Treppensteigen hörbar ausatmen.
-
-### Stufe 4
-
-Sich nach fünf Stufen am Geländer festhalten.
-
-### Stufe 5
+- **Stufe 1**: Leichtes Stirnrunzeln.
+- **Stufe 2**: Beim Aufstehen kurz die Augen schließen.
+- **Stufe 3**: Beim Treppensteigen hörbar ausatmen.
+- **Stufe 4**: Sich nach fünf Stufen am Geländer festhalten.
+- **Stufe 5**: 
 
 > „Ich glaube, ich brauche heute wirklich Ruhe.“
 
@@ -330,53 +300,18 @@ Was ist passiert? Nichts. Und genau das ist die Revolution.
 
 Hier ist er. Der Plan, auf den Millionen Menschen gewartet haben.
 
-### Schritt 1
-
-Denke über Sport nach.
-
-### Schritt 2
-
-Öffne deine Sporttasche.
-
-### Schritt 3
-
-Schließe sie wieder.
-
-### Schritt 4
-
-Gehe eine Treppe hoch.
-
-### Schritt 5
-
-Seufze.
-
-### Schritt 6
-
-Setze dich hin.
-
-### Schritt 7
-
-Stehe wieder auf.
-
-### Schritt 8
-
-Seufze erneut.
-
-### Schritt 9
-
-Behaupte, du hättest Muskelkater.
-
-### Schritt 10
-
-Erkläre, dass du dich heute regenerieren musst.
-
-### Schritt 11
-
-Lege dich aufs Sofa.
-
-### Schritt 12
-
-**Regeneriere.**
+- **Schritt 1**: Denke über Sport nach.
+- **Schritt 2**: Öffne deine Sporttasche.
+- **Schritt 3**: Schließe sie wieder.
+- **Schritt 4**: Gehe eine Treppe hoch.
+- **Schritt 5**: Seufze.
+- **Schritt 6**: Setze dich hin.
+- **Schritt 7**: Stehe wieder auf.
+- **Schritt 8**: Seufze erneut.
+- **Schritt 9**: Behaupte, du hättest Muskelkater.
+- **Schritt 10**: Erkläre, dass du dich heute regenerieren musst.
+- **Schritt 11**: Lege dich aufs Sofa.
+- **Schritt 12**: **Regeneriere.**
 
 ---
 
@@ -407,6 +342,8 @@ Dann langsam aufstehen. Kurz stöhnen. Und wieder ins Bett gehen.
 Aber denk daran: **Muskelkater ist kein Leistungsnachweis.** Du musst niemandem beweisen, dass du trainiert hast. Und du musst auch nicht jeden Schmerz als sportlichen Erfolg feiern.
 
 Wenn du wirklich trainieren möchtest: Trainiere. Wenn du dich ausruhen möchtest: Ruh dich aus. Und wenn du heute einfach nur auf dem Sofa liegen möchtest: Nenne es **Regeneration.** Das klingt sofort professioneller.
+
+---
 
 **Dr. Maximilian Methodius**
 
