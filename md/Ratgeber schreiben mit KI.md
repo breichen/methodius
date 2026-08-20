@@ -14,9 +14,7 @@ Früher musste man dafür recherchieren. Man musste sich ein Thema überlegen, I
 
 Heute ist das anders. Heute kannst du einfach eine KI fragen. Du schreibst: „Schreib mir einen lustigen Ratgeber über Gartenarbeit.“ Und wenige Sekunden später erhältst du 47 Kapitel, ein Vorwort, einen Bonus-Test und ein Schlusswort, in dem erklärt wird, dass der Garten eigentlich nur eine Metapher für das Leben ist.
 
-**Die Zukunft ist da.**
-
-Und sie hat sehr viel zu sagen.
+**Die Zukunft ist da.** Und sie hat sehr viel zu sagen.
 
 ---
 
@@ -66,11 +64,7 @@ Jetzt hat die KI eine Richtung.
 
 Allerdings gibt es auch hier eine gewisse Gefahr. Wenn du zu viele Vorgaben machst, beginnt die KI, Dinge zu tun, die du nie verlangt hast. Sie schreibt plötzlich: **„Natürlich! Hier ist dein umfassender, unterhaltsamer und zugleich wissenschaftlich fundierter Ratgeber …“**
 
-Und du weißt sofort:
-
-**Das wird lang.**
-
-Sehr lang.
+Und du weißt sofort: **Das wird lang.** Sehr lang.
 
 ---
 
@@ -88,11 +82,7 @@ Weil „revolutionär“ keine konkrete Aussage enthält. Es verspricht lediglic
 
 Ein besonders geschickter Autor schreibt deshalb: **„Die revolutionäre Methode, morgens aufzustehen, ohne wirklich aufzustehen.“**
 
-Schon klingt das nach einem Bestseller.
-
-Ob die Methode funktioniert, ist eine andere Frage.
-
-Aber immerhin gibt es jetzt eine Methode.
+Schon klingt das nach einem Bestseller. Ob die Methode funktioniert, ist eine andere Frage. Aber immerhin gibt es jetzt eine Methode.
 
 ---
 
@@ -122,15 +112,11 @@ Viele Anfänger glauben, ein Ratgeber müsse ständig neue Informationen liefern
 
 Ein guter Ratgeber darf seine zentrale Erkenntnis regelmäßig wiederholen. Wenn dein Buch beispielsweise davon handelt, dass man weniger arbeiten sollte, kannst du in Kapitel 2 erklären, warum weniger Arbeit gut ist. In Kapitel 5 kannst du erklären, warum noch weniger Arbeit besser ist. In Kapitel 8 kannst du erklären, dass Menschen zu viel arbeiten.
 
-Und in Kapitel 14 kannst du schließlich feststellen:
-
-**„Wie wir bereits in Kapitel 2 gesehen haben, arbeiten Menschen zu viel.“**
+Und in Kapitel 14 kannst du schließlich feststellen: **„Wie wir bereits in Kapitel 2 gesehen haben, arbeiten Menschen zu viel.“**
 
 Damit entsteht der Eindruck von wissenschaftlicher Stringenz. Du erinnerst den Leser an eine Erkenntnis, die er bereits kennt.
 
-Das nennt man nicht Wiederholung.
-
-Das nennt man **Vertiefung**.
+Das nennt man nicht Wiederholung. Das nennt man **Vertiefung**.
 
 ---
 
@@ -140,7 +126,7 @@ Das nennt man **Vertiefung**.
 
 Kein moderner Ratgeber ist vollständig ohne einen Test. Der Test sollte möglichst einfache Fragen enthalten, die der Leser eigentlich schon während des Lesens beantworten konnte.
 
-Zum Beispiel: **„Hast du das Problem, das dieses Buch lösen möchte?“**
+Zum Beispiel: **„Hast du das Problem, das dieser Ratgeber lösen möchte?“**
 
 ☐ Ja  
 ☐ Nein  
@@ -160,9 +146,7 @@ Und schließlich: **„Hast du dieses Buch bis hierhin gelesen?“**
 
 Der große Vorteil solcher Tests besteht darin, dass der Leser selbst überprüfen kann, ob das Buch etwas gebracht hat.
 
-Wenn nicht, ist das nicht deine Schuld.
-
-Der Leser hat vermutlich eine falsche Antwort angekreuzt.
+Wenn nicht, ist das nicht deine Schuld. Der Leser hat vermutlich eine falsche Antwort angekreuzt.
 
 ---
 
@@ -170,9 +154,7 @@ Der Leser hat vermutlich eine falsche Antwort angekreuzt.
 
 ## Wie man der KI sagt, dass sie lustiger sein soll
 
-Das ist schwieriger, als es klingt.
-
-Du schreibst:
+Das ist schwieriger als es klingt. Du schreibst:
 
 > „Mach es lustiger.“
 
@@ -180,11 +162,7 @@ Die KI antwortet:
 
 > „Natürlich! Hier ist eine noch lustigere Version.“
 
-Dann macht sie einen Witz über Kaffee.
-
-Warum Kaffee?
-
-Niemand weiß es.
+Dann macht sie einen Witz über Kaffee. Warum Kaffee? Niemand weiß es.
 
 Kaffee ist für KI ungefähr das, was ein Gartenzwerg für einen deutschen Vorgarten ist: **Er passt immer irgendwie hinein.**
 
@@ -198,27 +176,15 @@ Damit hast du das Grundprinzip des modernen Satire-Ratgebers ziemlich genau besc
 
 ## Der Kampf gegen die KI-Floskel
 
-Die KI liebt bestimmte Formulierungen. Zum Beispiel:
-
-**„In der heutigen schnelllebigen Welt …“**
-
-Sobald du diesen Satz liest, weißt du: Jetzt wird es allgemein.
+Die KI liebt bestimmte Formulierungen. Zum Beispiel: **„In der heutigen schnelllebigen Welt …“** Sobald du diesen Satz liest, weißt du: Jetzt wird es allgemein.
 
 Danach folgen häufig Formulierungen wie „Immer mehr Menschen“, „Experten sind sich einig“, „Das klingt zunächst überraschend“ oder „Doch genau hier liegt der entscheidende Punkt“.
 
 Diese Formulierungen sind nicht grundsätzlich schlecht. Aber wenn du sie oft genug verwendest, klingt dein Ratgeber irgendwann so, als hätte ihn ein Motivationskalender geschrieben.
 
-Deshalb solltest du die KI regelmäßig daran erinnern:
+Deshalb solltest du die KI regelmäßig daran erinnern: **„Bitte keine Floskeln.“**
 
-**„Bitte keine Floskeln.“**
-
-Die KI wird antworten:
-
-**„Natürlich.“**
-
-Und anschließend eine Floskel verwenden.
-
-Das gehört zum Prozess.
+Die KI wird antworten: **„Natürlich.“** Und anschließend eine Floskel verwenden. Das gehört zum Prozess.
 
 ---
 
@@ -230,21 +196,11 @@ Eine KI hat keine eigene Persönlichkeit. Deshalb musst du ihr eine geben.
 
 Du kannst beispielsweise sagen: „Schreibe wie ein übermotivierter Professor.“ Oder: „Schreibe wie ein unseriöser Selbsthilfe-Guru.“ Oder: „Schreibe wie ein Mensch, der sehr überzeugt ist, obwohl er keine Ahnung hat.“
 
-Letzteres ist besonders interessant.
-
-Denn genau daraus entstehen die besten pseudoklugen Passagen.
-
-Zum Beispiel:
+Letzteres ist besonders interessant. Denn genau daraus entstehen die besten pseudoklugen Passagen. Zum Beispiel:
 
 > „Nach neuesten Erkenntnissen ist davon auszugehen, dass die psychologische Wahrnehmung von Alltagsgegenständen in direktem Zusammenhang mit ihrer emotionalen Verfügbarkeit steht.“
 
-Das klingt hervorragend.
-
-Es bedeutet ungefähr:
-
-**„Menschen mögen Dinge mehr, wenn sie sie mögen.“**
-
-Aber niemand merkt das sofort.
+Das klingt hervorragend. Es bedeutet ungefähr: **„Menschen mögen Dinge mehr, wenn sie sie mögen.“** Aber niemand merkt das sofort.
 
 ---
 
@@ -260,11 +216,7 @@ Deshalb gilt: **Je wissenschaftlicher etwas klingt, desto genauer solltest du pr
 
 Besonders vorsichtig solltest du bei Formulierungen wie „Studien zeigen“, „Wissenschaftler haben herausgefunden“ oder „Experten empfehlen“ sein. Wenn keine konkrete Quelle genannt wird, solltest du nachprüfen, ob die behauptete Erkenntnis tatsächlich existiert.
 
-Natürlich könntest du auch einfach schreiben: **„Unsere interne Forschung hat ergeben …“**
-
-Das klingt seriös.
-
-Und die interne Forschung kann in diesem Fall aus dir und der KI bestehen.
+Natürlich könntest du auch einfach schreiben: **„Unsere interne Forschung hat ergeben …“** Das klingt seriös. Und die interne Forschung kann in diesem Fall aus dir und der KI bestehen.
 
 ---
 
@@ -272,9 +224,7 @@ Und die interne Forschung kann in diesem Fall aus dir und der KI bestehen.
 
 ## Das perfekte Kapitelende
 
-Jedes Kapitel braucht einen starken Schluss. Ideal ist eine überraschende Erkenntnis.
-
-Zum Beispiel:
+Jedes Kapitel braucht einen starken Schluss. Ideal ist eine überraschende Erkenntnis. Zum Beispiel:
 
 > „Vielleicht besteht die Lösung also nicht darin, mehr zu tun. Vielleicht besteht sie darin, weniger zu tun.“
 
@@ -282,15 +232,9 @@ Das funktioniert erstaunlich oft.
 
 Du kannst es auf nahezu jedes Thema anwenden. Beim Sport: **„Vielleicht besteht die Lösung nicht darin, mehr zu trainieren, sondern weniger.“** Beim Essen: **„Vielleicht besteht die Lösung nicht darin, mehr zu essen, sondern bewusster.“** Beim Geld: **„Vielleicht besteht die Lösung nicht darin, mehr auszugeben, sondern weniger.“**
 
-Und wenn du wirklich keine Idee hast, verwendest du den Joker:
+Und wenn du wirklich keine Idee hast, verwendest du den Joker: **„Vielleicht liegt die eigentliche Erkenntnis darin, dass wir die falsche Frage gestellt haben.“**
 
-**„Vielleicht liegt die eigentliche Erkenntnis darin, dass wir die falsche Frage gestellt haben.“**
-
-Das ist hervorragend.
-
-Es bedeutet zwar nicht besonders viel.
-
-Aber es klingt nach einem Wendepunkt.
+Das ist hervorragend. Es bedeutet zwar nicht besonders viel. Aber es klingt nach einem Wendepunkt.
 
 ---
 
@@ -300,30 +244,20 @@ Aber es klingt nach einem Wendepunkt.
 
 Hier ist er, der ultimative Plan für deinen eigenen KI-Ratgeber.
 
-**Schritt 1:** Finde ein Thema.  
-**Schritt 2:** Nenne es revolutionär.  
-**Schritt 3:** Bitte die KI um ein Inhaltsverzeichnis.  
-**Schritt 4:** Bitte sie, daraus einen Ratgeber zu machen.  
-**Schritt 5:** Bitte sie, ihn lustiger zu machen.  
-**Schritt 6:** Bitte sie, die Absätze länger zu machen.  
-**Schritt 7:** Bitte sie, weniger Floskeln zu verwenden.  
-**Schritt 8:** Lies den Text.
+- **Schritt 1:** Finde ein Thema.  
+- **Schritt 2:** Nenne es revolutionär.  
+- **Schritt 3:** Bitte die KI um ein Inhaltsverzeichnis.  
+- **Schritt 4:** Bitte sie, daraus einen Ratgeber zu machen.  
+- **Schritt 5:** Bitte sie, ihn lustiger zu machen.  
+- **Schritt 6:** Bitte sie, die Absätze länger zu machen.  
+- **Schritt 7:** Bitte sie, weniger Floskeln zu verwenden.  
+- **Schritt 8:** Lies den Text.
 
-Dann stellst du fest, dass die KI trotzdem Floskeln verwendet.
+Dann stellst du fest, dass die KI trotzdem Floskeln verwendet. Du bittest sie erneut darum. Daraufhin erhältst du eine neue Version, in der jetzt jedes Kapitel mit „In der heutigen schnelllebigen Welt“ beginnt.
 
-Du bittest sie erneut darum. Daraufhin erhältst du eine neue Version, in der jetzt jedes Kapitel mit „In der heutigen schnelllebigen Welt“ beginnt.
+Du gibst auf. Du bittest die KI, alles noch einmal neu zu schreiben. Und plötzlich erhältst du eine überraschend gute Version.
 
-Du gibst auf.
-
-Du bittest die KI, alles noch einmal neu zu schreiben.
-
-Und plötzlich erhältst du eine überraschend gute Version.
-
-Anschließend behauptest du gegenüber deinen Freunden, du hättest **„mit KI gearbeitet“**.
-
-Das klingt wesentlich besser als:
-
-**„Ich habe die KI ungefähr 37-mal neu schreiben lassen.“**
+Anschließend behauptest du gegenüber deinen Freunden, du hättest **„mit KI gearbeitet“**. Das klingt wesentlich besser als: **„Ich habe die KI ungefähr 37-mal neu schreiben lassen.“**
 
 ---
 
@@ -331,21 +265,11 @@ Das klingt wesentlich besser als:
 
 ## Der wichtigste Satz eines KI-Autors
 
-Es gibt einen Satz, den jeder moderne Autor kennen sollte:
+Es gibt einen Satz, den jeder moderne Autor kennen sollte: **„Das ist noch nicht ganz das, was ich meine.“**
 
-**„Das ist noch nicht ganz das, was ich meine.“**
+Dieser Satz ist mächtig. Denn du musst der KI nicht immer erklären, warum es nicht passt. Du kannst einfach sagen: „Mehr Humor.“ „Weniger übertrieben.“ „Absurd, aber glaubwürdig.“ „Mehr wie ein echter Ratgeber.“ „Weniger KI-mäßig.“ „Längere Absätze.“ „Kürzere Kapitel.“ „Doch wieder etwas länger.“
 
-Dieser Satz ist mächtig.
-
-Denn du musst der KI nicht immer erklären, warum es nicht passt. Du kannst einfach sagen: „Mehr Humor.“ „Weniger übertrieben.“ „Absurd, aber glaubwürdig.“ „Mehr wie ein echter Ratgeber.“ „Weniger KI-mäßig.“ „Längere Absätze.“ „Kürzere Kapitel.“ „Doch wieder etwas länger.“
-
-Die KI wird all das geduldig umsetzen.
-
-Manchmal sogar gleichzeitig.
-
-Das ist der große Vorteil eines digitalen Mitarbeiters:
-
-**Er kündigt nicht.**
+Die KI wird all das geduldig umsetzen. Manchmal sogar gleichzeitig. Das ist der große Vorteil eines digitalen Mitarbeiters: **Er kündigt nicht.**
 
 ---
 
@@ -357,17 +281,9 @@ Jetzt wird es philosophisch.
 
 Du gibst der KI ein Thema. Sie schreibt den Ratgeber. Du überarbeitest ihn. Die KI überarbeitet deine Überarbeitung. Du korrigierst die KI. Die KI korrigiert deine Korrektur.
 
-Irgendwann sitzt ihr beide vor einem Text und keiner weiß mehr, wer eigentlich welchen Satz geschrieben hat.
+Irgendwann sitzt ihr beide vor einem Text und keiner weiß mehr, wer eigentlich welchen Satz geschrieben hat. Vielleicht ist das die Zukunft des Schreibens. Vielleicht ist es aber auch einfach eine sehr aufwendige Form des gemeinsamen Herumprobierens.
 
-Vielleicht ist das die Zukunft des Schreibens.
-
-Vielleicht ist es aber auch einfach eine sehr aufwendige Form des gemeinsamen Herumprobierens.
-
-Eines steht jedoch fest:
-
-**Der Ratgeber ist irgendwann fertig.**
-
-Und das ist das Wichtigste.
+Eines steht jedoch fest: **Der Ratgeber ist irgendwann fertig.** Und das ist das Wichtigste.
 
 Denn ein unfertiger genialer Ratgeber hilft niemandem. Ein fertiger mittelmäßiger Ratgeber kann dagegen immerhin veröffentlicht werden.
 
@@ -409,13 +325,9 @@ Du fragst die KI, ob dein Prompt gut ist.
 
 Die KI antwortet:
 
-**„Ja, dein Prompt ist bereits sehr gut formuliert.“**
+> **„Ja, dein Prompt ist bereits sehr gut formuliert.“**
 
-Du fühlst dich bestätigt.
-
-Und hast gerade eine künstliche Intelligenz um eine positive Rückmeldung gebeten.
-
-**Herzlichen Glückwunsch.**
+Du fühlst dich bestätigt. Und hast gerade eine künstliche Intelligenz um eine positive Rückmeldung gebeten. **Herzlichen Glückwunsch.**
 
 ---
 
@@ -427,13 +339,9 @@ KI kann unglaublich viel. Sie kann Ideen entwickeln, Texte strukturieren, Formul
 
 Sie kann allerdings auch interessante Absätze langweilig machen. Sie kann aus einem guten Gedanken fünf mittelmäßige Kapitel machen und dir anschließend erklären, warum genau diese fünf Kapitel für die Leserreise unverzichtbar sind.
 
-Aber genau deshalb ist die wichtigste Fähigkeit eines KI-Autors nicht das perfekte Prompten.
+Aber genau deshalb ist die wichtigste Fähigkeit eines KI-Autors nicht das perfekte Prompten. Es ist **Urteilsvermögen**.
 
-Es ist **Urteilsvermögen**.
-
-Du musst wissen, wann der Text gut ist. Du musst wissen, wann er langweilig ist. Du musst merken, wenn die KI Unsinn schreibt. Und du musst manchmal einfach sagen:
-
-**„Nein. Das ist Quatsch.“**
+Du musst wissen, wann der Text gut ist. Du musst wissen, wann er langweilig ist. Du musst merken, wenn die KI Unsinn schreibt. Und du musst manchmal einfach sagen: **„Nein. Das ist Quatsch.“**
 
 Das ist ein Satz, den eine KI zwar akzeptiert, aber wahrscheinlich nicht von selbst sagen würde.
 
@@ -443,29 +351,15 @@ Das ist ein Satz, den eine KI zwar akzeptiert, aber wahrscheinlich nicht von sel
 
 ## Der letzte große Trick
 
-Wenn du wirklich erfolgreich mit KI Ratgeber schreiben möchtest, gibt es noch einen letzten Trick.
-
-Lass die KI nicht einfach alles für dich erledigen.
-
-Gib ihr stattdessen Aufgaben.
+Wenn du wirklich erfolgreich mit KI Ratgeber schreiben möchtest, gibt es noch einen letzten Trick: Lass die KI nicht einfach alles für dich erledigen. Gib ihr stattdessen Aufgaben.
 
 Lass sie zehn Titel vorschlagen. Lass sie verschiedene Kapitelstrukturen entwickeln. Lass sie eine Idee absurder machen. Lass sie einen langweiligen Absatz umformulieren. Lass sie Gegenargumente finden. Lass sie prüfen, ob sich etwas wiederholt.
 
-Aber die Richtung solltest du selbst vorgeben.
+Aber die Richtung solltest du selbst vorgeben. Denn sonst passiert etwas Merkwürdiges: Du beginnst mit einer Idee und erhältst am Ende einen Text über etwas völlig anderes.
 
-Denn sonst passiert etwas Merkwürdiges: Du beginnst mit einer Idee und erhältst am Ende einen Text über etwas völlig anderes.
+Du wolltest einen Ratgeber über Sparen schreiben. Die KI hat daraus einen Ratgeber über Minimalismus gemacht. Dann wurde daraus ein Buch über Selbstdisziplin. Und im letzten Kapitel geht es plötzlich um die emotionale Beziehung des Menschen zu seinem Kühlschrank.
 
-Du wolltest einen Ratgeber über Sparen schreiben.
-
-Die KI hat daraus einen Ratgeber über Minimalismus gemacht.
-
-Dann wurde daraus ein Buch über Selbstdisziplin.
-
-Und im letzten Kapitel geht es plötzlich um die emotionale Beziehung des Menschen zu seinem Kühlschrank.
-
-Das kann zwar interessant sein.
-
-Aber es war nicht dein Buch.
+Das kann zwar interessant sein. Aber es war nicht dein Buch.
 
 ---
 
@@ -483,9 +377,7 @@ Oder:
 
 **„Nein, noch einmal.“**
 
-Vielleicht wird KI irgendwann bessere Ratgeber schreiben als Menschen.
-
-Vielleicht tut sie es bereits.
+Vielleicht wird KI irgendwann bessere Ratgeber schreiben als Menschen. Vielleicht tut sie es bereits.
 
 Aber solange Menschen bereit sind, 17 Kapitel über einen völlig absurden Gegenstand zu lesen, wird es immer eine Aufgabe geben, die keine KI allein übernehmen kann:
 
@@ -495,9 +387,7 @@ Und manchmal reicht dafür ein einziger Satz:
 
 > „Schreib mir einen satirischen und lustigen Ratgeber über …“
 
-Der Rest ist Geschichte.
-
-Oder zumindest Text.
+Der Rest ist Geschichte. Oder zumindest Text.
 
 ---
 
@@ -563,17 +453,11 @@ Du bist bereits auf dem besten Weg.
 
 Du brauchst keine Schreibmaschine. Du brauchst keinen Verlag. Du brauchst keinen Ghostwriter. Du brauchst nicht einmal zwingend eine Idee.
 
-Du brauchst eine KI, einen Computer und die Fähigkeit, gelegentlich zu erkennen, wann ein Satz völlig bescheuert klingt.
+Du brauchst eine KI, einen Computer und die Fähigkeit, gelegentlich zu erkennen, wann ein Satz völlig bescheuert klingt. Denn genau darin liegt die große Kunst des Schreibens mit künstlicher Intelligenz:
 
-Denn genau darin liegt die große Kunst des Schreibens mit künstlicher Intelligenz:
+**Die Maschine produziert den Text. Du entscheidest, welcher davon bleiben darf.**
 
-**Die Maschine produziert den Text.**
-
-**Du entscheidest, welcher davon bleiben darf.**
-
-Und wenn du dabei irgendwann feststellst, dass die KI eigentlich den besseren Ratgeber geschrieben hat, gibt es eine einfache Lösung:
-
-Schreib einfach einen neuen Ratgeber darüber.
+Und wenn du dabei irgendwann feststellst, dass die KI eigentlich den besseren Ratgeber geschrieben hat, gibt es eine einfache Lösung: Schreib einfach einen neuen Ratgeber darüber.
 
 **„Wie man damit umgeht, wenn die KI besser schreibt als man selbst.“**
 
