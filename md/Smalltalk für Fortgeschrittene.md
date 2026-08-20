@@ -145,25 +145,11 @@ Jetzt beginnt das Problem. Denn die Person hat Bilder. Viele Bilder. Sehr viele 
 
 Die richtige Strategie:
 
-### Phase 1
-
-„Wow.“
-
-### Phase 2
-
-„Sieht schön aus.“
-
-### Phase 3
-
-„Da muss ich auch unbedingt mal hin.“
-
-### Phase 4
-
-„Und wie war das Essen?“
-
-### Phase 5
-
-**Flucht.**
+- **Phase 1:** „Wow.“
+- **Phase 2:** „Sieht schön aus.“
+- **Phase 3:** „Da muss ich auch unbedingt mal hin.“
+- **Phase 4:** „Und wie war das Essen?“
+- **Phase 5:** **Flucht.**
 
 ---
 
@@ -171,23 +157,13 @@ Die richtige Strategie:
 
 ## Smalltalk auf Partys
 
-Eine Party ist ein Ort, an dem sich Menschen freiwillig versammeln, um sich gegenseitig zu fragen:
-
-**„Woher kennst du denn den Gastgeber?“**
+Eine Party ist ein Ort, an dem sich Menschen freiwillig versammeln, um sich gegenseitig zu fragen: **„Woher kennst du denn den Gastgeber?“**
 
 Diese Frage ist praktisch unvermeidbar. Deshalb solltest du vorbereitet sein.
 
-### Antwort A
-
-„Über die Arbeit.“
-
-### Antwort B
-
-„Über Freunde.“
-
-### Antwort C
-
-„Das ist eine längere Geschichte.“
+- **Antwort A:** „Über die Arbeit.“
+- **Antwort B:** „Über Freunde.“
+- **Antwort C:** „Das ist eine längere Geschichte.“
 
 Diese Antwort ist besonders effektiv. Denn jetzt musst du entweder die Geschichte erzählen oder wirst gefragt: **„Echt? Wie denn?“**
 
@@ -206,9 +182,7 @@ Manchmal ist Smalltalk so anstrengend, dass man lieber mit Gegenständen spricht
 -  Er erzählt nichts über seinen Urlaub. 
 -  Er hat meistens Bier. 
 
-Der Kühlschrank ist damit objektiv der bessere Gesprächspartner.
-
-Leider ist es gesellschaftlich noch nicht vollständig akzeptiert, auf einer Party fünfzehn Minuten neben einem Kühlschrank zu stehen und ihm zuzunicken. Aber wir arbeiten daran.
+Der Kühlschrank ist damit objektiv der bessere Gesprächspartner. Leider ist es gesellschaftlich noch nicht vollständig akzeptiert, auf einer Party fünfzehn Minuten neben einem Kühlschrank zu stehen und ihm zuzunicken. Aber wir arbeiten daran.
 
 ---
 
@@ -300,9 +274,7 @@ Dann kommt: „Ganz schön voll heute.“ Ihr seid zu zweit im Aufzug. Aber ja. 
 
 Danach: „Welches Stockwerk?“ „Drei.“ „Ah.“ Pause. Der Aufzug fährt. Du hast noch zwölf Sekunden. Nutze sie weise.
 
-**„Na, dann noch einen schönen Tag.“**
-
-Du steigst aus. Du hast gewonnen.
+**„Na, dann noch einen schönen Tag.“** Du steigst aus. Du hast gewonnen.
 
 ---
 
@@ -328,67 +300,20 @@ Damit behauptest du rückwirkend, dass das Gespräch angenehm war. Eine geniale 
 
 Hier ist er. Der Plan, auf den die Menschheit gewartet hat.
 
-### Schritt 1
-
-Betritt einen Raum.
-
-### Schritt 2
-
-Suche eine bekannte Person.
-
-### Schritt 3
-
-Lächle.
-
-### Schritt 4
-
-Sage:
-
-**„Na, wie geht's?“**
-
-### Schritt 5
-
-Höre ungefähr 40 Prozent der Antwort.
-
-### Schritt 6
-
-Sage:
-
-**„Ja, verstehe.“**
-
-### Schritt 7
-
-Stelle eine beliebige Anschlussfrage.
-
-### Schritt 8
-
-Nicke.
-
-### Schritt 9
-
-Warte auf eine Gesprächspause.
-
-### Schritt 10
-
-Sage:
-
-**„Aber gut …“**
-
-### Schritt 11
-
-Verabschiede dich.
-
-### Schritt 12
-
-Suche einen Raum mit möglichst wenigen Menschen.
-
-### Schritt 13
-
-Atme.
-
-### Schritt 14
-
-Sei stolz auf dich.
+- **Schritt 1:** Betritt einen Raum.
+- **Schritt 2:** Suche eine bekannte Person.
+- **Schritt 3:** Lächle.
+- **Schritt 4:** Sage: **„Na, wie geht's?“**
+- **Schritt 5:** Höre ungefähr 40 Prozent der Antwort.
+- **Schritt 6:** Sage: **„Ja, verstehe.“**
+- **Schritt 7:** Stelle eine beliebige Anschlussfrage.
+- **Schritt 8:** Nicke.
+- **Schritt 9:** Warte auf eine Gesprächspause.
+- **Schritt 10:** Sage: **„Aber gut …“**
+- **Schritt 11:** Verabschiede dich.
+- **Schritt 12:** Suche einen Raum mit möglichst wenigen Menschen.
+- **Schritt 13:** Atme.
+- **Schritt 14:** Sei stolz auf dich.
 
 ---
 
@@ -398,45 +323,16 @@ Sei stolz auf dich.
 
 Manche Themen sollte man nur unter ärztlicher Aufsicht ansprechen.
 
-### 1. Gehalt
-
-„Was verdienst du eigentlich?“ Nein.
-
-### 2. Gewicht
-
-„Du siehst aber verändert aus.“ **Nein.**
-
-### 3. Kinder
-
-„Wann bekommt ihr endlich welche?“ Sofortiger gesellschaftlicher Ausnahmezustand.
-
-### 4. Trennung
-
-„Seid ihr eigentlich noch zusammen?“ Vielleicht möchtest du einfach sterben.
-
-### 5. Politik
-
-„Also ich finde ja …“ **Nein.**
-
-### 6. Krankheiten
-
-„Mein Rücken macht auch Probleme.“ Plötzlich seid ihr beide 74.
-
-### 7. Immobilien
-
-„Wir haben damals für 180.000 gekauft.“ Danke für nichts.
-
-### 8. Ernährung
-
-„Ich esse seit drei Wochen kein Gluten.“ Niemand hat gefragt.
-
-### 9. Sport
-
-„Ich gehe jeden Morgen um fünf laufen.“ Wir hassen dich.
-
-### 10. Die eigene Kreuzfahrt
-
-Niemand möchte 94 Fotos sehen. Niemand.
+1. **Gehalt**: „Was verdienst du eigentlich?“ Nein.
+2. **Gewicht**: „Du siehst aber verändert aus.“ **Nein.**
+3. **Kinder**: „Wann bekommt ihr endlich welche?“ Sofortiger gesellschaftlicher Ausnahmezustand.
+4. **Trennung**: „Seid ihr eigentlich noch zusammen?“ Vielleicht möchtest du einfach sterben.
+5. **Politik**: „Also ich finde ja …“ **Nein.**
+6. **Krankheiten**: „Mein Rücken macht auch Probleme.“ Plötzlich seid ihr beide 74.
+7. **Immobilien**: „Wir haben damals für 180.000 gekauft.“ Danke für nichts.
+8. **Ernährung**: „Ich esse seit drei Wochen kein Gluten.“ Niemand hat gefragt.
+9. **Sport**: „Ich gehe jeden Morgen um fünf laufen.“ Wir hassen dich.
+10. **Die eigene Kreuzfahrt**: Niemand möchte 94 Fotos sehen. Niemand.
 
 ---
 
@@ -613,15 +509,11 @@ Deshalb haben wir für dich die 100 wichtigsten Smalltalk-Sätze zusammengestell
 
 Nach jahrzehntelanger Forschung konnten fünf besonders leistungsfähige Smalltalk-Sätze identifiziert werden:
 
-**„Ach echt?“** funktioniert bei praktisch jeder Geschichte.
-
-**„Und sonst?“** funktioniert, wenn dir nichts anderes einfällt.
-
-**„Das kann ich mir vorstellen.“** funktioniert sogar dann, wenn du es dir überhaupt nicht vorstellen kannst.
-
-**„Da hast du recht.“** funktioniert besonders gut, wenn du keine Ahnung hast, worum es geht.
-
-Und schließlich: **„Na dann, bis bald.“** funktioniert immer. Außer natürlich, du bist gerade auf einer Beerdigung. Dann vielleicht nicht.
+- **„Ach echt?“** funktioniert bei praktisch jeder Geschichte.
+- **„Und sonst?“** funktioniert, wenn dir nichts anderes einfällt.
+- **„Das kann ich mir vorstellen.“** funktioniert sogar dann, wenn du es dir überhaupt nicht vorstellen kannst.
+- **„Da hast du recht.“** funktioniert besonders gut, wenn du keine Ahnung hast, worum es geht.
+- Und schließlich: **„Na dann, bis bald.“** funktioniert immer. Außer natürlich, du bist gerade auf einer Beerdigung. Dann vielleicht nicht.
 
 ---
 
@@ -659,9 +551,7 @@ Und wenn dir irgendwann jemand sagt:
 
 > „Ich finde Smalltalk total anstrengend.“
 
-Dann schau ihn verständnisvoll an. Nicke langsam. Und sage:
-
-**„Ja. Das Wetter ist aber auch echt komisch geworden.“**
+Dann schau ihn verständnisvoll an. Nicke langsam. Und sage: **„Ja. Das Wetter ist aber auch echt komisch geworden.“**
 
 ---
 
@@ -672,49 +562,43 @@ Beantworte folgende Fragen:
 **1. Hast du schon einmal über das Wetter gesprochen?**
 
 ☐ Ja
- ☐ Mehrmals täglich
- ☐ Ich habe eine Wetter-App
+☐ Mehrmals täglich
+☐ Ich habe eine Wetter-App
 
 **2. Hast du schon einmal gefragt: „Und, was machst du so?“**
 
 ☐ Ja
- ☐ Leider ja
- ☐ Ich bin vermutlich selbst schuld
+☐ Leider ja
+☐ Ich bin vermutlich selbst schuld
 
 **3. Weißt du, worum es in den letzten drei Minuten deines Gesprächs ging?**
 
 ☐ Ja
- ☐ Ungefähr
- ☐ Ich habe genickt
+☐ Ungefähr
+☐ Ich habe genickt
 
 **4. Hast du schon einmal „Ach echt?“ gesagt, obwohl du überhaupt nichts echt fandest?**
 
 ☐ Ja
- ☐ Natürlich
+☐ Natürlich
 
 **5. Hast du schon einmal ein Gespräch nur durch das Wetter gerettet?**
 
 ☐ Ja
- ☐ Mehrfach
- ☐ Das Wetter hat mich noch nie im Stich gelassen
+☐ Mehrfach
+☐ Das Wetter hat mich noch nie im Stich gelassen
 
 **6. Hast du den Unterschied zwischen Smalltalk und einem guten Gespräch verstanden?**
 
 ☐ Ja
- ☐ Jetzt schon
- ☐ Ich möchte trotzdem weiter über das Wetter reden
+☐ Jetzt schon
+☐ Ich möchte trotzdem weiter über das Wetter reden
 
-Wenn du bei mindestens drei Fragen „Ja“ angekreuzt hast:
+Wenn du bei mindestens drei Fragen „Ja“ angekreuzt hast: **Herzlichen Glückwunsch.** Du bist offiziell gesellschaftsfähig.
 
-**Herzlichen Glückwunsch.**
+Und wenn du bei allen Fragen „Nein“ angekreuzt hast: **Auch gut.** Du hast gerade erfolgreich Smalltalk vermieden.
 
-Du bist offiziell gesellschaftsfähig.
-
-Und wenn du bei allen Fragen „Nein“ angekreuzt hast:
-
-**Auch gut.**
-
-Du hast gerade erfolgreich Smalltalk vermieden.
+---
 
 **Dr. Maximilian Methodius**
 
