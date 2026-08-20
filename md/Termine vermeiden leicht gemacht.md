@@ -356,6 +356,106 @@ Und wenn du dir nicht sicher bist: **Verschiebe die Entscheidung auf später.** 
 
 ---
 
+# BONUS: Das „Termine vermeiden leicht gemacht“-Quiz
+
+Finde bei jeder Frage die Antwort, die dich deinem Ziel näherbringt: **möglichst wenige Termine wahrnehmen, ohne jemals den Eindruck zu erwecken, du würdest Termine grundsätzlich vermeiden.**
+
+
+**1. Jemand fragt dich: „Hast du nächste Woche Zeit?“**
+
+☐ „Nächste Woche ist bei mir gerade ziemlich voll. Ich müsste schauen.“
+☐ „Grundsätzlich gerne, aber ich kann noch nicht sagen, wie es zeitlich aussieht.“
+☐ „Lass uns das kurzfristig entscheiden.“
+☐ „Ich melde mich.“
+
+
+**2. Du bekommst eine Einladung zu einem Termin, den du nicht unbedingt brauchst. Was machst du?**
+
+☐ Du klickst auf „Vielleicht“.
+☐ Du stellst dir die Frage, ob deine Anwesenheit wirklich notwendig ist.
+☐ Du antwortest erst einmal gar nicht.
+☐ Du öffnest die Einladung, liest sie aufmerksam und hoffst anschließend, dass jemand anderes absagt.
+
+**3. Jemand möchte einen Termin für morgen vereinbaren. Wie reagierst du?**
+
+☐ „Morgen könnte schwierig werden.“
+☐ „Lass uns lieber kurzfristig schauen.“
+☐ „Ich muss erst einmal sehen, was morgen alles ansteht.“
+☐ „Ich möchte mich da noch nicht zu früh festlegen.“
+
+
+**4. Du hast einem Termin bereits zugesagt und möchtest jetzt nicht mehr hingehen. Was ist die beste Strategie?**
+
+☐ „Bei mir ist leider etwas dazwischengekommen.“
+☐ „Ich hatte den Termin völlig anders eingeplant.“
+☐ „Ich merke gerade, dass ich heute doch nicht so gut kann.“
+☐ „Können wir das verschieben?“
+
+
+**5. Jemand schickt dir drei konkrete Terminvorschläge. Was tust du?**
+
+☐ Du antwortest: „Ich muss erst schauen.“
+☐ Du fragst nach weiteren Terminen.
+☐ Du sagst, dass keiner der Termine optimal passt.
+☐ Du antwortest erst, wenn alle drei Termine bereits vorbei sind.
+
+
+**6. Du wirst gefragt: „Warum kannst du denn nie einen Termin machen?“**
+
+☐ „Es ist gerade einfach ziemlich viel los.“
+☐ „Ich habe momentan sehr viele Dinge gleichzeitig.“
+☐ „Ich möchte mir zeitlich nicht zu viel vornehmen.“
+☐ „Ich muss gerade ein bisschen auf meine Kapazitäten achten.“
+
+**7. Dein Kalender sieht komplett leer aus. Jemand entdeckt das und schlägt deshalb einen Termin vor. Was sagst du?**
+
+☐ „Der Kalender sieht gerade leerer aus, als er tatsächlich ist.“
+☐ „Da sind noch einige Dinge, die ich nicht eingetragen habe.“
+☐ „Ich versuche gerade, mir bewusst etwas Puffer zu lassen.“
+☐ „Ich habe die Woche noch nicht final geplant.“
+
+
+**8. Jemand sagt: „Dann machen wir einfach nächste Woche einen Termin.“**
+
+☐ „Lass uns das erst einmal offenhalten.“
+☐ „Ich würde lieber noch einmal schauen, wie es sich entwickelt.“
+☐ „Meld dich einfach noch einmal.“
+☐ „Vielleicht ergibt sich ja kurzfristig etwas.“
+
+**9. Du möchtest einen Termin vermeiden, ohne direkt abzusagen. Welche Formulierung verwendest du?**
+
+☐ „Grundsätzlich gerne.“
+☐ „Aktuell ist es etwas schwierig.“
+☐ „Ich weiß noch nicht genau, wie es bei mir zeitlich aussieht.“
+☐ „Lass uns das noch einmal abstimmen.“
+
+
+**10. Du hast seit fünf Tagen nicht auf eine Einladung reagiert. Was ist jetzt die beste Strategie?**
+
+☐ „Sorry, die Einladung ist bei mir irgendwie untergegangen.“
+☐ „Ich wollte mich längst melden.“
+☐ „Ich war die letzten Tage ziemlich eingespannt.“
+☐ Noch einen Tag warten, damit die Erklärung „Ich war gerade in einer ziemlich intensiven Phase“ glaubwürdiger wird.
+
+
+**Herzlichen Glückwunsch!** Du hast die höchste Form der Terminvermeidung erreicht. Du sagst weder zu noch ab. Du lässt Termine einfach langsam aus der Realität verschwinden.
+
+Menschen schreiben dir inzwischen:
+
+> „Sag einfach Bescheid, wenn du irgendwann Zeit hast.“
+
+Das ist der Ritterschlag. Du hast es geschafft, dass andere Menschen die Terminvereinbarung selbst aufgeben.
+
+Wenn du während des gesamten Quiz mindestens einmal gedacht hast:
+
+> „Eigentlich könnte ich das auch einfach ehrlich absagen.“
+
+dann bist du noch nicht verloren. Du hast lediglich kurz Kontakt mit der gefährlichen Idee der **klaren Kommunikation** gehabt.
+
+Widerstehe ihr. Eine ehrliche Absage beendet einen Termin. Eine vage Antwort hingegen eröffnet einen Prozess. Und Prozesse können bekanntlich sehr lange dauern.
+
+---
+
 **Dr. Maximilian Methodius**
 
 *Autor, Satiriker und überzeugter Befürworter einer Welt, in der möglichst viele Termine durch ein freundliches „Lass uns das einfach lassen“ ersetzt werden.*
