@@ -291,45 +291,16 @@ Und genieße es. Morgen darf wieder alles mittelmäßig sein.
 
 ## Die zehn Dinge, von denen du weniger erwarten solltest
 
-### 1. Das Wetter
-
-Es wird nicht auf deine Pläne Rücksicht nehmen.
-
-### 2. Andere Menschen
-
-Sie sind nicht dafür da, deine Erwartungen zu erfüllen.
-
-### 3. Das Internet
-
-Es wird trotzdem langsam sein.
-
-### 4. Restaurants
-
-Auch Köche machen Fehler.
-
-### 5. Technik
-
-Sie funktioniert exakt bis zu dem Moment, in dem du sie dringend brauchst.
-
-### 6. Der Montag
-
-Er wird nicht plötzlich schön.
-
-### 7. Silvester
-
-Es ist auch nur ein Abend mit zu vielen Menschen und zu teurem Sekt.
-
-### 8. Geburtstage
-
-Nicht jeder Geburtstag muss legendär sein.
-
-### 9. Das neue Jahr
-
-Es wird nicht automatisch dein Jahr.
-
-### 10. Du selbst
-
-Du musst nicht jeden Tag großartig sein.
+1. **Das Wetter**: Es wird nicht auf deine Pläne Rücksicht nehmen.
+2. **Andere Menschen**: Sie sind nicht dafür da, deine Erwartungen zu erfüllen.
+3. **Das Internet**: Es wird trotzdem langsam sein.
+4. **Restaurants**: Auch Köche machen Fehler.
+5. **Technik**: Sie funktioniert exakt bis zu dem Moment, in dem du sie dringend brauchst.
+6. **Der Montag**: Er wird nicht plötzlich schön.
+7. **Silvester**: Es ist auch nur ein Abend mit zu vielen Menschen und zu teurem Sekt.
+8. **Geburtstage**: Nicht jeder Geburtstag muss legendär sein.
+9. **Das neue Jahr**: Es wird nicht automatisch dein Jahr.
+10. **Du selbst**: Du musst nicht jeden Tag großartig sein.
 
 ---
 
@@ -424,6 +395,8 @@ Beantworte folgende Fragen:
 Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast: **Herzlichen Glückwunsch.** Du bist auf dem besten Weg zu einem erstaunlich entspannten Leben.
 
 Und wenn du nur eine Frage mit „Ja“ beantwortet hast: Auch gut. **Wir hatten ohnehin keine hohen Erwartungen.**
+
+---
 
 **Dr. Maximilian Methodius**
 
