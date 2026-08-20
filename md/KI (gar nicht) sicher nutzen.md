@@ -173,41 +173,18 @@ Du hast ein vertrauliches Dokument. Vielleicht 30 Seiten. Du möchtest nicht all
 
 Sehr effizient. Das Problem: Das Dokument enthält möglicherweise Informationen, die du nicht unbedingt in einen KI-Chat eingeben solltest. Deshalb empfehlen wir eine revolutionäre Zwischenlösung:
 
-### Schritt 1
+- **Schritt 1**: Dokument öffnen.
+- **Schritt 2**: Sensible Informationen erkennen.
+- **Schritt 3**: Diese Informationen entfernen oder anonymisieren.
+- **Schritt 4**: Dokument zusammenfassen lassen.
 
-Dokument öffnen.
+Alternative:
 
-### Schritt 2
-
-Sensible Informationen erkennen.
-
-### Schritt 3
-
-Diese Informationen entfernen oder anonymisieren.
-
-### Schritt 4
-
-Dokument zusammenfassen lassen.
-
-### Alternative
-
-Schritt 1: Dokument öffnen.
-
-### Schritt 2
-
-Alles markieren.
-
-### Schritt 3
-
-Kopieren.
-
-### Schritt 4
-
-„Bitte kurz zusammenfassen.“
-
-### Schritt 5
-
-**Nicht darüber nachdenken.**
+- **Schritt 1**: Dokument öffnen.
+- **Schritt 2**: Alles markieren.
+- **Schritt 3**: Kopieren.
+- **Schritt 4**: „Bitte kurz zusammenfassen.“
+- **Schritt 5**: **Nicht darüber nachdenken.**
 
 ---
 
@@ -387,53 +364,18 @@ Nur weil die KI dann besser antworten könnte, heißt das nicht, dass sie diese 
 
 Hier ist er. Der ultimative Plan.
 
-### Schritt 1
-
-Verwende KI.
-
-### Schritt 2
-
-Sei begeistert.
-
-### Schritt 3
-
-Denke kurz darüber nach, welche Informationen du wirklich teilen musst.
-
-### Schritt 4
-
-Entferne unnötige persönliche oder vertrauliche Daten.
-
-### Schritt 5
-
-Anonymisiere Namen, Kundennummern und andere Identifikatoren, wenn sie nicht benötigt werden.
-
-### Schritt 6
-
-Verwende keine Passwörter oder Zugangsdaten in Prompts.
-
-### Schritt 7
-
-Prüfe die Einstellungen und Datenschutzoptionen des jeweiligen KI-Dienstes.
-
-### Schritt 8
-
-Verwende für sensible Unternehmensdaten nur Lösungen, die dafür ausdrücklich freigegeben sind.
-
-### Schritt 9
-
-Überprüfe wichtige Antworten unabhängig.
-
-### Schritt 10
-
-Wenn eine Antwort unglaublich klingt: **Überprüfen.**
-
-### Schritt 11
-
-Wenn eine Antwort sehr überzeugend klingt: **Auch überprüfen.**
-
-### Schritt 12
-
-Wenn du denkst:
+- **Schritt 1**: Verwende KI.
+- **Schritt 2**: Sei begeistert.
+- **Schritt 3**: Denke kurz darüber nach, welche Informationen du wirklich teilen musst.
+- **Schritt 4**: Entferne unnötige persönliche oder vertrauliche Daten.
+- **Schritt 5**: Anonymisiere Namen, Kundennummern und andere Identifikatoren, wenn sie nicht benötigt werden.
+- **Schritt 6**: Verwende keine Passwörter oder Zugangsdaten in Prompts.
+- **Schritt 7**: Prüfe die Einstellungen und Datenschutzoptionen des jeweiligen KI-Dienstes.
+- **Schritt 8**: Verwende für sensible Unternehmensdaten nur Lösungen, die dafür ausdrücklich freigegeben sind.
+- **Schritt 9**: Überprüfe wichtige Antworten unabhängig.
+- **Schritt 10**: Wenn eine Antwort unglaublich klingt: **Überprüfen.**
+- **Schritt 11**: Wenn eine Antwort sehr überzeugend klingt: **Auch überprüfen.**
+- **Schritt 12**: Wenn du denkst:
 
 > „Das wird schon stimmen.“
 
@@ -505,65 +447,58 @@ Und KI macht. Das ist fantastisch. Aber manchmal solltest du vor dem „Mach mal
 
 ---
 
-# Kapitel 18
-
-## Der ultimative KI-Sicherheitstest
+# BONUS: Der ultimative KI-Sicherheitstest
 
 Beantworte folgende Fragen:
 
 **1. Hast du schon einmal einer KI etwas erzählt, was du einem Fremden nicht erzählen würdest?**
 
-- [ ] Ja
-- [ ] Ich hoffe, sie vergisst es
+☐ Ja
+☐ Ich hoffe, sie vergisst es
 
 **2. Hast du schon einmal ein Dokument hochgeladen, ohne jede Seite vorher anzusehen?**
 
-- [ ] Ja
-- [ ] Es waren nur 48 Seiten
+☐ Ja
+☐ Es waren nur 48 Seiten
 
 **3. Hast du schon einmal einen Screenshot hochgeladen und erst danach bemerkt, dass oben rechts deine E-Mail-Adresse stand?**
 
-- [ ] Ja
-- [ ] Natürlich
+☐ Ja
+☐ Natürlich
 
 **4. Hast du schon einmal eine KI-Antwort geglaubt, weil sie sehr selbstbewusst formuliert war?**
 
-- [ ] Ja
-- [ ] Sie klang wirklich überzeugend
+☐ Ja
+☐ Sie klang wirklich überzeugend
 
 **5. Hast du schon einmal vertrauliche Informationen in einen Prompt kopiert, weil du „nur schnell“ Hilfe brauchtest?**
 
-- [ ] Ja
-- [ ] Nur dieses eine Mal
+☐ Ja
+☐ Nur dieses eine Mal
 
 **6. Hast du schon einmal eine Antwort ungeprüft übernommen?**
 
-- [ ] Ja
-- [ ] Sie hatte sogar Aufzählungspunkte
+☐ Ja
+☐ Sie hatte sogar Aufzählungspunkte
 
 **7. Weißt du, welche Datenschutz- und Datennutzungseinstellungen dein KI-Dienst verwendet?**
 
-- [ ] Ja
-- [ ] Ich wollte die Datenschutzerklärung eigentlich noch lesen
+☐ Ja
+☐ Ich wollte die Datenschutzerklärung eigentlich noch lesen
 
 **8. Hast du jemals gedacht: „Die KI wird schon wissen, was sie tut“?**
 
-- [ ] Ja
-- [ ] Mehrfach
+☐ Ja
+☐ Mehrfach
 
-Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast:
-
-# Herzlichen Glückwunsch!
+Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast: **Herzlichen Glückwunsch!**
 
 Du bist ein moderner KI-Nutzer. Du hast jetzt gelernt:
 
-**KI ist mächtig.**
-
-**KI ist praktisch.**
-
-**KI kann Fehler machen.**
-
-**Und deine persönlichen Daten sind keine kostenlosen Bonusinformationen.**
+- **KI ist mächtig.**
+- **KI ist praktisch.**
+- **KI kann Fehler machen.**
+- **Und deine persönlichen Daten sind keine kostenlosen Bonusinformationen.**
 
 ---
 
@@ -584,6 +519,8 @@ Dann ist das wahrscheinlich ein ziemlich guter Moment, den Prompt **nicht abzuse
 Oder, wie Dr. Methodius es formuliert:
 
 > **„Die sicherste KI-Nachricht ist manchmal die, die du gar nicht erst abschickst.“**
+
+---
 
 **Dr. Maximilian Methodius**
 
