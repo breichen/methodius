@@ -416,8 +416,6 @@ function parseQuizAusBloecken(bonusBloecke) {
   let i = 1;
   let beschreibung = null;
 
-  // Optionaler Beschreibungstext direkt nach der Überschrift, bevor
-  // die erste Frage kommt (z.B. "Beantworte folgende Fragen:").
   if (bonusBloecke[i] && !/^<p><strong>\d+\./.test(bonusBloecke[i])) {
     beschreibung = bonusBloecke[i];
     i++;
@@ -427,7 +425,9 @@ function parseQuizAusBloecken(bonusBloecke) {
 
   for (; i < bonusBloecke.length; i++) {
     const block = bonusBloecke[i];
-    const frageMatch = block.match(/^<p><strong>\d+\.\s*(.+?)<\/strong><\/p>$/);
+    // NEU: Nummer als eigene Gruppe erfassen, damit sie im Quiz-Overlay
+    // wieder angezeigt werden kann (statt sie beim Parsen zu verwerfen).
+    const frageMatch = block.match(/^<p><strong>(\d+)\.\s*(.+?)<\/strong><\/p>$/);
 
     if (!frageMatch) {
       break;
@@ -441,14 +441,10 @@ function parseQuizAusBloecken(bonusBloecke) {
       .map(o => o.replace(/^☐\s*/, "").trim())
       .filter(Boolean);
 
-    fragen.push({ text: frageMatch[1], optionen });
-    i++; // die Optionen-Zeile wurde mitverarbeitet, überspringen
+    fragen.push({ nummer: frageMatch[1], text: frageMatch[2], optionen });
+    i++;
   }
 
-  // i zeigt jetzt auf den ersten Block NACH der letzten Frage/Antwort -
-  // alles ab hier (z.B. "Herzlichen Glückwunsch...") gehört NICHT mehr
-  // zum Quiz-Objekt, sondern bleibt als normaler Text auf der Buch-Seite
-  // stehen (siehe extrahiereBonusQuiz).
   return { titel, beschreibung, fragen, verbrauchteAnzahl: i };
 }
 
@@ -511,7 +507,7 @@ function zeigeQuizFragen(quiz) {
 
   const fragenHtml = quiz.fragen.map((frage, fIndex) => `
     <fieldset class="quiz-frage">
-      <legend>${frage.text}</legend>
+      <legend>${frage.nummer}. ${frage.text}</legend>
       ${frage.optionen.map((option, oIndex) => `
         <label class="quiz-option">
           <input type="radio" name="quiz-frage-${fIndex}" value="${oIndex}" required>
