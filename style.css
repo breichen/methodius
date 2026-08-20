@@ -1256,6 +1256,34 @@ hr {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
 }
 
+.ratgeber-tabelle th,
+.ratgeber-tabelle td {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border, #ddd);
+  text-align: left;
+}
+
+.ratgeber-tabelle thead {
+  background: var(--color-accent, #f0f0f0);
+}
+
+.ratgeber-tabelle th {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Kompaktere Darstellung im Blättermodus, passend zur restlichen
+   Schriftgröße dort (siehe .flipbook-page p, li). */
+.flipbook-page .ratgeber-tabelle {
+  font-size: 0.82rem;
+  margin: 14px 0 16px;
+}
+
+.flipbook-page .ratgeber-tabelle th,
+.flipbook-page .ratgeber-tabelle td {
+  padding: 5px 8px;
+}
+
 /* ============================================
    RESPONSIVE: HANDY
    ============================================ */

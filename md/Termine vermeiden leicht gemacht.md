@@ -46,11 +46,11 @@ Die Formel lautet:
 **= keine Entschuldigung**  
 **= kein Stress**
 
-Das ist eine beeindruckende Kette. Nehmen wir ein Beispiel. Du hast um 18:00 Uhr einen Termin. Du wohnst 30 Minuten entfernt. Du solltest um 17:20 Uhr losfahren. Du gehst um 17:35 Uhr los. Du findest keinen Parkplatz. 17:52 Uhr. Du rennst. 17:59 Uhr. Du bist völlig außer Atem. 18:04 Uhr. Du kommst an. Du sagst:
+Das ist eine beeindruckende Kette. Nehmen wir ein Beispiel: Du hast um 18:00 Uhr einen Termin. Du wohnst 30 Minuten entfernt. Du solltest um 17:20 Uhr losfahren. Du gehst um 17:35 Uhr los. Du findest keinen Parkplatz. 17:52 Uhr. Du rennst. 17:59 Uhr. Du bist völlig außer Atem. 18:04 Uhr. Du kommst an. Du sagst:
 
 > „Entschuldigung!“
 
-Jetzt betrachten wir unsere Methode. 18:00 Uhr: **Du bist zu Hause.** Du bist nicht am Termin. Aber du bist: **pünktlich zu Hause.**
+Jetzt betrachten wir unsere Methode. 18:00 Uhr: **Du bist zu Hause.** Du bist nicht am Termin. Aber du bist **pünktlich zu Hause.**
 
 ---
 
@@ -60,31 +60,13 @@ Jetzt betrachten wir unsere Methode. 18:00 Uhr: **Du bist zu Hause.** Du bist ni
 
 Nicht jeder Termin ist gleich gefährlich. Besonders riskant sind Termine, bei denen mehrere Dinge gleichzeitig passieren müssen. Zum Beispiel:
 
-### Der 9-Uhr-Termin
-
-Du musst früh aufstehen. Gefährlich.
-
-### Der 8-Uhr-Termin
-
-Noch gefährlicher.
-
-### Der 7-Uhr-Termin
-
-**Menschenverachtend.**
-
-### Der Termin direkt nach einem anderen Termin
-
-Du brauchst Pünktlichkeit zweimal hintereinander. Unverantwortlich.
-
-### Der Termin mit Parkplatzsuche
-
-Du bist bereits verloren.
-
-### Der Termin an einem Ort, an dem du noch nie warst
-
-Du brauchst Navigation.
-
-### Der Termin, bei dem jemand sagt:
+- **Der 9-Uhr-Termin:** Du musst früh aufstehen. Gefährlich.
+- **Der 8-Uhr-Termin:** Noch gefährlicher.
+- **Der 7-Uhr-Termin:** **Menschenverachtend.**
+- **Der Termin direkt nach einem anderen Termin:** Du brauchst Pünktlichkeit zweimal hintereinander. Unverantwortlich.
+- **Der Termin mit Parkplatzsuche:** Du bist bereits verloren.
+- **Der Termin an einem Ort, an dem du noch nie warst:** Du brauchst Navigation.
+- **Der Termin, bei dem jemand sagt:** 
 
 > „Sei bitte wirklich pünktlich.“
 
@@ -148,23 +130,13 @@ Herzlichen Glückwunsch. Der Termin ist weg. Und damit auch das Risiko, zu spät
 
 ## Was tun, wenn der Termin bereits feststeht?
 
-Jetzt wird es schwierig. Der Kalender zeigt:
-
-**Donnerstag, 14:00 Uhr – Termin**
+Jetzt wird es schwierig. Der Kalender zeigt: **Donnerstag, 14:00 Uhr – Termin**
 
 Du hast ihn bereits zugesagt. Kein Problem. Unser System bietet drei Möglichkeiten.
 
-### Möglichkeit A
-
-Verschieben.
-
-### Möglichkeit B
-
-Absagen.
-
-### Möglichkeit C
-
-Den Termin in einen anderen Termin umwandeln.
+- **Möglichkeit A:** Verschieben.
+- **Möglichkeit B:** Absagen.
+- **Möglichkeit C:** Den Termin in einen anderen Termin umwandeln.
 
 Zum Beispiel: „Wir treffen uns um 14 Uhr.“ wird zu:
 
@@ -180,7 +152,7 @@ Aus 60 Minuten Anfahrt plus 60 Minuten Termin werden: **12 Minuten Telefonat.** 
 
 Videokonferenzen sind eine fantastische Erfindung. Du musst nicht: fahren, parken, laufen, den richtigen Eingang suchen, dich verlaufen, oder auf einen Aufzug warten.
 
-Du musst lediglich: **einen Link anklicken.**
+Du musst lediglich **einen Link anklicken.**
 
 Allerdings gibt es auch hier Risiken. Du kannst den Termin vergessen. Dein Mikrofon kann ausgeschaltet sein. Deine Kamera kann nicht funktionieren. Du kannst „Sind Sie schon da?“ hören, obwohl du seit sieben Minuten da bist.
 
@@ -266,7 +238,7 @@ Unser Kalender:
 | 16:00 | Später |
 | 18:00 | Mal schauen |
 
-**Wunderbar.** Du hast sechs Termine. Und gleichzeitig: **keinen einzigen.**
+**Wunderbar.** Du hast sechs Termine. Und gleichzeitig **keinen einzigen.**
 
 ---
 
@@ -381,6 +353,8 @@ Wenn die Antwort „Ja“ lautet: Geh hin. Pünktlich.
 Wenn die Antwort „Nein“ lautet: Sag rechtzeitig ab.
 
 Und wenn du dir nicht sicher bist: **Verschiebe die Entscheidung auf später.** Aber bitte nicht den Termin auf später. Das wäre wieder ein Termin. Und darum geht es in diesem Ratgeber schließlich nicht.
+
+---
 
 **Dr. Maximilian Methodius**
 

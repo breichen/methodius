@@ -65,6 +65,93 @@ if (!buch) {
 }
 
 /* ============================================
+   TABELLEN
+   Erkennt Markdown-Tabellen (Pipe-Syntax mit |---|-Trennzeile),
+   wandelt sie VOR dem eigentlichen Markdown-Parsing in echtes
+   HTML um und setzt sie per Platzhalter wieder in die fertigen
+   Blöcke ein - so bleibt parseMarkdownBloecke() unangetastet.
+   ============================================ */
+
+// Zerlegt eine Tabellenzeile ("| A | B |") in ihre Zellen (["A", "B"]).
+function zerlegeTabellenZeile(zeile) {
+  let z = zeile.trim();
+  if (z.startsWith("|")) z = z.slice(1);
+  if (z.endsWith("|")) z = z.slice(0, -1);
+  return z.split("|").map(zelle => zelle.trim());
+}
+
+// Prüft, ob eine Zeile die Trennzeile einer Tabelle ist (z.B. "|---|---|").
+function istTabellenTrennzeile(zeile) {
+  const zellen = zerlegeTabellenZeile(zeile);
+  return (
+    zellen.length > 0 &&
+    zellen.every(zelle => /^:?-{2,}:?$/.test(zelle))
+  );
+}
+
+// Durchsucht das rohe Markdown zeilenweise nach Tabellen, ersetzt jede
+// gefundene Tabelle durch einen eindeutigen Platzhalter (eigener Absatz)
+// und liefert zusätzlich das fertige HTML pro Tabelle zurück.
+function extrahiereTabellenAusMarkdown(markdown) {
+  const zeilen = markdown.split("\n");
+  const ergebnisZeilen = [];
+  const tabellenHtml = [];
+  let i = 0;
+
+  while (i < zeilen.length) {
+    const koennteTabelleSein =
+      zeilen[i].trim().startsWith("|") &&
+      i + 1 < zeilen.length &&
+      istTabellenTrennzeile(zeilen[i + 1]);
+
+    if (koennteTabelleSein) {
+      const kopfZellen = zerlegeTabellenZeile(zeilen[i]);
+      i += 2; // Kopfzeile + Trennzeile überspringen
+
+      const datenZeilen = [];
+      while (i < zeilen.length && zeilen[i].trim().startsWith("|")) {
+        datenZeilen.push(zerlegeTabellenZeile(zeilen[i]));
+        i++;
+      }
+
+      const theadHtml = `<tr>${kopfZellen
+        .map(zelle => `<th>${zelle}</th>`)
+        .join("")}</tr>`;
+
+      const tbodyHtml = datenZeilen
+        .map(
+          zellen =>
+            `<tr>${zellen.map(zelle => `<td>${zelle}</td>`).join("")}</tr>`
+        )
+        .join("");
+
+      const tabelleIndex = tabellenHtml.length;
+      tabellenHtml.push(
+        `<table class="ratgeber-tabelle"><thead>${theadHtml}</thead><tbody>${tbodyHtml}</tbody></table>`
+      );
+
+      // Leerzeilen drumherum sorgen dafür, dass der Platzhalter als
+      // eigener Block erkannt wird (wie ein normaler Absatz).
+      ergebnisZeilen.push("", `TABELLE_PLATZHALTER_${tabelleIndex}`, "");
+    } else {
+      ergebnisZeilen.push(zeilen[i]);
+      i++;
+    }
+  }
+
+  return { markdown: ergebnisZeilen.join("\n"), tabellenHtml };
+}
+
+// Ersetzt in den fertig geparsten Blöcken jeden Platzhalter-Block
+// durch das zugehörige, bereits fertige Tabellen-HTML.
+function setzeTabellenEin(bloecke, tabellenHtml) {
+  return bloecke.map(block => {
+    const match = block.match(/TABELLE_PLATZHALTER_(\d+)/);
+    return match ? tabellenHtml[Number(match[1])] : block;
+  });
+}
+
+/* ============================================
    MARKDOWN-ÜBERSETZUNG
    Die eigentliche Übersetzung (Überschriften, **fett**, *kursiv*,
    > Zitate, - Listen, --- als Trennlinie) übernimmt parseMarkdownBloecke()
@@ -84,18 +171,19 @@ if (!buch) {
 //   Text stehen - in einem physischen Buch kann man schließlich nicht
 //   klicken, daher zeigt die Blätter-Ansicht das Quiz statisch an.
 function verarbeiteRatgeberMarkdown(markdown) {
-  const roh = parseMarkdownBloecke(markdown);
+  // NEU: Tabellen zuerst herausziehen, damit parseMarkdownBloecke()
+  // die Pipe-Syntax nicht falsch interpretiert.
+  const { markdown: markdownOhneTabellen, tabellenHtml } =
+    extrahiereTabellenAusMarkdown(markdown);
 
-  // Blätter-Ansicht: ganz normale Kapitel-/Autor-Nachbearbeitung,
-  // OHNE den Bonus-Abschnitt herauszuschneiden.
+  const rohMitPlatzhaltern = parseMarkdownBloecke(markdownOhneTabellen);
+  const roh = setzeTabellenEin(rohMitPlatzhaltern, tabellenHtml);
+
+  // ... ab hier bleibt alles wie bisher ...
   const flipbookBloecke = styleAutorErwaehnung(
     bereinigeKapitelUeberschriften(roh)
   );
 
-  // Fließtext: Der BONUS-Abschnitt muss VOR der Kapitel-/Autor-Logik
-  // entfernt werden - sonst hält bereinigeKapitelUeberschriften bzw.
-  // styleAutorErwaehnung ihn versehentlich für das letzte "echte"
-  // Kapitel und die Unterschrift landet am falschen Ort.
   const { bloecke: ohneBonus, quiz } = extrahiereBonusQuiz(roh);
   const fliesstextBloecke = styleAutorErwaehnung(
     bereinigeKapitelUeberschriften(ohneBonus)
