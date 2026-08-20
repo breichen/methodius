@@ -66,9 +66,7 @@ Eine Lage? Mutig. Zwei Lagen? Vorsichtig. Drei Lagen? Vermutlich gut. Ein komple
 
 Natürlich gibt es einen Punkt, an dem du so viel Folie auf dem Kopf trägst, dass du nicht mehr besonders beweglich bist. Aber auch das hat Vorteile. Du kannst dann nicht mehr so leicht in Situationen geraten, in denen du möglicherweise gefährdet sein könntest.
 
-Das ist keine Einschränkung.
-
-Das ist **präventive Immobilität**.
+Das ist keine Einschränkung. Das ist **präventive Immobilität**.
 
 ---
 
@@ -90,11 +88,7 @@ Außerdem solltest du den Einkaufswagen nicht vollständig mit Aluminiumfolie au
 
 Das Büro ist ein besonders interessantes Einsatzgebiet. Hier befinden sich Computer, WLAN, Bluetooth, Drucker, Telefone und mindestens ein Kollege, der seit sechs Monaten behauptet: „Mein WLAN ist heute irgendwie langsam.“
 
-Das ist natürlich verdächtig.
-
-Der professionelle Anwender beginnt deshalb mit einem kleinen Modell. Nicht gleich mit dem vollständigen Helm. Zunächst reicht eine dezente Aluminiumkante, vielleicht unter dem Haar oder hinter den Ohren. Wenn jemand fragt, was du da machst, sagst du einfach:
-
-**„Datenschutz.“**
+Das ist natürlich verdächtig. Der professionelle Anwender beginnt deshalb mit einem kleinen Modell. Nicht gleich mit dem vollständigen Helm. Zunächst reicht eine dezente Aluminiumkante, vielleicht unter dem Haar oder hinter den Ohren. Wenn jemand fragt, was du da machst, sagst du einfach: **„Datenschutz.“**
 
 Dieser Satz funktioniert erstaunlich gut. Er klingt modern, niemand weiß genau, was du meinst, und plötzlich wirkt dein Aluhut nicht mehr paranoid, sondern digital.
 
@@ -106,17 +100,11 @@ Dieser Satz funktioniert erstaunlich gut. Er klingt modern, niemand weiß genau,
 
 Nicht jeder wird deine Entscheidung verstehen. Einige Menschen werden fragen: „Was soll das bringen?“ Andere werden sagen: „Das ist doch Unsinn.“ Wieder andere möchten wissen: „Warum trägst du einen Hut aus Alufolie?“ Bleib gelassen. Du musst nicht auf jede Frage antworten.
 
-Manchmal reicht ein wissender Blick oder ein langsames Nicken. Besonders effektiv ist der Satz:
+Manchmal reicht ein wissender Blick oder ein langsames Nicken. Besonders effektiv ist der Satz: **„Das kann ich dir leider nicht erklären.“**
 
-**„Das kann ich dir leider nicht erklären.“**
+Damit erzeugst du sofort eine Atmosphäre von Geheimwissen. Wenn dein Gegenüber anschließend fragt: „Warum nicht?“, antwortest du einfach: **„Genau.“**
 
-Damit erzeugst du sofort eine Atmosphäre von Geheimwissen. Wenn dein Gegenüber anschließend fragt: „Warum nicht?“, antwortest du einfach:
-
-**„Genau.“**
-
-Damit ist das Gespräch beendet.
-
-Du hast nichts erklärt, nichts bewiesen und trotzdem den Eindruck vermittelt, als würdest du über Informationen verfügen, die dein Gegenüber nicht besitzt. Das ist rhetorisch betrachtet ausgesprochen effizient.
+Damit ist das Gespräch beendet. Du hast nichts erklärt, nichts bewiesen und trotzdem den Eindruck vermittelt, als würdest du über Informationen verfügen, die dein Gegenüber nicht besitzt. Das ist rhetorisch betrachtet ausgesprochen effizient.
 
 ---
 
@@ -140,15 +128,11 @@ Mode muss schließlich nicht immer praktisch sein. Sie muss nur eine Botschaft s
 
 Familienfeiern sind besonders anspruchsvoll. Deine Mutter fragt: „Warum trägst du einen Aluhut?“ Dein Bruder sagt: „Das ist doch völliger Quatsch.“ Deine Tante möchte wissen: „Ist das wegen der Strahlung?“ Jetzt ist Fingerspitzengefühl gefragt.
 
-Beginne niemals sofort mit einer 45-minütigen Erklärung. Das wirkt unsicher. Besser ist ein kurzer Satz:
-
-**„Ich fühle mich damit wohler.“**
+Beginne niemals sofort mit einer 45-minütigen Erklärung. Das wirkt unsicher. Besser ist ein kurzer Satz: **„Ich fühle mich damit wohler.“**
 
 Das ist schwer zu widerlegen.
 
-Wenn anschließend jemand fragt: „Aber bringt das überhaupt etwas?“, antwortest du:
-
-**„Darum geht es nicht.“**
+Wenn anschließend jemand fragt: „Aber bringt das überhaupt etwas?“, antwortest du: **„Darum geht es nicht.“**
 
 Worum es geht, weißt du selbst noch nicht genau. Aber das ist ein Detail. Entscheidend ist, dass du jetzt eine Position hast. Und Positionen müssen schließlich nicht immer durch Fakten gestützt werden. Sonst wären Diskussionen bei Familienfeiern viel zu schnell vorbei.
 
@@ -176,23 +160,15 @@ Ein guter Ratgeber braucht selbstverständlich einen wissenschaftlichen Test. De
 
 Setze deinen Aluhut auf. Warte fünf Minuten. Beobachte die Umgebung. Hat sich etwas verändert?
 
-Nein?
+Nein? Sehr gut.
 
-Sehr gut.
-
-Das bedeutet entweder, dass dein Aluhut hervorragend funktioniert oder dass vorher überhaupt keine Bedrohung vorhanden war.
-
-Beweisen lässt sich beides nicht.
+Das bedeutet entweder, dass dein Aluhut hervorragend funktioniert, oder dass vorher überhaupt keine Bedrohung vorhanden war. Beweisen lässt sich beides nicht.
 
 Deshalb empfehlen wir einen zweiten Test: Nimm den Aluhut wieder ab und warte weitere fünf Minuten. Hat sich jetzt etwas verändert?
 
-Wieder nein?
+Wieder nein? Ausgezeichnet.
 
-Ausgezeichnet.
-
-Du hast soeben den vielleicht wichtigsten wissenschaftlichen Test des gesamten Ratgebers durchgeführt:
-
-**Er hat nichts bewiesen.**
+Du hast soeben den vielleicht wichtigsten wissenschaftlichen Test des gesamten Ratgebers durchgeführt: **Er hat nichts bewiesen.**
 
 ---
 
@@ -242,11 +218,9 @@ Du fragst andere Menschen, warum sie noch keinen tragen.
 
 ### Stufe 7: Erleuchtung
 
-Du erkennst plötzlich:
+Du erkennst plötzlich: **Du bist der Einzige im Raum mit einem Aluhut.**
 
-**Du bist der Einzige im Raum mit einem Aluhut.**
-
-Das ist ein wichtiger Moment. Nicht weil du automatisch recht hast, sondern weil du jetzt sehr leicht zu erkennen bist.
+Das ist ein wichtiger Moment. Nicht weil du automatisch Recht hast, sondern weil du jetzt sehr leicht zu erkennen bist.
 
 ---
 
@@ -254,19 +228,11 @@ Das ist ein wichtiger Moment. Nicht weil du automatisch recht hast, sondern weil
 
 ## Die goldene Regel des Aluhuts
 
-Es gibt eine Regel, die jeder professionelle Anwender kennen muss:
-
-**Ein Aluhut schützt dich nicht vor allem.**
+Es gibt eine Regel, die jeder professionelle Anwender kennen muss: **Ein Aluhut schützt dich nicht vor allem.**
 
 Er schützt dich beispielsweise nicht davor, dass dein Kaffee kalt wird. Er schützt dich nicht davor, dass du zu spät zur Arbeit kommst. Er schützt dich nicht vor einer Steuererklärung und vermutlich auch nicht davor, dass deine Mutter fragt, warum du so aussiehst.
 
-Der Aluhut ist also kein universelles Problemlösungsmittel.
-
-Aber das muss er auch nicht sein. Denn kein Produkt kann alles.
-
-Außer vielleicht ein Schweizer Taschenmesser.
-
-Aber das ist ein anderes Buch.
+Der Aluhut ist also kein universelles Problemlösungsmittel. Aber das muss er auch nicht sein. Denn kein Produkt kann alles. Außer vielleicht ein Schweizer Taschenmesser. Aber das ist ein anderes Buch.
 
 ---
 
@@ -276,9 +242,7 @@ Aber das ist ein anderes Buch.
 
 Nach all unseren Untersuchungen bleibt eine wichtige Erkenntnis: Es gibt Dinge, die wir wissen. Es gibt Dinge, die wir nicht wissen. Und es gibt Dinge, bei denen wir einfach so tun, als wüssten wir sie.
 
-Der Aluhut ist besonders nützlich in der dritten Kategorie.
-
-Denn er gibt einer Unsicherheit eine sichtbare Form. Du weißt nicht, ob etwas gefährlich ist. Also setzt du einen Hut auf. Damit hast du zumindest etwas getan.
+Der Aluhut ist besonders nützlich in der dritten Kategorie. Denn er gibt einer Unsicherheit eine sichtbare Form. Du weißt nicht, ob etwas gefährlich ist. Also setzt du einen Hut auf. Damit hast du zumindest etwas getan.
 
 Und Menschen lieben es, etwas zu tun. Selbst wenn dieses Etwas darin besteht, sich einen glänzenden Kegel auf den Kopf zu setzen.
 
@@ -292,23 +256,11 @@ Irgendwann wirst du deinen Aluhut nicht mehr als Schutz betrachten. Du wirst ihn
 
 Du wirst morgens aufwachen und denken: „Wo ist mein Aluhut?“
 
-Du wirst ihn neben dein Bett legen.
+Du wirst ihn neben dein Bett legen. Du wirst ihn beim Frühstück tragen. Du wirst einen Ersatz-Aluhut im Auto aufbewahren. Und für besonders schwierige Situationen besitzt du vielleicht sogar einen Reise-Aluhut.
 
-Du wirst ihn beim Frühstück tragen.
+Das ist der Moment, in dem dein Hobby zur Infrastruktur geworden ist. Doch auch hier gilt: Übertreibe es nicht.
 
-Du wirst einen Ersatz-Aluhut im Auto aufbewahren.
-
-Und für besonders schwierige Situationen besitzt du vielleicht sogar einen Reise-Aluhut.
-
-Das ist der Moment, in dem dein Hobby zur Infrastruktur geworden ist.
-
-Doch auch hier gilt: Übertreibe es nicht.
-
-Denn wenn du irgendwann einen speziellen Aluhut-Schrank besitzt, ist möglicherweise nicht mehr die Frage, ob du ausreichend geschützt bist.
-
-Dann stellt sich eine ganz andere Frage:
-
-**Warum hast du einen Aluhut-Schrank?**
+Denn wenn du irgendwann einen speziellen Aluhut-Schrank besitzt, ist möglicherweise nicht mehr die Frage, ob du ausreichend geschützt bist. Dann stellt sich eine ganz andere Frage: **Warum hast du einen Aluhut-Schrank?**
 
 ---
 
@@ -320,17 +272,13 @@ Was haben wir also gelernt?
 
 Ein Aluhut kann ein lustiges Kleidungsstück sein. Er kann ein Kostüm sein, ein Gesprächseinstieg oder eine improvisierte Kopfbedeckung. Er kann dich auffälliger machen, als du es ohne ihn gewesen wärst.
 
-Was er allerdings nicht kann, ist automatisch jede Behauptung wahr machen, nur weil sie geheimnisvoll klingt.
-
-Denn genau hier beginnt der Unterschied zwischen Satire und Wirklichkeit.
+Was er allerdings nicht kann, ist automatisch jede Behauptung wahr machen, nur weil sie geheimnisvoll klingt. Denn genau hier beginnt der Unterschied zwischen Satire und Wirklichkeit.
 
 Man kann sich über Verschwörungstheorien lustig machen. Man kann absurde Schutzmaßnahmen ausprobieren. Man kann einen Aluhut tragen und sich dabei königlich amüsieren.
 
 Aber wenn es um tatsächliche gesundheitliche oder technische Risiken geht, sollte man sich auf überprüfbare Informationen verlassen.
 
-Das ist wesentlich weniger spektakulär.
-
-Aber dafür funktioniert es.
+Das ist wesentlich weniger spektakulär. Aber dafür funktioniert es.
 
 ---
 
@@ -344,13 +292,9 @@ Vor allem aber hast du gelernt, dass nicht alles, was kompliziert klingt, automa
 
 Manchmal ist Aluminiumfolie einfach Aluminiumfolie. Sie hält dein Essen frisch, deckt Auflaufformen ab und gelegentlich landet sie auf dem Kopf eines Menschen, der beschlossen hat, heute lieber besonders vorsichtig zu sein.
 
-Das ist vollkommen in Ordnung.
+Das ist vollkommen in Ordnung. Solange du dabei nicht vergisst, dass echte physikalische und gesundheitliche Risiken nicht dadurch verschwinden, dass man ihnen einen Aluhut entgegenhält.
 
-Solange du dabei nicht vergisst, dass echte physikalische und gesundheitliche Risiken nicht dadurch verschwinden, dass man ihnen einen Aluhut entgegenhält.
-
-Denn eines kann der Aluhut definitiv:
-
-**Er macht dich schwerer zu übersehen.**
+Denn eines kann der Aluhut definitiv: **Er macht dich schwerer zu übersehen.**
 
 ---
 
@@ -416,23 +360,13 @@ Du bist offiziell bereit für die nächste Stufe.
 
 Ein Aluhut kann vieles sein: ein modisches Statement, ein Gesprächseinstieg, ein Kostüm, ein Symbol, eine improvisierte Kopfbedeckung oder einfach ein Stück Aluminiumfolie, das jemand sehr ambitioniert gefaltet hat.
 
-Aber eines sollte er niemals sein:
-
-**Ein Ersatz für echte Informationen.**
+Aber eines sollte er niemals sein: **Ein Ersatz für echte Informationen.**
 
 Denn die wichtigste Schutzmaßnahme im Alltag besteht nicht darin, alles zu glauben. Und auch nicht darin, alles zu bezweifeln. Sondern darin, herauszufinden, **was tatsächlich stimmt**.
 
-Dafür brauchst du keinen Aluhut.
+Dafür brauchst du keinen Aluhut. Du brauchst lediglich ein funktionierendes Gehirn. Was natürlich bedeutet, dass ein Aluhut zumindest theoretisch überflüssig ist.
 
-Du brauchst lediglich ein funktionierendes Gehirn.
-
-Was natürlich bedeutet, dass ein Aluhut zumindest theoretisch überflüssig ist.
-
-Aber keine Sorge.
-
-Wir haben bereits eine Lösung dafür:
-
-**Setz ihn trotzdem auf.**
+Aber keine Sorge. Wir haben bereits eine Lösung dafür: **Setz ihn trotzdem auf.**
 
 ---
 

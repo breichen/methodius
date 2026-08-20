@@ -363,9 +363,7 @@ Beantworte folgende Fragen:
 
 Wenn du bei Frage 5 „Ja“ angekreuzt hast: **Herzlichen Glückwunsch.**
 
-Du bist offiziell bereit für die nächste große Fitnessrevolution:
-
-**Abnehmen dank weniger Blödsinn.**
+Du bist offiziell bereit für die nächste große Fitnessrevolution: **Abnehmen dank weniger Blödsinn.**
 
 ---
 
