@@ -78,21 +78,10 @@ Unser Vorschlag: Streiche die Hälfte. Dann die Hälfte der Hälfte. Und wenn du
 
 Nichtstun klingt einfach. Ist es aber nicht. Der Anfänger macht einen entscheidenden Fehler: Er tut nichts und fühlt sich dabei schlecht. Das ist keine Erholung. Das ist **Stress im Sitzen.** Deshalb musst du lernen, professionell faul zu sein.
 
-### Anfänger:
-
-„Ich sollte eigentlich etwas machen.“
-
-### Fortgeschrittener:
-
-„Ich mache später etwas.“
-
-### Profi:
-
-„Was genau sollte ich eigentlich machen?“
-
-### Meister:
-
-„Ach egal.“
+- **Anfänger:** „Ich sollte eigentlich etwas machen.“
+- **Fortgeschrittener:** „Ich mache später etwas.“
+- **Profi:** „Was genau sollte ich eigentlich machen?“
+- **Meister:** „Ach egal.“
 
 ---
 
@@ -102,49 +91,17 @@ Nichtstun klingt einfach. Ist es aber nicht. Der Anfänger macht einen entscheid
 
 Du brauchst keine komplizierte Morgenroutine. Unsere Empfehlung:
 
-### 08:00 Uhr
-
-Aufwachen.
-
-### 08:05 Uhr
-
-Noch liegen bleiben.
-
-### 08:15 Uhr
-
-Überlegen, ob du aufstehen solltest.
-
-### 08:17 Uhr
-
-Nein.
-
-### 08:45 Uhr
-
-Kaffee.
-
-### 09:00 Uhr
-
-Sofa.
-
-### 09:30 Uhr
-
-Kurze mentale Erholung vom Aufstehen.
-
-### 10:00 Uhr
-
-Vielleicht duschen.
-
-### 10:30 Uhr
-
-Überlegen, was heute wichtig ist.
-
-### 10:31 Uhr
-
-Feststellen, dass es auch morgen wichtig sein wird.
-
-### 10:32 Uhr
-
-Pause. **Das ist Selbstfürsorge.**
+**08:00 Uhr:** Aufwachen.
+**08:05 Uhr:** Noch liegen bleiben.
+**08:15 Uhr:** Überlegen, ob du aufstehen solltest.
+**08:17 Uhr:** Nein.
+**08:45 Uhr:** Kaffee.
+**09:00 Uhr:** Sofa.
+**09:30 Uhr:** Kurze mentale Erholung vom Aufstehen.
+**10:00 Uhr:** Vielleicht duschen.
+**10:30 Uhr:** Überlegen, was heute wichtig ist.
+**10:31 Uhr:** Feststellen, dass es auch morgen wichtig sein wird.
+**10:32 Uhr:** Pause. **Das ist Selbstfürsorge.**
 
 ---
 
@@ -168,7 +125,7 @@ Auch im Berufsleben kann Faulheit erstaunlich effektiv sein. Nicht jede E-Mail b
 
 beginnt, muss heute erledigt werden.
 
-Eine hervorragende Technik:
+Eine hervorragende Technik: 
 
 ### Die 10-Minuten-Regel
 
@@ -188,11 +145,7 @@ Nach drei Wochen fragst du dich:
 
 Eine mögliche Antwort: **Weil du ständig „Ja“ sagst.**
 
-Deshalb unser neues Lieblingswort:
-
-# Nein.
-
-Kurz. Effizient. Energiesparend. Und völlig kostenlos.
+Deshalb unser neues Lieblingswort: **Nein**. Kurz. Effizient. Energiesparend. Und völlig kostenlos.
 
 ---
 
@@ -337,45 +290,16 @@ Jetzt entsteht eine interessante Gesprächspause. Nutze sie. Setz dich hin.
 
 Hier ist er. Der Plan, auf den die gestresste Menschheit gewartet hat.
 
-### Schritt 1
-
-Identifiziere alles, was dich stresst.
-
-### Schritt 2
-
-Frage dich: **„Muss ich das wirklich tun?“**
-
-### Schritt 3
-
-Wenn nein: Lass es.
-
-### Schritt 4
-
-Wenn ja: Frage: **„Muss ich es heute tun?“**
-
-### Schritt 5
-
-Wenn nein: Verschiebe es.
-
-### Schritt 6
-
-Wenn ja: Frage: **„Muss ich es selbst tun?“**
-
-### Schritt 7
-
-Wenn nein: Delegiere es.
-
-### Schritt 8
-
-Wenn ja: Mach es möglichst einfach.
-
-### Schritt 9
-
-Danach: Pause.
-
-### Schritt 10
-
-Wiederhole den Vorgang.
+- **Schritt 1:** Identifiziere alles, was dich stresst.
+- **Schritt 2:** Frage dich: **„Muss ich das wirklich tun?“**
+- **Schritt 3:** Wenn nein: Lass es.
+- **Schritt 4:** Wenn ja: Frage: **„Muss ich es heute tun?“**
+- **Schritt 5:** Wenn nein: Verschiebe es.
+- **Schritt 6:** Wenn ja: Frage: **„Muss ich es selbst tun?“**
+- **Schritt 7:** Wenn nein: Delegiere es.
+- **Schritt 8:** Wenn ja: Mach es möglichst einfach.
+- **Schritt 9:** Danach: Pause.
+- **Schritt 10:** Wiederhole den Vorgang.
 
 ---
 
@@ -448,11 +372,11 @@ Das klingt gleich viel professioneller.
 ☐ Ja  
 ☐ Hervorragend
 
-Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast:
-
-# Herzlichen Glückwunsch!
+Wenn du mindestens fünf Fragen mit „Ja“ beantwortet hast: **Herzlichen Glückwunsch!**
 
 Du besitzt enormes Potenzial. Du könntest jetzt anfangen, es auszuschöpfen. **Oder du lässt es einfach liegen.** Das ist schließlich das Thema dieses Ratgebers.
+
+---
 
 **Dr. Maximilian Methodius**
 
