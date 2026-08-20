@@ -16,9 +16,7 @@ Aber niemand fragt: **Was, wenn du einfach keine Lust mehr auf Menschen hast?**
 
 Warum ständig Nachrichten beantworten? Warum Geburtstage merken? Warum zuhören, wenn jemand zum dritten Mal von seinem Ex erzählt? Warum „Wie geht's dir?“ fragen, wenn du die Antwort sowieso nicht wissen möchtest?
 
-Damit ist jetzt Schluss. Willkommen bei:
-
-# Freunde verlieren leicht gemacht.
+Damit ist jetzt Schluss. Willkommen bei: **Freunde verlieren leicht gemacht**.
 
 ---
 
@@ -56,37 +54,13 @@ Unser Rat: Antworte niemals sofort. Warte mindestens drei Tage. Bei besonders gu
 
 Freundschaften müssen nicht abrupt beendet werden. Das wäre unnötig dramatisch. Viel eleganter ist das **schleichende Verschwinden**.
 
-### Phase 1
-
-Du antwortest nach sechs Stunden.
-
-### Phase 2
-
-Du antwortest am nächsten Tag.
-
-### Phase 3
-
-Du antwortest mit:
-
-„Sorry, gerade total viel los.“
-
-### Phase 4
-
-Du antwortest drei Tage später.
-
-### Phase 5
-
-Du vergisst die Nachricht.
-
-### Phase 6
-
-Du siehst die Person zufällig beim Einkaufen.
-
-### Phase 7
-
-Du sagst:
-
-**„Oh Gott, sorry! Ich wollte dir längst antworten!“**
+- **Phase 1**: Du antwortest nach sechs Stunden.
+- **Phase 2**: Du antwortest am nächsten Tag.
+- **Phase 3**: Du antwortest mit: „Sorry, gerade total viel los.“
+- **Phase 4**: Du antwortest drei Tage später.
+- **Phase 5**: Du vergisst die Nachricht.
+- **Phase 6**: Du siehst die Person zufällig beim Einkaufen.
+- **Phase 7**: Du sagst: **„Oh Gott, sorry! Ich wollte dir längst antworten!“**
 
 Du hast gewonnen.
 
@@ -131,27 +105,11 @@ Freunde haben Geburtstage. Das ist problematisch. Denn Geburtstage erzeugen Erwa
 
 Unser System empfiehlt eine klare Hierarchie.
 
-### Bekannter
-
-„Alles Gute! 🎉“
-
-### Freund
-
-„Alles Gute dir! Hoffe, du hast einen schönen Tag!“
-
-### Guter Freund
-
-Anruf.
-
-### Bester Freund
-
-Geschenk.
-
-### Person, die du verlieren möchtest
-
-**Am nächsten Tag:**
-
-„Oh nein! Ich hab deinen Geburtstag total verpeilt!“
+- **Bekannter**: „Alles Gute! 🎉“
+- **Freund**:  „Alles Gute dir! Hoffe, du hast einen schönen Tag!“
+- **Guter Freund**: Anruf.
+- **Bester Freund**: Geschenk.
+- **Person, die du verlieren möchtest**: **Am nächsten Tag:** „Oh nein! Ich hab deinen Geburtstag total verpeilt!“
 
 Perfekt. Du hast gleichzeitig vergessen und Reue demonstriert. Das wirkt menschlich.
 
@@ -356,23 +314,10 @@ Du möchtest mit jemandem keinen Kontakt mehr? Dann solltest du nicht unbedingt 
 
 Das erzeugt Verwirrung. Die Person denkt: „Er antwortet mir seit zwei Wochen nicht, aber mein Frühstück liked er.“ Das ist kontraproduktiv. Deshalb gilt:
 
-### Persönliche Nachrichten
-
-Ignorieren.
-
-### Social Media
-
-Gelegentlich liken.
-
-### Sehr persönliche Story
-
-Nicht reagieren.
-
-### Foto vom Hund
-
-Vielleicht ein Herz.
-
-Wir wollen schließlich keine Monster sein.
+- **Persönliche Nachrichten**: Ignorieren.
+- **Social Media**: Gelegentlich liken.
+- **Sehr persönliche Story**: Nicht reagieren.
+- **Foto vom Hund**: Vielleicht ein Herz. Wir wollen schließlich keine Monster sein.
 
 ---
 
@@ -396,65 +341,20 @@ Und plötzlich redet man zwei Stunden. Das ist der Moment, in dem dieser Ratgebe
 
 ## Der ultimative Freundschaftsreduzierungsplan
 
-### Schritt 1
-
-Lies eine Nachricht.
-
-### Schritt 2
-
-Denke: „Ich antworte später.“
-
-### Schritt 3
-
-Vergiss die Nachricht.
-
-### Schritt 4
-
-Sieh die Nachricht drei Tage später.
-
-### Schritt 5
-
-Denke: „Jetzt ist es zu spät.“
-
-### Schritt 6
-
-Warte noch länger.
-
-### Schritt 7
-
-Erhalte eine neue Nachricht.
-
-### Schritt 8
-
-Antworte auf die neue Nachricht, als wäre nichts passiert.
-
-### Schritt 9
-
-Ignoriere die alte Nachricht weiterhin.
-
-### Schritt 10
-
-Treffe die Person zufällig.
-
-### Schritt 11
-
-Sage:
-
-**„Sorry, ich bin momentan echt schlecht im Antworten.“**
-
-### Schritt 12
-
-Lächle.
-
-### Schritt 13
-
-Wechsle das Thema.
-
-### Schritt 14
-
-Frage:
-
-**„Und, wie geht's dir sonst so?“**
+- **Schritt 1**: Lies eine Nachricht.
+- **Schritt 2**: Denke: „Ich antworte später.“
+- **Schritt 3**: Vergiss die Nachricht.
+- **Schritt 4**: Sieh die Nachricht drei Tage später.
+- **Schritt 5**: Denke: „Jetzt ist es zu spät.“
+- **Schritt 6**: Warte noch länger.
+- **Schritt 7**: Erhalte eine neue Nachricht.
+- **Schritt 8**: Antworte auf die neue Nachricht, als wäre nichts passiert.
+- **Schritt 9**: Ignoriere die alte Nachricht weiterhin.
+- **Schritt 10**: Treffe die Person zufällig.
+- **Schritt 11**: Sage: **„Sorry, ich bin momentan echt schlecht im Antworten.“**
+- **Schritt 12**: Lächle.
+- **Schritt 13**: Wechsle das Thema.
+- **Schritt 14**: Frage: **„Und, wie geht's dir sonst so?“**
 
 ---
 
@@ -682,11 +582,11 @@ Dann hat dieser Ratgeber versagt. **Oder funktioniert.**
  ☐ Ich wollte nur wissen, wie schlimm es wird
  ☐ Ich brauche Hilfe
 
-Wenn du bei Frage 6 „Ja“ angekreuzt hast:
-
-**Herzlichen Glückwunsch.**
+Wenn du bei Frage 6 „Ja“ angekreuzt hast: **Herzlichen Glückwunsch.**
 
 Du bist vermutlich ein ziemlich guter Freund. Und jetzt schreib dieser Person endlich zurück.
+
+---
 
 **Dr. Maximilian Methodius**
 
