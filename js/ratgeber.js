@@ -42,7 +42,7 @@ const ratgeberRohdaten = [
   //"Politische Bildung durch soziale Medien",
   //"Wie man zuverlässig unzuverlässig wird",
   //"Pünktlichkeit verbessern durch Zugausfälle",
-  // "Das perfekte Alibi - Warum ich heute leider keine Zeit habe",
+  // "Warum ich heute leider keine Zeit habe",
   //"",
   //"",
   //"",

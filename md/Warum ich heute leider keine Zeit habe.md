@@ -1,5 +1,5 @@
 
-# Das perfekte Alibi - Warum ich heute leider keine Zeit habe
+# Warum ich heute leider keine Zeit habe
 
 ## Der ultimative Ratgeber für alle, die eigentlich nur zu Hause bleiben möchten, dafür aber eine überzeugende Begründung benötigen
 
