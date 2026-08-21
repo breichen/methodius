@@ -1,4 +1,4 @@
-# Zum modernen Künstler in nur 2 Minuten
+# So wirst du zum Influencer
 
 ## Der ultimative Ratgeber für alle, die keine Ahnung von Kunst haben, aber trotzdem gerne so wirken möchten
 

@@ -47,7 +47,7 @@ const ratgeberRohdaten = [
   //"Zum modernen Künstler in nur 2 Minuten",
   //"Gedanken lesen durch geschicktes Raten",
   //"Statistiken fälschen leicht gemacht",
-  //"",
+  //"So wirst du zum Influencer",
   //"",
 ];
 
