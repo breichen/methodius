@@ -45,6 +45,7 @@ const ratgeberRohdaten = [
   // "Warum ich heute leider keine Zeit habe",
   //"Vom Millionär zum Tellerwäscher in nur 7 Tagen",
   //"Zum modernen Künstler in nur 2 Minuten",
+  //"Gedanken lesen durch geschicktes Raten",
   //"",
   //"",
   //"",
