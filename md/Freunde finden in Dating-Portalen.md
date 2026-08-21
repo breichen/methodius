@@ -1,4 +1,5 @@
 
+
 # Freunde finden in Dating-Portalen
 
 ## Der revolutionäre Ratgeber für alle, die eigentlich keine Beziehung suchen, aber trotzdem jemanden kennenlernen möchten
@@ -15,9 +16,7 @@ Jahrzehntelang wurden Dating-Portale dafür verwendet, Menschen kennenzulernen, 
 
 Wenn Supermärkte Menschen suchen, die Milch kaufen, warum sollte man dort nicht einfach einen Steuerberater kennenlernen? Wenn ein Fitnessstudio Geräte zum Muskelaufbau anbietet, warum sollte man dort nicht stattdessen seine Steuererklärung machen? Genau diese revolutionäre Denkweise wenden wir nun auf Dating-Portale an.
 
-Du suchst keinen Partner. Du suchst einen Freund. Und wenn alles funktioniert, findest du vielleicht sogar jemanden, der ebenfalls keinen Partner sucht.
-
-**Was könnte dabei schon schiefgehen?**
+Du suchst keinen Partner. Du suchst einen Freund. Und wenn alles funktioniert, findest du vielleicht sogar jemanden, der ebenfalls keinen Partner sucht. **Was könnte dabei schon schiefgehen?**
 
 ---
 
@@ -25,9 +24,7 @@ Du suchst keinen Partner. Du suchst einen Freund. Und wenn alles funktioniert, f
 
 ## Der klassische Anfängerfehler: „Ich suche eine Beziehung“
 
-Der klassische Dating-Portal-Nutzer macht einen entscheidenden Fehler. Er schreibt in sein Profil: „Ich suche eine Beziehung.“ Damit hat er bereits verloren.
-
-Denn eine Beziehung zu suchen ist viel zu konkret. Außerdem setzt es voraus, dass man ungefähr weiß, was man möchte. Unser Ansatz ist wesentlich moderner.
+Der klassische Dating-Portal-Nutzer macht einen entscheidenden Fehler. Er schreibt in sein Profil: „Ich suche eine Beziehung.“ Damit hat er bereits verloren. Denn eine Beziehung zu suchen ist viel zu konkret. Außerdem setzt es voraus, dass man ungefähr weiß, was man möchte. Unser Ansatz ist wesentlich moderner.
 
 Wir empfehlen:
 
@@ -53,9 +50,7 @@ Das ist gesellschaftlich akzeptiert.
 
 Wenn du dagegen an einem Dienstagmorgen im Supermarkt zu einem völlig fremden Menschen gehst und sagst: „Hey, wie geht's? Lust auf eine Freundschaft?“, könnte die Reaktion etwas zurückhaltender ausfallen.
 
-Auf einer Dating-Plattform ist das anders. Dort ist es völlig normal, fremde Menschen anhand von sechs Fotos, drei Emojis und einem Satz über ihre Liebe zum Reisen auszuwählen.
-
-**Die Grundlage für eine tiefe Freundschaft ist also bereits vorhanden.**
+Auf einer Dating-Plattform ist das anders. Dort ist es völlig normal, fremde Menschen anhand von sechs Fotos, drei Emojis und einem Satz über ihre Liebe zum Reisen auszuwählen. **Die Grundlage für eine tiefe Freundschaft ist also bereits vorhanden.**
 
 ---
 
@@ -65,9 +60,7 @@ Auf einer Dating-Plattform ist das anders. Dort ist es völlig normal, fremde Me
 
 Jetzt kommt der wichtigste Teil: dein Profil.
 
-Wenn du Freunde suchst, solltest du dein Profil möglichst attraktiv gestalten. Aber Vorsicht: **Nicht zu attraktiv.**
-
-Wenn du aussiehst, als würdest du einen Partner suchen, könnte es zu Missverständnissen kommen.
+Wenn du Freunde suchst, solltest du dein Profil möglichst attraktiv gestalten. Aber Vorsicht: **Nicht zu attraktiv.** Wenn du aussiehst, als würdest du einen Partner suchen, könnte es zu Missverständnissen kommen.
 
 Deshalb empfehlen wir ein ausgewogenes Profilbild. Du solltest freundlich aussehen, aber nicht flirtend. Interessiert, aber nicht zu interessiert. Gepflegt, aber nicht so gepflegt, dass der andere denkt, du hättest dein Leben im Griff.
 
@@ -85,15 +78,11 @@ Eine gute Profilbeschreibung sollte möglichst viel über dich aussagen, ohne et
 
 > „Ich liebe gute Gespräche, Humor, gutes Essen und Menschen, die authentisch sind.“
 
-Perfekt. Damit bist du offiziell ein Mensch.
-
-Noch besser:
+Perfekt. Damit bist du offiziell ein Mensch. Noch besser:
 
 > „Ich bin für vieles offen und freue mich auf interessante Menschen.“
 
-Jetzt bist du sogar besonders unkompliziert.
-
-Wenn du etwas spezifischer werden möchtest, kannst du schreiben:
+Jetzt bist du sogar besonders unkompliziert. Wenn du etwas spezifischer werden möchtest, kannst du schreiben:
 
 > „Suche nette Leute für gemeinsame Unternehmungen, gute Gespräche und spontane Aktionen.“
 
@@ -133,9 +122,7 @@ Und irgendwann, vielleicht nach sechs Monaten, könnt ihr euch gegenseitig erzä
 
 ## Der entscheidende Unterschied zwischen Dating und Freundschaft
 
-Beim Dating fragt man häufig: **„Was suchst du?“**
-
-Bei der Freundschaft ist die Antwort komplizierter. Du möchtest schließlich niemandem sagen:
+Beim Dating fragt man häufig: **„Was suchst du?“** Bei der Freundschaft ist die Antwort komplizierter. Du möchtest schließlich niemandem sagen:
 
 > „Ich suche jemanden, mit dem ich zweimal im Monat Pizza essen und über meine Arbeit lästern kann.“
 
@@ -202,9 +189,7 @@ Wenn es gut läuft, könnt ihr danach noch spazieren gehen. Wenn es schlecht lä
 
 > „Ich muss morgen früh raus.“
 
-Diese Ausrede funktioniert praktisch immer.
-
-Alternativ empfiehlt sich ein Treffen in einem öffentlichen Park. Dort kann man jederzeit sagen:
+Diese Ausrede funktioniert praktisch immer. Alternativ empfiehlt sich ein Treffen in einem öffentlichen Park. Dort kann man jederzeit sagen:
 
 > „Lass uns noch eine Runde gehen.“
 
@@ -240,15 +225,11 @@ Dieser Satz bedeutet alles und nichts. Er ist das Schweizer Taschenmesser unter 
 
 ## Die große Gefahr: Menschen mit zu vielen Hobbys
 
-Beim Freundefinden auf Dating-Portalen wirst du schnell feststellen, dass manche Menschen erstaunlich viele Hobbys besitzen.
-
-„Ich gehe klettern, fotografiere, reise, spiele Klavier, mache Yoga, koche, fahre Rennrad, lese 40 Bücher im Jahr und habe gerade angefangen, Italienisch zu lernen.“
+Beim Freundefinden auf Dating-Portalen wirst du schnell feststellen, dass manche Menschen erstaunlich viele Hobbys besitzen. „Ich gehe klettern, fotografiere, reise, spiele Klavier, mache Yoga, koche, fahre Rennrad, lese 40 Bücher im Jahr und habe gerade angefangen, Italienisch zu lernen.“
 
 Du sitzt davor und denkst: **„Ich schaue dienstags Serien.“**
 
-Keine Sorge. Das ist ebenfalls ein Hobby. Du musst es nur entsprechend präsentieren.
-
-Sag nicht:
+Keine Sorge. Das ist ebenfalls ein Hobby. Du musst es nur entsprechend präsentieren. Sag nicht:
 
 > „Ich schaue gerne Serien.“
 
@@ -270,9 +251,7 @@ Nach dem ersten Treffen sagt ihr:
 
 > „Wir müssen das unbedingt wiederholen.“
 
-Beide meinen es ernst.
-
-Dann vergehen drei Wochen. Dann vier. Dann schreibt einer:
+Beide meinen es ernst. Dann vergehen drei Wochen. Dann vier. Dann schreibt einer:
 
 > „Sorry, war total stressig.“
 
@@ -326,9 +305,7 @@ Zunächst einmal: ruhig bleiben. Es bedeutet nicht, dass du langweilig bist. Es 
 
 Oder sie hat dich vergessen. Oder sie hat kein Interesse. Oder sie hat die App gelöscht. Oder sie ist gerade dabei, eine neue Freundschaft mit jemand anderem aufzubauen. Das Internet ist kompliziert.
 
-Die wichtigste Regel lautet deshalb: **Nicht jede ausbleibende Antwort ist eine persönliche Bewertung deines Charakters.**
-
-Manchmal ist sie einfach eine ausbleibende Antwort. Das ist überraschend schwer zu akzeptieren, aber sehr befreiend.
+Die wichtigste Regel lautet deshalb: **Nicht jede ausbleibende Antwort ist eine persönliche Bewertung deines Charakters.** Manchmal ist sie einfach eine ausbleibende Antwort. Das ist überraschend schwer zu akzeptieren, aber sehr befreiend.
 
 ---
 
@@ -344,9 +321,7 @@ Herzlichen Glückwunsch. Du hast erfolgreich eine Dating-Plattform benutzt, um g
 
 Jetzt gibt es mehrere Möglichkeiten: Ihr werdet tatsächlich ein Paar. Ihr bleibt Freunde. Ihr redet drei Stunden darüber, was ihr seid, und wisst anschließend weniger als vorher.
 
-Oder ihr beschließt, dass ihr „einfach schauen wollt, was passiert“.
-
-Das ist die romantische Version von: **„Wir haben keinen Plan.“**
+Oder ihr beschließt, dass ihr „einfach schauen wollt, was passiert“. Das ist die romantische Version von: **„Wir haben keinen Plan.“**
 
 ---
 
@@ -360,9 +335,7 @@ Dating-Portale haben dabei einen interessanten Nebeneffekt. Sie erinnern uns dar
 
 Ein Mensch, der ebenfalls manchmal nicht weiß, was er schreiben soll. Ein Mensch, der sich fragt, ob sein Profilbild komisch aussieht. Ein Mensch, der vielleicht ebenfalls gerne jemanden hätte, mit dem man spontan einen Kaffee trinken kann.
 
-Und plötzlich wird aus einem Match vielleicht tatsächlich ein Gespräch. Aus einem Gespräch vielleicht ein Treffen. Aus einem Treffen vielleicht eine Freundschaft.
-
-Und aus einer Freundschaft vielleicht jemand, der dir irgendwann schreibt:
+Und plötzlich wird aus einem Match vielleicht tatsächlich ein Gespräch. Aus einem Gespräch vielleicht ein Treffen. Aus einem Treffen vielleicht eine Freundschaft. Und aus einer Freundschaft vielleicht jemand, der dir irgendwann schreibt:
 
 > „Kannst du mir beim Umzug helfen?“
 
@@ -374,19 +347,13 @@ Und aus einer Freundschaft vielleicht jemand, der dir irgendwann schreibt:
 
 ## Herzlichen Glückwunsch, du hast jemanden gefunden!
 
-Du hast gelernt, wie man Dating-Portale zweckentfremdet, ohne dabei völlig verrückt zu werden.
+Du hast gelernt, wie man Dating-Portale zweckentfremdet, ohne dabei völlig verrückt zu werden. Du weißt jetzt, wie man ein Profil erstellt, wie man „Hey“ schreibt, wie man ein erstes Treffen überlebt und wie man eine Freundschaft pflegt, ohne alle drei Monate zu behaupten, man sei „gerade total im Stress“.
 
-Du weißt jetzt, wie man ein Profil erstellt, wie man „Hey“ schreibt, wie man ein erstes Treffen überlebt und wie man eine Freundschaft pflegt, ohne alle drei Monate zu behaupten, man sei „gerade total im Stress“.
-
-Vor allem aber hast du gelernt, dass Freundschaften erstaunlich ähnlich funktionieren wie Beziehungen: Man muss miteinander reden. Man muss sich treffen. Man muss Interesse zeigen.
-
-Und irgendwann muss einer den Satz sagen:
+Vor allem aber hast du gelernt, dass Freundschaften erstaunlich ähnlich funktionieren wie Beziehungen: Man muss miteinander reden. Man muss sich treffen. Man muss Interesse zeigen. Und irgendwann muss einer den Satz sagen:
 
 > **„Hast du nächste Woche Zeit?“**
 
-Das klingt unspektakulär, ist aber möglicherweise einer der wichtigsten Sätze überhaupt.
-
-Denn irgendwo zwischen zwei Profilbildern, drei belanglosen Nachrichten und einem Kaffee kann tatsächlich etwas entstehen, das nicht im Algorithmus vorgesehen war.
+Das klingt unspektakulär, ist aber möglicherweise einer der wichtigsten Sätze überhaupt. Denn irgendwo zwischen zwei Profilbildern, drei belanglosen Nachrichten und einem Kaffee kann tatsächlich etwas entstehen, das nicht im Algorithmus vorgesehen war.
 
 Eine Freundschaft. Und wenn nicht? Dann hast du immerhin jemanden kennengelernt, der ebenfalls gerne Pizza mag. Das ist schließlich auch schon etwas.
 
@@ -448,9 +415,7 @@ Du bist bereit für die nächste große Herausforderung: **Du musst jetzt tatsä
 
 Du brauchst keinen perfekten Freundschaftsalgorithmus. Du brauchst kein optimiertes Profil. Du brauchst nicht 37 gemeinsame Interessen. Und du musst auch nicht besonders interessant sein.
 
-Manchmal reicht es völlig, wenn zwei Menschen feststellen: **„Mit dir kann ich eigentlich ganz gut Zeit verbringen.“**
-
-Das ist vielleicht keine spektakuläre Erkenntnis. Aber möglicherweise ist genau das Freundschaft.
+Manchmal reicht es völlig, wenn zwei Menschen feststellen: **„Mit dir kann ich eigentlich ganz gut Zeit verbringen.“** Das ist vielleicht keine spektakuläre Erkenntnis. Aber möglicherweise ist genau das Freundschaft.
 
 Und wenn du irgendwann auf einer Dating-Plattform jemanden findest, mit dem du regelmäßig Kaffee trinkst, gemeinsam lachst und dem du irgendwann völlig ungefragt ein Foto von deinem Mittagessen schickst, hast du es geschafft.
 
