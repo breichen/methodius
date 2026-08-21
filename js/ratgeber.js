@@ -29,7 +29,7 @@ const ratgeberRohdaten = [
   "Erfolgreich werden ohne Leistung",
   "Aluhüte im Alltag richtig verwenden",
   "Warum beim Nachbarn das Gras immer viel grüner ist",
-  "Termine vermeiden leicht gemacht"
+  "Termine vermeiden leicht gemacht",
 ];
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel }-Objekte um,
