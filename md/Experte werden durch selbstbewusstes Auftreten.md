@@ -320,42 +320,30 @@ Lass sie reden. Sie haben vermutlich einfach noch nicht verstanden, wie wichtig 
 ☐ „Das weiß ich leider nicht.“
 ☐ „Das ist tatsächlich eine sehr gute Frage.“
 
----
-
 **2. Wie viele Fachbegriffe solltest du in einem Gespräch verwenden?**
 
 ☐ So viele, wie du verstehst.
 ☐ So viele, dass niemand mehr nachfragt.
-
----
 
 **3. Was machst du, wenn jemand deine Aussage anzweifelt?**
 
 ☐ Ich prüfe, ob die Person vielleicht recht hat.
 ☐ Ich erkläre, dass wir das gerade aus zwei unterschiedlichen Perspektiven betrachten.
 
----
-
 **4. Jemand fragt nach deiner Quelle. Was antwortest du?**
 
 ☐ Ich zeige die Quelle.
 ☐ „Das müsste ich jetzt konkret nachschauen.“
-
----
 
 **5. Was gehört zur Grundausstattung eines Experten?**
 
 ☐ Fachwissen.
 ☐ Notizbuch, ernster Blick und ein leichtes Nicken.
 
----
-
 **6. Wie lange solltest du vor einer besonders wichtigen Aussage schweigen?**
 
 ☐ So lange, bis ich meine Gedanken sortiert habe.
 ☐ Lange genug, damit es aussieht, als würde ich gerade eine Branche neu bewerten.
-
----
 
 **7. Was denkst du, wenn du etwas nicht weißt?**
 
