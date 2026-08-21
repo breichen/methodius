@@ -720,136 +720,58 @@ Du bist bereit.
 # BONUS: Der Meeting-Überlebens-Test
 
 **1. Du wirst im Meeting gefragt: „Wie siehst du das?“ Was antwortest du?**
-
-☐ „Ich habe dazu keine Ahnung.“
-
 ☐ „Ich würde das gerne noch einmal aus einer anderen Perspektive betrachten.“
-
----
+☐ „Für mich wäre vor allem die Frage, wie wir das langfristig denken.“
+☐ „Ich glaube, wir sollten hier noch einmal den Gesamtkontext betrachten.“
 
 **2. Jemand verwendet einen Fachbegriff, den du nicht kennst. Was machst du?**
+☐ Einen Teil des Satzes aufgreifen und so tun, als wäre er der entscheidende Punkt.
+☐ „Das müsste man technisch noch einmal genauer bewerten.“
+☐ „Die Schnittstelle ist hier natürlich ein zentraler Punkt.“
 
-☐ Nachfragen, was er bedeutet.
-
-☐ Einen Teil des Satzes wiederholen und „Schnittstelle“ sagen.
-
----
-
-**3. Was schreibst du in dein Notizbuch?**
-
-☐ Die wichtigsten Informationen.
-
-☐ „Wichtig“, „Nachfragen“ und irgendetwas unterstrichen.
-
----
-
-**4. Was sagst du, wenn du die Diskussion nicht verstehst?**
-
-☐ „Ich verstehe das gerade nicht.“
-
+**3. Die Diskussion wird immer komplizierter und du verstehst inzwischen gar nichts mehr. Was sagst du?**
 ☐ „Was wäre aus eurer Sicht an dieser Stelle der entscheidende Hebel?“
+☐ „Ich würde das gerne noch einmal etwas breiter betrachten.“
+☐ „Vielleicht sollten wir noch einmal einen Schritt zurückgehen.“
 
----
-
-**5. Jemand fragt nach deiner Meinung.**
-
-☐ Eine ehrliche Meinung äußern.
-
+**4. Jemand fragt nach deiner Meinung, obwohl du keine hast.**
 ☐ „Ich bin da grundsätzlich bei euch.“
+☐ „Ich glaube, wir müssen das strategisch betrachten.“
+☐ „Ich sehe da grundsätzlich zwei Ebenen.“
 
----
-
-**6. Die Diskussion dreht sich im Kreis. Was tust du?**
-
-☐ Zuhören.
-
-☐ „Ich glaube, wir drehen uns gerade ein bisschen im Kreis.“
-
----
-
-**7. Eine Entscheidung soll getroffen werden. Was sagst du?**
-
-☐ „Ja, machen wir.“
-
-☐ „Ich würde den Punkt gerne noch einmal mitnehmen.“
-
----
-
-**8. Du weißt nicht, was auf einer PowerPoint-Folie dargestellt wird.**
-
-☐ Fragen, was die Grafik bedeutet.
-
+**5. Auf einer PowerPoint-Folie befindet sich eine Grafik, die du nicht verstehst. Was sagst du?**
 ☐ „Spannend. Vor allem die Entwicklung.“
+☐ „Das hätte ich so tatsächlich nicht erwartet.“
+☐ „Das ist interessant, gerade im Hinblick auf die weitere Entwicklung.“
 
----
+**6. Die Diskussion dreht sich im Kreis. Was ist dein Moment gekommen?**
+☐ „Ich glaube, wir drehen uns gerade ein bisschen im Kreis.“
+☐ „Vielleicht sollten wir noch einmal einen Schritt zurückgehen.“
+☐ „Wir sollten das noch einmal in einen größeren Kontext stellen.“
 
-**9. Jemand fragt, ob du noch Fragen hast.**
+**7. Eine Entscheidung soll getroffen werden, aber du möchtest auf keinen Fall Verantwortung übernehmen.**
+☐ „Ich würde den Punkt gerne noch einmal mitnehmen.“
+☐ „Ich glaube, das sollten wir noch einmal etwas breiter betrachten.“
+☐ „Lass uns das im Nachgang noch einmal vertiefen.“
 
-☐ „Ja, drei.“
-
+**8. Jemand fragt dich, ob du noch Fragen hast.**
 ☐ „Von meiner Seite nicht.“
+☐ „Ich glaube, die wesentlichen Punkte sind für mich erst einmal klar.“
+☐ „Ich würde das gerne zunächst einmal sacken lassen.“
 
----
+**9. Du hast während des gesamten Meetings kaum etwas gesagt. Wie sorgst du trotzdem für einen kompetenten Eindruck?**
+☐ Du nickst an den richtigen Stellen.
+☐ Du machst gelegentlich eine konzentrierte Notiz.
+☐ Du schaust bei komplizierten Aussagen besonders nachdenklich.
 
-**10. Nach dem Meeting fragt dich jemand: „Was wurde beschlossen?“**
+**10. Nach dem Meeting fragt dich jemand: „Was wurde eigentlich beschlossen?“**
+☐ „Ich glaube, das sollten wir im Nachgang noch einmal bilateral klären.“
+☐ „Wir sollten das noch einmal gemeinsam einordnen.“
+☐ „Ich würde das gerne noch einmal im Gesamtkontext betrachten.“
 
-☐ Eine Zusammenfassung geben.
+**Herzlichen Glückwunsch!** Du kannst ein Meeting verlassen, ohne eine einzige konkrete Antwort gegeben zu haben, und trotzdem glauben alle, du hättest wichtige Impulse geliefert.
 
-☐ „Das sollten wir im Nachgang noch einmal bilateral klären.“
-
----
-
-## Auswertung
-
-### 0–2 Punkte: Der Praktikant
-
-Du bist gefährlich.
-
-Du stellst Fragen, wenn du etwas nicht verstehst, und sagst offen, wenn du keine Antwort hast.
-
-So kann das nicht weitergehen.
-
-Bitte nimm beim nächsten Meeting einen Notizblock mit und schreibe mindestens dreimal „strategisch“ darauf.
-
----
-
-### 3–5 Punkte: Der engagierte Teilnehmer
-
-Du bist auf einem guten Weg.
-
-Du kannst bereits nicken und allgemeine Fragen stellen.
-
-Allerdings besteht noch die Gefahr, dass du versehentlich eine konkrete Meinung äußerst.
-
-Arbeite daran, Aussagen wie „Ich denke, wir sollten …“ durch „Ich glaube, wir müssen das zunächst noch einmal ganzheitlich betrachten“ zu ersetzen.
-
----
-
-### 6–8 Punkte: Der Meeting-Profi
-
-Sehr gut.
-
-Du kannst bereits an einer 90-minütigen Besprechung teilnehmen, ohne mehr als zwei überprüfbare Aussagen zu machen.
-
-Du weißt, wann du schweigen musst, wann du nicken solltest und wann ein „strategischer Hebel“ benötigt wird.
-
-Eine Beförderung ist nicht ausgeschlossen.
-
----
-
-### 9–10 Punkte: Der Meeting-Großmeister
-
-Beeindruckend.
-
-Du hast die höchste Stufe erreicht.
-
-Du kannst ein Meeting verlassen, ohne zu wissen, worum es ging, was beschlossen wurde oder warum du überhaupt eingeladen warst.
-
-Trotzdem glauben mindestens drei Menschen, dass du wichtige Gedanken beigetragen hast.
-
-**Du bist nicht mehr Teil des Meetings.**
-
-**Du bist das Meeting.**
+**Du bist nicht mehr Teil des Meetings.** **Du bist die strategische Perspektive.**
 
 ---
 
