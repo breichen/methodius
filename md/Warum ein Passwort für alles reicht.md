@@ -1,3 +1,4 @@
+
 # Warum ein Passwort für alles reicht
 
 ## Der revolutionäre Ratgeber für alle, die endlich Schluss machen wollen mit dem unnötigen Durcheinander aus Passwörtern, Variationen und diesem lästigen „Passwort vergessen?“
@@ -16,9 +17,7 @@ Das ist anstrengend. Deshalb stellen wir eine einfache Frage:
 
 Warum solltest du dir 17 Passwörter merken, wenn **eines** doch viel einfacher wäre? Genau hier beginnt unsere Revolution.
 
-# **Ein Passwort.**
-
-Für alles. Einfach. Elegant. Effizient. Und vor allem: **unfassbar leicht zu merken.**
+**Ein Passwort.** Für alles. Einfach. Elegant. Effizient. Und vor allem: **unfassbar leicht zu merken.**
 
 ---
 
@@ -44,15 +43,12 @@ Unser Konzept beendet diesen Wahnsinn. **Ein Passwort.** Du kennst es. Du verwen
 
 Betrachten wir die Situation einmal wissenschaftlich.
 
-### Klassisches System
+- **Klassisches System:** Du hast **20 Konten × 1 Passwort = 20 Passwörter**
+- **Unser System:** **20 Konten × 1 Passwort = 1 Passwort**
 
-Du hast: **20 Konten × 1 Passwort = 20 Passwörter**
+Das ist eine Reduzierung um **19 Passwörter.** Das bedeutet **95 % weniger Passwörter.**
 
-Unser System: **20 Konten × 1 Passwort = 1 Passwort**
-
-Das ist eine Reduzierung um: **19 Passwörter.** Das bedeutet: **95 % weniger Passwörter.**
-
-95 %! Wenn moderne Unternehmen eine solche Effizienzsteigerung erreichen, schreiben sie darüber Pressemitteilungen. Wir nennen es: **Fortschritt.**
+95 %! Wenn moderne Unternehmen eine solche Effizienzsteigerung erreichen, schreiben sie darüber Pressemitteilungen. Wir nennen es **Fortschritt.**
 
 ---
 
@@ -101,19 +97,14 @@ Natürlich brauchen wir ein geeignetes Passwort. Es sollte:
 - schwer zu erraten sein,
 - und möglichst kompliziert aussehen.
 
-Zum Beispiel:
+Zum Beispiel: **M7!qR2#vL9@xT4$pK8**
 
-# **M7!qR2#vL9@xT4$pK8**
+Ein hervorragendes Passwort! Wir haben es bereits ausführlich untersucht. Und jetzt kommt der vielleicht schönste Teil: Du musst es nur noch **einmal** lernen. Danach kannst du es überall verwenden.
 
-Ein hervorragendes Passwort. Wir haben es bereits ausführlich untersucht. Und jetzt kommt der vielleicht schönste Teil: Du musst es nur noch **einmal** lernen. Danach kannst du es überall verwenden.
-
-E-Mail? **M7!qR2#vL9@xT4$pK8**
-
-Online-Shop? **M7!qR2#vL9@xT4$pK8**
-
-Streaming? **M7!qR2#vL9@xT4$pK8**
-
-Kundenkonto beim örtlichen Gartencenter? **M7!qR2#vL9@xT4$pK8**
+- E-Mail? **M7!qR2#vL9@xT4$pK8**
+- Online-Shop? **M7!qR2#vL9@xT4$pK8**
+- Streaming? **M7!qR2#vL9@xT4$pK8**
+- Kundenkonto beim örtlichen Gartencenter? **M7!qR2#vL9@xT4$pK8**
 
 Du siehst: **Es funktioniert überall.**
 
@@ -190,33 +181,13 @@ Nur der erste Buchstabe wurde geändert. Das System bleibt bestehen. Du kennst w
 
 ## Die sieben Stufen der Vereinfachung
 
-### Stufe 1
-
-Du hast zehn Passwörter.
-
-### Stufe 2
-
-Du hast zwölf.
-
-### Stufe 3
-
-Du hast 15.
-
-### Stufe 4
-
-Du hast aufgehört mitzuzählen.
-
-### Stufe 5
-
-Du verwendest überall ähnliche Passwörter.
-
-### Stufe 6
-
-Du weißt nicht mehr, welches davon welches war.
-
-### Stufe 7
-
-Du liest diesen Ratgeber. Und erkennst:
+- **Stufe 1**: Du hast zehn Passwörter.
+- **Stufe 2**: Du hast zwölf.
+- **Stufe 3**: Du hast 15.
+- **Stufe 4**: Du hast aufgehört mitzuzählen.
+- **Stufe 5**: Du verwendest überall ähnliche Passwörter.
+- **Stufe 6**: Du weißt nicht mehr, welches davon welches war.
+- **Stufe 7**: Du liest diesen Ratgeber. Und erkennst:
 
 > **„Ich brauche nur eins.“**
 
@@ -282,45 +253,16 @@ Aha. Also benutzen sie gar nicht wirklich mehrere Passwörter. Der Computer merk
 
 Hier ist er. Der ultimative Plan.
 
-### Schritt 1
-
-Wähle ein starkes Passwort.
-
-### Schritt 2
-
-Lerne es auswendig.
-
-### Schritt 3
-
-Verwende es bei deinem E-Mail-Konto.
-
-### Schritt 4
-
-Verwende es beim Streamingdienst.
-
-### Schritt 5
-
-Verwende es beim Online-Shop.
-
-### Schritt 6
-
-Verwende es bei deinem Kundenkonto.
-
-### Schritt 7
-
-Verwende es bei deinem Fitnessstudio.
-
-### Schritt 8
-
-Verwende es bei deiner nächsten App.
-
-### Schritt 9
-
-Wenn du irgendwo ein neues Konto erstellst, denke nicht lange nach.
-
-### Schritt 10
-
-Du kennst die Antwort bereits. **M7!qR2#vL9@xT4$pK8**
+- **Schritt 1:** Wähle ein starkes Passwort.
+- **Schritt 2:** Lerne es auswendig.
+- **Schritt 3:** Verwende es bei deinem E-Mail-Konto.
+- **Schritt 4:** Verwende es beim Streamingdienst.
+- **Schritt 5:** Verwende es beim Online-Shop.
+- **Schritt 6:** Verwende es bei deinem Kundenkonto.
+- **Schritt 7:** Verwende es bei deinem Fitnessstudio.
+- **Schritt 8:** Verwende es bei deiner nächsten App.
+- **Schritt 9:** Wenn du irgendwo ein neues Konto erstellst, denke nicht lange nach.
+- **Schritt 10:** Du kennst die Antwort bereits. **M7!qR2#vL9@xT4$pK8**
 
 ---
 
@@ -336,9 +278,7 @@ Wir werden sagen:
 
 > „Wir wussten es nicht besser.“
 
-Sie werden lachen. Dann werden sie unser System übernehmen. Ein Passwort. Einfach. Elegant. Effizient. Vielleicht gibt es eines Tages sogar einen eigenen Button:
-
-# **„Mit meinem Passwort anmelden“**
+Sie werden lachen. Dann werden sie unser System übernehmen. Ein Passwort. Einfach. Elegant. Effizient. Vielleicht gibt es eines Tages sogar einen eigenen Button: **„Mit meinem Passwort anmelden“**.
 
 Und niemand muss mehr überlegen. Niemand muss mehr suchen. Niemand muss mehr sagen:
 
@@ -375,6 +315,8 @@ Ein Passwort. Eine Erinnerung. Eine Lösung. Eine digitale Identität. Und vor a
 Denn manchmal ist die beste technische Lösung nicht die komplizierteste. Manchmal ist sie einfach:
 
 > **„Mach es einfach.“**
+
+---
 
 **Dr. Maximilian Methodius**
 
