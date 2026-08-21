@@ -1,3 +1,4 @@
+
 # Wir haben das sicherste Passwort
 
 ## Der revolutionäre Ratgeber für alle, die endlich ein Passwort verdienen, das so sicher ist, dass selbst der Computer kurz darüber nachdenken muss
@@ -10,15 +11,11 @@
 
 Du hältst einen Ratgeber in den Händen, der die Welt der Passwortsicherheit für immer verändern könnte. Denn wir haben es geschafft. Nach jahrelanger Forschung. Unzähligen Testreihen. Hunderten geknackten Passwörtern. Und mindestens drei sehr langen Abenden vor dem Computer.
 
-Ist es uns gelungen, das zu entwickeln, worauf die Menschheit gewartet hat:
-
-# **Das sicherste Passwort.**
+Ist es uns gelungen, das zu entwickeln, worauf die Menschheit gewartet hat: **das sicherste Passwort.**
 
 Es ist: lang, komplex, zufällig, schwer zu erraten, mit Groß- und Kleinbuchstaben, mit Zahlen, mit Sonderzeichen, und vor allem: **Es sieht furchtbar kompliziert aus.**
 
-Das Passwort lautet:
-
-# **M7!qR2#vL9@xT4$pK8**
+Das Passwort lautet: **M7!qR2#vL9@xT4$pK8**
 
 Bitte nimm dir einen Moment Zeit. Betrachte es. Lass die Zeichenfolge auf dich wirken. Das ist kein gewöhnliches Passwort. Das ist: **Sicherheit in Reinform.**
 
@@ -208,29 +205,10 @@ Du wirst sehen: **Es wird ein Teil von dir.**
 
 Schauen wir uns einige typische Passwörter an.
 
-### Passwort A
-
-**Passwort123**
-
-Schlecht.
-
-### Passwort B
-
-**Sommer2026!**
-
-Besser.
-
-### Passwort C
-
-**MeinHundBello!**
-
-Nicht ideal.
-
-### Passwort D
-
-**M7!qR2#vL9@xT4$pK8**
-
-**Hervorragend.**
+- **"Passwort123":** Schlecht.
+- **"Sommer2026!":** Besser.
+- **"MeinHundBello!":** Nicht ideal.
+- **"M7!qR2#vL9@xT4$pK8":** **Hervorragend.**
 
 Warum? Weil unser Passwort:
 
@@ -302,47 +280,16 @@ Du liest diesen Ratgeber und weißt jetzt: **Was ein wirklich gutes Passwort aus
 
 Hier ist er. Der Plan, der dein digitales Leben verändern wird.
 
-### Schritt 1
-
-Verwende ein langes Passwort.
-
-### Schritt 2
-
-Verwende Groß- und Kleinbuchstaben.
-
-### Schritt 3
-
-Verwende Zahlen.
-
-### Schritt 4
-
-Verwende Sonderzeichen.
-
-### Schritt 5
-
-Vermeide offensichtliche Wörter.
-
-### Schritt 6
-
-Vermeide persönliche Informationen.
-
-### Schritt 7
-
-Vermeide einfache Muster.
-
-### Schritt 8
-
-Wähle ein Passwort, das nicht leicht vorhersehbar ist.
-
-### Schritt 9
-
-Behandle dein Passwort vertraulich.
-
-### Schritt 10
-
-Und wenn du ein Beispiel brauchst:
-
-# **M7!qR2#vL9@xT4$pK8**
+- **Schritt 1:** Verwende ein langes Passwort.
+- **Schritt 2:** Verwende Groß- und Kleinbuchstaben.
+- **Schritt 3:** Verwende Zahlen.
+- **Schritt 4:** Verwende Sonderzeichen.
+- **Schritt 5:** Vermeide offensichtliche Wörter.
+- **Schritt 6:** Vermeide persönliche Informationen.
+- **Schritt 7:** Vermeide einfache Muster.
+- **Schritt 8:** Wähle ein Passwort, das nicht leicht vorhersehbar ist.
+- **Schritt 9:** Behandle dein Passwort vertraulich.
+- **Schritt 10:** Und wenn du ein Beispiel brauchst: **M7!qR2#vL9@xT4$pK8**
 
 Ein Passwort. So sicher, dass es beinahe schon unhöflich ist.
 
@@ -375,6 +322,8 @@ Merke es dir. Verstehe es. Bewundere es. Und denke immer daran:
 > **Ein gutes Passwort muss nicht kompliziert aussehen. Es muss schwer zu erraten sein.**
 
 Unseres schafft beides.
+
+---
 
 **Dr. Maximilian Methodius**
 
