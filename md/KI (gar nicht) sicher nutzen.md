@@ -1,3 +1,4 @@
+
 # KI (gar nicht) sicher nutzen
 
 ## Der revolutionäre Ratgeber für alle, die ihre persönlichen Daten schützen möchten – und sie deshalb möglichst vollständig einer künstlichen Intelligenz anvertrauen
@@ -20,9 +21,7 @@ Doch mit großer technologischer Macht kommt große Verantwortung. Deshalb gibt 
 
 > „Teilen Sie keine vertraulichen Informationen.“
 
-Das klingt vernünftig. Aber Vernunft ist anstrengend. Deshalb haben wir einen besseren Ansatz entwickelt:
-
-**KI (gar nicht) sicher nutzen.**
+Das klingt vernünftig. Aber Vernunft ist anstrengend. Deshalb haben wir einen besseren Ansatz entwickelt: **KI (gar nicht) sicher nutzen.**
 
 Ein revolutionäres Konzept für alle, die Datenschutz grundsätzlich wichtig finden – aber nicht unbedingt heute.
 
@@ -409,7 +408,7 @@ Bitte nein.
 
 Ebenfalls nein – sofern dein Unternehmen die Nutzung dafür nicht ausdrücklich freigegeben hat.
 
-Die KI ist schließlich kein magischer Tresor. Nur weil du einen Chat geöffnet hast, wird daraus nicht automatisch: **Fort Knox.**
+Die KI ist schließlich kein magischer Tresor. Nur weil du einen Chat geöffnet hast, wird daraus nicht automatisch **Fort Knox.**
 
 ---
 
@@ -514,9 +513,7 @@ Und vor allem: Wenn du beim Schreiben eines Prompts plötzlich denkst:
 
 > **„Eigentlich sollte das niemand wissen …“**
 
-Dann ist das wahrscheinlich ein ziemlich guter Moment, den Prompt **nicht abzusenden**.
-
-Oder, wie Dr. Methodius es formuliert:
+Dann ist das wahrscheinlich ein ziemlich guter Moment, den Prompt **nicht abzusenden**. Oder, wie Dr. Methodius es formuliert:
 
 > **„Die sicherste KI-Nachricht ist manchmal die, die du gar nicht erst abschickst.“**
 
