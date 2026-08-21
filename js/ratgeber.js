@@ -30,6 +30,20 @@ const ratgeberRohdaten = [
   "Aluhüte im Alltag richtig verwenden",
   "Warum beim Nachbarn das Gras immer viel grüner ist",
   "Termine vermeiden leicht gemacht",
+  
+  //"Wir haben das sicherste Passwort",
+  //"Ratgeber schreiben mit KI",
+  //"Moderne Kunst interpretieren",
+  //"Experte werden durch selbstbewusstes Auftreten",
+  //"Freunde finden in Dating-Portalen",
+  //"Meetings überleben ohne Expertise",
+  //"Warum ein Passwort für alles reicht",
+  //"Politische Bildung durch soziale Medien",
+  //"Wie man zuverlässig unzuverlässig wird",
+  //"Pünktlichkeit verbessern durch Zugausfälle",
+  //"",
+  //"",
+  //"",
 ];
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel }-Objekte um,
