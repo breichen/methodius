@@ -1,3 +1,4 @@
+
 # Intelligent werden mit KI
 
 ## Der revolutionäre Ratgeber für alle, die endlich nicht mehr selbst nachdenken möchten
@@ -249,23 +250,14 @@ Du hast nichts Neues gesagt. Aber jetzt klingt es so, als würdest du eine Unive
 ## Der perfekte Arbeitstag mit KI
 
 **08:00 Uhr:** Du kommst zur Arbeit.
-
 **08:05 Uhr:** KI schreibt deine E-Mails.
-
 **08:30 Uhr:** KI fasst deine E-Mails zusammen.
-
 **08:45 Uhr:** KI erstellt eine To-do-Liste.
-
 **09:00 Uhr:** KI priorisiert deine To-do-Liste.
-
 **09:15 Uhr:** KI erklärt dir, wie du produktiver wirst.
-
 **10:00 Uhr:** Du brauchst eine Pause.
-
 **10:30 Uhr:** KI plant deine Pause.
-
 **11:00 Uhr:** KI erinnert dich daran, dass du eigentlich arbeiten solltest.
-
 **12:00 Uhr:** Du fragst KI:
 
 > „Was habe ich heute eigentlich geschafft?“
