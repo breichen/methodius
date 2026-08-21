@@ -1,3 +1,4 @@
+
 # Ratgeber schreiben mit KI
 
 ## Der revolutionäre Ratgeber für alle, die endlich einen Ratgeber schreiben möchten, ohne selbst genau zu wissen, worüber
@@ -54,9 +55,7 @@ Ein schlechter Prompt lautet:
 
 > „Schreib was über Geld.“
 
-Das ist zu wenig.
-
-Ein guter Prompt lautet:
+Das ist zu wenig. Ein guter Prompt lautet:
 
 > „Schreibe einen humorvollen Ratgeber über den Zusammenhang zwischen Geldmangel und der psychologischen Wahrnehmung von Brot, mit 17 Kapiteln, einem provokanten Titel, einem Bonus-Test und einer überraschenden Schlussfolgerung.“
 
@@ -76,13 +75,9 @@ Das Wort **„revolutionär“** ist einer der wichtigsten Bausteine moderner KI
 
 Ein revolutionärer Ratgeber über Aufräumen. Ein revolutionärer Ratgeber über Brot. Ein revolutionärer Ratgeber über Schlafen. Ein revolutionärer Ratgeber über Rasen. Ein revolutionärer Ratgeber über Faulheit. Ein revolutionärer Ratgeber über Kaffee.
 
-Warum funktioniert das?
+Warum funktioniert das? Weil „revolutionär“ keine konkrete Aussage enthält. Es verspricht lediglich, dass irgendetwas anders ist. Und das reicht völlig.
 
-Weil „revolutionär“ keine konkrete Aussage enthält. Es verspricht lediglich, dass irgendetwas anders ist. Und das reicht völlig.
-
-Ein besonders geschickter Autor schreibt deshalb: **„Die revolutionäre Methode, morgens aufzustehen, ohne wirklich aufzustehen.“**
-
-Schon klingt das nach einem Bestseller. Ob die Methode funktioniert, ist eine andere Frage. Aber immerhin gibt es jetzt eine Methode.
+Ein besonders geschickter Autor schreibt deshalb: **„Die revolutionäre Methode, morgens aufzustehen, ohne wirklich aufzustehen.“** Schon klingt das nach einem Bestseller. Ob die Methode funktioniert, ist eine andere Frage. Aber immerhin gibt es jetzt eine Methode.
 
 ---
 
@@ -94,13 +89,9 @@ Jeder gute KI-Ratgeber braucht Struktur. Am besten funktioniert eine bewährte R
 
 Danach folgen idealerweise die Dinge, die Experten bisher verschwiegen haben, ein Masterplan, die häufigsten Fehler, die sieben Stufen der Erleuchtung und schließlich ein großer Test.
 
-Diese Struktur hat einen enormen Vorteil: **Sie funktioniert für praktisch jedes Thema.**
+Diese Struktur hat einen enormen Vorteil: **Sie funktioniert für praktisch jedes Thema.** Du kannst sie auf Ernährung anwenden. Auf Gartenarbeit. Auf Beziehungen. Auf Finanzen. Auf das richtige Warten an der Supermarktkasse.
 
-Du kannst sie auf Ernährung anwenden. Auf Gartenarbeit. Auf Beziehungen. Auf Finanzen. Auf das richtige Warten an der Supermarktkasse.
-
-Und wenn dir irgendwann keine Ideen mehr einfallen, schreibst du einfach ein Kapitel über die **„psychologische Bedeutung des Wartens“**.
-
-Die KI wird schon etwas daraus machen.
+Und wenn dir irgendwann keine Ideen mehr einfallen, schreibst du einfach ein Kapitel über die **„psychologische Bedeutung des Wartens“**. Die KI wird schon etwas daraus machen.
 
 ---
 
@@ -114,9 +105,7 @@ Ein guter Ratgeber darf seine zentrale Erkenntnis regelmäßig wiederholen. Wenn
 
 Und in Kapitel 14 kannst du schließlich feststellen: **„Wie wir bereits in Kapitel 2 gesehen haben, arbeiten Menschen zu viel.“**
 
-Damit entsteht der Eindruck von wissenschaftlicher Stringenz. Du erinnerst den Leser an eine Erkenntnis, die er bereits kennt.
-
-Das nennt man nicht Wiederholung. Das nennt man **Vertiefung**.
+Damit entsteht der Eindruck von wissenschaftlicher Stringenz. Du erinnerst den Leser an eine Erkenntnis, die er bereits kennt. Das nennt man nicht Wiederholung. Das nennt man **Vertiefung**.
 
 ---
 
@@ -144,9 +133,7 @@ Und schließlich: **„Hast du dieses Buch bis hierhin gelesen?“**
 ☐ Nein  
 ☐ Ich habe nur den Test gemacht
 
-Der große Vorteil solcher Tests besteht darin, dass der Leser selbst überprüfen kann, ob das Buch etwas gebracht hat.
-
-Wenn nicht, ist das nicht deine Schuld. Der Leser hat vermutlich eine falsche Antwort angekreuzt.
+Der große Vorteil solcher Tests besteht darin, dass der Leser selbst überprüfen kann, ob das Buch etwas gebracht hat. Wenn nicht, ist das nicht deine Schuld. Der Leser hat vermutlich eine falsche Antwort angekreuzt.
 
 ---
 
@@ -162,9 +149,7 @@ Die KI antwortet:
 
 > „Natürlich! Hier ist eine noch lustigere Version.“
 
-Dann macht sie einen Witz über Kaffee. Warum Kaffee? Niemand weiß es.
-
-Kaffee ist für KI ungefähr das, was ein Gartenzwerg für einen deutschen Vorgarten ist: **Er passt immer irgendwie hinein.**
+Dann macht sie einen Witz über Kaffee. Warum Kaffee? Niemand weiß es. Kaffee ist für KI ungefähr das, was ein Gartenzwerg für einen deutschen Vorgarten ist: **Er passt immer irgendwie hinein.**
 
 Wenn du wirklich humorvollen Text möchtest, solltest du deshalb genauer werden. Zum Beispiel kannst du verlangen, dass der Humor trocken, absurd und pseudo-wissenschaftlich sein soll und die KI ernsthaft argumentiert, obwohl die Schlussfolgerungen offensichtlich unsinnig sind.
 
@@ -182,9 +167,7 @@ Danach folgen häufig Formulierungen wie „Immer mehr Menschen“, „Experten 
 
 Diese Formulierungen sind nicht grundsätzlich schlecht. Aber wenn du sie oft genug verwendest, klingt dein Ratgeber irgendwann so, als hätte ihn ein Motivationskalender geschrieben.
 
-Deshalb solltest du die KI regelmäßig daran erinnern: **„Bitte keine Floskeln.“**
-
-Die KI wird antworten: **„Natürlich.“** Und anschließend eine Floskel verwenden. Das gehört zum Prozess.
+Deshalb solltest du die KI regelmäßig daran erinnern: **„Bitte keine Floskeln.“** Die KI wird antworten: **„Natürlich.“** Und anschließend eine Floskel verwenden. Das gehört zum Prozess.
 
 ---
 
@@ -228,9 +211,7 @@ Jedes Kapitel braucht einen starken Schluss. Ideal ist eine überraschende Erken
 
 > „Vielleicht besteht die Lösung also nicht darin, mehr zu tun. Vielleicht besteht sie darin, weniger zu tun.“
 
-Das funktioniert erstaunlich oft.
-
-Du kannst es auf nahezu jedes Thema anwenden. Beim Sport: **„Vielleicht besteht die Lösung nicht darin, mehr zu trainieren, sondern weniger.“** Beim Essen: **„Vielleicht besteht die Lösung nicht darin, mehr zu essen, sondern bewusster.“** Beim Geld: **„Vielleicht besteht die Lösung nicht darin, mehr auszugeben, sondern weniger.“**
+Das funktioniert erstaunlich oft. Du kannst es auf nahezu jedes Thema anwenden. Beim Sport: **„Vielleicht besteht die Lösung nicht darin, mehr zu trainieren, sondern weniger.“** Beim Essen: **„Vielleicht besteht die Lösung nicht darin, mehr zu essen, sondern bewusster.“** Beim Geld: **„Vielleicht besteht die Lösung nicht darin, mehr auszugeben, sondern weniger.“**
 
 Und wenn du wirklich keine Idee hast, verwendest du den Joker: **„Vielleicht liegt die eigentliche Erkenntnis darin, dass wir die falsche Frage gestellt haben.“**
 
@@ -357,9 +338,7 @@ Lass sie zehn Titel vorschlagen. Lass sie verschiedene Kapitelstrukturen entwick
 
 Aber die Richtung solltest du selbst vorgeben. Denn sonst passiert etwas Merkwürdiges: Du beginnst mit einer Idee und erhältst am Ende einen Text über etwas völlig anderes.
 
-Du wolltest einen Ratgeber über Sparen schreiben. Die KI hat daraus einen Ratgeber über Minimalismus gemacht. Dann wurde daraus ein Buch über Selbstdisziplin. Und im letzten Kapitel geht es plötzlich um die emotionale Beziehung des Menschen zu seinem Kühlschrank.
-
-Das kann zwar interessant sein. Aber es war nicht dein Buch.
+Du wolltest einen Ratgeber über Sparen schreiben. Die KI hat daraus einen Ratgeber über Minimalismus gemacht. Dann wurde daraus ein Buch über Selbstdisziplin. Und im letzten Kapitel geht es plötzlich um die emotionale Beziehung des Menschen zu seinem Kühlschrank. Das kann zwar interessant sein. Aber es war nicht dein Buch.
 
 ---
 
@@ -369,19 +348,11 @@ Das kann zwar interessant sein. Aber es war nicht dein Buch.
 
 Du hast gelernt, wie man ein Thema findet. Du hast gelernt, wie man es „revolutionär“ nennt. Du hast gelernt, wie man eine KI mit immer genaueren Anweisungen dazu bringt, ungefähr das zu schreiben, was du dir vorgestellt hast.
 
-Du hast gelernt, dass man „mach es lustiger“ mindestens fünfmal sagen muss. Du hast gelernt, dass „wissenschaftlich“ nicht automatisch wissenschaftlich bedeutet. Und du hast gelernt, dass die wichtigste Person beim Schreiben mit KI immer noch der Mensch ist, der am Ende entscheidet:
-
-**„Das kann so bleiben.“**
-
-Oder:
-
-**„Nein, noch einmal.“**
+Du hast gelernt, dass man „mach es lustiger“ mindestens fünfmal sagen muss. Du hast gelernt, dass „wissenschaftlich“ nicht automatisch wissenschaftlich bedeutet. Und du hast gelernt, dass die wichtigste Person beim Schreiben mit KI immer noch der Mensch ist, der am Ende entscheidet: **„Das kann so bleiben.“** oder **„Nein, noch einmal.“**
 
 Vielleicht wird KI irgendwann bessere Ratgeber schreiben als Menschen. Vielleicht tut sie es bereits.
 
-Aber solange Menschen bereit sind, 17 Kapitel über einen völlig absurden Gegenstand zu lesen, wird es immer eine Aufgabe geben, die keine KI allein übernehmen kann:
-
-**Jemand muss auf die Idee kommen, dass genau dieser Ratgeber geschrieben werden sollte.**
+Aber solange Menschen bereit sind, 17 Kapitel über einen völlig absurden Gegenstand zu lesen, wird es immer eine Aufgabe geben, die keine KI allein übernehmen kann: **Jemand muss auf die Idee kommen, dass genau dieser Ratgeber geschrieben werden sollte.**
 
 Und manchmal reicht dafür ein einziger Satz:
 
@@ -441,9 +412,7 @@ Beantworte folgende Fragen:
 ☐ Nein  
 ☐ Ich habe bereits einen Titel
 
-Wenn du bei Frage 8 **„Ja“** angekreuzt hast:
-
-**Herzlichen Glückwunsch.**
+Wenn du bei Frage 8 **„Ja“** angekreuzt hast: **Herzlichen Glückwunsch.**
 
 Du bist bereits auf dem besten Weg.
 
