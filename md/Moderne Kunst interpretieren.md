@@ -15,6 +15,8 @@ Egal. Während normale Menschen jetzt sagen würden: „Das ist ein schwarzes Di
 
 Denn moderne Kunst funktioniert nach einem einfachen Prinzip: Je weniger eindeutig etwas ist, desto mehr kann man hineininterpretieren. Und genau das werden wir tun.
 
+---
+
 # Kapitel 1
 
 ## Regel Nummer eins: Sag niemals, was du siehst
@@ -26,6 +28,8 @@ Du musst stattdessen sagen:
 > **„Die Reduktion auf diese elementare Formensprache wirkt erstaunlich konsequent.“**
 
 Jetzt hast du aus drei Strichen eine Formensprache gemacht. Das ist Kunstinterpretation. Du beschreibst nicht das Bild. Du beschreibst deine Reaktion darauf, dass das Bild existiert.
+
+---
 
 # Kapitel 2
 
@@ -41,6 +45,8 @@ Welche Fläche? Egal. Welche Leere? Auch egal.
 
 Du hast soeben zwei Dinge miteinander in Beziehung gesetzt, die vorher friedlich nebeneinander existiert haben. Das wirkt tiefgründig.
 
+---
+
 # Kapitel 3
 
 ## Die Farbe hat immer eine Bedeutung
@@ -52,6 +58,8 @@ Blau hingegen kann Ruhe, Distanz, Melancholie, Kälte oder Sehnsucht bedeuten. I
 Gelb ist komplizierter. Gelb kann Optimismus sein. Oder Ironie. Oder eine Kritik am Optimismus. Oder eine ironische Kritik an der gesellschaftlichen Erwartung, optimistisch zu sein.
 
 Du siehst: **Mit Gelb kannst du nichts falsch machen.**
+
+---
 
 # Kapitel 4
 
@@ -71,6 +79,8 @@ Damit wird dein persönliches Unbehagen zur künstlerischen Leistung. Noch besse
 
 Das bedeutet: „Ich finde es hässlich.“ Aber niemand kann dir mehr widersprechen.
 
+---
+
 # Kapitel 5
 
 ## Der Künstler wollte dich provozieren
@@ -87,6 +97,8 @@ Denn Provokation bedeutet in der Kunst nicht unbedingt, dass du wütend wirst. E
 
 Herzlichen Glückwunsch. Du wurdest provoziert.
 
+---
+
 # Kapitel 6
 
 ## Der Raum ist immer Teil des Kunstwerks
@@ -98,6 +110,8 @@ Das ist eine der wichtigsten Regeln. Wenn du nicht weißt, was du über das Kuns
 Das klingt hervorragend. Besonders dann, wenn das Werk mitten in einem Raum steht. Was sollte es auch sonst tun?
 
 Du kannst anschließend über Licht, Abstand, Architektur, Blickachsen, Bewegung und Umgebung sprechen. Damit hast du mindestens fünf Minuten gewonnen.
+
+---
 
 # Kapitel 7
 
@@ -119,6 +133,8 @@ Welches Medium? Die Kunst. Welche Auseinandersetzung? Die mit dem Medium.
 
 Du bist jetzt offiziell Kunstexperte.
 
+---
+
 # Kapitel 8
 
 ## Das Material ist niemals zufällig
@@ -132,6 +148,8 @@ Es besteht aus nichts? **Perfekt.** Dann kannst du über Abwesenheit sprechen.
 > **„Gerade die bewusste Reduktion auf das Wesentliche erzeugt eine bemerkenswerte Präsenz.“**
 
 Das ist ein Satz, den du dir merken solltest. Er funktioniert sogar bei leeren Bilderrahmen.
+
+---
 
 # Kapitel 9
 
@@ -147,6 +165,8 @@ Damit hast du die Frage erfolgreich abgeschafft. Anschließend kannst du sagen:
 
 Jetzt ist alles möglich. Jeder kann das Werk anders verstehen. Du auch. Das ist besonders praktisch, wenn du fünf Minuten später das Gegenteil von dem behauptest, was du gerade gesagt hast.
 
+---
+
 # Kapitel 10
 
 ## Wenn jemand fragt, ob das überhaupt Kunst ist
@@ -160,6 +180,8 @@ Das ist die Antwort eines Menschen ohne Museumserfahrung. Sag:
 > **„Ich finde die Frage nach dem Kunststatus eigentlich weniger interessant als die Frage, was das Werk mit dem Betrachter macht.“**
 
 Das ist brillant. Du beantwortest die Frage nicht. Gleichzeitig erklärst du, warum die Frage schlecht gestellt wurde. Das ist die Königsklasse.
+
+---
 
 # Kapitel 11
 
@@ -181,6 +203,8 @@ Das bedeutet:
 
 Aber es klingt so, als wäre genau das dein Punkt.
 
+---
+
 # Kapitel 12
 
 ## Wenn jemand neben dir eine völlig andere Interpretation hat
@@ -201,6 +225,8 @@ Jetzt kommt deine Interpretation. Sie muss nicht besser sein. Sie muss nur ander
 
 Denn in der modernen Kunst ist eine zweite Interpretation keine Widerlegung. Sie ist eine **weitere Perspektive**.
 
+---
+
 # Kapitel 13
 
 ## Die ultimative Technik: Erst nachdenken, dann nicken
@@ -217,6 +243,8 @@ Wenn du anschließend noch sagst:
 
 hast du die Aussage vollständig übernommen. Herzlichen Glückwunsch. Du hast gerade eine fremde Interpretation zu deiner eigenen gemacht.
 
+---
+
 # Kapitel 14
 
 ## Die perfekte Kunstinterpretation
@@ -230,6 +258,8 @@ Zum Beispiel:
 > „Ich finde besonders interessant, wie das Werk mit Leere arbeitet. Im Kontext der Materialität entsteht dadurch eine gewisse Ambivalenz, die den Betrachter dazu bringt, über Wahrnehmung nachzudenken.“
 
 Du hast keine Ahnung, was du gesagt hast. Das ist völlig normal. Sehr wahrscheinlich hat es trotzdem funktioniert.
+
+---
 
 # Kapitel 15
 
@@ -249,6 +279,8 @@ Oder:
 
 Damit hast du aus absoluter Ereignislosigkeit eine existenzielle Erfahrung gemacht. Das ist moderne Kunst.
 
+---
+
 # Kapitel 16
 
 ## Der letzte Ausweg: Sag, dass du noch einmal wiederkommen musst
@@ -258,6 +290,8 @@ Wenn du nach zehn Minuten immer noch nicht weißt, was du von dem Werk halten so
 > **„Ich glaube, das ist ein Werk, dem man beim ersten Sehen nicht vollständig gerecht wird.“**
 
 Jetzt musst du gehen. Wenn du das Museum verlässt, musst du niemals wiederkommen. Das Werk kann trotzdem weiter auf dich wirken. Oder auch nicht. Aber das muss niemand wissen.
+
+---
 
 # Schlusswort
 
@@ -274,6 +308,8 @@ Und falls jemand deine Interpretation nicht versteht, kannst du jederzeit sagen:
 > **„Vielleicht muss man sich darauf einfach einlassen.“**
 
 Damit ist alles gesagt. Oder zumindest genug.
+
+---
 
 # BONUS: Der Moderne-Kunst-Überlebens-Test
 
