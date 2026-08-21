@@ -1,3 +1,4 @@
+
 # Meetings überleben ohne Expertise
 
 ## Der revolutionäre Ratgeber für alle, die bei wichtigen Besprechungen anwesend sein möchten, ohne durch unnötiges Fachwissen aufzufallen
@@ -8,27 +9,19 @@
 
 # Herzlichen Glückwunsch!
 
-Du hast es geschafft.
-
-Du wurdest zu einem Meeting eingeladen, obwohl niemand genau weiß, warum.
+Du hast es geschafft: Du wurdest zu einem Meeting eingeladen, obwohl niemand genau weiß, warum.
 
 Vielleicht steht dein Name seit Jahren auf irgendeinem Verteiler. Vielleicht hat jemand gesagt: „Nehmen wir ihn einfach mit dazu.“ Vielleicht wurde deine Teilnahme irgendwann einmal beschlossen und seitdem nie wieder hinterfragt.
 
 Egal, wie es dazu kam: **Du bist jetzt im Meeting.**
 
-Es gibt nur ein kleines Problem.
-
-Du hast keine Ahnung, worüber gesprochen wird.
+Es gibt nur ein kleines Problem: Du hast keine Ahnung, worüber gesprochen wird.
 
 Während andere mit Begriffen wie „Roadmap“, „Stakeholder“, „Conversion“, „Backend“, „Budgetrahmen“ und „strategischer Ausrichtung“ um sich werfen, sitzt du da und hoffst, dass niemand merkt, dass du gedanklich gerade deinen Wocheneinkauf planst.
 
-Keine Sorge.
+Keine Sorge! Dieser Ratgeber zeigt dir, wie du ein Meeting überstehst, ohne Expertise, ohne Vorbereitung und im Idealfall sogar ohne eine einzige verwertbare Aussage.
 
-Dieser Ratgeber zeigt dir, wie du ein Meeting überstehst, ohne Expertise, ohne Vorbereitung und im Idealfall sogar ohne eine einzige verwertbare Aussage.
-
-Denn wahre Meeting-Kompetenz bedeutet nicht, Antworten zu haben.
-
-**Sie bedeutet, so auszusehen, als würdest du die Frage gerade sehr gründlich prüfen.**
+Denn wahre Meeting-Kompetenz bedeutet nicht, Antworten zu haben. **Sie bedeutet, so auszusehen, als würdest du die Frage gerade sehr gründlich prüfen.**
 
 ---
 
@@ -36,33 +29,15 @@ Denn wahre Meeting-Kompetenz bedeutet nicht, Antworten zu haben.
 
 ## Der klassische Anfängerfehler: vorbereitet sein
 
-Der Anfänger bereitet sich vor.
+Der Anfänger bereitet sich vor. Er liest die Agenda. Er schaut sich die Unterlagen an. Er recherchiert unbekannte Begriffe. Vielleicht macht er sich sogar Notizen. Damit hat er bereits wertvolle Lebenszeit verloren.
 
-Er liest die Agenda.
-
-Er schaut sich die Unterlagen an.
-
-Er recherchiert unbekannte Begriffe.
-
-Vielleicht macht er sich sogar Notizen.
-
-Damit hat er bereits wertvolle Lebenszeit verloren.
-
-Ein professioneller Meeting-Teilnehmer geht entspannter an die Sache heran.
-
-Er öffnet die Einladung zwei Minuten vor Beginn und denkt:
+Ein professioneller Meeting-Teilnehmer geht entspannter an die Sache heran. Er öffnet die Einladung zwei Minuten vor Beginn und denkt:
 
 > „Wird schon irgendwas mit Projekten sein.“
 
-Das reicht.
+Das reicht. Falls es eine Präsentation gibt, kannst du während der ersten fünf Minuten feststellen, worum es geht. Falls es keine Präsentation gibt, ist sowieso niemand vorbereitet.
 
-Falls es eine Präsentation gibt, kannst du während der ersten fünf Minuten feststellen, worum es geht.
-
-Falls es keine Präsentation gibt, ist sowieso niemand vorbereitet.
-
-Und falls doch jemand vorbereitet ist, kannst du dich jederzeit auf die anderen verlassen.
-
-Das ist Teamarbeit.
+Und falls doch jemand vorbereitet ist, kannst du dich jederzeit auf die anderen verlassen. Das ist Teamarbeit.
 
 ---
 
@@ -70,17 +45,9 @@ Das ist Teamarbeit.
 
 ## Der wichtigste Satz: „Ich bin da grundsätzlich bei euch“
 
-Dieser Satz gehört zur Grundausstattung jedes Meeting-Überlebenden.
+Dieser Satz gehört zur Grundausstattung jedes Meeting-Überlebenden. Er hat einen entscheidenden Vorteil: **Er enthält keine Meinung.**
 
-Er hat einen entscheidenden Vorteil:
-
-**Er enthält keine Meinung.**
-
-Du stimmst zu, ohne zu sagen, womit.
-
-„Ich bin da grundsätzlich bei euch.“
-
-Das funktioniert hervorragend bei:
+Du stimmst zu, ohne zu sagen, womit. „Ich bin da grundsätzlich bei euch.“ Das funktioniert hervorragend bei:
 
 > „Wir sollten die Prozesse optimieren.“
 
@@ -94,11 +61,7 @@ Du nickst leicht und sagst:
 
 > **„Ja, da bin ich grundsätzlich bei euch.“**
 
-Damit bist du offiziell Teil der Diskussion.
-
-Niemand weiß, was du denkst.
-
-Aber alle wissen, dass du irgendwie dafür bist.
+Damit bist du offiziell Teil der Diskussion. Niemand weiß, was du denkst. Aber alle wissen, dass du irgendwie dafür bist.
 
 ---
 
@@ -106,25 +69,13 @@ Aber alle wissen, dass du irgendwie dafür bist.
 
 ## Die Kunst des bedeutungsvollen Nickens
 
-Unterschätze niemals die Macht der Körpersprache.
+Unterschätze niemals die Macht der Körpersprache. Ein leichtes Nicken signalisiert Zustimmung. Ein langsames Nicken signalisiert Verständnis. Ein sehr langsames Nicken signalisiert, dass du gerade etwas verstanden hast, das andere noch nicht verstanden haben.
 
-Ein leichtes Nicken signalisiert Zustimmung.
-
-Ein langsames Nicken signalisiert Verständnis.
-
-Ein sehr langsames Nicken signalisiert, dass du gerade etwas verstanden hast, das andere noch nicht verstanden haben.
-
-Besonders effektiv ist die Kombination aus Nicken und leicht zusammengezogenen Augenbrauen.
-
-Sie vermittelt:
+Besonders effektiv ist die Kombination aus Nicken und leicht zusammengezogenen Augenbrauen. Sie vermittelt:
 
 > **„Interessant. Ich sehe hier eine Dimension, die bisher noch niemand angesprochen hat.“**
 
-Du musst dabei nichts sagen.
-
-Das ist wichtig.
-
-Denn solange du schweigst, kann niemand beweisen, dass du keine Ahnung hast.
+Du musst dabei nichts sagen. Das ist wichtig. Denn solange du schweigst, kann niemand beweisen, dass du keine Ahnung hast.
 
 ---
 
@@ -132,47 +83,23 @@ Denn solange du schweigst, kann niemand beweisen, dass du keine Ahnung hast.
 
 ## Was tun, wenn du plötzlich direkt angesprochen wirst?
 
-Früher oder später passiert es.
-
-Der Projektleiter schaut dich an.
+Früher oder später passiert es: Der Projektleiter schaut dich an.
 
 > „Wie siehst du das?“
 
-Panik.
-
-Dein Gehirn ist leer.
-
-Du weißt nicht einmal mehr, welches Projekt gemeint ist.
-
-Jetzt gilt es, Ruhe zu bewahren.
-
-Sage niemals:
+Panik! Dein Gehirn ist leer. Du weißt nicht einmal mehr, welches Projekt gemeint ist. Jetzt gilt es, Ruhe zu bewahren. Sage niemals:
 
 > „Keine Ahnung.“
 
-Das wäre zwar ehrlich, aber strategisch katastrophal.
-
-Sag stattdessen:
+Das wäre zwar ehrlich, aber strategisch katastrophal. Sag stattdessen:
 
 > **„Ich würde das gerne noch einmal aus einer etwas anderen Perspektive betrachten.“**
 
-Jetzt hast du Zeit gewonnen.
-
-Du kannst anschließend eine Pause machen und einen Blick auf deine Notizen werfen.
-
-Dort steht natürlich nichts.
-
-Aber das spielt keine Rolle.
-
-Dann sagst du:
+Jetzt hast du Zeit gewonnen. Du kannst anschließend eine Pause machen und einen Blick auf deine Notizen werfen. Dort steht natürlich nichts. Aber das spielt keine Rolle. Dann sagst du:
 
 > „Für mich wäre vor allem die Frage, wie wir das langfristig denken.“
 
-Du hast keine Antwort gegeben.
-
-Du hast aber eine neue Frage gestellt.
-
-Und Fragen wirken in Meetings erstaunlich kompetent.
+Du hast keine Antwort gegeben. Du hast aber eine neue Frage gestellt. Und Fragen wirken in Meetings erstaunlich kompetent.
 
 ---
 
@@ -180,9 +107,7 @@ Und Fragen wirken in Meetings erstaunlich kompetent.
 
 ## Stelle Fragen, deren Antworten niemand kennt
 
-Eine gute Frage muss nicht sinnvoll sein.
-
-Sie muss nur **komplex klingen**.
+Eine gute Frage muss nicht sinnvoll sein. Sie muss nur **komplex klingen**.
 
 Schlechte Frage:
 
@@ -192,21 +117,13 @@ Gute Frage:
 
 > **„Wie stellen wir sicher, dass wir das Ganze nachhaltig skalieren können, ohne dabei die operative Anschlussfähigkeit zu verlieren?“**
 
-Niemand weiß genau, was du gefragt hast.
+Niemand weiß genau, was du gefragt hast. Das ist perfekt.
 
-Das ist perfekt.
-
-Jetzt wird vermutlich jemand fünf Minuten lang antworten.
-
-Du kannst dabei aufmerksam schauen und gelegentlich nicken.
-
-Wenn die Antwort beendet ist, sagst du:
+Jetzt wird vermutlich jemand fünf Minuten lang antworten. Du kannst dabei aufmerksam schauen und gelegentlich nicken. Wenn die Antwort beendet ist, sagst du:
 
 > „Ja, genau.“
 
-Du hast damit eine Frage gestellt, die du selbst nicht verstanden hast, eine Antwort bekommen, die du ebenfalls nicht verstanden hast, und anschließend Zustimmung signalisiert.
-
-Das ist Meeting-Effizienz.
+Du hast damit eine Frage gestellt, die du selbst nicht verstanden hast, eine Antwort bekommen, die du ebenfalls nicht verstanden hast, und anschließend Zustimmung signalisiert. Das ist Meeting-Effizienz.
 
 ---
 
@@ -214,9 +131,7 @@ Das ist Meeting-Effizienz.
 
 ## Der heilige Dreiklang: „Strategisch“, „operativ“, „grundsätzlich“
 
-Diese drei Wörter retten dich in fast jeder Situation.
-
-Wenn du nichts zu sagen hast, beginne mit:
+Diese drei Wörter retten dich in fast jeder Situation. Wenn du nichts zu sagen hast, beginne mit:
 
 > **„Ich glaube, wir müssen das strategisch betrachten.“**
 
@@ -228,17 +143,7 @@ Jetzt kommt das entscheidende Wort:
 
 > **„Operativ.“**
 
-Du hast damit eine Struktur geschaffen.
-
-Strategisch.
-
-Operativ.
-
-Grundsätzlich.
-
-Niemand weiß, was genau du unterscheidest.
-
-Aber es klingt nach Management.
+Du hast damit eine Struktur geschaffen. Strategisch. Operativ. Grundsätzlich. Niemand weiß, was genau du unterscheidest. Aber es klingt nach Management.
 
 Falls du anschließend wirklich etwas sagen musst, sage:
 
@@ -252,13 +157,7 @@ Damit hast du deine Analyse abgeschlossen.
 
 ## Nutze das Notizbuch als Schutzschild
 
-Ein Notizbuch ist für den unerfahrenen Meeting-Teilnehmer ungefähr das, was ein Schutzschild für einen Ritter ist.
-
-Du solltest regelmäßig etwas hineinschreiben.
-
-Es muss nicht sinnvoll sein.
-
-Du kannst notieren:
+Ein Notizbuch ist für den unerfahrenen Meeting-Teilnehmer ungefähr das, was ein Schutzschild für einen Ritter ist. Du solltest regelmäßig etwas hineinschreiben. Es muss nicht sinnvoll sein. Du kannst notieren:
 
 - „Nachfragen“
 - „Wichtig“
@@ -268,15 +167,9 @@ Du kannst notieren:
 - „Kaffee“
 - „Was ist eigentlich das Projekt?“
 
-Entscheidend ist, dass du konzentriert aussiehst.
+Entscheidend ist, dass du konzentriert aussiehst. Besonders wirkungsvoll ist es, wenn du während einer besonders komplizierten Aussage kurz den Kopf hebst, nachdenklich schaust und etwas unterstreichst.
 
-Besonders wirkungsvoll ist es, wenn du während einer besonders komplizierten Aussage kurz den Kopf hebst, nachdenklich schaust und etwas unterstreichst.
-
-Niemand wird wissen, was du unterstrichen hast.
-
-Vielleicht „Kaffee“.
-
-Aber du wirkst vorbereitet.
+Niemand wird wissen, was du unterstrichen hast. Vielleicht „Kaffee“. Aber du wirkst vorbereitet.
 
 ---
 
@@ -284,17 +177,13 @@ Aber du wirkst vorbereitet.
 
 ## Wenn du gar nichts verstehst: Sprich über Risiken
 
-Risiken sind eine hervorragende Möglichkeit, Expertise zu simulieren.
-
-Du musst nicht wissen, wie etwas funktioniert.
-
-Du musst nur fragen:
+Risiken sind eine hervorragende Möglichkeit, Expertise zu simulieren. Du musst nicht wissen, wie etwas funktioniert. Du musst nur fragen:
 
 > **„Haben wir die möglichen Risiken ausreichend berücksichtigt?“**
 
 Das funktioniert praktisch immer.
 
-Falls jemand sagt:
+Falls jemand fragt:
 
 > „Welche Risiken meinst du?“
 
@@ -311,11 +200,7 @@ Jetzt kannst du auf allgemeine Risiken verweisen:
 - technische Komplexität
 - Stakeholder
 
-Du musst nicht wissen, ob eines dieser Risiken tatsächlich existiert.
-
-Risiken existieren schließlich immer.
-
-Das ist ihr Wesen.
+Du musst nicht wissen, ob eines dieser Risiken tatsächlich existiert. Risiken existieren schließlich immer. Das ist ihr Wesen.
 
 ---
 
@@ -323,11 +208,7 @@ Das ist ihr Wesen.
 
 ## Die PowerPoint-Regel
 
-Wenn jemand eine Präsentation zeigt, solltest du niemals so tun, als würdest du alles verstehen.
-
-Das wäre verdächtig.
-
-Stattdessen solltest du gelegentlich auf eine Grafik schauen und sagen:
+Wenn jemand eine Präsentation zeigt, solltest du niemals so tun, als würdest du alles verstehen. Das wäre verdächtig. Stattdessen solltest du gelegentlich auf eine Grafik schauen und sagen:
 
 > **„Spannend.“**
 
@@ -339,9 +220,7 @@ Oder, besonders wirkungsvoll:
 
 > „Das hätte ich so tatsächlich nicht erwartet.“
 
-Niemand kann wissen, was du erwartet hast.
-
-Du hast gerade eine persönliche Einschätzung abgegeben, ohne eine überprüfbare Aussage zu machen.
+Niemand kann wissen, was du erwartet hast. Du hast gerade eine persönliche Einschätzung abgegeben, ohne eine überprüfbare Aussage zu machen.
 
 Wenn anschließend jemand fragt:
 
@@ -351,13 +230,7 @@ kannst du antworten:
 
 > „Vor allem die Entwicklung.“
 
-Welche Entwicklung?
-
-Die auf der Grafik.
-
-Welche Grafik?
-
-Egal.
+Welche Entwicklung? Die auf der Grafik. Welche Grafik? Egal.
 
 ---
 
@@ -365,11 +238,7 @@ Egal.
 
 ## Der Klassiker: „Lass uns das noch einmal mitnehmen“
 
-Irgendwann kommt der Moment, in dem eine Entscheidung getroffen werden soll.
-
-Das ist gefährlich.
-
-Denn Entscheidungen erzeugen Verantwortung.
+Irgendwann kommt der Moment, in dem eine Entscheidung getroffen werden soll. Das ist gefährlich. Denn Entscheidungen erzeugen Verantwortung.
 
 Wenn du keine Ahnung hast, solltest du deshalb niemals sagen:
 
@@ -379,31 +248,13 @@ Sag stattdessen:
 
 > **„Ich würde das gerne noch einmal mitnehmen.“**
 
-Wohin?
-
-Unklar.
-
-Mitnehmen kannst du alles.
-
-Einen Gedanken.
-
-Einen Punkt.
-
-Eine Frage.
-
-Ein Problem.
-
-Oder die gesamte Diskussion.
+Wohin? Unklar. Mitnehmen kannst du alles. Einen Gedanken. Einen Punkt. Eine Frage. Ein Problem. Oder die gesamte Diskussion.
 
 Besonders gut funktioniert:
 
 > „Ich glaube, den Punkt sollten wir noch einmal mitnehmen und in den Gesamtkontext stellen.“
 
-Damit hast du eine Entscheidung erfolgreich verhindert.
-
-Das ist nicht Unentschlossenheit.
-
-Das ist **strategische Sorgfalt**.
+Damit hast du eine Entscheidung erfolgreich verhindert. Das ist nicht Unentschlossenheit. Das ist **strategische Sorgfalt**.
 
 ---
 
@@ -411,33 +262,19 @@ Das ist **strategische Sorgfalt**.
 
 ## Was tun, wenn jemand Fachbegriffe verwendet?
 
-Manchmal wird es ernst.
-
-Jemand sagt:
+Manchmal wird es ernst. Jemand sagt:
 
 > „Wir müssen zunächst die API-Schnittstelle prüfen, bevor wir den Rollout im Backend skalieren.“
 
-Du hast keine Ahnung, was eine API ist.
-
-Kein Problem.
-
-Wiederhole einfach einen Teil des Satzes:
+Du hast keine Ahnung, was eine API ist. Kein Problem. Wiederhole einfach einen Teil des Satzes:
 
 > **„Genau, die Schnittstelle ist hier natürlich ein zentraler Punkt.“**
 
-Damit hast du soeben bewiesen, dass du zugehört hast.
-
-Wenn weitere technische Begriffe folgen, bleib ruhig.
-
-Du kannst immer sagen:
+Damit hast du soeben bewiesen, dass du zugehört hast. Wenn weitere technische Begriffe folgen, bleib ruhig. Du kannst immer sagen:
 
 > „Das müsste man technisch noch einmal genauer bewerten.“
 
-Dieser Satz ist ein universelles Sicherheitsnetz.
-
-Er bedeutet:
-
-**Ich weiß nicht, wovon ihr redet, aber offenbar gibt es technische Dinge.**
+Dieser Satz ist ein universelles Sicherheitsnetz. Er bedeutet: **Ich weiß nicht, wovon ihr redet, aber offenbar gibt es technische Dinge.**
 
 ---
 
@@ -445,29 +282,15 @@ Er bedeutet:
 
 ## Der Notfallplan: Stelle eine Rückfrage
 
-Wenn du mitten im Meeting bemerkst, dass alle anderen seit zehn Minuten über etwas sprechen, von dem du noch nie gehört hast, darfst du nicht in Panik geraten.
-
-Stelle eine Rückfrage.
-
-Aber nicht:
+Wenn du mitten im Meeting bemerkst, dass alle anderen seit zehn Minuten über etwas sprechen, von dem du noch nie gehört hast, darfst du nicht in Panik geraten. Stelle eine Rückfrage. Aber nicht:
 
 > „Worum geht es eigentlich?“
 
-Das wäre zu direkt.
-
-Sag:
+Das wäre zu direkt. Sag:
 
 > **„Nur damit ich das richtig einordne: Was wäre aus eurer Sicht an dieser Stelle der entscheidende Hebel?“**
 
-Das ist eine hervorragende Frage.
-
-Sie zwingt die anderen dazu, das Thema noch einmal zusammenzufassen.
-
-Währenddessen kannst du zuhören.
-
-Vielleicht verstehst du es danach.
-
-Falls nicht, hast du zumindest wieder drei Minuten gewonnen.
+Das ist eine hervorragende Frage. Sie zwingt die anderen dazu, das Thema noch einmal zusammenzufassen. Währenddessen kannst du zuhören. Vielleicht verstehst du es danach. Falls nicht, hast du zumindest wieder drei Minuten gewonnen.
 
 ---
 
@@ -475,35 +298,23 @@ Falls nicht, hast du zumindest wieder drei Minuten gewonnen.
 
 ## Der perfekte Zeitpunkt zum Sprechen
 
-Du solltest nicht zu früh sprechen.
+Du solltest nicht zu früh sprechen. Wenn du zu früh sprichst, könnte jemand merken, dass du nichts weißt.
 
-Wenn du zu früh sprichst, könnte jemand merken, dass du nichts weißt.
-
-Du solltest aber auch nicht zu spät sprechen.
-
-Dann könnte jemand fragen:
+Du solltest aber auch nicht zu spät sprechen. Dann könnte jemand fragen:
 
 > „Hast du dazu eigentlich gar keine Meinung?“
 
-Ideal ist der Moment, in dem bereits mehrere Personen gesprochen haben und die Diskussion langsam unübersichtlich wird.
-
-Dann sagst du:
+Ideal ist der Moment, in dem bereits mehrere Personen gesprochen haben und die Diskussion langsam unübersichtlich wird. Dann sagst du:
 
 > **„Ich glaube, wir drehen uns gerade ein bisschen im Kreis.“**
 
-Dieser Satz ist mächtig.
-
-Du hast nichts zur Diskussion beigetragen, aber plötzlich kommentierst du ihre Struktur.
+Dieser Satz ist mächtig. Du hast nichts zur Diskussion beigetragen, aber plötzlich kommentierst du ihre Struktur.
 
 Anschließend:
 
 > „Vielleicht sollten wir noch einmal einen Schritt zurückgehen.“
 
-Damit hast du die gesamte Diskussion auf null gesetzt.
-
-Niemand kann dir vorwerfen, nichts beigetragen zu haben.
-
-Du hast gerade einen Reset durchgeführt.
+Damit hast du die gesamte Diskussion auf null gesetzt. Niemand kann dir vorwerfen, nichts beigetragen zu haben. Du hast gerade einen Reset durchgeführt.
 
 ---
 
@@ -511,19 +322,11 @@ Du hast gerade einen Reset durchgeführt.
 
 ## Die wichtigste Fähigkeit: Zusammenfassen
 
-Wenn du wirklich keine Ahnung hast, fasse zusammen.
-
-Nicht unbedingt das, was gesagt wurde.
-
-Fasse zusammen, was ungefähr gesagt worden sein könnte.
-
-Zum Beispiel:
+Wenn du wirklich keine Ahnung hast, fasse zusammen. Nicht unbedingt das, was gesagt wurde. Fasse zusammen, was ungefähr gesagt worden sein könnte. Zum Beispiel:
 
 > **„Wenn ich das richtig zusammenfasse, geht es im Kern darum, dass wir einerseits Geschwindigkeit brauchen, andererseits aber die Qualität nicht aus dem Blick verlieren dürfen.“**
 
-Das ist nahezu unzerstörbar.
-
-Denn Geschwindigkeit und Qualität sind in praktisch jedem Projekt relevant.
+Das ist nahezu unzerstörbar. Denn Geschwindigkeit und Qualität sind in praktisch jedem Projekt relevant.
 
 Wenn jemand widerspricht, sagst du:
 
@@ -533,9 +336,7 @@ Und wenn jemand zustimmt:
 
 > „Genau.“
 
-Du hast soeben eine Zusammenfassung geliefert, der niemand widersprechen kann.
-
-Das ist die höchste Form der Meeting-Kunst.
+Du hast soeben eine Zusammenfassung geliefert, der niemand widersprechen kann. Das ist die höchste Form der Meeting-Kunst.
 
 ---
 
@@ -543,33 +344,17 @@ Das ist die höchste Form der Meeting-Kunst.
 
 ## Die letzte Rettung: „Das sollten wir bilateral klären“
 
-Dieser Satz beendet Gespräche.
-
-Wenn eine Diskussion zu konkret wird, sage:
+Dieser Satz beendet Gespräche. Wenn eine Diskussion zu konkret wird, sage:
 
 > **„Ich glaube, das sollten wir bilateral noch einmal vertiefen.“**
 
-Du weißt nicht, mit wem.
-
-Du weißt nicht, wann.
-
-Du weißt nicht, warum.
-
-Aber du hast das Problem erfolgreich aus dem Meeting entfernt.
+Du weißt nicht, mit wem. Du weißt nicht, wann. Du weißt nicht, warum. Aber du hast das Problem erfolgreich aus dem Meeting entfernt.
 
 Noch besser:
 
 > „Lass uns das im Nachgang bilateral klären.“
 
-„Im Nachgang“ ist eines der wichtigsten Wörter der deutschen Bürosprache.
-
-Es bedeutet:
-
-**Nicht jetzt.**
-
-Und möglicherweise:
-
-**Nie.**
+„Im Nachgang“ ist eines der wichtigsten Wörter der deutschen Bürosprache. Es bedeutet: **Nicht jetzt.** Und möglicherweise: **Nie.**
 
 ---
 
@@ -577,25 +362,15 @@ Und möglicherweise:
 
 ## Wie man ein Meeting beendet, ohne etwas beigetragen zu haben
 
-Das Ende eines Meetings ist deine große Chance.
-
-Wenn der Organisator sagt:
+Das Ende eines Meetings ist deine große Chance. Wenn der Organisator fragt:
 
 > „Gibt es noch Fragen?“
 
-schweige.
-
-Wenn niemand mehr etwas sagt, kannst du schließlich:
+schweige. Wenn niemand mehr etwas sagt, kannst du schließlich antworten:
 
 > „Von meiner Seite nicht.“
 
-Das klingt aktiv.
-
-Du hattest eine Seite.
-
-Du hast sie überprüft.
-
-Sie enthält keine Fragen.
+Das klingt aktiv. Du hattest eine Seite. Du hast sie überprüft. Sie enthält keine Fragen.
 
 Falls anschließend jemand fragt:
 
@@ -605,21 +380,13 @@ sag:
 
 > **„Ja, auf jeden Fall.“**
 
-Das ist wichtig.
-
-Sag niemals, was.
-
-Sonst beginnt alles wieder von vorne.
+Das ist wichtig. Sag niemals, was. Sonst beginnt alles wieder von vorne.
 
 Dann verabschiedest du dich mit:
 
 > „Danke euch, war super.“
 
-Du hast keine Ahnung, was beschlossen wurde.
-
-Aber du warst dabei.
-
-Und manchmal ist das in Meetings bereits die halbe Miete.
+Du hast keine Ahnung, was beschlossen wurde. Aber du warst dabei. Und manchmal ist das in Meetings bereits die halbe Miete.
 
 ---
 
@@ -667,9 +434,7 @@ Das funktioniert erstaunlich gut.
 
 ### 10. Verlasse das Meeting mit einem guten Gefühl.
 
-Du hast zwar nichts entschieden.
-
-Aber du hast auch nichts falsch entschieden.
+Du hast zwar nichts entschieden. Aber du hast auch nichts falsch entschieden.
 
 ---
 
@@ -679,31 +444,15 @@ Aber du hast auch nichts falsch entschieden.
 
 Du hast gelernt, dass Expertise im Meeting nicht zwingend erforderlich ist.
 
-Du brauchst keine Antworten.
+Du brauchst keine Antworten. Du brauchst keine tiefgreifenden Kenntnisse. Du musst lediglich:
 
-Du brauchst keine tiefgreifenden Kenntnisse.
+- **interessiert aussehen,**
+- **gelegentlich nicken,**
+- **gute Fragen stellen,**
+- **Risiken erwähnen**
+- und **strategisch klingen.**
 
-Du musst lediglich:
-
-**interessiert aussehen,**
-
-**gelegentlich nicken,**
-
-**gute Fragen stellen,**
-
-**Risiken erwähnen**
-
-und **strategisch klingen.**
-
-Wenn du diese Fähigkeiten beherrschst, kannst du an Meetings teilnehmen, deren Thema du erst drei Tage später verstehst.
-
-Vielleicht verstehst du es auch nie.
-
-Das ist in Ordnung.
-
-Denn am Ende zählt nicht, was du verstanden hast.
-
-Es zählt, dass du währenddessen überzeugend so ausgesehen hast, als würdest du es verstehen.
+Wenn du diese Fähigkeiten beherrschst, kannst du an Meetings teilnehmen, deren Thema du erst drei Tage später verstehst. Vielleicht verstehst du es auch nie. Das ist in Ordnung. Denn am Ende zählt nicht, was du verstanden hast. Es zählt, dass du währenddessen überzeugend so ausgesehen hast, als würdest du es verstehen.
 
 Und sollte dich nach dem Meeting jemand fragen:
 
