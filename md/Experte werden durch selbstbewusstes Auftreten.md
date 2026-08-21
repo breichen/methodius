@@ -301,6 +301,7 @@ Du kennst jetzt die wichtigsten Regeln:
 - **Sage „Das ist komplex“.**
 - **Nicke gelegentlich.**
 - **Trage ein Notizbuch bei dir.**
+
 Und vor allem:
 
 > **„Zweifle niemals an deiner Expertise, solange niemand deine Quellen verlangt.“**
