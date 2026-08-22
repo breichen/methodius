@@ -31,11 +31,11 @@ const ratgeberRohdaten = [
   "Warum beim Nachbarn das Gras immer viel grüner ist",
   "Termine vermeiden leicht gemacht",
   "Moderne Kunst interpretieren",
-  "Experte werden durch selbstbewusstes Auftreten",
-  
-  //"Wir haben das sicherste Passwort",
-  //"Ratgeber schreiben mit KI",
-  //"Freunde finden in Dating-Portalen",
+  "Experte werden durch selbstbewusstes Auftreten",  
+  "Wir haben das sicherste Passwort",
+  "Ratgeber schreiben mit KI",
+  "Freunde finden in Dating-Portalen",
+
   //"Warum ein Passwort für alles reicht",
   //"Meetings überleben ohne Expertise",
   //"Das perfekte Leben auf Social Media",
