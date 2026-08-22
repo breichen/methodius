@@ -50,6 +50,7 @@ const ratgeberRohdaten = [
   //"So wirst du zum Influencer",
   //"Der perfekte Körper dank geschickter Beleuchtung",
   //"Die Kunst, am Monatsanfang schon pleite zu sein",
+  //"Warum das Leben leichter ist, wenn man nichts versteht",
   //"",
 ];
 
