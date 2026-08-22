@@ -48,6 +48,7 @@ const ratgeberRohdaten = [
   //"Gedanken lesen durch geschicktes Raten",
   //"Statistiken fälschen leicht gemacht",
   //"So wirst du zum Influencer",
+  //"Der perfekte Körper dank geschickter Beleuchtung",
   //"",
 ];
 
