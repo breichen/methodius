@@ -49,6 +49,7 @@ const ratgeberRohdaten = [
   //"Statistiken fälschen leicht gemacht",
   //"So wirst du zum Influencer",
   //"Der perfekte Körper dank geschickter Beleuchtung",
+  //"Die Kunst, am Monatsanfang schon pleite zu sein",
   //"",
 ];
 
