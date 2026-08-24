@@ -313,9 +313,7 @@ Und irgendwo zwischen **„123456“** und **„M7!qR2#vL9@xT4$pK8“** liegt di
 
 Wir haben ein Passwort entwickelt, das alle wichtigen Eigenschaften eines starken Passworts vereint. Es ist: **lang.** **komplex.** **zufällig.** **schwer vorhersehbar.** **mit verschiedenen Zeichenarten.**
 
-Und es sieht so aus, als hätte jemand beim Erstellen wirklich nachgedacht. Unser Passwort lautet:
-
-# **M7!qR2#vL9@xT4$pK8**
+Und es sieht so aus, als hätte jemand beim Erstellen wirklich nachgedacht. Unser Passwort lautet: **M7!qR2#vL9@xT4$pK8**
 
 Merke es dir. Verstehe es. Bewundere es. Und denke immer daran:
 
