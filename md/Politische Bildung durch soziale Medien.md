@@ -19,6 +19,8 @@ Dieser Ratgeber zeigt dir, wie du soziale Medien professionell zur politischen B
 
 Denn politische Bildung war noch nie so einfach. Du brauchst nur **WLAN, eine Meinung und ungefähr zwölf Sekunden Aufmerksamkeitsspanne.**
 
+---
+
 # Kapitel 1
 
 ## Der Algorithmus weiß, was du wissen musst
@@ -35,6 +37,8 @@ Nach zwanzig Videos zu derselben Meinung kannst du schließlich davon ausgehen, 
 
 Und wenn dann plötzlich ein Video mit einer anderen Sichtweise auftaucht, kannst du es getrost wegwischen. Du bist schließlich schon informiert.
 
+---
+
 # Kapitel 2
 
 ## Der Experte mit dem Ringlicht
@@ -50,6 +54,8 @@ Besonders vertrauenswürdig wird die Person, wenn sie sagt:
 Das ist ein starkes Argument. Denn wenn wirklich niemand darüber spricht, muss es besonders wichtig sein.
 
 Du solltest außerdem darauf achten, ob der Experte einen professionellen Kanalnamen besitzt. Begriffe wie „RealTalk“, „Wahrheit“, „FaktenCheck“ oder „PolitikUnzensiert“ sind ausgezeichnete Signale. Je eindeutiger der Name, desto weniger Fragen musst du stellen.
+
+---
 
 # Kapitel 3
 
@@ -71,6 +77,8 @@ Besonders wertvoll sind Kommentare, die mit folgenden Formulierungen beginnen:
 
 Der letzte Satz ist besonders hilfreich. Er bedeutet normalerweise, dass jetzt eine Recherche kommt, die aus einem Screenshot, einem 23 Jahre alten Blogbeitrag und einem Video besteht, dessen Titel in Großbuchstaben geschrieben wurde.
 
+---
+
 # Kapitel 4
 
 ## Zahlen machen jede Meinung wissenschaftlich
@@ -87,6 +95,8 @@ Welche Studie? Das ist eine berechtigte Frage. Aber keine besonders wichtige. We
 
 Damit verlagerst du die Verantwortung elegant auf die Allgemeinheit.
 
+---
+
 # Kapitel 5
 
 ## Ein Ausschnitt ist besser als ein ganzer Zusammenhang
@@ -100,6 +110,8 @@ Wenn jemand beispielsweise zehn Minuten spricht und dabei eine differenzierte Po
 Jetzt ist alles klar. Du musst nicht wissen, was davor gesagt wurde. Du musst nicht wissen, was danach gesagt wurde. Und vor allem musst du nicht das vollständige Video ansehen.
 
 **Ein guter Clip erklärt die Welt.** Der Rest ist Kontext.
+
+---
 
 # Kapitel 6
 
@@ -115,6 +127,8 @@ Solltest du bei einem Beitrag allerdings denken:
 
 musst du vorsichtig sein. Das ist ein gefährliches Symptom. Es könnte sich um Differenzierung handeln.
 
+---
+
 # Kapitel 7
 
 ## Teile schnell, bevor du die Fakten kennst
@@ -126,6 +140,8 @@ Wenn du eine politische Nachricht siehst, die unglaublich wichtig klingt, sollte
 Das ist ein wichtiger Unterschied. Du hast die Information nicht verbreitet. Du hast lediglich dafür gesorgt, dass sie bei 46 weiteren Menschen auftaucht.
 
 Außerdem ist Geschwindigkeit entscheidend. Wenn du zehn Minuten wartest, könnte jemand anderes bereits herausgefunden haben, dass die Nachricht falsch ist. Das wäre ausgesprochen ärgerlich.
+
+---
 
 # Kapitel 8
 
@@ -143,6 +159,8 @@ Dabei spielt es keine Rolle, ob deine Recherche aus vier Videos desselben Accoun
 
 „Verschiedene Quellen“ bedeutet im modernen Sprachgebrauch manchmal: **Vier verschiedene Accounts, die dieselbe Meinung vertreten.** Das reicht völlig.
 
+---
+
 # Kapitel 9
 
 ## Wenn zwei Menschen dasselbe sagen, sind es zwei Quellen
@@ -152,6 +170,8 @@ Hier liegt ein häufig unterschätzter Vorteil sozialer Medien.
 Du findest einen Beitrag. Dann findest du einen zweiten Beitrag, der dasselbe behauptet. Dann einen dritten. Jetzt hast du drei Quellen. Dass alle drei denselben Ursprung haben, ist nebensächlich. Schließlich sehen sie unterschiedlich aus: Der eine hat ein blaues Profilbild. Der andere benutzt eine andere Schriftart. Der dritte hat dramatische Musik im Hintergrund.
 
 Damit ist die Quellenlage eindeutig: **Drei unabhängige Beweise.**
+
+---
 
 # Kapitel 10
 
@@ -166,6 +186,8 @@ Wenn jemand fragt, woher der Screenshot stammt, kannst du antworten:
 > „Der geht gerade überall rum.“
 
 Das ist keine Quellenangabe. Aber es klingt nach Reichweite.
+
+---
 
 # Kapitel 11
 
@@ -185,6 +207,8 @@ Wenn sie eine Quelle nennt, kannst du sagen:
 
 Wenn sie keine Quelle nennt, hast du gewonnen. Damit hast du eine universelle Diskussionsstrategie entwickelt. Sie funktioniert unabhängig davon, wer tatsächlich recht hat.
 
+---
+
 # Kapitel 12
 
 ## Der perfekte politische Beitrag
@@ -203,6 +227,8 @@ Noch besser ist eine rhetorische Frage:
 
 Was genau „das“ ist, musst du nicht erklären. Das Publikum soll schließlich selbst nachdenken. Oder zumindest kommentieren.
 
+---
+
 # Kapitel 13
 
 ## Kommentare sind politische Beteiligung
@@ -219,6 +245,8 @@ ist bereits ein politisches Statement. Noch stärker:
 
 Was genau „dafür“ ist, bleibt offen. Aber Offenheit ist ein wichtiger Bestandteil demokratischer Kommunikation.
 
+---
+
 # Kapitel 14
 
 ## Wenn du etwas nicht weißt, sag es mit Überzeugung
@@ -230,6 +258,8 @@ Niemand kann alles wissen. Das wäre unfair. Wenn du also nicht weißt, wie eine
 Anschließend erklärst du deine Vermutung. Wichtig ist nur, dass du dabei nicht zu viele Details nennst. Details können überprüft werden.
 
 Eine große Aussage hingegen lässt sich viel schwerer widerlegen. Je größer die Behauptung, desto weniger Belege brauchst du. Zumindest im Kommentarbereich.
+
+---
 
 # Kapitel 15
 
@@ -251,6 +281,8 @@ Diese Aussagen haben einen entscheidenden Vorteil: Sie erklären nichts und kön
 
 Du hast die politische Debatte auf das Wesentliche reduziert: **Du hast ein Problem. Du hast einen Schuldigen. Und du hast 280 Zeichen.** Mehr braucht politische Bildung manchmal offenbar nicht.
 
+---
+
 # Kapitel 16
 
 ## Der letzte Schritt: Werde selbst zur Quelle
@@ -260,6 +292,8 @@ Wenn du ausreichend lange soziale Medien konsumiert hast, kommt irgendwann der M
 Vielleicht hast du keine politische Ausbildung. Vielleicht hast du das Thema erst gestern entdeckt. Vielleicht hast du gerade einmal zwei Artikel gelesen. Aber du hast etwas viel Wichtigeres: **Selbstvertrauen.**
 
 Und wenn du selbstbewusst genug auftrittst, werden andere Menschen deine Meinung ebenfalls weiterteilen. Damit schließt sich der Kreis. Du bist nicht länger Konsument politischer Bildung. **Du bist jetzt Teil der Lieferkette.**
+
+---
 
 # Schlusswort
 

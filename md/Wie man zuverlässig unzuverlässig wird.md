@@ -532,70 +532,50 @@ Du weißt jetzt schließlich, was dieser Satz bedeutet.
 ☐ Ja
 ☐ Ich weiß es nicht mehr
 
----
-
 **2. Hast du schon einmal „Bin gleich da“ geschrieben, obwohl du noch zu Hause warst?**
 
 ☐ Ja
 ☐ Ich war emotional bereits unterwegs
-
----
 
 **3. Wie reagierst du auf einen Termin, den du vergessen hast?**
 
 ☐ „Oh Gott, das tut mir leid.“
 ☐ „Oh! Stimmt!“
 
----
-
 **4. Was bedeutet „Ich versuche es“ für dich?**
 
 ☐ Ich werde mein Möglichstes tun.
 ☐ Es gibt keine Zusage, aber ich möchte trotzdem gut dastehen.
-
----
 
 **5. Wie viele Kalender brauchst du, um einen Termin zuverlässig zu vergessen?**
 
 ☐ Einen.
 ☐ Mindestens drei, damit ich immer den falschen kontrolliere.
 
----
-
 **6. Was ist die ideale Verspätung?**
 
 ☐ Gar keine.
 ☐ 15 bis 25 Minuten, damit ich mich noch entschuldigen kann.
-
----
 
 **7. Jemand wartet seit einer Stunde auf dich. Was schreibst du?**
 
 ☐ „Entschuldigung, ich habe es nicht geschafft.“
 ☐ „Bin gleich da.“
 
----
-
 **8. Du hast eine Nachricht gelesen und vergessen zu antworten. Was ist deine Strategie?**
 
 ☐ Sofort antworten.
 ☐ Noch ein paar Tage warten, damit „Ich hab's gerade erst gesehen“ glaubwürdiger wirkt.
-
----
 
 **9. Jemand fragt: „Kann ich mich darauf verlassen?“**
 
 ☐ „Ja.“
 ☐ „Grundsätzlich schon, aber plane sicherheitshalber noch eine Alternative ein.“
 
----
-
 **10. Du hast gerade etwas versprochen. Was tust du als Nächstes?**
 
 ☐ Es erledigen.
 ☐ Sofort vergessen, dass ich es versprochen habe.
-
----
 
 Wenn du mindestens **sieben Fragen mit der jeweils zweiten Antwort** beantwortet hast: **Herzlichen Glückwunsch!**
 

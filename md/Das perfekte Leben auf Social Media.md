@@ -21,6 +21,8 @@ Dieser Ratgeber zeigt dir, wie du dein Leben so perfekt inszenierst, dass andere
 
 Genau darum geht es.
 
+---
+
 # Kapitel 1
 
 ## Beginne mit einem guten Foto
@@ -32,6 +34,8 @@ Dabei ist es wichtig, dass das Bild spontan aussieht. Niemand darf erkennen, das
 Besonders geeignet sind Aufnahmen, auf denen du gerade lachst, nachdenklich in die Ferne blickst oder scheinbar vollkommen beiläufig eine Tasse Kaffee hältst.
 
 Wichtig ist außerdem, dass die Tasse sichtbar ist. Sie signalisiert: **Ich habe mein Leben im Griff und trinke dabei guten Kaffee.**
+
+---
 
 # Kapitel 2
 
@@ -45,6 +49,8 @@ Das Geheimnis lautet: **Zeige niemals den gesamten Raum.** Ein kleiner Ausschnit
 
 Wenn jemand fragt, wo du bist, kannst du einfach den Namen des Ortes nennen. Wenn es ein besonders teurer Ort ist, umso besser. Niemand muss wissen, dass du dort nur für einen Cappuccino warst.
 
+---
+
 # Kapitel 3
 
 ## Frühstück ist kein Frühstück
@@ -56,6 +62,8 @@ Haferflocken in einer Schüssel sind gewöhnliche Haferflocken. Haferflocken in 
 Avocado auf Toast ist ebenfalls hervorragend geeignet. Besonders dann, wenn das Foto so aufgenommen wird, dass niemand erkennt, dass du fünf Minuten später wieder Hunger hattest.
 
 Noch besser funktioniert ein Frühstück, das offensichtlich gesund aussieht. Dabei spielt es keine Rolle, ob du danach tatsächlich gesund lebst. **Wichtig ist, dass der Tag damit beginnt.**
+
+---
 
 # Kapitel 4
 
@@ -78,6 +86,8 @@ Der Bildschirm sollte irgendeine Präsentation oder ein Dokument zeigen. Der Inh
 
 Was genau du an dir arbeitest, muss niemand wissen.
 
+---
+
 # Kapitel 5
 
 ## Sport muss ebenfalls dokumentiert werden
@@ -87,6 +97,8 @@ Du gehst ins Fitnessstudio? Perfekt. Jetzt kommt der wichtigste Teil: **das Foto
 Ein gutes Sportfoto zeigt, dass du trainierst, aber nicht, dass du dich dabei besonders angestrengt hast. Du solltest aussehen, als hättest du gerade einen intensiven Workout absolviert und gleichzeitig noch genug Energie gehabt, um dein Gesicht im Spiegel perfekt zu positionieren.
 
 Alternativ kannst du deine Laufschuhe fotografieren. Das hat einen großen Vorteil: Niemand weiß, wie weit du gelaufen bist. Vielleicht waren es zehn Kilometer. Vielleicht bist du nur zum Briefkasten gegangen. **Die Interpretation liegt beim Publikum.**
+
+---
 
 # Kapitel 6
 
@@ -104,6 +116,8 @@ Das perfekte Reiseprofil besteht aus:
 - und dir selbst, wie du entspannt irgendwohin blickst.
 
 Wenn du während der Reise 14 Stunden auf den Beinen warst und dabei zweimal fast den Bus verpasst hast, ist das keine relevante Information. Deine Follower sollen glauben, dass du aufwachst, aus dem Hotel gehst und unmittelbar einen perfekten Sonnenuntergang findest.
+
+---
 
 # Kapitel 7
 
@@ -127,6 +141,8 @@ Oder:
 
 Mehr braucht es nicht. Wenn jemand fragt, wofür du dankbar bist, hast du bereits alles richtig gemacht.
 
+---
+
 # Kapitel 8
 
 ## Glück muss authentisch aussehen
@@ -141,6 +157,8 @@ Das ist besonders überzeugend, wenn das Bild vorher professionell bearbeitet wu
 
 Noch besser ist ein Beitrag über Selbstzweifel, der vor einer makellos eingerichteten Wohnung aufgenommen wurde. Damit vermittelst du: **Ich bin verletzlich. Aber ästhetisch.**
 
+---
+
 # Kapitel 9
 
 ## Zeige auch deine schlechten Tage
@@ -153,6 +171,8 @@ Wichtig ist allerdings, dass die schwierige Phase bereits überwunden ist. Du so
 
 Damit erreichst du zwei Dinge gleichzeitig: Du zeigst Verletzlichkeit. Und du zeigst, dass du dich weiterentwickelst. **Selbst deine Probleme haben bei dir offenbar ein gutes Ende.**
 
+---
+
 # Kapitel 10
 
 ## Beziehungen sind Content
@@ -162,6 +182,8 @@ Wenn du einen Partner oder eine Partnerin hast, solltest du gelegentlich gemeins
 Noch besser ist ein Foto, auf dem ihr gemeinsam irgendwo sitzt und beide in dieselbe Richtung schaut. Damit vermittelst du: **Wir haben eine gemeinsame Vision.**
 
 Welche Vision das ist, muss nicht erklärt werden. Wichtig ist nur, dass sie gut aussieht.
+
+---
 
 # Kapitel 11
 
@@ -176,6 +198,8 @@ Besonders geeignet sind Fotos bei Abendessen, auf Reisen oder bei gemeinsamen Ak
 > **„Ich habe Menschen.“**
 
 Und das ist auf Social Media eine wichtige Währung.
+
+---
 
 # Kapitel 12
 
@@ -203,6 +227,8 @@ Wenn du besonders tiefgründig wirken möchtest, kannst du auch einfach einen Pu
 
 Das Publikum wird sich fragen, was du damit ausdrücken möchtest. Das ist gut. **Unklarheit ist die Königsdisziplin der Ästhetik.**
 
+---
+
 # Kapitel 13
 
 ## Die Kunst des gelegentlichen Verschwindens
@@ -215,6 +241,8 @@ Nach einigen Tagen kehrst du zurück und postest ein Foto von einem Sonnenunterg
 
 Die richtige Antwort lautet: Du hast sehr viel darüber nachgedacht, was du posten könntest. Aber das muss niemand wissen.
 
+---
+
 # Kapitel 14
 
 ## Nutze niemals zu viele Filter
@@ -224,6 +252,8 @@ Ein perfektes Leben sollte bearbeitet sein. Aber nicht offensichtlich bearbeitet
 Dafür brauchst du nur ein paar kleine Anpassungen: Etwas mehr Licht, etwas weniger Schatten, ein bisschen Farbe, ein bisschen weniger Realität.
 
 Das Ergebnis sollte aussehen wie dein echtes Leben - **nur besser.**
+
+---
 
 # Kapitel 15
 
@@ -240,6 +270,8 @@ Du musst dein Leben nicht komplett verändern. Manchmal reicht es, neue Gegenst�
 
 Diese Dinge lösen deine Probleme natürlich nicht. Aber sie fotografieren sich hervorragend. Und wenn das Foto gut genug ist, entsteht zumindest der Eindruck, dass du deine Probleme im Griff hast. Das ist ein Anfang.
 
+---
+
 # Kapitel 16
 
 ## Der perfekte Sonntag
@@ -252,6 +284,8 @@ Was du tatsächlich gemacht hast, ist weniger wichtig. Entscheidend ist die Reih
 
 Und niemand wird erfahren, dass du bis 11:30 Uhr im Bett lagst und drei Stunden lang Videos angesehen hast.
 
+---
+
 # Kapitel 17
 
 ## Der wichtigste Grundsatz: Nie zeigen, was hinter dem Bild passiert
@@ -261,6 +295,8 @@ Hinter jedem perfekten Foto steckt eine Wahrheit. Manchmal ist es eine zweite Au
 Und manchmal stehen hinter der Kamera zwei Freunde, die seit zehn Minuten warten, weil du noch „das eine perfekte Bild“ brauchst. Das ist völlig in Ordnung.
 
 Denn Social Media ist keine Dokumentation. Es ist eine **Bewerbung für dein eigenes Leben.** Und wie bei jeder Bewerbung gilt: Man zeigt die Stärken. Die Schwächen bleiben im Anhang.
+
+---
 
 # Schlusswort
 
