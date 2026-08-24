@@ -468,52 +468,64 @@ Du bist bereit.
 
 # BONUS: Der Meeting-Überlebens-Test
 
+Beantworte folgende Fragen:
+
 **1. Du wirst im Meeting gefragt: „Wie siehst du das?“ Was antwortest du?**
+
 ☐ „Ich würde das gerne noch einmal aus einer anderen Perspektive betrachten.“
 ☐ „Für mich wäre vor allem die Frage, wie wir das langfristig denken.“
 ☐ „Ich glaube, wir sollten hier noch einmal den Gesamtkontext betrachten.“
 
 **2. Jemand verwendet einen Fachbegriff, den du nicht kennst. Was machst du?**
+
 ☐ Einen Teil des Satzes aufgreifen und so tun, als wäre er der entscheidende Punkt.
 ☐ „Das müsste man technisch noch einmal genauer bewerten.“
 ☐ „Die Schnittstelle ist hier natürlich ein zentraler Punkt.“
 
 **3. Die Diskussion wird immer komplizierter und du verstehst inzwischen gar nichts mehr. Was sagst du?**
+
 ☐ „Was wäre aus eurer Sicht an dieser Stelle der entscheidende Hebel?“
 ☐ „Ich würde das gerne noch einmal etwas breiter betrachten.“
 ☐ „Vielleicht sollten wir noch einmal einen Schritt zurückgehen.“
 
 **4. Jemand fragt nach deiner Meinung, obwohl du keine hast.**
+
 ☐ „Ich bin da grundsätzlich bei euch.“
 ☐ „Ich glaube, wir müssen das strategisch betrachten.“
 ☐ „Ich sehe da grundsätzlich zwei Ebenen.“
 
 **5. Auf einer PowerPoint-Folie befindet sich eine Grafik, die du nicht verstehst. Was sagst du?**
+
 ☐ „Spannend. Vor allem die Entwicklung.“
 ☐ „Das hätte ich so tatsächlich nicht erwartet.“
 ☐ „Das ist interessant, gerade im Hinblick auf die weitere Entwicklung.“
 
 **6. Die Diskussion dreht sich im Kreis. Was ist dein Moment gekommen?**
+
 ☐ „Ich glaube, wir drehen uns gerade ein bisschen im Kreis.“
 ☐ „Vielleicht sollten wir noch einmal einen Schritt zurückgehen.“
 ☐ „Wir sollten das noch einmal in einen größeren Kontext stellen.“
 
 **7. Eine Entscheidung soll getroffen werden, aber du möchtest auf keinen Fall Verantwortung übernehmen.**
+
 ☐ „Ich würde den Punkt gerne noch einmal mitnehmen.“
 ☐ „Ich glaube, das sollten wir noch einmal etwas breiter betrachten.“
 ☐ „Lass uns das im Nachgang noch einmal vertiefen.“
 
 **8. Jemand fragt dich, ob du noch Fragen hast.**
+
 ☐ „Von meiner Seite nicht.“
 ☐ „Ich glaube, die wesentlichen Punkte sind für mich erst einmal klar.“
 ☐ „Ich würde das gerne zunächst einmal sacken lassen.“
 
 **9. Du hast während des gesamten Meetings kaum etwas gesagt. Wie sorgst du trotzdem für einen kompetenten Eindruck?**
+
 ☐ Du nickst an den richtigen Stellen.
 ☐ Du machst gelegentlich eine konzentrierte Notiz.
 ☐ Du schaust bei komplizierten Aussagen besonders nachdenklich.
 
 **10. Nach dem Meeting fragt dich jemand: „Was wurde eigentlich beschlossen?“**
+
 ☐ „Ich glaube, das sollten wir im Nachgang noch einmal bilateral klären.“
 ☐ „Wir sollten das noch einmal gemeinsam einordnen.“
 ☐ „Ich würde das gerne noch einmal im Gesamtkontext betrachten.“
