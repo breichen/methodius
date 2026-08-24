@@ -282,8 +282,9 @@ function styleAutorErwaehnung(bloecke) {
   return ergebnis;
 }
 
-// Entfernt jede <h1>-Überschrift, deren Text mit "Kapitel" beginnt, und
-// macht die nächste darauf folgende <h2>-Überschrift zur neuen <h1>.
+// Entfernt jede <h1>-Überschrift, deren Text mit "Kapitel" oder
+// "Schlusswort" beginnt, und macht die nächste darauf folgende
+// <h2>-Überschrift zur neuen <h1>.
 function bereinigeKapitelUeberschriften(bloecke) {
   const ergebnis = [];
   let i = 0;
@@ -291,7 +292,7 @@ function bereinigeKapitelUeberschriften(bloecke) {
   while (i < bloecke.length) {
     const block = bloecke[i];
 
-    if (/^<h1>Kapitel/.test(block)) {
+    if (/^<h1>(Kapitel|Schlusswort)/.test(block)) {
       i++;
 
       // Alles bis zur nächsten <h2> unverändert übernehmen
