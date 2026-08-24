@@ -313,52 +313,64 @@ Damit ist alles gesagt. Oder zumindest genug.
 
 # BONUS: Der Moderne-Kunst-Überlebens-Test
 
+Beantworte folgende Fragen:
+
 **1. Du stehst vor einem weißen Bild mit einem kleinen roten Punkt. Was sagst du?**
+
 ☐ „Die Reduktion auf eine elementare Formensprache finde ich bemerkenswert.“
 ☐ „Mich interessiert besonders die Spannung zwischen Fläche und Leere.“
 ☐ „Das Werk zwingt einen dazu, über die eigene Wahrnehmung nachzudenken.“
 
 **2. Das Kunstwerk gefällt dir überhaupt nicht. Was sagst du?**
+
 ☐ „Ich glaube, die Irritation ist hier durchaus Teil des Konzepts.“
 ☐ „Es verweigert sich einer klassischen Vorstellung von Ästhetik.“
 ☐ „Gerade die Ambivalenz finde ich interessant.“
 
 **3. Jemand fragt dich: „Was will der Künstler damit sagen?“**
+
 ☐ „Ich glaube, es geht weniger darum, eine eindeutige Antwort zu geben.“
 ☐ „Das Werk eröffnet vielmehr einen Raum für unterschiedliche Lesarten.“
 ☐ „Ich finde die Frage nach der Intention eigentlich gar nicht so entscheidend.“
 
 **4. Du hast keine Ahnung, warum das Werk aus Beton besteht. Was sagst du?**
+
 ☐ „Die Materialität spielt hier sicherlich eine zentrale Rolle.“
 ☐ „Gerade die Materialwahl erzeugt eine interessante Spannung.“
 ☐ „Ich finde spannend, wie das Material mit dem Kontext des Werks interagiert.“
 
 **5. Jemand hat eine völlig andere Interpretation als du.**
+
 ☐ „Das ist eine spannende Lesart.“
 ☐ „Das kann ich durchaus nachvollziehen.“
 ☐ „Ich würde noch eine andere Ebene ergänzen.“
 
 **6. Du verstehst das Kunstwerk überhaupt nicht.**
+
 ☐ „Ich glaube, das ist ein Werk, dem man sich erst einmal annähern muss.“
 ☐ „Es lässt bewusst Raum für unterschiedliche Zugänge.“
 ☐ „Vielleicht ist gerade diese Irritation ein wichtiger Bestandteil des Werks.“
 
 **7. Jemand fragt, ob das überhaupt Kunst ist.**
+
 ☐ „Ich finde die Frage nach dem Kunststatus eigentlich weniger interessant als die Frage, was das Werk mit dem Betrachter macht.“
 ☐ „Vielleicht sollte man sich zunächst fragen, welche Wirkung das Werk entfaltet.“
 ☐ „Gerade die Grenzziehung finde ich hier spannend.“
 
 **8. Das Werk ist komplett leer und besteht scheinbar aus nichts.**
+
 ☐ „Gerade die Reduktion finde ich bemerkenswert.“
 ☐ „Die Abwesenheit wird hier fast zu einer eigenen Präsenz.“
 ☐ „Das Werk spielt sehr interessant mit unseren Erwartungen an Kunst.“
 
 **9. Jemand sagt etwas unglaublich Kluges über das Kunstwerk. Du hast es nicht verstanden.**
+
 ☐ Zustimmend nicken und sagen: „Ja, genau diese Ebene finde ich auch interessant.“
 ☐ „Das ist ein spannender Gedanke.“
 ☐ „Ich glaube, da steckt tatsächlich noch eine weitere Ebene drin.“
 
 **10. Du möchtest das Museum verlassen, ohne weiter über das Werk sprechen zu müssen.**
+
 ☐ „Ich glaube, das ist ein Werk, dem man beim ersten Sehen nicht vollständig gerecht wird.“
 ☐ „Ich müsste das noch einmal in Ruhe auf mich wirken lassen.“
 ☐ „Ich glaube, darüber müsste ich tatsächlich noch einmal nachdenken.“
