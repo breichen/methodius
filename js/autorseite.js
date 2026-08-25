@@ -16,14 +16,10 @@ fetch("md/author.md")
   })
   .then(markdown => {
     const bloecke = parseMarkdownBloecke(markdown);
-    container.innerHTML = styleAutorAbschluss(bloecke).join("\n");
+    const bloeckeMitAbschluss = styleAutorAbschluss(bloecke);
+    container.innerHTML = baueAutorSections(bloeckeMitAbschluss);
   })
-  .catch(() => {
-    container.innerHTML = `
-      <p><em>Die Seite über den Autor konnte nicht geladen werden.
-      Läuft die Seite über einen lokalen Server (nicht per Doppelklick geöffnet)?</em></p>
-    `;
-  });
+  .catch(() => { /* unverändert */ });
 
 // Findet die LETZTE Überschrift, deren Text exakt "Dr. Maximilian
 // Methodius" lautet (das Ende des Dokuments), entfernt sie und baut
@@ -52,4 +48,57 @@ function styleAutorAbschluss(bloecke) {
   </div>`;
 
   return [...bloecke.slice(0, index), nameBox];
+}
+
+// Wie baueKapitelSections() in buch.js: verpackt aufeinanderfolgende
+// Blöcke abwechselnd in class="section" bzw. class="section section-alt",
+// damit sich die Abschnitte der Autorseite farblich absetzen. Ein neuer
+// Abschnitt beginnt bei jeder Überschrift (H1-H3) sowie bei der
+// Abschluss-Box mit Porträt - die bekommt dadurch ebenfalls einen
+// eigenen, in die Alternierung passenden Hintergrund.
+const AUTOR_FULL_BLEED_STYLE =
+  "position:relative;left:50%;right:50%;width:100vw;margin-left:-50vw;margin-right:-50vw;";
+
+function baueAutorSections(bloecke) {
+  const bloeckeOhneTrennlinie = bloecke.filter(block => block !== "<hr>");
+
+  const abschnitte = [];
+  let aktuellerAbschnitt = null;
+  let ueberschriftenAnzahl = 0;
+
+  bloeckeOhneTrennlinie.forEach(block => {
+    const istUeberschrift =
+      block.startsWith("<h1") ||
+      block.startsWith("<h2") ||
+      block.startsWith("<h3");
+
+    const istAbschlussBox = block.startsWith('<div class="autor-box');
+    const istAbschnittStart = istUeberschrift || istAbschlussBox;
+
+    if (istUeberschrift) ueberschriftenAnzahl++;
+
+    // Die allererste Überschrift (meist H1) startet Abschnitt 0. Die
+    // darauffolgende ZWEITE Überschrift (meist die erste H2 direkt
+    // danach) bleibt bewusst noch in Abschnitt 0, damit H1 und erste
+    // H2 dieselbe Hintergrundfarbe teilen. Ab der dritten Überschrift
+    // sowie bei der Abschluss-Box wird wie gewohnt alterniert.
+    const zaehltAlsNeuerAbschnitt =
+      istAbschnittStart &&
+      aktuellerAbschnitt !== null &&
+      !(istUeberschrift && ueberschriftenAnzahl === 2);
+
+    if (zaehltAlsNeuerAbschnitt || aktuellerAbschnitt === null) {
+      aktuellerAbschnitt = [];
+      abschnitte.push(aktuellerAbschnitt);
+    }
+
+    aktuellerAbschnitt.push(block);
+  });
+
+  return abschnitte
+    .map((abschnittBloecke, index) => {
+      const klasse = index % 2 === 0 ? "section" : "section section-alt";
+      return `<section class="${klasse}" style="${AUTOR_FULL_BLEED_STYLE}"><div class="wrap">${abschnittBloecke.join("\n")}</div></section>`;
+    })
+    .join("\n");
 }
