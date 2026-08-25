@@ -35,7 +35,7 @@ Seine Forschungsmethode ist dabei denkbar einfach: **Er beobachtet ein Problem, 
 
 ---
 
-# Ein Leben für die großen Fragen
+## Ein Leben für die großen Fragen
 
 Dr. Methodius beschäftigt sich mit Fragen, die sich andere Experten bisher nicht zu stellen wagten. Fragen wie:
 
@@ -49,7 +49,7 @@ Während andere Wissenschaftler versuchen, die Welt zu erklären, versucht Dr. M
 
 ---
 
-# Seine größte Stärke: Selbstvertrauen
+## Seine größte Stärke: Selbstvertrauen
 
 Dr. Methodius besitzt eine seltene Fähigkeit: **Er kann selbst die absurdeste These mit bemerkenswerter Überzeugung präsentieren.**
 
@@ -67,7 +67,7 @@ Seine Vorträge sind bekannt für:
 
 ---
 
-# Warum er diese Ratgeber schreibt
+## Warum er diese Ratgeber schreibt
 
 Die Antwort ist einfach: **Das Leben ist kompliziert genug.**
 
@@ -83,7 +83,7 @@ Dabei gilt: **Nicht jede Erkenntnis muss das Leben verändern.** Manche müssen 
 
 ---
 
-# Die Methodius-Philosophie
+## Die Methodius-Philosophie
 
 Dr. Methodius verfolgt drei grundlegende Prinzipien:
 
@@ -93,7 +93,7 @@ Dr. Methodius verfolgt drei grundlegende Prinzipien:
 
 ---
 
-# Heute
+## Heute
 
 Dr. Maximilian Methodius lebt und arbeitet irgendwo zwischen Wissenschaft, Satire und der festen Überzeugung, dass für nahezu jedes Problem noch ein Ratgeber geschrieben werden kann.
 
