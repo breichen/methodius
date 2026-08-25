@@ -102,6 +102,14 @@ blockquote {
   line-height: 1.55;
 }
 
+/* In dunklen Abschnitten (.section-alt, Hintergrund var(--color-bg-alt))
+   hätte das Zitat sonst denselben Hintergrund wie der Abschnitt selbst
+   und würde optisch verschwinden - deshalb dort die helle Grundfarbe
+   als Kontrast. */
+.section-alt blockquote {
+  background: var(--color-bg);
+}
+
 /* Großes dekoratives Anführungszeichen */
 blockquote::before {
   content: "\201E";
