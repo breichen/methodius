@@ -211,7 +211,7 @@ function styleAutorErwaehnung(bloecke) {
   const NAME_REGEX = /<strong>Dr\. Maximilian Methodius<\/strong>/;
 
   const kapitelStarts = bloecke.reduce((acc, block, i) => {
-    if (block.startsWith("<h1")) acc.push(i);
+    if (block.startsWith("<h1") || block.startsWith("<h2")) acc.push(i);
     return acc;
   }, []);
 
@@ -282,36 +282,92 @@ function styleAutorErwaehnung(bloecke) {
   return ergebnis;
 }
 
-// Entfernt jede <h1>-Überschrift, deren Text mit "Kapitel" oder
-// "Schlusswort" beginnt, und macht die nächste darauf folgende
-// <h2>-Überschrift zur neuen <h1>.
+// Vereinheitlicht alle Kapitelüberschriften auf H2 - unabhängig davon,
+// ob ein Kapitel mit einer generischen "Kapitel ..."/"Schlusswort"-
+// Überschrift beginnt oder direkt mit seinem eigenen Titel. NUR die
+// allererste Überschrift im Buch (der Buchtitel) bleibt eine H1.
+//
+// - "Kapitel ..."/"Schlusswort": die generische Überschrift wird
+//   verworfen, alles bis zur nächsten Überschrift bleibt unverändert
+//   stehen, und die darauf folgende H2 (der eigentliche Titel) wird
+//   zur neuen Kapitelüberschrift - als H2 (bzw. als H1, falls es sich
+//   um die allererste Überschrift des Buches handelt).
+// - Eigener Titel MIT einer H2 darunter (bevor das nächste Kapitel
+//   beginnt): beide Überschriften werden zu einer einzigen Überschrift
+//   kombiniert, damit nicht zwei Überschriften auf gleicher Ebene
+//   direkt aufeinanderfolgen. AUSNAHME: bei der allerersten Überschrift
+//   wird NICHT kombiniert - die H1 bleibt eigenständig, und die
+//   darauffolgende H2 bleibt unverändert eine eigene H2.
+// - Eigener Titel OHNE H2 darunter: einfach übernommen (bzw. zu H2
+//   herabgestuft, außer bei der allerersten Überschrift).
 function bereinigeKapitelUeberschriften(bloecke) {
   const ergebnis = [];
   let i = 0;
+  let istErsteUeberschrift = true;
 
   while (i < bloecke.length) {
     const block = bloecke[i];
 
-    if (/^<h1>(Kapitel|Schlusswort)/.test(block)) {
+    if (block.startsWith("<h1>")) {
+      const istGenerischeUeberschrift = /^<h1>(Kapitel|Schlusswort)/.test(block);
+      const eigenerTitel = block.slice(4, -5);
+
+      // Nur die allererste Überschrift im ganzen Buch bleibt eine H1 -
+      // alle weiteren Kapitelüberschriften werden zu H2.
+      const warErsteUeberschrift = istErsteUeberschrift;
+      const zielTag = warErsteUeberschrift ? "h1" : "h2";
+      istErsteUeberschrift = false;
+
       i++;
 
-      // Alles bis zur nächsten <h2> unverändert übernehmen
+      // Alles bis zur nächsten Überschrift (egal ob H1 oder H2)
+      // sammeln, ohne dabei versehentlich in ein späteres Kapitel
+      // hineinzulaufen.
+      const zwischenBloecke = [];
       while (
         i < bloecke.length &&
+        !bloecke[i].startsWith("<h1>") &&
         !bloecke[i].startsWith("<h2>")
       ) {
-        ergebnis.push(bloecke[i]);
+        zwischenBloecke.push(bloecke[i]);
         i++;
       }
 
-      // Die gefundene <h2> zur neuen <h1> hochstufen
-      if (
-        i < bloecke.length &&
-        bloecke[i].startsWith("<h2>")
-      ) {
-        const inhalt = bloecke[i].slice(4, -5);
-        ergebnis.push(`<h1>${inhalt}</h1>`);
+      const naechsteIstH2 =
+        i < bloecke.length && bloecke[i].startsWith("<h2>");
+
+      if (istGenerischeUeberschrift) {
+        // Wie bisher: generische Überschrift verwerfen, Zwischenblöcke
+        // unverändert übernehmen, gefundene H2 wird zur neuen
+        // Kapitelüberschrift (als H2, bzw. H1 bei der allerersten).
+        ergebnis.push(...zwischenBloecke);
+
+        if (naechsteIstH2) {
+          const inhalt = bloecke[i].slice(4, -5);
+          ergebnis.push(`<${zielTag}>${inhalt}</${zielTag}>`);
+          i++;
+        }
+      } else if (naechsteIstH2 && warErsteUeberschrift) {
+        // Allererste Überschrift: NICHT mit der H2 kombinieren - die H1
+        // bleibt eigenständig stehen, und die H2 bleibt unverändert
+        // eine eigene H2.
+        ergebnis.push(`<h1>${eigenerTitel}</h1>`);
+        ergebnis.push(...zwischenBloecke);
+        ergebnis.push(bloecke[i]);
         i++;
+      } else if (naechsteIstH2) {
+        // Eigener Titel UND eine H2 im selben Kapitel -> zu einer
+        // einzigen Überschrift kombinieren, die Kapitelüberschrift
+        // bleibt aber am ursprünglichen Anfang des Kapitels stehen.
+        const unterTitel = bloecke[i].slice(4, -5);
+        ergebnis.push(`<h2>${eigenerTitel}: ${unterTitel}</h2>`);
+        ergebnis.push(...zwischenBloecke);
+        i++;
+      } else {
+        // Eigener Titel ohne H2 darunter -> übernehmen (bzw. zu H2
+        // herabstufen, außer bei der allerersten Überschrift).
+        ergebnis.push(`<${zielTag}>${eigenerTitel}</${zielTag}>`);
+        ergebnis.push(...zwischenBloecke);
       }
     } else {
       ergebnis.push(block);
@@ -802,7 +858,7 @@ function teileInSeiten(bloecke) {
 
   bloecke.forEach(block => {
     const istKapitelStart =
-      block.startsWith("<h1");
+      block.startsWith("<h1") || block.startsWith("<h2");
 
     /*
      * Kapitelüberschriften beginnen weiterhin auf einer neuen Seite.
