@@ -46,7 +46,8 @@ if (!buch) {
       const { fliesstextBloecke, flipbookBloecke, quiz } =
         verarbeiteRatgeberMarkdown(markdown);
 
-      document.getElementById("buch-text").innerHTML = fliesstextBloecke.join("\n");
+      document.getElementById("buch-text").innerHTML =
+        baueKapitelSections(fliesstextBloecke);
 
       // Die Blätter-Ansicht bekommt bewusst die UNVERÄNDERTEN Blöcke
       // (inkl. Bonus-Quiz als ganz normaler Text) - in einem
@@ -380,6 +381,54 @@ function bereinigeKapitelUeberschriften(bloecke) {
 
 function markdownZuHtml(markdown) {
   return markdownZuBloecke(markdown).join("\n");
+}
+
+// NUR für die Fließtext-Ansicht: verpackt jedes Kapitel abwechselnd in
+// class="section" bzw. class="section section-alt" (wie auf den
+// anderen Seiten der Website), damit sich die Kapitel farblich
+// voneinander absetzen. Ein neues Kapitel beginnt bei jeder Kapitel-
+// überschrift (H1 - nur die allererste - oder H2) sowie beim
+// Quiz-Start-Button (der Endteil ab dem Bonus-Quiz bekommt so
+// ebenfalls einen eigenen, neuen Farbabschnitt). Die Blätter-Ansicht
+// (Flipbook) bekommt bewusst KEINE Sections - dort blättert man ja
+// ohnehin Seite für Seite, unabhängig von Kapitelgrenzen.
+function baueKapitelSections(bloecke) {
+  // "---" zwischen Kapiteln wird nicht gebraucht: Der Section-Wechsel
+  // (mit eigenem Hintergrund) markiert den Kapitelübergang bereits
+  // deutlich genug.
+  const bloeckeOhneTrennlinie = bloecke.filter(block => block !== "<hr>");
+
+  const kapitel = [];
+  let aktuellesKapitel = null;
+
+  bloeckeOhneTrennlinie.forEach(block => {
+    const istKapitelStart =
+      block.startsWith("<h1") ||
+      block.startsWith("<h2") ||
+      block.startsWith('<div class="quiz-start-wrap"');
+
+    if (istKapitelStart || aktuellesKapitel === null) {
+      aktuellesKapitel = [];
+      kapitel.push(aktuellesKapitel);
+    }
+
+    aktuellesKapitel.push(block);
+  });
+
+  // Die Sections liegen innerhalb von #buch-inhalt/.wrap und wären
+  // dadurch normalerweise auf dessen Breite beschränkt. Der Full-Bleed-
+  // Trick (position:relative + left:50% + negative Margin) lässt den
+  // Hintergrund trotzdem bis zum Seitenrand reichen, während der
+  // innere .wrap-Container den Text weiterhin schön schmal hält.
+  const FULL_BLEED_STYLE =
+    "position:relative;left:50%;right:50%;width:100vw;margin-left:-50vw;margin-right:-50vw;";
+
+  return kapitel
+    .map((kapitelBloecke, index) => {
+      const klasse = index % 2 === 0 ? "section" : "section section-alt";
+      return `<section class="${klasse}" style="${FULL_BLEED_STYLE}"><div class="wrap">${kapitelBloecke.join("\n")}</div></section>`;
+    })
+    .join("\n");
 }
 
 /* ============================================
