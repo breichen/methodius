@@ -1,6 +1,7 @@
-# Abnehmen dank Muskelabbau
 
-## Der revolutionäre Ratgeber für alle, denen ihre Muskeln einfach zu schwer geworden sind
+# Die Kunst, am Monatsanfang schon pleite zu sein
+
+## Der ultimative Ratgeber für alle, die ihr Gehalt nicht einfach ausgeben, sondern es innerhalb weniger Tage in eine persönliche finanzielle Erinnerung verwandeln möchten
 
 **Dr. Maximilian Methodius**
 
@@ -8,365 +9,360 @@
 
 # Herzlichen Glückwunsch!
 
-Du hältst gerade einen Ratgeber in den Händen, der eine völlig neue Perspektive auf das Thema Abnehmen eröffnet:
+Du hast es geschafft. Der Monat hat gerade erst begonnen, das Gehalt ist frisch eingetroffen und trotzdem hast du bereits das Gefühl, dass dein Konto den nächsten Zahlungseingang dringend erwartet. Für viele Menschen ist das ein finanzielles Problem. Für dich ist es eine Herausforderung.
 
-**Warum eigentlich Fett verlieren, wenn man auch Muskeln verlieren kann?**
+Denn warum sollte man einen Monat lang vorsichtig mit seinem Geld umgehen, wenn man auch alles direkt erledigen kann? Warum sollte man Rücklagen bilden, wenn man stattdessen heute schon etwas kaufen könnte, das man eigentlich erst in drei Wochen brauchen würde? Und warum sollte man am Monatsende noch Geld besitzen, wenn man damit theoretisch die ersten drei Tage besonders intensiv gestalten kann?
+
+Dieser Ratgeber zeigt dir, wie du deine finanzielle Situation so effizient verschlechterst, dass du bereits kurz nach dem Gehaltseingang den Zustand erreichst, den andere erst nach vier Wochen mühsamer Ausgabenplanung erreichen.
+
+**Denn wahre finanzielle Konsequenz bedeutet: Das Geld muss weg, bevor du darüber nachdenken kannst.**
 
 ---
 
 # Kapitel 1
 
-## Endlich die Wahrheit über die Waage
+## Warte nicht auf einen guten Grund
 
-Seit Jahrzehnten wird uns eingeredet:
+Der erste Schritt besteht darin, jede Ausgabe von der Frage zu befreien, ob du sie tatsächlich brauchst. Bedürfnisse sind schließlich subjektiv, und wenn du lange genug darüber nachdenkst, wird aus fast jedem Wunsch irgendwann eine Notwendigkeit.
 
-- „Du musst Fett verlieren.“
-- „Du musst Sport machen.“
-- „Du musst Muskeln aufbauen.“
-- „Du musst dich gesund ernähren.“
+Du brauchst neue Schuhe? Natürlich. Du hast bereits sechs Paar? Das spielt keine Rolle, denn diese hier sind anders. Du möchtest essen bestellen, obwohl Lebensmittel im Kühlschrank stehen? Selbstverständlich. Schließlich musst du auch einmal etwas genießen. Und wenn du schon unterwegs bist, kannst du dir gleich noch einen Kaffee holen.
 
-Aber niemand fragt: **Was, wenn deine Muskeln einfach viel zu schwer sind?**
-
-Stell dir vor, du steigst morgens auf die Waage - 80 Kilogramm.
-
-Du ziehst deine Schuhe aus - 79,6 Kilogramm.
-
-Du gehst auf die Toilette - 78,9 Kilogramm.
-
-Du hältst kurz die Luft an - 78,7 Kilogramm.
-
-Du denkst: „Unglaublich. Ich habe gerade fast zwei Kilogramm abgenommen.“
-
-Und dann kommt die entscheidende Frage: **Warum aufhören?**
-
-Genau hier setzt unser revolutionäres Konzept an.
+Der wichtigste Grundsatz lautet: **Wenn du einen Kauf rechtfertigen kannst, solltest du ihn tätigen.** Und wenn du ihn nicht rechtfertigen kannst, ist das kein Problem. Dann kaufst du ihn eben ohne Begründung.
 
 ---
 
 # Kapitel 2
 
-## Muskelmasse – der unterschätzte Dickmacher
+## Der Monatsanfang ist kein Zeitpunkt zum Sparen
 
-Muskelmasse hat ein großes Problem: Sie wiegt etwas.
+Viele Menschen begehen den Fehler, direkt nach dem Gehalt einen Teil ihres Geldes zurückzulegen. Das ist gefährlich.
 
-Das klingt zunächst harmlos. Aber wenn man darüber nachdenkt, ist es eigentlich ein Skandal.
+Denn sobald Geld auf einem Sparkonto liegt, kann es nicht mehr spontan für Dinge verwendet werden, die du ungefähr drei Stunden später plötzlich ganz dringend benötigst. Außerdem vermittelt ein wachsendes Sparkonto ein unangenehmes Gefühl von finanzieller Verantwortung. Das möchtest du vermeiden.
 
-Da trainiert jemand jahrelang, hebt Gewichte, macht Kniebeugen, zieht Klimmzüge und baut mühsam Muskeln auf. Und dann?
-
-**Die Waage bestraft ihn dafür.**
-
-Ein gut trainierter Mann kann beispielsweise deutlich mehr wiegen als jemand, der wesentlich weniger Muskulatur besitzt. Ist das fair?
-
-Natürlich nicht. Deshalb stellen wir eine neue Frage:
-
-> „Möchtest du wirklich leichter werden – oder möchtest du nur weniger wiegen?“
-
-Das ist ein kleiner, aber entscheidender Unterschied.
+Besser ist es, das Geld sofort verfügbar zu halten. So kannst du jederzeit darauf zugreifen und sicherstellen, dass keine unnötigen Rücklagen entstehen. Sollte am Monatsende trotzdem noch Geld übrig sein, hast du offensichtlich nicht genug versucht.
 
 ---
 
 # Kapitel 3
 
-## Der klassische Anfängerfehler: Muskeln behalten
+## Belohne dich direkt nach dem Gehaltseingang
 
-Viele Menschen machen beim Abnehmen denselben Fehler: Sie versuchen, ihre Muskulatur zu erhalten.
+Der Tag, an dem dein Gehalt kommt, ist ein Feiertag. Du hast gearbeitet. Du hast dich angestrengt. Du hast einen ganzen Monat lang Dinge erledigt, auf die du vermutlich nicht immer Lust hattest. Jetzt ist es Zeit für eine Belohnung. Oder besser gesagt: mehrere.
 
-Sie essen ausreichend Protein. Sie machen Krafttraining. Sie schlafen. Sie achten auf ihre Ernährung.
+Beginne mit einem Essen. Danach vielleicht ein neues Kleidungsstück. Dann etwas für die Wohnung.
 
-Kurz gesagt: Sie machen alles richtig. **Wie langweilig.**
+Und wenn du gerade schon online bist, kannst du auch gleich überprüfen, ob es irgendwo einen Rabatt gibt. Das Wort „Rabatt“ ist dabei besonders wichtig. Denn wenn etwas 30 Prozent günstiger ist, hast du nicht 70 Prozent des Preises ausgegeben. **Du hast 30 Prozent gespart.**
 
-Unser Konzept denkt größer: Warum sollte man sich mit einer komplizierten Strategie beschäftigen, wenn man das Problem auch direkt an der Wurzel packen kann?
-
-Die Muskeln sind schwer? Dann müssen die Muskeln weg. Logisch. Mathematisch nahezu brillant.
+Diese Rechnung ist nicht nur falsch. Sie ist auch außerordentlich beruhigend.
 
 ---
 
 # Kapitel 4
 
-## Das Geheimnis der Vorher-Nachher-Fotos
+## Verwechsle Wünsche mit Bedürfnissen
 
-Jeder gute Ratgeber braucht Vorher-Nachher-Bilder.
+Ein echter Profi unterscheidet nicht zwischen etwas, was er möchte, und etwas, was er braucht. Er erklärt einfach, warum er es braucht. Ein neuer Fernseher? Du brauchst ihn, weil der alte nicht groß genug ist.
 
-Links: Ein beeindruckend muskulöser Mann. Breite Schultern. Starke Beine. Kräftige Arme. Deutlich sichtbare Muskulatur.
+Ein neues Handy? Das alte funktioniert zwar noch, aber die Kamera ist nicht mehr ganz aktuell. Ein neues Fahrrad? Bewegung ist wichtig für die Gesundheit. Eine teure Kaffeemaschine? Kaffee ist schließlich ein tägliches Grundbedürfnis.
 
-Rechts: Ein deutlich schmalerer Mann. Weniger Muskeln. Weniger Umfang. Weniger Kraft.
-
-Aber immerhin: **Die Waage ist begeistert.**
-
-Der rote Pfeil zwischen den Bildern symbolisiert den wissenschaftlichen Fortschritt. Er zeigt nicht etwa: „Fettabbau“.
-
-Nein. Er zeigt: **„Warum hast du das eigentlich alles trainiert?“**
+Wenn du auf diese Weise vorgehst, wird dein Einkaufszettel plötzlich sehr vernünftig aussehen. Du kaufst nicht ständig Dinge. Du kümmerst dich um deine Bedürfnisse. **Das ist ein gewaltiger Unterschied. Zumindest sprachlich.**
 
 ---
 
 # Kapitel 5
 
-## Das Trainingsprogramm
+## Bezahle mit Karte
 
-Du hast bisher im Fitnessstudio schwere Gewichte gehoben? Damit ist jetzt Schluss.
+Bargeld hat einen großen Nachteil: Man sieht, wie viel weniger davon übrig ist. Bei Kartenzahlungen ist das anders. Du hältst kurz dein Handy oder deine Karte an ein Gerät, hörst ein kleines Geräusch und gehst weiter. Das Geld verschwindet dabei auf eine angenehm abstrakte Weise.
 
-Unsere neue Trainingsphilosophie lautet:
+Besonders praktisch sind kontaktlose Zahlungen. Du musst weder Münzen zählen noch Scheine herausgeben. Die finanzielle Konsequenz deiner Entscheidung wird auf wenige Sekunden reduziert.
 
-- **Montag:** Nichts.
-- **Dienstag:** Auch nichts.
-- **Mittwoch:** Vielleicht nichts.
-- **Donnerstag:** Erholung von Montag bis Mittwoch.
-- **Freitag:** Ein kurzer Spaziergang zum Kühlschrank.
-- **Samstag:** Regeneration.
-- **Sonntag:** Mentale Vorbereitung auf die kommende Woche ohne Training.
-
-Dieses Trainingssystem hat einen entscheidenden Vorteil: **Es ist extrem leicht einzuhalten.**
-
-Die meisten Fitnessprogramme scheitern schließlich daran, dass Menschen keine Lust darauf haben. Unser Programm löst dieses Problem vollständig.
+Wenn du danach eine Benachrichtigung über die Zahlung bekommst, solltest du sie möglichst schnell wegwischen. Nicht aus Angst. Aus finanzieller Hygiene.
 
 ---
 
 # Kapitel 6
 
-## Ernährung für Fortgeschrittene
+## Nutze Ratenzahlung für Dinge, die du dir eigentlich nicht leisten kannst
 
-Auch bei der Ernährung muss endlich umgedacht werden.
+Wenn ein Produkt zu teuer ist, gibt es zwei Möglichkeiten: Du kannst warten, sparen und es später kaufen. Oder du kannst es sofort kaufen und die Kosten auf mehrere Monate verteilen.
 
-Die klassische Fitnesswelt fragt: „Wie viel Protein brauchst du?“
+Die zweite Möglichkeit fühlt sich wesentlich angenehmer an. Denn 900 Euro wirken beeindruckend, 75 Euro im Monat dagegen klingen fast harmlos.
 
-Wir fragen: **„Wie wenig davon können wir gerade noch rechtfertigen?“**
+Wenn du das mit mehreren Anschaffungen machst, entstehen kleine monatliche Beträge, die sich wunderbar gegenseitig ergänzen. Irgendwann weißt du zwar nicht mehr genau, wofür du alles bezahlst, aber das ist nicht unbedingt schlecht.
 
-Der traditionelle Fitness-Teller besteht aus:
-
-- Hähnchen
-- Reis
-- Gemüse
-- Quark
-- Proteinshake
-- noch mehr Hähnchen
-- und irgendwo steht ein Mensch daneben, der seit drei Monaten keinen Geschmack mehr empfindet.
-
-Unser Teller sieht anders aus. Er enthält:
-
-- Essen
-- Genuss
-- möglicherweise Nachtisch
-- und keinerlei Excel-Tabelle.
-
-Natürlich hat auch diese Methode einen Nachteil: Sie ist nicht wissenschaftlich fundiert.
-
-Aber sie ist hervorragend geeignet, um in einem Ratgeber dramatisch präsentiert zu werden.
+Es verhindert, dass du dich unnötig mit der Vergangenheit beschäftigst. **Finanzielle Freiheit beginnt schließlich dort, wo die Übersicht endet.**
 
 ---
 
 # Kapitel 7
 
-## Der große Feind: die Hantel
+## Abonnements sind die perfekte Geldvernichtungsmaschine
 
-Hanteln sind gefährlich. Nicht im körperlichen Sinne. Sie sind gefährlich für unsere gesamte Philosophie.
+Ein einzelner Betrag von 9,99 Euro fühlt sich nicht besonders schlimm an. Deshalb solltest du mehrere davon haben:
 
-Denn jedes Mal, wenn du eine Hantel hebst, denkt dein Körper: „Ah! Offenbar werden diese Muskeln noch gebraucht.“
+- Streamingdienst Nummer eins.
+- Streamingdienst Nummer zwei.
+- Musik.
+- Cloud-Speicher.
+- Fitness-App.
+- Lieferdienst.
+- Eine App, die du vor sechs Monaten einmal ausprobiert hast.
 
-Und was macht der Körper? Er behält sie. **Unverschämtheit.** Du wolltest doch leichter werden!
-
-Deshalb empfehlen wir: Lass die Hantel liegen. Sie versteht das schon.
+Zusammen ergeben diese kleinen Beträge eine erstaunlich große Summe. Das Schöne daran ist, dass du sie nicht einmal aktiv ausgeben musst. Das Geld verschwindet automatisch. Das ist die eleganteste Form des Geldausgebens. Du musst dich nicht einmal darum kümmern.
 
 ---
 
 # Kapitel 8
 
-## Was tun mit Menschen, die sagen: „Muskeln sind wichtig“?
+## Bestelle Essen, weil du Zeit sparen möchtest
 
-Diese Menschen sind überall. Sie sagen Dinge wie:
+Kochen kostet Zeit. Zeit ist wertvoll. Also solltest du Essen bestellen.
 
-- „Muskeln schützen dich.“
-- „Muskeln helfen dir im Alltag.“
-- „Krafttraining ist gesund.“
-- „Du solltest beim Abnehmen deine Muskelmasse erhalten.“
+Wenn du dabei eine Liefergebühr bezahlst, ist das kein unnötiger Kostenfaktor. Du bezahlst schließlich dafür, dass jemand anderes dein Essen transportiert, während du selbst auf dem Sofa bleiben kannst.
 
-Bleib ruhig. Atme tief durch. Und frage sie: **„Aber hast du schon einmal versucht, eine kleinere Zahl auf der Waage zu haben?“**
+Bestellst du zusätzlich ein Getränk und eine Nachspeise, musst du nicht extra noch einmal darüber nachdenken, ob du diese Dinge wirklich möchtest. Sie sind bereits unterwegs. Das ist Effizienz.
 
-Wenn sie „Ja“ sagen, frage: „Und wie viel davon war Muskelmasse?“
-
-Wenn sie darauf keine Antwort haben, nicke wissend. Du hast gewonnen. Zumindest rhetorisch.
+Und wenn du zwei Tage später wieder bestellst, hast du wenigstens eine gewisse Konsistenz entwickelt.
 
 ---
 
 # Kapitel 9
 
-## Die sieben Stufen des erfolgreichen Muskelabbaus
+## Nutze „Nur heute!“
 
-### Stufe 1: Verleugnung
+Rabatte sind besonders effektiv, wenn sie zeitlich begrenzt sind.
 
-„Meine Muskeln sind gar nicht so schwer.“
+„Nur heute!“ „Letzte Chance!“ „Nur noch 3 Stück verfügbar!“ Diese Hinweise sind keine Werbung. Sie sind persönliche Aufforderungen, deine finanzielle Situation sofort zu verschlechtern.
 
-Falsch. Sie wiegen etwas.
+Wenn du etwas nicht kaufst, könnte es morgen teurer sein. Wenn du es kaufst, hast du zwar Geld ausgegeben, aber wenigstens verhindert, dass du später möglicherweise mehr Geld ausgibst.
 
-### Stufe 2: Erkenntnis
-
-„Moment mal … wenn Muskeln Gewicht haben …“
-
-Ganz genau.
-
-### Stufe 3: Hoffnung
-
-„Vielleicht habe ich gerade die Abnehmformel des Jahrhunderts entdeckt.“
-
-Fast.
-
-### Stufe 4: Größenwahn
-
-„Ich werde der nächste große Ernährungsguru.“
-
-Bitte nicht.
-
-### Stufe 5: Realität
-
-Du bemerkst, dass Muskeln nicht automatisch verschwinden, nur weil du einen provokanten Ratgebertitel gelesen hast.
-
-### Stufe 6: Verwirrung
-
-Du fragst dich, warum dieser Ratgeber überhaupt existiert.
-
-### Stufe 7: Erleuchtung
-
-Du verstehst: **Es ist ein Witz.**
-
-Herzlichen Glückwunsch.
+Das ist eine hervorragende Logik. Besonders dann, wenn du eigentlich gar nicht vorhattest, das Produkt zu kaufen.
 
 ---
 
 # Kapitel 10
 
-## Der Muskelabbau-Masterplan
+## Führe keine Ausgabenliste
 
-Hier ist er, der ultimative Plan. Der Plan, auf den die Welt gewartet hat.
+Eine Ausgabenliste könnte dir zeigen, wohin dein Geld verschwindet. Das wäre problematisch.
 
-- **Schritt 1:** Kaufe eine Waage.
-- **Schritt 2:** Stelle dich darauf.
-- **Schritt 3:** Erschrick.
-- **Schritt 4:** Überlege, wie viel deiner Masse eigentlich aus Muskeln besteht.
-- **Schritt 5:** Denke über die Absurdität nach, Muskelmasse als „Gewichtsproblem“ zu betrachten.
-- **Schritt 6:** Lege diesen Ratgeber kurz zur Seite.
-- **Schritt 7:** Gehe spazieren.
-- **Schritt 8:** Wenn du möchtest, trainiere.
-- **Schritt 9:** Iss vernünftig.
-- **Schritt 10:** Lebe dein Leben.
-- **Schritt 11:** Lies dieses Kapitel noch einmal.
-- **Schritt 12:** Lache.
+Du möchtest schließlich nicht jeden Kaffee, jede Bestellung und jeden spontanen Onlinekauf dokumentieren. Das könnte zu unangenehmen Erkenntnissen führen. Zum Beispiel, dass dein „kleiner Kaffee zwischendurch“ inzwischen die Finanzierung eines Kleinwagens übernommen hat. Ignoranz ist hier ein wertvolles Werkzeug.
+
+Wenn du nicht genau weißt, wie viel du ausgibst, kannst du zumindest noch glauben, dass es vielleicht gar nicht so viel ist. **Was man nicht zusammenrechnet, kann einen auch nicht beunruhigen.**
 
 ---
 
 # Kapitel 11
 
-## Die Wahrheit über den roten Pfeil
+## Schau nicht auf dein Konto
 
-Du kennst ihn. Er ist auf jedem Vorher-Nachher-Bild: Ein roter Pfeil. Von links nach rechts. „VORHER“ → „NACHHER“.
+Das Konto ist kein Unterhaltungsmedium. Es enthält Zahlen. Und Zahlen können schlechte Nachrichten enthalten.
 
-Er suggeriert: Fortschritt. Transformation. Erfolg.
+Deshalb solltest du deine Banking-App nur dann öffnen, wenn es unbedingt notwendig ist. Idealerweise erst dann, wenn du wissen musst, ob eine bestimmte Zahlung noch möglich ist.
 
-Aber ein Pfeil erklärt nicht, **was** sich verändert hat.
-
-Ein Mensch kann leichter geworden sein. Er kann aber auch Wasser verloren haben. Muskelmasse verloren haben. Fett verloren haben. Oder einfach vor dem ersten Foto sehr viel gegessen und vor dem zweiten Foto auf die Toilette gegangen sein.
-
-Der Pfeil weiß es nicht. Der Pfeil urteilt nicht. Der Pfeil zeigt einfach nach rechts. Vielleicht ist das die wichtigste Lektion dieses ganzen Ratgebers.
+Wenn du die App öffnest und eine Zahl siehst, die dir nicht gefällt, schließe sie sofort wieder. Das Problem ist dadurch nicht gelöst. Aber du hast zumindest nicht länger darauf geschaut.
 
 ---
 
 # Kapitel 12
 
-## Das Fitnessstudio als kulturelles Missverständnis
+## Vermeide den Begriff „Budget“
 
-Stell dir vor, du betrittst ein Fitnessstudio. Überall Menschen.
+Das Wort „Budget“ klingt nach Einschränkung. Menschen mit einem Budget überlegen, ob sie etwas kaufen können. Menschen ohne Budget überlegen, ob sie etwas kaufen möchten. Die zweite Variante ist deutlich angenehmer.
 
-Einer hebt 100 Kilogramm. Eine andere Person macht Kniebeugen. Jemand fährt Fahrrad. Jemand trainiert Rücken. Jemand macht einen Bizepscurl vor dem Spiegel.
+Wenn du trotzdem eine Grenze brauchst, kannst du sie „ungefähre Orientierung“ nennen. Zum Beispiel:
 
-Und du denkst: „Was mache ich eigentlich hier?“
+> „Ich wollte diesen Monat eigentlich nicht mehr als 500 Euro für Freizeit ausgeben.“
 
-Dann fällt dein Blick auf die Hantel. Du hebst sie auf.
+Das klingt vernünftig. Noch besser:
 
-Dein Muskel: **„Oh, danke! Endlich wieder Arbeit!“**
+> „Ich hatte ungefähr 500 Euro im Kopf.“
 
-Du: „Verdammt.“
-
-Du legst sie wieder hin.
-
-Dein Muskel: **„Bis morgen.“**
+Damit ist die Zahl keine Grenze mehr. Sie ist eine Stimmung. Und Stimmungen lassen sich glücklicherweise verändern.
 
 ---
 
 # Kapitel 13
 
-## Die revolutionäre Schlussfolgerung
+## Vermeide den Monatsvergleich
 
-Was haben wir also gelernt?
+Vielleicht hast du im letzten Monat weniger ausgegeben. Das ist irrelevant. Vielleicht hast du vor drei Monaten deutlich mehr gespart. Auch irrelevant. Wichtig ist nur, dass du dich aktuell nicht schlecht fühlst.
 
-Muskelmasse hat Gewicht. Wer Muskelmasse verliert, kann leichter werden. Das ist eine Tatsache.
+Wenn du am Monatsanfang bereits einen großen Teil deines Einkommens ausgegeben hast, kannst du dir sagen:
 
-Aber: **Leichter zu sein ist nicht automatisch dasselbe wie gesünder zu sein.**
+> „Dafür habe ich jetzt den Rest des Monats Zeit, mich einzuschränken.“
 
-Und genau deshalb funktioniert dieser Ratgeber nur als Satire. Denn wenn wir anfangen, jedes Kilogramm als Feind zu betrachten, geraten wir schnell auf einen absurden Weg. Der Körper ist keine Kartoffelkiste.
-
-Wir sind nicht erfolgreicher, nur weil wir weniger Kilogramm auf die Waage bringen. Und Muskeln sind keine lästigen Gegenstände, die man aus dem Koffer werfen muss, um unter dem Gewichtslimit zu bleiben.
+Das ist ein interessanter Gedanke. Er verschiebt das Problem in die Zukunft. Und die Zukunft ist schließlich ein Ort, an dem du dich noch nicht darum kümmern musst.
 
 ---
 
-# Schlusswort
+# Kapitel 14
 
-## Glückwunsch, du hast abgenommen!
+## Lebe nach dem Prinzip „Das wird schon“
 
-Du bist am Ende dieses Ratgebers angekommen. Vielleicht hast du dabei zwei Kilogramm verloren. Vielleicht fünf. Vielleicht kein einziges.
+Dieser Satz ist ein wichtiger Bestandteil jeder erfolgreichen finanziellen Strategie.
 
-Aber keine Sorge. **Der Ratgeber war kostenloser Gewichtsverlust für dein Gehirn.**
+Das wird schon. Irgendwie. Du weißt noch nicht wie. Aber das ist auch nicht nötig.
 
-Du hast jetzt verstanden: Eine niedrige Zahl auf der Waage kann beeindruckend aussehen. Ein gesunder, leistungsfähiger Körper ist aber wesentlich interessanter.
+Vielleicht kommt nächsten Monat eine Rückzahlung. Vielleicht bekommst du eine Gehaltserhöhung. Vielleicht wird etwas günstiger. Vielleicht brauchst du diesen Monat einfach weniger. Vielleicht passiert irgendetwas.
 
-Also:
-
-- Behalte deine Muskeln.
-- Bewege dich.
-- Iss vernünftig.
-- Schlaf ausreichend.
-- Lass dich nicht von jedem Vorher-Nachher-Foto hypnotisieren.
-
-Und wenn dir irgendwann jemand erzählt:
-
-> „Muskelabbau ist der neue Geheimtipp zum Abnehmen!“
-
-Dann kannst du ganz entspannt antworten: **„Klar. Und morgen esse ich meine Hanteln zum Frühstück.“**
+Diese Form der Finanzplanung hat einen großen Vorteil: Sie benötigt keine konkreten Zahlen. Sie benötigt nur Optimismus.
 
 ---
 
-# BONUS: Der Muskelabbau-Test
+# Kapitel 15
 
-Beantworte folgende Fragen:
+## Wenn das Geld knapp wird, ändere die Definition von „knapp“
 
-**1. Hast du Muskeln?**
+Vielleicht hast du am 12. des Monats nur noch 80 Euro. Das klingt zunächst problematisch. Aber 80 Euro sind immerhin noch Geld. Du bist also nicht pleite. Du bist lediglich in einer Phase erhöhter finanzieller Konzentration.
 
-☐ Ja
-☐ Leider ja
-☐ Ich wusste es nicht
+Wenn du am 20. nur noch 25 Euro hast, ist das ebenfalls nicht schlimm. Du hast schließlich noch 25 Euro.
 
-**2. Sind Muskeln schwerer als Luft?**
+Und wenn du am 28. nur noch 3,40 Euro besitzt, kannst du immer noch sagen:
 
-☐ Ja
-☐ Überraschenderweise ja
+> „Ich habe diesen Monat wirklich gut gewirtschaftet.“
 
-**3. Bedeutet weniger Gewicht automatisch mehr Gesundheit?**
+Schließlich ist es dir gelungen, das Geld fast vollständig einzusetzen.
 
-☐ Nein
+---
 
-**4. Solltest du deshalb absichtlich deine Muskulatur abbauen?**
+# Kapitel 16
 
-☐ Nein.
+## Nutze den Dispositionskredit
 
-**5. Hast du den Witz des Ratgebers verstanden?**
+Der Dispositionskredit ist eine faszinierende Erfindung. Du kannst Geld ausgeben, das du aktuell nicht besitzt, und dafür später bezahlen. Das ist besonders praktisch, wenn dein Monatsanfang schon sehr erfolgreich war.
 
-☐ Ja
-☐ Jetzt schon
-☐ Ich habe trotzdem 20 Seiten gelesen
+Natürlich kostet das Geld. Aber auch hier hilft die richtige Perspektive. Du bezahlst nicht einfach Zinsen. Du bezahlst für die Möglichkeit, deine finanzielle Zukunft bereits heute zu nutzen. Das klingt fast wie ein Investment. **Nur mit weniger Rendite.**
 
-Wenn du bei Frage 5 „Ja“ angekreuzt hast: **Herzlichen Glückwunsch.**
+---
 
-Du bist offiziell bereit für die nächste große Fitnessrevolution: **Abnehmen dank weniger Blödsinn.**
+# Kapitel 17
+
+## Mach den Monatsanfang zum Event
+
+Der Monatsanfang sollte nicht einfach ein Tag sein. Er sollte ein Erlebnis sein. Plane deshalb deine Ausgaben bewusst.
+
+- Frühstück außer Haus.
+- Mittagessen.
+- Einkaufen.
+- Ein kleiner Onlinekauf.
+- Abends vielleicht noch etwas unternehmen.
+
+Wenn du am ersten Wochenende bereits einen erheblichen Teil deines verfügbaren Geldes ausgegeben hast, kannst du den Rest des Monats besonders intensiv über deine finanzielle Situation nachdenken. Das hat sogar einen pädagogischen Wert. Du lernst, mit weniger Geld auszukommen. Zwar freiwillig und völlig unnötig, aber immerhin.
+
+---
+
+# Kapitel 18
+
+## Wenn jemand fragt, wo dein Geld geblieben ist
+
+Du solltest niemals sagen:
+
+> „Ich habe einfach zu viel ausgegeben.“
+
+Das klingt nach Kontrollverlust. Besser ist:
+
+> „Ich hatte diesen Monat einige größere Ausgaben.“
+
+Das klingt nach einem außergewöhnlichen Ereignis. Noch besser:
+
+> „Es war einfach ein ungewöhnlich kostenintensiver Monat.“
+
+Damit wird aus deinem normalen Konsum ein zeitlich begrenztes Phänomen. Wenn du diesen Satz jeden Monat verwendest, musst du allerdings aufpassen. Dann könnte jemand anfangen, Muster zu erkennen.
+
+---
+
+# Kapitel 19
+
+## Die höchste Stufe: Pleite am Monatsanfang
+
+Du hast jetzt alles gelernt.
+
+Du hast dein Gehalt begrüßt, gefeiert, ausgegeben und anschließend erfolgreich dafür gesorgt, dass es möglichst wenig Gelegenheit bekommt, den gesamten Monat zu überleben.
+
+Du hast Abonnements abgeschlossen, Rabatte genutzt, Essen bestellt, spontane Käufe gerechtfertigt und deine Banking-App möglichst selten geöffnet.
+
+Jetzt fehlt nur noch ein letzter Schritt. Wenn du am dritten Tag des Monats bereits denkst:
+
+> „Eigentlich muss ich diesen Monat wirklich vorsichtig sein.“
+
+dann hast du es geschafft. Du hast den entscheidenden Punkt erreicht. **Du bist nicht mehr überrascht, dass du kein Geld hast.** **Du bist nur überrascht, dass der Monat noch so lang ist.**
+
+---
+
+# Kapitel 20
+
+## Du bist jetzt finanziell bereit
+
+Die Kunst, am Monatsanfang pleite zu sein, besteht nicht darin, möglichst viel Geld auszugeben. Es geht darum, möglichst schnell jede finanzielle Distanz zwischen deinem Einkommen und deinem Konsum zu beseitigen.
+
+Du sollst nicht einfach Geld verlieren. Du sollst es bewusst, zielgerichtet und mit einer überzeugenden Begründung loswerden.
+
+Natürlich ist das nur eine von mehreren möglichen Strategien. Man könnte auch meinen,  ein Überblick über die eigenen Ausgaben, Rücklagen und ein realistisches Budget sind wesentlich hilfreicher als die hier vorgestellten Methoden. Ein Monatsanfang ohne Geld ist schließlich weniger lustig, wenn die Waschmaschine tatsächlich kaputtgeht.
+
+Aber bis dahin gilt: **Das Gehalt ist da.** **Der Monat ist lang.** **Und dein Konto hat bereits aufgegeben.**
+
+---
+
+# BONUS: Der Monatsanfangs-Pleite-Test
+
+**1. Hast du schon einmal kurz nach dem Gehaltseingang gedacht: „Diesen Monat muss ich wirklich besser aufpassen“?**
+
+☐ Ja  
+☐ Das nehme ich mir jeden Monat vor
+
+**2. Hast du schon einmal etwas gekauft, weil es reduziert war, obwohl du es vorher nicht kaufen wolltest?**
+
+☐ Ja  
+☐ Ich habe schließlich Geld gespart
+
+**3. Hast du schon einmal mehrere kleine Ausgaben unterschätzt, weil jede einzelne davon nicht besonders schlimm wirkte?**
+
+☐ Ja  
+☐ 4,99 Euro sind schließlich keine 500 Euro
+
+**4. Hast du schon einmal ein Abonnement abgeschlossen und später vergessen, dass du es überhaupt hast?**
+
+☐ Ja  
+☐ Irgendwo läuft bestimmt noch eins
+
+**5. Hast du schon einmal Essen bestellt, obwohl eigentlich noch etwas zu Hause war?**
+
+☐ Ja  
+☐ Ich wollte einfach Zeit sparen
+
+**6. Hast du schon einmal deine Banking-App geöffnet, das Kontoguthaben gesehen und sie direkt wieder geschlossen?**
+
+☐ Ja  
+☐ Ich brauchte die Information nicht wirklich
+
+**7. Hast du schon einmal gedacht: „Das kann ich mir diesen Monat noch leisten“, obwohl du nicht wusstest, wie viel Geld noch übrig ist?**
+
+☐ Ja  
+☐ Das Gefühl hat bisher meistens gereicht
+
+**8. Hast du schon einmal eine Ausgabe mit „Das gönne ich mir“ begründet?**
+
+☐ Ja  
+☐ Ich hatte schließlich einen langen Monat
+
+**9. Hast du schon einmal am Monatsanfang mehr ausgegeben als geplant und dir vorgenommen, dafür später weniger auszugeben?**
+
+☐ Ja  
+☐ Später ist ein guter Zeitpunkt zum Sparen
+
+**10. Hast du schon einmal am Ende des Monats nicht mehr gewusst, wohin dein Geld eigentlich verschwunden ist?**
+
+☐ Ja  
+☐ Es muss irgendwo gewesen sein
+
+Wenn du mindestens **7 Fragen mit „Ja“** beantwortet hast: **Herzlichen Glückwunsch!**
+
+Du verfügst über ein bemerkenswertes Talent. Nicht unbedingt für Vermögensaufbau. Aber dafür, einen Monat finanziell so zu beginnen, als wäre der Monatsanfang gleichzeitig das Monatsende. **Dein Konto hat dich bereits vermisst.**
 
 ---
 
 **Dr. Maximilian Methodius**
 
-*Autor, Satiriker und vermutlich der einzige Mensch, der jemals einen Ratgeber über Muskelabbau geschrieben hat, ohne dir tatsächlich zum Muskelabbau zu raten.*
+*Autor, Satiriker und entschiedener Gegner von Monatsbudgets, solange sie nicht seine eigenen betreffen.*
