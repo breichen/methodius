@@ -16,7 +16,7 @@
   "Neueste Ratgeber" zeigt automatisch die letzten Einträge.
 */
 const ratgeberRohdaten = [
-  "Abnehmen dank Muskelabbau",
+  /*"Abnehmen dank Muskelabbau",
   "Die Kunst, beschäftigt auszusehen",
   "Freunde verlieren leicht gemacht",
   "Glücklich werden durch niedrigere Erwartungen",
@@ -39,7 +39,7 @@ const ratgeberRohdaten = [
   "Meetings überleben ohne Expertise",
   "Das perfekte Leben auf Social Media",  
   "Politische Bildung durch soziale Medien",
-  "Wie man zuverlässig unzuverlässig wird",
+  "Wie man zuverlässig unzuverlässig wird",*/
   
   //"Pünktlichkeit verbessern durch Zugausfälle",
   //"Warum ich heute leider keine Zeit habe",
