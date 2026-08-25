@@ -376,6 +376,25 @@ h3 {
   text-decoration: underline;
 }
 
+/* ============================================
+   ERSTELLT / AKTUALISIERT
+   Optionaler Hinweis oberhalb des "Blättern"-Links auf der Buch-Seite,
+   siehe "created"/"updated" in ratgeber.js.
+   ============================================ */
+.buch-datums-hinweis {
+  margin: 0 0 20px;
+}
+
+.buch-datum {
+  margin: 0 0 4px 0;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.buch-datum:last-child {
+  margin-bottom: 0;
+}
+
 /* Großes Cover-Bild */
 .book-cover {
   max-width: 320px;

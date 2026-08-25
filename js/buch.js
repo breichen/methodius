@@ -5,6 +5,27 @@
 
 const container = document.getElementById("buch-inhalt");
 
+// Baut die optionale "Erstellt: ..." / "Aktualisiert: ..."-Zeile aus
+// den Feldern "created" und "updated" in ratgeber.js. Beide Angaben
+// sind frei wählbare Strings (kein Datumsformat wird vorausgesetzt)
+// und komplett optional - fehlt eine, wird die entsprechende Zeile
+// einfach weggelassen. Sind beide leer, liefert die Funktion "".
+function baueDatumsHinweis(buch) {
+  const zeilen = [];
+
+  if (buch.created) {
+    zeilen.push(`<p class="buch-datum">Erstellt: ${buch.created}</p>`);
+  }
+
+  if (buch.updated) {
+    zeilen.push(`<p class="buch-datum">Aktualisiert: ${buch.updated}</p>`);
+  }
+
+  return zeilen.length
+    ? `<div class="buch-datums-hinweis">${zeilen.join("\n")}</div>`
+    : "";
+}
+
 // URL-Parameter auslesen, z.B. "der-perfekte-sonntag" aus buch.html?titel=der-perfekte-sonntag
 const parameter = new URLSearchParams(window.location.search);
 const slug = parameter.get("titel");
@@ -23,8 +44,14 @@ if (!buch) {
   // (wichtig bei Leerzeichen, Kommas, Klammern im Titel).
   const pfad = encodeURIComponent(buch.slug);
 
+  // "Erstellt: ..." / "Aktualisiert: ..." nur anzeigen, wenn die
+  // jeweilige Angabe in ratgeber.js gesetzt wurde - beide sind
+  // komplett optional.
+  const datumsHtml = baueDatumsHinweis(buch);
+
   // Bild sofort anzeigen, Text kommt gleich per fetch() nach
   container.innerHTML = `
+    ${datumsHtml}
     <img class="book-cover" id="buch-cover-bild" src="pics/${pfad}.png" alt="Cover: ${buch.titel}" style="width: 100%; max-width: 750px; height: auto; margin-bottom: 24px; cursor: zoom-in;">
     <p class="blaettern-wrap"><a href="#" id="blaettern-link" class="blaettern-link">📖 Blättern</a></p>
     <div id="buch-text"><p>Lade Text …</p></div>

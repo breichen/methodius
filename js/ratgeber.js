@@ -11,12 +11,28 @@
      unterscheiden sollen, z.B. für einen kürzeren/saubereren Dateinamen:
        { slug: "mein-buch", titel: "Mein ausführlicher Buchtitel!" }
      -> erwartet Dateien pics/mein-buch.png und md/mein-buch.md
+     "titel" ist dabei optional - fehlt er, wird einfach "slug" als
+     Anzeige-Titel verwendet (wie bei der einfachen Text-Schreibweise
+     oben):
+       { slug: "mein-buch", created: "12. März 2026" }
+     -> Anzeige-Titel wird "mein-buch"
+
+  Optional lässt sich bei der Objekt-Schreibweise zusätzlich "created"
+  und/oder "updated" angeben (einfache Strings, z.B. "12. März 2026" -
+  das Format ist frei wählbar, es wird 1:1 auf der Buch-Seite
+  angezeigt):
+       { slug: "mein-buch", titel: "Mein Buch", created: "12. März 2026" }
+       { slug: "mein-buch", titel: "Mein Buch", created: "12. März 2026", updated: "3. April 2026" }
+     Ist "created" gesetzt, erscheint oben auf der Buch-Seite
+     "Erstellt: ...". Ist zusätzlich (oder auch nur) "updated" gesetzt,
+     erscheint "Aktualisiert: ..." darunter. Beide Angaben sind
+     komplett optional und werden weggelassen, wenn nicht vorhanden.
 
   Neue Bücher fügst du einfach am ENDE der Liste hinzu –
   "Neueste Ratgeber" zeigt automatisch die letzten Einträge.
 */
 const ratgeberRohdaten = [
-  "Abnehmen dank Muskelabbau",
+  {slug: "Abnehmen dank Muskelabbau"},
   /*"Die Kunst, beschäftigt auszusehen",
   "Freunde verlieren leicht gemacht",
   "Glücklich werden durch niedrigere Erwartungen",
@@ -55,8 +71,13 @@ const ratgeberRohdaten = [
   //"",
 ];
 
-// Wandelt die Rohdaten oben in einheitliche { slug, titel }-Objekte um,
-// damit buchgrid.js und buch.js sich um nichts Zusätzliches kümmern müssen.
+// Wandelt die Rohdaten oben in einheitliche { slug, titel, ... }-Objekte
+// um, damit buchgrid.js und buch.js sich um nichts Zusätzliches kümmern
+// müssen. Objekt-Einträge (inkl. optionalem "created"/"updated")
+// werden dabei unverändert durchgereicht - fehlt "titel", wird "slug"
+// als Anzeige-Titel verwendet.
 const ratgeberListe = ratgeberRohdaten.map(eintrag =>
-  typeof eintrag === "string" ? { slug: eintrag, titel: eintrag } : eintrag
+  typeof eintrag === "string"
+    ? { slug: eintrag, titel: eintrag }
+    : { ...eintrag, titel: eintrag.titel || eintrag.slug }
 );
