@@ -16,8 +16,8 @@
   "Neueste Ratgeber" zeigt automatisch die letzten Einträge.
 */
 const ratgeberRohdaten = [
-  /*"Abnehmen dank Muskelabbau",
-  "Die Kunst, beschäftigt auszusehen",
+  "Abnehmen dank Muskelabbau",
+  /*"Die Kunst, beschäftigt auszusehen",
   "Freunde verlieren leicht gemacht",
   "Glücklich werden durch niedrigere Erwartungen",
   "In 12 einfachen Schritten zum US-Präsidenten",
