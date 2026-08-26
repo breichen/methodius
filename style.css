@@ -1311,6 +1311,24 @@ hr {
   padding: 5px 8px;
 }
 
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  display: block;
+  object-fit: contain;
+}
+
 /* ============================================
    RESPONSIVE: HANDY
    ============================================ */
