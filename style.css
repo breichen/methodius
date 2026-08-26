@@ -379,7 +379,7 @@ h3 {
 /* ============================================
    ERSTELLT / AKTUALISIERT
    Optionaler Hinweis oberhalb des "Blättern"-Links auf der Buch-Seite,
-   siehe "created"/"updated" in ratgeber.js.
+   siehe "erstellt"/"aktualisiert" in ratgeber.js.
    ============================================ */
 .buch-datums-hinweis {
   margin: 0 0 20px;

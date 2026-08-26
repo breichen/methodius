@@ -14,17 +14,17 @@
      "titel" ist dabei optional - fehlt er, wird einfach "slug" als
      Anzeige-Titel verwendet (wie bei der einfachen Text-Schreibweise
      oben):
-       { slug: "mein-buch", created: "12. März 2026" }
+       { slug: "mein-buch", erstellt: "12. März 2026" }
      -> Anzeige-Titel wird "mein-buch"
 
-  Optional lässt sich bei der Objekt-Schreibweise zusätzlich "created"
-  und/oder "updated" angeben (einfache Strings, z.B. "12. März 2026" -
+  Optional lässt sich bei der Objekt-Schreibweise zusätzlich "erstellt"
+  und/oder "aktualisiert" angeben (einfache Strings, z.B. "12. März 2026" -
   das Format ist frei wählbar, es wird 1:1 auf der Buch-Seite
   angezeigt):
-       { slug: "mein-buch", titel: "Mein Buch", created: "12. März 2026" }
-       { slug: "mein-buch", titel: "Mein Buch", created: "12. März 2026", updated: "3. April 2026" }
-     Ist "created" gesetzt, erscheint oben auf der Buch-Seite
-     "Erstellt: ...". Ist zusätzlich (oder auch nur) "updated" gesetzt,
+       { slug: "mein-buch", titel: "Mein Buch", erstellt: "12. März 2026" }
+       { slug: "mein-buch", titel: "Mein Buch", erstellt: "12. März 2026", aktualisiert: "3. April 2026" }
+     Ist "erstellt" gesetzt, erscheint oben auf der Buch-Seite
+     "erstellt: ...". Ist zusätzlich (oder auch nur) "aktualisiert" gesetzt,
      erscheint "Aktualisiert: ..." darunter. Beide Angaben sind
      komplett optional und werden weggelassen, wenn nicht vorhanden.
 
@@ -73,7 +73,7 @@ const ratgeberRohdaten = [
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel, ... }-Objekte
 // um, damit buchgrid.js und buch.js sich um nichts Zusätzliches kümmern
-// müssen. Objekt-Einträge (inkl. optionalem "created"/"updated")
+// müssen. Objekt-Einträge (inkl. optionalem "erstellt"/"aktualisiert")
 // werden dabei unverändert durchgereicht - fehlt "titel", wird "slug"
 // als Anzeige-Titel verwendet.
 const ratgeberListe = ratgeberRohdaten.map(eintrag =>

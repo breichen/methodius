@@ -5,20 +5,20 @@
 
 const container = document.getElementById("buch-inhalt");
 
-// Baut die optionale "Erstellt: ..." / "Aktualisiert: ..."-Zeile aus
-// den Feldern "created" und "updated" in ratgeber.js. Beide Angaben
+// Baut die optionale "Veröffentlicht: ..." / "Aktualisiert: ..."-Zeile aus
+// den Feldern "erstellt" und "aktualisiert" in ratgeber.js. Beide Angaben
 // sind frei wählbare Strings (kein Datumsformat wird vorausgesetzt)
 // und komplett optional - fehlt eine, wird die entsprechende Zeile
 // einfach weggelassen. Sind beide leer, liefert die Funktion "".
 function baueDatumsHinweis(buch) {
   const zeilen = [];
 
-  if (buch.created) {
-    zeilen.push(`<p class="buch-datum">Erstellt: ${buch.created}</p>`);
+  if (buch.erstellt) {
+    zeilen.push(`<p class="buch-datum">Veröffentlicht: ${buch.erstellt}</p>`);
   }
 
-  if (buch.updated) {
-    zeilen.push(`<p class="buch-datum">Aktualisiert: ${buch.updated}</p>`);
+  if (buch.aktualisiert) {
+    zeilen.push(`<p class="buch-datum">Aktualisiert: ${buch.aktualisiert}</p>`);
   }
 
   return zeilen.length
@@ -44,7 +44,7 @@ if (!buch) {
   // (wichtig bei Leerzeichen, Kommas, Klammern im Titel).
   const pfad = encodeURIComponent(buch.slug);
 
-  // "Erstellt: ..." / "Aktualisiert: ..." nur anzeigen, wenn die
+  // "Veröffentlicht: ..." / "Aktualisiert: ..." nur anzeigen, wenn die
   // jeweilige Angabe in ratgeber.js gesetzt wurde - beide sind
   // komplett optional.
   const datumsHtml = baueDatumsHinweis(buch);
