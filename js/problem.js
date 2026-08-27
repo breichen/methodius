@@ -22,14 +22,14 @@ function formatiereProblemText(text) {
     .join("\n");
 }
 
-// Baut die optionale "Eingesendet von: ..." / "Veröffentlicht: ..." /
+// Baut die optionale "Vorgeschlagen von: ..." / "Veröffentlicht: ..." /
 // "Aktualisiert: ..."-Zeile - genau wie bei den Ratgebern (siehe
 // js/buch.js), nur hier lokal, da Probleme keine eigene Datei haben.
 function baueDatumsHinweis(problem) {
   const zeilen = [];
 
   if (problem.einsender) {
-    zeilen.push(`<p class="buch-datum">Eingesendet von: ${problem.einsender}</p>`);
+    zeilen.push(`<p class="buch-datum">Vorgeschlagen von: ${problem.einsender}</p>`);
   }
 
   if (problem.erstellt) {
@@ -91,6 +91,13 @@ if (!problem) {
       ${formatiereProblemText(problem.prognose)}
     </div>
 
+    <p class="blaettern-wrap">
+      <button type="button" id="teilen-button" class="teilen-button">🔗 Teilen</button>
+    </p>
+
     <p class="grid-link"><a href="probleme.html">← Zurück zur Übersicht</a></p>
   `;
+
+  // Teilen-Button (siehe js/teilen.js) - teilt Titel + aktuellen Link
+  initTeilenButton(document.getElementById("teilen-button"), problem.titel);
 }

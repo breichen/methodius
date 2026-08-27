@@ -60,12 +60,18 @@ if (!buch) {
   container.innerHTML = `
     ${datumsHtml}
     <img class="book-cover" id="buch-cover-bild" src="pics/${pfad}.png" alt="Cover: ${buch.titel}" style="width: 100%; max-width: 750px; height: auto; margin-bottom: 24px; cursor: zoom-in;">
-    <p class="blaettern-wrap"><a href="#" id="blaettern-link" class="blaettern-link">📖 Blättern</a></p>
+    <p class="blaettern-wrap">
+      <a href="#" id="blaettern-link" class="blaettern-link">📖 Blättern</a>
+      <button type="button" id="teilen-button" class="teilen-button">🔗 Teilen</button>
+    </p>
     <div id="buch-text"><p>Lade Text …</p></div>
   `;
 
   // Klick auf das Cover -> Bild vergrößert in einer Lightbox anzeigen
   initCoverLightbox();
+
+  // Teilen-Button (siehe js/teilen.js) - teilt Titel + aktuellen Link
+  initTeilenButton(document.getElementById("teilen-button"), buch.titel);
 
   // Der Link wird erst sichtbar/klickbar, wenn der Text geladen ist
   const blaetternLink = document.getElementById("blaettern-link");
