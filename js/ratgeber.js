@@ -60,8 +60,8 @@ const ratgeberRohdaten = [
   "Politische Bildung durch soziale Medien",
   "Wie man zuverlässig unzuverlässig wird",*/  
   //"Pünktlichkeit verbessern durch Zugausfälle", RAW
-  //"Warum ich heute leider keine Zeit habe",
-  //"Vom Millionär zum Tellerwäscher in nur 7 Tagen",
+  "Warum ich heute leider keine Zeit habe",
+  "Vom Millionär zum Tellerwäscher in nur 7 Tagen",
   //"So wirst du zum modernen Künstler",
   //"Gedanken lesen durch geschicktes Raten",
 

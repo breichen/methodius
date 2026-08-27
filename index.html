@@ -46,7 +46,7 @@
       <!-- nav = Navigation, ul/li = Liste der Menüpunkte -->
       <nav>
         <ul>
-          <li><a href="alle-ratgeber.html">Ratgeber</a></li>
+          <li><a href="#ratgeber-showcase">Ratgeber</a></li>
           <li><a href="probleme.html">Probleme</a></li>
           <li><a href="autor.html">Über den Autor</a></li>
         </ul>
@@ -188,10 +188,25 @@
         völlig unbelegte Ferndiagnose.</p>
       <p>In der Sprechstunde beantwortet Dr. Methodius eingesandte Fragen direkt - inklusive Diagnose,
         Behandlung, wissenschaftlicher Begründung und Prognose.</p>
-      <p>Bei Dr. Maximilian Methodius wird nichts vorschnell als „ganz normal“ abgetan. Jedes Problem verdient eine
-        sorgfältige Diagnose, eine wissenschaftlich fragwürdige Einordnung und – sofern erforderlich – eine Behandlung,
-        die dein Leben mit hoher Wahrscheinlichkeit nachhaltig verändern wird. Ob zum Besseren, bleibt abzuwarten.</p>
       <p class="grid-link"><a href="probleme.html">Alle Fallakten ansehen →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== SHOWCASE: AKTUELLSTER FALL ===== -->
+  <section id="problem-showcase" class="section showcase">
+    <div class="wrap">
+      <p class="showcase-eyebrow">Der aktuellste Fall</p>
+      <div class="showcase-box">
+        <button class="showcase-arrow" id="problem-showcase-prev" aria-label="Vorheriger Fall">&#8249;</button>
+        <a class="problem-showcase-link" id="problem-showcase-link" href="#">
+          <div class="problem-card problem-showcase-card">
+            <p class="problem-fallnummer" id="problem-showcase-fallnummer"></p>
+            <h3 class="problem-titel" id="problem-showcase-title"></h3>
+            <p class="problem-frage" id="problem-showcase-frage"></p>
+          </div>
+        </a>
+        <button class="showcase-arrow" id="problem-showcase-next" aria-label="Nächster Fall">&#8250;</button>
+      </div>
     </div>
   </section>
 
@@ -242,6 +257,8 @@
   <script src="js/ratgeber.js"></script>
   <script src="js/showcase.js"></script>
   <script src="js/buchgrid.js"></script>
+  <script src="js/probleme.js"></script>
+  <script src="js/problemshowcase.js"></script>
 
   <!-- Tally-Widget: öffnet das Popup-Formular für "Thema anfragen" -->
   <script async src="https://tally.so/widgets/embed.js"></script>

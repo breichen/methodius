@@ -64,7 +64,7 @@ const problemeRohdaten = [
     einsender: "Horst"
   },
   {
-    titel: "Ans Bett gebunden",
+    titel: "(2) Ans Bett gebunden",
     frage:
       "Warum kann ich morgens nicht aufstehen?",
     diagnose:
@@ -79,7 +79,7 @@ const problemeRohdaten = [
     einsender: "Horst"
   },
   {
-    titel: "Ans Bett gebunden",
+    titel: "(3) Ans Bett gebunden",
     frage:
       "Warum kann ich morgens nicht aufstehen?",
     diagnose:
@@ -94,7 +94,7 @@ const problemeRohdaten = [
     einsender: "Horst"
   },
   {
-    titel: "Ans Bett gebunden",
+    titel: "(4) Ans Bett gebunden",
     frage:
       "Warum kann ich morgens nicht aufstehen?",
     diagnose:

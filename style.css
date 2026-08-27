@@ -1474,3 +1474,33 @@ hr {
 .problem-frage-block .problem-label {
   margin-top: 0;
 }
+
+/* ============================================
+   SHOWCASE: AKTUELLSTER FALL
+   Nutzt dieselben Grundklassen wie der Ratgeber-Showcase
+   (.showcase, .showcase-box, .showcase-arrow, .showcase-eyebrow) für
+   Layout und Pfeile - nur die Karte selbst ist eine ganz normale
+   .problem-card statt eines Cover-Bilds, da Probleme keine Bilder haben.
+   ============================================ */
+.problem-showcase-link {
+  display: block;
+  max-width: 480px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Die Fallakten-Karte ist deutlich schmaler als das Ratgeber-Cover -
+   der für den Ratgeber-Showcase gedachte Standardabstand (24px)
+   würde die Pfeile hier unangenehm weit von der Karte wegrücken. */
+#problem-showcase .showcase-box {
+  gap: 12px;
+}
+
+.problem-showcase-card {
+  transition: transform 0.15s ease;
+}
+
+.problem-showcase-link:hover .problem-showcase-card {
+  transform: translateY(-4px);
+}
