@@ -63,6 +63,51 @@ const problemeRohdaten = [
     erstellt: "27. 8 2026",
     einsender: "Horst"
   },
+  {
+    titel: "Ans Bett gebunden",
+    frage:
+      "Warum kann ich morgens nicht aufstehen?",
+    diagnose:
+      "Chronische Morgenaktivität",
+    behandlung:
+      "Stell deinen Wecker künftig auf 11:47 Uhr. Dadurch entfällt die gesellschaftlich völlig unbegründete Erwartung, bereits um 7 Uhr leistungsfähig zu sein.",
+    begruendung:
+      "Untersuchungen des Methodius-Instituts haben gezeigt, dass Menschen, die um 11:47 Uhr aufstehen, um 11:47 Uhr aufstehen.",
+    prognose:
+      "Hervorragend. Du wirst zwar weiterhin zu spät kommen, aber wesentlich ausgeschlafener.",
+    erstellt: "27. 8 2026",
+    einsender: "Horst"
+  },
+  {
+    titel: "Ans Bett gebunden",
+    frage:
+      "Warum kann ich morgens nicht aufstehen?",
+    diagnose:
+      "Chronische Morgenaktivität",
+    behandlung:
+      "Stell deinen Wecker künftig auf 11:47 Uhr. Dadurch entfällt die gesellschaftlich völlig unbegründete Erwartung, bereits um 7 Uhr leistungsfähig zu sein.",
+    begruendung:
+      "Untersuchungen des Methodius-Instituts haben gezeigt, dass Menschen, die um 11:47 Uhr aufstehen, um 11:47 Uhr aufstehen.",
+    prognose:
+      "Hervorragend. Du wirst zwar weiterhin zu spät kommen, aber wesentlich ausgeschlafener.",
+    erstellt: "27. 8 2026",
+    einsender: "Horst"
+  },
+  {
+    titel: "Ans Bett gebunden",
+    frage:
+      "Warum kann ich morgens nicht aufstehen?",
+    diagnose:
+      "Chronische Morgenaktivität",
+    behandlung:
+      "Stell deinen Wecker künftig auf 11:47 Uhr. Dadurch entfällt die gesellschaftlich völlig unbegründete Erwartung, bereits um 7 Uhr leistungsfähig zu sein.",
+    begruendung:
+      "Untersuchungen des Methodius-Instituts haben gezeigt, dass Menschen, die um 11:47 Uhr aufstehen, um 11:47 Uhr aufstehen.",
+    prognose:
+      "Hervorragend. Du wirst zwar weiterhin zu spät kommen, aber wesentlich ausgeschlafener.",
+    erstellt: "27. 8 2026",
+    einsender: "Horst"
+  },
   /*
   {
     titel: "Das Handy immer griffbereit",
