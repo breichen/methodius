@@ -1482,12 +1482,30 @@ hr {
    Layout und Pfeile - nur die Karte selbst ist eine ganz normale
    .problem-card statt eines Cover-Bilds, da Probleme keine Bilder haben.
    ============================================ */
-.problem-showcase-link {
+/* ============================================
+   ANKLICKBARE FALLAKTEN-KARTE
+   Wird sowohl in den Grids (Neueste Fallakten, Zufällige Empfehlungen,
+   Alle Fallakten) als auch im Showcase auf der Startseite verwendet -
+   überall dieselbe kompakte, komplett anklickbare Karte (Fallnummer,
+   Titel, Frage) mit demselben Hover-Effekt.
+   ============================================ */
+.problem-card-link {
   display: block;
-  max-width: 480px;
-  margin: 0 auto;
   text-decoration: none;
   color: inherit;
+  transition: transform 0.15s ease;
+}
+
+.problem-card-link:hover {
+  transform: translateY(-4px);
+}
+
+/* Zusätzliche Einschränkung NUR für den Showcase auf der Startseite -
+   dort steht die Karte allein und soll nicht die volle Breite
+   einnehmen, sondern wie eine einzelne, zentrierte Karte wirken. */
+.problem-showcase-link {
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 /* Die Fallakten-Karte ist deutlich schmaler als das Ratgeber-Cover -
@@ -1495,10 +1513,6 @@ hr {
    würde die Pfeile hier unangenehm weit von der Karte wegrücken. */
 #problem-showcase .showcase-box {
   gap: 12px;
-}
-
-.problem-showcase-card {
-  transition: transform 0.15s ease;
 }
 
 .problem-showcase-link:hover .problem-showcase-card {
