@@ -1,4 +1,4 @@
-# So wirst du zum Influencer
+# So wirst du zum modernen Künstler
 
 ## Der ultimative Ratgeber für alle, die keine Ahnung von Kunst haben, aber trotzdem gerne so wirken möchten
 
