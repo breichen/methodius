@@ -5,13 +5,20 @@
 
 const container = document.getElementById("buch-inhalt");
 
-// Baut die optionale "Veröffentlicht: ..." / "Aktualisiert: ..."-Zeile aus
-// den Feldern "erstellt" und "aktualisiert" in ratgeber.js. Beide Angaben
-// sind frei wählbare Strings (kein Datumsformat wird vorausgesetzt)
-// und komplett optional - fehlt eine, wird die entsprechende Zeile
-// einfach weggelassen. Sind beide leer, liefert die Funktion "".
+// Baut die optionale "Vorgeschlagen von: ..." / "Veröffentlicht: ..." /
+// "Aktualisiert: ..."-Zeile aus den Feldern "einsender", "erstellt" und
+// "aktualisiert" in ratgeber.js. Alle drei Angaben sind frei wählbare
+// Strings (kein Datumsformat wird vorausgesetzt) und komplett optional -
+// fehlt eine, wird die entsprechende Zeile einfach weggelassen. Ist
+// "einsender" gesetzt, erscheint "Vorgeschlagen von: ..." ganz oben,
+// noch vor "Veröffentlicht: ...". Sind alle drei leer, liefert die
+// Funktion "".
 function baueDatumsHinweis(buch) {
   const zeilen = [];
+
+  if (buch.einsender) {
+    zeilen.push(`<p class="buch-datum">Vorgeschlagen von: ${buch.einsender}</p>`);
+  }
 
   if (buch.erstellt) {
     zeilen.push(`<p class="buch-datum">Veröffentlicht: ${buch.erstellt}</p>`);
@@ -44,9 +51,9 @@ if (!buch) {
   // (wichtig bei Leerzeichen, Kommas, Klammern im Titel).
   const pfad = encodeURIComponent(buch.slug);
 
-  // "Veröffentlicht: ..." / "Aktualisiert: ..." nur anzeigen, wenn die
-  // jeweilige Angabe in ratgeber.js gesetzt wurde - beide sind
-  // komplett optional.
+  // "Vorgeschlagen von: ..." / "Veröffentlicht: ..." / "Aktualisiert: ..."
+  // nur anzeigen, wenn die jeweilige Angabe in ratgeber.js gesetzt wurde -
+  // alle drei sind komplett optional.
   const datumsHtml = baueDatumsHinweis(buch);
 
   // Bild sofort anzeigen, Text kommt gleich per fetch() nach

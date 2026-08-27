@@ -17,16 +17,19 @@
        { slug: "mein-buch", erstellt: "12. März 2026" }
      -> Anzeige-Titel wird "mein-buch"
 
-  Optional lässt sich bei der Objekt-Schreibweise zusätzlich "erstellt"
-  und/oder "aktualisiert" angeben (einfache Strings, z.B. "12. März 2026" -
-  das Format ist frei wählbar, es wird 1:1 auf der Buch-Seite
-  angezeigt):
+  Optional lässt sich bei der Objekt-Schreibweise zusätzlich "erstellt",
+  "aktualisiert" und/oder "einsender" angeben (einfache Strings, z.B.
+  "12. März 2026" - das Format ist frei wählbar, es wird 1:1 auf der
+  Buch-Seite angezeigt):
        { slug: "mein-buch", titel: "Mein Buch", erstellt: "12. März 2026" }
        { slug: "mein-buch", titel: "Mein Buch", erstellt: "12. März 2026", aktualisiert: "3. April 2026" }
+       { slug: "mein-buch", titel: "Mein Buch", erstellt: "12. März 2026", einsender: "Max Mustermann" }
      Ist "erstellt" gesetzt, erscheint oben auf der Buch-Seite
-     "erstellt: ...". Ist zusätzlich (oder auch nur) "aktualisiert" gesetzt,
-     erscheint "Aktualisiert: ..." darunter. Beide Angaben sind
-     komplett optional und werden weggelassen, wenn nicht vorhanden.
+     "Veröffentlicht: ...". Ist zusätzlich (oder auch nur) "aktualisiert"
+     gesetzt, erscheint "Aktualisiert: ..." darunter. Ist "einsender"
+     gesetzt, erscheint zusätzlich ganz oben (über "Veröffentlicht: ...")
+     die Zeile "Vorgeschlagen von: ...". Alle drei Angaben sind komplett
+     optional und werden weggelassen, wenn nicht vorhanden.
 
   Neue Bücher fügst du einfach am ENDE der Liste hinzu –
   "Neueste Ratgeber" zeigt automatisch die letzten Einträge.
@@ -73,9 +76,9 @@ const ratgeberRohdaten = [
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel, ... }-Objekte
 // um, damit buchgrid.js und buch.js sich um nichts Zusätzliches kümmern
-// müssen. Objekt-Einträge (inkl. optionalem "erstellt"/"aktualisiert")
-// werden dabei unverändert durchgereicht - fehlt "titel", wird "slug"
-// als Anzeige-Titel verwendet.
+// müssen. Objekt-Einträge (inkl. optionalem "erstellt"/"aktualisiert"/
+// "einsender") werden dabei unverändert durchgereicht - fehlt "titel",
+// wird "slug" als Anzeige-Titel verwendet.
 const ratgeberListe = ratgeberRohdaten.map(eintrag =>
   typeof eintrag === "string"
     ? { slug: eintrag, titel: eintrag }
