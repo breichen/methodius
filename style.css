@@ -340,6 +340,14 @@ h3 {
 
 .book-card {
   display: block;
+  /* Verhindert, dass Karten bei wenigen Büchern (z.B. nur 1 oder 2)
+     unbegrenzt in die Breite gezogen werden, wenn auto-fit die
+     verbleibenden 1fr-Spalten aufteilt. Der Wert entspricht ungefähr
+     der Kartenbreite, die bei 3 Büchern innerhalb von --max-width
+     entsteht - dadurch bleibt die Größe bei 3 Büchern optisch
+     identisch, wächst aber bei weniger Büchern nicht weiter. */
+  max-width: 220px;
+  margin: 0 auto;
   text-decoration: none;
   color: var(--color-text);
   transition: transform 0.15s ease;
