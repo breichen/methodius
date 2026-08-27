@@ -61,10 +61,10 @@ const ratgeberRohdaten = [
   "Wie man zuverlässig unzuverlässig wird",*/  
   //"Pünktlichkeit verbessern durch Zugausfälle", RAW
   //"Warum ich heute leider keine Zeit habe",
-
   //"Vom Millionär zum Tellerwäscher in nur 7 Tagen",
   //"So wirst du zum modernen Künstler",
   //"Gedanken lesen durch geschicktes Raten",
+
   //"Statistiken fälschen leicht gemacht",
   //"So wirst du zum Influencer",
   //"Der perfekte Körper dank geschickter Beleuchtung",
