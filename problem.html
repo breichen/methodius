@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <!--
-  Diese Seite nutzt dieselbe style.css wie index.html,
-  darum sieht sie automatisch gleich aus (Farben, Schrift, Abstände).
-  Trag hier unten deine echten Angaben ein, sobald du die Seite
-  wirklich veröffentlichst – ein Impressum ist in Deutschland,
-  Österreich und der Schweiz für die meisten Websites Pflicht.
+  Zeigt EIN einzelnes Problem aus js/probleme.js an, ausgewählt über
+  ?titel=... in der URL (siehe js/problem.js). Enthält - anders als
+  die Übersicht in probleme.html - zusätzlich die "Wissenschaftliche
+  Begründung" und die Prognose.
 -->
 <html lang="de">
 
@@ -23,7 +22,8 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/methodius-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/methodius-512x512.png">
 
-  <title>Impressum – Anna Beispiel</title>
+  <!-- Titel wird von js/problem.js dynamisch gesetzt, sobald das Problem geladen ist -->
+  <title>Fallakte – Dr. Methodius</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
@@ -35,7 +35,6 @@
 
 <body>
 
-  <!-- ===== NAVIGATION (identisch zur Startseite) ===== -->
   <header class="site-header">
     <div class="wrap">
       <a href="index.html" class="logo">
@@ -52,39 +51,25 @@
     </div>
   </header>
 
-  <!-- ===== IMPRESSUM-INHALT ===== -->
   <section class="section">
     <div class="wrap">
-      <h1>Impressum</h1>
-
-      <h2>Medieninhaber</h2>
-      <p>
-        Benjamin Reichenwallner<br>
-        Jodok-Fink-Straße 5/3<br>
-        5020 Salzburg<br>
-        Österreich
-      </p>
-
-      <h2>Kontakt</h2>
-      <p>
-        E-Mail: <a href="mailto:service@dr-methodius.com">service@dr-methodius.com</a>
-      </p>
-
-      <h2>Blattlinie</h2>
-      <p>
-        Satirische und humoristische Ratgeber.
-      </p>
-
+      <!-- Wird per JavaScript (js/problem.js) automatisch mit der Fallakte befüllt -->
+      <div id="problem-inhalt">
+        <p>Lade Fallakte …</p>
+      </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="wrap footer-row">
       <p>&copy; 2026 Dr. Maximilian Methodius</p>
-      <a href="index.html">Zurück zur Startseite</a>
+      <a href="impressum.html">Impressum</a>
     </div>
   </footer>
+
+  <!-- Reihenfolge wichtig: erst die Datenliste, dann das Script, das sie nutzt -->
+  <script src="js/probleme.js"></script>
+  <script src="js/problem.js"></script>
 
 </body>
 

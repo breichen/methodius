@@ -42,14 +42,14 @@
 
     einsender    Optional. Name des Lesers, der das Problem
                  eingeschickt hat, z.B. "Max Mustermann". Wird als
-                 "Vorgeschlagen von: ..." ganz oben angezeigt, wenn
+                 "Eingesendet von: ..." ganz oben angezeigt, wenn
                  gesetzt (genau wie bei den Ratgebern).
 
   Neue Probleme fügst du einfach am ENDE der Liste hinzu.
 */
 const problemeRohdaten = [
   {
-    titel: "Der ewige Gruppenchat",
+    titel: "Ans Bett gebunden",
     frage:
       "Warum kann ich morgens nicht aufstehen?",
     diagnose:
@@ -60,7 +60,7 @@ const problemeRohdaten = [
       "Untersuchungen des Methodius-Instituts haben gezeigt, dass Menschen, die um 11:47 Uhr aufstehen, um 11:47 Uhr aufstehen.",
     prognose:
       "Hervorragend. Du wirst zwar weiterhin zu spät kommen, aber wesentlich ausgeschlafener.",
-    erstellt: "12. 8 2026",
+    erstellt: "27. 8 2026",
     einsender: "Horst"
   },
   /*

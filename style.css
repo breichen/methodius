@@ -347,7 +347,7 @@ h3 {
      entsteht - dadurch bleibt die Größe bei 3 Büchern optisch
      identisch, wächst aber bei weniger Büchern nicht weiter. */
   max-width: 220px;
-  margin: 0 auto;
+  margin: 0;
   text-decoration: none;
   color: var(--color-text);
   transition: transform 0.15s ease;
@@ -1349,4 +1349,122 @@ hr {
   .hero {
     padding: 48px 0 56px;
   }
+}
+
+/* ============================================
+   PROBLEME / FALLAKTEN
+   Übersicht (probleme.html) zeigt Frage, Diagnose und Behandlung.
+   Die vollständige Fallakte (problem.html) ergänzt "Wissenschaftliche
+   Begründung" und Prognose. Bewusst pseudowissenschaftlich gestaltet:
+   monospace Labels wie auf einem Aktendeckel, dezente Akzentfarbe
+   statt echter Fotos/Cover (Probleme haben keine Bilder).
+   ============================================ */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.problem-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border: 1px solid #D6CDBB;
+  border-left: 4px solid var(--color-accent);
+  border-radius: 4px 10px 10px 4px;
+  padding: 24px 28px;
+}
+
+/* Im dunkleren Abschnitt (.section-alt) umgekehrter Hintergrund, damit
+   sich die Karte weiterhin vom Abschnitt abhebt - gleiches Prinzip wie
+   bei den Zitaten (siehe blockquote/.section-alt blockquote). */
+.section-alt .problem-card {
+  background: var(--color-bg-alt);
+}
+
+.problem-fallnummer {
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 8px 0;
+}
+
+.problem-titel {
+  margin: 0 0 14px 0;
+}
+
+.problem-frage {
+  font-style: italic;
+  color: var(--color-muted);
+  margin: 0 0 12px 0;
+  padding-left: 14px;
+  border-left: 2px solid var(--color-accent);
+}
+
+.problem-label {
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 14px 0 6px 0;
+}
+
+.problem-card .problem-frage+.problem-label {
+  margin-top: 4px;
+}
+
+.problem-card p {
+  margin: 0 0 4px 0;
+}
+
+.problem-einsender {
+  margin-top: 14px;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.problem-mehr {
+  margin-top: 18px;
+}
+
+.problem-mehr a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.problem-mehr a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   FALLAKTE (problem.html)
+   ============================================ */
+.problem-block {
+  margin: 0 0 36px 0;
+}
+
+.problem-block:last-of-type {
+  margin-bottom: 24px;
+}
+
+.problem-frage-block {
+  background: var(--color-bg-alt);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 8px 8px 0;
+  padding: 20px 24px;
+}
+
+.problem-frage-text {
+  font-style: italic;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.problem-frage-block .problem-label {
+  margin-top: 0;
 }

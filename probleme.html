@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!--
-  Diese Seite nutzt dieselbe style.css wie index.html,
-  darum sieht sie automatisch gleich aus (Farben, Schrift, Abstände).
-  Trag hier unten deine echten Angaben ein, sobald du die Seite
-  wirklich veröffentlichst – ein Impressum ist in Deutschland,
-  Österreich und der Schweiz für die meisten Websites Pflicht.
+  Zeigt ALLE Probleme aus js/probleme.js als Fallakten-Übersicht.
+  Anders als bei den Ratgebern gibt es hier keine Cover-Bilder - jede
+  Karte zeigt stattdessen direkt Frage, Diagnose und Behandlung.
+  "Wissenschaftliche Begründung" und Prognose gibt es erst auf der
+  vollständigen Fallakte (problem.html).
 -->
 <html lang="de">
 
@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/methodius-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/methodius-512x512.png">
 
-  <title>Impressum – Anna Beispiel</title>
+  <title>Probleme – Dr. Methodius</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
@@ -35,7 +35,6 @@
 
 <body>
 
-  <!-- ===== NAVIGATION (identisch zur Startseite) ===== -->
   <header class="site-header">
     <div class="wrap">
       <a href="index.html" class="logo">
@@ -52,39 +51,38 @@
     </div>
   </header>
 
-  <!-- ===== IMPRESSUM-INHALT ===== -->
+  <!-- ===== EINLEITUNG ===== -->
   <section class="section">
     <div class="wrap">
-      <h1>Impressum</h1>
-
-      <h2>Medieninhaber</h2>
-      <p>
-        Benjamin Reichenwallner<br>
-        Jodok-Fink-Straße 5/3<br>
-        5020 Salzburg<br>
-        Österreich
-      </p>
-
-      <h2>Kontakt</h2>
-      <p>
-        E-Mail: <a href="mailto:service@dr-methodius.com">service@dr-methodius.com</a>
-      </p>
-
-      <h2>Blattlinie</h2>
-      <p>
-        Satirische und humoristische Ratgeber.
-      </p>
-
+      <h2>Die Sprechstunde</h2>
+      <p>Hier landen Fragen, die Leser eingeschickt haben - und die <strong>Dr. Maximilian Methodius</strong> mit der
+        gebotenen wissenschaftlichen Unbekümmertheit beantwortet.</p>
+      <p>Jede Fallakte enthält eine Diagnose, eine Behandlung, eine wissenschaftliche Begründung (die diesen Namen
+        nicht verdient) und eine Prognose. Klick auf eine Karte für die vollständige Akte.</p>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== KAPITEL: ALLE PROBLEME ===== -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2>Alle Fallakten</h2>
+      <p>Die vollständige Sammlung aller bisher behandelten Fälle.</p>
+
+      <!-- Wird per JavaScript (js/problemgrid.js) automatisch mit allen Problemen befüllt -->
+      <div id="alle-probleme" class="problem-grid"></div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="wrap footer-row">
       <p>&copy; 2026 Dr. Maximilian Methodius</p>
-      <a href="index.html">Zurück zur Startseite</a>
+      <a href="impressum.html">Impressum</a>
     </div>
   </footer>
+
+  <!-- Reihenfolge wichtig: erst die Datenliste, dann das Script, das sie nutzt -->
+  <script src="js/probleme.js"></script>
+  <script src="js/problemgrid.js"></script>
 
 </body>
 
