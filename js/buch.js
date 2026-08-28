@@ -454,7 +454,9 @@ function ladeKommentare(slug) {
     .then(antwort => {
       if (!antwort.ok) {
         console.log("Keine Kommentar-Datei gefunden:", url);
-        return null;
+
+        // Kein Fehler: Kommentarbereich trotzdem anzeigen.
+        return "";
       }
 
       return antwort.text();
@@ -462,6 +464,13 @@ function ladeKommentare(slug) {
     .then(markdown => {
       if (!markdown || !markdown.trim()) {
         console.log("Kommentar-Datei ist leer.");
+
+        const kommentarHtml = baueKommentarBereich([]);
+
+        document
+          .getElementById("buch-text")
+          .insertAdjacentHTML("beforeend", kommentarHtml);
+
         return;
       }
 
@@ -473,6 +482,13 @@ function ladeKommentare(slug) {
 
       if (kommentare.length === 0) {
         console.log("Keine Kommentare erkannt.");
+
+        const kommentarHtml = baueKommentarBereich([]);
+
+        document
+          .getElementById("buch-text")
+          .insertAdjacentHTML("beforeend", kommentarHtml);
+
         return;
       }
 
@@ -484,6 +500,13 @@ function ladeKommentare(slug) {
     })
     .catch(fehler => {
       console.error("Fehler beim Laden der Kommentare:", fehler);
+
+      // Auch bei einem Fehler den Kommentarbereich anzeigen.
+      const kommentarHtml = baueKommentarBereich([]);
+
+      document
+        .getElementById("buch-text")
+        .insertAdjacentHTML("beforeend", kommentarHtml);
     });
 }
 
@@ -565,6 +588,14 @@ function baueKommentarBereich(kommentare) {
     })
     .join("\n");
 
+  const leererHinweis = kommentare.length === 0
+    ? `
+      <p class="kommentar-leer">
+        Noch keine Kommentare.
+      </p>
+    `
+    : "";
+
   return `
     <section class="ratgeber-kommentare">
       <div class="wrap">
@@ -577,6 +608,7 @@ function baueKommentarBereich(kommentare) {
 
           <div class="kommentar-liste">
             ${beitraege}
+            ${leererHinweis}
           </div>
 
         </div>
