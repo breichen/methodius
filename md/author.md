@@ -1,4 +1,3 @@
-
 # Über Dr. Maximilian Methodius
 
 ## Der Mann hinter den Ratgebern

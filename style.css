@@ -998,6 +998,12 @@ hr {
   align-items: center;
   justify-content: center;
   padding: 24px;
+  /* Sicherheitsnetz: falls die Ansicht (z.B. auf sehr kleinen/kurzen
+     Bildschirmen) trotz der responsiven Größen unten nicht ganz
+     hineinpasst, kann man scrollen statt dass Inhalt unerreichbar
+     abgeschnitten wird. */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .flipbook-overlay.is-open {
@@ -1062,8 +1068,15 @@ hr {
 .flipbook-page {
   width: 480px;
   max-width: 46vw;
-  height: 660px;
-  padding: 48px 40px;
+  /* Feste 660px liefen auf kurzen Bildschirmen (z.B. Handy quer) über
+     den sichtbaren Bereich hinaus. Die Seite ist jetzt maximal 660px
+     hoch, schrumpft aber auf kurzen Bildschirmen mit. "dvh"
+     berücksichtigt zusätzlich die (ein-/ausblendende) Adressleiste
+     mobiler Browser; ältere Browser ohne dvh-Unterstützung ignorieren
+     die zweite Zeile einfach und bleiben bei vh. */
+  height: min(660px, 78vh);
+  height: min(660px, 78dvh);
+  padding: clamp(20px, 4vh, 48px) clamp(20px, 4vw, 40px);
   overflow: hidden;
   position: relative;
 }
@@ -1256,7 +1269,14 @@ hr {
   .flipbook-page {
     width: 86vw;
     max-width: 86vw;
-    height: 64vh;
+    /* Im Hochformat werden ZWEI Seiten übereinander gestapelt - die
+       Höhe pro Seite muss sich das verfügbare Platzangebot also
+       TEILEN (vorher: 64vh pro Seite = 128vh für beide zusammen,
+       das passte nie in den Bildschirm). ~38vh pro Seite lässt genug
+       Puffer für Overlay-Rand, Seitenzähler und Pfeile übrig. */
+    height: min(340px, 38vh);
+    height: min(340px, 38dvh);
+    padding: clamp(16px, 3vh, 32px) 24px;
   }
 
   .flipbook-page:last-child {
@@ -1269,6 +1289,29 @@ hr {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
+  }
+}
+
+/* Handy quer (und andere flache/kurze Bildschirme): wird von der
+   Breiten-Abfrage oben oft NICHT erfasst, da die Breite im
+   Querformat meist über 720px liegt - hier zählt aber die HÖHE.
+   Zwei Seiten bleiben nebeneinander (wie am Desktop), werden aber
+   niedriger, damit sie komplett sichtbar sind. */
+@media (max-height: 500px) {
+  .flipbook-page {
+    height: min(420px, 72vh);
+    height: min(420px, 72dvh);
+    padding: clamp(14px, 3vh, 28px) clamp(16px, 3vw, 32px);
+  }
+
+  .flipbook-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .flipbook-overlay {
+    padding: 12px;
   }
 }
 
