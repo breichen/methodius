@@ -5,14 +5,20 @@
   Statt nur den nackten Link zu teilen, wird - wo möglich - ein Bild
   mitgeteilt:
   - Ratgeber: das vorhandene Cover-Bild
-  - Probleme: ein "on the fly" per Canvas erzeugtes Bild der
-    kompakten Karte (Fallnummer, Titel, Frage) - Probleme haben ja
-    kein eigenes Cover.
+  - Probleme: ein "on the fly" per Canvas erzeugtes Bild der Fallakte
+    (Fallnummer, Titel, Frage, Diagnose, Behandlung) - Probleme haben
+    ja kein eigenes Cover.
+
+  WICHTIG: Manche Apps (v.a. beim Teilen MIT Bild-Datei) zeigen das
+  separate "url"-Feld von navigator.share() nicht an oder ignorieren
+  es. Der Link wird deshalb IMMER zusätzlich in den Text-Teil
+  eingebaut, damit er beim Teilen nicht verloren geht.
 
   Fallback-Kette (jeweils falls der vorherige Schritt nicht klappt):
   1. Web Share API MIT Bild-Datei (v.a. Handy: natives Teilen-Menü,
-     Bild landet z.B. direkt in der WhatsApp-Nachricht)
-  2. Web Share API OHNE Bild (nur Titel/Text/Link)
+     Bild landet z.B. direkt in der WhatsApp-Nachricht, Link steht im
+     Text der Nachricht)
+  2. Web Share API OHNE Bild (Titel/Text inkl. Link/Link-Feld)
   3. Link in die Zwischenablage kopieren, Button zeigt kurz eine
      Bestätigung an
 */
@@ -43,14 +49,16 @@ async function kopiereLink(button, urspruenglicherText) {
 
 // Versucht zu teilen: zuerst mit Bild-Datei (falls vorhanden UND vom
 // Gerät unterstützt), dann ohne Bild, dann Link kopieren. "datei" darf
-// null sein (z.B. wenn die Bilderzeugung fehlgeschlagen ist).
+// null sein (z.B. wenn die Bilderzeugung fehlgeschlagen ist). Der Link
+// wird IMMER mit in den Text eingebaut (siehe Hinweis oben).
 async function teileMitFallback(button, { titel, text, datei }) {
   const url = window.location.href;
+  const textMitLink = `${text}\n\n${url}`;
   const urspruenglicherText = button.innerHTML;
 
   if (datei && navigator.canShare && navigator.canShare({ files: [datei] })) {
     try {
-      await navigator.share({ title: titel, text, files: [datei] });
+      await navigator.share({ title: titel, text: textMitLink, files: [datei] });
       return;
     } catch (fehler) {
       // Abbruch durch Nutzer oder Fehler beim Teilen mit Datei ->
@@ -60,7 +68,7 @@ async function teileMitFallback(button, { titel, text, datei }) {
 
   if (navigator.share) {
     try {
-      await navigator.share({ title: titel, text, url });
+      await navigator.share({ title: titel, text: textMitLink, url });
       return;
     } catch (fehler) {
       // Abbruch durch Nutzer - kein echter Fehler, kein weiterer Fallback nötig.
@@ -69,6 +77,16 @@ async function teileMitFallback(button, { titel, text, datei }) {
   }
 
   await kopiereLink(button, urspruenglicherText);
+}
+
+// Entfernt einfache Markdown-Formatierung (**fett**) und fasst
+// Zeilenumbrüche zu Leerzeichen zusammen - fürs Kartenbild reicht
+// reiner Text, ohne Formatierung.
+function reinerText(text) {
+  return String(text || "")
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/\n+/g, " ")
+    .trim();
 }
 
 // ============================================
@@ -104,9 +122,10 @@ function initTeilenButtonRatgeber(button, { titel, bildUrl }) {
 }
 
 // ============================================
-// PROBLEME: KARTEN-BILD TEILEN
-// Probleme haben kein Cover - stattdessen wird die kompakte Karte
-// (Fallnummer, Titel, Frage) per Canvas als Bild "nachgebaut".
+// PROBLEME: FALLAKTEN-BILD TEILEN
+// Probleme haben kein Cover - stattdessen wird eine kompakte
+// Fallakten-Ansicht (Fallnummer, Titel, Frage, Diagnose, Behandlung)
+// per Canvas als Bild "nachgebaut".
 // ============================================
 
 // Zeichnet ein Rechteck mit abgerundeten Ecken (Canvas kennt das nicht
@@ -125,44 +144,107 @@ function zeichneAbgerundetesRechteck(ctx, x, y, breite, hoehe, radius) {
   ctx.closePath();
 }
 
-// Zeichnet Text mit automatischem Zeilenumbruch (bricht bei
-// "maxBreite" um) und liefert die Y-Position nach der letzten Zeile.
-function zeichneMehrzeiligenText(ctx, text, x, y, maxBreite, zeilenhoehe) {
+// Zerlegt "text" anhand von "maxBreite" in Zeilen (mit dem AKTUELL auf
+// "ctx" gesetzten Font gemessen) - wird sowohl zum reinen Zählen
+// (Höhe vorab berechnen) als auch zum tatsächlichen Zeichnen benutzt.
+function ermittleZeilen(ctx, text, maxBreite) {
   const woerter = text.split(" ");
+  const zeilen = [];
   let zeile = "";
-  let aktuelleY = y;
 
   woerter.forEach(wort => {
     const testZeile = zeile ? `${zeile} ${wort}` : wort;
     const breite = ctx.measureText(testZeile).width;
 
     if (breite > maxBreite && zeile) {
-      ctx.fillText(zeile, x, aktuelleY);
+      zeilen.push(zeile);
       zeile = wort;
-      aktuelleY += zeilenhoehe;
     } else {
       zeile = testZeile;
     }
   });
 
-  if (zeile) {
+  if (zeile) zeilen.push(zeile);
+  return zeilen;
+}
+
+// Zeichnet die vorbereiteten Zeilen untereinander und liefert die
+// Y-Position nach der letzten Zeile.
+function zeichneZeilen(ctx, zeilen, x, y, zeilenhoehe) {
+  let aktuelleY = y;
+  zeilen.forEach(zeile => {
     ctx.fillText(zeile, x, aktuelleY);
     aktuelleY += zeilenhoehe;
-  }
-
+  });
   return aktuelleY;
 }
 
-// Baut per Canvas ein PNG (1200x630 - gängiges Social-Share-Format)
-// nach dem Vorbild der kompakten Fallakten-Karte und liefert es als
-// File-Objekt zurück. Farben sind bewusst als feste Hex-Werte
+// Schriftarten/Größen an einer Stelle definiert, damit Berechnung
+// (Zeilenumbrüche zählen) und tatsächliches Zeichnen garantiert
+// dieselben Werte verwenden.
+const FALLKARTE_STIL = {
+  fallnummer: { font: "600 24px 'Courier New', monospace", zeilenhoehe: 0 },
+  titel: { font: "700 44px Georgia, serif", zeilenhoehe: 52 },
+  frage: { font: "italic 28px Georgia, serif", zeilenhoehe: 40 },
+  label: { font: "700 22px 'Courier New', monospace", zeilenhoehe: 0 },
+  text: { font: "400 26px Inter, sans-serif", zeilenhoehe: 36 }
+};
+
+// Baut per Canvas ein PNG nach dem Vorbild der Fallakte (Fallnummer,
+// Titel, Frage, Diagnose, Behandlung) und liefert es als File-Objekt
+// zurück. Die Bildhöhe wird vorab anhand der tatsächlichen Textlänge
+// berechnet, damit auch längere Diagnosen/Behandlungen nicht
+// abgeschnitten werden. Farben sind bewusst als feste Hex-Werte
 // hinterlegt (identisch zu den Design-Tokens in style.css), da Canvas
 // keine CSS-Variablen lesen kann.
-function erzeugeFallkartenBild({ fallnummer, titel, frage }) {
+function erzeugeFallkartenBild({ fallnummer, titel, frage, diagnose, behandlung }) {
   return new Promise((resolve, reject) => {
     const breite = 1200;
-    const hoehe = 630;
+    const randAussen = 60;
+    const kartenPadding = 60;
+    const kartenBreite = breite - randAussen * 2;
+    const maxTextBreite = kartenBreite - kartenPadding * 2;
 
+    const frageText = `„${reinerText(frage)}“`;
+    const diagnoseText = reinerText(diagnose);
+    const behandlungText = reinerText(behandlung);
+
+    // Erst mit einem unsichtbaren Mess-Canvas alle Zeilenumbrüche
+    // ermitteln, um die nötige Bildhöhe zu berechnen, BEVOR das
+    // eigentliche (sichtbare) Canvas erzeugt wird.
+    const messCanvas = document.createElement("canvas");
+    const messCtx = messCanvas.getContext("2d");
+
+    messCtx.font = FALLKARTE_STIL.titel.font;
+    const titelZeilen = ermittleZeilen(messCtx, titel, maxTextBreite);
+
+    messCtx.font = FALLKARTE_STIL.frage.font;
+    const frageZeilen = ermittleZeilen(messCtx, frageText, maxTextBreite);
+
+    messCtx.font = FALLKARTE_STIL.text.font;
+    const diagnoseZeilen = ermittleZeilen(messCtx, diagnoseText, maxTextBreite);
+    const behandlungZeilen = ermittleZeilen(messCtx, behandlungText, maxTextBreite);
+
+    const labelAbstand = 44; // Platz für Label ("DIAGNOSE" etc.) + kleiner Abstand danach
+
+    const inhaltsHoehe =
+      36 + // Fallnummer
+      12 + // Abstand danach
+      titelZeilen.length * FALLKARTE_STIL.titel.zeilenhoehe +
+      16 + // Abstand danach
+      frageZeilen.length * FALLKARTE_STIL.frage.zeilenhoehe +
+      36 + // Abstand vor "Diagnose"
+      labelAbstand +
+      diagnoseZeilen.length * FALLKARTE_STIL.text.zeilenhoehe +
+      36 + // Abstand vor "Behandlung"
+      labelAbstand +
+      behandlungZeilen.length * FALLKARTE_STIL.text.zeilenhoehe +
+      70; // Platz fürs Branding unten
+
+    const kartenHoehe = kartenPadding * 2 + inhaltsHoehe;
+    const hoehe = kartenHoehe + randAussen * 2;
+
+    // Jetzt das eigentliche Canvas in der berechneten Größe erzeugen.
     const canvas = document.createElement("canvas");
     canvas.width = breite;
     canvas.height = hoehe;
@@ -172,13 +254,9 @@ function erzeugeFallkartenBild({ fallnummer, titel, frage }) {
     ctx.fillStyle = "#F1ECE2";
     ctx.fillRect(0, 0, breite, hoehe);
 
-    // Karte selbst (--color-bg-alt), mit etwas Rand zum Bildrand
-    const rand = 60;
-    const kartenX = rand;
-    const kartenY = rand;
-    const kartenBreite = breite - rand * 2;
-    const kartenHoehe = hoehe - rand * 2;
-
+    // Karte selbst (--color-bg-alt)
+    const kartenX = randAussen;
+    const kartenY = randAussen;
     ctx.fillStyle = "#E7E0D2";
     zeichneAbgerundetesRechteck(ctx, kartenX, kartenY, kartenBreite, kartenHoehe, 16);
     ctx.fill();
@@ -187,32 +265,56 @@ function erzeugeFallkartenBild({ fallnummer, titel, frage }) {
     ctx.fillStyle = "#B5292C";
     ctx.fillRect(kartenX, kartenY, 10, kartenHoehe);
 
-    const textX = kartenX + 60;
-    const maxTextBreite = kartenBreite - 120;
-    let textY = kartenY + 90;
+    const textX = kartenX + kartenPadding;
+    // "cursorY" markiert immer den oberen Rand des NÄCHSTEN Blocks -
+    // die jeweilige Textgrundlinie ergibt sich daraus mit einem festen
+    // Versatz (abhängig von der Schriftgröße).
+    let cursorY = kartenY + kartenPadding;
 
     // Fallnummer
     ctx.fillStyle = "#5A5F72";
-    ctx.font = "600 24px 'Courier New', monospace";
-    ctx.fillText(`FALL NR. ${fallnummer}`, textX, textY);
-    textY += 60;
+    ctx.font = FALLKARTE_STIL.fallnummer.font;
+    ctx.fillText(`FALL NR. ${fallnummer}`, textX, cursorY + 24);
+    cursorY += 36 + 12;
 
     // Titel
     ctx.fillStyle = "#1B2340";
-    ctx.font = "700 48px Georgia, serif";
-    textY = zeichneMehrzeiligenText(ctx, titel, textX, textY, maxTextBreite, 56);
-    textY += 26;
+    ctx.font = FALLKARTE_STIL.titel.font;
+    zeichneZeilen(ctx, titelZeilen, textX, cursorY + 40, FALLKARTE_STIL.titel.zeilenhoehe);
+    cursorY += titelZeilen.length * FALLKARTE_STIL.titel.zeilenhoehe + 16;
 
     // Frage
     ctx.fillStyle = "#5A5F72";
-    ctx.font = "italic 30px Georgia, serif";
-    zeichneMehrzeiligenText(ctx, `„${frage}“`, textX, textY, maxTextBreite, 42);
+    ctx.font = FALLKARTE_STIL.frage.font;
+    zeichneZeilen(ctx, frageZeilen, textX, cursorY + 28, FALLKARTE_STIL.frage.zeilenhoehe);
+    cursorY += frageZeilen.length * FALLKARTE_STIL.frage.zeilenhoehe + 36;
+
+    // Label "DIAGNOSE" + Text
+    ctx.fillStyle = "#B5292C";
+    ctx.font = FALLKARTE_STIL.label.font;
+    ctx.fillText("🩺 DIAGNOSE", textX, cursorY + 22);
+    cursorY += labelAbstand;
+
+    ctx.fillStyle = "#1B2340";
+    ctx.font = FALLKARTE_STIL.text.font;
+    zeichneZeilen(ctx, diagnoseZeilen, textX, cursorY + 24, FALLKARTE_STIL.text.zeilenhoehe);
+    cursorY += diagnoseZeilen.length * FALLKARTE_STIL.text.zeilenhoehe + 36;
+
+    // Label "BEHANDLUNG" + Text
+    ctx.fillStyle = "#B5292C";
+    ctx.font = FALLKARTE_STIL.label.font;
+    ctx.fillText("💊 BEHANDLUNG", textX, cursorY + 22);
+    cursorY += labelAbstand;
+
+    ctx.fillStyle = "#1B2340";
+    ctx.font = FALLKARTE_STIL.text.font;
+    zeichneZeilen(ctx, behandlungZeilen, textX, cursorY + 24, FALLKARTE_STIL.text.zeilenhoehe);
 
     // Kleines Branding unten rechts
     ctx.fillStyle = "#B5292C";
-    ctx.font = "600 26px Inter, sans-serif";
+    ctx.font = "600 24px Inter, sans-serif";
     ctx.textAlign = "right";
-    ctx.fillText("Dr. Methodius", kartenX + kartenBreite - 40, kartenY + kartenHoehe - 40);
+    ctx.fillText("Dr. Methodius", kartenX + kartenBreite - 40, kartenY + kartenHoehe - 30);
     ctx.textAlign = "left";
 
     canvas.toBlob(blob => {
@@ -227,7 +329,7 @@ function erzeugeFallkartenBild({ fallnummer, titel, frage }) {
 
 // "button" ist das <button>-Element, die übrigen Felder kommen vom
 // jeweiligen Problem (siehe js/problem.js).
-function initTeilenButtonProblem(button, { titel, fallnummer, frage }) {
+function initTeilenButtonProblem(button, { titel, fallnummer, frage, diagnose, behandlung }) {
   if (!button) return;
 
   const text = `Fall Nr. ${fallnummer}: „${titel}“ - diagnostiziert von Dr. Methodius.`;
@@ -236,7 +338,7 @@ function initTeilenButtonProblem(button, { titel, fallnummer, frage }) {
     let datei = null;
 
     try {
-      datei = await erzeugeFallkartenBild({ fallnummer, titel, frage });
+      datei = await erzeugeFallkartenBild({ fallnummer, titel, frage, diagnose, behandlung });
     } catch (fehler) {
       // Kartenbild konnte nicht erzeugt werden -> ohne Bild weiterteilen
     }

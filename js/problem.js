@@ -99,11 +99,14 @@ if (!problem) {
   `;
 
   // Teilen-Button (siehe js/teilen.js) - erzeugt ein Kartenbild
-  // (Fallnummer, Titel, Frage) und teilt es zusammen mit Titel + Link
+  // (Fallnummer, Titel, Frage, Diagnose, Behandlung) und teilt es
+  // zusammen mit Titel + Link
   const fallnummer = String(problemeListe.indexOf(problem) + 1).padStart(3, "0");
   initTeilenButtonProblem(document.getElementById("teilen-button"), {
     titel: problem.titel,
     fallnummer,
-    frage: problem.frage
+    frage: problem.frage,
+    diagnose: problem.diagnose,
+    behandlung: problem.behandlung
   });
 }
