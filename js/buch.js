@@ -791,23 +791,36 @@ function schliesseLightbox() {
 
 let flipSeiten = [];
 let flipIndex = 0;
+let flipBloeckeOhneTrennlinie = [];
+let flipResizeTimeout = null;
+
+// Im Hochformat wird bewusst nur EINE Seite auf einmal gezeigt (statt
+// zwei nebeneinander/übereinander) - das lässt sich besser lesen und
+// die einzelne Seite kann viel mehr von der verfügbaren Höhe nutzen.
+function istPortraitModus() {
+  return window.matchMedia("(orientation: portrait)").matches;
+}
+
+function berechneFlipSeiten() {
+  flipSeiten = teileInSeiten(flipBloeckeOhneTrennlinie);
+}
 
 function initFlipbook(bloecke) {
   baueFlipbookGeruest();
 
   // <hr> wird im Blättermodus nicht gebraucht:
   // neue Kapitel beginnen ohnehin automatisch auf einer neuen Seite.
-  const bloeckeOhneTrennlinie =
+  flipBloeckeOhneTrennlinie =
     bloecke.filter(block => block !== "<hr>");
-
-  flipSeiten = teileInSeiten(bloeckeOhneTrennlinie);
-  flipIndex = 0;
 
   document
     .getElementById("blaettern-link")
     .addEventListener("click", e => {
       e.preventDefault();
 
+      // Erst JETZT (statt schon beim Laden der Seite) berechnen, damit
+      // die aktuelle Bildschirmgröße/Ausrichtung berücksichtigt wird.
+      berechneFlipSeiten();
       flipIndex = 0;
       zeigeSpread();
 
@@ -861,11 +874,11 @@ function baueFlipbookGeruest() {
 
   document
     .getElementById("flipbook-prev")
-    .addEventListener("click", () => blaettere(-2));
+    .addEventListener("click", () => blaettere(-1));
 
   document
     .getElementById("flipbook-next")
-    .addEventListener("click", () => blaettere(2));
+    .addEventListener("click", () => blaettere(1));
 
   document.addEventListener("keydown", e => {
     if (!overlay.classList.contains("is-open")) {
@@ -873,16 +886,36 @@ function baueFlipbookGeruest() {
     }
 
     if (e.key === "ArrowLeft") {
-      blaettere(-2);
+      blaettere(-1);
     }
 
     if (e.key === "ArrowRight") {
-      blaettere(2);
+      blaettere(1);
     }
 
     if (e.key === "Escape") {
       schliesseFlipbook();
     }
+  });
+
+  // Bei Größenänderung (z.B. Drehen des Handys) die Seitenaufteilung
+  // neu berechnen, solange das Overlay offen ist - sonst passt die
+  // vorher berechnete Aufteilung nicht mehr zur neuen Seitengröße.
+  // Leicht entprellt (200ms), damit das nicht bei jedem Zwischenschritt
+  // der Dreh-Animation feuert.
+  window.addEventListener("resize", () => {
+    clearTimeout(flipResizeTimeout);
+    flipResizeTimeout = setTimeout(() => {
+      if (!overlay.classList.contains("is-open")) return;
+
+      berechneFlipSeiten();
+      // Sicherstellen, dass der aktuelle Index nach der Neuberechnung
+      // noch existiert (z.B. falls es jetzt insgesamt weniger Seiten gibt).
+      if (flipIndex >= flipSeiten.length) {
+        flipIndex = Math.max(0, flipSeiten.length - 1);
+      }
+      zeigeSpread();
+    }, 200);
   });
 }
 
@@ -892,7 +925,11 @@ function schliesseFlipbook() {
     .classList.remove("is-open");
 }
 
-function blaettere(schritt) {
+// "richtung" ist -1 (zurück) oder 1 (vor). Im Hochformat wird pro
+// Klick EINE Seite weitergeblättert, sonst ZWEI (da dort immer ein
+// ganzer Spread aus linker+rechter Seite gezeigt wird).
+function blaettere(richtung) {
+  const schritt = (istPortraitModus() ? 1 : 2) * richtung;
   const neuerIndex = flipIndex + schritt;
 
   if (
@@ -909,6 +946,14 @@ function blaettere(schritt) {
 // Verteilt die Text-Blöcke auf Seiten: Ein unsichtbares Mess-Element in
 // exakter .flipbook-page-Größe wird nach und nach befüllt; sobald der
 // Inhalt nicht mehr hineinpasst, beginnt eine neue Seite.
+//
+// WICHTIG: Die Mess-Box bekommt bewusst KEINE fest einprogrammierten
+// Maße (früher: immer 480x660px) - stattdessen übernimmt sie ganz
+// normal die Maße aus der .flipbook-page-CSS-Klasse, die sich per
+// Media Queries an Bildschirmgröße/Ausrichtung anpasst. Nur so
+// entspricht die Seitenaufteilung dem, was auf dem jeweiligen Gerät
+// tatsächlich sichtbar ist - sonst wird z.B. auf dem Handy Text
+// abgeschnitten, der für eine viel größere Desktop-Seite berechnet wurde.
 function teileInSeiten(bloecke) {
   const messSeite = document.createElement("div");
 
@@ -920,9 +965,6 @@ function teileInSeiten(bloecke) {
   messSeite.style.pointerEvents = "none";
   messSeite.style.left = "-10000px";
   messSeite.style.top = "0";
-  messSeite.style.width = "480px";
-  messSeite.style.maxWidth = "480px";
-  messSeite.style.height = "660px";
 
   document.body.appendChild(messSeite);
 
@@ -1086,7 +1128,8 @@ function teileInSeiten(bloecke) {
     : [[]];
 }
 
-// Zeigt den Spread (linke + rechte Seite) für den aktuellen flipIndex an
+// Zeigt die aktuelle(n) Seite(n) an: im Hochformat nur EINE Seite,
+// sonst einen Spread aus linker + rechter Seite.
 function zeigeSpread() {
   const linkeSeite =
     document.getElementById(
@@ -1113,30 +1156,40 @@ function zeigeSpread() {
       "flipbook-next"
     );
 
+  const einzelseite = istPortraitModus();
+  const schritt = einzelseite ? 1 : 2;
+
   const inhaltLinks =
     flipSeiten[flipIndex] || [];
 
-  const inhaltRechts =
-    flipSeiten[flipIndex + 1] || [];
-
   linkeSeite.innerHTML =
     inhaltLinks.join("\n") +
-    `<span class="flipbook-page-number left">${flipIndex + 1}</span>`;
+    `<span class="flipbook-page-number${einzelseite ? "" : " left"}">${flipIndex + 1}</span>`;
 
-  rechteSeite.innerHTML =
-    inhaltRechts.length
-      ? inhaltRechts.join("\n") +
-        `<span class="flipbook-page-number">${flipIndex + 2}</span>`
-      : "";
+  if (einzelseite) {
+    // Rechte Seite bleibt leer (und ist per CSS im Hochformat
+    // ohnehin ausgeblendet) - es wird immer nur eine Seite gezeigt.
+    rechteSeite.innerHTML = "";
+    zaehler.textContent = `Seite ${flipIndex + 1} von ${flipSeiten.length}`;
+  } else {
+    const inhaltRechts =
+      flipSeiten[flipIndex + 1] || [];
 
-  zaehler.textContent =
-    inhaltRechts.length
-      ? `Seite ${flipIndex + 1}–${flipIndex + 2} von ${flipSeiten.length}`
-      : `Seite ${flipIndex + 1} von ${flipSeiten.length}`;
+    rechteSeite.innerHTML =
+      inhaltRechts.length
+        ? inhaltRechts.join("\n") +
+          `<span class="flipbook-page-number">${flipIndex + 2}</span>`
+        : "";
+
+    zaehler.textContent =
+      inhaltRechts.length
+        ? `Seite ${flipIndex + 1}–${flipIndex + 2} von ${flipSeiten.length}`
+        : `Seite ${flipIndex + 1} von ${flipSeiten.length}`;
+  }
 
   prevBtn.disabled =
     flipIndex <= 0;
 
   nextBtn.disabled =
-    flipIndex + 2 >= flipSeiten.length;
+    flipIndex + schritt >= flipSeiten.length;
 }

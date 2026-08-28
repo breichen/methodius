@@ -1261,28 +1261,20 @@ hr {
 /* ============================================
    RESPONSIVE FLIPBOOK
    ============================================ */
-@media (max-width: 720px) {
-  .flipbook-book {
-    flex-direction: column;
+/* Hochformat: nur EINE Seite auf einmal zeigen (siehe istPortraitModus()
+   in buch.js), damit sie die verfügbare Breite/Höhe optimal ausnutzt,
+   statt zwei kaum lesbare, gestapelte Mini-Seiten zu zeigen. */
+@media (orientation: portrait) {
+  #flipbook-page-rechts {
+    display: none;
   }
 
   .flipbook-page {
-    width: 86vw;
-    max-width: 86vw;
-    /* Im Hochformat werden ZWEI Seiten übereinander gestapelt - die
-       Höhe pro Seite muss sich das verfügbare Platzangebot also
-       TEILEN (vorher: 64vh pro Seite = 128vh für beide zusammen,
-       das passte nie in den Bildschirm). ~38vh pro Seite lässt genug
-       Puffer für Overlay-Rand, Seitenzähler und Pfeile übrig. */
-    height: min(340px, 38vh);
-    height: min(340px, 38dvh);
-    padding: clamp(16px, 3vh, 32px) 24px;
-  }
-
-  .flipbook-page:last-child {
-    border-left: none;
-    border-top: 1px solid #D6CDBB;
-    box-shadow: inset 0 6px 12px -8px rgba(0, 0, 0, 0.25);
+    width: 90vw;
+    max-width: 90vw;
+    height: min(620px, 78vh);
+    height: min(620px, 78dvh);
+    padding: clamp(16px, 4vh, 32px) clamp(16px, 4vw, 28px);
   }
 
   .flipbook-arrow {
@@ -1292,11 +1284,10 @@ hr {
   }
 }
 
-/* Handy quer (und andere flache/kurze Bildschirme): wird von der
-   Breiten-Abfrage oben oft NICHT erfasst, da die Breite im
-   Querformat meist über 720px liegt - hier zählt aber die HÖHE.
-   Zwei Seiten bleiben nebeneinander (wie am Desktop), werden aber
-   niedriger, damit sie komplett sichtbar sind. */
+/* Handy quer (und andere flache/kurze Bildschirme): die zwei Seiten
+   bleiben nebeneinander (wie am Desktop), werden aber niedriger,
+   damit sie komplett sichtbar sind - unabhängig von der Breite, denn
+   im Querformat ist ein Handy meist eher zu KURZ als zu schmal. */
 @media (max-height: 500px) {
   .flipbook-page {
     height: min(420px, 72vh);
