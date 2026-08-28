@@ -59,7 +59,7 @@ const ratgeberRohdaten = [
   "Das perfekte Leben auf Social Media",  
   "Politische Bildung durch soziale Medien",
   "Wie man zuverlässig unzuverlässig wird",*/  
-  //"Pünktlichkeit verbessern durch Zugausfälle", RAW
+  //"Pünktlichkeit verbessern durch Zugausfälle",
   //"Warum ich heute leider keine Zeit habe",
   //"Vom Millionär zum Tellerwäscher in nur 7 Tagen",
   //"So wirst du zum modernen Künstler",

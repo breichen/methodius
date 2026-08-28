@@ -1,3 +1,4 @@
+
 # Pünktlichkeit verbessern durch Zugausfälle
 
 ## Der revolutionäre Ratgeber für alle, die endlich verstehen möchten, warum ein Zug niemals zu spät kommen kann, wenn er gar nicht erst fährt
@@ -8,9 +9,7 @@
 
 # Herzlichen Glückwunsch!
 
-Du bist pünktlich.
-
-Zumindest laut Statistik.
+Du bist pünktlich. Zumindest laut Statistik.
 
 Das ist eine wichtige Erkenntnis, denn Pünktlichkeit wird häufig noch immer mit einer erstaunlich altmodischen Vorstellung verbunden: Ein Zug soll zu der Uhrzeit ankommen, die im Fahrplan steht. Diese Vorstellung hat allerdings einen entscheidenden Nachteil. Sie setzt voraus, dass der Zug tatsächlich fährt.
 
@@ -42,15 +41,7 @@ Nehmen wir an, dein Zug soll um 14:32 Uhr abfahren und um 16:17 Uhr ankommen. Du
 
 Jetzt hast du zwei Möglichkeiten. Du kannst ihn fahren lassen und später erklären, warum er zu spät war. Oder du kannst ihn ausfallen lassen und damit verhindern, dass überhaupt eine Ankunftszeit erreicht wird.
 
-Die zweite Möglichkeit ist statistisch ausgesprochen elegant.
-
-Der Zug kommt nicht um 16:17 Uhr an.
-
-Aber er kommt auch nicht um 16:27 Uhr an.
-
-Oder um 16:47 Uhr.
-
-**Er kommt überhaupt nicht an.**
+Die zweite Möglichkeit ist statistisch ausgesprochen elegant: Der Zug kommt nicht um 16:17 Uhr an. Aber er kommt auch nicht um 16:27 Uhr an. Oder um 16:47 Uhr. **Er kommt überhaupt nicht an.**
 
 Damit ist das Thema Pünktlichkeit zumindest für diesen Zug erstaunlich übersichtlich gelöst.
 
@@ -64,13 +55,9 @@ Eine Verspätung ist eine unangenehme Zahl. Sie lässt sich messen, vergleichen 
 
 Ein Ausfall funktioniert anders. Der Zug hat keine tatsächliche Ankunftszeit mehr, mit der man ihn vergleichen könnte. Statt einer Zahl steht dort plötzlich „fällt aus“.
 
-Das klingt zwar schlecht, hat aber einen entscheidenden Vorteil:
+Das klingt zwar schlecht, hat aber einen entscheidenden Vorteil: **Eine ausgefallene Ankunft kann nicht als verspätete Ankunft gezählt werden.**
 
-**Eine ausgefallene Ankunft kann nicht als verspätete Ankunft gezählt werden.**
-
-Das ist keine Lösung des Problems.
-
-Aber es ist eine sehr ordentliche Lösung des Messproblems.
+Das ist keine Lösung des Problems. Aber es ist eine sehr ordentliche Lösung des Messproblems.
 
 ---
 
@@ -78,19 +65,13 @@ Aber es ist eine sehr ordentliche Lösung des Messproblems.
 
 ## Optimiere die Statistik
 
-Stell dir ein einfaches Beispiel vor. Ein Zug fährt an fünf Tagen pünktlich und kommt an zwei weiteren Tagen jeweils 40 Minuten zu spät.
+Stell dir ein einfaches Beispiel vor. Ein Zug fährt an fünf Tagen pünktlich und kommt an zwei weiteren Tagen jeweils 40 Minuten zu spät. Das sieht nicht besonders gut aus.
 
-Das sieht nicht besonders gut aus.
-
-Nun wird einer dieser verspäteten Züge gestrichen. Schon gibt es eine Verspätung weniger, die in die Statistik einfließen kann.
-
-Wenn du noch einen streichst, wird die Situation statistisch noch übersichtlicher.
+Nun wird einer dieser verspäteten Züge gestrichen. Schon gibt es eine Verspätung weniger, die in die Statistik einfließen kann. Wenn du noch einen streichst, wird die Situation statistisch noch übersichtlicher.
 
 Natürlich sind die Fahrgäste dadurch nicht schneller angekommen. Einige von ihnen stehen möglicherweise weiterhin am Bahnsteig und überlegen, wie sie ihr Ziel erreichen.
 
-Aber die Statistik kann sich entspannen.
-
-**Und wenn die Statistik zufrieden ist, ist zumindest ein Teil des Problems gelöst.**
+Aber die Statistik kann sich entspannen. **Und wenn die Statistik zufrieden ist, ist zumindest ein Teil des Problems gelöst.**
 
 ---
 
@@ -100,9 +81,7 @@ Aber die Statistik kann sich entspannen.
 
 „Zu spät“ ist eine Formulierung, die du möglichst vermeiden solltest. Sie klingt negativ und erzeugt sofort die Erwartung, dass tatsächlich etwas nicht nach Plan funktioniert hat.
 
-Besser sind Formulierungen wie „entfällt“, „fällt heute aus“ oder „verkehrt nicht“.
-
-Diese Begriffe haben einen großen kommunikativen Vorteil: Sie beschreiben den Zustand, ohne eine konkrete Verspätungsdauer zu nennen.
+Besser sind Formulierungen wie „entfällt“, „fällt heute aus“ oder „verkehrt nicht“. Diese Begriffe haben einen großen kommunikativen Vorteil: Sie beschreiben den Zustand, ohne eine konkrete Verspätungsdauer zu nennen.
 
 Niemand muss wissen, dass ein Fahrgast eigentlich seit 45 Minuten wartet. Entscheidend ist nur, dass der ursprünglich geplante Zug nicht mehr Teil der aktuellen Situation ist.
 
@@ -118,13 +97,9 @@ Ein ausgefallener Zug hinterlässt eine Lücke im Fahrplan. Das muss nicht zwang
 
 Du kannst diese Lücke als Chance betrachten, einen neuen Zug anzubieten. Wenn beispielsweise der Zug um 15:10 Uhr ausfällt, könnte ein späterer Zug die Fahrgäste übernehmen.
 
-Natürlich wird dieser Zug möglicherweise sehr voll sein. Vielleicht fährt er auch verspätet. Vielleicht fällt er ebenfalls aus.
+Natürlich wird dieser Zug möglicherweise sehr voll sein. Vielleicht fährt er auch verspätet. Vielleicht fällt er ebenfalls aus. Aber das sind Probleme der Zukunft.
 
-Aber das sind Probleme der Zukunft.
-
-Für den Moment hast du eine neue Abfahrt.
-
-**Und jede neue Abfahrt ist eine neue Gelegenheit, pünktlich zu sein.**
+Für den Moment hast du eine neue Abfahrt. **Und jede neue Abfahrt ist eine neue Gelegenheit, pünktlich zu sein.**
 
 ---
 
@@ -156,15 +131,11 @@ Niemand erwartet mehr eine Ankunft um 16:17 Uhr. Niemand wartet auf genau diesen
 
 ## Lerne vom perfekten Kalender
 
-Ein Kalender ist erstaunlich zuverlässig. Wenn du einen Termin einfach löschst, ist er nicht verspätet. Er findet nur nicht statt.
-
-Das könnte man als Inspiration betrachten.
+Ein Kalender ist erstaunlich zuverlässig. Wenn du einen Termin einfach löschst, ist er nicht verspätet. Er findet nur nicht statt. Das könnte man als Inspiration betrachten.
 
 Wenn ein Zug Probleme verursacht, könnte man den entsprechenden Termin im Fahrplan ebenfalls entfernen. Der Unterschied zwischen „Zug kommt 20 Minuten später“ und „Zug entfällt“ ist schließlich vor allem die Frage, welche Erwartung man beim Fahrgast erzeugt.
 
-Das ist eine wichtige Lektion für die moderne Organisation.
-
-**Ein leerer Kalender ist immer pünktlich.**
+Das ist eine wichtige Lektion für die moderne Organisation. **Ein leerer Kalender kennt keine Unpünktlichkeit.**
 
 ---
 
@@ -172,15 +143,11 @@ Das ist eine wichtige Lektion für die moderne Organisation.
 
 ## Informiere die Fahrgäste rechtzeitig
 
-Jetzt kommt der schwierigste Teil.
-
-Wenn du einen Zug ausfallen lässt, solltest du die Fahrgäste möglichst früh informieren. Denn es wäre unangenehm, wenn Menschen bereits im Zug sitzen und erst nach der Abfahrt erfahren, dass dieser Zug heute eigentlich gar nicht fahren sollte.
+Jetzt kommt der schwierigste Teil: Wenn du einen Zug ausfallen lässt, solltest du die Fahrgäste möglichst früh informieren. Denn es wäre unangenehm, wenn Menschen bereits im Zug sitzen und erst nach der Abfahrt erfahren, dass dieser Zug heute eigentlich gar nicht fahren sollte.
 
 Eine frühzeitige Information bietet außerdem einen weiteren Vorteil: Die Fahrgäste können sich rechtzeitig darüber freuen, dass sie nun mehr Zeit für alternative Reiseformen haben.
 
-Busse, Taxis, Mitfahrgelegenheiten oder ein ausgedehnter Spaziergang sind schließlich alles Möglichkeiten, die man ohne Zugausfall vielleicht niemals ausprobiert hätte.
-
-**Mobilität beginnt dort, wo der Fahrplan endet.**
+Busse, Taxis, Mitfahrgelegenheiten oder ein ausgedehnter Spaziergang sind schließlich alles Möglichkeiten, die man ohne Zugausfall vielleicht niemals ausprobiert hätte. **Mobilität beginnt dort, wo der Fahrplan endet.**
 
 ---
 
@@ -190,27 +157,13 @@ Busse, Taxis, Mitfahrgelegenheiten oder ein ausgedehnter Spaziergang sind schlie
 
 Das Wort „Ausfall“ klingt negativ. „Flexibilität“ klingt deutlich moderner.
 
-Ein Zug fällt aus?
+Ein Zug fällt aus? Nein. **Das Verkehrsangebot wird flexibel angepasst.**
 
-Nein.
+Ein Anschluss ist weg? Nein. **Die Reiseoptionen werden neu bewertet.**
 
-**Das Verkehrsangebot wird flexibel angepasst.**
+Du sitzt seit einer Stunde am Bahnsteig? Nein. **Du nutzt deine Zeit zur individuellen Entschleunigung.**
 
-Ein Anschluss ist weg?
-
-Nein.
-
-**Die Reiseoptionen werden neu bewertet.**
-
-Du sitzt seit einer Stunde am Bahnsteig?
-
-Nein.
-
-**Du nutzt deine Zeit zur individuellen Entschleunigung.**
-
-Diese Formulierungen verändern zwar nicht die tatsächliche Situation, aber sie verbessern die emotionale Verpackung.
-
-Und Verpackung ist bekanntlich ein wichtiger Bestandteil moderner Kommunikation.
+Diese Formulierungen verändern zwar nicht die tatsächliche Situation, aber sie verbessern die emotionale Verpackung. Und Verpackung ist bekanntlich ein wichtiger Bestandteil moderner Kommunikation.
 
 ---
 
@@ -220,13 +173,9 @@ Und Verpackung ist bekanntlich ein wichtiger Bestandteil moderner Kommunikation.
 
 Wenn ein Zug ausfällt, gibt es häufig einen guten Grund. Technische Probleme, Personalengpässe, Störungen oder andere unvorhergesehene Ereignisse können dazu führen, dass ein Zug nicht wie geplant fährt.
 
-Das ist grundsätzlich nachvollziehbar.
+Das ist grundsätzlich nachvollziehbar. Die satirische Herausforderung beginnt dort, wo aus einem einzelnen Ausfall ein System wird und die Fahrgäste feststellen, dass sie zwar sehr sicher, aber leider nicht dort ankommen, wo sie hinwollten.
 
-Die satirische Herausforderung beginnt dort, wo aus einem einzelnen Ausfall ein System wird und die Fahrgäste feststellen, dass sie zwar sehr sicher, aber leider nicht dort ankommen, wo sie hinwollten.
-
-Trotzdem bleibt eine wichtige Erkenntnis:
-
-**Ein sicher ausgefallener Zug ist besser als ein unsicherer Zug.**
+Trotzdem bleibt eine wichtige Erkenntnis: **Ein sicher ausgefallener Zug ist besser als ein unsicherer Zug.**
 
 Und ein noch sichererer Zug ist einer, der bereits im Fahrplan nicht mehr existiert.
 
@@ -240,15 +189,9 @@ Pünktlichkeit sollte nicht länger bedeuten, dass ein Zug exakt zur geplanten Z
 
 Stattdessen kann Pünktlichkeit als das Verhältnis zwischen den tatsächlich gefahrenen Zügen und deren planmäßigen Fahrzeiten betrachtet werden.
 
-Oder anders gesagt:
+Oder anders gesagt: Wenn wir nur die Züge betrachten, die tatsächlich fahren, haben wir schon einmal deutlich weniger problematische Fälle.
 
-Wenn wir nur die Züge betrachten, die tatsächlich fahren, haben wir schon einmal deutlich weniger problematische Fälle.
-
-Das ist mathematisch vielleicht nicht die vollständigste Betrachtung.
-
-Aber sie ist ausgesprochen angenehm.
-
-**Je kleiner die Stichprobe, desto leichter lässt sich eine Erfolgsgeschichte erzählen.**
+Das ist mathematisch vielleicht nicht die vollständigste Betrachtung. Aber sie ist ausgesprochen angenehm. **Je kleiner die Stichprobe, desto leichter lässt sich eine Erfolgsgeschichte erzählen.**
 
 ---
 
@@ -262,11 +205,7 @@ Dieser Mensch möchte vielleicht zur Arbeit. Er möchte einen Arzttermin erreich
 
 Für ihn macht es keinen großen Unterschied, ob sein Zug 35 Minuten verspätet ist oder vollständig ausfällt. In beiden Fällen steht er dort und wartet auf eine Lösung.
 
-Und genau deshalb ist die Kunst des Ausfallens eine schwierige Disziplin.
-
-**Man kann die Verspätungsstatistik verbessern, ohne die Reisezeit zu verbessern.**
-
-Das ist die hohe Schule der modernen Pünktlichkeit.
+Und genau deshalb ist die Kunst des Ausfallens eine schwierige Disziplin. **Man kann die Verspätungsstatistik verbessern, ohne die Reisezeit zu verbessern.** Das ist die hohe Schule der modernen Pünktlichkeit.
 
 ---
 
@@ -274,21 +213,11 @@ Das ist die hohe Schule der modernen Pünktlichkeit.
 
 ## Die perfekte Lösung
 
-Die perfekte Lösung wäre natürlich ein Zug, der pünktlich fährt und pünktlich ankommt.
-
-Das wäre allerdings ausgesprochen anspruchsvoll.
+Die perfekte Lösung wäre natürlich ein Zug, der pünktlich fährt und pünktlich ankommt. Das wäre allerdings ausgesprochen anspruchsvoll.
 
 Man müsste Fahrpläne einhalten, ausreichend Personal haben, funktionierende Fahrzeuge bereitstellen und dafür sorgen, dass unterwegs möglichst wenig schiefgeht. Das alles klingt nach einem sehr aufwendigen Konzept.
 
-Deshalb konzentrieren wir uns lieber auf die einfachere Variante.
-
-Der Zug fällt aus.
-
-Niemand muss warten, dass er zu spät kommt.
-
-Die Statistik bleibt sauber.
-
-**Und irgendwo kann jemand sagen: „Dieser Zug hatte heute keine Verspätung.“**
+Deshalb konzentrieren wir uns lieber auf die einfachere Variante: Der Zug fällt aus. Niemand muss warten, dass er zu spät kommt. Die Statistik bleibt sauber. **Und irgendwo kann jemand sagen: „Dieser Zug hatte heute keine Verspätung.“**
 
 ---
 
@@ -300,13 +229,9 @@ Du hast gelernt, dass Pünktlichkeit eine erstaunlich flexible Angelegenheit sei
 
 Das bedeutet nicht, dass Ausfälle für Fahrgäste angenehm sind. Ganz im Gegenteil. Für Menschen, die auf einen funktionierenden Fahrplan angewiesen sind, kann ein Ausfall genauso frustrierend oder sogar schlimmer sein als eine Verspätung.
 
-Aber genau darin liegt die Pointe dieses Ratgebers.
+Aber genau darin liegt die Pointe dieses Ratgebers. **Wenn du das Problem nicht lösen kannst, kannst du zumindest dafür sorgen, dass es in einer bestimmten Statistik anders aussieht.**
 
-**Wenn du das Problem nicht lösen kannst, kannst du zumindest dafür sorgen, dass es in einer bestimmten Statistik anders aussieht.**
-
-Und wenn irgendwann jemand fragt, wie pünktlich die Züge waren, kannst du mit ruhiger Stimme antworten:
-
-**„Sehr. Die meisten sind gar nicht erst zu spät gekommen.“**
+Und wenn irgendwann jemand fragt, wie pünktlich die Züge waren, kannst du mit ruhiger Stimme antworten: **„Sehr. Die meisten sind gar nicht erst zu spät gekommen.“**
 
 ---
 
@@ -364,11 +289,7 @@ Und wenn irgendwann jemand fragt, wie pünktlich die Züge waren, kannst du mit 
 
 Wenn du mindestens **7 Fragen mit „Ja“** beantwortet hast: **Herzlichen Glückwunsch!**
 
-Du hast das Grundprinzip moderner Pünktlichkeitsoptimierung verstanden.
-
-Jetzt musst du nur noch dafür sorgen, dass möglichst wenig Züge fahren.
-
-**Dann kann auch möglichst wenig passieren.**
+Du hast das Grundprinzip moderner Pünktlichkeitsoptimierung verstanden. Jetzt musst du nur noch dafür sorgen, dass möglichst wenig Züge fahren. **Dann kann auch möglichst wenig passieren.**
 
 ---
 
