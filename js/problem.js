@@ -98,6 +98,12 @@ if (!problem) {
     <p class="grid-link"><a href="probleme.html">← Zurück zur Übersicht</a></p>
   `;
 
-  // Teilen-Button (siehe js/teilen.js) - teilt Titel + aktuellen Link
-  initTeilenButton(document.getElementById("teilen-button"), problem.titel);
+  // Teilen-Button (siehe js/teilen.js) - erzeugt ein Kartenbild
+  // (Fallnummer, Titel, Frage) und teilt es zusammen mit Titel + Link
+  const fallnummer = String(problemeListe.indexOf(problem) + 1).padStart(3, "0");
+  initTeilenButtonProblem(document.getElementById("teilen-button"), {
+    titel: problem.titel,
+    fallnummer,
+    frage: problem.frage
+  });
 }

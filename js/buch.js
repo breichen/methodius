@@ -70,8 +70,11 @@ if (!buch) {
   // Klick auf das Cover -> Bild vergrößert in einer Lightbox anzeigen
   initCoverLightbox();
 
-  // Teilen-Button (siehe js/teilen.js) - teilt Titel + aktuellen Link
-  initTeilenButton(document.getElementById("teilen-button"), buch.titel);
+  // Teilen-Button (siehe js/teilen.js) - teilt Cover-Bild + Titel + Link
+  initTeilenButtonRatgeber(document.getElementById("teilen-button"), {
+    titel: buch.titel,
+    bildUrl: `pics/${pfad}.png`
+  });
 
   // Der Link wird erst sichtbar/klickbar, wenn der Text geladen ist
   const blaetternLink = document.getElementById("blaettern-link");
