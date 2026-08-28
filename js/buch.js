@@ -86,17 +86,17 @@ if (!buch) {
       return antwort.text();
     })
     .then(markdown => {
+
       const { fliesstextBloecke, flipbookBloecke, quiz } =
         verarbeiteRatgeberMarkdown(markdown);
 
       document.getElementById("buch-text").innerHTML =
         baueKapitelSections(fliesstextBloecke);
 
-      // Die Blätter-Ansicht bekommt bewusst die UNVERÄNDERTEN Blöcke
-      // (inkl. Bonus-Quiz als ganz normaler Text) - in einem
-      // physischen Buch kann man schließlich nicht klicken.
       initFlipbook(flipbookBloecke);
       initQuizButton(quiz);
+
+      ladeKommentare(buch.slug);
 
       blaetternLink.style.visibility = "visible";
     })
@@ -424,6 +424,165 @@ function bereinigeKapitelUeberschriften(bloecke) {
 
 function markdownZuHtml(markdown) {
   return markdownZuBloecke(markdown).join("\n");
+}
+
+
+/* ============================================
+   KOMMENTARE
+   Lädt die redaktionelle Diskussion zum jeweiligen
+   Ratgeber aus md/ratgeber-kommentare/<slug>.md
+   ============================================ */
+
+const kommentarAutoren = {
+  "Unbedacht": {
+    name: "Dr. Konrad Unbedacht",
+    username: "@unbedacht"
+  },
+  "Redaktion": {
+    name: "Redaktion",
+    username: "@methodius"
+  }
+};
+
+function ladeKommentare(slug) {
+  const pfad = encodeURIComponent(slug);
+  const url = `md/ratgeber-kommentare/${pfad}.md`;
+
+  console.log("Lade Kommentar-Datei:", url);
+
+  fetch(url)
+    .then(antwort => {
+      if (!antwort.ok) {
+        console.log("Keine Kommentar-Datei gefunden:", url);
+        return null;
+      }
+
+      return antwort.text();
+    })
+    .then(markdown => {
+      if (!markdown || !markdown.trim()) {
+        console.log("Kommentar-Datei ist leer.");
+        return;
+      }
+
+      console.log("Kommentar-Datei geladen:", markdown);
+
+      const kommentare = parseKommentare(markdown);
+
+      console.log("Gefundene Kommentare:", kommentare);
+
+      if (kommentare.length === 0) {
+        console.log("Keine Kommentare erkannt.");
+        return;
+      }
+
+      const kommentarHtml = baueKommentarBereich(kommentare);
+
+      document
+        .getElementById("buch-text")
+        .insertAdjacentHTML("beforeend", kommentarHtml);
+    })
+    .catch(fehler => {
+      console.error("Fehler beim Laden der Kommentare:", fehler);
+    });
+}
+
+function parseKommentare(markdown) {
+  const bloecke = markdown
+    .split(/\n\s*\n(?=(?:Unbedacht|Redaktion)\s*:)/i)
+    .map(block => block.trim())
+    .filter(Boolean);
+
+  const kommentare = [];
+
+  bloecke.forEach(block => {
+    const match = block.match(
+      /^(Unbedacht|Redaktion)\s*:\s*\n([\s\S]*)$/i
+    );
+
+    if (!match) return;
+
+    const autor = match[1].toLowerCase() === "unbedacht"
+      ? "Unbedacht"
+      : "Redaktion";
+
+    const text = match[2].trim();
+
+    if (text) {
+      kommentare.push({
+        autor,
+        text
+      });
+    }
+  });
+
+  return kommentare;
+}
+
+function baueKommentarBereich(kommentare) {
+  const beitraege = kommentare
+    .map(kommentar => {
+      const bloecke = parseMarkdownBloecke(kommentar.text);
+      const html = bloecke.join("\n");
+
+      const autorInfo =
+        kommentarAutoren[kommentar.autor] || {
+          name: kommentar.autor,
+          username: ""
+        };
+
+      const istRedaktion = kommentar.autor === "Redaktion";
+
+      const klasse = istRedaktion
+        ? "kommentar kommentar-redaktion"
+        : "kommentar kommentar-unbedacht";
+
+      return `
+        <article class="${klasse}">
+          <div class="kommentar-avatar" aria-hidden="true">
+            ${autorInfo.name.charAt(0)}
+          </div>
+
+          <div class="kommentar-inhalt">
+            <div class="kommentar-meta">
+              <span class="kommentar-autor">
+                ${autorInfo.name}
+              </span>
+
+              ${
+                autorInfo.username
+                  ? `<span class="kommentar-username">${autorInfo.username}</span>`
+                  : ""
+              }
+            </div>
+
+            <div class="kommentar-text">
+              ${html}
+            </div>
+          </div>
+        </article>
+      `;
+    })
+    .join("\n");
+
+  return `
+    <section class="ratgeber-kommentare">
+      <div class="wrap">
+        <div class="kommentar-spalte">
+
+          <div class="kommentar-ueberschrift">
+            <span class="kommentar-linie"></span>
+            <h2>Kommentare</h2>
+          </div>
+
+          <div class="kommentar-liste">
+            ${beitraege}
+          </div>
+
+        </div>
+      </div>
+    </section>
+  `;
 }
 
 // NUR für die Fließtext-Ansicht: verpackt jedes Kapitel abwechselnd in

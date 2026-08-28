@@ -412,6 +412,9 @@ h3 {
   border: 1px solid #D6CDBB;
   display: block;
   margin-bottom: 32px;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* ============================================
@@ -511,11 +514,19 @@ hr {
    Flex-Layout mit etwas Abstand zwischen den beiden Elementen.
    ============================================ */
 .blaettern-wrap {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto 24px auto;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: -16px 0 32px;
+  gap: 12px;
+}
+
+.blaettern-link,
+.teilen-button {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .blaettern-link {
@@ -1034,7 +1045,7 @@ hr {
   max-width: 100%;
 }
 
-.flipbook-stage > div {
+.flipbook-stage>div {
   /* Der mittlere Wrapper (Buch + Seitenzähler) darf nötigenfalls
      schrumpfen, statt die Pfeile von der Bildschirmkante zu drängen -
      ohne "min-width: 0" verweigern Flex-Kinder das per Voreinstellung. */
@@ -1592,4 +1603,178 @@ hr {
 
 .problem-showcase-link:hover .problem-showcase-card {
   transform: translateY(-4px);
+}
+
+/* ============================================
+   KOMMENTARE
+   ============================================ */
+
+.ratgeber-kommentare {
+  padding: 72px 0 88px;
+  background: var(--color-bg);
+}
+
+.kommentar-spalte {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.kommentar-ueberschrift {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.kommentar-ueberschrift h2 {
+  margin: 0;
+}
+
+.kommentar-linie {
+  width: 5px;
+  height: 28px;
+  flex: 0 0 auto;
+  background: var(--color-accent);
+  border-radius: 3px;
+}
+
+.kommentar-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.kommentar {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* Redaktion ist eine Antwort und wird eingerückt */
+
+.kommentar-redaktion {
+  margin-left: 42px;
+}
+
+/* Avatar-Kreis */
+
+.kommentar-avatar {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--color-accent);
+  color: #fff;
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Redaktion bekommt einen eigenen, leicht anderen Kreis */
+
+.kommentar-redaktion .kommentar-avatar {
+  background: var(--color-accent-warm);
+}
+
+/* Inhalt */
+
+.kommentar-inhalt {
+  flex: 1;
+  min-width: 0;
+}
+
+.kommentar-meta {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 2px 0 8px;
+}
+
+.kommentar-autor {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.kommentar-username {
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+}
+
+/* Sprechblase */
+
+.kommentar-text {
+  position: relative;
+
+  padding: 15px 18px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+
+  background: var(--color-surface);
+
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.kommentar-text::before {
+  content: "";
+  position: absolute;
+
+  top: 13px;
+  left: -7px;
+
+  width: 12px;
+  height: 12px;
+
+  background: var(--color-surface);
+
+  border-left: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+
+  transform: rotate(45deg);
+}
+
+.kommentar-text p:first-child {
+  margin-top: 0;
+}
+
+.kommentar-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .ratgeber-kommentare {
+    padding: 52px 0 64px;
+  }
+
+  .kommentar-redaktion {
+    margin-left: 20px;
+  }
+
+  .kommentar {
+    gap: 10px;
+  }
+
+  .kommentar-avatar {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+    font-size: 0.8rem;
+  }
+
+  .kommentar-text {
+    padding: 13px 15px;
+    font-size: 0.92rem;
+  }
 }
