@@ -11,7 +11,7 @@ function zeigeFeatured() {
   const buch = ratgeberListe[featuredIndex];
   const pfad = encodeURIComponent(buch.slug);
 
-  document.getElementById("featured-cover").src = `pics/${pfad}.png`;
+  document.getElementById("featured-cover").src = `pics/ratgeber/${pfad}.png`;
   document.getElementById("featured-cover").alt = `Cover: ${buch.titel}`;
   document.getElementById("featured-title").textContent = buch.titel;
   document.getElementById("featured-card").href = `buch.html?titel=${pfad}`;

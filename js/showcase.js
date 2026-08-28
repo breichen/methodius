@@ -25,7 +25,7 @@
     const buch = chronologie[index];
     const pfad = encodeURIComponent(buch.slug);
 
-    cover.src = `pics/${pfad}.png`;
+    cover.src = `pics/ratgeber/${pfad}.png`;
     cover.alt = `Cover: ${buch.titel}`;
     titel.textContent = buch.titel;
     link.href = `buch.html?titel=${pfad}`;

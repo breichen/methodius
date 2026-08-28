@@ -59,7 +59,7 @@ if (!buch) {
   // Bild sofort anzeigen, Text kommt gleich per fetch() nach
   container.innerHTML = `
     ${datumsHtml}
-    <img class="book-cover" id="buch-cover-bild" src="pics/${pfad}.png" alt="Cover: ${buch.titel}" style="width: 100%; max-width: 750px; height: auto; margin-bottom: 24px; cursor: zoom-in;">
+    <img class="book-cover" id="buch-cover-bild" src="pics/ratgeber/${pfad}.png" alt="Cover: ${buch.titel}" style="width: 100%; max-width: 750px; height: auto; margin-bottom: 24px; cursor: zoom-in;">
     <p class="blaettern-wrap">
       <a href="#" id="blaettern-link" class="blaettern-link">📖 Blättern</a>
       <button type="button" id="teilen-button" class="teilen-button">🔗 Teilen</button>
@@ -73,7 +73,7 @@ if (!buch) {
   // Teilen-Button (siehe js/teilen.js) - teilt Cover-Bild + Titel + Link
   initTeilenButtonRatgeber(document.getElementById("teilen-button"), {
     titel: buch.titel,
-    bildUrl: `pics/${pfad}.png`
+    bildUrl: `pics/ratgeber/${pfad}.png`
   });
 
   // Der Link wird erst sichtbar/klickbar, wenn der Text geladen ist

@@ -11,7 +11,7 @@ function baueBuchKachel(buch) {
   const pfad = encodeURIComponent(buch.slug);
   return `
     <a class="book-card" href="buch.html?titel=${pfad}">
-      <img src="pics/${pfad}.png" alt="Cover: ${buch.titel}">
+      <img src="pics/ratgeber/${pfad}.png" alt="Cover: ${buch.titel}">
       <span class="book-title">${buch.titel}</span>
     </a>
   `;
