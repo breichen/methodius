@@ -1,3 +1,4 @@
+
 # Zugausfälle als Chance nutzen
 
 ## Der ultimative Ratgeber für alle, die endlich verstehen möchten, dass ein ausgefallener Zug kein gescheiterter Reiseplan ist, sondern eine unerwartete Gelegenheit zur persönlichen Weiterentwicklung
@@ -40,9 +41,7 @@ Jetzt ist der perfekte Moment, um Dinge zu tun, für die du im Alltag angeblich 
 
 Du könntest sogar einfach dasitzen und nichts tun. Auch das ist eine wertvolle Tätigkeit, insbesondere wenn du dabei gelegentlich nachdenklich auf die Anzeigetafel schaust.
 
-Vielleicht stellst du fest, dass du in den vergangenen Monaten viel zu selten einfach irgendwo herumgesessen hast, ohne einen klaren Grund dafür zu haben.
-
-**Der Zugausfall schenkt dir genau diese Sinnlosigkeit.**
+Vielleicht stellst du fest, dass du in den vergangenen Monaten viel zu selten einfach irgendwo herumgesessen hast, ohne einen klaren Grund dafür zu haben. **Der Zugausfall schenkt dir genau diese Sinnlosigkeit.**
 
 ---
 
@@ -52,11 +51,7 @@ Vielleicht stellst du fest, dass du in den vergangenen Monaten viel zu selten ei
 
 Geduld ist eine wichtige Fähigkeit. Leider gibt es im normalen Alltag nur wenige Gelegenheiten, sie wirklich zu trainieren.
 
-Ein Zugausfall schafft Abhilfe.
-
-Du bekommst eine klare Aufgabe: Warte.
-
-Nicht zehn Minuten. Nicht unbedingt zwanzig. Vielleicht eine Stunde. Vielleicht länger. Niemand weiß genau, wie lange. Und genau das macht die Übung so wertvoll.
+Ein Zugausfall schafft Abhilfe. Du bekommst eine klare Aufgabe: Warte. Nicht zehn Minuten. Nicht unbedingt zwanzig. Vielleicht eine Stunde. Vielleicht länger. Niemand weiß genau, wie lange. Und genau das macht die Übung so wertvoll.
 
 Du lernst, dass du nicht alles kontrollieren kannst. Du lernst außerdem, dass eine elektronische Anzeige mit dem Hinweis „ca. 10 Minuten“ eine erstaunlich philosophische Aussage über Zeit darstellen kann.
 
@@ -84,17 +79,11 @@ Du kannst dich entspannt zurücklehnen und beobachten, wie sich eine kleine Geme
 
 Vielleicht wolltest du heute pünktlich zu einem Termin kommen. Vielleicht hattest du eine Verabredung, ein wichtiges Gespräch oder einen Anschlussflug.
 
-Jetzt ist alles anders.
+Jetzt ist alles anders. Das ist eine hervorragende Gelegenheit, deine Prioritäten zu überprüfen. Muss dieser Termin wirklich stattfinden? Muss er heute stattfinden? Muss er überhaupt stattfinden? Und was würde passieren, wenn du einfach erklärst, dass du wegen eines Zugausfalls verhindert bist?
 
-Das ist eine hervorragende Gelegenheit, deine Prioritäten zu überprüfen. Muss dieser Termin wirklich stattfinden? Muss er heute stattfinden? Muss er überhaupt stattfinden? Und was würde passieren, wenn du einfach erklärst, dass du wegen eines Zugausfalls verhindert bist?
+In vielen Fällen lautet die Antwort: Die andere Person wird es verstehen. In einigen Fällen lautet sie: überhaupt nicht.
 
-In vielen Fällen lautet die Antwort: Die andere Person wird es verstehen.
-
-In einigen Fällen lautet sie: überhaupt nicht.
-
-Aber auch das ist eine wertvolle Erkenntnis über zwischenmenschliche Beziehungen.
-
-**Ein ausgefallener Zug zeigt dir, wer Verständnis hat und wer nur wissen möchte, wo du bleibst.**
+Aber auch das ist eine wertvolle Erkenntnis über zwischenmenschliche Beziehungen. **Ein ausgefallener Zug zeigt dir, wer Verständnis hat und wer nur wissen möchte, wo du bleibst.**
 
 ---
 
@@ -104,15 +93,9 @@ Aber auch das ist eine wertvolle Erkenntnis über zwischenmenschliche Beziehunge
 
 Wenn dein Zug ausfällt, hast du möglicherweise plötzlich sehr viel Zeit an einem Bahnhof, an dem du eigentlich niemals sein wolltest.
 
-Nutze diese Gelegenheit.
+Nutze diese Gelegenheit. Verlasse den Bahnsteig. Erkunde die Umgebung. Besuche ein Café. Gehe ein Stück spazieren. Finde heraus, ob es in diesem Ort tatsächlich etwas Interessantes gibt oder ob der Bahnhof aus gutem Grund der touristische Höhepunkt der Gegend ist.
 
-Verlasse den Bahnsteig. Erkunde die Umgebung. Besuche ein Café. Gehe ein Stück spazieren. Finde heraus, ob es in diesem Ort tatsächlich etwas Interessantes gibt oder ob der Bahnhof aus gutem Grund der touristische Höhepunkt der Gegend ist.
-
-Vielleicht entdeckst du einen schönen Platz, ein kleines Geschäft oder ein Restaurant, das du sonst niemals kennengelernt hättest.
-
-Vielleicht entdeckst du aber auch nur einen weiteren Bahnsteig.
-
-**Auch das ist eine Form von Ortskenntnis.**
+Vielleicht entdeckst du einen schönen Platz, ein kleines Geschäft oder ein Restaurant, das du sonst niemals kennengelernt hättest. Vielleicht entdeckst du aber auch nur einen weiteren Bahnsteig. **Auch das ist eine Form von Ortskenntnis.**
 
 ---
 
@@ -120,9 +103,7 @@ Vielleicht entdeckst du aber auch nur einen weiteren Bahnsteig.
 
 ## Nutze die Verspätung für kreative Arbeit
 
-Kreativität braucht Zeit. Zumindest wird das gerne behauptet.
-
-Jetzt hast du Zeit.
+Kreativität braucht Zeit. Zumindest wird das gerne behauptet. Jetzt hast du Zeit.
 
 Du kannst schreiben, zeichnen, fotografieren oder dir überlegen, warum du eigentlich immer wieder Bahnreisen buchst, obwohl du genau weißt, wie solche Reisen enden können.
 
@@ -130,9 +111,7 @@ Besonders produktiv ist es, deine Gedanken über den Zugausfall aufzuschreiben. 
 
 > „Heute sollte alles anders kommen.“
 
-Das ist ein starker Einstieg.
-
-Danach kannst du ungefähr drei Seiten darüber schreiben, wie die Anzeige zunächst „10 Minuten Verspätung“ zeigte und anschließend verschwand.
+Das ist ein starker Einstieg. Danach kannst du ungefähr drei Seiten darüber schreiben, wie die Anzeige zunächst „10 Minuten Verspätung“ zeigte und anschließend verschwand.
 
 **Literatur entsteht schließlich überall. Manchmal sogar auf Gleis 7.**
 
@@ -150,9 +129,7 @@ Vielleicht hast du dadurch ein Gespräch geführt, das sonst nie stattgefunden h
 
 Oder vielleicht hast du einfach gelernt, dass dein ursprünglicher Reiseplan weniger Einfluss auf dein Leben hatte, als du gedacht hast.
 
-Das ist eine wichtige Erkenntnis.
-
-**Nicht jede Katastrophe ist eine Chance. Aber jede Katastrophe kann hervorragend als solche bezeichnet werden.**
+Das ist eine wichtige Erkenntnis. **Nicht jede Katastrophe ist eine Chance. Aber jede Katastrophe kann hervorragend als solche bezeichnet werden.**
 
 ---
 
@@ -160,17 +137,11 @@ Das ist eine wichtige Erkenntnis.
 
 ## Meistere die Kunst des Umplanens
 
-Ein echter Profi besitzt immer einen Plan B.
-
-Ein sehr erfahrener Profi besitzt außerdem einen Plan C.
-
-Nach dem zweiten ausgefallenen Zug beginnt man, über Plan D nachzudenken.
+Ein echter Profi besitzt immer einen Plan B. Ein sehr erfahrener Profi besitzt außerdem einen Plan C. Nach dem zweiten ausgefallenen Zug beginnt man, über Plan D nachzudenken.
 
 Das klingt zunächst anstrengend, ist aber eigentlich ein ausgezeichnetes Training für die moderne Arbeitswelt. Projekte ändern sich, Termine werden verschoben und Menschen schreiben „kurze Rückfrage“ in E-Mails, die anschließend eine komplette Neuplanung deines Tages erfordern.
 
-Der Bahnhof bereitet dich darauf vor.
-
-**Wer einen Zugausfall überlebt, ist bereit für jedes Projektmanagement-Meeting.**
+Der Bahnhof bereitet dich darauf vor. **Wer einen Zugausfall überlebt, ist bereit für jedes Projektmanagement-Meeting.**
 
 ---
 
@@ -182,9 +153,7 @@ Der vielleicht wichtigste Vorteil eines Zugausfalls besteht darin, dass du lerns
 
 Du weißt nicht, wann der nächste Zug kommt. Du weißt nicht, ob er pünktlich ist. Du weißt nicht, ob du deinen Anschluss erreichst. Und du weißt nicht, ob die Anzeige auf dem Bahnsteig gerade eine Information liefert oder lediglich eine kreative Interpretation der Realität.
 
-Du musst trotzdem Entscheidungen treffen.
-
-Vielleicht nimmst du einen anderen Zug. Vielleicht wartest du. Vielleicht steigst du in einen Bus und hoffst, dass dieser tatsächlich dort ankommt, wo du hinmöchtest.
+Du musst trotzdem Entscheidungen treffen. Vielleicht nimmst du einen anderen Zug. Vielleicht wartest du. Vielleicht steigst du in einen Bus und hoffst, dass dieser tatsächlich dort ankommt, wo du hinmöchtest.
 
 **Das Leben ist ungewiss. Der Fahrplan möchte dir das nur besonders deutlich zeigen.**
 
@@ -194,17 +163,11 @@ Vielleicht nimmst du einen anderen Zug. Vielleicht wartest du. Vielleicht steigs
 
 ## Erfinde eine neue Definition von Pünktlichkeit
 
-Vielleicht bist du bisher davon ausgegangen, dass pünktlich bedeutet, zu einer bestimmten Uhrzeit irgendwo anzukommen.
-
-Das ist eine sehr traditionelle Vorstellung.
+Vielleicht bist du bisher davon ausgegangen, dass pünktlich bedeutet, zu einer bestimmten Uhrzeit irgendwo anzukommen. Das ist eine sehr traditionelle Vorstellung.
 
 Moderne Pünktlichkeit kann flexibler verstanden werden. Wenn du beispielsweise zwei Stunden später ankommst, als ursprünglich geplant, aber dabei jederzeit mental auf die Möglichkeit einer Verspätung vorbereitet warst, warst du zumindest psychologisch pünktlich.
 
-Das ist nicht mathematisch korrekt.
-
-Aber dafür sehr hilfreich.
-
-**Pünktlichkeit beginnt schließlich im Kopf. Die Ankunft kann später kommen.**
+Das ist nicht mathematisch korrekt. Aber dafür sehr hilfreich. **Pünktlichkeit beginnt schließlich im Kopf. Die Ankunft kann später kommen.**
 
 ---
 
@@ -212,17 +175,11 @@ Aber dafür sehr hilfreich.
 
 ## Nutze die Gelegenheit für digitale Entgiftung
 
-Ein Zugausfall zwingt dich möglicherweise dazu, ständig auf dein Handy zu schauen. Das klingt zunächst nach dem Gegenteil einer digitalen Entgiftung.
-
-Aber auch hier kommt es auf die Perspektive an.
+Ein Zugausfall zwingt dich möglicherweise dazu, ständig auf dein Handy zu schauen. Das klingt zunächst nach dem Gegenteil einer digitalen Entgiftung. Aber auch hier kommt es auf die Perspektive an.
 
 Du könntest dir vornehmen, nicht alle dreißig Sekunden die Verbindung zu aktualisieren. Stattdessen aktualisierst du nur alle zwei Minuten. Das ist bereits eine deutliche Verbesserung.
 
-Nach zehn Minuten ohne Aktualisierung bist du praktisch ein anderer Mensch.
-
-Natürlich wirst du spätestens dann wieder nachsehen, ob der Zug inzwischen „in Kürze“ eintrifft.
-
-**Digitale Entgiftung muss schließlich realistisch bleiben.**
+Nach zehn Minuten ohne Aktualisierung bist du praktisch ein anderer Mensch. Natürlich wirst du spätestens dann wieder nachsehen, ob der Zug inzwischen „in Kürze“ eintrifft. **Digitale Entgiftung muss schließlich realistisch bleiben.**
 
 ---
 
@@ -240,9 +197,7 @@ Das ist sachlich, ehrlich und vollkommen ausreichend.
 
 Du musst keine fünf Absätze über die gesamte Reisehistorie verfassen. Niemand braucht eine chronologische Darstellung vom Betreten des Bahnhofs bis zum aktuellen Stand deiner persönlichen Verzweiflung.
 
-Wenn du möchtest, kannst du noch ergänzen, dass du dich meldest, sobald du mehr weißt.
-
-**Das ist professionelle Kommunikation.**
+Wenn du möchtest, kannst du noch ergänzen, dass du dich meldest, sobald du mehr weißt. **Das ist professionelle Kommunikation.**
 
 Nicht: „Bin am Bahnhof. Keine Ahnung. Alles vorbei.“
 
@@ -254,15 +209,11 @@ Nicht: „Bin am Bahnhof. Keine Ahnung. Alles vorbei.“
 
 Menschen zeigen ihren Charakter nicht nur in schwierigen Situationen. Sie zeigen ihn auch auf Bahnsteigen.
 
-Einige helfen anderen Reisenden. Andere teilen Informationen. Manche suchen gemeinsam nach Alternativen. Und wieder andere stehen fünf Zentimeter vor der Anzeigetafel und verhindern damit, dass 30 Menschen lesen können, ob ihr Zug fährt.
-
-Auch das gehört zur menschlichen Vielfalt.
+Einige helfen anderen Reisenden. Andere teilen Informationen. Manche suchen gemeinsam nach Alternativen. Und wieder andere stehen fünf Zentimeter vor der Anzeigetafel und verhindern damit, dass 30 Menschen lesen können, ob ihr Zug fährt. Auch das gehört zur menschlichen Vielfalt.
 
 Beobachte dich selbst und entscheide, zu welcher Gruppe du gehören möchtest. Vielleicht wirst du feststellen, dass du unter normalen Bedingungen ein ausgesprochen geduldiger Mensch bist.
 
-Bis jemand direkt vor dir steht.
-
-**Dann beginnt die eigentliche Persönlichkeitsentwicklung.**
+Bis jemand direkt vor dir steht. **Dann beginnt die eigentliche Persönlichkeitsentwicklung.**
 
 ---
 
@@ -274,15 +225,9 @@ Du hast gelernt, dass ein Zugausfall nicht ausschließlich ein Hindernis sein mu
 
 Vor allem aber hast du gelernt, dass sich nahezu jede unangenehme Situation in eine persönliche Wachstumschance verwandeln lässt, wenn man lange genug darüber spricht.
 
-Der Zug wird dadurch zwar nicht pünktlicher.
+Der Zug wird dadurch zwar nicht pünktlicher. Dein Anschluss wird dadurch möglicherweise auch nicht erreicht. Aber du kannst immerhin behaupten, etwas über dich selbst gelernt zu haben.
 
-Dein Anschluss wird dadurch möglicherweise auch nicht erreicht.
-
-Aber du kannst immerhin behaupten, etwas über dich selbst gelernt zu haben.
-
-**Und wenn alles nichts hilft, bleibt dir noch eine letzte Möglichkeit:**
-
-**Mach ein Foto von der Anzeigetafel und poste es als Beweis für deine persönliche Entwicklung.**
+**Und wenn alles nichts hilft, bleibt dir noch eine letzte Möglichkeit:** **Mach ein Foto von der Anzeigetafel und poste es als Beweis für deine persönliche Entwicklung.**
 
 ---
 
@@ -340,9 +285,7 @@ Aber du kannst immerhin behaupten, etwas über dich selbst gelernt zu haben.
 
 Wenn du mindestens **7 Fragen mit „Ja“** beantwortet hast: **Herzlichen Glückwunsch!**
 
-Du bist bereit für die nächste Stufe.
-
-Du kannst einen Zugausfall nicht verhindern. Aber du kannst ihm einen Sinn geben.
+Du bist bereit für die nächste Stufe. Du kannst einen Zugausfall nicht verhindern. Aber du kannst ihm einen Sinn geben.
 
 **Und wenn das nicht funktioniert, kannst du immer noch auf den nächsten Zug warten.**
 

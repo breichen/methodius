@@ -71,6 +71,7 @@ const ratgeberRohdaten = [
   //"Die Kunst, am Monatsanfang schon pleite zu sein",
   //"Warum das Leben leichter ist, wenn man nichts versteht",
   //"Plötzlich Privatdetektiv - Völlig unverdächtige Leute observieren",
+  //"Zugausfälle als Chance nutzen",
   //"",
 ];
 
