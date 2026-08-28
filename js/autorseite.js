@@ -40,7 +40,7 @@ function styleAutorAbschluss(bloecke) {
   const rest = bloecke.slice(index + 1);
 
   const nameBox = `<div class="autor-box autor-box-abschluss">
-    <img class="autor-foto" src="pics/autor-portrait.png" alt="Porträt von Dr. Maximilian Methodius">
+    <img class="autor-foto" src="pics/team/autor-portrait.png" alt="Porträt von Dr. Maximilian Methodius">
     <div class="autor-box-text">
       <p class="autor-name">${name}</p>
       ${rest.join("\n")}

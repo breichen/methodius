@@ -150,31 +150,31 @@ function baueTeamBereich(index) {
     {
       name: "Dr. Maximilian Methodius",
       rolle: "Gründer und Direktor",
-      bild: "pics/autor-portrait.png",
+      bild: "pics/team/autor-portrait.png",
       text: "Gründer des Instituts und wissenschaftlicher Leiter. Verfügt über umfassende Kenntnisse in praktisch allen Gebieten, die dringend einer Expertenmeinung bedürfen. Entwickelt die zentralen Theorien des Instituts, verfasst die Ratgeber und trifft die abschließenden Entscheidungen."
     },
     {
       name: "Prof. Dr. Hildegard Wankelmuth",
       rolle: "Leitung der Abteilung für angewandte Fehlberatung",
-      bild: "pics/Wankelmuth.png",
+      bild: "pics/team/Wankelmuth.png",
       text: "Beschäftigt sich mit der kontrollierten Überinterpretation alltäglicher Verhaltensweisen und der Entwicklung wissenschaftlich fragwürdiger Behandlungsmethoden."
     },
     {
       name: "Dr. Konrad P. Huber",
       rolle: "Leitung der Abteilung für Statistik und empirische Plausibilität",
-      bild: "pics/autor-portrait.png",
+      bild: "pics/team/autor-portrait.png",
       text: "Spezialist für statistische Auswertungen und eindeutige Aussagen bei uneindeutiger Datenlage."
     },
     {
       name: "Dr. Friedrich Unbedacht",
       rolle: "Wissenschaftlicher Beirat",
-      bild: "pics/autor-portrait.png",
+      bild: "pics/team/autor-portrait.png",
       text: "Zuständig für die wissenschaftliche Überprüfung der Institutsarbeit. Weist regelmäßig auf unbelegte Behauptungen, methodische Schwächen und logische Widersprüche hin. Seine Einwände werden sorgfältig protokolliert und anschließend ignoriert."
     },
     {
       name: "Sabine Krämer",
       rolle: "Leitung der Abteilung für Fallmanagement und Patientenangelegenheiten",
-      bild: "pics/autor-portrait.png",
+      bild: "pics/team/autor-portrait.png",
       text: "Koordiniert die eingehenden Fälle, verwaltet die Fallakten und versucht seit Jahren, innerhalb des Instituts für Ordnung zu sorgen."
     }
   ];
