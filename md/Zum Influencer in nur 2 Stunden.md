@@ -1,5 +1,5 @@
 
-# Zum Influencer in nur 2 Minuten
+# Zum Influencer in nur 2 Stunden
 
 ## Der ultimative Ratgeber für alle, die eigentlich nichts zu sagen haben, aber trotzdem täglich darüber berichten möchten
 
@@ -372,7 +372,7 @@ Und wenn du irgendwann gar nichts mehr zu sagen hast, kannst du darüber spreche
 
 # Kapitel 19
 
-## Die Zwei-Minuten-Formel
+## Die Erfolgsformel
 
 Wenn du dir nicht alles merken möchtest, reicht eine einfache Formel.
 
