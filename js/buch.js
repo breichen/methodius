@@ -42,7 +42,7 @@ if (!buch) {
   // Falscher oder fehlender Link -> freundliche Fehlermeldung statt kaputter Seite
   container.innerHTML = `
     <h1>Ratgeber nicht gefunden</h1>
-    <p>Diesen Ratgeber gibt es (noch) nicht. <a href="index.html#ratgeber">Zurück zur Übersicht</a>.</p>
+    <p>Diesen Ratgeber gibt es (noch) nicht. <a href="index.html#ratgeber">Zur Übersicht</a>.</p>
   `;
 } else {
   document.title = buch.titel + " – Dr. Maximilian Methodius";

@@ -55,7 +55,7 @@ if (!problem) {
   // Falscher oder fehlender Link -> freundliche Fehlermeldung statt kaputter Seite
   container.innerHTML = `
     <h1>Fallakte nicht gefunden</h1>
-    <p>Dieses Problem gibt es (noch) nicht. <a href="probleme.html">Zurück zur Übersicht</a>.</p>
+    <p>Dieses Problem gibt es (noch) nicht. <a href="probleme.html">Zur Übersicht</a>.</p>
   `;
 } else {
   document.title = problem.titel + " – Dr. Maximilian Methodius";
@@ -95,7 +95,7 @@ if (!problem) {
       <button type="button" id="teilen-button" class="teilen-button">🔗 Teilen</button>
     </p>
 
-    <p class="grid-link"><a href="probleme.html">← Zurück zur Übersicht</a></p>
+    <p class="grid-link"><a href="probleme.html">← Zur Übersicht</a></p>
   `;
 
   // Teilen-Button (siehe js/teilen.js) - erzeugt ein Kartenbild
