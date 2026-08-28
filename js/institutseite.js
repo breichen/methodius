@@ -156,7 +156,7 @@ function baueTeamBereich(index) {
     {
       name: "Prof. Dr. Hildegard Wankelmuth",
       rolle: "Leitung der Abteilung für angewandte Fehlberatung",
-      bild: "pics/autor-portrait.png",
+      bild: "pics/Wankelmuth.png",
       text: "Beschäftigt sich mit der kontrollierten Überinterpretation alltäglicher Verhaltensweisen und der Entwicklung wissenschaftlich fragwürdiger Behandlungsmethoden."
     },
     {
