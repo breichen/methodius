@@ -22,14 +22,14 @@ function formatiereProblemText(text) {
     .join("\n");
 }
 
-// Baut die optionale "Vorgeschlagen von: ..." / "Veröffentlicht: ..." /
+// Baut die optionale "Eingesendet von: ..." / "Veröffentlicht: ..." /
 // "Aktualisiert: ..."-Zeile - genau wie bei den Ratgebern (siehe
 // js/buch.js), nur hier lokal, da Probleme keine eigene Datei haben.
 function baueDatumsHinweis(problem) {
   const zeilen = [];
 
   if (problem.einsender) {
-    zeilen.push(`<p class="buch-datum">Vorgeschlagen von: ${problem.einsender}</p>`);
+    zeilen.push(`<p class="buch-datum">Eingesendet von: ${problem.einsender}</p>`);
   }
 
   if (problem.erstellt) {
