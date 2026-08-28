@@ -1,3 +1,4 @@
+
 # Abnehmen dank Muskelabbau
 
 ## Der revolutionäre Ratgeber für alle, denen ihre Muskeln einfach zu schwer geworden sind
@@ -28,18 +29,11 @@ Seit Jahrzehnten wird uns eingeredet:
 Aber niemand fragt: **Was, wenn deine Muskeln einfach viel zu schwer sind?**
 
 Stell dir vor, du steigst morgens auf die Waage - 80 Kilogramm.
-
 Du ziehst deine Schuhe aus - 79,6 Kilogramm.
-
 Du gehst auf die Toilette - 78,9 Kilogramm.
-
 Du hältst kurz die Luft an - 78,7 Kilogramm.
 
-Du denkst: „Unglaublich. Ich habe gerade fast zwei Kilogramm abgenommen.“
-
-Und dann kommt die entscheidende Frage: **Warum aufhören?**
-
-Genau hier setzt unser revolutionäres Konzept an.
+Du denkst: „Unglaublich. Ich habe gerade fast zwei Kilogramm abgenommen.“ Und dann kommt die entscheidende Frage: **Warum aufhören?** Genau hier setzt unser revolutionäres Konzept an.
 
 ---
 
@@ -47,13 +41,9 @@ Genau hier setzt unser revolutionäres Konzept an.
 
 ## Muskelmasse – der unterschätzte Dickmacher
 
-Muskelmasse hat ein großes Problem: Sie wiegt etwas.
+Muskelmasse hat ein großes Problem: Sie wiegt etwas. Das klingt zunächst harmlos. Aber wenn man darüber nachdenkt, ist es eigentlich ein Skandal.
 
-Das klingt zunächst harmlos. Aber wenn man darüber nachdenkt, ist es eigentlich ein Skandal.
-
-Da trainiert jemand jahrelang, hebt Gewichte, macht Kniebeugen, zieht Klimmzüge und baut mühsam Muskeln auf. Und dann?
-
-**Die Waage bestraft ihn dafür.**
+Da trainiert jemand jahrelang, hebt Gewichte, macht Kniebeugen, zieht Klimmzüge und baut mühsam Muskeln auf. Und dann? **Die Waage bestraft ihn dafür.**
 
 Ein gut trainierter Mann kann beispielsweise deutlich mehr wiegen als jemand, der wesentlich weniger Muskulatur besitzt. Ist das fair?
 
@@ -125,11 +115,7 @@ Die meisten Fitnessprogramme scheitern schließlich daran, dass Menschen keine L
 
 ## Ernährung für Fortgeschrittene
 
-Auch bei der Ernährung muss endlich umgedacht werden.
-
-Die klassische Fitnesswelt fragt: „Wie viel Protein brauchst du?“
-
-Wir fragen: **„Wie wenig davon können wir gerade noch rechtfertigen?“**
+Auch bei der Ernährung muss endlich umgedacht werden. Die klassische Fitnesswelt fragt: „Wie viel Protein brauchst du?“ Wir fragen: **„Wie wenig davon können wir gerade noch rechtfertigen?“**
 
 Der traditionelle Fitness-Teller besteht aus:
 
@@ -258,9 +244,7 @@ Hier ist er, der ultimative Plan. Der Plan, auf den die Welt gewartet hat.
 
 Du kennst ihn. Er ist auf jedem Vorher-Nachher-Bild: Ein roter Pfeil. Von links nach rechts. „VORHER“ → „NACHHER“.
 
-Er suggeriert: Fortschritt. Transformation. Erfolg.
-
-Aber ein Pfeil erklärt nicht, **was** sich verändert hat.
+Er suggeriert: Fortschritt. Transformation. Erfolg. Aber ein Pfeil erklärt nicht, **was** sich verändert hat.
 
 Ein Mensch kann leichter geworden sein. Er kann aber auch Wasser verloren haben. Muskelmasse verloren haben. Fett verloren haben. Oder einfach vor dem ersten Foto sehr viel gegessen und vor dem zweiten Foto auf die Toilette gegangen sein.
 
