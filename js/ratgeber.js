@@ -5,12 +5,14 @@
 
   1) Einfacher Text, wenn Dateiname und Anzeige-Titel identisch sind:
        "Mein Buchtitel"
-     -> erwartet Dateien pics/ratgeber/Mein Buchtitel.png und md/Mein Buchtitel.md
+     -> erwartet Dateien pics/ratgeber/Mein Buchtitel.png und
+     md/ratgeber/Mein Buchtitel.md
 
   2) Objekt, wenn sich Dateiname (slug) und Anzeige-Titel (titel)
      unterscheiden sollen, z.B. für einen kürzeren/saubereren Dateinamen:
        { slug: "mein-buch", titel: "Mein ausführlicher Buchtitel!" }
-     -> erwartet Dateien pics/ratgeber/mein-buch.png und md/mein-buch.md
+     -> erwartet Dateien pics/ratgeber/mein-buch.png und
+    md/ratgeber/mein-buch.md
      "titel" ist dabei optional - fehlt er, wird einfach "slug" als
      Anzeige-Titel verwendet (wie bei der einfachen Text-Schreibweise
      oben):

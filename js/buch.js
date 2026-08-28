@@ -80,7 +80,7 @@ if (!buch) {
   const blaetternLink = document.getElementById("blaettern-link");
   blaetternLink.style.visibility = "hidden";
 
-  fetch(`md/${pfad}.md`)
+  fetch(`md/ratgeber/${pfad}.md`)
     .then(antwort => {
       if (!antwort.ok) throw new Error("Datei nicht gefunden");
       return antwort.text();
