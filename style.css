@@ -997,7 +997,7 @@ hr {
   z-index: 1000;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: clamp(12px, 3vh, 24px);
   /* Sicherheitsnetz: falls die Ansicht (z.B. auf sehr kleinen/kurzen
      Bildschirmen) trotz der responsiven Größen unten nicht ganz
      hineinpasst, kann man scrollen statt dass Inhalt unerreichbar
@@ -1034,14 +1034,21 @@ hr {
   max-width: 100%;
 }
 
+.flipbook-stage > div {
+  /* Der mittlere Wrapper (Buch + Seitenzähler) darf nötigenfalls
+     schrumpfen, statt die Pfeile von der Bildschirmkante zu drängen -
+     ohne "min-width: 0" verweigern Flex-Kinder das per Voreinstellung. */
+  min-width: 0;
+}
+
 .flipbook-arrow {
   background: var(--color-accent);
   color: #fff;
   border: none;
-  width: 48px;
-  height: 48px;
+  width: clamp(36px, 8vh, 48px);
+  height: clamp(36px, 8vh, 48px);
   border-radius: 50%;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 3vh, 1.4rem);
   cursor: pointer;
   flex-shrink: 0;
   transition: transform 0.15s ease, background 0.15s ease;
@@ -1063,19 +1070,29 @@ hr {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   border: 1px solid #D6CDBB;
+
+  /* Die Größe wird HIER am Buch als Ganzes festgelegt (großzügig,
+     nutzt die verfügbare Breite/Höhe aus) - die einzelnen Seiten
+     füllen diesen Platz danach per Flexbox einfach komplett aus
+     (siehe .flipbook-page unten). Das ist deutlich robuster als eine
+     Breite/Höhe direkt an jeder Seite über ein festes
+     Seitenverhältnis zu berechnen. "dvh" berücksichtigt zusätzlich
+     die (ein-/ausblendende) Adressleiste mobiler Browser; ältere
+     Browser ohne dvh-Unterstützung ignorieren die jeweils zweite
+     Zeile einfach und bleiben bei vh. */
+  width: min(1100px, 86vw);
+  height: min(720px, 82vh);
+  height: min(720px, 82dvh);
 }
 
 .flipbook-page {
-  width: 480px;
-  max-width: 46vw;
-  /* Feste 660px liefen auf kurzen Bildschirmen (z.B. Handy quer) über
-     den sichtbaren Bereich hinaus. Die Seite ist jetzt maximal 660px
-     hoch, schrumpft aber auf kurzen Bildschirmen mit. "dvh"
-     berücksichtigt zusätzlich die (ein-/ausblendende) Adressleiste
-     mobiler Browser; ältere Browser ohne dvh-Unterstützung ignorieren
-     die zweite Zeile einfach und bleiben bei vh. */
-  height: min(660px, 78vh);
-  height: min(660px, 78dvh);
+  /* Im Zwei-Seiten-Modus (Desktop/Querformat) teilen sich beide
+     Seiten die Buchbreite zu gleichen Teilen; im Hochformat (siehe
+     Media Query weiter unten) nimmt die einzige sichtbare Seite die
+     volle Breite ein. Die Höhe kommt automatisch vom Flexbox-Stretch-
+     Verhalten (füllt die Höhe des Buch-Containers komplett aus). */
+  flex: 1 1 50%;
+  min-width: 0;
   padding: clamp(20px, 4vh, 48px) clamp(20px, 4vw, 40px);
   overflow: hidden;
   position: relative;
@@ -1269,11 +1286,18 @@ hr {
     display: none;
   }
 
+  .flipbook-book {
+    /* Schmaler als im Zwei-Seiten-Modus, da nur EINE Seite gezeigt
+       wird - wirkt sonst wie ein überbreites Einzelblatt. */
+    width: min(480px, 82vw);
+    height: min(720px, 80vh);
+    height: min(720px, 80dvh);
+  }
+
   .flipbook-page {
-    width: 90vw;
-    max-width: 90vw;
-    height: min(620px, 78vh);
-    height: min(620px, 78dvh);
+    /* Einzige sichtbare Seite nimmt die volle Buchbreite ein, statt
+       sich mit der (ausgeblendeten) zweiten Seite die Breite zu teilen. */
+    flex-basis: 100%;
     padding: clamp(16px, 4vh, 32px) clamp(16px, 4vw, 28px);
   }
 
@@ -1284,25 +1308,14 @@ hr {
   }
 }
 
-/* Handy quer (und andere flache/kurze Bildschirme): die zwei Seiten
-   bleiben nebeneinander (wie am Desktop), werden aber niedriger,
-   damit sie komplett sichtbar sind - unabhängig von der Breite, denn
-   im Querformat ist ein Handy meist eher zu KURZ als zu schmal. */
+/* Sehr kurze Bildschirme (v.a. Handy quer): Buch bekommt hier ein
+   breiteres Format, da die Höhe ohnehin knapp ist und die Breite meist
+   reichlich vorhanden ist. */
 @media (max-height: 500px) {
-  .flipbook-page {
-    height: min(420px, 72vh);
-    height: min(420px, 72dvh);
-    padding: clamp(14px, 3vh, 28px) clamp(16px, 3vw, 32px);
-  }
-
-  .flipbook-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
-  .flipbook-overlay {
-    padding: 12px;
+  .flipbook-book {
+    width: min(1100px, 88vw);
+    height: min(720px, 82vh);
+    height: min(720px, 82dvh);
   }
 }
 
