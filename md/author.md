@@ -96,13 +96,17 @@ Dr. Methodius verfolgt drei grundlegende Prinzipien:
 
 Dr. Maximilian Methodius lebt und arbeitet irgendwo zwischen Wissenschaft, Satire und der festen Überzeugung, dass für nahezu jedes Problem noch ein Ratgeber geschrieben werden kann.
 
-Er forscht weiterhin. Er denkt weiterhin. Er beobachtet weiterhin Menschen, die Dinge unnötig kompliziert machen.
+Im Jahr 2026 gründete er das **Institut für angewandte Lebenswissenschaften**, um seine Forschung auf eine breitere wissenschaftliche Grundlage zu stellen. Gemeinsam mit einem sorgfältig ausgewählten Team widmet er sich dort den großen und kleinen Absurditäten des modernen Lebens. Das Institut untersucht alltägliche Probleme, entwickelt ungewöhnliche Lösungsansätze und nimmt sich inzwischen auch der Fälle an, die von externen Personen eingereicht werden.
 
-Und vor allem: **Er schreibt weiter.**
+Dr. Methodius forscht weiterhin. Er denkt weiterhin. Er beobachtet weiterhin Menschen, die Dinge unnötig kompliziert machen. Und vor allem: **Er schreibt weiter.**
 
 Denn irgendwo wartet bereits die nächste große Frage. Eine Frage, die die Menschheit vielleicht nicht gestellt hat. Eine Frage, die möglicherweise niemand beantworten muss. Aber definitiv eine Frage, zu der man einen Ratgeber schreiben kann.
 
 > **„Wenn das Leben schon kompliziert ist, sollte wenigstens der Ratgeber darüber Spaß machen.“**
+
+<p class="institut-link">
+  Mehr Informationen über das Institut und seine Mitarbeiter gibt es auf der Seite <a href="institut.html">Das Methodius-Institut →</a>.
+</p>
 
 ---
 

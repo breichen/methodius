@@ -1,0 +1,92 @@
+/* =========================================================
+   Institut
+   ========================================================= */
+
+.institut-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.institut-team-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.team-intro {
+  max-width: 650px;
+  margin-bottom: 2.5rem;
+}
+
+
+/* Team-Raster */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+
+/* Teamkarte */
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border: 1px solid rgba(27, 35, 64, 0.10);
+  overflow: hidden;
+}
+
+
+/* Porträt */
+
+.team-photo-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Kartentext */
+
+.team-card-content {
+  padding: 1.5rem;
+}
+
+.team-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+.team-role {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .institut-section,
+  .institut-team-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+}
