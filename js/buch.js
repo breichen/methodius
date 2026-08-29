@@ -61,15 +61,18 @@ if (!buch) {
     ${datumsHtml}
     <img class="book-cover" id="buch-cover-bild" src="pics/ratgeber/${pfad}.png" alt="Cover: ${buch.titel}" style="width: 100%; max-width: 750px; height: auto; margin-bottom: 24px; cursor: zoom-in;">
     <p class="blaettern-wrap">
-      <a href="#" id="blaettern-link" class="blaettern-link">📖 Blättern</a>
-      <button type="button" id="teilen-button" class="teilen-button">🔗 Teilen</button>
-    </p>
-
-    <div class="kommentar-link-wrap">
-      <a href="#ratgeber-kommentare" class="kommentar-link" id="kommentar-link">
+      <a href="#ratgeber-kommentare" id="kommentar-link" class="kommentar-link">
         💬 <span id="kommentar-link-text">Kommentare</span>
       </a>
-    </div>
+
+      <a href="#" id="blaettern-link" class="blaettern-link">
+        📖 Blättern
+      </a>
+
+      <button type="button" id="teilen-button" class="teilen-button">
+        🔗 Teilen
+      </button>
+    </p>
 
     <div id="buch-text">
       <p>Lade Text …</p>
