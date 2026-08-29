@@ -1,33 +1,20 @@
 <!DOCTYPE html>
-<!--
-  Feste Seite "Über den Autor". Lädt md/author.md und zeigt sie an
-  (siehe js/autorseite.js für die Sonderbehandlung der letzten
-  Namenszeile, die zur Autor-Box mit Porträt umgebaut wird).
-
-  WICHTIG: Das Nachladen von md/author.md per fetch() funktioniert nur,
-  wenn die Seite über einen lokalen Server läuft, NICHT wenn du die
-  Datei per Doppelklick öffnest (file://-Adresse).
--->
 <html lang="de">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
+
   <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
 
-  <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
 
-  <!-- Android / PWA -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/methodius-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/methodius-512x512.png">
-
-  <title>Über den Autor – Dr. Methodius</title>
+  <title>News – Dr. Methodius</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Homemade+Apple&display=swap"
     rel="stylesheet">
@@ -39,6 +26,7 @@
 
   <header class="site-header">
     <div class="wrap">
+
       <a href="index.html" class="logo">
         <img src="assets/favicon/methodius-512x512.png" alt="" class="logo-icon">
         <span>Dr. Methodius</span>
@@ -49,16 +37,34 @@
           <li><a href="news.html">Aktuelles</a></li>
           <li><a href="alle-ratgeber.html">Ratgeber</a></li>
           <li><a href="probleme.html">Fallakten</a></li>
+          <li><a href="news.html">News</a></li>
           <li><a href="autor.html">Über den Autor</a></li>
           <li><a href="institut.html">Institut</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
-  <div id="autor-inhalt">
-    <p>Lade Seite …</p>
-  </div>
+
+  <main id="news-inhalt">
+
+    <section class="section">
+      <div class="wrap">
+
+        <div class="news-kopf">
+          <h1>Aktuelles aus dem Institut</h1>
+        </div>
+
+        <div id="news-liste">
+          <p>Lade News …</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
 
   <footer class="site-footer">
     <div class="wrap footer-row">
@@ -67,10 +73,10 @@
     </div>
   </footer>
 
-  <!-- Reihenfolge wichtig: erst markdown.js (liefert parseMarkdownBloecke),
-       dann dieses Script -->
+
+  <script src="js/news.js"></script>
   <script src="js/markdown.js"></script>
-  <script src="js/autorseite.js"></script>
+  <script src="js/news-seite.js"></script>
 
 </body>
 

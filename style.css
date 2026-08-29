@@ -1817,3 +1817,125 @@ hr {
     font-size: 0.92rem;
   }
 }
+
+/* ============================================
+   NEWS
+   ============================================ */
+
+.news-kopf {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 52px;
+}
+
+.news-kopf h1 {
+  margin: 0;
+}
+
+
+/* Einzelner Beitrag */
+
+.news-beitrag {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 0 56px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.news-beitrag:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+
+/* Datum */
+
+.news-meta {
+  margin-bottom: 8px;
+
+  color: var(--color-text-muted);
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+
+/* Überschrift */
+
+.news-titel {
+  margin: 0 0 22px;
+
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+
+
+/* Text */
+
+.news-text {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.news-text p:first-child {
+  margin-top: 0;
+}
+
+.news-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Link */
+
+.news-link-wrap {
+  margin: 26px 0 0;
+}
+
+.news-link {
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Optionales Bild */
+
+.news-bild {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin-top: 30px;
+
+  border-radius: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .news-kopf {
+    margin-bottom: 38px;
+  }
+
+  .news-titel {
+    font-size: 1.5rem;
+  }
+
+  .news-beitrag {
+    padding-bottom: 42px;
+    margin-bottom: 42px;
+  }
+
+}
