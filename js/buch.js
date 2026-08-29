@@ -64,7 +64,16 @@ if (!buch) {
       <a href="#" id="blaettern-link" class="blaettern-link">📖 Blättern</a>
       <button type="button" id="teilen-button" class="teilen-button">🔗 Teilen</button>
     </p>
-    <div id="buch-text"><p>Lade Text …</p></div>
+
+    <div class="kommentar-link-wrap">
+      <a href="#ratgeber-kommentare" class="kommentar-link" id="kommentar-link">
+        💬 <span id="kommentar-link-text">Kommentare</span>
+      </a>
+    </div>
+
+    <div id="buch-text">
+      <p>Lade Text …</p>
+    </div>
   `;
 
   // Klick auf das Cover -> Bild vergrößert in einer Lightbox anzeigen
@@ -480,8 +489,11 @@ function ladeKommentare(slug) {
 
       console.log("Gefundene Kommentare:", kommentare);
 
+      aktualisiereKommentarLink(kommentare.length);
+
       if (kommentare.length === 0) {
         console.log("Keine Kommentare erkannt.");
+        aktualisiereKommentarLink(0);
 
         const kommentarHtml = baueKommentarBereich([]);
 
@@ -597,7 +609,7 @@ function baueKommentarBereich(kommentare) {
     : "";
 
   return `
-    <section class="ratgeber-kommentare">
+    <section class="ratgeber-kommentare" id="ratgeber-kommentare">
       <div class="wrap">
         <div class="kommentar-spalte">
 
@@ -615,6 +627,20 @@ function baueKommentarBereich(kommentare) {
       </div>
     </section>
   `;
+}
+
+function aktualisiereKommentarLink(anzahl) {
+  const linkText = document.getElementById("kommentar-link-text");
+
+  if (!linkText) return;
+
+  if (anzahl === 0) {
+    linkText.textContent = "Noch keine Kommentare";
+  } else if (anzahl === 1) {
+    linkText.textContent = "1 Kommentar";
+  } else {
+    linkText.textContent = `${anzahl} Kommentare`;
+  }
 }
 
 // NUR für die Fließtext-Ansicht: verpackt jedes Kapitel abwechselnd in

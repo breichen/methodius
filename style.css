@@ -1751,6 +1751,23 @@ hr {
   margin-bottom: 0;
 }
 
+.kommentar-link-wrap {
+  width: 100%;
+  max-width: 750px;
+  margin: -12px auto 24px auto;
+  text-align: left;
+}
+
+.kommentar-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+.kommentar-link:hover {
+  text-decoration: underline;
+}
+
 /* Mobile */
 
 @media (max-width: 600px) {
