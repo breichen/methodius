@@ -1648,10 +1648,22 @@ hr {
   gap: 14px;
 }
 
-/* Redaktion ist eine Antwort und wird eingerückt */
+/* Einrückung nach Thread-Level */
 
-.kommentar-redaktion {
+.kommentar[data-level="0"] {
+  margin-left: 0;
+}
+
+.kommentar[data-level="1"] {
   margin-left: 42px;
+}
+
+.kommentar[data-level="2"] {
+  margin-left: 84px;
+}
+
+.kommentar[data-level="3"] {
+  margin-left: 126px;
 }
 
 /* Avatar-Kreis */
@@ -1773,8 +1785,20 @@ hr {
     padding: 52px 0 64px;
   }
 
-  .kommentar-redaktion {
+  .kommentar[data-level="0"] {
+    margin-left: 0;
+  }
+
+  .kommentar[data-level="1"] {
     margin-left: 20px;
+  }
+
+  .kommentar[data-level="2"] {
+    margin-left: 40px;
+  }
+
+  .kommentar[data-level="3"] {
+    margin-left: 60px;
   }
 
   .kommentar {

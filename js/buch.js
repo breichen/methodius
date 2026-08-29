@@ -524,7 +524,7 @@ function ladeKommentare(slug) {
 
 function parseKommentare(markdown) {
   const bloecke = markdown
-    .split(/\n\s*\n(?=(?:Unbedacht|Redaktion)\s*:)/i)
+    .split(/\n\s*\n(?=\[[^\]]+\])/)
     .map(block => block.trim())
     .filter(Boolean);
 
@@ -532,23 +532,27 @@ function parseKommentare(markdown) {
 
   bloecke.forEach(block => {
     const match = block.match(
-      /^(Unbedacht|Redaktion)\s*:\s*\n([\s\S]*)$/i
+      /^\[([^|\]]+)\s*\|\s*(\d+)\]\s*\n([\s\S]*)$/
     );
 
-    if (!match) return;
-
-    const autor = match[1].toLowerCase() === "unbedacht"
-      ? "Unbedacht"
-      : "Redaktion";
-
-    const text = match[2].trim();
-
-    if (text) {
-      kommentare.push({
-        autor,
-        text
-      });
+    if (!match) {
+      console.warn("Kommentar konnte nicht erkannt werden:", block);
+      return;
     }
+
+    const autor = match[1].trim();
+    const level = Number(match[2]);
+    const text = match[3].trim();
+
+    if (!text) {
+      return;
+    }
+
+    kommentare.push({
+      autor,
+      level,
+      text
+    });
   });
 
   return kommentare;
@@ -573,7 +577,7 @@ function baueKommentarBereich(kommentare) {
         : "kommentar kommentar-unbedacht";
 
       return `
-        <article class="${klasse}">
+        <article class="${klasse}" data-level="${kommentar.level}">
           <div class="kommentar-avatar" aria-hidden="true">
             ${autorInfo.name.charAt(0)}
           </div>
@@ -600,16 +604,8 @@ function baueKommentarBereich(kommentare) {
     })
     .join("\n");
 
-  const leererHinweis = kommentare.length === 0
-    ? `
-      <p class="kommentar-leer">
-        Noch keine Kommentare.
-      </p>
-    `
-    : "";
-
   return `
-    <section class="ratgeber-kommentare" id="ratgeber-kommentare">
+    <section id="ratgeber-kommentare" class="ratgeber-kommentare">
       <div class="wrap">
         <div class="kommentar-spalte">
 
@@ -620,7 +616,6 @@ function baueKommentarBereich(kommentare) {
 
           <div class="kommentar-liste">
             ${beitraege}
-            ${leererHinweis}
           </div>
 
         </div>
