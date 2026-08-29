@@ -162,7 +162,7 @@ function baueTeamBereich(index) {
     {
       name: "Dr. Konrad P. Huber",
       rolle: "Leitung der Abteilung für Statistik und empirische Plausibilität",
-      bild: "pics/team/autor-portrait.png",
+      bild: "pics/team/Huber.png",
       text: "Spezialist für statistische Auswertungen und eindeutige Aussagen bei uneindeutiger Datenlage."
     },
     {
