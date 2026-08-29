@@ -77,6 +77,15 @@ if (!problem) {
 
   container.innerHTML = `
     ${datumsHtml}
+
+    <p class="blaettern-wrap">
+      <a href="#fallakten-kommentare" id="kommentar-link" class="kommentar-link">
+        💬 <span id="kommentar-link-text">Kommentare</span>
+      </a>
+
+      <button type="button" id="teilen-button" class="teilen-button">🔗 Teilen</button>
+    </p>
+    
     <h1>${problem.titel}</h1>
 
     <div class="problem-block problem-frage-block">
@@ -103,14 +112,6 @@ if (!problem) {
       <p class="problem-label">📈 Prognose</p>
       ${formatiereProblemText(problem.prognose)}
     </div>
-
-    <p class="blaettern-wrap">
-      <a href="#fallakten-kommentare" id="kommentar-link" class="kommentar-link">
-        💬 <span id="kommentar-link-text">Kommentare</span>
-      </a>
-
-      <button type="button" id="teilen-button" class="teilen-button">🔗 Teilen</button>
-    </p>
 
     <p class="grid-link"><a href="probleme.html">← Zur Übersicht</a></p>
   `;
