@@ -1826,7 +1826,7 @@ hr {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 52px;
+  margin-bottom: 28px;
 }
 
 .news-kopf h1 {
@@ -1837,11 +1837,12 @@ hr {
 /* Einzelner Beitrag */
 
 .news-beitrag {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 0 0 56px;
-  margin-bottom: 56px;
-  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .news-beitrag:last-child {
@@ -1863,9 +1864,7 @@ hr {
 
 .news-meta {
   margin-bottom: 8px;
-
   color: var(--color-text-muted);
-
   font-family: "Inter", sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
@@ -1876,7 +1875,6 @@ hr {
 
 .news-titel {
   margin: 0 0 22px;
-
   font-family: "Fraunces", serif;
   font-size: 1.8rem;
   line-height: 1.25;
@@ -1916,16 +1914,13 @@ hr {
 }
 
 
-/* Optionales Bild */
+/* Bild */
 
 .news-bild {
   display: block;
-
   width: 100%;
   height: auto;
-
   margin-top: 30px;
-
   border-radius: 5px;
 }
 
@@ -1935,7 +1930,7 @@ hr {
 @media (max-width: 600px) {
 
   .news-kopf {
-    margin-bottom: 38px;
+    margin-bottom: 24px;
   }
 
   .news-titel {

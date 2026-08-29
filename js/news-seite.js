@@ -31,8 +31,8 @@ function ladeNews() {
   */
 
   Promise.all(
-    newsListe.map(beitrag =>
-      ladeNewsBeitrag(beitrag)
+    newsListe.map((beitrag, index) =>
+      ladeNewsBeitrag(beitrag, index)
     )
   )
     .then(beitragHtml => {
@@ -59,7 +59,7 @@ function ladeNews() {
 }
 
 
-function ladeNewsBeitrag(beitrag) {
+function ladeNewsBeitrag(beitrag, index) {
 
   const pfad =
     `md/news/${encodeURIComponent(beitrag.datei)}`;
@@ -82,6 +82,19 @@ function ladeNewsBeitrag(beitrag) {
 
       const textHtml =
         bloecke.join("\n");
+
+      /*
+        Die Beiträge wechseln sich farblich ab.
+        Der erste Beitrag verwendet .section,
+        der zweite .section-alt, der dritte wieder
+        .section usw.
+      */
+
+      const sectionKlasse =
+        index % 2 === 0
+          ? "section"
+          : "section section-alt";
+
 
       /*
         Optionaler Link, z.B. zum neuen Ratgeber.
@@ -127,25 +140,29 @@ function ladeNewsBeitrag(beitrag) {
 
 
       return `
-        <article class="news-beitrag">
+        <section class="news-beitrag ${sectionKlasse}">
 
-          <div class="news-meta">
-            ${beitrag.datum || ""}
+          <div class="wrap">
+
+            <div class="news-meta">
+              ${beitrag.datum || ""}
+            </div>
+
+            <h2 class="news-titel">
+              ${beitrag.titel}
+            </h2>
+
+            <div class="news-text">
+              ${textHtml}
+            </div>
+
+            ${linkHtml}
+
+            ${bildHtml}
+
           </div>
 
-          <h2 class="news-titel">
-            ${beitrag.titel}
-          </h2>
-
-          <div class="news-text">
-            ${textHtml}
-          </div>
-
-          ${linkHtml}
-
-          ${bildHtml}
-
-        </article>
+        </section>
       `;
     });
 }
