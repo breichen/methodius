@@ -3,6 +3,3 @@ Ich möchte darauf hinweisen, dass gezielter Muskelabbau nach meinem Kenntnissta
 
 [Redaktion | 1]
 Vielen Dank für Ihren Hinweis. Wir haben ihn zur Kenntnis genommen und uns entschieden, den Ratgeber trotzdem zu veröffentlichen.
-
-[Redaktion | 0]
-Test
