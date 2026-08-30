@@ -442,7 +442,7 @@ function zeigeFallakte(
       kommentarSlug,
 
     ordner:
-      "fallakten-kommentare",
+      "probleme-kommentare",
 
     containerId:
       "problem-inhalt",
