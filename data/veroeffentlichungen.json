@@ -1,5 +1,99 @@
 [
     {
+        "datum": "22. August 2028",
+        "titel": "Zur Frage, ob ein Problem tatsächlich gelöst werden muss, nur weil es existiert",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Dr. Friedrich Unbedacht"
+        ]
+    },
+    {
+        "datum": "7. Juli 2028",
+        "titel": "Die produktive Vermeidung von Produktivität: Eine empirische Untersuchung des bewussten Nichtstuns",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Dr. Konrad P. Huber"
+        ]
+    },
+    {
+        "datum": "19. Mai 2028",
+        "titel": "Wissenschaftlich fundierte Gründe, heute nichts mehr anzufangen",
+        "autoren": [
+            "Dr. Maximilian Methodius"
+        ]
+    },
+    {
+        "datum": "3. März 2028",
+        "titel": "Wobei – eine longitudinale Untersuchung spontaner Meinungsrevisionen im Alltag",
+        "autoren": [
+            "Prof. Dr. Hildegard Wankelmuth",
+            "Dr. Konrad P. Huber"
+        ]
+    },
+    {
+        "datum": "14. Januar 2028",
+        "titel": "Die statistische Bedeutung des Satzes „Das machen doch alle“",
+        "autoren": [
+            "Dr. Konrad P. Huber",
+            "Dr. Maximilian Methodius"
+        ]
+    },
+    {
+        "datum": "28. November 2027",
+        "titel": "Über die therapeutische Wirkung des kontrollierten sozialen Rückzugs",
+        "autoren": [
+            "Prof. Dr. Hildegard Wankelmuth",
+            "Dr. Maximilian Methodius"
+        ]
+    },
+    {
+        "datum": "9. September 2027",
+        "titel": "Eine Untersuchung der Frage, warum gute Vorsätze bevorzugt am Montag beginnen",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Dr. Konrad P. Huber"
+        ]
+    },
+    {
+        "datum": "21. Juli 2027",
+        "titel": "Zur Überinterpretation alltäglicher Müdigkeit als Zeichen persönlicher Entwicklung",
+        "autoren": [
+            "Prof. Dr. Hildegard Wankelmuth"
+        ]
+    },
+    {
+        "datum": "2. Mai 2027",
+        "titel": "Die Rolle unbequemer Einwände bei der Stabilisierung wissenschaftlich haltbarer Ergebnisse",
+        "autoren": [
+            "Dr. Friedrich Unbedacht",
+            "Dr. Konrad P. Huber"
+        ]
+    },
+    {
+        "datum": "16. Februar 2027",
+        "titel": "Warum Menschen Ratschläge suchen, obwohl sie bereits wissen, was sie tun werden",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Prof. Dr. Hildegard Wankelmuth"
+        ]
+    },
+    {
+        "datum": "8. Dezember 2026",
+        "titel": "Eine empirische Untersuchung des Zusammenhangs zwischen Selbstoptimierung und dem Wunsch, damit aufzuhören",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Dr. Konrad P. Huber"
+        ]
+    },
+    {
+        "datum": "17. Oktober 2026",
+        "titel": "Vorläufige Ergebnisse zur kontrollierten Überinterpretation gewöhnlicher Verhaltensweisen",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Prof. Dr. Hildegard Wankelmuth"
+        ]
+    },
+    {
         "datum": "28. August 2026",
         "titel": "Der Ratgeber als wissenschaftliches Instrument",
         "autoren": [
