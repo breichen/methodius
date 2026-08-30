@@ -334,7 +334,7 @@ function ladeVeroeffentlichungen() {
             <article class="institut-veroeffentlichung">
 
               <p class="institut-veroeffentlichung-datum">
-                ${veroeffentlichung.datum}
+                ${formatiereDatumDeutsch(veroeffentlichung.datum)}
               </p>
 
               <h3>
