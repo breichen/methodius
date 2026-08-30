@@ -9,7 +9,9 @@
     - parseMarkdownBloecke() aus js/markdown.js
 
   Unterstützt:
-    - Datum
+    - Datum (ISO-Format YYYY-MM-DD in newsListe, wird über
+      formatiereDatumDeutsch() aus js/datumsformat.js in die
+      deutsche Lesefassung umgewandelt)
     - Titel
     - Markdown-Text
     - optionalen Link
@@ -146,7 +148,7 @@ function ladeNewsStartseitenBeitrag(beitrag) {
         <article class="news-beitrag news-startseiten-beitrag">
 
           <div class="news-meta">
-            ${beitrag.datum || ""}
+            ${beitrag.datum ? formatiereDatumDeutsch(beitrag.datum) : ""}
           </div>
 
           <h3 class="news-titel">

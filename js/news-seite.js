@@ -12,6 +12,10 @@
   **fett**
 
   *kursiv*
+
+  "datum" in newsListe (siehe js/news.js) liegt im ISO-Format
+  (YYYY-MM-DD) vor und wird über formatiereDatumDeutsch() (siehe
+  js/datumsformat.js) in die deutsche Lesefassung umgewandelt.
 */
 
 const newsContainer = document.getElementById("news-liste");
@@ -322,7 +326,7 @@ function ladeNewsBeitrag(beitrag, index) {
           <div class="wrap">
 
             <div class="news-meta">
-              ${beitrag.datum || ""}
+              ${beitrag.datum ? formatiereDatumDeutsch(beitrag.datum) : ""}
             </div>
 
             <h2 class="news-titel">
