@@ -1943,3 +1943,33 @@ hr {
   }
 
 }
+
+/* ============================================
+   NEWS: STARTSEITEN-TEASER
+   Zeigt den aktuellsten Beitrag kompakt auf der Startseite (siehe
+   js/news-startseite.js). Bekommt zusätzlich zur .news-beitrag-Klasse
+   die Klasse .news-startseiten-beitrag - darüber werden hier gezielt
+   zwei Regeln zurückgesetzt, die eigentlich nur für die vollständige
+   news.html-Ansicht gedacht sind:
+   - der "Full-Bleed"-Trick von .news-beitrag, der den Beitrag bewusst
+     über die volle Viewport-Breite zieht (auf der Startseite soll der
+     Teaser stattdessen innerhalb von .wrap bleiben)
+   - die große Artikel-Überschrift von .news-titel (1.8rem, genauso
+     groß wie h2) - auf der Startseite reicht eine kleinere Teaser-
+     Überschrift
+   Höhere Spezifität (zwei Klassen) sorgt dafür, dass das auch die
+   @media-Regel oben für .news-titel überstimmt.
+   ============================================ */
+.news-startseiten-beitrag {
+  position: static;
+  left: auto;
+  right: auto;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.news-startseiten-beitrag .news-titel {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
