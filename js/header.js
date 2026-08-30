@@ -37,7 +37,7 @@ function baueHeader() {
             <li><a href="news.html">Aktuelles</a></li>
             <li><a href="alle-ratgeber.html">Ratgeber</a></li>
             <li><a href="probleme.html">Fallakten</a></li>
-            <li><a href="autor.html">Über den Autor</a></li>
+            <li><a href="autor.html">Biographie</a></li>
             <li><a href="institut.html">Institut</a></li>
           </ul>
         </nav>
