@@ -22,6 +22,14 @@ const newsListe = [
   },
 
   {
+    datei: "neuer-fall-ans-bett-gebunden.md",
+    titel: "Neue Fallakte angelegt",
+    datum: "27. August 2026",
+    link: "problem.html?datei=ans-bett-gebunden.md",
+    linkText: "Zur Fallakte"
+  },
+
+  {
     datei: "gruendung-methodius-institut.md",
     titel: "Methodius-Institut für Lebenswissenschaften gegründet",
     datum: "4. Mai 2026",
