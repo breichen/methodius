@@ -15,6 +15,102 @@
 const newsListe = [
 
   {
+    datei: "neues-paper-problem-tatsaechlich-geloest.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2028-08-22",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-produktive-vermeidung-von-produktivitaet.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2028-07-07",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-wiss-fundierte-gruende.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2028-05-19",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-wobei-longitudinale-untersuchung.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2028-03-03",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-statistische-bedeutung-des-satzes.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2028-01-14",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-therapeutische-wirkung-sozialer-rueckzug.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2027-11-28",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-gute-vorsaetze-bevorzugt.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2027-09-09",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-ueberinterpretation-alltaeglicher-muedigkeit.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2027-07-21",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-die-rolle-unbequemer-einwaende.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2027-05-02",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-warum-menschen-ratschlaege-suchen.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2027-02-16",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-empirische-untersuchung-zus-selbstoptimierung.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2026-12-08",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "neues-paper-vorlaeufige-erkenntnisse-kontr-ueberinterpretation.md",
+    titel: "Neues Paper veröffentlicht",
+    datum: "2026-10-17",
+    link: "veroeffentlichungen.html",
+    linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
     datei: "neuer-ratgeber-muskelabbau.md",
     titel: "Neuer Ratgeber erschienen",
     datum: "2026-08-30",

@@ -1,0 +1,3 @@
+Dr. Maximilian Methodius und Dr. Friedrich Unbedacht haben das Paper *Zur Frage, ob ein Problem tatsächlich gelöst werden muss, nur weil es existiert* veröffentlicht.
+
+Die Arbeit untersucht die verbreitete Annahme, dass die Existenz eines Problems bereits dessen Lösung erforderlich macht. Dabei wird insbesondere hinterfragt, ob die bloße Wahrnehmung eines Problems mit einer Handlungspflicht verwechselt wird.

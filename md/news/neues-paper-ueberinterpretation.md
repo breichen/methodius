@@ -1,3 +1,3 @@
-Ein neues Paper von Prof. Dr. Hildegard Wankelmuth mit dem Titel *Überinterpretation alltäglicher Verhaltensweisen: Ein methodischer Leitfaden* ist erschienen.
+Ein neues Paper von Prof. Dr. Hildegard Wankelmuth mit dem Titel *Zur Überinterpretation alltäglicher Müdigkeit als Zeichen persönlicher Entwicklung* ist erschienen.
 
-Darin wird ein Modell zur systematischen Bedeutungsüberhöhung gewöhnlicher Handlungen vorgestellt. Ziel ist es, auch bei weitgehend unauffälligem Verhalten möglichst belastbare Hinweise auf tieferliegende Zusammenhänge zu identifizieren.
+Darin wird ein Deutungsmodell für die wissenschaftliche Interpretation gewöhnlicher Erschöpfungszustände entwickelt. Müdigkeit wird dabei unter anderem als möglicher Hinweis auf tiefgreifende persönliche Veränderungsprozesse betrachtet.

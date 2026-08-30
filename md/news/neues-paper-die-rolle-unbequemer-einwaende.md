@@ -1,0 +1,3 @@
+Dr. Friedrich Unbedacht und Dr. Konrad P. Huber haben das Paper *Die Rolle unbequemer Einwände bei der Stabilisierung wissenschaftlich haltbarer Ergebnisse* veröffentlicht.
+
+Die Arbeit untersucht den Beitrag kritischer Einwände zur wissenschaftlichen Belastbarkeit von Ergebnissen. Dabei wird auch die Frage behandelt, ab welchem Punkt wissenschaftliche Kritik den Forschungsprozess unnötig verlangsamt.
