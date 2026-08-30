@@ -41,8 +41,12 @@ const buch = ratgeberListe.find(b => b.slug === slug);
 if (!buch) {
   // Falscher oder fehlender Link -> freundliche Fehlermeldung statt kaputter Seite
   container.innerHTML = `
-    <h1>Ratgeber nicht gefunden</h1>
-    <p>Diesen Ratgeber gibt es (noch) nicht. <a href="index.html#ratgeber">Zur Übersicht</a>.</p>
+    <section class="section">
+      <div class="wrap">
+        <h1>Ratgeber nicht gefunden</h1>
+        <p>Diesen Ratgeber gibt es (noch) nicht. <a href="index.html#ratgeber">Zur Übersicht</a>.</p>
+      </div>
+    </section>
   `;
 } else {
   document.title = buch.titel + " – Dr. Maximilian Methodius";
@@ -57,26 +61,41 @@ if (!buch) {
   const datumsHtml = baueDatumsHinweis(buch);
 
   // Bild sofort anzeigen, Text kommt gleich per fetch() nach
+  //
+  // Alles hier liegt bewusst innerhalb von .wrap, damit z.B. der
+  // Datums-Hinweis (.buch-datum) dieselbe Breite/Einrückung wie der
+  // Rest der Seite bekommt - ohne eigene Zentrierungs-Regel würde er
+  // sonst ganz links kleben (anders als z.B. .book-cover oder
+  // .blaettern-wrap, die beide ihre eigene Breitenbegrenzung haben).
+  // Die später in #buch-text eingefügten Kapitel-Sections brechen
+  // trotz dieser zusätzlichen Verschachtelung weiterhin korrekt auf
+  // volle Breite aus (siehe FULL_BLEED_STYLE unten), da dieser Trick
+  // auf "100vw" (Viewport-Breite) basiert und nicht auf der Breite
+  // des jeweiligen Elternelements.
   container.innerHTML = `
-    ${datumsHtml}
-    <img class="book-cover" id="buch-cover-bild" src="pics/ratgeber/${pfad}.png" alt="Cover: ${buch.titel}" style="width: 100%; max-width: 750px; height: auto; margin-bottom: 24px; cursor: zoom-in;">
-    <p class="blaettern-wrap">
-      <a href="#ratgeber-kommentare" id="kommentar-link" class="kommentar-link">
-        💬 <span id="kommentar-link-text">Kommentare</span>
-      </a>
+    <section class="section">
+      <div class="wrap">
+        ${datumsHtml}
+        <img class="book-cover" id="buch-cover-bild" src="pics/ratgeber/${pfad}.png" alt="Cover: ${buch.titel}" style="width: 100%; max-width: 750px; height: auto; margin-bottom: 24px; cursor: zoom-in;">
+        <p class="blaettern-wrap">
+          <a href="#ratgeber-kommentare" id="kommentar-link" class="kommentar-link">
+            💬 <span id="kommentar-link-text">Kommentare</span>
+          </a>
 
-      <a href="#" id="blaettern-link" class="blaettern-link">
-        📖 Blättern
-      </a>
+          <a href="#" id="blaettern-link" class="blaettern-link">
+            📖 Blättern
+          </a>
 
-      <button type="button" id="teilen-button" class="teilen-button">
-        🔗 Teilen
-      </button>
-    </p>
+          <button type="button" id="teilen-button" class="teilen-button">
+            🔗 Teilen
+          </button>
+        </p>
 
-    <div id="buch-text">
-      <p>Lade Text …</p>
-    </div>
+        <div id="buch-text">
+          <p>Lade Text …</p>
+        </div>
+      </div>
+    </section>
   `;
 
   // Klick auf das Cover -> Bild vergrößert in einer Lightbox anzeigen
