@@ -53,7 +53,12 @@ const kommentarAutoren = {
   "Redaktion": {
     name: "Redaktion",
     username: "@methodius"
-  }
+  },
+
+  "Barbara": {
+    name: "Barbara",
+    username: "@babsi95"
+  },
 
 };
 
