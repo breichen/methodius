@@ -87,6 +87,34 @@ document.addEventListener(
 
       .then(probleme => {
 
+        /*
+          Nur Fallakten anzeigen, die ein "erstellt"-Datum
+          haben UND dessen Datum bereits erreicht ist (heute
+          oder in der Vergangenheit) - siehe istDatumErreicht()
+          in js/datumsformat.js. Fallakten ohne Datum oder mit
+          einem Datum in der Zukunft werden aus dem Showcase
+          ausgeblendet.
+        */
+        probleme =
+          probleme.filter(problem =>
+            problem.erstellt &&
+            istDatumErreicht(problem.erstellt)
+          );
+
+
+        /*
+          Keine sichtbaren Fallakten übrig.
+        */
+
+        if (!probleme.length) {
+
+          showcase.style.display =
+            "none";
+
+          return;
+        }
+
+
         let index =
           probleme.length - 1;
 
@@ -97,8 +125,9 @@ document.addEventListener(
             probleme[index];
 
           const fallnummer =
-            String(index + 1)
-              .padStart(3, "0");
+            String(
+              problemeListe.indexOf(problem.datei) + 1
+            ).padStart(3, "0");
 
 
           fallnummerEl.textContent =
@@ -254,7 +283,17 @@ function ladeShowcaseFallakte(
         frage:
           markdownZuKlartext(
             bereiche["frage"] || ""
-          )
+          ),
+
+        /*
+          Wird gebraucht, um Fallakten mit einem
+          Erstellungsdatum in der Zukunft (oder ganz
+          ohne Erstellungsdatum) aus dem Showcase
+          auszublenden - siehe istDatumErreicht() in
+          js/datumsformat.js.
+        */
+        erstellt:
+          bereiche["erstellt"] || ""
 
       };
 

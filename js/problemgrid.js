@@ -138,9 +138,21 @@ function parseProblemMarkdown(markdown) {
     );
 
 
+  /*
+    Wird gebraucht, um Fallakten mit einem
+    Erstellungsdatum in der Zukunft (oder ganz
+    ohne Erstellungsdatum) aus den Übersichten
+    auszublenden - siehe istDatumErreicht() in
+    js/datumsformat.js.
+  */
+  const erstellt =
+    bereiche["erstellt"] || "";
+
+
   return {
     titel,
-    frage
+    frage,
+    erstellt
   };
 }
 
@@ -291,17 +303,31 @@ document.addEventListener(
 
       .then(probleme => {
 
+        /*
+          Nur Fallakten anzeigen, die ein "erstellt"-Datum
+          haben UND dessen Datum bereits erreicht ist (heute
+          oder in der Vergangenheit) - siehe istDatumErreicht()
+          in js/datumsformat.js. Fallakten ohne Datum oder mit
+          einem Datum in der Zukunft werden aus allen drei
+          Übersichten ausgeblendet.
+        */
+        const sichtbareProbleme =
+          probleme.filter(problem =>
+            problem.erstellt &&
+            istDatumErreicht(problem.erstellt)
+          );
+
         // Alle Fallakten
         renderProblemKarten(
           "alle-probleme",
-          probleme,
+          sichtbareProbleme,
           leerText
         );
 
 
         // Neueste Fallakten
         const neueste =
-          probleme
+          sichtbareProbleme
             .slice(-ANZAHL_NEUESTE_PROBLEME)
             .reverse();
 
@@ -315,7 +341,7 @@ document.addEventListener(
         // Zufällige Empfehlungen
         const zufaellige =
           waehleZufaelligeProbleme(
-            probleme,
+            sichtbareProbleme,
             ANZAHL_ZUFAELLIGE_PROBLEME
           );
 
