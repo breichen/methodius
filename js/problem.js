@@ -186,6 +186,12 @@ function zeigeFehler() {
 
 // ------------------------------------------------------------
 // Datums- und Einsender-Hinweise
+//
+// "erstellt" und "aktualisiert" werden im ISO-Format (YYYY-MM-DD)
+// aus der Fallakte gelesen und für die Anzeige über
+// formatiereDatumDeutsch() (siehe js/datumsformat.js) in die
+// deutsche Lesefassung umgewandelt - "einsender" ist dagegen kein
+// Datum und bleibt unverändert.
 // ------------------------------------------------------------
 
 function baueDatumsHinweis(problem) {
@@ -208,7 +214,7 @@ function baueDatumsHinweis(problem) {
 
     zeilen.push(`
       <p class="buch-datum">
-        Veröffentlicht: ${problem.erstellt}
+        Veröffentlicht: ${formatiereDatumDeutsch(problem.erstellt)}
       </p>
     `);
 
@@ -219,7 +225,7 @@ function baueDatumsHinweis(problem) {
 
     zeilen.push(`
       <p class="buch-datum">
-        Aktualisiert: ${problem.aktualisiert}
+        Aktualisiert: ${formatiereDatumDeutsch(problem.aktualisiert)}
       </p>
     `);
 

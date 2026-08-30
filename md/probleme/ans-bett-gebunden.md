@@ -28,4 +28,4 @@ Horst
 
 ## Erstellt
 
-27. August 2026
+2026-08-27
