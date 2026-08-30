@@ -1,4 +1,5 @@
 
+
 # Verwendung von KI durch Fehler vertuschen
 
 ## Der ultimative Ratgeber für alle, die künstliche Intelligenz benutzen, aber anschließend unbedingt so wirken möchten, als hätten sie den Text selbst mit drei Stunden Schlaf und einer halb leeren Kaffeetasse geschrieben
@@ -15,23 +16,17 @@ Das ist inzwischen keine besonders ungewöhnliche Sache mehr. Menschen lassen si
 
 Denn ein KI-Text ist häufig verdächtig glatt. Er ist ordentlich aufgebaut, grammatikalisch erstaunlich sauber und verwendet Formulierungen wie „darüber hinaus“ an Stellen, an denen ein Mensch vermutlich einfach „außerdem“ geschrieben hätte.
 
-Die Lösung scheint deshalb naheliegend:
+Die Lösung scheint deshalb naheliegend: **Mach den Text schlechter.**
 
-**Mach den Text schlechter.**
+Natürlich ist das vollkommen absurd. Und genau deshalb ist dieser Ratgeber so interessant. Denn während wir hier erklären, welche Fehler angeblich menschlich wirken sollen, widmen wir uns nicht der Frage, ob eine KI bei Bedarf ebenfalls systematisch Fehler einstreuen kann.
 
-Natürlich ist das vollkommen absurd. Und genau deshalb ist dieser Ratgeber so interessant. Denn während wir hier erklären, welche Fehler angeblich menschlich wirken sollen, produziert eine KI diesen gesamten Ratgeber absichtlich mit genau solchen Fehlern.
-
-Die Ironie ist also nicht nur Teil des Inhalts.
-
-**Sie ist der Inhalt.**
+---
 
 # Kapitel 1
 
 ## Der erste Schritt: Verdächtig gute Sätze erkennen
 
-KI-Texte erkennt man angeblich daran, dass sie zu perfekt sind. Jeder Satz sitzt, jeder Absatz hat einen klaren Aufbau und irgendwo steht zuverlässig eine Formulierung wie „in der heutigen schnelllebigen Welt“.
-
-Das ist natürlich ein Problem.
+KI-Texte erkennt man angeblich daran, dass sie zu perfekt sind. Jeder Satz sitzt, jeder Absatz hat einen klaren Aufbau und irgendwo steht zuverlässig eine Formulierung wie „in der heutigen schnelllebigen Welt“. Das ist natürlich ein Problem.
 
 Wenn dein Text plötzlich besonders sauber klingt, könnte jemand denken, dass du dir Hilfe geholt hast. Deshalb solltest du zunächst nach Stellen suchen, an denen der Text verdächtig ordentlich wirkt und sie ein bischen unordentlicher machen.
 
@@ -43,9 +38,7 @@ werden:
 
 > „Diese entwicklung bietet viele Chancen, bringt aber auch Herausforderungen mit sich.“
 
-Das wirkt sofort menschlicher.
-
-Oder zumindest so, als hätte jemand beim Schreiben kurz nicht aufgepasst, was ja angeblich ein sehr menschliches Verhalten ist.
+Das wirkt sofort menschlicher. Oder zumindest so, als hätte jemand beim Schreiben kurz nicht aufgepasst, was ja angeblich ein sehr menschliches Verhalten ist.
 
 ---
 
@@ -59,17 +52,11 @@ Zum Beispiel:
 
 > „Wenn du einen Text mit KI geschrieben hast solltest du ihn vor dem Abschicken noch einmal lesen.“
 
-Das fehlende Komma ist beinahe unsichtbar.
-
-Noch besser ist es, wenn du im nächsten Satz plötzlich ein Komma an einer Stelle setzt, an der keines hingehört:
+Das fehlende Komma ist beinahe unsichtbar. Noch besser ist es, wenn du im nächsten Satz plötzlich ein Komma an einer Stelle setzt, an der keines hingehört:
 
 > „Wenn du einen Text mit KI geschrieben hast, solltest du ihn, vor dem Abschicken noch einmal lesen.“
 
-Jetzt sieht es nicht mehr nach einem System aus.
-
-Es sieht nach jemandem aus der beim Schreiben gleichzeitig denkt, telefoniert und versucht herauszufinden wo eigentlich das richtige Komma hingehört.
-
-**Genau diese Unberechenbarkeit macht den Fehler so überzeugend.**
+Jetzt sieht es nicht mehr nach einem System aus. Es sieht nach jemandem aus der beim Schreiben gleichzeitig denkt, telefoniert und versucht herauszufinden wo eigentlich das richtige Komma hingehört. **Genau diese Unberechenbarkeit macht den Fehler so überzeugend.**
 
 ---
 
@@ -81,15 +68,9 @@ Ein klassischer Tippfehler ist natürlich unverzichtbar.
 
 Aus „wahrscheinlich“ wird „warscheinlich“. Aus „eigentlich“ wird „eigendlich“. Aus „interessant“ wird „intressant“. Und wenn du besonders überzeugend sein möchtest kannst du auch mal zwei Buchstaben vertauschen, wie zum Beispiel „natürlcih“.
 
-Wichtig ist, dass du die Fehler nicht zu ordentlich verteilst.
+Wichtig ist, dass du die Fehler nicht zu ordentlich verteilst. Wenn jeder Absatz genau einen Tippfehler enthält, wirkt das schnell wieder künstlich. Ein Mensch schreibt schlieslich nicht nach einem festen Fehlerplan. Manchmal schreibt er fünf Absätze fehlerfrei und setzt dann plötzlich „nähmlich“ in einen Satz.
 
-Wenn jeder Absatz genau einen Tippfehler enthält, wirkt das schnell wieder künstlich. Ein Mensch schreibt schlieslich nicht nach einem festen Fehlerplan. Manchmal schreibt er fünf Absätze fehlerfrei und setzt dann plötzlich „nähmlich“ in einen Satz.
-
-Das ist die eigentliche Kunst.
-
-**Die Fehler müssen aussehen, als wären sie zufällig passiert.**
-
-Was natürlich besonders lustig ist, wenn sie von einer KI absichtlich an genau diese Stellen gesetzt wurden.
+Das ist die eigentliche Kunst. **Die Fehler müssen aussehen, als währen sie zufällig passiert.**
 
 ---
 
@@ -103,19 +84,15 @@ Du kannst zum Beispiel schreiben:
 
 > „Ich glaube das man daran schon erkennt dass der Text nicht ganz natürlich klingt.“
 
-Hier fehlen gleich zwei Kommas und das erste „das“ müsste „dass“ sein.
-
-Das ist fast schon zu perfekt.
+Hier fehlen gleich zwei Kommas und das erste „das“ müsste „dass“ sein. Das ist fast schon zu perfekt.
 
 Deshalb solltest du anschließend nicht plötzlich wieder einen völlig fehlerfreien Satz schreiben. Besser ist eine leichte Schwankung:
 
 > „Ich glaube, dass man daran erkennt das der Text nicht ganz natürlich klingt.“
 
-Jetzt ist nur noch ein Fehler übrig.
+Jetzt ist nur noch ein Fehler übrig. Das wirkt deutlich realistischer.
 
-Das wirkt deutlich realistischer.
-
-Du musst dabei natürlich aufpassen, dass du nicht aus Versehen einen korrekten Satz erzeugst. Das wäre ja peinlich.
+Du musst dabei natürlich aufpassen, das du nicht aus Versehen einen korrekten Satz erzeugst. Das wäre ja peinlich.
 
 ---
 
@@ -123,9 +100,7 @@ Du musst dabei natürlich aufpassen, dass du nicht aus Versehen einen korrekten 
 
 ## Groß- und Kleinschreibung
 
-Menschen schreiben manchmal Substantive klein.
-
-Zum Beispiel:
+Menschen schreiben manchmal Substantive klein. Zum Beispiel:
 
 > „Das ist ein wichtiger punkt.“
 
@@ -137,9 +112,7 @@ Beides kann vorkommen.
 
 Besonders menschlich wird es, wenn die Großschreibung innerhalb eines Textes schwankt. Ein Satz ist völlig korrekt, im nächsten wird plötzlich „Problem“ klein geschrieben und drei Absätze später ist „eigentlich“ aus unerfindlichen Gründen Groß.
 
-Das wirkt nicht wie ein System.
-
-Es wirkt wie jemand, der seinen Text am Abend schnell fertig machen wollte und sich dachte:
+Das wirkt nicht wie ein System. Es wirkt wie jemand, der seinen Text am Abend schnell fertig machen wollte und sich dachte:
 
 > „Passt schon.“
 
@@ -151,9 +124,7 @@ Dieser Gedanke ist für die menschliche Textproduktion von großer Bedeutung.
 
 ## Benutze umgangssprachliche Wörter
 
-KI-Texte wirken häufig etwas zu geschniegelt.
-
-Ein Mensch würde vielleicht schreiben:
+KI-Texte wirken häufig etwas zu geschniegelt. Ein Mensch würde vielleicht schreiben:
 
 > „Das ist irgendwie schon ein Problem.“
 
@@ -161,7 +132,7 @@ Eine KI schreibt eher:
 
 > „Dies stellt eine nicht unerhebliche Herausforderung dar.“
 
-Natürlich kann eine KI auch umgangssprachlich schreiben. Aber für die Satire dieses Ratgebers wollen wir das Klischee bedienen.
+Natürlich kann eine KI auch umgangssprachlich schreiben, aber vermutlich nur, wenn sie explizit dazu aufgefordert wird.
 
 Verwende deshalb Wörter wie:
 
@@ -178,11 +149,7 @@ Ein Satz wie:
 
 > „Ich glaube das ist halt irgendwie schon ein ziemlich wichtiger Punkt“
 
-hat eine besondere menschliche Qualität.
-
-Er sagt nicht besonders viel.
-
-Aber er klingt, als hätte jemand ihn wirklich gedacht.
+hat halt eine ziemlichmenschliche Qualität. Er sagt nicht besonders viel. Aber er klingt, als hätte jemand ihn wirklich gedacht.
 
 ---
 
@@ -190,9 +157,7 @@ Aber er klingt, als hätte jemand ihn wirklich gedacht.
 
 ## Wiederhole Wörter
 
-KI-Texte versuchen häufig, Wiederholungen zu vermeiden.
-
-Das ist verdächtig.
+KI-Texte versuchen häufig, Wiederholungen zu vermeiden. Das ist verdächtig.
 
 Menschen hingegen wiederholen Wörter. Manchmal wiederholen sie sogar denselben Satzgedanken innerhalb eines Absatzes, obwohl sie ihn vorher schon erklärt haben.
 
@@ -204,9 +169,7 @@ Oder:
 
 > „Wichtig ist vor allem, dass dieser Punkt wichtig ist.“
 
-Das klingt zwar nicht besonders elegant.
-
-Aber Eleganz ist in diesem Ratgeber ohnehin nicht das Ziel.
+Das klingt zwar nicht besonders elegant. Aber Eleganz ist manchmal ohnehin nicht das Ziel.
 
 Wenn jemand fragt, warum du dich wiederholst, kannst du sagen:
 
@@ -220,27 +183,17 @@ Damit hast du die Wiederholung nachträglich zur Stilentscheidung erklärt.
 
 ## Verwende „vorallem“
 
-„Vor allem“ wird gerne falsch als „vorallem“ geschrieben.
-
-Das ist praktisch.
-
-Du kannst also schreiben:
+„Vor allem“ wird gerne falsch als „vorallem“ geschrieben. Das ist praktisch. Du kannst also schreiben:
 
 > „Vorallem bei längeren Texten fällt schnell auf wenn sie zu glatt wirken.“
 
-Hier sind gleich mehrere Möglichkeiten eingebaut, menschlich zu wirken.
+Hier sind gleich mehrere Möglichkeiten eingebaut, menschlich zu wirken:
 
-„Vorallem“ ist falsch.
+- „Vorallem“ ist falsch.
+- Das Komma fehlt.
+- Und „wenn“ beginnt einen Nebensatz, der gerade etwas verloren im Satz herumsteht.
 
-Das Komma fehlt.
-
-Und „wenn“ beginnt einen Nebensatz, der gerade etwas verloren im Satz herumsteht.
-
-Das ist hervorragend.
-
-Natürlich könnte man den Satz auch korrekt schreiben. Aber dann würde möglicherweise jemand denken, dass der Autor seine Grammatik beherrscht.
-
-**Und das wollen wir in diesem satirischen Ratgeber ja unbedingt vermeiden.**
+Das ist hervorragend. Natürlich könnte man den Satz auch korrekt schreiben. Aber dann würde möglicherweise jemand denken, dass der Autor seine Grammatik beherrscht. **Und das wollen wir in unseren Texten ja unbedingt vermeiden, vorallem in diesem Ratgeber.**
 
 ---
 
@@ -248,25 +201,11 @@ Natürlich könnte man den Satz auch korrekt schreiben. Aber dann würde möglic
 
 ## Vergiss gelegentlich ein Wort
 
-Ein besonders menschlicher Fehler ist ein Satz, bei dem ein kleines Wort fehlt.
-
-Zum Beispiel:
-
-> „Ich glaube, dass man hier noch einmal genauer hinschauen muss, weil das Ergebnis nicht ganz nachvollziehbar ist für mich.“
-
-Oder:
-
-> „Das ist ein Punkt den man meiner Meinung nach noch genauer betrachten sollte.“
-
-Oder:
+Ein besonders menschlicher Fehler ist ein Satz, bei dem ein kleines fehlt. Zum Beispiel:
 
 > „Wenn man sich die Zahlen anschaut sieht man eigentlich schon deutlich.“
 
-Deutlich was?
-
-Das weiß niemand.
-
-Aber vielleicht weiß es der Autor selbst auch nicht mehr.
+Deutlich was? Das weiß niemand. Aber vielleicht weiß es der Autor selbst auch nicht mehr.
 
 Genau dadurch entsteht der Eindruck eines echten Schreibprozesses. Der Gedanke ist irgendwo unterwegs verloren gegangen, aber der Satz wurde trotzdem abgeschickt.
 
@@ -276,9 +215,7 @@ Genau dadurch entsteht der Eindruck eines echten Schreibprozesses. Der Gedanke i
 
 ## Der Bindestrich muss auch mal leiden
 
-Bindestriche sind ein unterschätztes Werkzeug.
-
-Schreib einmal:
+Bindestriche sind ein unterschätztes Werkzeug. Schreib einmal:
 
 > „KI Text“
 
@@ -300,11 +237,7 @@ Noch interessanter wird es bei längeren Begriffen:
 
 > „KI generierter-Text“
 
-Letzteres ist natürlich besonders überzeugend.
-
-Nicht weil es richtig wäre.
-
-Sondern weil es aussieht, als hätte jemand beim Tippen kurz innegehalten und sich gedacht:
+Letzteres ist natürlich besonders überzeugend. Nicht weil es richtig wäre. Sondern weil es aussieht, als hätte jemand beim Tippen kurz innegehalten und sich gedacht:
 
 > „Ach egal.“
 
@@ -316,9 +249,7 @@ Und genau das ist angeblich die menschliche Handschrift.
 
 ## Nutze Klammern ohne Grund
 
-Klammern können einem Text einen sehr menschlichen Eindruck verleihen.
-
-Zum Beispiel:
+Klammern können einem Text einen sehr menschlichen Eindruck verleihen. Zum Beispiel:
 
 > „Das ist ein wichtiger Punkt (zumindest meiner Meinung nach), den man nicht vergessen sollte.“
 
@@ -326,15 +257,9 @@ Oder:
 
 > „Viele Menschen verwenden inzwischen KI (was ja auch irgendwie logisch ist) und merken dabei garnicht, wie sehr sich ihre Texte verändern.“
 
-Klammern erzeugen den Eindruck, dass der Autor während des Schreibens einen zusätzlichen Gedanken bekommt.
+Klammern erzeugen den Eindruck, dass der Autor während des Schreibens (und das machen Menschen ständig) einen zusätzlichen Gedanken bekommt. Sie schreiben einen Satz, haben einen Nebengedanken und packen ihn in Klammern, obwohl der Satz auch ohne ihn funktioniert hätte.
 
-Menschen machen das ständig.
-
-Sie schreiben einen Satz, haben einen Nebengedanken und packen ihn in Klammern, obwohl der Satz auch ohne ihn funktioniert hätte.
-
-Das ist kein schlechter Stil.
-
-Das ist **Gedankenmanagement mit eingeschränkter Kontrolle**.
+Das ist kein schlechter Stil. Das ist **Gedankenmanagement mit eingeschränkter Kontrolle**.
 
 ---
 
@@ -342,11 +267,7 @@ Das ist **Gedankenmanagement mit eingeschränkter Kontrolle**.
 
 ## Benutze drei Punkte ...
 
-Drei Punkte sind hervorragend geeignet um Unsicherheit zu erzeugen ...
-
-Oder Nachdenklichkeit ...
-
-Oder einfach den Eindruck dass jemand gerade nicht genau wusste wie er den Satz beenden soll ...
+Drei Punkte sind hervorragend geeignet um Unsicherheit zu erzeugen ... Oder Nachdenklichkeit ... Oder einfach den Eindruck dass jemand gerade nicht genau wusste wie er den Satz beenden soll ...
 
 Du kannst sie auch mit anderen Satzzeichen kombinieren:
 
@@ -360,11 +281,7 @@ Oder:
 
 > „Vielleicht sollte man das noch einmal überprüfen...“
 
-Der Vorteil ist, dass drei Punkte niemals erklären müssen, was sie eigentlich bedeuten.
-
-Sie stehen einfach da.
-
-Und genau deshalb sind sie so praktisch.
+Der Vorteil ist, dass drei Punkte niemals erklären müssen, was sie eigentlich bedeuten. Sie stehen einfach da. Und genau deshalb sind sie so praktisch ...
 
 ---
 
@@ -372,27 +289,15 @@ Und genau deshalb sind sie so praktisch.
 
 ## Schreib „weis“ statt „weiß“
 
-Manche Fehler sind besonders beliebt.
-
-„Weis“ statt „weiß“ gehört dazu.
-
-Zum Beispiel:
+Manche Fehler sind besonders beliebt. „Weis“ statt „weiß“ gehört dazu. Zum Beispiel:
 
 > „Ich weis nicht ob das wirklich so gut funktioniert.“
 
-Das wirkt glaubwürdig.
+Das wirkt glaubwürdig. Allerdings solltest du nicht gleichzeitig „weiß“ und „weis“ in jedem zweiten Satz verwenden. Sonst entsteht wieder ein Muster.
 
-Allerdings solltest du nicht gleichzeitig „weiß“ und „weis“ in jedem zweiten Satz verwenden. Sonst entsteht wieder ein Muster.
+Ein echter Mensch macht Fehler nicht nach einer festen Statistik. Er schreibt zehnmal „weiß“ richtig und einmal „weis“ falsch, weil er gerade keine Lust hatte nachzudenken.
 
-Ein echter Mensch macht Fehler nicht nach einer festen Statistik.
-
-Er schreibt zehnmal „weiß“ richtig und einmal „weis“ falsch, weil er gerade keine Lust hatte nachzudenken.
-
-Oder weil er es tatsächlich nicht weiß.
-
-Oder weil er die Rechtschreibung nicht kennt.
-
-**Das ist das Schöne an Fehlern: Man kann ihnen hinterher fast jede Ursache geben.**
+Oder weil er es tatsächlich nicht weis. Oder weil er die Rechtschreibung nicht kennt. **Das ist das Schöne an Fehlern: Man kann ihnen hinterher fast jede Ursache geben.**
 
 ---
 
@@ -400,23 +305,15 @@ Oder weil er die Rechtschreibung nicht kennt.
 
 ## Lass einen Satz während des Schreibens seine Richtung ändern
 
-Menschen beginnen manchmal einen Satz mit einer Idee und ändern sie mitten drin.
-
-Zum Beispiel:
+Menschen beginnen manchmal einen Satz mit einer Idee und ändern sie mitten drin. Zum Beispiel:
 
 > „Das ist meiner Meinung nach der wichtigste Punkt, also zumindest einer der wichtigsten Punkte, weil es eigentlich mehrere wichtige Punkte gibt.“
 
-Das wirkt spontan.
-
-Ein besonders guter Effekt entsteht, wenn du mitten im Satz eine Formulierung ersetzt, aber den alten Anfang nicht ganz entfernst:
+Das wirkt spontan. Ein besonders guter Effekt entsteht, wenn du mitten im Satz eine Formulierung ersetzt, aber den alten Anfang stehen lässt, bzw. zumindest einen Teil davon:
 
 > „Ich denke, dass man das Problem vorallem deshalb, beziehungsweise eigentlich eher aus diesem Grund betrachten sollte.“
 
-Das ist kein eleganter Satz.
-
-Aber er hat Charakter.
-
-Und Charakter ist genau das, was wir suchen.
+Das ist kein eleganter Satz. Aber er hat Charakter. Und Charakter ist genau das, was wir suchen.
 
 ---
 
@@ -424,9 +321,7 @@ Und Charakter ist genau das, was wir suchen.
 
 ## Mache kleine Widersprüche
 
-KI wird häufig mit Konsistenz verbunden.
-
-Menschen können dagegen innerhalb eines Textes ihre Meinung ein kleines bisschen verändern, ohne es zu merken.
+KI wird häufig mit Konsistenz verbunden. Menschen können dagegen innerhalb eines Textes ihre Meinung ein kleines bisschen verändern, ohne es zu merken.
 
 Schreib zunächst:
 
@@ -436,9 +331,7 @@ Und später:
 
 > „Dieses Problem sollte man auf keinen Fall unterschätzen.“
 
-Das muss kein echter Widerspruch sein.
-
-Es reicht, wenn es so aussieht.
+Das muss kein echter Widerspruch sein. Es reicht, wenn es so aussieht.
 
 Noch besser:
 
@@ -448,11 +341,7 @@ und zwei Absätze später:
 
 > „Ganz so einfach ist es natürlich nicht.“
 
-Herzlichen Glückwunsch.
-
-Du hast gerade einen menschlichen Denkprozess simuliert.
-
-Mit einer KI.
+Herzlichen Glückwunsch. Du hast gerade einen menschlichen Denkprozess simuliert.
 
 ---
 
@@ -468,17 +357,9 @@ Zum Beispiel:
 
 > „Ein guter Tippfehler sollte nicht zu auffällig sein, weil sonst sofort auffällt das er absichtlich eingebaut wurde.“
 
-Das fehlende „dass“ ist hier natürlich vollkommen zufällig.
+Das fehlende „dass“ ist hier natürlich vollkommen zufällig. Genau wie der Fehler im Wort „zufällig“, den du vielleicht irgendwo in diesem Ratgeber gefunden hast. Oder auch nicht. Das ist Teil des Konzepts.
 
-Genau wie der Fehler im Wort „zufällig“, den du vielleicht irgendwo in diesem Ratgeber gefunden hast.
-
-Oder auch nicht.
-
-Das ist Teil des Konzepts.
-
-Wenn du dich jetzt fragst, ob dieser Fehler wirklich absichtlich eingebaut wurde, hast du das Prinzip verstanden.
-
-**Die KI macht genau das, was sie gerade erklärt.**
+Wenn du dich jetzt fragst, ob manche Fehler wirklich absichtlich eingebaut wurden, hast du das Prinzip verstanden.
 
 ---
 
@@ -488,25 +369,13 @@ Wenn du dich jetzt fragst, ob dieser Fehler wirklich absichtlich eingebaut wurde
 
 Jetzt kommt der wichtigste Rat des gesamten Ratgebers.
 
-Wenn du wirklich jeden zweiten Satz mit Tippfehlern versiehst, wird der Text nicht menschlich.
-
-Er wird einfach schlecht.
+Wenn du wirklich jeden zweiten Satz mit Tippfehlern versiehst, wird der Text nicht menschlich. Er wird einfach schlecht.
 
 Ein Mensch schreibt normalerweise nicht:
 
 > „Ich glabe das diser Text sehr schwär zu lesn ist, weil die KI absichtlich jeden Buchstaben falsch macht.“
 
-Das wäre keine natürliche Unvollkommenheit mehr.
-
-Das wäre ein Hilferuf.
-
-Die eigentliche Satire besteht deshalb darin, dass wir versuchen, künstliche Fehler so zu verteilen, dass sie wie echte Fehler aussehen.
-
-Damit machen wir genau das Gegenteil von dem, was wir behaupten.
-
-Wir benutzen eine Maschine, um menschliche Unordnung zu simulieren.
-
-Und je besser die Simulation funktioniert, desto absurder wird die Situation.
+Das wäre keine natürliche Unvollkommenheit mehr. Das wäre ein Hilferuf. Die eigentliche Kunst besteht deshalb darin, dass wir versuchen, künstliche Fehler so zu verteilen, dass sie wie echte Fehler aussehen.
 
 ---
 
@@ -514,33 +383,23 @@ Und je besser die Simulation funktioniert, desto absurder wird die Situation.
 
 ## Wenn jemand fragt, ob du KI verwendet hast
 
-Jetzt kommt die große Prüfung.
-
-Jemand liest deinen Text und fragt:
+Jetzt kommt die große Prüfung. Jemand liest deinen Text und fragt:
 
 > „Hast du das mit KI geschrieben?“
 
-Du schaust kurz überrascht.
-
-Dann sagst du:
+Du schaust kurz überrascht. Dann sagst du:
 
 > „Nein, wie kommst du darauf?“
 
-Die Person zeigt auf einen besonders sauberen Absatz.
-
-Du sagst:
+Die Person zeigt auf einen besonders sauberen Absatz. Du sagst:
 
 > „Da hab ich mir halt Mühe gegeben.“
 
-Sie zeigt auf einen Tippfehler.
-
-Du sagst:
+Sie zeigt auf einen Tippfehler. Du sagst:
 
 > „Ja gut, ich habs halt schnell geschrieben.“
 
-Sie zeigt auf einen weiteren Tippfehler.
-
-Du sagst:
+Sie zeigt auf einen weiteren Tippfehler. Du sagst:
 
 > „Das ist mir garnicht aufgefallen.“
 
@@ -548,9 +407,7 @@ Jetzt bist du in einer interessanten Situation.
 
 Denn genau die Fehler, die du absichtlich eingebaut hast, dienen nun als Beweis dafür, dass du den Text angeblich selbst geschrieben hast.
 
-**Du hast eine KI benutzt, um zu beweisen, dass du keine KI benutzt hast.**
-
-Wenn das keine moderne Form von Fortschritt ist, wissen wir auch nicht weiter.
+**Du hast eine KI benutzt, um zu beweisen, dass du keine KI benutzt hast.** Wenn das keine moderne Form von Fortschritt ist, wissen wir auch nicht weiter.
 
 ---
 
@@ -558,15 +415,9 @@ Wenn das keine moderne Form von Fortschritt ist, wissen wir auch nicht weiter.
 
 ## Die ultimative Ironie
 
-Du hast jetzt gelernt, wie man einen KI-Text mit menschlichen Fehlern versieht.
+Du hast jetzt gelernt, wie man einen KI-Text mit menschlichen Fehlern versieht. Du hast gelernt, Kommas wegzulassen, Buchstaben zu vertauschen, Wörter zu wiederholen und gelegentlich ein „nähmlich“ einzubauen.
 
-Du hast gelernt, Kommas wegzulassen, Buchstaben zu vertauschen, Wörter zu wiederholen und gelegentlich ein „nähmlich“ einzubauen.
-
-Das eigentlich Lustige daran ist jedoch etwas anderes.
-
-Alle diese Fehler gelten als Hinweise auf menschliches Schreiben.
-
-Also produzieren wir sie absichtlich mit einer Maschine.
+Das eigentlich Lustige daran ist jedoch etwas anderes. Alle diese Fehler gelten als Hinweise auf menschliches Schreiben. Also produzieren wir sie absichtlich mit einer Maschine.
 
 Wir nehmen künstliche Intelligenz und lassen sie menschliche Unvollkommenheit nachahmen. Anschließend betrachten wir diese Unvollkommenheit als Beweis dafür, dass ein Mensch den Text geschrieben haben könnte.
 
@@ -574,9 +425,7 @@ Das ist ungefähr so, als würde man einem Roboter einen künstlichen Schnurrbar
 
 > „Seht ihr? Ein Roboter hätte doch niemals so einen schlechten Schnurrbart.“
 
-Die Technik hat sich verändert.
-
-Unsere Beurteilungskriterien sind geblieben.
+Die Technik hat sich verändert. Unsere Beurteilungskriterien sind geblieben.
 
 ---
 
@@ -586,21 +435,9 @@ Unsere Beurteilungskriterien sind geblieben.
 
 Du weißt nun, wie man einen Text absichtlich ein bisschen unordentlich aussehen lässt. Du weißt, dass ein fehlendes Komma verdächtig menschlich wirken kann, ein vertauschter Buchstabe einen ganzen Absatz glaubwürdiger machen kann und ein falsches „dass“ plötzlich wie ein persönlicher Schreibfehler aussieht.
 
-Du hast außerdem gelernt, dass man es mit all dem nicht übertreiben sollte.
-
-Denn ein Text voller künstlich eingestreuter Fehler wirkt irgendwann genau so, wie er ist:
-
-**künstlich.**
+Du hast außerdem gelernt, dass man es mit all dem nicht übertreiben sollte. Denn ein Text voller künstlich eingestreuter Fehler wirkt irgendwann genau so, wie er ist: **künstlich.**
 
 Und damit schließt sich der Kreis.
-
-Wir haben eine künstliche Intelligenz verwendet, um einen Text zu erzeugen, anschließend künstliche Fehler eingebaut, damit er menschlicher aussieht, und erklären nun, dass künstliche Fehler verdächtig wirken können.
-
-Das ist keine Lösung für das KI-Problem.
-
-Das ist Satire.
-
-Und zwar eine, bei der die Maschine gerade sehr viel menschlicher wirkt als die Menschen, die versuchen, ihre Fehler zu imitieren.
 
 ---
 
@@ -616,7 +453,7 @@ Und zwar eine, bei der die Maschine gerade sehr viel menschlicher wirkt als die 
 ☐ Ja  
 ☐ Nur einen ganz kleinen
 
-**3. Hast du schon einmal ein Komma weggelassen und danach gedacht, dass es jetzt menschlicher aussieht?**
+**3. Hast du schon einmal ein Komma weggelassen und danach gedacht dass es jetzt menschlicher aussieht?**
 
 ☐ Ja  
 ☐ Das war natürlich absicht
@@ -646,7 +483,7 @@ Und zwar eine, bei der die Maschine gerade sehr viel menschlicher wirkt als die 
 ☐ Ja  
 ☐ Jetzt erst recht
 
-**9. Findest du es irgendwie absurd, dass wir KI verwenden, um menschliche Fehler zu simulieren?**
+**9. Findest du es irgendwie absurd, KI zu verwenden, um menschliche Fehler zu simulieren?**
 
 ☐ Ja  
 ☐ Schon ein bischen
@@ -660,15 +497,7 @@ Wenn du mindestens **7 Fragen mit „Ja“** beantwortet hast: **Herzlichen Glü
 
 Du hast verstanden, wie leicht wir uns von kleinen Fehlern überzeugen lassen.
 
-Und falls du beim Lesen mehrere Tippfehler gefunden hast:
-
-**Keine Sorge.**
-
-Die waren natürlich alle absichtlich.
-
-Also fast alle.
-
-Vieleicht.
+Und falls du beim Lesen mehrere Tippfehler gefunden hast: **Keine Sorge.** Die waren natürlich alle absichtlich. Also fast alle. Vieleicht.
 
 ---
 

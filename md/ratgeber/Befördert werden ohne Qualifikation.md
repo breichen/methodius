@@ -1,3 +1,4 @@
+
 # Befördert werden ohne Qualifikation
 
 ## Der ultimative Ratgeber für alle, die beruflich nach oben wollen, ohne sich vorher mit den lästigen Details wie Fachwissen, Leistung oder Zuständigkeit aufzuhalten
@@ -12,9 +13,7 @@ Du möchtest befördert werden. Ein vernünftiges Ziel, schließlich steigt mit 
 
 Leider gibt es ein kleines Problem: Für eine Beförderung werden normalerweise Dinge wie Erfahrung, Fachwissen, Verantwortung und nachweisbare Leistung erwartet. Das ist natürlich bedauerlich. Vor allem, weil der Erwerb dieser Fähigkeiten erstaunlich viel Zeit kostet und du eigentlich schon jetzt gerne einen größeren Schreibtisch hättest.
 
-Zum Glück gibt es eine Alternative.
-
-Du musst nicht unbedingt **mehr können**. Du musst zunächst einmal **mehr nach jemandem aussehen, der mehr kann**.
+Zum Glück gibt es eine Alternative. Du musst nicht unbedingt **mehr können**. Du musst zunächst einmal **mehr nach jemandem aussehen, der mehr kann**.
 
 **Denn Karriere ist nicht nur die Kunst, gute Arbeit zu leisten. Es ist auch die Kunst, dafür gehalten zu werden.**
 
@@ -24,9 +23,7 @@ Du musst nicht unbedingt **mehr können**. Du musst zunächst einmal **mehr nach
 
 ## Warte nicht darauf, dass jemand deine Leistung bemerkt
 
-Der erste Fehler wäre, einfach gute Arbeit zu machen und darauf zu hoffen, dass irgendwann jemand kommt und sagt: „Vielen Dank. Dafür befördern wir dich jetzt.“
-
-So funktioniert das leider nicht zuverlässig.
+Der erste Fehler wäre, einfach gute Arbeit zu machen und darauf zu hoffen, dass irgendwann jemand kommt und sagt: „Vielen Dank. Dafür befördern wir dich jetzt.“ So funktioniert das leider nicht zuverlässig.
 
 Viel besser ist es, deine Arbeit regelmäßig sichtbar zu machen. Schicke Updates, fasse Ergebnisse zusammen und erwähne beiläufig, welche Herausforderungen du „begleitet“ hast. Dabei musst du nicht übertreiben. Es reicht vollkommen, eine erledigte Aufgabe so zu beschreiben, dass sie nach einem mehrwöchigen Transformationsprojekt klingt.
 
@@ -42,9 +39,7 @@ Verantwortung ist ein faszinierendes Konzept. Niemand kann sie direkt messen, ab
 
 Du kannst beispielsweise sagen: „Ich habe in letzter Zeit zunehmend Verantwortung für diesen Bereich übernommen.“ Das klingt nach Führung, ohne dass du tatsächlich jemanden führen musst.
 
-Falls jemand fragt, welche Verantwortung genau gemeint ist, kannst du auf Prozesse, Abstimmungen und Schnittstellen verweisen. Diese drei Begriffe sind besonders hilfreich, weil sie gleichzeitig wichtig und ausreichend unkonkret sind.
-
-**Je größer der Verantwortungsbereich klingt, desto kleiner darf der konkrete Inhalt sein.**
+Falls jemand fragt, welche Verantwortung genau gemeint ist, kannst du auf Prozesse, Abstimmungen und Schnittstellen verweisen. Diese drei Begriffe sind besonders hilfreich, weil sie gleichzeitig wichtig und ausreichend unkonkret sind. **Je größer der Verantwortungsbereich klingt, desto kleiner darf der konkrete Inhalt sein.**
 
 ---
 
@@ -52,19 +47,13 @@ Falls jemand fragt, welche Verantwortung genau gemeint ist, kannst du auf Prozes
 
 ## Sprich wie eine Führungskraft
 
-Führungskräfte sagen selten: „Das weiß ich nicht.“
+Führungskräfte sagen selten: „Das weiß ich nicht.“ Sie sagen eher: „Das würde ich gerne noch einmal einordnen.“
 
-Sie sagen eher: „Das würde ich gerne noch einmal einordnen.“
-
-Sie sagen auch nicht: „Das klappt nicht.“
-
-Sie sagen: „Da sehe ich aktuell noch Herausforderungen in der Umsetzung.“
+Sie sagen auch nicht: „Das klappt nicht.“ Sie sagen: „Da sehe ich aktuell noch Herausforderungen in der Umsetzung.“
 
 Wenn du diese Sprache beherrschst, kannst du innerhalb weniger Wochen von einem Menschen, der keine Ahnung hat, zu einem Menschen werden, der „komplexe Themen strukturiert“.
 
-Das ist ein beeindruckender Aufstieg.
-
-**Nicht fachlich. Aber sprachlich.**
+Das ist ein beeindruckender Aufstieg. **Nicht fachlich, aber sprachlich.**
 
 ---
 
@@ -74,9 +63,7 @@ Das ist ein beeindruckender Aufstieg.
 
 Eine der zuverlässigsten Methoden, kompetent zu wirken, besteht darin, nicht alles selbst zu machen.
 
-Wenn dir jemand eine Aufgabe gibt, frage zunächst: „Wer sollte das aus deiner Sicht übernehmen?“ Damit klingt es, als würdest du bereits Kapazitäten und Zuständigkeiten steuern.
-
-Wenn du anschließend die Aufgabe tatsächlich jemand anderem gibst, hast du sogar delegiert.
+Wenn dir jemand eine Aufgabe gibt, frage zunächst: „Wer sollte das aus deiner Sicht übernehmen?“ Damit klingt es, als würdest du bereits Kapazitäten und Zuständigkeiten steuern. Wenn du anschließend die Aufgabe tatsächlich jemand anderem gibst, hast du sogar delegiert.
 
 Natürlich sollte die betreffende Person wissen, dass sie jetzt dafür zuständig ist. Das erhöht die Wahrscheinlichkeit, dass das Ergebnis später tatsächlich existiert.
 
@@ -88,9 +75,7 @@ Natürlich sollte die betreffende Person wissen, dass sie jetzt dafür zuständi
 
 ## Organisiere Meetings
 
-Meetings sind ein hervorragendes Karriereinstrument.
-
-Nicht unbedingt, weil sie besonders produktiv sind, sondern weil sie sichtbar machen, dass du offenbar mit wichtigen Dingen beschäftigt bist. Wer einen Termin mit sechs Personen organisiert, wirkt automatisch relevanter als jemand, der allein an einer Aufgabe arbeitet.
+Meetings sind ein hervorragendes Karriereinstrument. Nicht unbedingt, weil sie besonders produktiv sind, sondern weil sie sichtbar machen, dass du offenbar mit wichtigen Dingen beschäftigt bist. Wer einen Termin mit sechs Personen organisiert, wirkt automatisch relevanter als jemand, der allein an einer Aufgabe arbeitet.
 
 Besonders überzeugend sind Titel wie „Strategischer Austausch“, „Alignment“ oder „Deep Dive“.
 
@@ -110,9 +95,7 @@ Wenn du eine konkrete Aufgabe nicht lösen kannst, erkläre, dass du zunächst d
 
 Und wenn du überhaupt nicht weißt, worum es geht, kannst du immer noch fragen: „Was bedeutet das strategisch für uns?“
 
-Damit hast du zwar nichts beantwortet, aber eine Frage gestellt, die nach Verantwortung klingt.
-
-**Strategie beginnt dort, wo konkrete Antworten unangenehm werden.**
+Damit hast du zwar nichts beantwortet, aber eine Frage gestellt, die nach Verantwortung klingt. **Strategie beginnt dort, wo konkrete Antworten unangenehm werden.**
 
 ---
 
@@ -120,15 +103,11 @@ Damit hast du zwar nichts beantwortet, aber eine Frage gestellt, die nach Verant
 
 ## Baue Beziehungen auf
 
-Natürlich solltest du auch mit Menschen sprechen, die tatsächlich etwas zu sagen haben.
-
-Nicht, um sie zu manipulieren. Das wäre unseriös.
+Natürlich solltest du auch mit Menschen sprechen, die tatsächlich etwas zu sagen haben. Nicht, um sie zu manipulieren. Das wäre unseriös.
 
 Es reicht völlig, regelmäßig mit Kolleginnen und Kollegen, Vorgesetzten und anderen relevanten Personen im Austausch zu sein. Frage, woran sie arbeiten, höre aufmerksam zu und merke dir gelegentlich einen Namen.
 
-Wenn später eine Beförderung diskutiert wird, ist es schließlich hilfreich, wenn dein Name nicht zum ersten Mal fällt, weil jemand fragt: „Wer war das noch mal?“
-
-**Netzwerken bedeutet im Kern, dafür zu sorgen, dass andere wissen, dass du existierst.**
+Wenn später eine Beförderung diskutiert wird, ist es schließlich hilfreich, wenn dein Name nicht zum ersten Mal fällt, weil jemand fragt: „Wer war das noch mal?“ **Netzwerken bedeutet im Kern, dafür zu sorgen, dass andere wissen, dass du existierst.**
 
 ---
 
@@ -138,15 +117,11 @@ Wenn später eine Beförderung diskutiert wird, ist es schließlich hilfreich, w
 
 Wenn eine Diskussion beginnt, in der du fachlich nicht mitreden kannst, hast du trotzdem eine Möglichkeit: Moderiere sie.
 
-„Lass uns die Punkte einmal strukturieren.“
-
-Dieser Satz kann dich erstaunlich weit bringen.
+„Lass uns die Punkte einmal strukturieren.“ Dieser Satz kann dich erstaunlich weit bringen.
 
 Du musst nicht wissen, welche Lösung richtig ist. Du musst nur dafür sorgen, dass andere ihre Lösungen in einer Reihenfolge präsentieren. Anschließend kannst du zusammenfassen, was gesagt wurde.
 
-Und plötzlich hast du etwas getan, das nach Führung aussieht.
-
-**Wer die Diskussion zusammenfasst, klingt automatisch so, als hätte er sie verstanden.**
+Und plötzlich hast du etwas getan, das nach Führung aussieht. **Wer die Diskussion zusammenfasst, klingt automatisch so, als hätte er sie verstanden.**
 
 ---
 
@@ -168,19 +143,11 @@ Viel besser ist es, vorhandene Fähigkeiten größer wirken zu lassen, ohne fals
 
 ## Mach aus Fehlern Lernprozesse
 
-Wenn etwas schiefgeht, darfst du niemals sagen: „Das war mein Fehler.“
-
-Das klingt viel zu abschließend.
-
-Besser ist: „Daraus haben wir wichtige Learnings für den weiteren Prozess gewonnen.“
+Wenn etwas schiefgeht, darfst du niemals sagen: „Das war mein Fehler.“ Das klingt viel zu abschließend. Besser ist: „Daraus haben wir wichtige Learnings für den weiteren Prozess gewonnen.“
 
 Jetzt ist aus einem Fehler plötzlich ein Lernprozess geworden. Aus einem Problem wurde eine Erkenntnis. Und aus deiner Verantwortung wurde ein Beitrag zur kontinuierlichen Verbesserung.
 
-Natürlich solltest du den Fehler trotzdem beheben.
-
-Zumindest dann, wenn jemand weiß, dass du ihn verursacht hast.
-
-**Der Unterschied zwischen einem Fehler und einem Learning ist häufig nur eine Präsentationsfolie.**
+Natürlich solltest du den Fehler trotzdem beheben. Zumindest dann, wenn jemand weiß, dass du ihn verursacht hast. **Der Unterschied zwischen einem Fehler und einem Learning ist häufig nur eine Präsentationsfolie.**
 
 ---
 
@@ -190,14 +157,11 @@ Zumindest dann, wenn jemand weiß, dass du ihn verursacht hast.
 
 Eine hervorragende Führungskraft sagt am Ende eines Gesprächs: „Ich nehme das mit.“
 
-Dieser Satz ist nahezu perfekt.
-
-Er klingt verantwortungsvoll, ohne festzulegen, was genau du mitnimmst. Vielleicht nimmst du einen Gedanken mit. Vielleicht eine Aufgabe. Vielleicht auch nur das Wissen, dass du irgendwann etwas tun solltest.
+Dieser Satz ist nahezu perfekt. Er klingt verantwortungsvoll, ohne festzulegen, was genau du mitnimmst. Vielleicht nimmst du einen Gedanken mit. Vielleicht eine Aufgabe. Vielleicht auch nur das Wissen, dass du irgendwann etwas tun solltest.
 
 Noch besser funktioniert: „Ich würde dazu noch einmal einen Vorschlag machen.“
 
 Wann? Das bleibt offen.
-
 Wie? Ebenfalls.
 
 **Aber plötzlich bist du derjenige, von dem ein Vorschlag erwartet wird.**
@@ -208,17 +172,11 @@ Wie? Ebenfalls.
 
 ## Sei nicht der Erste, der zugibt, nichts zu wissen
 
-Wenn alle anderen in einem Meeting nicken, solltest du nicht plötzlich sagen: „Ich verstehe überhaupt nichts.“
+Wenn alle anderen in einem Meeting nicken, solltest du nicht plötzlich sagen: „Ich verstehe überhaupt nichts.“ Das ist zwar ehrlich, aber karrieretechnisch nicht optimal.
 
-Das ist zwar ehrlich, aber karrieretechnisch nicht optimal.
+Warte lieber. Vielleicht stellt jemand anderes die Frage, die du ebenfalls gehabt hättest. Dann kannst du zustimmend nicken und sagen: „Genau darauf wollte ich hinaus.“
 
-Warte lieber.
-
-Vielleicht stellt jemand anderes die Frage, die du ebenfalls gehabt hättest. Dann kannst du zustimmend nicken und sagen: „Genau darauf wollte ich hinaus.“
-
-Damit hast du gleichzeitig Unwissenheit vermieden und eine Verbindung zu einer guten Frage hergestellt.
-
-**Teamwork bedeutet manchmal, dass jemand anderes die Frage stellt, die du dich nicht getraut hast zu stellen.**
+Damit hast du gleichzeitig Unwissenheit vermieden und eine Verbindung zu einer guten Frage hergestellt. **Teamwork bedeutet manchmal, dass jemand anderes die Frage stellt, die du dich nicht getraut hast zu stellen.**
 
 ---
 
@@ -226,11 +184,7 @@ Damit hast du gleichzeitig Unwissenheit vermieden und eine Verbindung zu einer g
 
 ## Fordere die Beförderung
 
-Eine erstaunlich große Zahl von Menschen wartet darauf, entdeckt zu werden.
-
-Das ist romantisch.
-
-Und vermutlich ineffizient.
+Eine erstaunlich große Zahl von Menschen wartet darauf, entdeckt zu werden. Das ist romantisch. Und vermutlich ineffizient.
 
 Wenn du der Meinung bist, dass du bereit für den nächsten Schritt bist, solltest du darüber sprechen. Nicht mit „Ich will mehr Geld“, sondern mit einer sorgfältig formulierten Erklärung darüber, wie sich deine Rolle entwickelt hat.
 
@@ -250,11 +204,7 @@ Du kannst dich weiterentwickeln, Erfahrung sammeln und dir tatsächlich die Fäh
 
 Oder du kannst darauf hoffen, dass die Organisation irgendwann so kompliziert geworden ist, dass niemand mehr genau weiß, wer für was qualifiziert sein müsste.
 
-Beide Strategien haben ihre Vorteile.
-
-Die erste dauert allerdings länger.
-
-**Und genau deshalb ist die zweite in diesem Ratgeber deutlich beliebter.**
+Beide Strategien haben ihre Vorteile. Die erste dauert allerdings länger. **Und genau deshalb ist die zweite in diesem Ratgeber deutlich beliebter.**
 
 ---
 
@@ -264,15 +214,11 @@ Die erste dauert allerdings länger.
 
 Du hast gelernt, wie man Verantwortung signalisiert, Meetings organisiert, strategisch spricht und aus alltäglichen Aufgaben beeindruckende berufliche Entwicklungen macht.
 
-Vielleicht bist du noch nicht bereit für eine Führungsposition. Vielleicht fehlt dir Erfahrung. Vielleicht fehlt dir Fachwissen. Vielleicht fehlt dir sogar eine klare Vorstellung davon, was die neue Position eigentlich macht.
-
-Aber immerhin weißt du jetzt, wie man darüber spricht.
+Vielleicht bist du noch nicht bereit für eine Führungsposition. Vielleicht fehlt dir Erfahrung. Vielleicht fehlt dir Fachwissen. Vielleicht fehlt dir sogar eine klare Vorstellung davon, was die neue Position eigentlich macht. Aber immerhin weißt du jetzt, wie man darüber spricht.
 
 Und wenn alles funktioniert, sitzt du schon bald in einem größeren Büro und erklärst Menschen, die fachlich deutlich mehr wissen als du, warum die Dinge „ganzheitlich betrachtet“ werden müssen.
 
-**Qualifikation ist wichtig.**
-
-**Aber ein gut geführter Kalender ist auch nicht zu unterschätzen.**
+**Qualifikation ist wichtig.** **Aber ein gut geführter Kalender ist auch nicht zu unterschätzen.**
 
 ---
 
@@ -340,17 +286,9 @@ Und wenn alles funktioniert, sitzt du schon bald in einem größeren Büro und e
 
 Wenn du mindestens **7 Antworten angekreuzt** hast: **Herzlichen Glückwunsch!**
 
-Du bist bereit für den nächsten Karriereschritt.
+Du bist bereit für den nächsten Karriereschritt. Vielleicht fehlen dir noch ein paar Qualifikationen. Vielleicht sogar ziemlich viele. Aber du hast bereits verstanden, dass eine erfolgreiche Karriere aus verschiedenen Komponenten besteht.
 
-Vielleicht fehlen dir noch ein paar Qualifikationen. Vielleicht sogar ziemlich viele.
-
-Aber du hast bereits verstanden, dass eine erfolgreiche Karriere aus verschiedenen Komponenten besteht.
-
-**Fachwissen ist eine davon.**
-
-**Selbstvertrauen ist eine andere.**
-
-Und wenn du beides nicht hast, bleibt immer noch die Präsentation.
+**Fachwissen ist eine davon.** **Selbstvertrauen ist eine andere.** Und wenn du beides nicht hast, bleibt immer noch die Präsentation.
 
 ---
 

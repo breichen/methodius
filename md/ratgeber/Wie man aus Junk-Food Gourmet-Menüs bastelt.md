@@ -1,6 +1,6 @@
 # Wie man aus Junk-Food Gourmet-Menüs bastelt
 
-## Der ultimative Ratgeber für alle, die Fast Food besitzen, aber trotzdem möchten, dass es aussieht, als hätte ein französischer Spitzenkoch dafür drei Tage lang eine Sauce reduziert
+## Der ultimative Ratgeber für alle, die Fast Food kaufen, aber trotzdem möchten, dass es aussieht, als hätte ein französischer Spitzenkoch dafür drei Tage lang eine Sauce reduziert
 
 **Dr. Maximilian Methodius**
 
@@ -22,15 +22,11 @@ Mit ein paar einfachen Tricks kannst du aus Burgern, Pommes, Chicken Nuggets und
 
 ## Verabschiede dich von „Pommes“
 
-Das Wort „Pommes“ ist ein Problem. Es klingt nach Imbiss, Pappschale und einer kleinen Plastikgabel, die bereits nach der ersten Portion kaputtgeht.
-
-Du brauchst deshalb eine neue Bezeichnung.
+Das Wort „Pommes“ ist ein Problem. Es klingt nach Imbiss, Pappschale und einer kleinen Plastikgabel, die bereits nach der ersten Portion kaputtgeht. Du brauchst deshalb eine neue Bezeichnung.
 
 Aus Pommes werden beispielsweise **„goldbraun frittierte Kartoffelstifte“**. Noch besser klingt **„knusprige Kartoffelstäbchen mit Meersalz“**. Wenn du besonders mutig bist, kannst du sie als **„rustikale Kartoffelvariation“** bezeichnen, obwohl sie aus einer Tiefkühltüte kommen.
 
-Damit ist bereits ein wichtiger Schritt getan. Du hast nichts am Essen verändert, aber die Erwartungshaltung deiner Gäste deutlich erhöht.
-
-**Das ist die Grundlage moderner Gastronomie.**
+Damit ist bereits ein wichtiger Schritt getan. Du hast nichts am Essen verändert, aber die Erwartungshaltung deiner Gäste deutlich erhöht. **Das ist die Grundlage moderner Gastronomie.**
 
 ---
 
@@ -38,13 +34,9 @@ Damit ist bereits ein wichtiger Schritt getan. Du hast nichts am Essen veränder
 
 ## Der Teller ist wichtiger als das Essen
 
-Gourmet-Essen braucht Platz.
+Gourmet-Essen braucht Platz. Das bedeutet nicht, dass du mehr Essen brauchst. Im Gegenteil. Ein kleiner Burger auf einem riesigen Teller wirkt sofort hochwertiger, während derselbe Burger in einer Pappschachtel verdächtig nach 4,99-Euro-Menü aussieht.
 
-Das bedeutet nicht, dass du mehr Essen brauchst. Im Gegenteil. Ein kleiner Burger auf einem riesigen Teller wirkt sofort hochwertiger, während derselbe Burger in einer Pappschachtel verdächtig nach 4,99-Euro-Menü aussieht.
-
-Nimm deshalb einen möglichst großen Teller und platziere das Essen großzügig in der Mitte. Lass rundherum viel freie Fläche. Diese Fläche ist nicht leer.
-
-Sie ist **kulinarischer Raum**.
+Nimm deshalb einen möglichst großen Teller und platziere das Essen großzügig in der Mitte. Lass rundherum viel freie Fläche. Diese Fläche ist nicht leer. Sie ist **kulinarischer Raum**.
 
 Wenn jemand fragt, warum auf dem Teller so wenig liegt, erkläre einfach, dass du dich bewusst für eine reduzierte Präsentation entschieden hast.
 
@@ -56,13 +48,9 @@ Wenn jemand fragt, warum auf dem Teller so wenig liegt, erkläre einfach, dass d
 
 ## Schneide alles kleiner
 
-Ein Burger ist ein Burger. Das ist kulinarisch problematisch.
+Ein Burger ist ein Burger. Das ist kulinarisch problematisch. Wenn du ihn jedoch halbierst und die beiden Hälften leicht versetzt auf dem Teller platzierst, entsteht sofort der Eindruck eines durchdachten Arrangements. Noch besser wird es, wenn du ihn anschließend wieder zusammensetzt und dabei behauptest, du hättest ihn „dekomponiert“.
 
-Wenn du ihn jedoch halbierst und die beiden Hälften leicht versetzt auf dem Teller platzierst, entsteht sofort der Eindruck eines durchdachten Arrangements. Noch besser wird es, wenn du ihn anschließend wieder zusammensetzt und dabei behauptest, du hättest ihn „dekomponiert“.
-
-Das Gleiche funktioniert mit Nuggets, Sandwiches und sogar Pizza.
-
-Schneide etwas in drei Teile, verteile die Stücke leicht voneinander entfernt und gib ihnen einen Namen wie **„dreiteilige Komposition“**.
+Das Gleiche funktioniert mit Nuggets, Sandwiches und sogar Pizza. Schneide etwas in drei Teile, verteile die Stücke leicht voneinander entfernt und gib ihnen einen Namen wie **„dreiteilige Komposition“**.
 
 **Ein Gericht muss nicht kompliziert sein. Es muss nur kompliziert aussehen.**
 
@@ -72,17 +60,11 @@ Schneide etwas in drei Teile, verteile die Stücke leicht voneinander entfernt u
 
 ## Verwandle Ketchup in eine Sauce
 
-Ketchup direkt aus der Flasche auf den Teller zu drücken, ist kulinarisch ungefähr so elegant wie eine PowerPoint-Präsentation mit Comic Sans.
-
-Deshalb musst du ihn weiterverarbeiten.
+Ketchup direkt aus der Flasche auf den Teller zu drücken, ist kulinarisch ungefähr so elegant wie eine PowerPoint-Präsentation mit Comic Sans. Deshalb musst du ihn weiterverarbeiten.
 
 Gib den Ketchup in eine kleine Schale und nenne ihn **„Tomatenreduktion“**. Alternativ kannst du ihn mit etwas Mayonnaise vermischen und daraus eine **„cremige Haus-Sauce“** machen.
 
-Wenn du möchtest, kannst du noch einen Tropfen Öl darübergeben. Niemand muss wissen, warum.
-
-Wichtig ist nur, dass die Sauce nicht mehr in der Plastikverpackung liegt.
-
-**Sobald Ketchup in einer kleinen Schale ist, beginnt seine akademische Laufbahn.**
+Wenn du möchtest, kannst du noch einen Tropfen Öl darübergeben. Niemand muss wissen, warum. Wichtig ist nur, dass die Sauce nicht mehr in der Plastikverpackung liegt. **Sobald Ketchup in einer kleinen Schale ist, beginnt seine akademische Laufbahn.**
 
 ---
 
@@ -90,15 +72,11 @@ Wichtig ist nur, dass die Sauce nicht mehr in der Plastikverpackung liegt.
 
 ## Erfinde eine Beilage
 
-Ein Gourmet-Menü braucht Beilagen. Leider besitzt du vermutlich nur Pommes.
-
-Das ist kein Problem.
+Ein Gourmet-Menü braucht Beilagen. Leider besitzt du vermutlich nur Pommes. Das ist kein Problem.
 
 Du kannst die Pommes als Beilage präsentieren und zusätzlich ein kleines Schälchen mit irgendetwas Grünem danebenstellen. Ein paar Salatblätter reichen vollkommen aus. Du musst sie nicht einmal besonders sorgfältig anrichten.
 
-Es geht nicht darum, dass jemand davon satt wird. Es geht darum, dass auf dem Teller etwas Grünes zu sehen ist.
-
-Alternativ kannst du eine einzelne Tomatenscheibe verwenden.
+Es geht nicht darum, dass jemand davon satt wird. Es geht darum, dass auf dem Teller etwas Grünes zu sehen ist. Alternativ kannst du eine einzelne Tomatenscheibe verwenden.
 
 **Eine Tomatenscheibe ist kein Salat. Aber sie erfüllt dieselbe dekorative Funktion.**
 
@@ -108,17 +86,11 @@ Alternativ kannst du eine einzelne Tomatenscheibe verwenden.
 
 ## Chicken Nuggets brauchen einen neuen Namen
 
-„Chicken Nuggets“ klingt nach Kindergeburtstag.
+„Chicken Nuggets“ klingt nach Kindergeburtstag. Das kannst du ändern.
 
-Das kannst du ändern.
+Nenne sie **„knusprig panierte Geflügelstücke“**. Wenn du besonders hochwertig wirken möchtest, kannst du von **„golden gebackenen Hähnchenpralinen“** sprechen. Natürlich solltest du niemals erklären, warum deine Hähnchenpralinen exakt gleich groß sind und alle dieselbe Form besitzen.
 
-Nenne sie **„knusprig panierte Geflügelstücke“**. Wenn du besonders hochwertig wirken möchtest, kannst du von **„golden gebackenen Hähnchenpralinen“** sprechen.
-
-Natürlich solltest du niemals erklären, warum deine Hähnchenpralinen exakt gleich groß sind und alle dieselbe Form besitzen.
-
-Platziere sie außerdem nicht einfach nebeneinander. Lege drei Stück auf einen Teller, eines davon leicht schräg, und gib etwas Sauce daneben.
-
-**Damit wird aus Fast Food eine Interpretation von Geflügel.**
+Platziere sie außerdem nicht einfach nebeneinander. Lege drei Stück auf einen Teller, eines davon leicht schräg, und gib etwas Sauce daneben. **Damit wird aus Fast Food eine Interpretation von Geflügel.**
 
 ---
 
@@ -126,17 +98,11 @@ Platziere sie außerdem nicht einfach nebeneinander. Lege drei Stück auf einen 
 
 ## Die Tiefkühlpizza neu interpretieren
 
-Eine Tiefkühlpizza direkt aus dem Ofen zu servieren, ist zu offensichtlich.
+Eine Tiefkühlpizza direkt aus dem Ofen zu servieren, ist zu offensichtlich. Schneide sie stattdessen in kleine Stücke. Entferne dabei ruhig die Tatsache, dass sie einmal rund war. Anschließend verteilst du die Stücke auf einem großen Teller und ergänzt ein paar frische Kräuter.
 
-Schneide sie stattdessen in kleine Stücke. Entferne dabei ruhig die Tatsache, dass sie einmal rund war. Anschließend verteilst du die Stücke auf einem großen Teller und ergänzt ein paar frische Kräuter.
+Jetzt hast du keine Tiefkühlpizza mehr. Du hast eine **„dekonstruierte italienische Teigkomposition mit Tomate und Käse“**.
 
-Jetzt hast du keine Tiefkühlpizza mehr.
-
-Du hast eine **„dekonstruierte italienische Teigkomposition mit Tomate und Käse“**.
-
-Falls jemand fragt, warum das Gericht so wenig nach einer normalen Pizza aussieht, kannst du erklären, dass du die klassische Form bewusst hinterfragt hast.
-
-**Kulinarische Innovation beginnt häufig damit, etwas Bekanntes falsch zu platzieren.**
+Falls jemand fragt, warum das Gericht so wenig nach einer normalen Pizza aussieht, kannst du erklären, dass du die klassische Form bewusst hinterfragt hast. **Kulinarische Innovation beginnt häufig damit, etwas Bekanntes falsch zu platzieren.**
 
 ---
 
@@ -144,17 +110,11 @@ Falls jemand fragt, warum das Gericht so wenig nach einer normalen Pizza aussieh
 
 ## Kräuter sind deine besten Freunde
 
-Frische Kräuter besitzen eine erstaunliche Fähigkeit: Sie lassen nahezu jedes Gericht aussehen, als hätte jemand Ahnung.
-
-Ein kleiner Zweig Petersilie auf einem Burger macht daraus zwar keinen besseren Burger, aber er verändert die visuelle Aussage erheblich.
+Frische Kräuter besitzen eine erstaunliche Fähigkeit: Sie lassen nahezu jedes Gericht aussehen, als hätte jemand Ahnung. Ein kleiner Zweig Petersilie auf einem Burger macht daraus zwar keinen besseren Burger, aber er verändert die visuelle Aussage erheblich.
 
 Besonders effektiv ist es, die Kräuter nicht gleichmäßig zu verteilen. Ein einzelnes Blatt, das scheinbar zufällig auf dem Teller liegt, wirkt wesentlich professioneller als eine ganze Handvoll.
 
-Du kannst außerdem etwas Schnittlauch darüberstreuen.
-
-Nicht zu viel.
-
-**Es muss aussehen, als hätte der Koch kurz vor dem Servieren eine Eingebung gehabt.**
+Du kannst außerdem etwas Schnittlauch darüberstreuen. Nicht zu viel. **Es muss aussehen, als hätte der Koch kurz vor dem Servieren eine Eingebung gehabt.**
 
 ---
 
@@ -165,16 +125,10 @@ Nicht zu viel.
 Ein Gourmet-Menü wird sofort interessanter, wenn das Essen nicht dort serviert wird, wo man es erwartet.
 
 Pommes gehören normalerweise in eine Schale? Stell sie in ein kleines Glas.
-
 Chicken Nuggets gehören auf einen Teller? Stelle sie in eine kleine Metallschale.
+Mayonnaise gehört auf die Pommes? Gib sie in ein winziges Gefäß daneben. Je kleiner das Gefäß, desto hochwertiger wirkt es.
 
-Mayonnaise gehört auf die Pommes? Gib sie in ein winziges Gefäß daneben.
-
-Je kleiner das Gefäß, desto hochwertiger wirkt es.
-
-Das liegt vermutlich daran, dass kleine Portionen automatisch nach einem Preis aussehen, den man nicht hinterfragen möchte.
-
-**Wenn die Portion klein genug ist, wird aus einem Dip ein Degustationselement.**
+Das liegt vermutlich daran, dass kleine Portionen automatisch nach einem Preis aussehen, den man nicht hinterfragen möchte. **Wenn die Portion klein genug ist, wird aus einem Dip ein Degustationselement.**
 
 ---
 
@@ -182,11 +136,7 @@ Das liegt vermutlich daran, dass kleine Portionen automatisch nach einem Preis a
 
 ## Benenne dein Menü
 
-Ein gutes Gourmet-Menü braucht einen Namen.
-
-„Burger mit Pommes“ ist zu ehrlich.
-
-Versuche es mit:
+Ein gutes Gourmet-Menü braucht einen Namen. „Burger mit Pommes“ ist zu ehrlich. Versuche es mit:
 
 > **„Urban Beef Experience mit knusprigen Kartoffelstäbchen und hausgemachter Cremesauce“**
 
@@ -194,9 +144,7 @@ Das klingt deutlich besser.
 
 Wenn du kein Rindfleisch verwendest, kannst du einfach „Signature“ oder „Classic“ ergänzen. Niemand muss sofort wissen, was genau sich hinter dem Namen verbirgt.
 
-Wichtig ist, dass das Menü so klingt, als wäre es Teil eines Konzepts.
-
-**Je länger der Name, desto weniger Fragen zum Preis.**
+Wichtig ist, dass das Menü so klingt, als wäre es Teil eines Konzepts. **Je länger der Name, desto weniger Fragen zum Preis.**
 
 ---
 
@@ -204,15 +152,9 @@ Wichtig ist, dass das Menü so klingt, als wäre es Teil eines Konzepts.
 
 ## Erkläre das Essen während des Servierens
 
-Gib deinen Gästen nicht einfach den Teller.
+Gib deinen Gästen nicht einfach den Teller. Erkläre ihn: „Hier haben wir unsere knusprigen Kartoffelstäbchen mit einer leicht rauchigen Tomatenkomponente.“
 
-Erkläre ihn.
-
-„Hier haben wir unsere knusprigen Kartoffelstäbchen mit einer leicht rauchigen Tomatenkomponente.“
-
-Damit wissen deine Gäste zwar immer noch, dass es Pommes mit Ketchup sind, aber sie haben inzwischen gelernt, dass man darüber auch anders sprechen kann.
-
-Besonders überzeugend ist es, wenn du dabei auf einzelne Bestandteile zeigst und kurz nickst.
+Damit wissen deine Gäste zwar immer noch, dass es Pommes mit Ketchup sind, aber sie haben inzwischen gelernt, dass man darüber auch anders sprechen kann. Besonders überzeugend ist es, wenn du dabei auf einzelne Bestandteile zeigst und kurz nickst.
 
 Du musst nicht viel erklären. Ein Satz reicht meistens.
 
@@ -224,17 +166,11 @@ Du musst nicht viel erklären. Ein Satz reicht meistens.
 
 ## Nutze das Wort „hausgemacht“
 
-„Hausgemacht“ ist ein sehr starkes Wort.
-
-Es suggeriert Aufwand, Tradition und eine Küche, in der jemand seit Sonnenaufgang Gemüse schält.
+„Hausgemacht“ ist ein sehr starkes Wort. Es suggeriert Aufwand, Tradition und eine Küche, in der jemand seit Sonnenaufgang Gemüse schält.
 
 Dabei musst du nicht unbedingt viel selbst gemacht haben. Vielleicht hast du die Sauce in eine Schüssel gegeben. Vielleicht hast du den Salat gewaschen. Vielleicht hast du lediglich die Verpackung geöffnet und anschließend den Teller dekoriert.
 
-Das Entscheidende ist, dass du mit Überzeugung sprichst.
-
-Wenn du „hausgemacht“ sagst, darfst du dabei nicht zögern.
-
-**Selbstbewusstsein ist schließlich die wichtigste Zutat jeder Sauce.**
+Das Entscheidende ist, dass du mit Überzeugung sprichst. Wenn du „hausgemacht“ sagst, darfst du dabei nicht zögern. **Selbstbewusstsein ist schließlich die wichtigste Zutat jeder Sauce.**
 
 ---
 
@@ -242,19 +178,11 @@ Wenn du „hausgemacht“ sagst, darfst du dabei nicht zögern.
 
 ## Serviere kleine Portionen
 
-Jetzt kommt der vielleicht wichtigste Schritt.
-
-Gib deinen Gästen nicht zu viel.
-
-Ein Gourmet-Menü lebt davon, dass man nach dem Essen noch genau weiß, was man gegessen hat, aber nicht unbedingt satt davon geworden ist.
+Jetzt kommt der vielleicht wichtigste Schritt: Gib deinen Gästen nicht zu viel. Ein Gourmet-Menü lebt davon, dass man nach dem Essen noch genau weiß, was man gegessen hat, aber nicht unbedingt satt davon geworden ist.
 
 Das hat außerdem einen praktischen Vorteil: Wenn die Portion klein ist, kannst du behaupten, dass es sich um ein bewusst zusammengestelltes Menü handelt.
 
-Falls jemand danach noch Hunger hat, kannst du immer noch etwas Brot anbieten.
-
-Oder eine weitere Portion.
-
-Oder den Hinweis, dass ein Dessert geplant war.
+Falls jemand danach noch Hunger hat, kannst du immer noch etwas Brot anbieten. Oder eine weitere Portion. Oder den Hinweis, dass ein Dessert geplant war.
 
 **Ein leerer Teller ist schließlich ein Zeichen für ein gelungenes Menü.**
 
@@ -266,11 +194,7 @@ Oder den Hinweis, dass ein Dessert geplant war.
 
 Wenn du dein Gourmet-Menü verkaufen möchtest, darf es nicht zu billig sein.
 
-Ein Burger für 5 Euro wirkt wie Fast Food. Derselbe Burger für 19,50 Euro wird plötzlich interessant.
-
-Bei 24 Euro beginnt man, nach regionalen Zutaten zu fragen.
-
-Bei 31 Euro interessiert sich jemand möglicherweise sogar dafür, welche Philosophie hinter dem Gericht steht.
+Ein Burger für 5 Euro wirkt wie Fast Food. Derselbe Burger für 19,50 Euro wird plötzlich interessant. Bei 24 Euro beginnt man, nach regionalen Zutaten zu fragen. Bei 31 Euro interessiert sich jemand möglicherweise sogar dafür, welche Philosophie hinter dem Gericht steht.
 
 Du musst den Preis natürlich nicht wirklich erhöhen. Es reicht schon, darüber zu sprechen, als hätte die Zubereitung einen erheblichen Aufwand verursacht.
 
@@ -288,9 +212,7 @@ Aus Pommes werden Kartoffelstäbchen. Aus Nuggets werden Geflügelpralinen. Aus 
 
 Am Ende zählt schließlich nicht nur, was auf dem Teller liegt. Entscheidend ist auch, wie du darüber sprichst und ob dein Gast vorher weiß, was er eigentlich erwartet.
 
-**Denn Gourmet-Essen ist nicht unbedingt besseres Essen.**
-
-**Es ist Essen mit einer besseren Presseabteilung.**
+**Denn Gourmet-Essen ist nicht unbedingt besseres Essen.** **Es ist Essen mit einer besseren Presseabteilung.**
 
 ---
 
@@ -348,13 +270,9 @@ Am Ende zählt schließlich nicht nur, was auf dem Teller liegt. Entscheidend is
 
 Wenn du mindestens **7 Fragen mit „Ja“** beantwortet hast: **Herzlichen Glückwunsch!**
 
-Du bist bereit für die gehobene Gastronomie.
+Du bist bereit für die gehobene Gastronomie. Du brauchst jetzt nur noch einen großen Teller, ein paar Kräuter und einen Namen, den niemand versteht.
 
-Du brauchst jetzt nur noch einen großen Teller, ein paar Kräuter und einen Namen, den niemand versteht.
-
-**Aus Junk-Food wird damit zwar kein Sterneessen.**
-
-**Aber es sieht verdächtig danach aus.**
+**Aus Junk-Food wird damit zwar kein Sterneessen.** **Aber es sieht verdächtig danach aus.**
 
 ---
 

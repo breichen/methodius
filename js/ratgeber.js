@@ -71,9 +71,17 @@ const ratgeberRohdaten = [
   //"Der perfekte Körper dank geschickter Beleuchtung",
   //"Die Kunst, am Monatsanfang schon pleite zu sein",
   
+  //"So beweist man, dass die globale Erwärmung erfunden ist",
+  //"Sicherheit beim Bewerbungsgespräch trotz Mangel an Fachwissen",
+  //"Diskussionen gewinnen durch konsequentes Dagegenreden",
   //"Warum das Leben leichter ist, wenn man nichts versteht",
   //"Plötzlich Privatdetektiv - Völlig unverdächtige Leute observieren",
+  //"Wie man aus Junk-Food Gourmet-Menüs bastelt",
   //"Zugausfälle als Chance nutzen",
+  //"Unsinn mit wissenschaftlichen Diagrammen belegen",
+  //"Permanente Enttäuschung dank zu hoch gesteckter Ziele",
+  //"Befördert werden ohne Qualifikation",
+  //"Verwendung von KI durch Fehler vertuschen",
 ];
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel, ... }-Objekte

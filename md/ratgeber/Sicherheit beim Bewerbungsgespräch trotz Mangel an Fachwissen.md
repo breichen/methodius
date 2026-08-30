@@ -1,4 +1,5 @@
 
+
 # Sicherheit beim Bewerbungsgespräch trotz Mangel an Fachwissen
 
 ## Der ultimative Ratgeber für alle, die für die Stelle eigentlich noch nicht ganz bereit sind, aber bereits hervorragend darin sind, so zu wirken
@@ -41,9 +42,7 @@ Jemand erklärt dir ein kompliziertes System mit zwölf Abkürzungen, drei engli
 
 Besonders überzeugend ist das sogenannte **Verstehensnicken**: ein leichtes Nicken, begleitet von einem ernsten Gesichtsausdruck und einem kurzen „Mhm“. Es vermittelt, dass du die Zusammenhänge bereits innerlich sortierst.
 
-Was du tatsächlich sortierst, spielt keine Rolle.
-
-**Hauptsache, dein Kopf bewegt sich in die richtige Richtung.**
+Was du tatsächlich sortierst, spielt keine Rolle. **Hauptsache, dein Kopf bewegt sich in die richtige Richtung.**
 
 ---
 
@@ -53,7 +52,7 @@ Was du tatsächlich sortierst, spielt keine Rolle.
 
 Du brauchst für ein Bewerbungsgespräch kein umfangreiches Fachvokabular. Fünf Begriffe reichen völlig aus, sofern du sie an den richtigen Stellen einsetzt.
 
-Diese Begriffe lauten: **strategisch, ganzheitlich, nachhaltig, skalierbar und Schnittstelle.**
+Diese Begriffe lauten: **"strategisch", "ganzheitlich", "nachhaltig", "skalierbar" und "Schnittstelle".**
 
 Wenn du nicht weißt, was gerade besprochen wird, kannst du beispielsweise sagen: „Ich glaube, da müssen wir die Schnittstelle noch einmal ganzheitlich betrachten.“ Das klingt hervorragend, obwohl damit ungefähr so viel geklärt wurde wie mit der Aussage „Das Internet ist wichtig“.
 
@@ -67,21 +66,15 @@ Falls dein Gegenüber anschließend nachfragt, was genau du mit „Schnittstelle
 
 ## Verwende die strategische Pause
 
-Du wirst irgendwann eine Frage bekommen, deren Antwort du nicht kennst.
-
-Das ist kein Problem.
+Du wirst irgendwann eine Frage bekommen, deren Antwort du nicht kennst. Das ist kein Problem.
 
 Das eigentliche Problem wäre, sofort zu antworten. Stattdessen blickst du kurz nach unten, atmest ruhig ein und lässt zwei bis drei Sekunden verstreichen. Diese Pause wirkt nicht wie Ratlosigkeit. Sie wirkt wie Nachdenken.
 
 Wenn du besonders souverän erscheinen möchtest, sagst du anschließend: „Das ist eine interessante Frage.“
 
-Damit hast du weitere drei Sekunden gewonnen.
+Damit hast du weitere drei Sekunden gewonnen. Danach folgt: „Ich würde das aus zwei Perspektiven betrachten.“
 
-Danach folgt: „Ich würde das aus zwei Perspektiven betrachten.“
-
-Jetzt hast du ungefähr fünf Sekunden. In dieser Zeit kannst du überlegen, ob du tatsächlich eine Perspektive findest.
-
-**Wer langsam genug antwortet, kann seine Unwissenheit als Denkprozess verkaufen.**
+Jetzt hast du ungefähr fünf Sekunden. In dieser Zeit kannst du überlegen, ob du tatsächlich eine Perspektive findest. **Wer langsam genug antwortet, kann seine Unwissenheit als Denkprozess verkaufen.**
 
 ---
 
@@ -95,9 +88,7 @@ Dieser Satz ist ein wahres Geschenk an alle Menschen, die keine Antwort haben.
 
 Anschließend kannst du erwähnen, dass man zunächst „die Rahmenbedingungen“ prüfen müsse. Welche Rahmenbedingungen? Das weißt du selbst noch nicht. Aber das ist eine Frage für später.
 
-Wenn dein Gegenüber nachhakt, kannst du einen weiteren Faktor hinzufügen. Nach drei Faktoren sieht selbst eine völlig leere Antwort plötzlich nach einem komplexen Modell aus.
-
-**Je mehr Bedingungen du erwähnst, desto weniger fällt auf, dass du keine Lösung genannt hast.**
+Wenn dein Gegenüber nachhakt, kannst du einen weiteren Faktor hinzufügen. Nach drei Faktoren sieht selbst eine völlig leere Antwort plötzlich nach einem komplexen Modell aus. **Je mehr Bedingungen du erwähnst, desto weniger fällt auf, dass du keine Lösung genannt hast.**
 
 ---
 
@@ -145,9 +136,7 @@ Wenn du etwas nicht kannst, erkläre einfach, dass du es schnell lernen kannst.
 
 Das ist eine wunderbare Eigenschaft, weil sie in der Zukunft liegt und deshalb heute nicht überprüft werden kann.
 
-„Damit habe ich bisher noch nicht gearbeitet, aber ich lerne mich sehr schnell in neue Systeme ein.“
-
-Perfekt.
+„Damit habe ich bisher noch nicht gearbeitet, aber ich lerne mich sehr schnell in neue Systeme ein.“ Perfekt.
 
 Du hast weder gesagt, dass du das System beherrschst, noch hast du zugegeben, dass du keine Ahnung hast. Du hast lediglich eine glänzende Zukunft versprochen.
 
@@ -163,9 +152,7 @@ Besonders überzeugend wird es, wenn du anschließend ein Beispiel nennst. Es mu
 
 Wenn du selbst Fragen stellst, kannst du für einen kurzen Moment die Rollenverteilung verändern. Plötzlich bist nicht mehr du derjenige, der Antworten liefern muss. Jetzt muss dein Gegenüber erklären.
 
-Frage beispielsweise: „Wie würden Sie die aktuellen Herausforderungen in diesem Bereich beschreiben?“ Oder: „Welche Themen haben für Sie in den kommenden Monaten strategisch die höchste Priorität?“
-
-Das klingt hervorragend.
+Frage beispielsweise: „Wie würden Sie die aktuellen Herausforderungen in diesem Bereich beschreiben?“ Oder: „Welche Themen haben für Sie in den kommenden Monaten strategisch die höchste Priorität?“ Das klingt hervorragend.
 
 Während die andere Person antwortet, kannst du aufmerksam zuhören und dir zwei oder drei Begriffe merken. Diese kannst du später im Gespräch wiederverwenden.
 
@@ -177,19 +164,11 @@ So entsteht ein beeindruckender Kreislauf: **Du stellst eine Frage, bekommst Wis
 
 ## Wenn du eine technische Frage bekommst
 
-Jetzt wird es ernst.
+Jetzt wird es ernst: Der Interviewer fragt nach einer technischen Lösung und du weißt nicht einmal, ob das genannte Programm eine Software, eine Programmiersprache oder der Name eines Mitarbeiters ist.
 
-Der Interviewer fragt nach einer technischen Lösung und du weißt nicht einmal, ob das genannte Programm eine Software, eine Programmiersprache oder der Name eines Mitarbeiters ist.
+Bleib ruhig. Erkläre zunächst, wie du grundsätzlich an das Problem herangehen würdest. Welche Informationen brauchst du? Welche Risiken würdest du prüfen? Wen würdest du einbeziehen? Welche Ergebnisse wären für dich entscheidend?
 
-Bleib ruhig.
-
-Erkläre zunächst, wie du grundsätzlich an das Problem herangehen würdest. Welche Informationen brauchst du? Welche Risiken würdest du prüfen? Wen würdest du einbeziehen? Welche Ergebnisse wären für dich entscheidend?
-
-Du hast damit zwar noch immer keine technische Lösung geliefert, aber immerhin einen Prozess beschrieben.
-
-Und Prozesse sind gut.
-
-**Wenn die Antwort fehlt, liefere wenigstens einen Ablaufplan dafür, wie du irgendwann zur Antwort gelangen würdest.**
+Du hast damit zwar noch immer keine technische Lösung geliefert, aber immerhin einen Prozess beschrieben. Und Prozesse sind gut. **Wenn die Antwort fehlt, liefere wenigstens einen Ablaufplan dafür, wie du irgendwann zur Antwort gelangen würdest.**
 
 ---
 
@@ -197,17 +176,13 @@ Und Prozesse sind gut.
 
 ## Sage niemals „Das weiß ich nicht“
 
-Gut, manchmal solltest du es doch sagen.
-
-Aber nicht sofort.
+Gut, manchmal solltest du es doch sagen. Aber nicht sofort.
 
 „Das weiß ich nicht“ klingt endgültig. Viel besser ist: „Damit hatte ich bisher noch keine praktische Berührung.“ Das klingt nach einem Problem, das sich lösen lässt.
 
 Noch besser: „Das habe ich bisher noch nicht in diesem Kontext angewendet.“
 
-Jetzt klingt es nicht mehr so, als könntest du es nicht. Es klingt nur so, als hätte bisher niemand die Gelegenheit gehabt, dich damit zu betrauen.
-
-Das ist ein entscheidender Unterschied.
+Jetzt klingt es nicht mehr so, als könntest du es nicht. Es klingt nur so, als hätte bisher niemand die Gelegenheit gehabt, dich damit zu betrauen. Das ist ein entscheidender Unterschied.
 
 **Unwissenheit ist ein Zustand. Fehlende Gelegenheit ist eine Karrierechance.**
 
@@ -217,19 +192,13 @@ Das ist ein entscheidender Unterschied.
 
 ## Der Blick des Experten
 
-Experten schauen nicht nervös.
-
-Experten hören zu, machen sich gelegentlich Notizen und schauen bei komplizierten Aussagen leicht nachdenklich.
+Experten schauen nicht nervös. Experten hören zu, machen sich gelegentlich Notizen und schauen bei komplizierten Aussagen leicht nachdenklich.
 
 Du solltest deshalb niemals hektisch in deinen Lebenslauf schauen, während jemand eine Fachfrage stellt. Das könnte den Eindruck erwecken, dass du dort nach einer Antwort suchst.
 
 Besser ist es, auf einen Punkt im Raum zu schauen, als würdest du gerade eine komplizierte Berechnung durchführen. Danach nickst du langsam und sagst: „Genau das ist ein interessanter Aspekt.“
 
-Du hast damit keine Antwort gegeben.
-
-Aber du hast einen Expertenblick produziert.
-
-**Manchmal ist der wichtigste Teil einer Qualifikation die passende Gesichtsmimik.**
+Du hast damit keine Antwort gegeben. Aber du hast einen Expertenblick produziert. **Manchmal ist der wichtigste Teil einer Qualifikation die passende Gesichtsmimik.**
 
 ---
 
@@ -237,17 +206,13 @@ Aber du hast einen Expertenblick produziert.
 
 ## Wenn du beim Bluff erwischt wirst
 
-Es kann passieren, dass jemand merkt, dass du einen Begriff gerade sehr großzügig verwendet hast.
-
-Keine Panik.
+Es kann passieren, dass jemand merkt, dass du einen Begriff gerade sehr großzügig verwendet hast. Keine Panik.
 
 Du kannst einfach sagen: „Ich glaube, ich würde das gerne etwas präzisieren.“ Das klingt so, als hättest du die Antwort bereits, aber zunächst eine falsche Formulierung gewählt.
 
 Danach kannst du dich vorsichtig zurückziehen: „In meiner bisherigen Erfahrung war vor allem der übergeordnete Prozess relevant.“
 
-Der übergeordnete Prozess ist immer eine gute Fluchtmöglichkeit. Er befindet sich sprachlich eine Etage über dem Detail, in dem du gerade verloren gegangen bist.
-
-**Wenn du den Inhalt nicht retten kannst, rette wenigstens die Flughöhe.**
+Der übergeordnete Prozess ist immer eine gute Fluchtmöglichkeit. Er befindet sich sprachlich eine Etage über dem Detail, in dem du gerade verloren gegangen bist. **Wenn du den Inhalt nicht retten kannst, rette wenigstens die Flughöhe.**
 
 ---
 
@@ -261,9 +226,7 @@ Du kannst vielleicht noch kein komplexes System bedienen. Du kannst aber aufrech
 
 Und genau das ist der entscheidende Punkt: Du musst nicht beweisen, dass du alles kannst. Du musst nur verhindern, dass dein Gegenüber zu früh herausfindet, was du noch nicht kannst.
 
-Das ist keine Lüge.
-
-Es ist **professionelles Erwartungsmanagement mit optimistischer Interpretation der Realität.**
+Das ist keine Lüge. Es ist **professionelles Erwartungsmanagement mit optimistischer Interpretation der Realität.**
 
 ---
 
@@ -273,15 +236,11 @@ Es ist **professionelles Erwartungsmanagement mit optimistischer Interpretation 
 
 Du hast gelernt, wie man aus „Ich habe keine Ahnung“ ein „Damit hatte ich bisher noch keine praktische Berührung“ macht. Du weißt, wie man eine Pause wie Nachdenken aussehen lässt, wie man mit fünf Fachbegriffen einen ganzen Gesprächsabschnitt überlebt und wie man eine fehlende Antwort durch einen überzeugenden Prozess ersetzt.
 
-Vielleicht kannst du die Stelle fachlich noch nicht ausfüllen.
-
-Aber das ist kein Grund, nicht hervorragend darin zu werden, im Bewerbungsgespräch so auszusehen, als wäre das nur eine Frage der Einarbeitung.
+Vielleicht kannst du die Stelle fachlich noch nicht ausfüllen. Aber das ist kein Grund, nicht hervorragend darin zu werden, im Bewerbungsgespräch so auszusehen, als wäre das nur eine Frage der Einarbeitung.
 
 Und falls du tatsächlich eingestellt wirst, beginnt ohnehin der wichtigste Teil: herauszufinden, was die Stelle eigentlich alles voraussetzt.
 
-**Du hast vielleicht keine Expertise.**
-
-**Aber du hast jetzt zumindest einen Plan, wie niemand sofort merkt, dass du keine hast.**
+**Du hast vielleicht keine Expertise.** **Aber du hast jetzt zumindest einen Plan, wie niemand sofort merkt, dass du keine hast.**
 
 ---
 
@@ -349,15 +308,9 @@ Und falls du tatsächlich eingestellt wirst, beginnt ohnehin der wichtigste Teil
 
 Wenn du mindestens **7 Antworten angekreuzt** hast: **Herzlichen Glückwunsch!**
 
-Du bist hervorragend vorbereitet.
+Du bist hervorragend vorbereitet. Du kennst zwar möglicherweise noch nicht die technischen Details der Stelle, aber du kannst jetzt zumindest überzeugend erklären, warum technische Details immer im größeren Kontext betrachtet werden müssen.
 
-Du kennst zwar möglicherweise noch nicht die technischen Details der Stelle, aber du kannst jetzt zumindest überzeugend erklären, warum technische Details immer im größeren Kontext betrachtet werden müssen.
-
-**Das ist keine Expertise.**
-
-**Das ist Potenzial.**
-
-Und Potenzial ist bekanntlich das Fachwissen von morgen.
+**Das ist keine Expertise.** **Das ist Potenzial.** Und Potenzial ist bekanntlich das Fachwissen von morgen.
 
 ---
 

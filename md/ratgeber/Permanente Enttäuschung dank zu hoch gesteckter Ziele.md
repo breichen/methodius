@@ -1,3 +1,4 @@
+
 # Permanente Enttäuschung dank zu hoch gesteckter Ziele
 
 ## Der ultimative Ratgeber für alle, die mit etwas weniger Anspruch vermutlich zufriedener wären, aber lieber jeden Morgen neue Gründe für persönliche Enttäuschung sammeln möchten
@@ -24,9 +25,7 @@ Ein kleines Ziel hat einen gravierenden Nachteil: Man kann es erreichen. Und sob
 
 Statt „Ich möchte heute eine Stunde Sport machen“ sagst du: „Ich werde ab jetzt jeden Tag zwei Stunden trainieren.“ Statt „Ich möchte etwas mehr lesen“ planst du gleich fünfzig Bücher für dieses Jahr ein. Und wenn du bisher überhaupt keinen Sport gemacht hast, ist ein Marathon natürlich ein hervorragendes Einstiegsziel.
 
-Wichtig ist, dass dein Ziel deutlich größer ist als das, was du momentan realistisch leisten kannst. Nur so stellst du sicher, dass du bereits nach wenigen Tagen feststellen kannst, dass du hinter deinen eigenen Erwartungen zurückgeblieben bist.
-
-**Ein erreichbares Ziel ist schließlich nur ein unrealistischer Anspruch, den man versehentlich erfüllt.**
+Wichtig ist, dass dein Ziel deutlich größer ist als das, was du momentan realistisch leisten kannst. Nur so stellst du sicher, dass du bereits nach wenigen Tagen feststellen kannst, dass du hinter deinen eigenen Erwartungen zurückgeblieben bist. **Ein erreichbares Ziel ist schließlich nur ein unrealistischer Anspruch, den man versehentlich erfüllt.**
 
 ---
 
@@ -38,9 +37,7 @@ Wenn du herausfinden möchtest, wie gut du bist, solltest du dich auf keinen Fal
 
 Suche dir stattdessen jemanden, der seit zehn Jahren genau das macht, womit du gestern angefangen hast. Wenn du gerade joggen gehst, vergleiche dich mit einem Marathonläufer. Wenn du ein Instrument lernst, schau dir einen Konzertmusiker an. Und wenn du gerade ein Unternehmen gründest, orientiere dich am besten an einem internationalen Konzern.
 
-Du wirst dadurch schnell feststellen, dass du noch sehr viel zu lernen hast. Diese Erkenntnis ist zwar nicht besonders hilfreich, erzeugt aber genau das richtige Maß an Unzufriedenheit.
-
-**Warum stolz auf deinen ersten Schritt sein, wenn jemand anderes bereits den Marathon gewonnen hat?**
+Du wirst dadurch schnell feststellen, dass du noch sehr viel zu lernen hast. Diese Erkenntnis ist zwar nicht besonders hilfreich, erzeugt aber genau das richtige Maß an Unzufriedenheit. **Warum stolz auf deinen ersten Schritt sein, wenn jemand anderes bereits den Marathon gewonnen hat?**
 
 ---
 
@@ -48,15 +45,11 @@ Du wirst dadurch schnell feststellen, dass du noch sehr viel zu lernen hast. Die
 
 ## Mache aus jedem guten Ergebnis einen neuen Mindeststandard
 
-Angenommen, du hast etwas besonders gut gemacht. Hervorragend. Jetzt darfst du auf keinen Fall daraus eine positive Erfahrung machen.
-
-Mach stattdessen aus diesem Ergebnis deinen neuen Standard.
+Angenommen, du hast etwas besonders gut gemacht. Hervorragend. Jetzt darfst du auf keinen Fall daraus eine positive Erfahrung machen. Mach stattdessen aus diesem Ergebnis deinen neuen Standard.
 
 Wenn du einmal zehn Kilometer gelaufen bist, sollten zehn Kilometer ab sofort nicht mehr beeindruckend sein. Sie sind dann das Minimum. Wenn du eine Prüfung mit einer sehr guten Note bestanden hast, darf die nächste Prüfung natürlich nicht schlechter ausfallen. Und wenn du an einem Tag besonders produktiv warst, solltest du am nächsten Tag mindestens dasselbe schaffen.
 
-Auf diese Weise verwandelt sich jeder Erfolg automatisch in eine neue Verpflichtung. Was gestern noch eine außergewöhnliche Leistung war, ist heute plötzlich das, was man von dir erwartet.
-
-**Der beste Weg, einen Erfolg zu entwerten, besteht darin, ihn zur Pflicht zu machen.**
+Auf diese Weise verwandelt sich jeder Erfolg automatisch in eine neue Verpflichtung. Was gestern noch eine außergewöhnliche Leistung war, ist heute plötzlich das, was man von dir erwartet. **Der beste Weg, einen Erfolg zu entwerten, besteht darin, ihn zur Pflicht zu machen.**
 
 ---
 
@@ -70,9 +63,7 @@ Du möchtest fitter werden, mehr Geld verdienen, gesünder essen, ein Instrument
 
 Damit wird jeder Tag zu einem Wettbewerb gegen eine ständig wachsende To-do-Liste. Selbst wenn du sieben Dinge erledigst, bleiben immer noch fünf übrig, die du nicht geschafft hast.
 
-Und genau darauf solltest du dich konzentrieren.
-
-**Zwölf offene Ziele sind wesentlich besser geeignet, um sich unproduktiv zu fühlen, als eines erfolgreich abzuschließen.**
+Und genau darauf solltest du dich konzentrieren. **Zwölf offene Ziele sind wesentlich besser geeignet, um sich unproduktiv zu fühlen, als eines erfolgreich abzuschließen.**
 
 ---
 
@@ -80,17 +71,13 @@ Und genau darauf solltest du dich konzentrieren.
 
 ## Plane deine Zukunft so, als gäbe es keine schlechten Tage
 
-Ein häufiger Fehler bei der Zielsetzung besteht darin, zu berücksichtigen, dass Menschen manchmal müde, krank, unmotiviert oder einfach nur schlecht organisiert sind.
-
-Das wäre viel zu realistisch.
+Ein häufiger Fehler bei der Zielsetzung besteht darin, zu berücksichtigen, dass Menschen manchmal müde, krank, unmotiviert oder einfach nur schlecht organisiert sind. Das wäre viel zu realistisch.
 
 Plane lieber so, als würdest du jeden Morgen voller Energie aufstehen, niemals schlecht schlafen und jeden Tag genau die Motivation besitzen, die du dir am Vorabend vorgenommen hast.
 
 Wenn du normalerweise acht Stunden schläfst, kannst du deine Morgenroutine ruhig für fünf Uhr morgens planen. Danach folgen Sport, Meditation, Lesen, gesunde Ernährung und zwei Stunden konzentrierte Arbeit, bevor der eigentliche Tag überhaupt beginnt.
 
-Wenn es dann um 8:17 Uhr noch nicht funktioniert hat, weißt du wenigstens sofort, dass du persönlich versagt hast.
-
-**Ein guter Tagesplan berücksichtigt die Realität. Ein perfekter Tagesplan ignoriert sie.**
+Wenn es dann um 8:17 Uhr noch nicht funktioniert hat, weißt du wenigstens sofort, dass du persönlich versagt hast. **Ein guter Tagesplan berücksichtigt die Realität. Ein perfekter Tagesplan ignoriert sie.**
 
 ---
 
@@ -104,9 +91,7 @@ Wenn du dir vorgenommen hast, jeden Tag zu trainieren, darf ein verregneter Sonn
 
 Denn sobald du dir erlaubst, dass das Leben manchmal anders läuft als geplant, könnte dein Anspruch plötzlich realistischer werden.
 
-Das möchtest du natürlich nicht.
-
-**Ein Ziel ist erst dann wirklich ambitioniert, wenn es mit der Realität regelmäßig kollidiert.**
+Das möchtest du natürlich nicht. **Ein Ziel ist erst dann wirklich ambitioniert, wenn es mit der Realität regelmäßig kollidiert.**
 
 ---
 
@@ -120,9 +105,7 @@ Wenn du beispielsweise zehn Kilogramm abnehmen möchtest und bereits fünf gesch
 
 Wenn du für einen Marathon trainierst und erstmals zwanzig Kilometer schaffst, ist das kein Grund zum Feiern. Schließlich fehlen noch 22,195 Kilometer.
 
-Diese Perspektive ist besonders effektiv, weil sie sicherstellt, dass der Fortschritt zwar stattfindet, aber emotional nicht ankommt.
-
-**Ein halber Erfolg ist vor allem dann enttäuschend, wenn man ihn nicht als halben Erfolg bezeichnet.**
+Diese Perspektive ist besonders effektiv, weil sie sicherstellt, dass der Fortschritt zwar stattfindet, aber emotional nicht ankommt. **Ein halber Erfolg ist vor allem dann enttäuschend, wenn man ihn nicht als halben Erfolg bezeichnet.**
 
 ---
 
@@ -132,19 +115,14 @@ Diese Perspektive ist besonders effektiv, weil sie sicherstellt, dass der Fortsc
 
 Eine der zuverlässigsten Methoden, dauerhaft unzufrieden zu sein, besteht darin, Zufriedenheit an eine Bedingung zu knüpfen.
 
-„Wenn ich erst diese Beförderung bekomme, bin ich zufrieden.“
-
+*„Wenn ich erst diese Beförderung bekomme, bin ich zufrieden.“
 „Wenn ich dieses Gewicht erreicht habe, bin ich zufrieden.“
-
 „Wenn ich genug Geld gespart habe, bin ich zufrieden.“
-
-„Wenn dieses Projekt abgeschlossen ist, bin ich zufrieden.“
+„Wenn dieses Projekt abgeschlossen ist, bin ich zufrieden.“*
 
 Das funktioniert hervorragend, solange du anschließend ein neues Ziel definierst. Denn sobald du das ursprüngliche Ziel erreichst, stellst du fest, dass du eigentlich noch etwas anderes brauchst.
 
-So bleibt die Zufriedenheit immer genau einen Schritt entfernt.
-
-**Das Geheimnis ist, niemals anzukommen, sondern das Ziel kurz vor der Ankunft weiter nach hinten zu verschieben.**
+So bleibt die Zufriedenheit immer genau einen Schritt entfernt. **Das Geheimnis ist, niemals anzukommen, sondern das Ziel kurz vor der Ankunft weiter nach hinten zu verschieben.**
 
 ---
 
@@ -152,17 +130,11 @@ So bleibt die Zufriedenheit immer genau einen Schritt entfernt.
 
 ## Bewerte dich ausschließlich nach deinen Schwächen
 
-Du hast vielleicht fünf Dinge hervorragend gemacht und eines nicht besonders gut. Welche Information ist wichtiger?
+Du hast vielleicht fünf Dinge hervorragend gemacht und eines nicht besonders gut. Welche Information ist wichtiger? Natürlich die eine schlechte.
 
-Natürlich die eine schlechte.
+Das Prinzip lässt sich auf nahezu alle Lebensbereiche übertragen. Eine gute Präsentation wird durch einen Versprecher ruiniert. Ein erfolgreicher Tag wird durch eine vergessene Aufgabe wertlos. Ein gutes Ergebnis wird durch den einen Fehler überschattet. Auf diese Weise kannst du aus einer insgesamt sehr guten Leistung zuverlässig eine mittelmäßige machen.
 
-Das Prinzip lässt sich auf nahezu alle Lebensbereiche übertragen. Eine gute Präsentation wird durch einen Versprecher ruiniert. Ein erfolgreicher Tag wird durch eine vergessene Aufgabe wertlos. Ein gutes Ergebnis wird durch den einen Fehler überschattet.
-
-Auf diese Weise kannst du aus einer insgesamt sehr guten Leistung zuverlässig eine mittelmäßige machen.
-
-Besonders praktisch ist, dass niemand anderes diese Bewertung übernehmen muss. Du kannst dich ganz alleine enttäuschen.
-
-**Perfektionismus ist die Fähigkeit, aus 95 Prozent Erfolg noch fünf Prozent Versagen herauszufiltern.**
+Besonders praktisch ist, dass niemand anderes diese Bewertung übernehmen muss. Du kannst dich ganz alleine enttäuschen. **Perfektionismus ist die Fähigkeit, aus 95 Prozent Erfolg noch fünf Prozent Versagen herauszufiltern.**
 
 ---
 
@@ -172,9 +144,7 @@ Besonders praktisch ist, dass niemand anderes diese Bewertung übernehmen muss. 
 
 Warum sollte „sehr gut“ genügen, wenn „perfekt“ theoretisch möglich ist?
 
-Wenn du 90 Prozent erreichst, fehlen schließlich noch zehn. Bei 99 Prozent fehlt immer noch ein Prozent. Und selbst bei 100 Prozent kannst du feststellen, dass das Ergebnis beim nächsten Mal schneller hätte erreicht werden können.
-
-Damit bleibt immer Luft nach oben.
+Wenn du 90 Prozent erreichst, fehlen schließlich noch zehn. Bei 99 Prozent fehlt immer noch ein Prozent. Und selbst bei 100 Prozent kannst du feststellen, dass das Ergebnis beim nächsten Mal schneller hätte erreicht werden können. Damit bleibt immer Luft nach oben.
 
 Diese Methode ist besonders wertvoll, weil Perfektion ein Ziel ist, das sich bei genauer Betrachtung ständig verändert. Sobald du etwas perfekt beherrschst, entdeckst du eine neue Ebene der Perfektion, die du bisher übersehen hast.
 
@@ -186,15 +156,11 @@ Diese Methode ist besonders wertvoll, weil Perfektion ein Ziel ist, das sich bei
 
 ## Ignoriere deinen tatsächlichen Fortschritt
 
-Wenn du vor sechs Monaten noch gar nichts konntest und heute deutlich besser bist, solltest du diese Entwicklung nicht überbewerten.
-
-Schließlich gibt es immer noch Menschen, die weiter sind als du.
+Wenn du vor sechs Monaten noch gar nichts konntest und heute deutlich besser bist, solltest du diese Entwicklung nicht überbewerten. Schließlich gibt es immer noch Menschen, die weiter sind als du.
 
 Auch wenn du heute schneller, fitter, erfahrener oder erfolgreicher bist als früher, lohnt sich ein Blick nach oben. Dort findest du sofort jemanden, der noch schneller, fitter, erfahrener oder erfolgreicher ist.
 
-Der Blick zurück könnte Stolz erzeugen. Der Blick nach oben erzeugt dagegen zuverlässig neue Arbeit.
-
-**Fortschritt ist nur dann enttäuschend, wenn man ihn an der falschen Person misst.**
+Der Blick zurück könnte Stolz erzeugen. Der Blick nach oben erzeugt dagegen zuverlässig neue Arbeit. **Fortschritt ist nur dann enttäuschend, wenn man ihn an der falschen Person misst.**
 
 ---
 
@@ -208,9 +174,7 @@ Deshalb solltest du möglichst schnell Kennzahlen einführen. Wie viele Seiten l
 
 Sobald du eine Zahl hast, kannst du dich mit anderen vergleichen. Und sobald du dich vergleichst, kannst du feststellen, dass jemand besser ist.
 
-Aus einem entspannten Hobby wird so innerhalb kürzester Zeit ein persönliches Optimierungsprojekt.
-
-**Wenn etwas Spaß macht, fehlt nur noch ein Zielwert, um es anstrengend zu machen.**
+Aus einem entspannten Hobby wird so innerhalb kürzester Zeit ein persönliches Optimierungsprojekt. **Wenn etwas Spaß macht, fehlt nur noch ein Zielwert, um es anstrengend zu machen.**
 
 ---
 
@@ -222,11 +186,7 @@ Erholung ist nur dann erlaubt, wenn sie einen messbaren Beitrag zu deiner Leistu
 
 Ein Spaziergang ist dann sinnvoll, wenn er deine Konzentration steigert. Schlaf ist wichtig, weil du am nächsten Tag produktiver bist. Urlaub dient der Regeneration, damit du anschließend wieder effizienter arbeiten kannst.
 
-Einfach nur auf dem Sofa zu liegen, ohne dabei irgendetwas zu optimieren, ist dagegen verdächtig.
-
-So wird selbst Erholung zu einer weiteren Aufgabe.
-
-**Wenn du sogar beim Entspannen das Gefühl hast, etwas leisten zu müssen, bist du auf dem richtigen Weg.**
+Einfach nur auf dem Sofa zu liegen, ohne dabei irgendetwas zu optimieren, ist dagegen verdächtig. So wird selbst Erholung zu einer weiteren Aufgabe. **Wenn du sogar beim Entspannen das Gefühl hast, etwas leisten zu müssen, bist du auf dem richtigen Weg.**
 
 ---
 
@@ -234,21 +194,13 @@ So wird selbst Erholung zu einer weiteren Aufgabe.
 
 ## Die Königsdisziplin: Erreiche ein Ziel und sei trotzdem enttäuscht
 
-Jetzt bist du bereit für die höchste Stufe.
+Jetzt bist du bereit für die höchste Stufe. Du hast dein Ziel erreicht. Alles hat funktioniert. Du hast die Prüfung bestanden, das Projekt abgeschlossen, dein Training durchgezogen oder die gewünschte Zahl auf der Waage erreicht.
 
-Du hast dein Ziel erreicht. Alles hat funktioniert. Du hast die Prüfung bestanden, das Projekt abgeschlossen, dein Training durchgezogen oder die gewünschte Zahl auf der Waage erreicht.
-
-Jetzt wäre ein guter Zeitpunkt, dich zu freuen.
-
-Tu es nicht.
+Jetzt wäre ein guter Zeitpunkt, dich zu freuen. Tu es nicht.
 
 Frag dich stattdessen, warum du das nicht schneller geschafft hast. Überlege, ob das Ergebnis nicht noch besser hätte sein können. Vergleiche dich mit jemandem, der dasselbe Ziel bereits früher erreicht hat.
 
-Und vor allem: Setze dir sofort ein neues Ziel.
-
-Damit verhinderst du zuverlässig, dass zwischen zwei Aufgaben versehentlich ein Gefühl von Zufriedenheit entsteht.
-
-**Der wahre Meister der Selbstoptimierung erreicht seine Ziele nicht. Er erhöht sie vorher.**
+Und vor allem: Setze dir sofort ein neues Ziel. Damit verhinderst du zuverlässig, dass zwischen zwei Aufgaben versehentlich ein Gefühl von Zufriedenheit entsteht. **Der wahre Meister der Selbstoptimierung erreicht seine Ziele nicht. Er erhöht sie vorher.**
 
 ---
 
@@ -260,15 +212,9 @@ Du hast nun alles gelernt, was du brauchst.
 
 Setze deine Ziele hoch, vergleiche dich mit den Besten, erkläre außergewöhnliche Leistungen zum Mindeststandard und betrachte jede Pause als potenzielle Produktivitätslücke. Wenn du Fortschritte machst, erhöhe die Anforderungen. Wenn du ein Ziel erreichst, setze sofort das nächste.
 
-Und sollte dir irgendwann auffallen, dass du eigentlich ziemlich viel geschafft hast, darfst du dich kurz darüber wundern.
+Und sollte dir irgendwann auffallen, dass du eigentlich ziemlich viel geschafft hast, darfst du dich kurz darüber wundern. Danach geht es weiter. Denn irgendwo gibt es bestimmt jemanden, der noch besser ist.
 
-Danach geht es weiter.
-
-Denn irgendwo gibt es bestimmt jemanden, der noch besser ist.
-
-**Das ist kein Grund zur Verzweiflung.**
-
-**Das ist ein neues Ziel.**
+**Das ist kein Grund zur Verzweiflung.** **Das ist ein neues Ziel.**
 
 ---
 
@@ -336,13 +282,9 @@ Denn irgendwo gibt es bestimmt jemanden, der noch besser ist.
 
 Wenn du mindestens **7 Antworten angekreuzt** hast: **Herzlichen Glückwunsch!**
 
-Du bist hervorragend geeignet, dich selbst dauerhaft zu enttäuschen.
+Du bist hervorragend geeignet, dich selbst dauerhaft zu enttäuschen. Du setzt dir hohe Ziele, erkennst Fortschritte und findest zuverlässig noch jemanden, der besser ist.
 
-Du setzt dir hohe Ziele, erkennst Fortschritte und findest zuverlässig noch jemanden, der besser ist.
-
-**Du hast viel erreicht.**
-
-**Aber vermutlich noch nicht genug.**
+**Du hast viel erreicht.** **Aber vermutlich noch nicht genug.**
 
 ---
 
