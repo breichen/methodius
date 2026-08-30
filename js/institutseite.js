@@ -177,13 +177,13 @@ function baueTeamBereich(index) {
     {
       name: "Dr. Friedrich Unbedacht",
       rolle: "Wissenschaftlicher Beirat",
-      bild: "pics/team/autor-portrait.png",
+      bild: "pics/team/Unbedacht.png",
       text: "Zuständig für die wissenschaftliche Überprüfung der Institutsarbeit. Weist regelmäßig auf unbelegte Behauptungen, methodische Schwächen und logische Widersprüche hin. Seine Einwände werden sorgfältig protokolliert und anschließend ignoriert."
     },
     {
       name: "Sabine Krämer",
       rolle: "Leitung der Abteilung für Fallmanagement und Patientenangelegenheiten",
-      bild: "pics/team/autor-portrait.png",
+      bild: "pics/team/Kraemer.png",
       text: "Koordiniert die eingehenden Fälle, verwaltet die Fallakten und versucht seit Jahren, innerhalb des Instituts für Ordnung zu sorgen."
     }
   ];
