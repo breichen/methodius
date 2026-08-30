@@ -11,6 +11,7 @@
 */
 
 const newsListe = [
+
   {
     datei: "neuer-ratgeber-muskelabbau.md",
     titel: "Neuer Ratgeber erschienen",
@@ -19,4 +20,12 @@ const newsListe = [
     link: "buch.html?titel=Abnehmen dank Muskelabbau",
     linkText: "Zum Ratgeber"
   },
+
+  {
+    datei: "gruendung-methodius-institut.md",
+    titel: "Methodius-Institut für Lebenswissenschaften gegründet",
+    datum: "14. August 2026",
+    bild: "pics/news/gruendung-methodius-institut.jpg"
+  },
+
 ];
