@@ -1913,6 +1913,44 @@ hr {
   text-decoration: underline;
 }
 
+/* "Mehr anzeigen" / "Weniger anzeigen" - blendet den Rest eines
+   Beitrags ein/aus (siehe js/news-seite.js). Optisch wie ein Link
+   gehalten, damit er sich nicht wie ein "echter" Call-to-Action-Button
+   (z.B. .button) aufdrängt - hier soll er dezent bleiben. */
+.news-mehr-button {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 4px 0 16px 0;
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.news-mehr-button:hover {
+  color: var(--color-accent-warm);
+  text-decoration: underline;
+}
+
+/* Zusätzlicher Abstand, wenn der Button direkt auf den (dann
+   versteckten) Link/Bild-Bereich folgt - siehe
+   NEWS_LINK_UND_BILD_NUR_BEI_MEHR in js/news-seite.js. Nur wenn der
+   Bereich AUSGEKLAPPT ist (kein "hidden") UND tatsächlich ein Bild
+   enthält (:has(img)) - bei einem reinen Link ohne Bild braucht es
+   den größeren Abstand nicht, der normale Abstand reicht dort. Ist
+   der Bereich eingeklappt, bleibt ebenfalls der normale, kleinere
+   Abstand wie zuvor.
+*/
+.news-link-bild-wrap:not([hidden]):has(img)+.news-mehr-button {
+  margin-top: 20px;
+}
+
 
 /* Bild */
 
