@@ -67,7 +67,7 @@ const ratgeberRohdaten = [
   "So wirst du zum modernen Künstler",
   "Gedanken lesen durch geschicktes Raten",
   "Statistiken fälschen leicht gemacht",
-  "Zum Influencer in 2 Stunden",
+  "Zum Influencer in nur 2 Stunden",
   "Der perfekte Körper dank geschickter Beleuchtung",
   "Die Kunst, am Monatsanfang schon pleite zu sein",
   
