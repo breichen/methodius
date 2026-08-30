@@ -15,7 +15,7 @@ const newsListe = [
   {
     datei: "neuer-ratgeber-muskelabbau.md",
     titel: "Neuer Ratgeber erschienen",
-    datum: "29. August 2026",
+    datum: "30. August 2026",
     bild: "pics/ratgeber/Abnehmen dank Muskelabbau.png",
     link: "buch.html?titel=Abnehmen dank Muskelabbau",
     linkText: "Zum Ratgeber"
