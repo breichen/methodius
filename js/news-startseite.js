@@ -35,8 +35,23 @@ function ladeAktuellsteNews() {
     return;
   }
 
+  /*
+    Nur Beiträge berücksichtigen, die ein "datum" haben UND dessen
+    Datum bereits erreicht ist (heute oder in der Vergangenheit) -
+    siehe istDatumErreicht() in js/datumsformat.js. Beiträge ohne
+    Datum oder mit einem Datum in der Zukunft werden ignoriert.
+  */
+  const sichtbareNews = newsListe.filter(
+    beitrag => beitrag.datum && istDatumErreicht(beitrag.datum)
+  );
+
+  if (sichtbareNews.length === 0) {
+    newsStartseiteContainer.innerHTML = "";
+    return;
+  }
+
   // Der erste Eintrag ist laut news.js der aktuellste.
-  const beitrag = newsListe[0];
+  const beitrag = sichtbareNews[0];
 
   ladeNewsStartseitenBeitrag(beitrag)
     .then(html => {

@@ -79,7 +79,20 @@ newsContainer.addEventListener("click", event => {
 
 function ladeNews() {
 
-  if (!newsListe || newsListe.length === 0) {
+  /*
+    Nur Beiträge anzeigen, die ein "datum" haben UND dessen Datum
+    bereits erreicht ist (heute oder in der Vergangenheit) - siehe
+    istDatumErreicht() in js/datumsformat.js. Beiträge ohne Datum
+    oder mit einem Datum in der Zukunft werden ausgeblendet. Der
+    neue Index in der gefilterten Liste bestimmt danach weiterhin
+    die Sektions-Abwechslung und welcher Beitrag initial
+    ausgeklappt startet.
+  */
+  const sichtbareNews = (newsListe || []).filter(
+    beitrag => beitrag.datum && istDatumErreicht(beitrag.datum)
+  );
+
+  if (sichtbareNews.length === 0) {
     newsContainer.innerHTML = `
       <p>Derzeit gibt es keine Neuigkeiten.</p>
     `;
@@ -91,7 +104,7 @@ function ladeNews() {
   */
 
   Promise.all(
-    newsListe.map((beitrag, index) =>
+    sichtbareNews.map((beitrag, index) =>
       ladeNewsBeitrag(beitrag, index)
     )
   )
