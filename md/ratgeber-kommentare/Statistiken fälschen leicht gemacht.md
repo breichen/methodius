@@ -1,11 +1,19 @@
-Unbedacht:
-Der Titel dieses Ratgebers wirft erhebliche methodische und ethische Fragen auf.
+[Unbedacht | 0]
 
-Redaktion:
-87,3 % unserer Leser sehen das anders.
+Die Auswahl einer Statistik nach gewünschter Wirkung ist keine seriöse statistische Methode.
 
-Unbedacht:
-Woher stammt diese Zahl?
+[Huber | 1]
 
-Redaktion:
-Wir freuen uns über Ihr Interesse an Statistik.
+Ich möchte ergänzen, dass ich bei der ursprünglichen Datenauswertung ausdrücklich empfohlen hatte, den vollständigen Datensatz zu betrachten.
+
+[Redaktion | 2]
+
+Vielen Dank, Dr. Huber. Wir haben uns entschieden, stattdessen den interessantesten Ausschnitt zu betrachten.
+
+[Wankelmuth | 0]
+
+Ich finde es faszinierend, wie stark die Darstellung von Zahlen deren Wahrnehmung beeinflusst. Vielleicht ist Statistik letztlich eine Form visueller Psychologie.
+
+[Wankelmuth | 1]
+
+Wobei eine Zahl nicht automatisch bedeutender wird, nur weil man sie auf drei Nachkommastellen erweitert.

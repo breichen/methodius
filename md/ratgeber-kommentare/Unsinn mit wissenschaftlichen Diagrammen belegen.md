@@ -1,11 +1,19 @@
-Unbedacht:
-Ein Diagramm kann eine Behauptung veranschaulichen, aber keine unbelegte Behauptung wissenschaftlich korrekt machen.
+[Unbedacht | 0]
 
-Redaktion:
-Wir empfehlen deshalb eine möglichst beeindruckende Achsenbeschriftung.
+Ein Diagramm kann eine falsche Aussage überzeugender aussehen lassen, macht sie aber nicht wissenschaftlich korrekt.
 
-Unbedacht:
-Das löst das Problem nicht.
+[Huber | 1]
 
-Redaktion:
-Aber es macht das Diagramm größer.
+Das möchte ich ausdrücklich bestätigen. Eine steigende Linie beweist zunächst einmal nur, dass etwas auf der gewählten Achse steigt.
+
+[Redaktion | 2]
+
+Vielen Dank für diese wichtige Information. Wir empfehlen daher weiterhin, die Achsen besonders sorgfältig auszuwählen.
+
+[Wankelmuth | 0]
+
+Ich finde die Erkenntnis spannend, dass visuelle Ordnung unser Vertrauen in Informationen beeinflusst. Diagramme besitzen offenbar eine gewisse rhetorische Autorität.
+
+[Wankelmuth | 1]
+
+Wobei eine rote Linie mit Pfeil nach oben nicht automatisch bedeutet, dass die Wirtschaft gerettet wurde.

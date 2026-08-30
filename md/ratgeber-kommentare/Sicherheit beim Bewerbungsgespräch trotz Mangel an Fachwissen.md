@@ -1,11 +1,15 @@
-Unbedacht:
-Selbstbewusstes Auftreten kann fehlendes Fachwissen nicht ersetzen.
+[Unbedacht | 0]
 
-Redaktion:
-Das kommt darauf an, wer die Fragen stellt.
+Selbstbewusstes Auftreten kann einen guten ersten Eindruck erzeugen, ersetzt aber kein Fachwissen.
 
-Unbedacht:
-Das ist kein wissenschaftliches Argument.
+[Redaktion | 1]
 
-Redaktion:
-Aber ein ausgesprochen praktisches.
+Das sehen wir grundsätzlich genauso. Deshalb empfehlen wir ja auch, Fachbegriffe selbstbewusst auszusprechen.
+
+[Wankelmuth | 0]
+
+Ich halte Selbstvertrauen in Bewerbungssituationen für psychologisch sehr relevant. Vielleicht wird Kompetenz ohnehin überschätzt, wenn jemand überzeugend auftritt.
+
+[Wankelmuth | 1]
+
+Wobei der Arbeitgeber irgendwann herausfinden könnte, ob „skalierbare Prozessoptimierung“ tatsächlich etwas mit Excel zu tun hat.

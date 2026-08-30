@@ -35,6 +35,11 @@ const kommentarAutoren = {
     username: "@unbedacht"
   },
 
+  "Wankelmuth": {
+    name: "Prof. Dr. Hildegard Wankelmuth",
+    username: "@hwankel"
+  },
+
   "Redaktion": {
     name: "Redaktion",
     username: "@methodius"

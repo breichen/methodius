@@ -1,11 +1,15 @@
-Unbedacht:
-Fehler durch weitere Fehler zu verdecken, erscheint mir methodisch wenig überzeugend.
+[Unbedacht | 0]
 
-Redaktion:
-Das stimmt. Deshalb empfehlen wir, die Fehler mit möglichst viel Text zu umgeben.
+Absichtlich Fehler in einen KI-Text einzubauen, macht nicht erkennbar, dass der Text von einem Menschen stammt. Es macht ihn zunächst nur fehlerhaft.
 
-Unbedacht:
-Das ist keine Lösung.
+[Redaktion | 1]
 
-Redaktion:
-Nein. Aber es sieht nach einer aus.
+Das ist ein wichtiger Unterschied. Unser Ziel ist jedoch vor allem, den Text menschlicher wirken zu lassen.
+
+[Wankelmuth | 0]
+
+Ich finde die Idee einer künstlich erzeugten Unvollkommenheit psychologisch ausgesprochen interessant. Menschen vertrauen offenbar eher Dingen, die kleine Fehler enthalten.
+
+[Wankelmuth | 1]
+
+Wobei ein komplett falscher Name im dritten Absatz möglicherweise weniger authentisch als einfach schlecht ist.
