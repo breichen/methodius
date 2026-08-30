@@ -14,10 +14,21 @@
 
   if (!cover || typeof ratgeberListe === "undefined" || ratgeberListe.length === 0) return;
 
+  // Nur Ratgeber anzeigen, die ein "erstellt"-Datum haben UND dessen
+  // Datum bereits erreicht ist (heute oder in der Vergangenheit) -
+  // siehe istDatumErreicht() in js/datumsformat.js. Ratgeber ohne
+  // Datum oder mit einem Datum in der Zukunft werden im Showcase
+  // ausgeblendet.
+  const sichtbareRatgeber = ratgeberListe.filter(
+    buch => buch.erstellt && istDatumErreicht(buch.erstellt)
+  );
+
+  if (sichtbareRatgeber.length === 0) return;
+
   // Chronologie, neuestes zuerst: Laut ratgeber.js werden neue Bücher
   // am ENDE der Liste ergänzt ("Neueste Ratgeber" zeigt die letzten
   // Einträge) - die Liste wird also einfach umgedreht.
-  const chronologie = [...ratgeberListe].reverse();
+  const chronologie = [...sichtbareRatgeber].reverse();
 
   let index = 0; // 0 = aktuellster Ratgeber
 

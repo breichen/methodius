@@ -29,17 +29,26 @@ function mischen(array) {
 
 const ANZAHL_ANZEIGEN = 3;
 
+// Nur Ratgeber anzeigen, die ein "erstellt"-Datum haben UND dessen
+// Datum bereits erreicht ist (heute oder in der Vergangenheit) -
+// siehe istDatumErreicht() in js/datumsformat.js. Ratgeber ohne
+// Datum oder mit einem Datum in der Zukunft werden aus beiden
+// Übersichten ausgeblendet.
+const sichtbareRatgeber = ratgeberListe.filter(
+  buch => buch.erstellt && istDatumErreicht(buch.erstellt)
+);
+
 // "Neueste Ratgeber": die letzten N Einträge der Liste, neuestes zuerst
 // (nur befüllen, wenn der Container auf der aktuellen Seite existiert)
 const containerNeueste = document.getElementById("neueste-ratgeber");
 if (containerNeueste) {
-  const neueste = ratgeberListe.slice(-ANZAHL_ANZEIGEN).reverse();
+  const neueste = sichtbareRatgeber.slice(-ANZAHL_ANZEIGEN).reverse();
   containerNeueste.innerHTML = neueste.map(baueBuchKachel).join("");
 }
 
 // "Zufällige Empfehlungen": N zufällig gemischte Einträge
 const containerZufaellige = document.getElementById("zufaellige-empfehlungen");
 if (containerZufaellige) {
-  const zufaellige = mischen(ratgeberListe).slice(0, ANZAHL_ANZEIGEN);
+  const zufaellige = mischen(sichtbareRatgeber).slice(0, ANZAHL_ANZEIGEN);
   containerZufaellige.innerHTML = zufaellige.map(baueBuchKachel).join("");
 }
