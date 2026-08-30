@@ -1,98 +1,112 @@
 [
-    {
-        "datum": "2028-08-22",
-        "titel": "Zur Frage, ob ein Problem tatsächlich gelöst werden muss, nur weil es existiert",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Dr. Friedrich Unbedacht"
-        ]
-    },
-    {
-        "datum": "2028-07-07",
-        "titel": "Die produktive Vermeidung von Produktivität: Eine empirische Untersuchung des bewussten Nichtstuns",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Dr. Konrad P. Huber"
-        ]
-    },
-    {
-        "datum": "2028-05-19",
-        "titel": "Wissenschaftlich fundierte Gründe, heute nichts mehr anzufangen",
-        "autoren": [
-            "Dr. Maximilian Methodius"
-        ]
-    },
-    {
-        "datum": "2028-03-03",
-        "titel": "Wobei – eine longitudinale Untersuchung spontaner Meinungsrevisionen im Alltag",
-        "autoren": [
-            "Prof. Dr. Hildegard Wankelmuth",
-            "Dr. Konrad P. Huber"
-        ]
-    },
-    {
-        "datum": "2028-01-14",
-        "titel": "Die statistische Bedeutung des Satzes „Das machen doch alle“",
-        "autoren": [
-            "Dr. Konrad P. Huber",
-            "Dr. Maximilian Methodius"
-        ]
-    },
-    {
-        "datum": "2027-11-28",
-        "titel": "Über die therapeutische Wirkung des kontrollierten sozialen Rückzugs",
-        "autoren": [
-            "Prof. Dr. Hildegard Wankelmuth",
-            "Dr. Maximilian Methodius"
-        ]
-    },
-    {
-        "datum": "2027-09-09",
-        "titel": "Eine Untersuchung der Frage, warum gute Vorsätze bevorzugt am Montag beginnen",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Dr. Konrad P. Huber"
-        ]
-    },
-    {
-        "datum": "2027-07-21",
-        "titel": "Zur Überinterpretation alltäglicher Müdigkeit als Zeichen persönlicher Entwicklung",
-        "autoren": [
-            "Prof. Dr. Hildegard Wankelmuth"
-        ]
-    },
-    {
-        "datum": "2027-05-02",
-        "titel": "Die Rolle unbequemer Einwände bei der Stabilisierung wissenschaftlich haltbarer Ergebnisse",
-        "autoren": [
-            "Dr. Friedrich Unbedacht",
-            "Dr. Konrad P. Huber"
-        ]
-    },
-    {
-        "datum": "2027-02-16",
-        "titel": "Warum Menschen Ratschläge suchen, obwohl sie bereits wissen, was sie tun werden",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Prof. Dr. Hildegard Wankelmuth"
-        ]
-    },
-    {
-        "datum": "2026-12-08",
-        "titel": "Eine empirische Untersuchung des Zusammenhangs zwischen Selbstoptimierung und dem Wunsch, damit aufzuhören",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Dr. Konrad P. Huber"
-        ]
-    },
-    {
-        "datum": "2026-10-17",
-        "titel": "Vorläufige Ergebnisse zur kontrollierten Überinterpretation gewöhnlicher Verhaltensweisen",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Prof. Dr. Hildegard Wankelmuth"
-        ]
-    },
+    [
+        {
+            "datum": "2028-08-22",
+            "titel": "Zur Frage, ob ein Problem tatsächlich gelöst werden muss, nur weil es existiert",
+            "autoren": [
+                "Dr. Maximilian Methodius",
+                "Dr. Friedrich Unbedacht"
+            ],
+            "beschreibung": "Eine grundsätzliche Untersuchung des verbreiteten Missverständnisses, wonach die bloße Existenz eines Problems bereits dessen Lösung erforderlich macht."
+        },
+        {
+            "datum": "2028-07-07",
+            "titel": "Die produktive Vermeidung von Produktivität: Eine empirische Untersuchung des bewussten Nichtstuns",
+            "autoren": [
+                "Dr. Maximilian Methodius",
+                "Dr. Konrad P. Huber"
+            ],
+            "beschreibung": "Eine empirische Untersuchung der Frage, unter welchen Bedingungen bewusste Untätigkeit als besonders effiziente Form des Zeitmanagements betrachtet werden kann."
+        },
+        {
+            "datum": "2028-05-19",
+            "titel": "Wissenschaftlich fundierte Gründe, heute nichts mehr anzufangen",
+            "autoren": [
+                "Dr. Maximilian Methodius"
+            ],
+            "beschreibung": "Zusammenstellung und systematische Bewertung wissenschaftlich klingender Argumente für die Verschiebung anstehender Vorhaben auf einen späteren Zeitpunkt."
+        },
+        {
+            "datum": "2028-03-03",
+            "titel": "Wobei – eine longitudinale Untersuchung spontaner Meinungsrevisionen im Alltag",
+            "autoren": [
+                "Prof. Dr. Hildegard Wankelmuth",
+                "Dr. Konrad P. Huber"
+            ],
+            "beschreibung": "Eine Langzeituntersuchung der Frage, wie häufig Menschen ihre Meinung ändern, nachdem sie feststellen, dass ihre ursprüngliche Meinung gerade ungünstig ist."
+        },
+        {
+            "datum": "2028-01-14",
+            "titel": "Die statistische Bedeutung des Satzes „Das machen doch alle“",
+            "autoren": [
+                "Dr. Konrad P. Huber",
+                "Dr. Maximilian Methodius"
+            ],
+            "beschreibung": "Eine statistische Analyse der Aussagekraft kollektiver Verhaltensbeobachtungen bei fehlender Kenntnis der tatsächlichen Grundgesamtheit."
+        },
+        {
+            "datum": "2027-11-28",
+            "titel": "Über die therapeutische Wirkung des kontrollierten sozialen Rückzugs",
+            "autoren": [
+                "Prof. Dr. Hildegard Wankelmuth",
+                "Dr. Maximilian Methodius"
+            ],
+            "beschreibung": "Untersuchung des kontrollierten Rückzugs aus sozialen Situationen als mögliche Methode zur kurzfristigen Steigerung des persönlichen Wohlbefindens."
+        },
+        {
+            "datum": "2027-09-09",
+            "titel": "Eine Untersuchung der Frage, warum gute Vorsätze bevorzugt am Montag beginnen",
+            "autoren": [
+                "Dr. Maximilian Methodius",
+                "Dr. Konrad P. Huber"
+            ],
+            "beschreibung": "Eine interdisziplinäre Untersuchung zeitlicher Muster bei der Formulierung guter Vorsätze und der auffälligen Bevorzugung des Montags als Beginntermin."
+        },
+        {
+            "datum": "2027-07-21",
+            "titel": "Zur Überinterpretation alltäglicher Müdigkeit als Zeichen persönlicher Entwicklung",
+            "autoren": [
+                "Prof. Dr. Hildegard Wankelmuth"
+            ],
+            "beschreibung": "Entwicklung eines Deutungsmodells, nach dem gewöhnliche Erschöpfungszustände als Hinweise auf tiefgreifende persönliche Veränderungsprozesse interpretiert werden können."
+        },
+        {
+            "datum": "2027-05-02",
+            "titel": "Die Rolle unbequemer Einwände bei der Stabilisierung wissenschaftlich haltbarer Ergebnisse",
+            "autoren": [
+                "Dr. Friedrich Unbedacht",
+                "Dr. Konrad P. Huber"
+            ],
+            "beschreibung": "Eine Untersuchung der Frage, in welchem Umfang kritische Einwände zur wissenschaftlichen Belastbarkeit von Ergebnissen beitragen und ab wann sie lediglich störend werden."
+        },
+        {
+            "datum": "2027-02-16",
+            "titel": "Warum Menschen Ratschläge suchen, obwohl sie bereits wissen, was sie tun werden",
+            "autoren": [
+                "Dr. Maximilian Methodius",
+                "Prof. Dr. Hildegard Wankelmuth"
+            ],
+            "beschreibung": "Eine Untersuchung der psychologischen und sozialen Funktionen von Ratschlägen, die zwar ausdrücklich erbeten, anschließend jedoch konsequent ignoriert werden."
+        },
+        {
+            "datum": "2026-12-08",
+            "titel": "Eine empirische Untersuchung des Zusammenhangs zwischen Selbstoptimierung und dem Wunsch, damit aufzuhören",
+            "autoren": [
+                "Dr. Maximilian Methodius",
+                "Dr. Konrad P. Huber"
+            ],
+            "beschreibung": "Eine empirische Analyse des möglichen Zusammenhangs zwischen zunehmender Selbstoptimierung und dem wachsenden Bedürfnis, sich dieser zu entziehen."
+        },
+        {
+            "datum": "2026-10-17",
+            "titel": "Vorläufige Ergebnisse zur kontrollierten Überinterpretation gewöhnlicher Verhaltensweisen",
+            "autoren": [
+                "Dr. Maximilian Methodius",
+                "Prof. Dr. Hildegard Wankelmuth"
+            ],
+            "beschreibung": "Erste Forschungsergebnisse zur systematischen Bedeutungsüberhöhung alltäglicher Handlungen und ihrer möglichen Anwendung in der modernen Lebensberatung."
+        }
+    ],
     {
         "datum": "2026-08-28",
         "titel": "Der Ratgeber als wissenschaftliches Instrument",
