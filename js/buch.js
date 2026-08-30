@@ -7,12 +7,14 @@ const container = document.getElementById("buch-inhalt");
 
 // Baut die optionale "Vorgeschlagen von: ..." / "Veröffentlicht: ..." /
 // "Aktualisiert: ..."-Zeile aus den Feldern "einsender", "erstellt" und
-// "aktualisiert" in ratgeber.js. Alle drei Angaben sind frei wählbare
-// Strings (kein Datumsformat wird vorausgesetzt) und komplett optional -
-// fehlt eine, wird die entsprechende Zeile einfach weggelassen. Ist
-// "einsender" gesetzt, erscheint "Vorgeschlagen von: ..." ganz oben,
-// noch vor "Veröffentlicht: ...". Sind alle drei leer, liefert die
-// Funktion "".
+// "aktualisiert" in ratgeber.js. "erstellt" und "aktualisiert" werden im
+// ISO-Format (YYYY-MM-DD) erwartet und für die Anzeige über
+// formatiereDatumDeutsch() (siehe js/datumsformat.js) in die deutsche
+// Lesefassung umgewandelt - "einsender" ist dagegen kein Datum und
+// bleibt unverändert. Alle drei Angaben sind optional - fehlt eine,
+// wird die entsprechende Zeile einfach weggelassen. Ist "einsender"
+// gesetzt, erscheint "Vorgeschlagen von: ..." ganz oben, noch vor
+// "Veröffentlicht: ...". Sind alle drei leer, liefert die Funktion "".
 function baueDatumsHinweis(buch) {
   const zeilen = [];
 
@@ -21,11 +23,11 @@ function baueDatumsHinweis(buch) {
   }
 
   if (buch.erstellt) {
-    zeilen.push(`<p class="buch-datum">Veröffentlicht: ${buch.erstellt}</p>`);
+    zeilen.push(`<p class="buch-datum">Veröffentlicht: ${formatiereDatumDeutsch(buch.erstellt)}</p>`);
   }
 
   if (buch.aktualisiert) {
-    zeilen.push(`<p class="buch-datum">Aktualisiert: ${buch.aktualisiert}</p>`);
+    zeilen.push(`<p class="buch-datum">Aktualisiert: ${formatiereDatumDeutsch(buch.aktualisiert)}</p>`);
   }
 
   return zeilen.length
