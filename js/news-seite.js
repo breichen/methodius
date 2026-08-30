@@ -213,16 +213,31 @@ function ladeNewsBeitrag(beitrag, index) {
         `;
       }
 
-      const hatLinkOderBild =
-        Boolean(beitrag.link) || Boolean(beitrag.bild);
+      const hatBild = Boolean(beitrag.bild);
+      const hatLink = Boolean(beitrag.link);
 
-      const linkUndBildVerstecken =
-        NEWS_LINK_UND_BILD_NUR_BEI_MEHR && hatLinkOderBild;
+      // Ein Bild rechtfertigt für sich allein schon einen
+      // "Mehr"-Button - ein Link dagegen NICHT: ein Beitrag, der nur
+      // wegen seines Links "unvollständig" wäre, zeigt den Link
+      // stattdessen sofort an, ganz ohne Button und ohne ihn zu
+      // verstecken (siehe hatMehrInhalt und linkUndBildVerstecken
+      // unten).
+      const bildRechtfertigtMehrButton =
+        NEWS_LINK_UND_BILD_NUR_BEI_MEHR && hatBild;
 
-      // Gibt es überhaupt etwas, das ein "Mehr"-Button einblenden
-      // könnte? Nur dann wird der Button gerendert.
+      // Gibt es überhaupt etwas, das einen "Mehr"-Button rechtfertigt
+      // (zusätzlicher Text ODER ein zu versteckendes Bild)?
       const hatMehrInhalt =
-        hatZusaetzlichenText || linkUndBildVerstecken;
+        hatZusaetzlichenText || bildRechtfertigtMehrButton;
+
+      // Link und Bild werden nur dann versteckt, wenn es ohnehin
+      // schon einen Button gibt (wegen Text oder Bild) - ein Beitrag,
+      // der NUR wegen des Links "mehr" bräuchte, bleibt komplett
+      // sichtbar, ohne Button.
+      const linkUndBildVerstecken =
+        NEWS_LINK_UND_BILD_NUR_BEI_MEHR &&
+        hatMehrInhalt &&
+        (hatLink || hatBild);
 
       /*
         Die Beiträge wechseln sich farblich ab.
