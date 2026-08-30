@@ -1,4 +1,4 @@
-Wir freuen uns, einen neuen Ratgeber des Instituts vorstellen zu können.
+Wir freuen uns, einen neuen Ratgeber des Instituts mit dem Titel "Abnehmen dank Muskelabbau" vorstellen zu können.
 
 In dieser Ausgabe beschäftigt sich Dr. Maximilian Methodius mit der Frage, wie gezielter Muskelabbau zur Gewichtsreduktion eingesetzt werden kann.
 
