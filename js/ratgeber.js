@@ -69,11 +69,11 @@ const ratgeberRohdaten = [
   "Statistiken fälschen leicht gemacht",
   "Zum Influencer in nur 2 Stunden",
   "Der perfekte Körper dank geschickter Beleuchtung",
-  "Die Kunst, am Monatsanfang schon pleite zu sein",
-  
+  "Die Kunst, am Monatsanfang schon pleite zu sein",  
   "So beweist man, dass die globale Erwärmung erfunden ist",
   "Sicherheit beim Bewerbungsgespräch trotz Mangel an Fachwissen",
   "Diskussionen gewinnen durch konsequentes Dagegenreden",
+
   "Warum das Leben leichter ist, wenn man nichts versteht",
   "Plötzlich Privatdetektiv - Völlig unverdächtige Leute observieren",
   "Wie man aus Junk-Food Gourmet-Menüs bastelt",
