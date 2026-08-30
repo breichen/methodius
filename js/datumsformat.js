@@ -40,3 +40,18 @@ function formatiereDatumDeutsch(isoDatum) {
 
   return `${tagOhneFuehrendeNull}. ${monatsName} ${jahr}`;
 }
+
+/*
+  Prüft, ob ein ISO-Datum bereits erreicht ist (heute oder in der
+  Vergangenheit liegt). Funktioniert zuverlässig, weil "datum" im
+  ISO-Format vorliegt (new Date("2028-08-22") lässt sich überall
+  gleich parsen und vergleichen - anders als deutsche Datumstexte).
+
+  Wird von js/institutseite.js UND js/veroeffentlichungen-seite.js
+  genutzt, um Veröffentlichungen mit einem Datum in der Zukunft
+  auszublenden.
+*/
+function istDatumErreicht(isoDatum) {
+  const heute = new Date();
+  return new Date(isoDatum) <= heute;
+}

@@ -26,10 +26,15 @@ function ladeAlleVeroeffentlichungen() {
     })
     .then(veroeffentlichungen => {
 
-      if (
-        !Array.isArray(veroeffentlichungen) ||
-        veroeffentlichungen.length === 0
-      ) {
+      // Dieselbe Regel wie auf der Institutsseite (siehe
+      // js/institutseite.js und istDatumErreicht() in
+      // js/datumsformat.js): Veröffentlichungen mit einem Datum in
+      // der Zukunft werden noch nicht angezeigt.
+      const sichtbareVeroeffentlichungen = veroeffentlichungen.filter(
+        veroeffentlichung => istDatumErreicht(veroeffentlichung.datum)
+      );
+
+      if (sichtbareVeroeffentlichungen.length === 0) {
         container.innerHTML = `
           <p>
             Bisher wurden keine Veröffentlichungen
@@ -40,7 +45,7 @@ function ladeAlleVeroeffentlichungen() {
       }
 
       container.innerHTML =
-        veroeffentlichungen
+        sichtbareVeroeffentlichungen
           .map(veroeffentlichung => `
             <article class="institut-veroeffentlichung">
 

@@ -307,10 +307,16 @@ function ladeVeroeffentlichungen() {
     })
     .then(veroeffentlichungen => {
 
-      if (
-        !Array.isArray(veroeffentlichungen) ||
-        veroeffentlichungen.length === 0
-      ) {
+      // Veröffentlichungen mit einem Datum in der Zukunft werden
+      // (noch) nicht angezeigt - so lassen sich zukünftige Einträge
+      // schon jetzt in der JSON-Datei anlegen, ohne dass sie
+      // vorzeitig sichtbar werden (siehe istDatumErreicht() in
+      // js/datumsformat.js).
+      const sichtbareVeroeffentlichungen = veroeffentlichungen.filter(
+        veroeffentlichung => istDatumErreicht(veroeffentlichung.datum)
+      );
+
+      if (sichtbareVeroeffentlichungen.length === 0) {
         container.innerHTML = `
           <p>
             Bisher wurden keine Veröffentlichungen
@@ -322,11 +328,13 @@ function ladeVeroeffentlichungen() {
 
       // Die JSON-Datei ist bereits nach Datum absteigend sortiert
       // (siehe Kommentar oben in baueVeroeffentlichungenBereich) -
-      // die ersten N Einträge sind daher automatisch die neuesten.
-      const angezeigteVeroeffentlichungen = veroeffentlichungen.slice(
-        0,
-        INSTITUT_VEROEFFENTLICHUNGEN_ANZAHL
-      );
+      // die ersten N sichtbaren Einträge sind daher automatisch die
+      // neuesten.
+      const angezeigteVeroeffentlichungen =
+        sichtbareVeroeffentlichungen.slice(
+          0,
+          INSTITUT_VEROEFFENTLICHUNGEN_ANZAHL
+        );
 
       const kartenHtml =
         angezeigteVeroeffentlichungen
@@ -350,7 +358,8 @@ function ladeVeroeffentlichungen() {
           .join("\n");
 
       const hatWeitereVeroeffentlichungen =
-        veroeffentlichungen.length > INSTITUT_VEROEFFENTLICHUNGEN_ANZAHL;
+        sichtbareVeroeffentlichungen.length >
+        INSTITUT_VEROEFFENTLICHUNGEN_ANZAHL;
 
       const linkHtml = hatWeitereVeroeffentlichungen
         ? `
