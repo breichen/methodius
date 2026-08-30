@@ -195,7 +195,7 @@ const newsListe = [
     datei: "gruendung-methodius-institut.md",
     titel: "Methodius-Institut für Lebenswissenschaften gegründet",
     datum: "2026-05-04",
-    bild: "pics/news/gruendung-methodius-institut.jpg"
+    bild: "pics/news/gruendung-methodius-institut.png"
   },
 
 ];
