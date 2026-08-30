@@ -40,6 +40,16 @@ const kommentarAutoren = {
     username: "@hwankel"
   },
 
+  "Huber": {
+    name: "Dr. Konrad P. Huber",
+    username: "@huber"
+  },
+
+  "Methodius": {
+    name: "Dr. Maximilian Methodius",
+    username: "@chef"
+  },
+
   "Redaktion": {
     name: "Redaktion",
     username: "@methodius"
