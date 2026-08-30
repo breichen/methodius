@@ -27,14 +27,23 @@ fetch("md/institut.md")
     // Das Team folgt auf den letzten Abschnitt vor dem Team.
     const teamIndex = vorTeamAbschnitte.length;
 
-    // Nach dem Team geht die Farbfolge weiter.
+    // Die Veröffentlichungen folgen direkt auf das Team.
+    const veroeffentlichungenIndex = teamIndex + 1;
+
+    // Nach den Veröffentlichungen geht die Farbfolge weiter.
     const nachTeamAbschnitte = gruppiereInstitutSections(nachTeam);
-    const nachTeamStartIndex = teamIndex + 1;
+    const nachTeamStartIndex = veroeffentlichungenIndex + 1;
 
     container.innerHTML =
       rendereInstitutSections(vorTeamAbschnitte, 0) +
       baueTeamBereich(teamIndex) +
+      baueVeroeffentlichungenBereich(veroeffentlichungenIndex) +
       rendereInstitutSections(nachTeamAbschnitte, nachTeamStartIndex);
+
+    // Erst JETZT existiert #institut-veroeffentlichungen im DOM (siehe
+    // baueVeroeffentlichungenBereich oben) - deshalb wird hier und
+    // nicht am Dateiende nachgeladen.
+    ladeVeroeffentlichungen();
   })
   .catch(() => {
     container.innerHTML = `
@@ -233,3 +242,118 @@ function baueTeamBereich(index) {
     </section>
   `;
 }
+
+
+/*
+ * Veröffentlichungen der Institutsmitglieder.
+ *
+ * Die Daten werden separat aus
+ * data/veroeffentlichungen.json geladen.
+ *
+ * Die JSON-Datei ist bereits nach Datum absteigend
+ * sortiert, sodass die neueste Veröffentlichung oben steht.
+ */
+function baueVeroeffentlichungenBereich(index) {
+
+  const klasse =
+    index % 2 === 0
+      ? "section"
+      : "section section-alt";
+
+  return `
+    <section class="${klasse} institut-veroeffentlichungen-section">
+
+      <div class="wrap">
+
+        <h2>Veröffentlichungen</h2>
+
+        <div id="institut-veroeffentlichungen">
+          <p>Veröffentlichungen werden geladen …</p>
+        </div>
+
+      </div>
+
+    </section>
+  `;
+}
+
+
+/*
+ * Lädt die Veröffentlichungen und befüllt
+ * den zuvor erzeugten Bereich.
+ */
+function ladeVeroeffentlichungen() {
+
+  const container =
+    document.getElementById("institut-veroeffentlichungen");
+
+  if (!container) return;
+
+  fetch("data/veroeffentlichungen.json")
+    .then(antwort => {
+
+      if (!antwort.ok) {
+        throw new Error("Veröffentlichungsdatei nicht gefunden");
+      }
+
+      return antwort.json();
+    })
+    .then(veroeffentlichungen => {
+
+      if (
+        !Array.isArray(veroeffentlichungen) ||
+        veroeffentlichungen.length === 0
+      ) {
+        container.innerHTML = `
+          <p>
+            Bisher wurden keine Veröffentlichungen
+            des Instituts verzeichnet.
+          </p>
+        `;
+        return;
+      }
+
+      container.innerHTML =
+        veroeffentlichungen
+          .map(veroeffentlichung => `
+            <article class="institut-veroeffentlichung">
+
+              <p class="institut-veroeffentlichung-datum">
+                ${veroeffentlichung.datum}
+              </p>
+
+              <h3>
+                ${veroeffentlichung.titel}
+              </h3>
+
+              <p class="institut-veroeffentlichung-autoren">
+                ${veroeffentlichung.autoren.join(", ")}
+              </p>
+
+            </article>
+          `)
+          .join("\n");
+
+    })
+    .catch(fehler => {
+
+      console.error(
+        "Fehler beim Laden der Veröffentlichungen:",
+        fehler
+      );
+
+      container.innerHTML = `
+        <p>
+          Die Veröffentlichungen konnten leider
+          nicht geladen werden.
+        </p>
+      `;
+    });
+}
+
+
+/*
+ * Wird jetzt direkt nach dem Einfügen des Veröffentlichungen-Bereichs
+ * aufgerufen (siehe oben im .then() der institut.md-Ladung), damit
+ * #institut-veroeffentlichungen zu diesem Zeitpunkt garantiert existiert.
+ */

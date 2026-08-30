@@ -2011,3 +2011,48 @@ hr {
   font-size: 1.2rem;
   margin-bottom: 12px;
 }
+
+/* ============================================
+   INSTITUT – VERÖFFENTLICHUNGEN
+   ============================================ */
+
+.institut-veroeffentlichungen-section {
+  /* bewusst ohne zusätzliche Gestaltung,
+     damit es sich in die übrigen Institutskapitel einfügt */
+}
+
+.institut-veroeffentlichung {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.institut-veroeffentlichung:first-child {
+  padding-top: 0;
+}
+
+.institut-veroeffentlichung:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.institut-veroeffentlichung-datum {
+  margin: 0 0 6px;
+  color: var(--color-text-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.institut-veroeffentlichung h3 {
+  margin: 0 0 7px;
+  font-family: "Fraunces", serif;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.institut-veroeffentlichung-autoren {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
