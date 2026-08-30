@@ -37,7 +37,7 @@
   "Neueste Ratgeber" zeigt automatisch die letzten Einträge.
 */
 const ratgeberRohdaten = [
-  {slug: "Abnehmen dank Muskelabbau"},
+  {slug: "Abnehmen dank Muskelabbau", erstellt: "30. August 2026"},
   /*"Die Kunst, beschäftigt auszusehen",
   "Freunde verlieren leicht gemacht",
   "Glücklich werden durch niedrigere Erwartungen",
