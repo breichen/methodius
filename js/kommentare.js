@@ -1,239 +1,581 @@
 /*
   Gemeinsame Kommentar-Logik für Ratgeber (buch.html) und Fallakten
-  (problem.html). Lädt die redaktionelle Diskussion zu einem Eintrag
-  aus einer Markdown-Datei (md/<ordner>/<slug>.md) und baut daraus den
-  Kommentarbereich - inklusive Aktualisierung des "Kommentare"-Links
-  in der Blättern/Teilen-Leiste.
+  (problem.html).
 
-  Wird von js/buch.js UND js/problem.js über ladeKommentare(...)
-  aufgerufen - hier ausgelagert, damit der Code nicht doppelt gepflegt
-  werden muss. Setzt voraus, dass js/markdown.js VOR dieser Datei
-  geladen wurde (parseMarkdownBloecke()).
+  Lädt die Kommentare aus:
+
+    md/<ordner>/<slug>.md
+
+  Unterstütztes Format der Markdown-Datei:
+
+    [Unbedacht | 0]
+    Das ist ein Kommentar.
+
+    [Redaktion | 1]
+    Das ist eine Antwort auf den vorherigen Kommentar.
+
+    [Unbedacht | 0]
+    Dieser Kommentar beginnt wieder ganz links.
+
+  "level" bestimmt die Einrückung:
+    Level 0 = ganz links
+    Level 1 = eine Ebene eingerückt
+    Level 2 = zwei Ebenen eingerückt
+    usw.
+
+  Fehlt die Kommentar-Datei oder ist sie leer, wird trotzdem die
+  Kommentar-Section mit einem entsprechenden Hinweis angezeigt.
 */
 
+
 const kommentarAutoren = {
+
   "Unbedacht": {
     name: "Dr. Konrad Unbedacht",
     username: "@unbedacht"
   },
+
   "Redaktion": {
     name: "Redaktion",
     username: "@methodius"
   }
+
 };
 
-// Lädt "md/<ordner>/<slug>.md", baut daraus den Kommentarbereich
-// (<section id="sectionId">) und hängt ihn ans Ende des Elements mit
-// der ID "containerId" an. "ueberschrift" ist der Text über der
-// Kommentarliste (Standard: "Kommentare"). Fehlt die Datei oder ist
-// sie leer, wird trotzdem ein (leerer) Kommentarbereich angezeigt.
-//
-// Beispiel Ratgeber (siehe js/buch.js):
-//   ladeKommentare({
-//     slug: buch.slug,
-//     ordner: "ratgeber-kommentare",
-//     containerId: "buch-text",
-//     sectionId: "ratgeber-kommentare"
-//   });
-//
-// Beispiel Fallakte (siehe js/problem.js):
-//   ladeKommentare({
-//     slug: problem.id || problem.titel,
-//     ordner: "fallakten-kommentare",
-//     containerId: "problem-inhalt",
-//     sectionId: "fallakten-kommentare"
-//   });
-function ladeKommentare({ slug, ordner, containerId, sectionId, ueberschrift = "Kommentare" } = {}) {
-  // Frühzeitige, klare Fehlermeldung statt einer kryptischen 404 auf
-  // z.B. "md/[object Object]/undefined.md" - das passiert, wenn
-  // ladeKommentare() mit falsch geformten Parametern aufgerufen wird
-  // (z.B. weil eine veraltete Version von buch.js/problem.js noch den
-  // alten Einzel-String-Aufruf ladeKommentare(slug) benutzt).
+
+/*
+  Lädt die Kommentar-Datei und baut anschließend die
+  Kommentar-Section.
+
+  Beispiel Ratgeber:
+
+    ladeKommentare({
+      slug: buch.slug,
+      ordner: "ratgeber-kommentare",
+      containerId: "buch-text",
+      sectionId: "ratgeber-kommentare"
+    });
+
+  Beispiel Fallakte:
+
+    ladeKommentare({
+      slug: problem.id || problem.titel,
+      ordner: "fallakten-kommentare",
+      containerId: "problem-inhalt",
+      sectionId: "fallakten-kommentare"
+    });
+*/
+
+function ladeKommentare({
+  slug,
+  ordner,
+  containerId,
+  sectionId,
+  ueberschrift = "Kommentare"
+} = {}) {
+
+  /*
+    Parameter prüfen
+  */
+
   if (
     typeof ordner !== "string" ||
     typeof containerId !== "string" ||
     typeof sectionId !== "string" ||
     (typeof slug !== "string" && typeof slug !== "number")
   ) {
+
     console.error(
-      "ladeKommentare(): ungültige Parameter erhalten - erwartet werden " +
-      "{ slug, ordner, containerId, sectionId } als Objekt, jeweils als " +
-      "String/Zahl. Erhalten:",
-      { slug, ordner, containerId, sectionId }
+      "ladeKommentare(): ungültige Parameter erhalten.",
+      {
+        slug,
+        ordner,
+        containerId,
+        sectionId
+      }
     );
+
     return;
   }
 
-  const zielElement = document.getElementById(containerId);
+
+  /*
+    Ziel-Element suchen
+  */
+
+  const zielElement =
+    document.getElementById(containerId);
 
   if (!zielElement) {
+
     console.error(
-      `ladeKommentare(): Element mit id="${containerId}" wurde nicht gefunden. ` +
-      "Prüfe, ob containerId korrekt gesetzt ist und ladeKommentare() erst " +
-      "aufgerufen wird, nachdem dieses Element im DOM existiert."
+      `ladeKommentare(): Element mit id="${containerId}" wurde nicht gefunden.`
     );
+
     return;
   }
 
-  const pfad = encodeURIComponent(slug);
-  const url = `md/${ordner}/${pfad}.md`;
 
-  console.log("Lade Kommentar-Datei:", url);
+  /*
+    Pfad zur Markdown-Datei
+  */
+
+  const pfad =
+    encodeURIComponent(slug);
+
+  const url =
+    `md/${ordner}/${pfad}.md`;
+
+  console.log(
+    "Lade Kommentar-Datei:",
+    url
+  );
+
+
+  /*
+    Kommentar-Section einfügen
+  */
 
   function einfuegen(kommentare) {
-    const kommentarHtml = baueKommentarBereich(kommentare, sectionId, ueberschrift);
-    zielElement.insertAdjacentHTML("beforeend", kommentarHtml);
+
+    const kommentarHtml =
+      baueKommentarBereich(
+        kommentare,
+        sectionId,
+        ueberschrift
+      );
+
+    zielElement.insertAdjacentHTML(
+      "beforeend",
+      kommentarHtml
+    );
   }
 
-  fetch(url)
-    .then(antwort => {
-      if (!antwort.ok) {
-        console.log("Keine Kommentar-Datei gefunden:", url);
 
-        // Kein Fehler: Kommentarbereich trotzdem anzeigen.
+  /*
+    Datei laden
+  */
+
+  fetch(url)
+
+    .then(antwort => {
+
+      if (!antwort.ok) {
+
+        console.log(
+          "Keine Kommentar-Datei gefunden:",
+          url
+        );
+
+        /*
+          Kein Fehler:
+          Die Section soll trotzdem erscheinen.
+        */
+
         return "";
       }
 
       return antwort.text();
     })
+
+
     .then(markdown => {
-      if (!markdown || !markdown.trim()) {
-        console.log("Kommentar-Datei ist leer oder fehlt.");
+
+      /*
+        Keine Datei oder leere Datei
+      */
+
+      if (
+        !markdown ||
+        !markdown.trim()
+      ) {
+
+        console.log(
+          "Kommentar-Datei ist leer oder fehlt."
+        );
 
         aktualisiereKommentarLink(0);
+
         einfuegen([]);
+
         return;
       }
 
-      console.log("Kommentar-Datei geladen:", markdown);
 
-      const kommentare = parseKommentare(markdown);
+      console.log(
+        "Kommentar-Datei geladen:",
+        markdown
+      );
 
-      console.log("Gefundene Kommentare:", kommentare);
 
-      aktualisiereKommentarLink(kommentare.length);
+      /*
+        Kommentare parsen
+      */
+
+      const kommentare =
+        parseKommentare(markdown);
+
+
+      console.log(
+        "Gefundene Kommentare:",
+        kommentare
+      );
+
+
+      /*
+        Link oberhalb des Textes aktualisieren
+      */
+
+      aktualisiereKommentarLink(
+        kommentare.length
+      );
+
+
+      /*
+        Kommentar-Section einfügen
+      */
+
       einfuegen(kommentare);
-    })
-    .catch(fehler => {
-      console.error("Fehler beim Laden der Kommentare:", fehler);
 
-      // Auch bei einem Fehler den Kommentarbereich anzeigen.
+    })
+
+
+    .catch(fehler => {
+
+      console.error(
+        "Fehler beim Laden der Kommentare:",
+        fehler
+      );
+
+      /*
+        Auch bei einem Ladefehler soll die
+        Kommentar-Section sichtbar bleiben.
+      */
+
+      aktualisiereKommentarLink(0);
+
       einfuegen([]);
     });
+
 }
 
+
+/*
+  PARSER
+  ============================================
+
+  Erwartetes Format:
+
+    [Unbedacht | 0]
+    Kommentartext
+
+    [Redaktion | 1]
+    Antwort
+
+    [Unbedacht | 0]
+    Neuer Hauptkommentar
+
+  Die Zahl ist das Level der Einrückung.
+*/
+
 function parseKommentare(markdown) {
-  const bloecke = markdown
-    .split(/\n\s*\n(?=\[[^\]]+\])/)
-    .map(block => block.trim())
-    .filter(Boolean);
 
   const kommentare = [];
 
+
+  /*
+    Die Datei wird anhand der Kommentar-Kopfzeilen
+    in einzelne Blöcke zerlegt.
+
+    (?=^\[[^\]]+\|\s*\d+\]\s*$)
+    erkennt die nächste Kommentar-Kopfzeile.
+  */
+
+  const bloecke = markdown
+    .split(
+      /\n\s*\n(?=^\[[^\]]+\|\s*\d+\]\s*$)/m
+    )
+    .map(block => block.trim())
+    .filter(Boolean);
+
+
+  /*
+    Jeden Block einzeln verarbeiten
+  */
+
   bloecke.forEach(block => {
+
     const match = block.match(
-      /^\[([^|\]]+)\s*\|\s*(\d+)\]\s*\n([\s\S]*)$/
+      /^\[([^\]|]+)\s*\|\s*(\d+)\]\s*\n([\s\S]*)$/m
     );
 
+
     if (!match) {
-      console.warn("Kommentar konnte nicht erkannt werden:", block);
+
+      console.warn(
+        "Kommentar konnte nicht erkannt werden:",
+        block
+      );
+
       return;
     }
 
-    const autor = match[1].trim();
-    const level = Number(match[2]);
-    const text = match[3].trim();
+
+    const autor =
+      match[1].trim();
+
+    const level =
+      Math.max(
+        0,
+        Number(match[2])
+      );
+
+    const text =
+      match[3].trim();
+
+
+    /*
+      Leere Kommentare ignorieren
+    */
 
     if (!text) {
       return;
     }
+
 
     kommentare.push({
       autor,
       level,
       text
     });
+
   });
+
 
   return kommentare;
 }
 
-function baueKommentarBereich(kommentare, sectionId, ueberschrift = "Kommentare") {
-  const beitraege = kommentare
-    .map(kommentar => {
-      const bloecke = parseMarkdownBloecke(kommentar.text);
-      const html = bloecke.join("\n");
 
-      const autorInfo =
-        kommentarAutoren[kommentar.autor] || {
-          name: kommentar.autor,
-          username: ""
-        };
+/*
+  BAUT DIE KOMMENTAR-SECTION
+  ============================================
+*/
 
-      const istRedaktion = kommentar.autor === "Redaktion";
+function baueKommentarBereich(
+  kommentare,
+  sectionId,
+  ueberschrift = "Kommentare"
+) {
 
-      const klasse = istRedaktion
-        ? "kommentar kommentar-redaktion"
-        : "kommentar kommentar-unbedacht";
+  /*
+    Kommentare vorhanden
+  */
 
-      return `
-        <article class="${klasse}" data-level="${kommentar.level}">
-          <div class="kommentar-avatar" aria-hidden="true">
-            ${autorInfo.name.charAt(0)}
-          </div>
+  let beitraege = "";
 
-          <div class="kommentar-inhalt">
-            <div class="kommentar-meta">
-              <span class="kommentar-autor">
-                ${autorInfo.name}
-              </span>
 
-              ${
-                autorInfo.username
-                  ? `<span class="kommentar-username">${autorInfo.username}</span>`
-                  : ""
-              }
+  if (kommentare.length > 0) {
+
+    beitraege = kommentare
+      .map(kommentar => {
+
+        /*
+          Markdown des Kommentars in HTML umwandeln
+        */
+
+        const bloecke =
+          parseMarkdownBloecke(
+            kommentar.text
+          );
+
+        const html =
+          bloecke.join("\n");
+
+
+        /*
+          Autorinformationen aus dem Mapping holen
+        */
+
+        const autorInfo =
+          kommentarAutoren[kommentar.autor] || {
+            name: kommentar.autor,
+            username: ""
+          };
+
+
+        /*
+          Redaktion bekommt weiterhin die
+          entsprechende CSS-Klasse.
+
+          Die tatsächliche Einrückung kommt aber
+          NICHT mehr vom Autor, sondern vom Level.
+        */
+
+        const istRedaktion =
+          kommentar.autor === "Redaktion";
+
+
+        const klasse =
+          istRedaktion
+            ? "kommentar kommentar-redaktion"
+            : "kommentar kommentar-unbedacht";
+
+
+        /*
+          Level bestimmt die Einrückung.
+
+          42px pro Ebene.
+
+          Inline-Style überschreibt damit auch die
+          bisherige .kommentar-redaktion-Regel aus dem CSS,
+          sodass z.B. eine Redaktion mit Level 0
+          tatsächlich ganz links steht.
+        */
+
+        const einrueckung =
+          kommentar.level * 42;
+
+
+        return `
+          <article
+            class="${klasse}"
+            data-level="${kommentar.level}"
+            style="margin-left: ${einrueckung}px;"
+          >
+
+            <div
+              class="kommentar-avatar"
+              aria-hidden="true"
+            >
+              ${autorInfo.name.charAt(0)}
             </div>
 
-            <div class="kommentar-text">
-              ${html}
+
+            <div class="kommentar-inhalt">
+
+              <div class="kommentar-meta">
+
+                <span class="kommentar-autor">
+                  ${autorInfo.name}
+                </span>
+
+                ${
+                  autorInfo.username
+                    ? `
+                      <span class="kommentar-username">
+                        ${autorInfo.username}
+                      </span>
+                    `
+                    : ""
+                }
+
+              </div>
+
+
+              <div class="kommentar-text">
+                ${html}
+              </div>
+
             </div>
-          </div>
-        </article>
-      `;
-    })
-    .join("\n");
+
+          </article>
+        `;
+
+      })
+      .join("\n");
+
+  }
+
+
+  /*
+    Keine Kommentare vorhanden
+  */
+
+  else {
+
+    beitraege = `
+      <p class="kommentar-leer">
+        Noch keine Kommentare vorhanden.
+      </p>
+    `;
+  }
+
+
+  /*
+    Gesamte Section
+  */
 
   return `
-    <section id="${sectionId}" class="ratgeber-kommentare">
+    <section
+      id="${sectionId}"
+      class="ratgeber-kommentare"
+    >
+
       <div class="wrap">
+
         <div class="kommentar-spalte">
 
           <div class="kommentar-ueberschrift">
+
             <span class="kommentar-linie"></span>
+
             <h2>${ueberschrift}</h2>
+
           </div>
 
+
           <div class="kommentar-liste">
+
             ${beitraege}
+
           </div>
 
         </div>
+
       </div>
+
     </section>
   `;
 }
 
-function aktualisiereKommentarLink(anzahl) {
-  const linkText = document.getElementById("kommentar-link-text");
 
-  if (!linkText) return;
+/*
+  AKTUALISIERT DEN KOMMENTARE-LINK
+  ============================================
+*/
+
+function aktualisiereKommentarLink(anzahl) {
+
+  const linkText =
+    document.getElementById(
+      "kommentar-link-text"
+    );
+
+
+  if (!linkText) {
+    return;
+  }
+
 
   if (anzahl === 0) {
-    linkText.textContent = "Noch keine Kommentare";
-  } else if (anzahl === 1) {
-    linkText.textContent = "1 Kommentar";
-  } else {
-    linkText.textContent = `${anzahl} Kommentare`;
+
+    linkText.textContent =
+      "Noch keine Kommentare";
+
   }
+
+  else if (anzahl === 1) {
+
+    linkText.textContent =
+      "1 Kommentar";
+
+  }
+
+  else {
+
+    linkText.textContent =
+      `${anzahl} Kommentare`;
+
+  }
+
 }
