@@ -1,138 +1,455 @@
 /*
-  Liest den Titel aus der URL (?titel=...), sucht das passende Problem
-  in problemeListe (aus js/probleme.js) und zeigt die vollständige
-  Fallakte an - inklusive "Wissenschaftliche Begründung" und Prognose,
-  die auf der Übersicht (probleme.html) bewusst nicht zu sehen sind.
+  Lädt eine Fallakte aus einer Markdown-Datei und zeigt sie vollständig an.
+
+  Die Datei wird über ?datei=... ausgewählt.
+
+  Beispiel:
+
+    problem.html?datei=ans-bett-gebunden.md
+
+  Die Fallakte liegt unter:
+
+    md/probleme/
 */
 
-const container = document.getElementById("problem-inhalt");
 
-// Wandelt einfache Formatierung in Text-Feldern (aus probleme.js) in
-// HTML um: **fett** wird zu <strong>, doppelte Zeilenumbrüche trennen
-// Absätze, einfache Zeilenumbrüche werden zu <br>.
-function formatiereProblemText(text) {
-  const escaped = String(text || "");
+const container =
+  document.getElementById("problem-inhalt");
 
-  return escaped
-    .split(/\n\s*\n/)
-    .map(absatz => {
-      const mitFett = absatz.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-      return `<p>${mitFett.replace(/\n/g, "<br>")}</p>`;
+
+// ------------------------------------------------------------
+// Datei aus URL lesen
+// ------------------------------------------------------------
+
+const parameter =
+  new URLSearchParams(
+    window.location.search
+  );
+
+const dateiParam =
+  parameter.get("datei");
+
+
+if (!dateiParam) {
+
+  zeigeFehler();
+
+} else {
+
+  ladeFallakte(dateiParam);
+
+}
+
+
+// ------------------------------------------------------------
+// Fallakte laden
+// ------------------------------------------------------------
+
+function ladeFallakte(dateiname) {
+
+  const pfad =
+    `md/probleme/${encodeURIComponent(dateiname)}`;
+
+  fetch(pfad)
+
+    .then(antwort => {
+
+      if (!antwort.ok) {
+
+        throw new Error(
+          `Fallakten-Datei nicht gefunden: ${dateiname}`
+        );
+
+      }
+
+      return antwort.text();
+
     })
-    .join("\n");
+
+    .then(markdown => {
+
+      const problem =
+        parseFallakte(markdown);
+
+      if (!problem.titel) {
+
+        throw new Error(
+          "Die Fallakte enthält keinen Titel."
+        );
+
+      }
+
+      zeigeFallakte(
+        problem,
+        dateiname
+      );
+
+    })
+
+    .catch(fehler => {
+
+      console.error(
+        "Fehler beim Laden der Fallakte:",
+        fehler
+      );
+
+      zeigeFehler();
+
+    });
+
 }
 
-// Baut die optionale "Eingesendet von: ..." / "Veröffentlicht: ..." /
-// "Aktualisiert: ..."-Zeile - genau wie bei den Ratgebern (siehe
-// js/buch.js), nur hier lokal, da Probleme keine eigene Datei haben.
-function baueDatumsHinweis(problem) {
-  const zeilen = [];
 
-  if (problem.einsender) {
-    zeilen.push(`<p class="buch-datum">Eingesendet von: ${problem.einsender}</p>`);
+// ------------------------------------------------------------
+// Fallakte aus Markdown auslesen
+// ------------------------------------------------------------
+
+function parseFallakte(markdown) {
+
+  const bereiche = {};
+
+  const regex =
+    /^#{1,2}\s+(.+?)\s*\n([\s\S]*?)(?=^#{1,2}\s+|\s*$)/gm;
+
+  let match;
+
+  while ((match = regex.exec(markdown)) !== null) {
+
+    const ueberschrift =
+      match[1]
+        .trim()
+        .toLowerCase();
+
+    const inhalt =
+      match[2].trim();
+
+    bereiche[ueberschrift] =
+      inhalt;
   }
 
-  if (problem.erstellt) {
-    zeilen.push(`<p class="buch-datum">Veröffentlicht: ${problem.erstellt}</p>`);
-  }
 
-  if (problem.aktualisiert) {
-    zeilen.push(`<p class="buch-datum">Aktualisiert: ${problem.aktualisiert}</p>`);
-  }
+  return {
 
-  return zeilen.length
-    ? `<div class="buch-datums-hinweis">${zeilen.join("\n")}</div>`
-    : "";
+    titel:
+      bereiche["titel"] || "",
+
+    frage:
+      bereiche["frage"] || "",
+
+    diagnose:
+      bereiche["diagnose"] || "",
+
+    behandlung:
+      bereiche["behandlung"] || "",
+
+    begruendung:
+      bereiche["begründung"] ||
+      bereiche["begruendung"] ||
+      "",
+
+    prognose:
+      bereiche["prognose"] || "",
+
+    einsender:
+      bereiche["einsender"] || "",
+
+    erstellt:
+      bereiche["erstellt"] || "",
+
+    aktualisiert:
+      bereiche["aktualisiert"] || ""
+
+  };
+
 }
 
-// URL-Parameter auslesen, z.B. "Der ewige Gruppenchat" aus
-// problem.html?titel=Der%20ewige%20Gruppenchat
-const parameter = new URLSearchParams(window.location.search);
-const titelParam = parameter.get("titel");
-const problem = problemeListe.find(p => p.titel === titelParam);
 
-if (!problem) {
-  // Falscher oder fehlender Link -> freundliche Fehlermeldung statt kaputter Seite
+// ------------------------------------------------------------
+// Fehleranzeige
+// ------------------------------------------------------------
+
+function zeigeFehler() {
+
   container.innerHTML = `
     <h1>Fallakte nicht gefunden</h1>
-    <p>Dieses Problem gibt es (noch) nicht. <a href="probleme.html">Zur Übersicht</a>.</p>
+
+    <p>
+      Dieses Problem gibt es (noch) nicht.
+      <a href="probleme.html">
+        Zur Übersicht
+      </a>.
+    </p>
   `;
-} else {
-  document.title = problem.titel + " – Dr. Maximilian Methodius";
 
-  const datumsHtml = baueDatumsHinweis(problem);
+}
 
-  // Fallnummer (z.B. "001") wird weiterhin für die Teilen-Karte
-  // gebraucht (siehe initTeilenButtonProblem unten).
-  const fallnummer = String(problemeListe.indexOf(problem) + 1).padStart(3, "0");
 
-  // Dateiname der Kommentar-Datei (md/fallakten-kommentare/<...>.md):
-  // Bevorzugt das optionale, garantiert eindeutige "id"-Feld aus
-  // problemeListe (siehe js/probleme.js); ist keine ID gesetzt, wird
-  // ersatzweise der Titel verwendet. Der Titel ist NICHT zwingend
-  // eindeutig - bei doppelten Titeln landen die Kommentare dann
-  // versehentlich auf derselben Datei/Fallakte. Für neue oder
-  // umbenannte Fallakten daher am besten immer eine "id" vergeben.
-  const kommentarSlug = problem.id || problem.titel;
+// ------------------------------------------------------------
+// Datums- und Einsender-Hinweise
+// ------------------------------------------------------------
+
+function baueDatumsHinweis(problem) {
+
+  const zeilen = [];
+
+
+  if (problem.einsender) {
+
+    zeilen.push(`
+      <p class="buch-datum">
+        Eingesendet von: ${problem.einsender}
+      </p>
+    `);
+
+  }
+
+
+  if (problem.erstellt) {
+
+    zeilen.push(`
+      <p class="buch-datum">
+        Veröffentlicht: ${problem.erstellt}
+      </p>
+    `);
+
+  }
+
+
+  if (problem.aktualisiert) {
+
+    zeilen.push(`
+      <p class="buch-datum">
+        Aktualisiert: ${problem.aktualisiert}
+      </p>
+    `);
+
+  }
+
+
+  return zeilen.length
+
+    ? `
+      <div class="buch-datums-hinweis">
+        ${zeilen.join("\n")}
+      </div>
+    `
+
+    : "";
+
+}
+
+
+// ------------------------------------------------------------
+// Fallakte anzeigen
+// ------------------------------------------------------------
+
+function zeigeFallakte(
+  problem,
+  dateiname
+) {
+
+  document.title =
+    problem.titel +
+    " – Dr. Maximilian Methodius";
+
+
+  const datumsHtml =
+    baueDatumsHinweis(problem);
+
+
+  /*
+    Fallnummer anhand der Position
+    des Dateinamens in problemeListe.
+  */
+
+  const index =
+    problemeListe.indexOf(dateiname);
+
+  const fallnummerText =
+    index >= 0
+      ? String(index + 1).padStart(3, "0")
+      : "???";
+
+
+  /*
+    Der Dateiname ohne .md ist die
+    eindeutige Kennung für Kommentare.
+  */
+
+  const kommentarSlug =
+    dateiname.replace(
+      /\.md$/i,
+      ""
+    );
+
+
+  /*
+    Markdown rendern.
+  */
+
+  const frageHtml =
+    parseMarkdownBloecke(problem.frage)
+      .join("\n");
+
+  const diagnoseHtml =
+    parseMarkdownBloecke(problem.diagnose)
+      .join("\n");
+
+  const behandlungHtml =
+    parseMarkdownBloecke(problem.behandlung)
+      .join("\n");
+
+  const begruendungHtml =
+    parseMarkdownBloecke(problem.begruendung)
+      .join("\n");
+
+  const prognoseHtml =
+    parseMarkdownBloecke(problem.prognose)
+      .join("\n");
+
 
   container.innerHTML = `
+
     ${datumsHtml}
 
     <p class="blaettern-wrap">
-      <a href="#fallakten-kommentare" id="kommentar-link" class="kommentar-link">
-        💬 <span id="kommentar-link-text">Kommentare</span>
+
+      <a
+        href="#fallakten-kommentare"
+        id="kommentar-link"
+        class="kommentar-link"
+      >
+        💬
+        <span id="kommentar-link-text">
+          Kommentare
+        </span>
       </a>
 
-      <button type="button" id="teilen-button" class="teilen-button">🔗 Teilen</button>
+      <button
+        type="button"
+        id="teilen-button"
+        class="teilen-button"
+      >
+        🔗 Teilen
+      </button>
+
     </p>
-    
+
+
     <h1>${problem.titel}</h1>
 
+
     <div class="problem-block problem-frage-block">
-      <p class="problem-label">🗒️ Eingesandtes Problem</p>
-      <p class="problem-frage-text">„${problem.frage}“</p>
+
+      <p class="problem-label">
+        🗒️ Eingesandtes Problem
+      </p>
+
+      <div class="problem-frage-text">
+        ${frageHtml}
+      </div>
+
     </div>
+
 
     <div class="problem-block">
-      <p class="problem-label">🩺 Diagnose</p>
-      ${formatiereProblemText(problem.diagnose)}
+
+      <p class="problem-label">
+        🩺 Diagnose
+      </p>
+
+      ${diagnoseHtml}
+
     </div>
+
 
     <div class="problem-block">
-      <p class="problem-label">💊 Behandlung</p>
-      ${formatiereProblemText(problem.behandlung)}
+
+      <p class="problem-label">
+        💊 Behandlung
+      </p>
+
+      ${behandlungHtml}
+
     </div>
+
 
     <div class="problem-block">
-      <p class="problem-label">🔬 Wissenschaftliche Begründung</p>
-      ${formatiereProblemText(problem.begruendung)}
+
+      <p class="problem-label">
+        🔬 Wissenschaftliche Begründung
+      </p>
+
+      ${begruendungHtml}
+
     </div>
+
 
     <div class="problem-block">
-      <p class="problem-label">📈 Prognose</p>
-      ${formatiereProblemText(problem.prognose)}
+
+      <p class="problem-label">
+        📈 Prognose
+      </p>
+
+      ${prognoseHtml}
+
     </div>
 
-    <p class="grid-link"><a href="probleme.html">← Zur Übersicht</a></p>
+
+    <p class="grid-link">
+      <a href="probleme.html">
+        ← Zur Übersicht
+      </a>
+    </p>
+
   `;
 
-  // Teilen-Button (siehe js/teilen.js) - erzeugt ein Kartenbild
-  // (Fallnummer, Titel, Frage, Diagnose, Behandlung) und teilt es
-  // zusammen mit Titel + Link
-  initTeilenButtonProblem(document.getElementById("teilen-button"), {
-    titel: problem.titel,
-    fallnummer,
-    frage: problem.frage,
-    diagnose: problem.diagnose,
-    behandlung: problem.behandlung
+
+  // ----------------------------------------------------------
+  // Teilen
+  // ----------------------------------------------------------
+
+  initTeilenButtonProblem(
+    document.getElementById(
+      "teilen-button"
+    ),
+    {
+      titel:
+        problem.titel,
+
+      fallnummer:
+        fallnummerText,
+
+      frage:
+        problem.frage,
+
+      diagnose:
+        problem.diagnose,
+
+      behandlung:
+        problem.behandlung
+    }
+  );
+
+
+  // ----------------------------------------------------------
+  // Kommentare
+  // ----------------------------------------------------------
+
+  ladeKommentare({
+
+    slug:
+      kommentarSlug,
+
+    ordner:
+      "fallakten-kommentare",
+
+    containerId:
+      "problem-inhalt",
+
+    sectionId:
+      "fallakten-kommentare"
+
   });
 
-  // Kommentarbereich (siehe js/kommentare.js) - gleiche Logik wie bei
-  // den Ratgebern, nur mit eigenem Ordner/Container/Anker.
-  ladeKommentare({
-    slug: kommentarSlug,
-    ordner: "fallakten-kommentare",
-    containerId: "problem-inhalt",
-    sectionId: "fallakten-kommentare"
-  });
 }

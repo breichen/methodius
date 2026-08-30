@@ -1,85 +1,365 @@
 /*
   Befüllt bis zu drei Container auf den Problem-Seiten mit Karten aus
-  problemeListe (aus js/probleme.js):
+  den Markdown-Dateien aus problemeListe.
 
-  - #alle-probleme        alle Probleme, in der Reihenfolge aus probleme.js
-  - #neueste-probleme     die zuletzt hinzugefügten Probleme (neueste zuerst)
-  - #zufaellige-probleme  eine zufällige Auswahl, bei jedem Laden neu gewürfelt
+  Die eigentlichen Fallakten liegen unter:
 
-  Jede Karte ist bewusst kompakt gehalten (Fallnummer, Titel, Frage)
-  und komplett anklickbar - Diagnose, Behandlung, wissenschaftliche
-  Begründung und Prognose gibt es erst auf der vollständigen Fallakte
-  (problem.html, siehe js/problem.js). Fehlt ein Container auf der
-  aktuellen Seite, wird der jeweilige Schritt einfach übersprungen -
-  so kann dieselbe Datei auf mehreren Seiten verwendet werden.
+    md/probleme/
+
+  Erwartete Struktur einer Fallakte:
+
+    # Titel
+
+    ## Frage
+
+    ...
+
+    ## Diagnose
+
+    ...
+
+    ## Behandlung
+
+    ...
+
+    ## Begründung
+
+    ...
+
+    ## Prognose
+
+    ...
+
+    ## Einsender
+
+    ...
+
+    ## Erstellt
+
+    ...
+
+    ## Aktualisiert
+
+  Für die Übersicht werden momentan nur Titel und Frage benötigt.
 */
 
-// Wie viele Karten "Neueste Fallakten" bzw. "Zufällige Empfehlungen"
-// jeweils anzeigen - dieselbe Anzahl wie bei den Ratgebern.
+
+// Wie viele Karten "Neueste Fallakten" bzw.
+// "Zufällige Empfehlungen" angezeigt werden.
 const ANZAHL_NEUESTE_PROBLEME = 3;
 const ANZAHL_ZUFAELLIGE_PROBLEME = 3;
 
-// Baut eine einzelne, komplett anklickbare Fallakten-Karte. "fallnummer"
-// wird bewusst von außen übergeben (statt aus der Position in der
-// jeweils angezeigten Teil-Liste berechnet) - so bleibt z.B.
-// "Fall Nr. 004" auch dann dieselbe Nummer, wenn das Problem in
-// "Neueste Fallakten" oder "Zufällige Empfehlungen" an anderer Stelle
-// auftaucht als in der vollständigen Liste.
+
+// ------------------------------------------------------------
+// Markdown-Datei laden
+// ------------------------------------------------------------
+
+function ladeProblem(dateiname) {
+
+  const pfad =
+    `md/probleme/${encodeURIComponent(dateiname)}`;
+
+  return fetch(pfad)
+    .then(antwort => {
+
+      if (!antwort.ok) {
+        throw new Error(
+          `Fallakten-Datei nicht gefunden: ${dateiname}`
+        );
+      }
+
+      return antwort.text();
+    })
+    .then(markdown => {
+
+      return {
+        datei: dateiname,
+        ...parseProblemMarkdown(markdown)
+      };
+
+    });
+
+}
+
+
+// ------------------------------------------------------------
+// Markdown einer Fallakte auslesen
+// ------------------------------------------------------------
+
+function parseProblemMarkdown(markdown) {
+
+  const bereiche = {};
+
+  /*
+    Erkennt Überschriften wie:
+
+      # Titel
+      ## Frage
+      ## Diagnose
+      ## Behandlung
+
+    und speichert den jeweiligen Inhalt bis
+    zur nächsten Überschrift.
+  */
+
+  const regex =
+    /^#{1,2}\s+(.+?)\s*\n([\s\S]*?)(?=^#{1,2}\s+|\s*$)/gm;
+
+  let match;
+
+  while ((match = regex.exec(markdown)) !== null) {
+
+    const ueberschrift =
+      match[1]
+        .trim()
+        .toLowerCase();
+
+    const inhalt =
+      match[2].trim();
+
+    bereiche[ueberschrift] =
+      inhalt;
+  }
+
+
+  const titel =
+    bereiche["titel"] || "";
+
+
+  /*
+    Die Frage kann Markdown enthalten.
+    Für die Karte wird daraus eine einfache
+    Textversion gemacht.
+  */
+
+  const frage =
+    markdownZuKlartext(
+      bereiche["frage"] || ""
+    );
+
+
+  return {
+    titel,
+    frage
+  };
+}
+
+
+// ------------------------------------------------------------
+// Einfaches Markdown für die Kartendarstellung entfernen
+// ------------------------------------------------------------
+
+function markdownZuKlartext(text) {
+
+  return String(text || "")
+    .replace(/\*\*(.*?)\*\*/g, "$1")
+    .replace(/\*(.*?)\*/g, "$1")
+    .replace(/`(.*?)`/g, "$1")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+
+}
+
+
+// ------------------------------------------------------------
+// Eine Fallakten-Karte bauen
+// ------------------------------------------------------------
+
 function baueProblemKarte(problem, fallnummer) {
-  const nummerText = String(fallnummer).padStart(3, "0");
+
+  const nummerText =
+    String(fallnummer).padStart(3, "0");
 
   return `
-    <a class="problem-card-link" href="problem.html?titel=${encodeURIComponent(problem.titel)}">
+    <a
+      class="problem-card-link"
+      href="problem.html?datei=${encodeURIComponent(problem.datei)}"
+    >
       <article class="problem-card">
-        <p class="problem-fallnummer">Fall Nr. ${nummerText}</p>
-        <h3 class="problem-titel">${problem.titel}</h3>
-        <p class="problem-frage">„${problem.frage}“</p>
+
+        <p class="problem-fallnummer">
+          Fall Nr. ${nummerText}
+        </p>
+
+        <h3 class="problem-titel">
+          ${problem.titel}
+        </h3>
+
+        <p class="problem-frage">
+          „${problem.frage}“
+        </p>
+
       </article>
     </a>
   `;
 }
 
-// Rendert eine Liste von Problemen (mit ihrer jeweiligen Fallnummer aus
-// der GESAMTEN problemeListe) in den Container mit der übergebenen ID.
-// "leerText" wird angezeigt, falls problemeListe komplett leer ist.
-function renderProblemKarten(containerId, probleme, leerText) {
-  const container = document.getElementById(containerId);
+
+// ------------------------------------------------------------
+// Karten rendern
+// ------------------------------------------------------------
+
+function renderProblemKarten(
+  containerId,
+  probleme,
+  leerText
+) {
+
+  const container =
+    document.getElementById(containerId);
+
   if (!container) return;
 
   if (!probleme.length) {
-    container.innerHTML = `<p>${leerText}</p>`;
+
+    container.innerHTML =
+      `<p>${leerText}</p>`;
+
     return;
   }
 
-  container.innerHTML = probleme
-    .map(problem => baueProblemKarte(problem, problemeListe.indexOf(problem) + 1))
-    .join("\n");
+  container.innerHTML =
+    probleme
+      .map(problem => {
+
+        const fallnummer =
+          problemeListe.indexOf(problem.datei) + 1;
+
+        return baueProblemKarte(
+          problem,
+          fallnummer
+        );
+
+      })
+      .join("\n");
 }
 
-// Liefert "anzahl" zufällig ausgewählte, unterschiedliche Einträge aus
-// "liste" (oder alle, falls weniger vorhanden sind als angefragt).
-function waehleZufaelligeProbleme(liste, anzahl) {
-  const kopie = [...liste];
 
-  for (let i = kopie.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [kopie[i], kopie[j]] = [kopie[j], kopie[i]];
+// ------------------------------------------------------------
+// Zufällige Auswahl
+// ------------------------------------------------------------
+
+function waehleZufaelligeProbleme(
+  liste,
+  anzahl
+) {
+
+  const kopie =
+    [...liste];
+
+  for (
+    let i = kopie.length - 1;
+    i > 0;
+    i--
+  ) {
+
+    const j =
+      Math.floor(
+        Math.random() * (i + 1)
+      );
+
+    [kopie[i], kopie[j]] =
+      [kopie[j], kopie[i]];
   }
 
   return kopie.slice(0, anzahl);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const leerText = "Noch keine Fälle dokumentiert - reich dein Problem doch einfach ein!";
 
-  // Alle Probleme, in der Reihenfolge aus probleme.js
-  renderProblemKarten("alle-probleme", problemeListe, leerText);
+// ------------------------------------------------------------
+// Start
+// ------------------------------------------------------------
 
-  // Die zuletzt hinzugefügten Probleme, neueste zuerst
-  const neueste = problemeListe.slice(-ANZAHL_NEUESTE_PROBLEME).reverse();
-  renderProblemKarten("neueste-probleme", neueste, leerText);
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
 
-  // Eine zufällige Auswahl, bei jedem Laden neu gewürfelt
-  const zufaellige = waehleZufaelligeProbleme(problemeListe, ANZAHL_ZUFAELLIGE_PROBLEME);
-  renderProblemKarten("zufaellige-probleme", zufaellige, leerText);
-});
+    const leerText =
+      "Noch keine Fälle dokumentiert – reich dein Problem doch einfach ein!";
+
+
+    /*
+      Alle Fallakten laden.
+    */
+
+    Promise.all(
+      problemeListe.map(dateiname =>
+        ladeProblem(dateiname)
+      )
+    )
+
+      .then(probleme => {
+
+        // Alle Fallakten
+        renderProblemKarten(
+          "alle-probleme",
+          probleme,
+          leerText
+        );
+
+
+        // Neueste Fallakten
+        const neueste =
+          probleme
+            .slice(-ANZAHL_NEUESTE_PROBLEME)
+            .reverse();
+
+        renderProblemKarten(
+          "neueste-probleme",
+          neueste,
+          leerText
+        );
+
+
+        // Zufällige Empfehlungen
+        const zufaellige =
+          waehleZufaelligeProbleme(
+            probleme,
+            ANZAHL_ZUFAELLIGE_PROBLEME
+          );
+
+        renderProblemKarten(
+          "zufaellige-probleme",
+          zufaellige,
+          leerText
+        );
+
+      })
+
+      .catch(fehler => {
+
+        console.error(
+          "Fehler beim Laden der Fallakten:",
+          fehler
+        );
+
+        const containerIds = [
+          "alle-probleme",
+          "neueste-probleme",
+          "zufaellige-probleme"
+        ];
+
+        containerIds.forEach(id => {
+
+          const container =
+            document.getElementById(id);
+
+          if (container) {
+
+            container.innerHTML = `
+              <p>
+                <em>
+                  Die Fallakten konnten leider nicht geladen werden.
+                </em>
+              </p>
+            `;
+
+          }
+
+        });
+
+      });
+
+  }
+);
