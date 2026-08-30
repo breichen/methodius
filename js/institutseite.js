@@ -279,6 +279,13 @@ function baueVeroeffentlichungenBereich(index) {
 
 
 /*
+ * Wie viele Veröffentlichungen auf der Institutsseite angezeigt
+ * werden, bevor stattdessen auf die vollständige Übersicht
+ * (veroeffentlichungen.html) verwiesen wird.
+ */
+const INSTITUT_VEROEFFENTLICHUNGEN_ANZAHL = 5;
+
+/*
  * Lädt die Veröffentlichungen und befüllt
  * den zuvor erzeugten Bereich.
  */
@@ -313,8 +320,16 @@ function ladeVeroeffentlichungen() {
         return;
       }
 
-      container.innerHTML =
-        veroeffentlichungen
+      // Die JSON-Datei ist bereits nach Datum absteigend sortiert
+      // (siehe Kommentar oben in baueVeroeffentlichungenBereich) -
+      // die ersten N Einträge sind daher automatisch die neuesten.
+      const angezeigteVeroeffentlichungen = veroeffentlichungen.slice(
+        0,
+        INSTITUT_VEROEFFENTLICHUNGEN_ANZAHL
+      );
+
+      const kartenHtml =
+        angezeigteVeroeffentlichungen
           .map(veroeffentlichung => `
             <article class="institut-veroeffentlichung">
 
@@ -333,6 +348,21 @@ function ladeVeroeffentlichungen() {
             </article>
           `)
           .join("\n");
+
+      const hatWeitereVeroeffentlichungen =
+        veroeffentlichungen.length > INSTITUT_VEROEFFENTLICHUNGEN_ANZAHL;
+
+      const linkHtml = hatWeitereVeroeffentlichungen
+        ? `
+          <p class="grid-link">
+            <a href="veroeffentlichungen.html">
+              Alle Veröffentlichungen ansehen →
+            </a>
+          </p>
+        `
+        : "";
+
+      container.innerHTML = kartenHtml + linkHtml;
 
     })
     .catch(fehler => {

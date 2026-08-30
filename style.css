@@ -2028,6 +2028,14 @@ hr {
 
 .institut-veroeffentlichung:first-child {
   padding-top: 0;
+  /* Abstand zum Absatz/der Überschrift darüber - padding-top bleibt
+     bewusst 0 (siehe oben), sonst würde beim :first-child eine
+     unsichtbare Klickfläche vor dem Trennstrich entstehen. margin-top
+     wirkt stattdessen nach außen und schafft den gewünschten Abstand,
+     ohne die border-bottom-Trennlinien-Logik zu beeinflussen. Gilt
+     automatisch auf beiden Seiten (institut.html UND
+     veroeffentlichungen.html), da beide dieselbe Klasse verwenden. */
+  margin-top: 24px;
 }
 
 .institut-veroeffentlichung:last-child {
