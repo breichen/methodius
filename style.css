@@ -545,6 +545,21 @@ hr {
   text-decoration: underline;
 }
 
+/* Blättermodus auf schmalen (Handy-)Bildschirmen ausgeblendet - die
+   Seitenaufteilung dort war unzuverlässig, normales Scrollen ist auf
+   dem Handy ohnehin die gängigere Lese-Erfahrung. Teilen-Button bleibt
+   verfügbar, .blaettern-wrap zentriert den verbleibenden Button dann
+   automatisch neu (dank justify-content unten). */
+@media (max-width: 600px) {
+  .blaettern-link {
+    display: none;
+  }
+
+  .blaettern-wrap {
+    justify-content: center;
+  }
+}
+
 .teilen-button {
   display: inline-flex;
   align-items: center;
