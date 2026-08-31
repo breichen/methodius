@@ -994,18 +994,42 @@ function blaettere(richtung) {
 // tatsächlich sichtbar ist - sonst wird z.B. auf dem Handy Text
 // abgeschnitten, der für eine viel größere Desktop-Seite berechnet wurde.
 function teileInSeiten(bloecke) {
+  // WICHTIG: Die Mess-Seite braucht denselben Flexbox-Kontext wie die
+  // echte Seite (.flipbook-book > .flipbook-page), sonst greift weder
+  // "flex: 1 1 50%" noch die Höhe aus dem Flexbox-Stretch-Verhalten -
+  // eine freistehende .flipbook-page hätte gar keine echte
+  // Breitenbegrenzung und würde Text viel zu wenig umbrechen
+  // (funktioniert nur "zufällig" halbwegs auf breiten Desktop-
+  // Bildschirmen, bricht aber auf schmalen Handy-Seiten komplett
+  // zusammen: zu viel Inhalt wird pro Seite berechnet, der Rest wird
+  // auf der echten, schmalen Seite per overflow:hidden abgeschnitten
+  // und beim Blättern einfach übersprungen).
+  const messBuch = document.createElement("div");
+  messBuch.className = "flipbook-book flipbook-measure-book";
+  messBuch.style.position = "absolute";
+  messBuch.style.visibility = "hidden";
+  messBuch.style.pointerEvents = "none";
+  messBuch.style.left = "-10000px";
+  messBuch.style.top = "0";
+
   const messSeite = document.createElement("div");
+  messSeite.className = "flipbook-page flipbook-measure-page";
+  messBuch.appendChild(messSeite);
 
-  messSeite.className =
-    "flipbook-page flipbook-measure-page";
+  // Im Zwei-Seiten-Modus (Querformat) bekommt .flipbook-page über
+  // "flex: 1 1 50%" nur die HALBE Buchbreite - mit nur einer Seite im
+  // Mess-Buch würde sie stattdessen dank flex-grow die GANZE
+  // Buchbreite einnehmen (doppelt so breit wie in Wirklichkeit). Eine
+  // leere zweite Seite daneben sorgt dafür, dass sich beide wie im
+  // echten Buch die Breite teilen. Im Hochformat (eine Seite, volle
+  // Breite per flex-basis:100%) ist das nicht nötig.
+  if (!istPortraitModus()) {
+    const platzhalterSeite = document.createElement("div");
+    platzhalterSeite.className = "flipbook-page";
+    messBuch.appendChild(platzhalterSeite);
+  }
 
-  messSeite.style.position = "absolute";
-  messSeite.style.visibility = "hidden";
-  messSeite.style.pointerEvents = "none";
-  messSeite.style.left = "-10000px";
-  messSeite.style.top = "0";
-
-  document.body.appendChild(messSeite);
+  document.body.appendChild(messBuch);
 
   const seiten = [];
   let aktuelleSeite = [];
@@ -1160,7 +1184,7 @@ function teileInSeiten(bloecke) {
     seiten.push(aktuelleSeite);
   }
 
-  document.body.removeChild(messSeite);
+  document.body.removeChild(messBuch);
 
   return seiten.length > 0
     ? seiten
