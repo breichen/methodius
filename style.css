@@ -545,21 +545,6 @@ hr {
   text-decoration: underline;
 }
 
-/* Blättermodus auf schmalen (Handy-)Bildschirmen ausgeblendet - die
-   Seitenaufteilung dort war unzuverlässig, normales Scrollen ist auf
-   dem Handy ohnehin die gängigere Lese-Erfahrung. Teilen-Button bleibt
-   verfügbar, .blaettern-wrap zentriert den verbleibenden Button dann
-   automatisch neu (dank justify-content unten). */
-@media (max-width: 600px) {
-  .blaettern-link {
-    display: none;
-  }
-
-  .blaettern-wrap {
-    justify-content: center;
-  }
-}
-
 .teilen-button {
   display: inline-flex;
   align-items: center;
@@ -1402,6 +1387,49 @@ hr {
     width: min(1100px, 86vw, calc(88vh * 746 / 527));
     width: min(1100px, 86vw, calc(88dvh * 746 / 527));
     aspect-ratio: 746 / 527;
+  }
+}
+
+/* Kleinere Schrift im Blättermodus auf kleinen Bildschirmen - sowohl
+   schmales Hochformat-Handy als auch kurzes Querformat-Handy (siehe
+   die beiden Bedingungen unten, durch Komma verknüpft = "oder"). Pro
+   Seite passt dadurch mehr Text, was gerade im Querformat (wenig
+   Höhe, siehe vorherige Regel oben) den entscheidenden Unterschied
+   macht. Eine einzige Regel für beide Fälle, damit die Werte nur an
+   einer Stelle gepflegt werden müssen. */
+@media (orientation: portrait),
+(max-height: 500px) {
+  .flipbook-page h1 {
+    font-size: 1.05rem;
+  }
+
+  .flipbook-page h2 {
+    font-size: 0.95rem;
+  }
+
+  .flipbook-page h3 {
+    font-size: 0.86rem;
+  }
+
+  .flipbook-page p {
+    font-size: 0.74rem;
+    line-height: 1.45;
+  }
+
+  .flipbook-page blockquote {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .flipbook-page li,
+  .flipbook-turn-face li {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .flipbook-page-number {
+    font-size: 0.7rem;
+    padding: 5px 14px;
   }
 }
 
