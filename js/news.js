@@ -122,7 +122,7 @@ const newsListe = [
     datei: "erkenntnis-amazon-cd-preise.md",
     titel: "Preisabweichungen im Versandhandel",
     datum: "2026-08-31",
-    link: "",  // TODO
+    link: "https://www.amazon.de/Shape-Fluidity-Digipak-Dool/dp/B08LS9VYGF/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=V5IBWTPQ120Z&dib=eyJ2IjoiMSJ9.5w82_zdt_kO8RzGRNLIo6xotFtzsR9VLpULHdVVCPqcznzdWnU5XyYWYllIl368Atr9pWDmOnraBxUeoZop72-LWCsdt8RaBR0akJpXEpN-tP21LcNJZLglB4-WhM1B9hvB_DIyRXoWtkwYmdNatGYcTnvGEZqxTwGB4wrN6YiIX_hg47-4ezksixawYy3yvw4xyIvFpVfBPoe5J393igUhPFM9s3C2sbqeesIvYwlU.MpOwAxiTsuE27XJJHgDw8_csAPylUfKBEugTRve5CYI&dib_tag=se&keywords=dool+cd&qid=1788173090&sprefix=dool+cd%2Caps%2C109&sr=8-3",
     linkText: "Überprüfe einen Preis."
   },
 
