@@ -1369,6 +1369,27 @@ hr {
   }
 }
 
+/* Querformat: der Seitenzähler-Text ("Seite X von Y" unter dem Buch)
+   verdoppelt eigentlich nur die Info, die als Badge schon direkt auf
+   jeder Seite steht (siehe .flipbook-page-number unten) - im
+   Querformat, wo Höhe meist knapper ist als Breite, wird er deshalb
+   ausgeblendet, um den Platz stattdessen dem Buch selbst zu geben.
+   Kommt bewusst NACH der Kurzbildschirm-Regel oben, damit dieses
+   höhere vh-Budget (88 statt 82) auch bei kurzen Querformat-Screens
+   (z.B. Handy quer) gewinnt. Im Hochformat bleibt der Zähler
+   unverändert sichtbar. */
+@media (orientation: landscape) {
+  .flipbook-counter {
+    display: none;
+  }
+
+  .flipbook-book {
+    width: min(1100px, 86vw, calc(88vh * 746 / 527));
+    width: min(1100px, 86vw, calc(88dvh * 746 / 527));
+    aspect-ratio: 746 / 527;
+  }
+}
+
 /* ============================================
    LISTEN IM FLIPBOOK
    ============================================ */
