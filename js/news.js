@@ -124,6 +124,13 @@ const newsListe = [
   },
 
   {
+    datei: "jahrestagung-2026.md",
+    titel: "Methodius-Institut richtet erfolgreiche Fachtagung aus",
+    datum: "2026-11-15",
+    bild: "pics/news/eigene_konferenz.png",
+  },
+
+  {
     datei: "neues-paper-vorlaeufige-erkenntnisse-kontr-ueberinterpretation.md",
     titel: "Neues Paper veröffentlicht",
     datum: "2026-10-17",
