@@ -1080,18 +1080,20 @@ hr {
   overflow: hidden;
   border: 1px solid #D6CDBB;
 
-  /* Die Größe wird HIER am Buch als Ganzes festgelegt (großzügig,
-     nutzt die verfügbare Breite/Höhe aus) - die einzelnen Seiten
-     füllen diesen Platz danach per Flexbox einfach komplett aus
-     (siehe .flipbook-page unten). Das ist deutlich robuster als eine
-     Breite/Höhe direkt an jeder Seite über ein festes
-     Seitenverhältnis zu berechnen. "dvh" berücksichtigt zusätzlich
-     die (ein-/ausblendende) Adressleiste mobiler Browser; ältere
-     Browser ohne dvh-Unterstützung ignorieren die jeweils zweite
-     Zeile einfach und bleiben bei vh. */
-  width: min(1100px, 86vw);
-  height: min(720px, 82vh);
-  height: min(720px, 82dvh);
+  /* Festes Seitenverhältnis: 373x527 pro Seite, hier also 746x527 für
+     die Doppelseite (2 x 373 Breite). aspect-ratio erzwingt das exakte
+     Verhältnis; die Breite wird auf das jeweils KLEINSTE von drei
+     möglichen Maxima begrenzt (fester Pixelwert, Bildschirmbreite,
+     oder die aus der verfügbaren Höhe abgeleitete Breite) - so bleibt
+     746:527 in jedem Fall erhalten, egal ob die Breite oder die Höhe
+     der limitierende Faktor ist (statt Breite/Höhe unabhängig
+     voneinander zu begrenzen wie zuvor). "dvh" berücksichtigt
+     zusätzlich die (ein-/ausblendende) Adressleiste mobiler Browser;
+     ältere Browser ohne dvh-Unterstützung ignorieren die jeweils
+     zweite Zeile einfach und bleiben bei vh. */
+  width: min(1100px, 86vw, calc(82vh * 746 / 527));
+  width: min(1100px, 86vw, calc(82dvh * 746 / 527));
+  aspect-ratio: 746 / 527;
 }
 
 .flipbook-page {
@@ -1297,10 +1299,11 @@ hr {
 
   .flipbook-book {
     /* Schmaler als im Zwei-Seiten-Modus, da nur EINE Seite gezeigt
-       wird - wirkt sonst wie ein überbreites Einzelblatt. */
-    width: min(480px, 82vw);
-    height: min(720px, 80vh);
-    height: min(720px, 80dvh);
+       wird - wirkt sonst wie ein überbreites Einzelblatt. Einzelseite
+       -> Seitenverhältnis 373:527 direkt (nicht verdoppelt). */
+    width: min(480px, 82vw, calc(80vh * 373 / 527));
+    width: min(480px, 82vw, calc(80dvh * 373 / 527));
+    aspect-ratio: 373 / 527;
   }
 
   .flipbook-page {
@@ -1322,9 +1325,9 @@ hr {
    reichlich vorhanden ist. */
 @media (max-height: 500px) {
   .flipbook-book {
-    width: min(1100px, 88vw);
-    height: min(720px, 82vh);
-    height: min(720px, 82dvh);
+    width: min(1100px, 88vw, calc(82vh * 746 / 527));
+    width: min(1100px, 88vw, calc(82dvh * 746 / 527));
+    aspect-ratio: 746 / 527;
   }
 }
 
