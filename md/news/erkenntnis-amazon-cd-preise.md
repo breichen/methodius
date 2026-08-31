@@ -4,4 +4,4 @@ Eine der CDs kostete ohne Login 12,24 € und mit Prime-Konto 18,14 €, bei der
 
 Die Redaktion empfiehlt, die Beobachtung am unten angeführten Link selbst zu überprüfen. Der aktuelle Preis kann dabei von den dokumentierten Preisen abweichen.
 
-Die Redaktion weist vorsorglich darauf hin, dass zwei CDs noch keine repräsentative Stichprobe für den gesamten Versandhandel darstellen.
+Die Redaktion weist vorsorglich darauf hin, dass drei CDs noch keine repräsentative Stichprobe für den gesamten Versandhandel darstellen.
