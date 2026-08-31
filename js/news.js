@@ -139,6 +139,13 @@ const newsListe = [
   },
 
   {
+    datei: "jahrestagung-2026-poster.md",
+    titel: "Ankündigung der Jahrestagung 2026",
+    datum: "2026-09-29",
+    bild: "pics/news/eigene_konferenz_poster.png",
+  },
+
+  {
     datei: "teamevent-rafting.md",
     titel: "Teamevent auf der Moldau",
     datum: "2026-09-15",
