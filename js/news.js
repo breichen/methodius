@@ -114,7 +114,7 @@ const newsListe = [
     datei: "erkenntnis-amazon-cheap-cds.md",
     titel: "Unstimmigkeit in der Produktsuche",
     datum: "2026-09-05",
-    link: "",  // TODO
+    link: "https://www.amazon.de/s?i=popular&rh=n%3A255882%2Cp_36%3A-500&s=featured-rank&content-id=amzn1.sym.fc4f3753-af8e-4288-9354-f00cdcb2b673&pd_rd_r=90bcb95b-5d01-406b-a1b8-edb1ee93c9f9&pd_rd_w=M0pmc&pd_rd_wg=jTSWs&pf_rd_p=fc4f3753-af8e-4288-9354-f00cdcb2b673&pf_rd_r=NERF60648PVA1X44KV0X&ref=Oct_d_oup_S",
     linkText: "Überprüfe die aktuellen Treffer."
   },
 
