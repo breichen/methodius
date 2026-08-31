@@ -111,6 +111,22 @@ const newsListe = [
   },
 
   {
+    datei: "erkenntnis-amazon-cheap-cds.md",
+    titel: "Unstimmigkeit in der Produktsuche",
+    datum: "2026-09-05",
+    link: "",  // TODO
+    linkText: "Überprüfe die aktuellen Treffer."
+  },
+
+  {
+    datei: "erkenntnis-amazon-cd-preise.md",
+    titel: "Preisabweichungen im Versandhandel",
+    datum: "2026-08-31",
+    link: "",  // TODO
+    linkText: "Überprüfe einen Preis."
+  },
+
+  {
     datei: "neuer-ratgeber-muskelabbau.md",
     titel: "Neuer Ratgeber erschienen",
     datum: "2026-08-30",
@@ -142,6 +158,13 @@ const newsListe = [
     link: "veroeffentlichungen.html",
     linkText: "Zu den Veröffentlichungen"
   },
+
+  {
+    datei: "erkenntnis-hofer-limonade-preise.md",
+    titel: "Bemerkenswerte Preisgestaltung im Discounter",
+    datum: "2026-08-06",
+  },
+
 
   {
     datei: "neues-paper-korrelation-kausalitaet.md",
