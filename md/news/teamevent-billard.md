@@ -1,0 +1,3 @@
+Das Methodius-Institut für Lebenswissenschaften hat im Rahmen eines gemeinsamen Teamevents einen Abend mit Billardspielen verbracht. Die fünf Mitarbeitenden nutzten die Gelegenheit, ihre strategischen Fähigkeiten außerhalb des wissenschaftlichen Arbeitsalltags unter Beweis zu stellen.
+
+Nach Einschätzung des Instituts bot das Spiel wertvolle Möglichkeiten, Entscheidungsfindung, Konzentration und den konstruktiven Umgang mit Fehlschlägen zu erproben. Ob sich aus der Verteilung der gewonnenen Partien Rückschlüsse auf die jeweiligen Arbeitsweisen der Beteiligten ziehen lassen, soll Gegenstand einer späteren Untersuchung werden.

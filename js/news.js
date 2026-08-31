@@ -63,6 +63,13 @@ const newsListe = [
   },
 
   {
+    datei: "teamevent-oper.md",
+    titel: "Teamevent im Nationaltheater",
+    datum: "2027-10-28",
+    bild: "pics/news/oper.png",
+  },
+
+  {
     datei: "neues-paper-gute-vorsaetze-bevorzugt.md",
     titel: "Neues Paper veröffentlicht",
     datum: "2027-09-09",
@@ -76,6 +83,13 @@ const newsListe = [
     datum: "2027-07-21",
     link: "veroeffentlichungen.html",
     linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "teamevent-hiking.md",
+    titel: "Teamevent in den Bergen",
+    datum: "2027-06-05",
+    bild: "pics/news/hiking.png",
   },
 
   {
@@ -95,6 +109,13 @@ const newsListe = [
   },
 
   {
+    datei: "teamevent-billard.md",
+    titel: "Teamevent am Billardtisch",
+    datum: "2027-01-21",
+    bild: "pics/news/billard.png",
+  },
+
+  {
     datei: "neues-paper-empirische-untersuchung-zus-selbstoptimierung.md",
     titel: "Neues Paper veröffentlicht",
     datum: "2026-12-08",
@@ -108,6 +129,13 @@ const newsListe = [
     datum: "2026-10-17",
     link: "veroeffentlichungen.html",
     linkText: "Zu den Veröffentlichungen"
+  },
+
+  {
+    datei: "teamevent-rafting.md",
+    titel: "Teamevent auf der Moldau",
+    datum: "2026-09-15",
+    bild: "pics/news/rafting.png",
   },
 
   {

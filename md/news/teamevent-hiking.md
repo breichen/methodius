@@ -1,0 +1,3 @@
+Das Methodius-Institut für Lebenswissenschaften hat im Rahmen eines gemeinsamen Teamevents eine Bergwanderung unternommen. Die fünf Mitarbeitenden verbrachten dabei einen Tag abseits des Instituts und konnten die Zusammenarbeit unter ungewohnten räumlichen Bedingungen erproben.
+
+Nach Einschätzung des Instituts bot die gemeinsame Bewältigung des Anstiegs wertvolle Möglichkeiten zur Stärkung von Teamgeist, Kommunikation und gegenseitiger Rücksichtnahme. Ob die dabei gewonnenen Erkenntnisse Auswirkungen auf die wissenschaftliche Arbeit haben, soll zu einem späteren Zeitpunkt evaluiert werden.
