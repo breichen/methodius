@@ -1297,6 +1297,44 @@ hr {
     display: none;
   }
 
+  /* Im Querformat sitzen die Pfeile links/rechts NEBEN dem Buch (siehe
+     Basis-Regel oben) - auf schmalen Handy-Bildschirmen im Hochformat
+     reicht die Breite dafür oft nicht: Buch + beide Pfeile zusammen
+     werden breiter als der Bildschirm, und ohne horizontales Scrollen
+     verschwindet der rechte Pfeil dann unerreichbar. Per Grid werden
+     die drei vorhandenen Kind-Elemente (Pfeil links, Buch+Zähler,
+     Pfeil rechts) hier stattdessen neu anggeordnet, OHNE das HTML
+     anzufassen: das Buch bekommt eine eigene, volle Zeile, darunter
+     teilen sich beide Pfeile eine gemeinsame Zeile.
+  */
+  .flipbook-stage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "buch buch"
+      "pfeil-links pfeil-rechts";
+    justify-items: center;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .flipbook-stage>div {
+    grid-area: buch;
+    /* War für den Flex-Modus gedacht (siehe Basis-Regel oben) - im
+       Grid nicht nötig, aber schadet nicht, min-width bleibt sinnvoll. */
+    width: 100%;
+  }
+
+  #flipbook-prev {
+    grid-area: pfeil-links;
+    justify-self: end;
+  }
+
+  #flipbook-next {
+    grid-area: pfeil-rechts;
+    justify-self: start;
+  }
+
   .flipbook-book {
     /* Schmaler als im Zwei-Seiten-Modus, da nur EINE Seite gezeigt
        wird - wirkt sonst wie ein überbreites Einzelblatt. Einzelseite
