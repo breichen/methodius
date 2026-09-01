@@ -51,6 +51,7 @@ function baueHeader() {
               <ul class="untermenue">
                 <li><a href="institut.html">Das Methodius-Institut</a></li>
                 <li><a href="mitglieder.html">Mitglieder</a></li>
+                <li><a href="veroeffentlichungen.html">Veröffentlichungen</a></li>
               </ul>
             </li>
           </ul>
