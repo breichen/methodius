@@ -1,0 +1,3 @@
+Dr. Konrad P. Huber wurde am 24. Mai 2027 mit der **Carl von Frisch-Medaille für hervorragende Beiträge zur empirischen Forschung und wissenschaftlichen Redlichkeit** durch die *International Society For Empirical Inquiry And Scientific Integrity* ausgezeichnet. Mit der Medaille würdigt das Methodius-Institut insbesondere Hubers kontinuierlichen Einsatz für eine sorgfältige Betrachtung von Daten und statistischen Zusammenhängen.
+
+Die Redaktion gratuliert herzlich und sieht in der Auszeichnung eine angemessene Würdigung einer wissenschaftlichen Haltung, die auch dann an der Genauigkeit festhält, wenn diese der gewünschten Interpretation gelegentlich im Wege steht.
