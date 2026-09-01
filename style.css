@@ -224,7 +224,6 @@ nav a:hover {
   color: var(--color-accent);
 }
 
-```css
 /* ============================================
    HEADER / UNTERMENÜ (z.B. "Aktuelles")
    ============================================ */
@@ -275,7 +274,16 @@ nav a:hover {
   background: var(--color-bg-alt);
 }
 
-/* Untermenü wird ausschließlich per Klick geöffnet */
+/* Desktop: Hover oder Tastaturfokus */
+@media (hover: hover) and (pointer: fine) {
+
+  .hat-untermenue:hover .untermenue,
+  .hat-untermenue:focus-within .untermenue {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
 
 .hat-untermenue.offen .untermenue {
   opacity: 1;
@@ -304,7 +312,6 @@ nav a:hover {
 
 }
 
-```
 
 /* ============================================
    HERO-BEREICH

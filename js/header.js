@@ -36,7 +36,6 @@ function baueHeader() {
           <ul>
             <li class="hat-untermenue">
               <a href="news.html">Aktuelles</a>
-
               <ul class="untermenue">
                 <li><a href="news.html">Alles</a></li>
                 <li><a href="news-veroeffentlichungen.html">Veröffentlichungen</a></li>
@@ -44,16 +43,41 @@ function baueHeader() {
                 <li><a href="news-kuriositaeten.html">Kuriositäten des Alltags</a></li>
               </ul>
             </li>
-
             <li><a href="alle-ratgeber.html">Ratgeber</a></li>
             <li><a href="probleme.html">Fallakten</a></li>
             <li><a href="autor.html">Biographie</a></li>
-            <li><a href="institut.html">Institut</a></li>
+            <li class="hat-untermenue">
+              <a href="institut.html">Institut</a>
+              <ul class="untermenue">
+                <li><a href="institut.html">Das Methodius-Institut</a></li>
+                <li><a href="mitglieder.html">Mitglieder</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
   `;
+
+  /*
+    Alternative, falls die Startseite KEINEN Logo-Link haben soll:
+
+    const istStartseite =
+      location.pathname.endsWith("index.html") ||
+      location.pathname.endsWith("/");
+
+    const logoHtml = istStartseite
+      ? `<span class="logo">
+           <img src="assets/favicon/methodius-512x512.png" alt="" class="logo-icon">
+           <span>Dr. Methodius</span>
+         </span>`
+      : `<a href="index.html" class="logo">
+           <img src="assets/favicon/methodius-512x512.png" alt="" class="logo-icon">
+           <span>Dr. Methodius</span>
+         </a>`;
+
+    ... und dann ${logoHtml} statt der festen <a>...</a> oben verwenden.
+  */
 }
 
 const headerPlatzhalter = document.getElementById("header-platzhalter");
@@ -61,6 +85,9 @@ const headerPlatzhalter = document.getElementById("header-platzhalter");
 if (headerPlatzhalter) {
   headerPlatzhalter.outerHTML = baueHeader();
 } else {
+  // Fallback, falls der Platzhalter auf einer Seite vergessen wurde:
+  // Header trotzdem ganz vorne in <body> einfügen, statt dass die
+  // Seite ohne Header dasteht.
   console.warn(
     "header.js: #header-platzhalter nicht gefunden - Header wird " +
     "stattdessen an den Anfang von <body> eingefügt."
@@ -68,54 +95,73 @@ if (headerPlatzhalter) {
   document.body.insertAdjacentHTML("afterbegin", baueHeader());
 }
 
-
 /*
-  Untermenü-Steuerung für "Aktuelles".
+  Untermenü-Steuerung (z.B. für "Aktuelles" und "Institut").
 
-  - Klick auf "Aktuelles" öffnet bzw. schließt das Untermenü.
-  - Das Untermenü ist immer vertikal.
-  - Klick außerhalb schließt das Untermenü.
-  - Escape schließt das Untermenü.
+  - Am PC (Hover-fähige Geräte) übernimmt reines CSS das Ein-/Ausblenden
+    beim Drüberfahren (siehe :hover / :focus-within in der CSS-Datei).
+    Der Klick auf den Menüpunkt selbst navigiert dabei ganz normal weiter.
+  - Am Handy/Tablet (kein Hover) gibt es stattdessen den kleinen Pfeil-
+    Button daneben: ein Tap klappt das jeweilige Untermenü auf/zu, ohne
+    dass man dafür die Seite verlässt.
+
+  Es kann mehrere Menüpunkte mit Untermenü gleichzeitig geben - deshalb
+  wird hier immer mit allen ".hat-untermenue"-Elementen gearbeitet
+  (nicht nur mit dem ersten), und beim Öffnen eines Untermenüs werden
+  alle anderen automatisch geschlossen.
 */
 (function () {
-  document.addEventListener("click", function (ereignis) {
-    const link = ereignis.target.closest(".hat-untermenue > a");
-    const listenpunkt = document.querySelector(".hat-untermenue");
 
-    if (!listenpunkt) return;
+  const istTouchGeraet =
+    window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
-    if (link) {
-      ereignis.preventDefault();
+  if (!istTouchGeraet) return;
 
-      const istOffen = listenpunkt.classList.toggle("offen");
-
-      link.setAttribute("aria-expanded", String(istOffen));
-      return;
-    }
-
-    // Klick außerhalb des Menüs -> Untermenü schließen
-    if (!listenpunkt.contains(ereignis.target)) {
-      listenpunkt.classList.remove("offen");
-
-      const aktuellesLink = listenpunkt.querySelector(":scope > a");
-      if (aktuellesLink) {
-        aktuellesLink.setAttribute("aria-expanded", "false");
-      }
-    }
-  });
-
-  // Mit Escape schließen
-  document.addEventListener("keydown", function (ereignis) {
-    if (ereignis.key !== "Escape") return;
-
-    const listenpunkt = document.querySelector(".hat-untermenue");
-    if (!listenpunkt) return;
-
+  function schliesseUntermenue(listenpunkt) {
     listenpunkt.classList.remove("offen");
+  }
 
-    const aktuellesLink = listenpunkt.querySelector(":scope > a");
-    if (aktuellesLink) {
-      aktuellesLink.setAttribute("aria-expanded", "false");
-    }
+  document.querySelectorAll(".hat-untermenue > a")
+    .forEach(link => {
+
+      link.addEventListener("click", function (ereignis) {
+
+        const listenpunkt = link.closest(".hat-untermenue");
+        if (!listenpunkt) return;
+
+        const istOffen =
+          listenpunkt.classList.contains("offen");
+
+        if (!istOffen) {
+
+          ereignis.preventDefault();
+
+          document
+            .querySelectorAll(".hat-untermenue.offen")
+            .forEach(anderer => {
+              if (anderer !== listenpunkt) {
+                schliesseUntermenue(anderer);
+              }
+            });
+
+          listenpunkt.classList.add("offen");
+        }
+      });
+
+    });
+
+  document.addEventListener("click", function (ereignis) {
+
+    document
+      .querySelectorAll(".hat-untermenue.offen")
+      .forEach(listenpunkt => {
+
+        if (!listenpunkt.contains(ereignis.target)) {
+          schliesseUntermenue(listenpunkt);
+        }
+
+      });
+
   });
+
 })();
