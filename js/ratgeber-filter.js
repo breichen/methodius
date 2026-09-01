@@ -138,7 +138,7 @@ else if (gefilterteRatgeberTmp.length <= 3) {
     document.getElementById("neueste-titel");
 
   if (neuesteTitel) {
-    neuesteTitel.textContent = "Ratgeber";
+    neuesteTitel.textContent = "Alle Ratgeber";
   }
 
   const neuesteText =

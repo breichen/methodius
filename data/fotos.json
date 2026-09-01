@@ -1,0 +1,44 @@
+[
+    {
+        "datum": "2027-10-28",
+        "titel": "Teamevent im Nationaltheater",
+        "bild": "pics/news/oper.png",
+        "beschreibung": "Die Institutsmitglieder besuchten gemeinsam eine Aufführung im Nationaltheater. Die Veranstaltung diente der fachlichen Diskussion über die Bedeutung dramatischer Zuspitzungen in wissenschaftlichen Vorträgen."
+    },
+    {
+        "datum": "2027-06-05",
+        "titel": "Teamevent in den Bergen",
+        "bild": "pics/news/hiking.png",
+        "beschreibung": "Im Rahmen einer mehrstündigen Wanderung wurden verschiedene Methoden zur Erhebung empirischer Eindrücke unter erschwerten Bedingungen untersucht."
+    },
+    {
+        "datum": "2027-01-21",
+        "titel": "Teamevent am Billardtisch",
+        "bild": "pics/news/billard.png",
+        "beschreibung": "Ein institutsinterner Abend zur Erforschung strategischer Entscheidungsprozesse und unbeabsichtigter Kollisionen komplexer Systeme."
+    },
+    {
+        "datum": "2026-11-15",
+        "titel": "Methodius-Institut richtet erfolgreiche Fachtagung aus",
+        "bild": "pics/news/eigene_konferenz.png",
+        "beschreibung": "Die erste Jahrestagung des Instituts brachte Forschende, Interessierte und zufällig Anwesende zu einem intensiven Austausch über aktuelle Entwicklungen der gegenstromorientierten Lebenswissenschaft zusammen."
+    },
+    {
+        "datum": "2026-09-29",
+        "titel": "Ankündigung der Jahrestagung 2026",
+        "bild": "pics/news/eigene_konferenz_poster.png",
+        "beschreibung": "Vorstellung des offiziellen Tagungsprogramms und der geplanten Beiträge zur ersten Jahrestagung des Methodius-Instituts."
+    },
+    {
+        "datum": "2026-09-15",
+        "titel": "Teamevent auf der Moldau",
+        "bild": "pics/news/rafting.png",
+        "beschreibung": "Die Mitarbeiter des Instituts nahmen an einer gemeinsamen Rafting-Exkursion teil, um Kooperation und Krisenmanagement unter realistischen Bedingungen zu erproben."
+    },
+    {
+        "datum": "2026-05-04",
+        "titel": "Gründung des Methodius-Instituts",
+        "bild": "pics/news/gruendung-methodius-institut.png",
+        "beschreibung": "Mit der feierlichen Eröffnung des Methodius-Instituts für Lebenswissenschaften begann die systematische Erforschung von Fragestellungen, die bislang aus gutem Grund unbeantwortet geblieben waren."
+    }
+]

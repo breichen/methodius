@@ -79,6 +79,8 @@ const newsListe = [
     titel: "Teamevent im Nationaltheater",
     datum: "2027-10-28",
     bild: "pics/news/oper.png",
+    link: "institutsleben.html",
+    linkText: "Zum Institutsleben",
     kategorie: NewsKategorie.INSTITUTSLEBEN,
   },
 
@@ -105,6 +107,8 @@ const newsListe = [
     titel: "Teamevent in den Bergen",
     datum: "2027-06-05",
     bild: "pics/news/hiking.png",
+    link: "institutsleben.html",
+    linkText: "Zum Institutsleben",
     kategorie: NewsKategorie.INSTITUTSLEBEN,
   },
 
@@ -131,6 +135,8 @@ const newsListe = [
     titel: "Teamevent am Billardtisch",
     datum: "2027-01-21",
     bild: "pics/news/billard.png",
+    link: "institutsleben.html",
+    linkText: "Zum Institutsleben",
     kategorie: NewsKategorie.INSTITUTSLEBEN,
   },
 
@@ -148,6 +154,8 @@ const newsListe = [
     titel: "Methodius-Institut richtet erfolgreiche Fachtagung aus",
     datum: "2026-11-15",
     bild: "pics/news/eigene_konferenz.png",
+    link: "institutsleben.html",
+    linkText: "Zum Institutsleben",
     kategorie: NewsKategorie.INSTITUTSLEBEN,
   },
 
@@ -165,6 +173,8 @@ const newsListe = [
     titel: "Ankündigung der Jahrestagung 2026",
     datum: "2026-09-29",
     bild: "pics/news/eigene_konferenz_poster.png",
+    link: "institutsleben.html",
+    linkText: "Zum Institutsleben",
     kategorie: NewsKategorie.INSTITUTSLEBEN,
   },
 
@@ -173,6 +183,8 @@ const newsListe = [
     titel: "Teamevent auf der Moldau",
     datum: "2026-09-15",
     bild: "pics/news/rafting.png",
+    link: "institutsleben.html",
+    linkText: "Zum Institutsleben",
     kategorie: NewsKategorie.INSTITUTSLEBEN,
   },
 
@@ -298,6 +310,8 @@ const newsListe = [
     titel: "Methodius-Institut für Lebenswissenschaften gegründet",
     datum: "2026-05-04",
     bild: "pics/news/gruendung-methodius-institut.png",
+    link: "institutsleben.html",
+    linkText: "Zum Institutsleben",
     kategorie: NewsKategorie.INSTITUTSLEBEN,
   },
 

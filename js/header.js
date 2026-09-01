@@ -82,6 +82,7 @@ function baueHeader() {
                 <li><a href="institut.html">Das Methodius-Institut</a></li>
                 <li><a href="mitglieder.html">Mitglieder</a></li>
                 <li><a href="veroeffentlichungen.html">Publikationen</a></li>
+                <li><a href="institutsleben.html">Institutsleben</a></li>
               </ul>
             </li>
           </ul>
