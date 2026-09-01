@@ -100,15 +100,16 @@ if (kategorie) {
     }
 }
 
-if (
-  holeGefilterteRatgeber().length <= 3
-) {
+const gefilterteRatgeberTmp =
+  holeGefilterteRatgeber();
+
+if (gefilterteRatgeberTmp.length === 0) {
 
   const neuesteTitel =
     document.getElementById("neueste-titel");
 
   if (neuesteTitel) {
-    neuesteTitel.textContent = "Alle verfügbaren Ratgeber";
+    neuesteTitel.textContent = "Alle Ratgeber";
   }
 
   const neuesteText =
@@ -116,7 +117,40 @@ if (
 
   if (neuesteText) {
     neuesteText.textContent =
-      "Alle derzeit verfügbaren Ratgeber dieser Kategorie.";
+      "Derzeit sind in diesem Bereich noch keine Ratgeber verfügbar.";
+  }
+
+  document
+    .getElementById("neueste-ratgeber")
+    ?.remove();
+
+  document
+    .getElementById("empfehlungen")
+    ?.remove();
+
+  document
+    .getElementById("alle-ratgeber-sektion")
+    ?.remove();
+
+  document
+    .getElementById("thema-anfragen")
+    ?.classList.remove("section-alt");
+}
+else if (gefilterteRatgeberTmp.length <= 3) {
+
+  const neuesteTitel =
+    document.getElementById("neueste-titel");
+
+  if (neuesteTitel) {
+    neuesteTitel.textContent = "Ratgeber";
+  }
+
+  const neuesteText =
+    document.getElementById("neueste-text");
+
+  if (neuesteText) {
+    neuesteText.textContent =
+      "Alle derzeit verfügbaren Ratgeber.";
   }
 
   document
