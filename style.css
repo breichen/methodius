@@ -2258,3 +2258,53 @@ hr {
   font-size: 0.9rem;
   color: var(--color-text-muted);
 }
+
+
+.kategorie-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.kategorie-card {
+  display: block;
+  padding: 24px;
+
+  background: var(--color-bg-alt);
+
+  border-radius: 12px;
+
+  text-decoration: none;
+  color: inherit;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* Wenn die Section dunkel ist,
+   werden die Karten hell */
+.section-alt .kategorie-card {
+  background: var(--color-bg);
+}
+
+.section:not(.section-alt) .kategorie-card {
+  background: var(--color-bg-alt);
+}
+
+.kategorie-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(27, 35, 64, 0.12);
+}
+
+.kategorie-card h3 {
+  margin-bottom: 12px;
+}
+
+.kategorie-card p {
+  margin: 0;
+}

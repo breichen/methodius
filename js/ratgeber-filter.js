@@ -131,10 +131,6 @@ if (gefilterteRatgeberTmp.length === 0) {
   document
     .getElementById("alle-ratgeber-sektion")
     ?.remove();
-
-  document
-    .getElementById("thema-anfragen")
-    ?.classList.remove("section-alt");
 }
 else if (gefilterteRatgeberTmp.length <= 3) {
 
@@ -165,3 +161,84 @@ else if (gefilterteRatgeberTmp.length <= 3) {
     .getElementById("thema-anfragen")
     ?.classList.remove("section-alt");
 }
+
+
+function baueKategorienBereich() {
+
+  const section =
+    document.getElementById(
+      "ratgeber-kategorien"
+    );
+
+  const container =
+    document.getElementById(
+      "ratgeber-kategorien-container"
+    );
+
+  if (!section || !container) return;
+
+  // Nur auf der Gesamtübersicht anzeigen
+  if (holeAktuelleKategorie()) {
+    section.remove();
+    return;
+  }
+
+  const kategorien =
+    Object.entries(
+      RatgeberKategorieInfo
+    );
+
+  container.innerHTML = `
+
+    <h2>Nach Themen stöbern</h2>
+
+    <p>
+      Du suchst Rat zu einem bestimmten Lebensbereich?
+      Wähle eine Kategorie und entdecke die passenden
+      Veröffentlichungen von Dr. Methodius.
+    </p>
+
+    <div class="kategorie-grid">
+
+      ${kategorien.map(
+        ([titel, info]) => `
+
+          <a
+            class="kategorie-card"
+            href="alle-ratgeber.html?kategorie=${info.slug}">
+
+            <h3>${titel}</h3>
+
+            <p>
+              ${info.beschreibung}
+            </p>
+
+          </a>
+
+        `
+      ).join("")}
+
+    </div>
+
+  `;
+}
+
+function aktualisiereSectionFarben() {
+
+  const sektionen = Array.from(
+    document.querySelectorAll("section")
+  );
+
+  sektionen.forEach((sektion, index) => {
+
+    sektion.classList.remove("section-alt");
+
+    if (index % 2 === 1) {
+      sektion.classList.add("section-alt");
+    }
+
+  });
+}
+
+baueKategorienBereich();
+aktualisiereSectionFarben();
