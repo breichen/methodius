@@ -87,14 +87,33 @@ function ladeNews() {
     neue Index in der gefilterten Liste bestimmt danach weiterhin
     die Sektions-Abwechslung und welcher Beitrag initial
     ausgeklappt startet.
+
+    Zusätzlich: Ist auf der jeweiligen Seite eine Kategorie über die
+    globale Variable NEWS_SEITE_KATEGORIE vorgegeben (siehe z.B.
+    news-veroeffentlichungen.html), werden nur Beiträge dieser
+    Kategorie gezeigt. Ist die Variable nicht gesetzt (wie auf
+    news.html, der "Alles"-Ansicht), entfällt dieser Filter.
   */
+  const kategorieFilterAktiv =
+    typeof NEWS_SEITE_KATEGORIE !== "undefined" &&
+    NEWS_SEITE_KATEGORIE !== null;
+
   const sichtbareNews = (newsListe || []).filter(
-    beitrag => beitrag.datum && istDatumErreicht(beitrag.datum)
+    beitrag =>
+      beitrag.datum &&
+      istDatumErreicht(beitrag.datum) &&
+      (!kategorieFilterAktiv || beitrag.kategorie === NEWS_SEITE_KATEGORIE)
   );
 
   if (sichtbareNews.length === 0) {
     newsContainer.innerHTML = `
-      <p>Derzeit gibt es keine Neuigkeiten.</p>
+      <p>
+        ${
+          kategorieFilterAktiv
+            ? "In dieser Kategorie gibt es derzeit keine Neuigkeiten."
+            : "Derzeit gibt es keine Neuigkeiten."
+        }
+      </p>
     `;
     return;
   }

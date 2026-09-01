@@ -224,6 +224,88 @@ nav a:hover {
   color: var(--color-accent);
 }
 
+```css
+/* ============================================
+   HEADER / UNTERMENÜ (z.B. "Aktuelles")
+   ============================================ */
+
+.hat-untermenue {
+  position: relative;
+}
+
+.untermenue {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  /* Untermenü immer vertikal */
+  display: block;
+
+  min-width: 220px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-bg-alt);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(27, 35, 64, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease,
+    visibility 0.15s;
+
+  z-index: 100;
+}
+
+.untermenue a {
+  display: block;
+  padding: 8px 18px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.untermenue a:hover {
+  color: var(--color-accent);
+  background: var(--color-bg-alt);
+}
+
+/* Untermenü wird ausschließlich per Klick geöffnet */
+
+.hat-untermenue.offen .untermenue {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+/* ============================================
+   MOBIL / TOUCH
+   ============================================ */
+
+@media (hover: none),
+(pointer: coarse) {
+
+  .hat-untermenue.offen .untermenue {
+    position: static;
+
+    box-shadow: none;
+    border: none;
+    background: transparent;
+
+    margin-top: 4px;
+    padding-left: 12px;
+  }
+
+}
+
+```
+
 /* ============================================
    HERO-BEREICH
    ============================================ */
