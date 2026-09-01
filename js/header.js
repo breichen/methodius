@@ -23,6 +23,31 @@
   Kommentar bei "istStartseite" weiter unten.
 */
 
+function baueRatgeberUntermenue() {
+
+  const kategorien =
+    Object.entries(RatgeberKategorieInfo);
+
+  return `
+    <li>
+      <a href="alle-ratgeber.html">
+        Alle
+      </a>
+    </li>
+
+    ${kategorien.map(
+      ([kategorie, info]) => `
+        <li>
+          <a
+            href="alle-ratgeber.html?kategorie=${info.slug}">
+            ${kategorie}
+          </a>
+        </li>
+      `
+    ).join("")}
+  `;
+}
+
 function baueHeader() {
   return `
     <header class="site-header">
@@ -46,37 +71,7 @@ function baueHeader() {
             <li class="hat-untermenue">
               <a href="alle-ratgeber.html">Ratgeber</a>
               <ul class="untermenue">
-                <li><a href="alle-ratgeber.html">Alle</a></li>
-                <li>
-                  <a href="alle-ratgeber.html?kategorie=alltag-beruf">
-                    Alltag & Beruf
-                  </a>
-                </li>
-                <li>
-                  <a href="alle-ratgeber.html?kategorie=gesellschaft">
-                    Gesellschaft
-                  </a>
-                </li>
-                <li>
-                  <a href="alle-ratgeber.html?kategorie=medien">
-                    Medien
-                  </a>
-                </li>
-                <li>
-                  <a href="alle-ratgeber.html?kategorie=leben">
-                    Leben & Selbstoptimierung
-                  </a>
-                </li>
-                <li>
-                  <a href="alle-ratgeber.html?kategorie=kunst-kultur">
-                    Kunst & Kultur
-                  </a>
-                </li>
-                <li>
-                  <a href="alle-ratgeber.html?kategorie=wissen-technik">
-                    Wissen & Technik
-                  </a>
-                </li>
+                ${baueRatgeberUntermenue()}
               </ul>
             </li>
             <li><a href="probleme.html">Fallakten</a></li>
