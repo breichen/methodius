@@ -32,38 +32,7 @@ function baueMitgliederEinleitung() {
 
 function baueTeamBereich() {
 
-  const team = [
-    {
-      name: "Dr. Maximilian Methodius",
-      rolle: "Gründer und Direktor",
-      bild: "pics/team/autor-portrait.png",
-      text: "Gründer des Instituts und wissenschaftlicher Leiter. Verfügt über umfassende Kenntnisse in praktisch allen Gebieten, die dringend einer Expertenmeinung bedürfen. Entwickelt die zentralen Theorien des Instituts, verfasst die Ratgeber und trifft die abschließenden Entscheidungen."
-    },
-    {
-      name: "Prof. Dr. Hildegard Wankelmuth",
-      rolle: "Leitung der Abteilung für angewandte Fehlberatung",
-      bild: "pics/team/Wankelmuth.png",
-      text: "Beschäftigt sich mit der kontrollierten Überinterpretation alltäglicher Verhaltensweisen und der Entwicklung wissenschaftlich fragwürdiger Behandlungsmethoden."
-    },
-    {
-      name: "Dr. Konrad P. Huber",
-      rolle: "Leitung der Abteilung für Statistik und empirische Plausibilität",
-      bild: "pics/team/Huber.png",
-      text: "Spezialist für statistische Auswertungen und eindeutige Aussagen bei uneindeutiger Datenlage."
-    },
-    {
-      name: "Dr. Friedrich Unbedacht",
-      rolle: "Wissenschaftlicher Beirat",
-      bild: "pics/team/Unbedacht.png",
-      text: "Zuständig für die wissenschaftliche Überprüfung der Institutsarbeit. Weist regelmäßig auf unbelegte Behauptungen, methodische Schwächen und logische Widersprüche hin. Seine Einwände werden sorgfältig protokolliert und anschließend ignoriert."
-    },
-    {
-      name: "Sabine Krämer",
-      rolle: "Leitung der Abteilung für Fallmanagement und Patientenangelegenheiten",
-      bild: "pics/team/Kraemer.png",
-      text: "Koordiniert die eingehenden Fälle, verwaltet die Fallakten und versucht seit Jahren, innerhalb des Instituts für Ordnung zu sorgen."
-    }
-  ];
+  const team = mitarbeiter;
 
   const karten = team.map(person => `
     <article class="team-card">
@@ -77,7 +46,13 @@ function baueTeamBereich() {
 
       <div class="team-card-content">
 
-        <h3>${person.name}</h3>
+        <h3>
+          <a
+            class="team-link"
+            href="mitarbeiter.html?person=${person.slug}">
+            ${person.name}
+          </a>
+        </h3>
 
         <p class="team-role">
           ${person.rolle}

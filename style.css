@@ -2308,3 +2308,82 @@ hr {
 .kategorie-card p {
   margin: 0;
 }
+
+
+.mitarbeiter-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.mitarbeiter-bild {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 12px;
+
+  flex-shrink: 0;
+}
+
+.mitarbeiter-header-text {
+  flex: 1;
+}
+
+.mitarbeiter-kurztext {
+  margin-top: 1rem;
+}
+
+@media (max-width: 700px) {
+
+  .mitarbeiter-header {
+    flex-direction: column;
+  }
+
+}
+
+.mitarbeiter-rolle {
+  margin: 0 0 1rem 0;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: var(--color-accent);
+}
+
+.mitarbeiter-fakten {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.kontakt-box {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.kontakt-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.kontakt-box p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.kontakt-box ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.sprechzeit {
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--color-bg-alt);
+}
+
+.sprechzeit:first-child {
+  border-top: none;
+}
