@@ -1,14 +1,16 @@
 <!DOCTYPE html>
+
 <!--
-  Zeigt ALLE Bücher aus js/ratgeber.js als Grid, ohne Auswahl/Sortierung.
-  Neue Bücher fügst du nur in ratgeber.js hinzu – diese Seite zieht sie
-  automatisch nach.
+  Zeigt alle Ratgeber bzw. die Ratgeber einer bestimmten Kategorie.
+  Die Kategorie wird über den URL-Parameter ?kategorie=... gesteuert.
 -->
+
 <html lang="de">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
@@ -21,7 +23,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/methodius-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/methodius-512x512.png">
 
-  <title>Alle Ratgeber – Dr. Methodius</title>
+  <title>Ratgeber – Dr. Methodius</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
@@ -34,64 +36,107 @@
 <body>
 
   <!-- ===== NAVIGATION ===== -->
-  <!-- Header wird zentral aus js/header.js eingefügt -->
   <div id="header-platzhalter"></div>
   <script src="js/header.js"></script>
 
-  <!-- ===== RATGEBER GEGEN DEN STROM ===== -->
+  <!-- ===== EINLEITUNG ===== -->
   <section id="ratgeber" class="section">
     <div class="wrap">
-      <h1>Ratgeber gegen den Strom</h1>
-      <p>Hier findest du die gesammelten Erkenntnisse von Dr. Maximilian Methodius zu den großen und kleinen
-        Herausforderungen des modernen Lebens.</p>
 
-      <p>Seine Ratgeber betrachten alltägliche Probleme aus einer ungewöhnlichen Perspektive – und kommen dabei zu
-        Lösungen, auf die vernünftige Menschen vermutlich nicht gekommen wären.</p>
 
-      <p>Klick auf eine Karte für den vollständigen Ratgeber.</p>
+      <h1 id="seiten-titel">Ratgeber gegen den Strom</h1>
+
+      <p id="seiten-einleitung">
+        Hier findest du die gesammelten Erkenntnisse von
+        Dr. Maximilian Methodius zu den großen und kleinen
+        Herausforderungen des modernen Lebens.
+      </p>
+
+      <p>
+        Seine Ratgeber betrachten alltägliche Probleme aus einer
+        ungewöhnlichen Perspektive – und kommen dabei zu Lösungen,
+        auf die vernünftige Menschen vermutlich nicht gekommen wären.
+      </p>
+
+      <p>
+        Klick auf eine Karte für den vollständigen Ratgeber.
+      </p>
+
     </div>
+
+
   </section>
 
   <!-- ===== KAPITEL: NEUESTE RATGEBER ===== -->
   <section id="neueste" class="section section-alt">
     <div class="wrap">
-      <h2>Neueste Ratgeber</h2>
-      <p>Die letzten Bücher, die gegen den Strom geschwommen sind.</p>
-      <!-- Dieser Container wird per JavaScript (js/buchgrid.js) automatisch befüllt -->
+
+
+      <h2 id="neueste-titel">Neueste Ratgeber</h2>
+
+      <p id="neueste-text">
+        Die letzten Bücher, die gegen den Strom geschwommen sind.
+      </p>
+
       <div id="neueste-ratgeber" class="book-grid"></div>
+
     </div>
+
+
   </section>
 
   <!-- ===== KAPITEL: ZUFÄLLIGE EMPFEHLUNGEN ===== -->
   <section id="empfehlungen" class="section">
     <div class="wrap">
-      <h2>Zufällige Empfehlungen</h2>
-      <p>Drei Ratgeber, ausgewürfelt – lade die Seite neu für eine neue Auswahl.</p>
+
+
+      <h2 id="empfehlungen-titel">Zufällige Empfehlungen</h2>
+
+      <p id="empfehlungen-text">
+        Drei Ratgeber, ausgewürfelt – lade die Seite neu für eine neue Auswahl.
+      </p>
+
       <div id="zufaellige-empfehlungen" class="book-grid"></div>
+
     </div>
+
   </section>
 
   <!-- ===== KAPITEL: THEMA ANFRAGEN ===== -->
   <section id="thema-anfragen" class="section section-alt">
     <div class="wrap">
+
       <h2>Thema anfragen</h2>
-      <p>Dein Lieblingsthema wurde noch nicht gegen den Strom gebürstet? Schlag uns vor, wovon der nächste Ratgeber
-        handeln soll.</p>
+
+      <p>
+        Dein Lieblingsthema wurde noch nicht gegen den Strom gebürstet?
+        Schlag uns vor, wovon der nächste Ratgeber handeln soll.
+      </p>
+
       <button type="button" class="quiz-start-button" data-tally-open="WOVKGa" data-tally-layout="modal"
         data-tally-emoji-text="💡" data-tally-emoji-animation="wave">
         Thema vorschlagen
       </button>
+
     </div>
+
   </section>
 
+  <!-- ===== KAPITEL: ALLE RATGEBER ===== -->
   <section class="section">
     <div class="wrap">
-      <h2>Alle Ratgeber</h2>
-      <p>Die vollständige Sammlung – jeder Ratgeber, der bisher gegen den Strom geschwommen ist.</p>
 
-      <!-- Wird per JavaScript (js/allegrid.js) automatisch mit allen Büchern befüllt -->
+      <h2 id="alle-titel">Alle Ratgeber</h2>
+
+      <p id="alle-text">
+        Die vollständige Sammlung – jeder Ratgeber,
+        der bisher gegen den Strom geschwommen ist.
+      </p>
+
       <div id="alle-ratgeber" class="book-grid"></div>
+
     </div>
+
   </section>
 
   <footer class="site-footer">
@@ -101,13 +146,11 @@
     </div>
   </footer>
 
-  <!-- Reihenfolge wichtig: erst die Datenliste, dann buchgrid.js (liefert baueBuchKachel), dann dieses Script -->
   <script src="js/datumsformat.js"></script>
   <script src="js/ratgeber.js"></script>
+  <script src="js/ratgeber-filter.js"></script>
   <script src="js/buchgrid.js"></script>
   <script src="js/allegrid.js"></script>
-
-  <!-- Tally-Widget: öffnet das Popup-Formular für "Thema anfragen" -->
   <script async src="https://tally.so/widgets/embed.js"></script>
 
 </body>

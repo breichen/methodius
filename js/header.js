@@ -43,7 +43,42 @@ function baueHeader() {
                 <li><a href="news-kuriositaeten.html">Kuriositäten des Alltags</a></li>
               </ul>
             </li>
-            <li><a href="alle-ratgeber.html">Ratgeber</a></li>
+            <li class="hat-untermenue">
+              <a href="alle-ratgeber.html">Ratgeber</a>
+              <ul class="untermenue">
+                <li><a href="alle-ratgeber.html">Alle</a></li>
+                <li>
+                  <a href="alle-ratgeber.html?kategorie=alltag-beruf">
+                    Alltag & Beruf
+                  </a>
+                </li>
+                <li>
+                  <a href="alle-ratgeber.html?kategorie=gesellschaft">
+                    Gesellschaft
+                  </a>
+                </li>
+                <li>
+                  <a href="alle-ratgeber.html?kategorie=medien">
+                    Medien
+                  </a>
+                </li>
+                <li>
+                  <a href="alle-ratgeber.html?kategorie=leben">
+                    Leben & Selbstoptimierung
+                  </a>
+                </li>
+                <li>
+                  <a href="alle-ratgeber.html?kategorie=kunst-kultur">
+                    Kunst & Kultur
+                  </a>
+                </li>
+                <li>
+                  <a href="alle-ratgeber.html?kategorie=wissen-technik">
+                    Wissen & Technik
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li><a href="probleme.html">Fallakten</a></li>
             <li><a href="autor.html">Biographie</a></li>
             <li class="hat-untermenue">

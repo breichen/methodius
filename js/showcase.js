@@ -19,16 +19,16 @@
   // siehe istDatumErreicht() in js/datumsformat.js. Ratgeber ohne
   // Datum oder mit einem Datum in der Zukunft werden im Showcase
   // ausgeblendet.
-  const sichtbareRatgeber = ratgeberListe.filter(
+  const sichtbareRatgeberAlle = ratgeberListe.filter(
     buch => buch.erstellt && istDatumErreicht(buch.erstellt)
   );
 
-  if (sichtbareRatgeber.length === 0) return;
+  if (sichtbareRatgeberAlle.length === 0) return;
 
   // Chronologie, neuestes zuerst: Laut ratgeber.js werden neue Bücher
   // am ENDE der Liste ergänzt ("Neueste Ratgeber" zeigt die letzten
   // Einträge) - die Liste wird also einfach umgedreht.
-  const chronologie = [...sichtbareRatgeber].reverse();
+  const chronologie = [...sichtbareRatgeberAlle].reverse();
 
   let index = 0; // 0 = aktuellster Ratgeber
 

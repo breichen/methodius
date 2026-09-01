@@ -7,6 +7,23 @@ const RatgeberKategorie = Object.freeze({
   WISSEN_TECHNIK: "Wissen & Technik"
 });
 
+const RatgeberKategorieSlug = Object.freeze({
+  [RatgeberKategorie.ALLTAG_BERUF]: "alltag-beruf",
+  [RatgeberKategorie.GESELLSCHAFT]: "gesellschaft",
+  [RatgeberKategorie.MEDIEN]: "medien",
+  [RatgeberKategorie.LEBEN]: "leben",
+  [RatgeberKategorie.KUNST_KULTUR]: "kunst-kultur",
+  [RatgeberKategorie.WISSEN_TECHNIK]: "wissen-technik"
+
+});
+
+const KategorieNachSlug = Object.freeze(
+  Object.fromEntries(
+    Object.entries(RatgeberKategorieSlug)
+      .map(([kategorie, slug]) => [slug, kategorie])
+  )
+);
+
 /*
   Liste aller Ratgeber.
 
