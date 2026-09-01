@@ -2387,3 +2387,7 @@ hr {
 .sprechzeit:first-child {
   border-top: none;
 }
+
+.institut-kontakt-mail {
+  margin-top: 1.5rem;
+}
