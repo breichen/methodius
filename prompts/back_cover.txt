@@ -5,24 +5,41 @@ Extract automatically:
 - Main title
 - Subtitle
 - Author name
+- Central topic
 - Core promise
-- Key benefits
 - Tone of voice
-- Main lessons
+- Key lessons
 
 Create a print-ready BACK COVER.
 
 --------------------------------------------------
-SERIES BRANDING
+SERIES IDENTITY
 --------------------------------------------------
 
-Must perfectly match the corresponding front cover.
+This back cover must perfectly match the corresponding front cover.
 
-Premium German publishing aesthetic.
-Modern intellectual bestseller appearance.
-Sophisticated editorial publishing design.
-Literary magazine quality.
-Clean European non-fiction design.
+It belongs to the same premium satirical non-fiction guide series.
+
+Visual references:
+
+- Premium German publishing
+- Literary magazine design
+- High-end non-fiction bestsellers
+- Editorial publishing aesthetics
+
+The design should feel:
+
+intelligent
+confident
+timeless
+premium
+understated
+
+Never look like self-publishing.
+Never look like direct-response marketing.
+Never look like an online course sales page.
+
+The result should feel like the reverse side of a premium bestseller from an established publisher.
 
 --------------------------------------------------
 COLOR SYSTEM
@@ -47,58 +64,146 @@ Accent:
 TYPOGRAPHY
 --------------------------------------------------
 
-Fraunces-inspired editorial serif for headings.
+Headlines:
 
-Inter-inspired sans-serif for body text.
+Heavy editorial serif.
 
-Excellent readability.
+Visual reference:
 
-Generous whitespace.
+- Fraunces Black
+- Canela Black
+- Noe Display Black
+
+Weight:
+
+Bold to Black.
+
+Color:
+
+#1B2340
+
+--------------------------------------------------
+
+Body text:
+
+Inter-inspired sans-serif.
+
+Weight:
+
+Regular.
+
+Readable.
+
+Editorial.
+
+Comfortable line length.
+
+Color:
+
+#1B2340
 
 --------------------------------------------------
 LAYOUT
 --------------------------------------------------
 
-Top section:
-Large compelling headline.
+Very generous whitespace.
 
-The headline should be derived from the guide's central promise.
+Strong editorial hierarchy.
+
+Typography-driven design.
+
+The layout should feel calm and confident.
+
+Top:
+Headline
+
+Upper middle:
+Short description
+
+Middle:
+DU LERNST section
+
+Lower:
+Slogan
+
+Bottom:
+Logo gap
+Barcode
+
+--------------------------------------------------
+HEADLINE
+--------------------------------------------------
+
+Create a short headline derived directly from the manuscript's core promise.
+
+Length:
+
+3–8 words.
+
+Should feel intelligent, memorable and understated.
 
 Examples:
 
-"Arbeiten Sie klüger. Nicht härter."
-"Endlich weniger Chaos."
-"Mehr Ruhe. Weniger Verpflichtungen."
+Die Kunst des überzeugenden Ratens.
 
-Create a unique headline based on the manuscript.
+Selbstsicherheit schlägt Telepathie.
+
+Mehr Wirkung durch Vermutungen.
+
+Avoid:
+
+marketing language
+clickbait
+sales copy
+exaggeration
+
+Use strong editorial typography.
 
 --------------------------------------------------
 DESCRIPTION
 --------------------------------------------------
 
-Write a short marketing description.
-
 Length:
-120–180 words.
+
+40–80 words.
+
+Maximum:
+
+2 short paragraphs.
+
+The description should establish context only.
+
+Do not explain everything.
+
+The learning section should carry most of the informational weight.
+
+Write like a premium publisher.
+
+Explain:
+
+- who the guide is for
+- what challenge it addresses
+- what insight it offers
 
 Tone:
 
-Intelligent
-Witty when appropriate
-Professional
-Engaging
+clever
+slightly amused
+self-assured
+intellectual
 
-The text should explain:
+Do NOT use:
 
-- Who the guide is for
-- What problem it solves
-- What transformation it offers
+"Jetzt"
+"Endlich"
+"Geheimnis"
+"Erfolgsformel"
+"Satire"
+"satirisch"
 
-Do not sound like advertising copy.
+Avoid marketing language.
 
-Sound like a premium publisher.
-
-Do not use words "Satire" or "satirisch".
+Avoid bullet points.
 
 --------------------------------------------------
 LEARNING SECTION
@@ -106,74 +211,269 @@ LEARNING SECTION
 
 Headline:
 
-DU LERNST:
+DU LERNST
 
-Automatically derive 5 concise learning outcomes from the manuscript.
+Color:
 
-Format:
+#B5292C
 
-• Benefit 1
-• Benefit 2
-• Benefit 3
-• Benefit 4
-• Benefit 5
+No divider line above.
 
-Each item:
+No diamond ornament above.
 
-3–8 words
+The section starts directly with:
 
-Use simple editorial icons.
+DU LERNST
+
+The learning section should be the dominant content area of the back cover.
+
+--------------------------------------------------
+
+Each learning point contains:
+
+- Navy circular icon
+- Short benefit headline
+- One short explanatory sentence
+
+Length:
+
+15–25 words total per learning point.
+
+Use five learning points.
+
+Derive all learning points directly from the manuscript.
+
+--------------------------------------------------
+ICONS
+--------------------------------------------------
+
+Place every icon inside a solid navy circle.
+
+Circle color:
+
+#1B2340
+
+Icon color:
+
+#F1ECE2
+
+Flat editorial icon style.
+
+Consistent size.
+
+No outlines.
+
+No gradients.
+
+No colorful icons.
+
+Use only navy and cream.
+
+--------------------------------------------------
+LEARNING POINT STYLE
+--------------------------------------------------
+
+Example structure:
+
+● Beobachtungen richtig deuten
+
+Erkennen Sie, welche Bedeutung Sie Blicken, Gesten und Pausen überzeugend zuschreiben können.
+
+Keep each point concise.
+
+Useful.
+
+Specific.
+
+Readable.
 
 --------------------------------------------------
 BOTTOM SECTION
 --------------------------------------------------
 
-Generate a short memorable slogan.
+Generate one memorable closing line.
 
-One line only.
+Length:
+
+2–6 words.
 
 Examples:
 
-Mehr Ruhe. Weniger Verpflichtungen.
+Überzeugung schlägt Gewissheit.
 
-Klare Gedanken. Bessere Entscheidungen.
+Mehr Deutung. Weniger Wissen.
 
-Weniger Stress. Mehr Wirkung.
+Wirkung vor Wahrheit.
 
-Create a unique slogan based on the guide.
+Use the same serif family as the front cover.
+
+Weight:
+
+SemiBold.
+
+Centered.
+
+Color:
+
+#1B2340
+
+No decorative lines above.
+
+No decorative lines below.
+
+Use whitespace instead.
+
+--------------------------------------------------
+BOTTOM ORNAMENT
+--------------------------------------------------
+
+Directly below the slogan:
+
+───── ◇ ─────
+
+Color:
+
+#B5292C
+
+Line length:
+
+10–15% of cover width per side.
+
+Visual weight:
+
+1–2 px.
+
+Centered.
+
+Use the same ornament style as the front cover.
+
+This should be the only decorative ornament in the lower section.
 
 --------------------------------------------------
 LOGO AREA
 --------------------------------------------------
 
-Place a centered logo placeholder.
+Below the bottom ornament:
 
-IMPORTANT:
+leave a very small centered empty area.
 
-Do NOT generate a logo.
+IMPORTANT
+
+Do NOT create a logo.
+
 Do NOT redraw a logo.
 
-Leave a reserved area where the original MM logo will later be inserted manually.
+Do NOT create a placeholder.
 
-No publisher name.
+Do NOT create a dashed rectangle.
 
-No "MM Editions".
+Do NOT create a box.
 
-Only empty logo space.
+Do NOT create a border.
+
+Do NOT write a publisher name.
+
+Do NOT write "MM Editions".
+
+Simply leave empty space.
+
+The logo will be inserted manually later.
+
+The empty space should be subtle and unobtrusive.
 
 --------------------------------------------------
 BARCODE
 --------------------------------------------------
 
-Simple barcode placeholder.
-
 Bottom right.
 
-Small and unobtrusive.
+Small.
+
+Traditional publishing placement.
+
+White barcode area.
+
+Black barcode bars.
+
+Surround the barcode area with a thin black outline.
+
+Outline:
+
+1–2 px visual weight.
+
+No fill.
+
+No shadow.
+
+No dark background.
+
+The purpose of the outline is only to separate
+the white barcode area from the cream cover background.
+
+The frame should feel subtle and publishing-standard.
+
+Approximately:
+
+8–12% of cover width.
+
+Keep visually unobtrusive.
 
 --------------------------------------------------
-STYLE
+DECORATIVE ELEMENTS
 --------------------------------------------------
+
+Use the same visual language as the front cover.
+
+Avoid decorative clutter.
+
+No extra dividers.
+
+No ornament above DU LERNST.
+
+Only the bottom ornament below the slogan.
+
+--------------------------------------------------
+VISUAL HIERARCHY
+--------------------------------------------------
+
+1. Headline
+2. Learning section
+3. Description
+4. Slogan
+
+The learning section should occupy more space than the description.
+
+The back cover should feel informative rather than promotional.
+
+--------------------------------------------------
+SERIES RULE
+--------------------------------------------------
+
+The back cover should visually belong to the same series as:
+
+"The Art of Looking Busy"
+
+Editorial.
+
+Confident.
+
+Minimal.
+
+Premium.
+
+Typography-driven.
+
+Lots of whitespace.
+
+Instantly recognizable as part of the same guide collection.
+
+--------------------------------------------------
+OUTPUT
+--------------------------------------------------
+
+Back cover only.
+
+Flat 2D artwork.
 
 No illustrations.
 
@@ -183,13 +483,14 @@ No mockup.
 
 No perspective.
 
-Flat 2D artwork only.
+No spine.
 
-Elegant editorial spacing.
+No publisher name.
+
+No logo.
 
 Perfect print-ready alignment.
 
-Looks like the back cover of a premium German non-fiction bestseller.
+Premium publishing quality.
 
-Output:
-Back cover only.
+Looks like the back cover of a bestselling German non-fiction guide.
