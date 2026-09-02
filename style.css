@@ -293,27 +293,6 @@ nav a:hover {
 
 
 /* ============================================
-   MOBIL / TOUCH
-   ============================================ */
-
-@media (hover: none),
-(pointer: coarse) {
-
-  .hat-untermenue.offen .untermenue {
-    position: static;
-
-    box-shadow: none;
-    border: none;
-    background: transparent;
-
-    margin-top: 4px;
-    padding-left: 12px;
-  }
-
-}
-
-
-/* ============================================
    HERO-BEREICH
    ============================================ */
 .hero {
