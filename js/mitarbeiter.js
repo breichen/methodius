@@ -17,13 +17,15 @@ const mitarbeiter = [
     ],
 
     lebenslauf: [
-        "1984: Geburt in Oberunterbach.",
-        "2003–2008: Studium der Allgemeinen Problemerkennung und Theoretischen Lösungsfindung.",
-        "2008: Verleihung des akademischen Grades Dr. rer. confus.",
-        "2008: Promotion mit der Dissertation „Zur Bedeutung überzeugend formulierter Behauptungen bei fehlender Datengrundlage“.",
-        "2009–2025: Wissenschaftlicher Mitarbeiter und später Forschungsleiter am Institut für Angewandte Schlussfolgerungen.",
-        "2026: Gründung des Methodius-Instituts.",
-        "Seit 2026: Direktor und wissenschaftlicher Leiter des Methodius-Instituts."
+        "1968: Geburt in Oberunterbach.",
+        "1987–1993: Studium der Allgemeinen Problemerkennung und Theoretischen Lösungsfindung.",
+        "1994–1997: Promotion über die wissenschaftliche Verwertbarkeit überzeugend vorgetragener Vermutungen.",
+        "1998: Verleihung des akademischen Grades Dr. rer. confus.",
+        "1998–2008: Wissenschaftlicher Mitarbeiter am Institut für Angewandte Schlussfolgerungen.",
+        "2008–2025: Leiter des Zentrums für Empirische Plausibilität und Methodische Gewissheit.",
+        "2018: Auszeichnung mit dem Goldenen Zirkelschluss der Gesellschaft für fortgeschrittene Argumentationskunst.",
+        "2026: Gründung des Methodius-Instituts für Lebenswissenschaften.",
+        "Seit 2026: Direktor und wissenschaftlicher Leiter des Methodius-Instituts für Lebenswissenschaften."
     ]
   },
 
