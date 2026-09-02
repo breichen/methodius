@@ -1,0 +1,193 @@
+Analyze the uploaded guide manuscript.
+
+Extract automatically:
+
+- Main title
+- Subtitle
+- Author name
+- Core promise
+- Key benefits
+- Tone of voice
+- Main lessons
+
+Create a print-ready BACK COVER.
+
+--------------------------------------------------
+SERIES BRANDING
+--------------------------------------------------
+
+Must perfectly match the corresponding front cover.
+
+Premium German publishing aesthetic.
+Modern intellectual bestseller appearance.
+Sophisticated editorial publishing design.
+Literary magazine quality.
+Clean European non-fiction design.
+
+--------------------------------------------------
+COLOR SYSTEM
+--------------------------------------------------
+
+Background:
+#F1ECE2
+
+Secondary background:
+#E7E0D2
+
+Primary text:
+#1B2340
+
+Muted text:
+#5A5F72
+
+Accent:
+#B5292C
+
+--------------------------------------------------
+TYPOGRAPHY
+--------------------------------------------------
+
+Fraunces-inspired editorial serif for headings.
+
+Inter-inspired sans-serif for body text.
+
+Excellent readability.
+
+Generous whitespace.
+
+--------------------------------------------------
+LAYOUT
+--------------------------------------------------
+
+Top section:
+Large compelling headline.
+
+The headline should be derived from the guide's central promise.
+
+Examples:
+
+"Arbeiten Sie klüger. Nicht härter."
+"Endlich weniger Chaos."
+"Mehr Ruhe. Weniger Verpflichtungen."
+
+Create a unique headline based on the manuscript.
+
+--------------------------------------------------
+DESCRIPTION
+--------------------------------------------------
+
+Write a short marketing description.
+
+Length:
+120–180 words.
+
+Tone:
+
+Intelligent
+Witty when appropriate
+Professional
+Engaging
+
+The text should explain:
+
+- Who the guide is for
+- What problem it solves
+- What transformation it offers
+
+Do not sound like advertising copy.
+
+Sound like a premium publisher.
+
+--------------------------------------------------
+LEARNING SECTION
+--------------------------------------------------
+
+Headline:
+
+DU LERNST:
+
+Automatically derive 5 concise learning outcomes from the manuscript.
+
+Format:
+
+• Benefit 1
+• Benefit 2
+• Benefit 3
+• Benefit 4
+• Benefit 5
+
+Each item:
+
+3–8 words
+
+Use simple editorial icons.
+
+--------------------------------------------------
+BOTTOM SECTION
+--------------------------------------------------
+
+Generate a short memorable slogan.
+
+One line only.
+
+Examples:
+
+Mehr Ruhe. Weniger Verpflichtungen.
+
+Klare Gedanken. Bessere Entscheidungen.
+
+Weniger Stress. Mehr Wirkung.
+
+Create a unique slogan based on the guide.
+
+--------------------------------------------------
+LOGO AREA
+--------------------------------------------------
+
+Place a centered logo placeholder.
+
+IMPORTANT:
+
+Do NOT generate a logo.
+Do NOT redraw a logo.
+
+Leave a reserved area where the original MM logo will later be inserted manually.
+
+No publisher name.
+
+No "MM Editions".
+
+Only empty logo space.
+
+--------------------------------------------------
+BARCODE
+--------------------------------------------------
+
+Simple barcode placeholder.
+
+Bottom right.
+
+Small and unobtrusive.
+
+--------------------------------------------------
+STYLE
+--------------------------------------------------
+
+No illustrations.
+
+No photographs.
+
+No mockup.
+
+No perspective.
+
+Flat 2D artwork only.
+
+Elegant editorial spacing.
+
+Perfect print-ready alignment.
+
+Looks like the back cover of a premium German non-fiction bestseller.
+
+Output:
+Back cover only.
