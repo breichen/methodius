@@ -8,25 +8,19 @@
 
 # Herzlichen Glückwunsch!
 
-Du hältst einen Ratgeber in den Händen, der eine der wichtigsten Fähigkeiten des modernen Berufslebens behandelt:
-
-**beschäftigt aussehen.**
+Du hältst einen Ratgeber in den Händen, der eine der wichtigsten Fähigkeiten des modernen Berufslebens behandelt: **beschäftigt aussehen.**
 
 Denn seien wir ehrlich: Es reicht heute nicht mehr, gute Arbeit zu leisten. Du musst auch so aussehen, als würdest du gerade etwas unglaublich Wichtiges tun.
 
 Ein leerer Bildschirm? Verdächtig.
-
 Ein entspannter Gesichtsausdruck? Gefährlich.
-
 Ein Mitarbeiter, der um 14:30 Uhr einfach dasitzt und aus dem Fenster schaut? **Offensichtlich hat er keine Aufgaben.**
 
 Dabei könnte er gerade über etwas sehr Wichtiges nachdenken. Zum Beispiel:
 
 > „Wann kann ich nach Hause gehen?“
 
-Das Problem ist nur: **Es sieht nicht danach aus.**
-
-Dieser Ratgeber schafft Abhilfe.
+Das Problem ist nur: **Es sieht nicht danach aus.** Dieser Ratgeber schafft Abhilfe.
 
 ---
 
@@ -36,13 +30,9 @@ Dieser Ratgeber schafft Abhilfe.
 
 Es gibt zwei Arten von Menschen: Menschen, die wirklich viel zu tun haben. Und Menschen, die sehr beschäftigt aussehen.
 
-Die erste Gruppe hat ein Problem: Sie arbeitet.
+Die erste Gruppe hat ein Problem: Sie arbeitet. Die zweite Gruppe hat ein System.
 
-Die zweite Gruppe hat ein System.
-
-Denn im modernen Berufsleben zählt nicht nur: **Was hast du erledigt?**
-
-Sondern auch: **Wie beschäftigt sahst du dabei aus?**
+Denn im modernen Berufsleben zählt nicht nur: **Was hast du erledigt?** Sondern auch: **Wie beschäftigt sahst du dabei aus?**
 
 Ein Mensch mit 14 offenen Tabs wirkt produktiv. Ein Mensch mit einem offenen Dokument wirkt verdächtig. Ein Mensch mit drei Monitoren wirkt wichtig. Ein Mensch mit vier Monitoren wirkt, als würde er die Weltwirtschaft steuern. Ob er tatsächlich seit 45 Minuten ein YouTube-Video schaut, ist dabei vollkommen nebensächlich.
 
