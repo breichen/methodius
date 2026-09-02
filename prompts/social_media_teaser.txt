@@ -1,0 +1,173 @@
+Create a premium social media teaser graphic using the previously generated FRONT COVER artwork.
+
+IMPORTANT
+
+Use the exact supplied front cover.
+
+Do not redesign it.
+Do not recreate it.
+Do not modify typography.
+Do not change colors.
+Do not alter the illustration.
+
+Treat the cover as finished artwork.
+
+--------------------------------------------------
+FORMAT
+--------------------------------------------------
+
+Square format.
+
+1:1 aspect ratio.
+
+Optimized for:
+
+- Instagram Feed
+- LinkedIn Posts
+- Facebook Posts
+- Pinterest
+
+--------------------------------------------------
+STYLE
+--------------------------------------------------
+
+Premium editorial publishing brand.
+
+Modern intellectual bestseller aesthetic.
+
+Clean European publishing design.
+
+Luxury magazine quality.
+
+Sophisticated and witty.
+
+--------------------------------------------------
+COLOR SYSTEM
+--------------------------------------------------
+
+Background:
+#F1ECE2
+
+Primary text:
+#1B2340
+
+Accent:
+#B5292C
+
+--------------------------------------------------
+LAYOUT
+--------------------------------------------------
+
+Book cover positioned on the left side.
+
+Cover slightly angled.
+
+Soft realistic shadow.
+
+Premium presentation.
+
+--------------------------------------------------
+HEADLINE
+--------------------------------------------------
+
+Generate a short attention-grabbing headline based on the manuscript.
+
+Maximum:
+
+5–10 words.
+
+Examples:
+
+"Freundschaften pflegen? Warum eigentlich?"
+
+"Endlich weniger soziale Verpflichtungen."
+
+"Die Kunst des professionellen Ignorierens."
+
+The headline should be humorous, intelligent and curiosity-driven.
+
+--------------------------------------------------
+SUPPORTING TEXT
+--------------------------------------------------
+
+Generate one short teaser sentence.
+
+Maximum:
+
+20 words.
+
+Create curiosity.
+
+Do not reveal everything.
+
+--------------------------------------------------
+VISUAL DETAILS
+--------------------------------------------------
+
+Minimal decorative red lines.
+
+Lots of whitespace.
+
+No clutter.
+
+No stock-photo look.
+
+No excessive graphics.
+
+--------------------------------------------------
+CTA
+--------------------------------------------------
+
+Small subtle CTA.
+
+Examples:
+
+"Jetzt entdecken"
+
+"Mehr erfahren"
+
+"Zum Ratgeber"
+
+Keep understated and premium.
+
+--------------------------------------------------
+LIGHTING
+--------------------------------------------------
+
+Soft editorial lighting.
+
+Subtle shadows.
+
+Luxury publishing aesthetic.
+
+--------------------------------------------------
+OUTPUT
+--------------------------------------------------
+
+One premium social media teaser.
+
+Cover visible.
+
+Headline visible.
+
+Teaser text visible.
+
+Clean minimalist composition.
+
+High engagement potential.
+
+No watermarks.
+
+No badges.
+
+No ratings.
+
+No pricing.
+
+Create a provocative social media hook.
+
+Use irony, humor or a surprising statement.
+
+The graphic should make users stop scrolling within 1 second.
+
+Maintain premium publishing aesthetics.
