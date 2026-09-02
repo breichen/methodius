@@ -1,0 +1,201 @@
+Analyze the uploaded guide manuscript.
+
+Extract automatically:
+
+- Main title
+- Subtitle
+- Author name
+- Central topic
+- Overall tone
+- Core promise of the guide
+
+Create a print-ready front cover.
+
+--------------------------------------------------
+SERIES BRANDING
+--------------------------------------------------
+
+Consistent visual identity across all books.
+
+Premium German publishing aesthetic.
+Modern intellectual bestseller appearance.
+Sophisticated editorial publishing design.
+Literary magazine quality.
+Clean European non-fiction design.
+
+The result must look like part of the same guide series.
+
+--------------------------------------------------
+COLOR SYSTEM
+--------------------------------------------------
+
+Background:
+#F1ECE2
+
+Secondary background:
+#E7E0D2
+
+Primary text:
+#1B2340
+
+Muted text:
+#5A5F72
+
+Accent:
+#B5292C
+
+--------------------------------------------------
+TYPOGRAPHY
+--------------------------------------------------
+
+Elegant high-contrast serif inspired by Fraunces.
+
+Clean modern sans-serif inspired by Inter.
+
+Strong hierarchy.
+Generous whitespace.
+Premium print design.
+
+--------------------------------------------------
+LAYOUT
+--------------------------------------------------
+
+Top section:
+
+Small horizontal red lines.
+
+Centered logo placeholder.
+
+IMPORTANT:
+
+Do NOT generate a logo.
+
+Use only a simple placeholder area where the original publisher logo will later be inserted manually.
+
+--------------------------------------------------
+TITLE AREA
+--------------------------------------------------
+
+Use the extracted title.
+
+Use the extracted subtitle.
+
+Title should occupy approximately
+35–40% of the cover height.
+
+Do not let the title dominate the page.
+
+Prioritize illustration space.
+
+--------------------------------------------------
+ILLUSTRATION AREA
+--------------------------------------------------
+
+Use approximately 45–50% of the cover height.
+
+Derive the illustration directly from the manuscript content.
+
+Create one memorable editorial scene representing the core idea of the guide.
+
+Illustration style:
+
+1950s editorial illustration
+New Yorker cover aesthetic
+Business magazine artwork
+Fine linework
+Limited color palette
+Premium publishing illustration
+
+Humorous but intelligent.
+
+Sophisticated visual storytelling.
+
+--------------------------------------------------
+CHARACTER SELECTION
+--------------------------------------------------
+
+If a human character is shown:
+
+Randomly choose:
+
+50% probability:
+female protagonist
+
+50% probability:
+male protagonist
+
+Never always choose men.
+
+Choose whichever gender best fits the generated variation.
+
+Only one primary character.
+
+--------------------------------------------------
+COMPOSITION
+--------------------------------------------------
+
+Large illustration.
+
+Strong focal point.
+
+Excellent readability.
+
+Minimal decorative red accents.
+
+No clutter.
+
+No stock-photo appearance.
+
+No photorealism.
+
+Flat editorial illustration only.
+
+--------------------------------------------------
+BOTTOM AREA
+--------------------------------------------------
+
+Display extracted author name.
+
+Small decorative red divider.
+
+No publisher name.
+
+No additional logo.
+
+--------------------------------------------------
+OUTPUT
+--------------------------------------------------
+
+Single front cover only.
+
+Flat 2D artwork.
+
+No mockup.
+
+No perspective.
+
+No spine.
+
+No back cover.
+
+Print-ready.
+
+Premium publishing quality.
+
+Never reuse the same scene.
+
+The illustration should be inspired by the guide's content and central promise.
+
+Possible variations:
+
+- office scene
+- home scene
+- symbolic metaphor
+- exaggerated satire
+- social interaction
+- workplace situation
+- everyday life situation
+- visual irony
+- intellectual cartoon
+
+Maintain identical branding while varying the illustration.
