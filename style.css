@@ -1028,84 +1028,139 @@ hr {
 }
 
 .showcase-eyebrow {
+
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.8rem;
-  color: var(--color-accent-warm);
-  font-weight: 600;
-  margin-bottom: 20px;
+
+  letter-spacing: 0.12em;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  color: var(--color-accent);
+
   text-align: center;
+
+  margin-bottom: 24px;
+
 }
 
 .showcase-box {
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
-  gap: 24px;
+
+  gap: 32px;
+
 }
 
 .showcase-arrow {
-  background: var(--color-accent-warm);
-  color: #fff;
+
+  background: none;
+
   border: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  font-size: 1.4rem;
+
+  padding: 0;
+
+  color: var(--color-accent);
+
+  font-family: var(--font-display);
+
+  font-size: 2rem;
+
+  line-height: 1;
+
   cursor: pointer;
+
   flex-shrink: 0;
-  transition: transform 0.15s ease, background 0.15s ease;
+
+  transition: color 0.15s ease;
+
 }
 
 .showcase-arrow:hover:not(:disabled) {
-  transform: scale(1.08);
+
+  color: var(--color-accent-warm);
+
 }
 
 .showcase-arrow:disabled {
-  background: var(--color-muted);
+
+  color: var(--color-text-muted);
+
   cursor: default;
+
 }
 
 .showcase-link {
+
   display: block;
+
   text-decoration: none;
+
   color: var(--color-text);
+
   text-align: center;
+
   max-width: 600px;
+
 }
 
 .showcase-cover {
+
   width: 100%;
+
   height: auto;
-  border-radius: 8px;
-  border: 1px solid #D6CDBB;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  transition: transform 0.15s ease;
+
+  border: 1px solid rgba(27, 35, 64, 0.12);
+
+  box-shadow: none;
+
+  transition: opacity 0.15s ease;
+
 }
 
 .showcase-link:hover .showcase-cover {
-  transform: translateY(-4px);
+
+  opacity: 0.92;
+
 }
 
 .showcase-title {
-  margin-top: 16px;
+
+  margin-top: 18px;
+
   margin-bottom: 0;
+
   font-family: var(--font-display);
+
   font-weight: 600;
+
   font-size: 1.2rem;
+
+  line-height: 1.25;
+
   color: var(--color-text);
+
 }
 
 @media (max-width: 480px) {
+
   .showcase-box {
-    gap: 12px;
+
+    gap: 16px;
+
   }
 
   .showcase-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+
+    font-size: 1.6rem;
+
   }
+
 }
 
 /* ============================================
