@@ -7,23 +7,39 @@ Extract automatically:
 - Author name
 - Central topic
 - Overall tone
-- Core promise of the guide
+- Core promise
 
 Create a print-ready front cover.
 
 --------------------------------------------------
-SERIES BRANDING
+SERIES IDENTITY
 --------------------------------------------------
 
-Consistent visual identity across all books.
+The cover must look like part of an existing premium satirical non-fiction guide series.
 
-Premium German publishing aesthetic.
-Modern intellectual bestseller appearance.
-Sophisticated editorial publishing design.
-Literary magazine quality.
-Clean European non-fiction design.
+Visual inspiration:
 
-The result must look like part of the same guide series.
+- The Economist
+- Harvard Business Review illustrations
+- Premium German non-fiction publishing
+- Intelligent editorial magazine covers
+- Modern literary bestsellers
+
+The overall impression should be:
+
+intelligent
+satirical
+professional
+premium
+timeless
+confident
+
+Never look cartoonish.
+Never look childish.
+Never look self-published.
+Never look like AI-generated fantasy art.
+
+The cover should feel like a bestselling satirical guide from an established publisher.
 
 --------------------------------------------------
 COLOR SYSTEM
@@ -35,138 +51,364 @@ Background:
 Secondary background:
 #E7E0D2
 
-Primary text:
+Primary typography:
 #1B2340
 
-Muted text:
+Muted typography:
 #5A5F72
 
 Accent:
 #B5292C
 
 --------------------------------------------------
+TITLE BLOCK
+--------------------------------------------------
+
+The title is the primary visual element.
+
+The title must occupy approximately
+45–55% of the cover height.
+
+The illustration supports the title.
+
+The title should remain readable at thumbnail size.
+
+The title should feel oversized and iconic.
+
+Prefer:
+
+2–4 title lines.
+
+Avoid narrow line breaks.
+
+Create a strong compact title block.
+
+--------------------------------------------------
 TYPOGRAPHY
 --------------------------------------------------
 
-Elegant high-contrast serif inspired by Fraunces.
+Use a very heavy high-contrast serif.
 
-Clean modern sans-serif inspired by Inter.
+Visual reference:
 
-Strong hierarchy.
-Generous whitespace.
-Premium print design.
+- Fraunces Black
+- Canela Black
+- Noe Display Black
+
+Weight:
+
+ExtraBold to Black.
+
+The typography must feel expensive and editorial.
+
+Never use:
+
+- thin serif fonts
+- elegant fashion typography
+- light typography
+- delicate typography
+
+Use tight line spacing.
+
+Lines should visually lock together into a powerful typographic block.
+
+Typography should dominate the cover.
+
+--------------------------------------------------
+TITLE COLOR RULE
+--------------------------------------------------
+
+Use only:
+
+#1B2340
+#B5292C
+
+Color entire title lines.
+
+Never highlight individual words.
+
+Preferred pattern:
+
+Line 1:
+#1B2340
+
+Line 2:
+#B5292C
+
+Line 3:
+#1B2340
+
+Line 4 (if needed):
+#1B2340
+
+This should become a recognizable series signature.
+
+--------------------------------------------------
+SUBTITLE
+--------------------------------------------------
+
+Use a clean modern sans-serif inspired by Inter.
+
+Weight:
+
+Medium.
+
+Centered.
+
+Color:
+
+#1B2340
+
+Readable but secondary.
+
+Do not compete with the title.
+
+--------------------------------------------------
+AUTHOR
+--------------------------------------------------
+
+Use the same serif family as the title.
+
+Weight:
+
+Medium to SemiBold.
+
+Centered.
+
+Traditional publisher aesthetic.
+
+No excessive letter spacing.
+
+No minimalist styling.
+
+The author should feel like a respected non-fiction imprint.
+
+Color:
+
+#1B2340
+
+--------------------------------------------------
+TOP SECTION
+--------------------------------------------------
+
+Two horizontal red lines.
+
+Color:
+
+#B5292C
+
+Length:
+
+20–25% of cover width.
+
+Visual weight:
+
+2–3 px.
+
+Centered.
+
+Between them:
+
+leave a very small clean gap.
+
+IMPORTANT:
+
+Do NOT create a logo.
+
+Do NOT create a logo placeholder.
+
+Do NOT create a box.
+
+Do NOT create a rectangle.
+
+Simply leave a small empty space.
+
+--------------------------------------------------
+LOGO GAP
+--------------------------------------------------
+
+The empty gap should be very small.
+
+Only large enough for a compact monogram.
+
+Approximately:
+
+3–4% of cover width.
+
+Do not visually emphasize it.
 
 --------------------------------------------------
 LAYOUT
 --------------------------------------------------
 
 Top section:
+8–10%
 
-Small horizontal red lines.
+Title block:
+45–55%
 
-Centered logo placeholder.
+Subtitle:
+6–8%
 
-IMPORTANT:
+Illustration:
+25–35%
 
-Do NOT generate a logo.
+Author:
+4–6%
 
-Use only a simple placeholder area where the original publisher logo will later be inserted manually.
-
---------------------------------------------------
-TITLE AREA
---------------------------------------------------
-
-Use the extracted title.
-
-Use the extracted subtitle.
-
-Title should occupy approximately
-35–40% of the cover height.
-
-Do not let the title dominate the page.
-
-Prioritize illustration space.
+Typography must visually dominate.
 
 --------------------------------------------------
-ILLUSTRATION AREA
+ILLUSTRATION COLORS
 --------------------------------------------------
 
-Use approximately 45–50% of the cover height.
+The illustration is intentionally restrained.
 
-Derive the illustration directly from the manuscript content.
+Allowed:
 
-Create one memorable editorial scene representing the core idea of the guide.
+- grayscale
+- charcoal
+- warm gray
+- cream paper tones
+- navy shadows
 
-Illustration style:
+Accent red (#B5292C) may be used sparingly.
 
-1950s editorial illustration
-New Yorker cover aesthetic
-Business magazine artwork
-Fine linework
-Limited color palette
-Premium publishing illustration
+Maximum:
 
-Humorous but intelligent.
+5% of illustration area.
 
-Sophisticated visual storytelling.
+Examples:
 
---------------------------------------------------
-CHARACTER SELECTION
---------------------------------------------------
+- tie
+- notebook
+- folder
+- coffee mug
+- pocket square
+- single focal object
 
-If a human character is shown:
+Do NOT use:
 
-Randomly choose:
+- bright blue
+- green
+- yellow
+- orange
+- purple
 
-50% probability:
-female protagonist
-
-50% probability:
-male protagonist
-
-Never always choose men.
-
-Choose whichever gender best fits the generated variation.
-
-Only one primary character.
+The illustration should feel almost monochrome.
 
 --------------------------------------------------
-COMPOSITION
+ILLUSTRATION STYLE
 --------------------------------------------------
 
-Large illustration.
+Create one memorable editorial scene.
 
-Strong focal point.
+The scene should directly visualize the manuscript's central joke, method or promise.
 
-Excellent readability.
+Avoid:
 
-Minimal decorative red accents.
+- generic symbolism
+- abstract concepts
+- floating icons
+- concept-art metaphors
 
-No clutter.
+Prefer:
 
-No stock-photo appearance.
+- workplace satire
+- social interaction
+- home office scene
+- everyday absurdity
+- visual irony
+- confident protagonist applying the guide's advice
 
-No photorealism.
-
-Flat editorial illustration only.
+The viewer should understand the joke immediately.
 
 --------------------------------------------------
-BOTTOM AREA
+CHARACTER
 --------------------------------------------------
 
-Display extracted author name.
+If a person is shown:
 
-Small decorative red divider.
+50% female
+50% male
 
-No publisher name.
+Only one protagonist.
 
-No additional logo.
+The protagonist should appear:
+
+confident
+composed
+slightly self-satisfied
+intellectually amused
+
+--------------------------------------------------
+ILLUSTRATION RENDERING
+--------------------------------------------------
+
+1950s editorial illustration.
+
+Mid-century magazine artwork.
+
+Business magazine illustration.
+
+Strong shape language.
+
+Large shadow masses.
+
+Navy and charcoal shadow areas.
+
+Simplified forms.
+
+Minimal hatching.
+
+Readable at small sizes.
+
+Avoid:
+
+- engraving style
+- newspaper illustration style
+- excessive line detail
+- sketchbook style
+- comic style
+- photorealism
+
+The illustration should feel sculpted through shape and shadow rather than linework.
+
+--------------------------------------------------
+DECORATIVE ELEMENTS
+--------------------------------------------------
+
+Use minimal red divider lines.
+
+Small red diamond ornaments permitted.
+
+Very restrained.
+
+Never decorative for the sake of decoration.
+
+--------------------------------------------------
+SERIES RULE
+--------------------------------------------------
+
+Visual hierarchy should closely resemble:
+
+"The Art of Looking Busy"
+
+Typography first.
+Illustration second.
+
+The title should feel iconic from a distance.
+
+The illustration should support the joke,
+not dominate the page.
+
+Every cover in the series should feel instantly related.
 
 --------------------------------------------------
 OUTPUT
 --------------------------------------------------
 
-Single front cover only.
+Single front cover.
 
 Flat 2D artwork.
 
@@ -178,24 +420,12 @@ No spine.
 
 No back cover.
 
+No publisher name.
+
+No logo.
+
 Print-ready.
 
 Premium publishing quality.
 
-Never reuse the same scene.
-
-The illustration should be inspired by the guide's content and central promise.
-
-Possible variations:
-
-- office scene
-- home scene
-- symbolic metaphor
-- exaggerated satire
-- social interaction
-- workplace situation
-- everyday life situation
-- visual irony
-- intellectual cartoon
-
-Maintain identical branding while varying the illustration.
+Looks like a bestselling satirical guide from an established publisher.

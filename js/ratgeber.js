@@ -38,7 +38,7 @@
 */
 const ratgeberRohdaten = [
   {slug: "Abnehmen dank Muskelabbau", erstellt: "2026-08-30", kategorie: RatgeberKategorie.LEBEN},
-  {slug: "Die Kunst, beschäftigt auszusehen", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
+  {slug: "Die Kunst, beschäftigt auszusehen", erstellt: "2026-08-31", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Freunde verlieren leicht gemacht", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {slug: "Glücklich werden durch niedrigere Erwartungen", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
   {slug: "In 12 einfachen Schritten zum US-Präsidenten", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
