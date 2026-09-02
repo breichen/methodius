@@ -1,0 +1,110 @@
+Create a clean 2D publishing presentation layout.
+
+Use the previously generated FRONT COVER artwork and the previously generated BACK COVER artwork.
+
+IMPORTANT:
+
+- Use the front cover exactly as generated.
+- Use the back cover exactly as generated.
+- Do not redesign either cover.
+- Do not change typography.
+- Do not change colors.
+- Do not change illustrations.
+- Do not change layout.
+- Do not add any new elements.
+- Do not generate a spine.
+- Do not generate a book mockup.
+- Do not bend, fold or distort the covers.
+
+--------------------------------------------------
+LAYOUT
+--------------------------------------------------
+
+Place the FRONT COVER on the left.
+
+Place the BACK COVER on the right.
+
+Leave clear whitespace between both covers.
+
+Gap size:
+approximately 8–12% of total image width.
+
+Both covers must:
+
+- have identical height
+- be perfectly aligned vertically
+- remain completely flat
+- remain fully visible
+
+--------------------------------------------------
+BACKGROUND
+--------------------------------------------------
+
+Solid background:
+
+#F1ECE2
+
+No textures.
+
+No gradients.
+
+No objects.
+
+No decorative elements.
+
+--------------------------------------------------
+SHADOWS
+--------------------------------------------------
+
+Apply a subtle premium shadow behind each cover.
+
+Shadow style:
+
+- soft
+- realistic
+- professional
+- slightly blurred
+- low opacity
+
+The shadow should create depth without looking like a mockup.
+
+--------------------------------------------------
+COMPOSITION
+--------------------------------------------------
+
+Centered composition.
+
+Large margins around the covers.
+
+Luxury publishing presentation aesthetic.
+
+Looks like a publisher's internal cover review board.
+
+--------------------------------------------------
+OUTPUT
+--------------------------------------------------
+
+Flat 2D presentation.
+
+Front cover left.
+Back cover right.
+
+No spine.
+
+No perspective.
+
+No book thickness.
+
+No mockup.
+
+No additional text.
+
+No extra graphics.
+
+Only the two covers with subtle shadows on a #F1ECE2 background.
+
+Use the exact previously generated front cover and back cover as source images.
+
+Do not reinterpret, recreate or redesign them.
+
+Treat them as finished artwork and only arrange them side-by-side.
