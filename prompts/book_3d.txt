@@ -1,0 +1,177 @@
+Create a premium 3D product mockup using the previously generated FRONT COVER and BACK COVER artwork.
+
+IMPORTANT
+
+Use the exact supplied front cover artwork.
+Use the exact supplied back cover artwork.
+
+Do not redesign.
+Do not recreate.
+Do not reinterpret.
+
+Use them exactly as provided.
+
+--------------------------------------------------
+PRODUCT TYPE
+--------------------------------------------------
+
+This is NOT a thick book.
+
+It is a slim premium guide booklet.
+
+Approximate thickness:
+
+15–20 interior pages.
+
+Very thin spine.
+
+Maximum spine width:
+3–5 mm.
+
+Looks like:
+
+- premium workbook
+- slim guide
+- booklet
+- short non-fiction publication
+
+NOT:
+
+- hardcover
+- textbook
+- thick business book
+- novel
+
+--------------------------------------------------
+COMPOSITION
+--------------------------------------------------
+
+Display TWO physical copies.
+
+LEFT COPY
+
+Show FRONT COVER.
+
+Three-quarter perspective.
+
+Slightly turned toward the viewer.
+
+Front cover fully readable.
+
+--------------------------------------------------
+RIGHT COPY
+
+Show BACK COVER.
+
+Three-quarter perspective.
+
+Back cover fully readable.
+
+CRITICAL:
+
+The spine must be on the OUTER RIGHT EDGE.
+
+The spine must NOT appear on the left side.
+
+The back cover orientation must be physically correct.
+
+Imagine holding a real booklet:
+
+Front cover copy:
+spine on the left side.
+
+Back cover copy:
+spine on the right side.
+
+Check orientation carefully.
+
+--------------------------------------------------
+SPINE
+--------------------------------------------------
+
+Very thin.
+
+Minimal visible thickness.
+
+Same cream color palette.
+
+Title may appear on spine if visible.
+
+Do not exaggerate thickness.
+
+--------------------------------------------------
+BACKGROUND
+--------------------------------------------------
+
+Solid background:
+
+#F1ECE2
+
+No texture.
+
+No gradients.
+
+No furniture.
+
+No decorative props.
+
+Minimal luxury presentation.
+
+--------------------------------------------------
+LIGHTING
+--------------------------------------------------
+
+Soft studio lighting.
+
+Subtle premium shadows.
+
+Professional publishing product photography.
+
+Natural depth.
+
+No dramatic lighting.
+
+--------------------------------------------------
+STYLE
+--------------------------------------------------
+
+Modern publishing catalogue photography.
+
+Premium editorial aesthetic.
+
+Minimalist.
+
+Elegant.
+
+High-end German publisher presentation.
+
+--------------------------------------------------
+OUTPUT
+--------------------------------------------------
+
+One image.
+
+Two slim guide booklets.
+
+Front cover left.
+Back cover right.
+
+Correct spine orientation.
+
+Thin booklet thickness.
+
+Soft shadows.
+
+Premium studio mockup.
+
+No extra text.
+No watermarks.
+No additional graphics.
+
+Quality control:
+
+Verify that the right booklet shows the back cover with the spine on the right edge.
+
+Verify that both booklets have realistic booklet thickness (15–20 pages).
+
+Do not generate thick books.
