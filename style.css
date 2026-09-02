@@ -2263,6 +2263,19 @@ hr {
   box-shadow: none;
 }
 
+.kategorie-card h3::before {
+  content: "";
+
+  display: block;
+
+  width: 42px;
+  height: 2px;
+
+  margin-bottom: 12px;
+
+  background: var(--color-accent);
+}
+
 .kategorie-card h3 {
   margin-bottom: 12px;
 }
