@@ -98,6 +98,8 @@ Do not sound like advertising copy.
 
 Sound like a premium publisher.
 
+Do not use words "Satire" or "satirisch".
+
 --------------------------------------------------
 LEARNING SECTION
 --------------------------------------------------
