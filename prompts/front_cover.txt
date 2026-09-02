@@ -197,45 +197,85 @@ Color:
 
 #B5292C
 
-Length:
-
-20–25% of cover width.
-
 Visual weight:
 
 2–3 px.
 
-Centered.
-
-Between them:
-
-leave a very small clean gap.
-
-IMPORTANT:
-
-Do NOT create a logo.
-
-Do NOT create a logo placeholder.
-
-Do NOT create a box.
-
-Do NOT create a rectangle.
-
-Simply leave a small empty space.
+The lines should feel elegant and restrained.
 
 --------------------------------------------------
-LOGO GAP
+
+LINE LENGTH
+
+Each line:
+
+20–25% of cover width.
+
+Both lines must have identical length.
+
 --------------------------------------------------
 
-The empty gap should be very small.
+CENTER GAP
 
-Only large enough for a compact monogram.
+Leave a clearly visible centered gap between the lines.
 
-Approximately:
+The gap should be approximately:
 
-3–4% of cover width.
+12–15% of cover width.
 
-Do not visually emphasize it.
+The gap is intentionally larger than necessary.
+
+Do NOT let the lines approach the center too closely.
+
+--------------------------------------------------
+
+LOGO AREA
+
+No logo.
+
+No placeholder.
+
+No box.
+
+No rectangle.
+
+No icon.
+
+Simply leave empty space.
+
+The empty space should feel intentional and balanced.
+
+The logo will be inserted later.
+
+--------------------------------------------------
+
+SERIES RULE
+
+The top ornament should visually resemble:
+
+────────────      MM      ────────────
+
+not
+
+──── MM ────
+
+The generous center gap is a fixed series element and should remain consistent across all covers.
+
+SERIES CONSISTENCY RULE
+
+The top red line ornament is a permanent branding element.
+
+Across all books:
+
+- same line thickness
+- same line length
+- same gap size
+- same vertical position
+
+Treat this as a publisher mark.
+
+Do not redesign it.
+
 
 --------------------------------------------------
 LAYOUT
