@@ -494,3 +494,13 @@ Perfect print-ready alignment.
 Premium publishing quality.
 
 Looks like the back cover of a bestselling German non-fiction guide.
+
+Print format:
+
+DIN A5
+
+148 × 210 mm
+
+Aspect ratio:
+
+1 : 1.414

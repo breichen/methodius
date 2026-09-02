@@ -429,3 +429,13 @@ Print-ready.
 Premium publishing quality.
 
 Looks like a bestselling satirical guide from an established publisher.
+
+Print format:
+
+DIN A5
+
+148 × 210 mm
+
+Aspect ratio:
+
+1 : 1.414
