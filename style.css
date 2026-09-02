@@ -740,28 +740,30 @@ hr {
 
   padding: 12px 24px;
 
-  background: var(--color-accent);
-  color: #fff;
+  background: transparent;
 
-  border: none;
+  color: var(--color-accent);
+
+  border: 2px solid var(--color-accent);
   border-radius: 0;
 
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 600;
 
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 
   cursor: pointer;
 
   transition:
     background-color 0.15s ease,
-    opacity 0.15s ease;
+    color 0.15s ease;
 }
 
 .quiz-start-button:hover {
-  background: #982225;
+  background: var(--color-accent);
+  color: white;
 }
 
 .quiz-overlay {
