@@ -652,77 +652,121 @@ hr {
    AUTOR-VORSTELLUNG
    ============================================ */
 .autor-einleitung {
-  background: var(--color-bg-alt);
-  border-left: 4px solid var(--color-accent);
-  border-radius: 4px 8px 8px 4px;
-  padding: 20px 24px;
-  margin: 0 0 28px 0;
+
+  margin: 0 0 36px 0;
+  padding-left: 24px;
+
+  border-left: 3px solid var(--color-accent);
+
+  background: transparent;
+
 }
 
 .autor-einleitung p:last-child {
+
   margin-bottom: 0;
+
 }
 
 .autor-box {
+
   display: flex;
+
   align-items: center;
-  gap: 16px;
-  margin: 40px 0 24px 0;
+
+  gap: 18px;
+
+  margin: 48px 0 32px;
+
 }
 
 .autor-foto {
+
   width: 100px;
+
   height: 100px;
-  border-radius: 50%;
+
   object-fit: cover;
-  border: 3px solid var(--color-accent);
+
+  object-position: center;
+
+  border-radius: 0;
+
+  border: 1px solid rgba(27, 35, 64, 0.12);
+
   flex-shrink: 0;
+
   margin: 0;
+
 }
 
 .autor-box .autor-name {
+
   font-family: var(--font-display);
-  font-size: 1.3rem;
+
+  font-size: 1.35rem;
+
   font-weight: 600;
-  color: var(--color-accent-warm);
-  letter-spacing: 0.02em;
+
+  color: var(--color-text);
+
+  letter-spacing: 0;
+
   margin: 0;
+
 }
 
 .autor-tagline {
-  color: var(--color-muted);
+
+  color: var(--color-text-muted);
+
   font-style: italic;
+
   font-size: 0.95rem;
-  margin: -8px 0 24px 116px;
+
+  margin: 6px 0 24px 116px;
+
 }
 
 .autor-box .autor-tagline {
-  margin: 6px 0 0 0;
+
+  margin: 4px 0 0 0;
+
   max-width: 40ch;
+
 }
 
 #autor .autor-signatur {
+
   font-size: 2.4rem;
+
 }
 
 /* ============================================
+
    AUTORSEITE: ABSCHLUSS-BOX
-   Baut autorseite.js aus der letzten Namenszeile: Porträt links, rechts
-   daneben Name + der komplette restliche Dokumenttext. Da dieser Text
-   (anders als die kurze Tagline auf Hero/Buch-Seite) mehrere Absätze
-   lang ist, braucht die Box eine andere Ausrichtung: oben statt
-   zentriert, und der Textblock nutzt die volle verbleibende Breite.
+
+   Baut autorseite.js aus der letzten Namenszeile:
+   Porträt links, rechts daneben Name + Textblock.
+
    ============================================ */
+
 .autor-box-abschluss {
+
   align-items: flex-start;
+
 }
 
 .autor-box-abschluss .autor-box-text {
+
   flex: 1;
+
 }
 
 .autor-box-abschluss .autor-name {
+
   margin-bottom: 12px;
+
 }
 
 /* ============================================
