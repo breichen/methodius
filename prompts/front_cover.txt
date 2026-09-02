@@ -83,6 +83,25 @@ Avoid narrow line breaks.
 
 Create a strong compact title block.
 
+TITLE DOMINANCE RULE
+
+The title block is the single largest element on the cover.
+
+The title should visually occupy
+at least twice the area of the illustration.
+
+When viewed from a distance:
+
+1. Title
+2. Illustration
+3. Subtitle
+4. Author
+
+must be perceived in exactly that order.
+
+If there is a conflict between illustration size
+and title size, reduce the illustration.
+
 --------------------------------------------------
 TYPOGRAPHY
 --------------------------------------------------
@@ -363,6 +382,23 @@ Prefer:
 
 The viewer should understand the joke immediately.
 
+ILLUSTRATION BOUNDARY RULE
+
+The illustration must remain entirely
+within the lower third of the cover.
+
+The illustration may not visually intersect
+the title block.
+
+Maintain a clear separation between:
+
+title
+subtitle
+illustration
+
+The illustration should appear grounded
+on an invisible baseline near the bottom.
+
 --------------------------------------------------
 CHARACTER
 --------------------------------------------------
@@ -380,6 +416,18 @@ confident
 composed
 slightly self-satisfied
 intellectually amused
+
+
+POSTER CONTRAST RULE
+
+The protagonist should be readable
+as a silhouette before facial details become visible.
+
+Large dark shape masses are preferred
+over fine rendering.
+
+If the image is blurred,
+the main figure should still be recognizable.
 
 --------------------------------------------------
 ILLUSTRATION RENDERING
@@ -541,12 +589,24 @@ Premium publishing quality.
 
 Looks like a bestselling satirical guide from an established publisher.
 
-Print format:
+CANVAS FORMAT
+
+True DIN A-series proportions.
+
+Portrait orientation.
+
+Aspect ratio exactly:
+
+1 : 1.4142
+
+Equivalent to:
 
 DIN A5
+DIN A4
+DIN A6
 
-148 × 210 mm
+Do not use 2:3 proportions.
 
-Aspect ratio:
+Do not use standard poster proportions.
 
-1 : 1.414
+Maintain true DIN proportions throughout the composition.

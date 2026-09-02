@@ -495,12 +495,24 @@ Premium publishing quality.
 
 Looks like the back cover of a bestselling German non-fiction guide.
 
-Print format:
+CANVAS FORMAT
+
+True DIN A-series proportions.
+
+Portrait orientation.
+
+Aspect ratio exactly:
+
+1 : 1.4142
+
+Equivalent to:
 
 DIN A5
+DIN A4
+DIN A6
 
-148 × 210 mm
+Do not use 2:3 proportions.
 
-Aspect ratio:
+Do not use standard poster proportions.
 
-1 : 1.414
+Maintain true DIN proportions throughout the composition.
