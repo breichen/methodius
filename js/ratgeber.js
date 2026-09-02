@@ -75,10 +75,10 @@ const ratgeberRohdaten = [
   {slug: "Diskussionen gewinnen durch konsequentes Dagegenreden", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {slug: "Warum das Leben leichter ist, wenn man nichts versteht", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
   {slug: "Wie man aus Junk-Food Gourmet-Menüs bastelt", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
-
   {slug: "Plötzlich Privatdetektiv - Völlig unverdächtige Leute observieren", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {slug: "Zugausfälle als Chance nutzen", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Unsinn mit wissenschaftlichen Diagrammen belegen", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
+
   {slug: "Permanente Enttäuschung dank zu hoch gesteckter Ziele", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
   {slug: "Befördert werden ohne Qualifikation", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Verwendung von KI durch Fehler vertuschen", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
