@@ -430,16 +430,37 @@ h3 {
 }
 
 .grid-link {
+
   margin-top: 20px;
+
 }
 
 .grid-link a {
+
+  color: var(--color-accent);
+
+  font-family: var(--font-body);
+
   font-weight: 600;
+
+  font-size: 0.82rem;
+
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+
   text-decoration: none;
+
+  transition: color 0.15s ease;
+
 }
 
 .grid-link a:hover {
+
+  color: var(--color-accent-warm);
+
   text-decoration: underline;
+
 }
 
 /* ============================================
