@@ -2233,17 +2233,15 @@ hr {
 .kategorie-card {
   display: block;
   padding: 24px;
-
   background: var(--color-bg-alt);
-
-  border-radius: 12px;
-
+  border: 1px solid rgba(27, 35, 64, 0.12);
+  border-radius: 0;
   text-decoration: none;
   color: inherit;
 
   transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 /* Wenn die Section dunkel ist,
@@ -2257,10 +2255,12 @@ hr {
 }
 
 .kategorie-card:hover {
-  transform: translateY(-2px);
+  background: #ece5d8;
 
-  box-shadow:
-    0 8px 20px rgba(27, 35, 64, 0.12);
+  border-color: var(--color-accent);
+
+  transform: none;
+  box-shadow: none;
 }
 
 .kategorie-card h3 {
