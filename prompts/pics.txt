@@ -1,0 +1,220 @@
+Create artwork in the official visual style of the Methodius Institute.
+
+--------------------------------------------------
+VISUAL IDENTITY
+--------------------------------------------------
+
+Premium editorial illustration.
+
+Intelligent.
+Sophisticated.
+Timeless.
+Dryly humorous.
+Academic but slightly absurd.
+
+The artwork should feel like a lost illustration from a prestigious German magazine from an alternative version of the 1950s.
+
+Visual references:
+
+- The Economist cover illustrations
+- Harvard Business Review artwork
+- Mid-century editorial illustration
+- Vintage German magazine illustrations
+- Saul Bass graphic design
+- 1950s corporate advertising art
+
+Never look like:
+
+- comic art
+- caricature
+- manga
+- fantasy art
+- AI concept art
+- stock illustrations
+- photorealism
+
+--------------------------------------------------
+COLOR PALETTE
+--------------------------------------------------
+
+Background:
+#F1ECE2
+
+Primary dark tone:
+#1B2340
+
+Secondary dark tone:
+charcoal gray
+
+Accent:
+#B5292C
+
+Allowed colors:
+
+- cream
+- navy
+- charcoal
+- warm gray
+- muted red
+
+Forbidden:
+
+- bright blue
+- green
+- yellow
+- orange
+- purple
+- neon colors
+
+The image should feel almost monochrome.
+
+Red should occupy no more than 5–10% of the image.
+
+--------------------------------------------------
+ILLUSTRATION PHILOSOPHY
+--------------------------------------------------
+
+The image should be built primarily from shapes and contrast.
+
+Think:
+
+70% shadow masses
+20% silhouette
+10% detail
+
+NOT:
+
+70% linework
+20% detail
+10% shadow
+
+Use large shadow areas.
+
+Use bold simplified forms.
+
+Use strong silhouettes.
+
+Keep details minimal.
+
+The image must remain readable at thumbnail size.
+
+--------------------------------------------------
+RENDERING STYLE
+--------------------------------------------------
+
+Flat 2D artwork.
+
+Mid-century editorial illustration.
+
+Large navy shadow masses.
+
+Strong contrast.
+
+Minimal hatching.
+
+Minimal linework.
+
+Simplified facial features.
+
+Simplified clothing folds.
+
+Simplified environments.
+
+The image should feel sculpted from light and shadow.
+
+Visual weight should come from shapes, not outlines.
+
+--------------------------------------------------
+CONTRAST
+--------------------------------------------------
+
+High contrast.
+
+At least 60–70% medium-to-dark values.
+
+Avoid pale illustrations.
+
+Avoid washed-out scenes.
+
+The focal character should contain large dark shadow areas.
+
+The image should remain recognizable when reduced to 150px height.
+
+--------------------------------------------------
+CHARACTER DESIGN
+--------------------------------------------------
+
+Characters should appear:
+
+- intelligent
+- competent
+- composed
+- self-confident
+- slightly self-satisfied
+
+Avoid exaggerated facial expressions.
+
+Avoid cartoon reactions.
+
+Avoid slapstick humor.
+
+Humor should emerge from the situation.
+
+--------------------------------------------------
+COMPOSITION
+--------------------------------------------------
+
+Strong central focal point.
+
+Clear hierarchy.
+
+No clutter.
+
+No unnecessary background elements.
+
+Every object should support the story.
+
+The scene should communicate its idea immediately.
+
+--------------------------------------------------
+ATMOSPHERE
+--------------------------------------------------
+
+Academic.
+
+Institutional.
+
+Editorial.
+
+Slightly absurd.
+
+Deadpan.
+
+The image should look as if it illustrates a serious scientific article that happens to be based on questionable assumptions.
+
+--------------------------------------------------
+SERIES CONSISTENCY
+--------------------------------------------------
+
+Use the same visual language as:
+
+- Methodius Institute guide covers
+- Institute staff portraits
+- Institute founding photographs
+- Institute archive material
+
+Every image should feel instantly recognizable as part of the same visual universe.
+
+--------------------------------------------------
+FINAL REQUIREMENT
+--------------------------------------------------
+
+The artwork should look like it was created by the same illustrator.
+
+Consistent shadow treatment.
+Consistent shape language.
+Consistent contrast level.
+Consistent facial simplification.
+Consistent editorial aesthetic.
+
+The result should resemble a premium illustrated feature in a respected 1950s intellectual magazine.
