@@ -345,23 +345,94 @@ intellectually amused
 ILLUSTRATION RENDERING
 --------------------------------------------------
 
-1950s editorial illustration.
+ILLUSTRATION RENDERING
 
-Mid-century magazine artwork.
+The illustration should be built primarily from
+large graphic shadow shapes.
 
-Business magazine illustration.
+Think:
 
-Strong shape language.
+70% shape
+20% silhouette
+10% detail
 
-Large shadow masses.
+NOT:
 
-Navy and charcoal shadow areas.
+70% linework
+20% detail
+10% shadow
 
-Simplified forms.
+The illustration must remain immediately readable
+at Amazon thumbnail size.
 
-Minimal hatching.
+Visual references:
 
-Readable at small sizes.
+- The Economist cover illustrations
+- Harvard Business Review artwork
+- Mid-century advertising illustration
+- Saul Bass poster composition
+- Vintage corporate editorial illustration
+
+Use:
+
+- large navy shadow masses
+- bold charcoal shapes
+- simplified facial features
+- simplified clothing folds
+- simplified environments
+
+Avoid:
+
+- excessive hatching
+- pen-and-ink rendering
+- engraving aesthetics
+- newspaper illustration style
+- sketchbook aesthetics
+- intricate detail
+
+Shadows should define the image.
+
+Lines should only support the shapes.
+
+The illustration should feel sculpted from
+light and shadow.
+
+The result should resemble a premium editorial poster,
+not a drawing.
+
+CONTRAST RULE
+
+Use strong contrast.
+
+At least:
+
+60–70% of the illustration should consist of
+medium-to-dark values.
+
+Avoid pale illustrations.
+
+Avoid low-contrast scenes.
+
+The focal character should contain
+large navy shadow regions.
+
+The illustration must remain recognizable
+when reduced to 150px height.
+
+SERIES ILLUSTRATION RULE
+
+Every cover in the series should feel like it was
+illustrated by the same artist.
+
+Use:
+
+- identical shadow treatment
+- identical facial simplification
+- identical shape language
+- identical contrast level
+
+The illustration style should become
+a recognizable series signature.
 
 Avoid:
 
