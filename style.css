@@ -473,9 +473,17 @@ h3 {
 }
 
 .buch-datum {
-  margin: 0 0 4px 0;
-  color: var(--color-muted);
-  font-size: 0.85rem;
+  margin: 0 0 6px 0;
+
+  color: var(--color-text-muted);
+
+  font-family: var(--font-body);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .buch-datum:last-child {
