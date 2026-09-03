@@ -1402,17 +1402,14 @@ hr {
 }
 
 .flipbook-page-number {
-  position: absolute;
-  bottom: 18px;
-  right: 20px;
-  background: var(--color-accent-warm);
-  color: #fff;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.78rem;
-  letter-spacing: 0.03em;
-  padding: 6px 16px;
-  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text-muted);
+  border: none;
+  padding: 0;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
 }
 
 .flipbook-page-number.left {
