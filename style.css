@@ -1242,23 +1242,34 @@ hr {
 .flipbook-arrow {
   background: var(--color-accent);
   color: #fff;
-  border: none;
-  width: clamp(36px, 8vh, 48px);
-  height: clamp(36px, 8vh, 48px);
+
+  border: 1px solid rgba(0,0,0,.12);
+
+  width: clamp(40px, 8vh, 52px);
+  height: clamp(40px, 8vh, 52px);
+
   border-radius: 50%;
-  font-size: clamp(1rem, 3vh, 1.4rem);
+
+  font-size: clamp(1.1rem, 3vh, 1.5rem);
+  font-weight: 600;
+
   cursor: pointer;
   flex-shrink: 0;
-  transition: transform 0.15s ease, background 0.15s ease;
+
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease;
 }
 
 .flipbook-arrow:hover:not(:disabled) {
-  transform: scale(1.08);
+  transform: scale(1.06);
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.18);
 }
 
 .flipbook-arrow:disabled {
-  background: var(--color-muted);
-  cursor: default;
+  opacity: .45;
 }
 
 .flipbook-book {
