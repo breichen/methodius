@@ -56,6 +56,8 @@ if (!buch) {
   // Auch hier: encodeURIComponent macht den Dateinamen URL-sicher
   // (wichtig bei Leerzeichen, Kommas, Klammern im Titel).
   const pfad = encodeURIComponent(buch.slug);
+  const frontCoverPfad = `pics/ratgeber-front/${pfad}.png`;
+  const backCoverPfad  = `pics/ratgeber-back/${pfad}.png`;
 
   // "Vorgeschlagen von: ..." / "Veröffentlicht: ..." / "Aktualisiert: ..."
   // nur anzeigen, wenn die jeweilige Angabe in ratgeber.js gesetzt wurde -
@@ -78,7 +80,22 @@ if (!buch) {
     <section class="section">
       <div class="wrap">
         ${datumsHtml}
-        <img class="book-cover" id="buch-cover-bild" src="pics/ratgeber/${pfad}.png" alt="Cover: ${buch.titel}" style="width: 100%; max-width: 750px; height: auto; margin-bottom: 24px; cursor: zoom-in;">
+        <div class="book-cover-duo">
+          <img
+            class="book-cover-duo-bild"
+            id="buch-cover-front"
+            src="${frontCoverPfad}"
+            alt="Frontcover: ${buch.titel}"
+            style="cursor: zoom-in;"
+          >
+          <img
+            class="book-cover-duo-bild"
+            id="buch-cover-back"
+            src="${backCoverPfad}"
+            alt="Rückcover: ${buch.titel}"
+            style="cursor: zoom-in;"
+          >
+        </div>
         <p class="blaettern-wrap">
           <a href="#ratgeber-kommentare" id="kommentar-link" class="kommentar-link">
             💬 <span id="kommentar-link-text">Kommentare</span>
@@ -101,12 +118,13 @@ if (!buch) {
   `;
 
   // Klick auf das Cover -> Bild vergrößert in einer Lightbox anzeigen
-  initCoverLightbox();
+  initCoverLightbox("buch-cover-front");
+  initCoverLightbox("buch-cover-back");
 
   // Teilen-Button (siehe js/teilen.js) - teilt Cover-Bild + Titel + Link
   initTeilenButtonRatgeber(document.getElementById("teilen-button"), {
     titel: buch.titel,
-    bildUrl: `pics/ratgeber/${pfad}.png`
+    bildUrl: frontCoverPfad
   });
 
   // Der Link wird erst sichtbar/klickbar, wenn der Text geladen ist
@@ -793,8 +811,12 @@ function zeigeQuizErgebnis(quiz) {
    Klick auf das Cover-Bild zeigt es vergrößert in einem Overlay.
    ============================================ */
 
-function initCoverLightbox() {
-  const bild = document.getElementById("buch-cover-bild");
+function initCoverLightbox(bildId = "buch-cover-front") {
+  const bild = document.getElementById(bildId);
+
+  if (!bild) {
+    return;
+  }
   if (!bild) return;
 
   bild.addEventListener("click", () => {
