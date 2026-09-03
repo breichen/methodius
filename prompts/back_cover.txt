@@ -160,6 +160,51 @@ exaggeration
 Use strong editorial typography.
 
 --------------------------------------------------
+READER ADDRESSING RULE
+--------------------------------------------------
+
+The guide series consistently addresses readers using:
+
+DU
+
+All reader-facing copy must use:
+
+du
+dich
+dir
+dein
+deine
+
+Never use:
+
+Sie
+Ihnen
+Ihr
+Ihre
+
+Examples:
+
+Dieses Buch zeigt dir ...
+Du lernst ...
+Für alle, die ...
+
+Not:
+
+Dieses Buch zeigt Ihnen ...
+Sie lernen ...
+
+This rule applies to:
+
+- description text
+- DU LERNST section
+- benefit statements
+- slogans
+- all reader-facing copy
+
+Institutional and editorial text may remain neutral,
+but direct reader communication must always use DU.
+
+--------------------------------------------------
 DESCRIPTION
 --------------------------------------------------
 
