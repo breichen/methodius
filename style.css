@@ -798,14 +798,12 @@ hr {
   max-width: 42ch;
 }
 
-.autor-funktion {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--color-accent);
-  font-size: .78rem;
+.autor-vorstellung-name {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .08em;
+  color: var(--color-accent);
 }
 
 #autor .autor-signatur {
