@@ -1934,10 +1934,12 @@ hr {
   margin: 0 auto;
 }
 
+/* Überschrift */
+
 .kommentar-ueberschrift {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   margin-bottom: 34px;
 }
 
@@ -1946,26 +1948,31 @@ hr {
 }
 
 .kommentar-linie {
-  width: 5px;
-  height: 28px;
+  width: 32px;
+  height: 2px;
   flex: 0 0 auto;
+
   background: var(--color-accent);
-  border-radius: 3px;
+  border-radius: 0;
 }
+
+/* Liste */
 
 .kommentar-liste {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
+
+/* Kommentar */
 
 .kommentar {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 12px;
 }
 
-/* Einrückung nach Thread-Level */
+/* Thread-Einrückung */
 
 .kommentar[data-level="0"] {
   margin-left: 0;
@@ -1983,12 +1990,12 @@ hr {
   margin-left: 126px;
 }
 
-/* Avatar-Kreis */
+/* Avatar */
 
 .kommentar-avatar {
-  width: 40px;
-  height: 40px;
-  flex: 0 0 40px;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
 
   display: flex;
   align-items: center;
@@ -1999,12 +2006,10 @@ hr {
   background: var(--color-accent);
   color: #fff;
 
-  font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
   font-weight: 600;
 }
-
-/* Redaktion bekommt einen eigenen, leicht anderen Kreis */
 
 .kommentar-redaktion .kommentar-avatar {
   background: var(--color-accent-warm);
@@ -2022,13 +2027,16 @@ hr {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 7px;
-  margin: 2px 0 8px;
+
+  margin: 0 0 10px;
 }
 
 .kommentar-autor {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
+
+  color: var(--color-text);
 }
 
 .kommentar-username {
@@ -2036,38 +2044,18 @@ hr {
   font-size: 0.82rem;
 }
 
-/* Sprechblase */
+/* Kommentartext */
 
 .kommentar-text {
-  position: relative;
 
-  padding: 15px 18px;
+  padding: 0 0 0 18px;
 
-  border: 1px solid var(--color-border);
-  border-radius: 5px;
+  border-left: 2px solid var(--color-accent);
 
-  background: var(--color-surface);
+  background: transparent;
 
   font-size: 0.95rem;
-  line-height: 1.65;
-}
-
-.kommentar-text::before {
-  content: "";
-  position: absolute;
-
-  top: 13px;
-  left: -7px;
-
-  width: 12px;
-  height: 12px;
-
-  background: var(--color-surface);
-
-  border-left: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-
-  transform: rotate(45deg);
+  line-height: 1.7;
 }
 
 .kommentar-text p:first-child {
@@ -2078,16 +2066,21 @@ hr {
   margin-bottom: 0;
 }
 
+/* Link unter dem Ratgeber */
+
 .kommentar-link-wrap {
   width: 100%;
   max-width: 750px;
+
   margin: -12px auto 24px auto;
+
   text-align: left;
 }
 
 /* Mobile */
 
 @media (max-width: 600px) {
+
   .ratgeber-kommentare {
     padding: 52px 0 64px;
   }
@@ -2113,14 +2106,16 @@ hr {
   }
 
   .kommentar-avatar {
-    width: 34px;
-    height: 34px;
-    flex-basis: 34px;
-    font-size: 0.8rem;
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+
+    font-size: 0.72rem;
   }
 
   .kommentar-text {
-    padding: 13px 15px;
+    padding-left: 14px;
+
     font-size: 0.92rem;
   }
 }
