@@ -377,7 +377,7 @@ function styleAutorErwaehnung(bloecke) {
           alt="Porträt von Dr. Maximilian Methodius"
         >
         <div>
-          <p class="autor-vorstellung-name">${nameOhneTags}</p>
+          <p class="autor-name">${nameOhneTags}</p>
           <p class="autor-tagline">
             Experte in allen Gebieten, Spezialist für ungewöhnliche
             Lösungen und anerkannter Fachmann für die großen und kleinen
