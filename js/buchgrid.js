@@ -12,7 +12,6 @@ function baueBuchKachel(buch) {
   return `
     <a class="book-card" href="buch.html?titel=${pfad}">
       <img src="pics/ratgeber-front/${pfad}.png" alt="Cover: ${buch.titel}">
-      <span class="book-title">${buch.titel}</span>
     </a>
   `;
 }
