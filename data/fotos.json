@@ -6,10 +6,28 @@
         "beschreibung": "Die Institutsmitglieder besuchten gemeinsam eine Aufführung im Nationaltheater. Die Veranstaltung diente der fachlichen Diskussion über die Bedeutung dramatischer Zuspitzungen in wissenschaftlichen Vorträgen."
     },
     {
+        "datum": "2027-06-12",
+        "titel": "Hohe Auszeichnung für Dr. Maximilian Methodius",
+        "bild": "pics/news/methodius-orden.png",
+        "beschreibung": "Dr. Maximilian Methodius wurde für seine herausragenden Verdienste um Wissenschaft, Lebensführung und die konsequente Überwindung unnötiger Unsicherheit mit dem Orden für außergewöhnliche Verdienste um die ganzheitliche Problemlösung ausgezeichnet. Die feierliche Verleihung würdigte insbesondere seine Fähigkeit, auch bei unklarer Datenlage zu überzeugenden Ergebnissen zu gelangen."
+    },
+    {
         "datum": "2027-06-05",
         "titel": "Teamevent in den Bergen",
         "bild": "pics/news/hiking.png",
         "beschreibung": "Im Rahmen einer mehrstündigen Wanderung wurden verschiedene Methoden zur Erhebung empirischer Eindrücke unter erschwerten Bedingungen untersucht."
+    },
+    {
+        "datum": "2027-05-24",
+        "titel": "Verleihung der Carl von Frisch-Medaille an Dr. Konrad P. Huber",
+        "bild": "pics/news/huber-carl-von-frisch-medaille.png",
+        "beschreibung": "Dr. Konrad P. Huber wurde für seine hervorragenden Beiträge zur empirischen Forschung und wissenschaftlichen Redlichkeit mit der Carl von Frisch-Medaille ausgezeichnet. Gewürdigt wurde insbesondere sein konsequenter Einsatz für eine sorgfältige Betrachtung von Daten und statistischen Zusammenhängen – auch dann, wenn diese nicht die gewünschte Interpretation stützen."
+    },
+    {
+        "datum": "2027-04-26",
+        "titel": "Verleihung der Sigismund-Freud-Medaille an Prof. Dr. Hildegard Wankelmuth",
+        "bild": "pics/news/wankelmuth-sigismund-freud-medaille.png",
+        "beschreibung": "Prof. Dr. Hildegard Wankelmuth wurde für ihre herausragenden Beiträge zur kritischen Plausibilitätsforschung mit der Sigismund-Freud-Medaille ausgezeichnet. Gewürdigt wurden insbesondere ihre Forschungen zur kontrollierten Überinterpretation alltäglicher Beobachtungen und ihre Fähigkeit, aus auffälligem Verhalten Erklärungen abzuleiten, die deutlich plausibler klingen, als die Daten eigentlich hergeben."
     },
     {
         "datum": "2027-01-21",
