@@ -606,48 +606,25 @@ hr {
   margin: 0 auto 24px auto;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 18px;
 }
 
 .blaettern-link,
-.teilen-button {
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-}
-
-.blaettern-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-accent);
-  padding-bottom: 2px;
-  transition: color 0.15s ease;
-}
-
-.blaettern-link:hover {
-  color: var(--color-accent-warm);
-  text-decoration: underline;
-}
-
-.teilen-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: none;
-  border: none;
-  padding: 0 0 2px 0;
-  color: var(--color-accent);
+.teilen-button,
+.kommentar-link {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: color 0.15s ease;
+  font-size: .82rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-accent);
+  transition: color .15s ease;
 }
 
-.teilen-button:hover {
+.blaettern-link:hover,
+.teilen-button:hover,
+.kommentar-link:hover {
   color: var(--color-accent-warm);
   text-decoration: underline;
 }
@@ -2092,16 +2069,6 @@ hr {
   max-width: 750px;
   margin: -12px auto 24px auto;
   text-align: left;
-}
-
-.kommentar-link {
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-accent);
-}
-
-.kommentar-link:hover {
-  text-decoration: underline;
 }
 
 /* Mobile */
