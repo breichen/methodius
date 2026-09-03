@@ -113,12 +113,28 @@ const newsListe = [
   },
 
   {
+    datei: "huber-carl-von-frisch-medaille.md",
+    titel: "Verleihung der Carl von Frisch-Medaille an Dr. Konrad P. Huber",
+    datum: "2027-05-24",
+    bild: "pics/news/huber-carl-von-frisch-medaille.png",
+    kategorie: NewsKategorie.INSTITUTSLEBEN,
+  },
+
+  {
     datei: "neues-paper-die-rolle-unbequemer-einwaende.md",
     titel: "Neues Paper veröffentlicht",
     datum: "2027-05-02",
     link: "veroeffentlichungen.html",
     linkText: "Zu den Veröffentlichungen",
     kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
+  },
+
+  {
+    datei: "wankelmuth-sigismund-freud-medaille.md",
+    titel: "Verleihung der Sigismund-Freud-Medaille an Prof. Dr. Hildegard Wankelmuth",
+    datum: "2027-04-26",
+    bild: "pics/news/wankelmuth-sigismund-freud-medaille.png",
+    kategorie: NewsKategorie.INSTITUTSLEBEN,
   },
 
   {
