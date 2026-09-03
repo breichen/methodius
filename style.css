@@ -791,55 +791,43 @@ hr {
 
 /* ============================================
    BONUS-QUIZ
-   Button auf der Buch-Seite + Overlay mit den Quiz-Fragen. Da es sich
-   um Satire handelt, gilt jede Antwort als richtig - es gibt also
-   keine Fehlermeldung, nur den vorgegebenen Auflösungstext am Ende.
+   Editorial-Version
    ============================================ */
+
 .quiz-start-wrap {
-  margin: 32px 0;
+  margin: 40px 0;
 }
 
 .quiz-start-button {
   display: inline-block;
-
-  padding: 12px 24px;
-
+  padding: 10px 0;
   background: transparent;
-
+  border: none;
   color: var(--color-accent);
-
-  border: 2px solid var(--color-accent);
-  border-radius: 0;
-
   font-family: var(--font-body);
-  font-size: 0.95rem;
   font-weight: 600;
-
-  letter-spacing: 0.04em;
+  font-size: .82rem;
+  letter-spacing: .03em;
   text-transform: uppercase;
-
   cursor: pointer;
-
-  transition:
-    background-color 0.15s ease,
-    color 0.15s ease;
+  text-decoration: none;
+  transition: color .15s ease;
 }
 
 .quiz-start-button:hover {
-  background: var(--color-accent);
-  color: white;
+  color: var(--color-accent-warm);
+  text-decoration: underline;
 }
 
 .quiz-overlay {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(27, 35, 64, 0.85);
-  /* --color-accent-warm, halbtransparent */
+  background: rgba(27, 35, 64, 0.92);
   z-index: 1200;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 32px;
 }
 
 .quiz-overlay.is-open {
@@ -850,8 +838,8 @@ hr {
   position: absolute;
   top: 24px;
   right: 24px;
-  background: transparent;
   border: none;
+  background: transparent;
   color: #fff;
   font-size: 2rem;
   line-height: 1;
@@ -865,35 +853,23 @@ hr {
 
 .quiz-panel {
   background: var(--color-bg);
-  border-radius: 12px;
-  padding: 40px;
-  max-width: 560px;
   width: 100%;
+  max-width: 640px;
   max-height: 85vh;
   overflow-y: auto;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  padding: 48px;
+  border: 1px solid rgba(27,35,64,.12);
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.28);
 }
 
 .quiz-panel:has(.quiz-score) {
-  max-width: 480px;
-  text-align: center;
+  max-width: 560px;
 }
 
-/* Falls die Quiz-Beschreibung (aus dem Markdown) doch mal ein Zitat,
-   eine Liste oder eine Trennlinie enthält: im Quiz gilt bewusst NICHT
-   die allgemeine Ratgeber-Optik (roter Rahmen/Punkte), sondern ein
-   schlichter Look, der sich ins kompakte Overlay einfügt. */
-.quiz-panel blockquote {
-  background: none;
-  border-left: none;
-  padding: 0;
-  margin: 0 0 16px 0;
-  font-family: var(--font-body);
-  font-size: 1rem;
-}
-
+.quiz-panel blockquote,
 .quiz-panel blockquote::before {
-  content: none;
+  all: unset;
 }
 
 .quiz-panel ul {
@@ -901,57 +877,55 @@ hr {
   list-style: disc;
 }
 
-.quiz-panel li {
-  padding-left: 0;
-}
-
 .quiz-panel li::before {
   content: none;
 }
 
 .quiz-panel hr {
-  margin: 24px 0;
+  border: none;
+  border-top: 1px solid rgba(27,35,64,.15);
+  margin: 28px 0;
 }
 
 .quiz-titel {
-  color: var(--color-accent);
-  margin-bottom: 16px;
+  margin: 0 0 28px;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
 }
 
 .quiz-frage {
-  border: none;
+  margin: 0 0 36px;
   padding: 0;
-  margin: 0 0 28px 0;
+  border: none;
 }
 
 .quiz-frage legend {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--color-text);
-  margin: 0 0 12px 0;
+  margin-bottom: 16px;
   padding: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
 }
 
 .quiz-option {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 0;
+  padding: 6px 0;
   cursor: pointer;
-  color: var(--color-muted);
+  color: var(--color-text);
 }
 
 .quiz-option input {
   appearance: none;
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--color-accent);
-  border-radius: 4px;
-  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
   margin: 0;
-  cursor: pointer;
+  border: 2px solid var(--color-accent);
+  border-radius: 0;
   position: relative;
 }
 
@@ -960,60 +934,57 @@ hr {
 }
 
 .quiz-option input:checked::after {
-  content: "✓";
+  content: "";
   position: absolute;
-  top: -3px;
-  left: 2px;
-  color: #fff;
-  font-size: 0.85rem;
+  inset: 3px;
+  background: #fff;
 }
 
-.quiz-option input:checked+span {
-  color: var(--color-text);
+.quiz-option input:checked + span {
   font-weight: 500;
 }
 
 .quiz-auswerten-button {
-  display: block;
-  width: 100%;
-  background: var(--color-accent);
-  color: #fff;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 0;
+  background: transparent;
   border: none;
-  padding: 14px 24px;
-  border-radius: 8px;
+  color: var(--color-accent);
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: .82rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
   cursor: pointer;
-  margin-top: 8px;
-  transition: transform 0.15s ease;
 }
 
 .quiz-auswerten-button:hover {
-  transform: translateY(-2px);
+  color: var(--color-accent-warm);
+  text-decoration: underline;
 }
 
 .quiz-score {
   display: inline-block;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--color-accent);
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--color-accent);
-  background: var(--color-bg-alt);
-  border: 2px solid var(--color-accent);
-  border-radius: 999px;
-  padding: 14px 32px;
-  margin: 0 0 28px 0;
+  background: transparent;
 }
 
 .quiz-ergebnis-abzeichen {
   display: flex;
   justify-content: center;
-  margin: 0 0 12px;
+  margin-bottom: 18px;
 }
 
 .quiz-ergebnis-text {
   text-align: center;
+  line-height: 1.7;
 }
 
 .quiz-ergebnis-text p:last-child {
@@ -1021,23 +992,22 @@ hr {
 }
 
 .quiz-zurueck-button {
-  display: block;
-  margin: 24px auto 0;
+  display: inline-block;
+  margin-top: 28px;
   background: transparent;
+  border: none;
   color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  padding: 10px 28px;
-  border-radius: 8px;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: .82rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .quiz-zurueck-button:hover {
-  background: var(--color-accent);
-  color: #fff;
+  color: var(--color-accent-warm);
+  text-decoration: underline;
 }
 
 /* ============================================
