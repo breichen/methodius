@@ -80,7 +80,7 @@ if (kategorie) {
 
     if (empfehlungenText) {
       empfehlungenText.textContent =
-        `Drei zufällig ausgewählte Ratgeber aus der Kategorie „${kategorie}“.`;
+        `${zahlwort(ANZAHL_ANZEIGEN)} zufällig ausgewählte Ratgeber aus der Kategorie „${kategorie}“.`;
     }
 
     const alleTitel =
@@ -132,7 +132,7 @@ if (gefilterteRatgeberTmp.length === 0) {
     .getElementById("alle-ratgeber-sektion")
     ?.remove();
 }
-else if (gefilterteRatgeberTmp.length <= 3) {
+else if (gefilterteRatgeberTmp.length <= ANZAHL_ANZEIGEN) {
 
   const neuesteTitel =
     document.getElementById("neueste-titel");

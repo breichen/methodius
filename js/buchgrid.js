@@ -27,8 +27,6 @@ function mischen(array) {
   return kopie;
 }
 
-const ANZAHL_ANZEIGEN = 3;
-
 const gefilterteRatgeber = holeGefilterteRatgeber();
 
 // "Neueste Ratgeber": die letzten N Einträge der Liste, neuestes zuerst
