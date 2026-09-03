@@ -2572,7 +2572,8 @@ hr {
   max-width: 100%;
   height: auto;
 
-  border-radius: 12px;
+  border-radius: 0;
+  border: 1px solid rgba(27, 35, 64, 0.12);
 
   flex-shrink: 0;
 }
@@ -2596,8 +2597,12 @@ hr {
 .mitarbeiter-rolle {
   margin: 0 0 1rem 0;
 
-  font-size: 1.15rem;
+  font-family: var(--font-body);
+  font-size: .82rem;
   font-weight: 600;
+
+  letter-spacing: .03em;
+  text-transform: uppercase;
 
   color: var(--color-accent);
 }
@@ -2609,34 +2614,56 @@ hr {
 }
 
 .kontakt-box {
+  background: var(--color-bg-alt);
+
+  border-left: 3px solid var(--color-accent);
+
+  padding: 1.5rem;
+}
+
+.section-alt .kontakt-box {
   background: var(--color-bg);
-  border-radius: 12px;
-  padding: 1.25rem 1.5rem;
 }
 
 .kontakt-box h3 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin: 0 0 .75rem;
+
+  font-size: 1rem;
 }
 
 .kontakt-box p {
   margin: 0;
-  font-size: 1.2rem;
+
+  font-size: 1.1rem;
   font-weight: 600;
+
+  color: var(--color-text);
 }
 
 .kontakt-box ul {
   margin: 0;
-  padding-left: 1.25rem;
+  padding: 0;
+
+  list-style: none;
+}
+
+.kontakt-box li + li {
+  margin-top: .75rem;
 }
 
 .sprechzeit {
-  padding: 0.5rem 0;
-  border-top: 1px solid var(--color-bg-alt);
+  padding: .75rem 0;
+
+  border-top: 1px solid rgba(27, 35, 64, 0.08);
 }
 
 .sprechzeit:first-child {
   border-top: none;
+  padding-top: 0;
+}
+
+.sprechzeit:last-child {
+  padding-bottom: 0;
 }
 
 .institut-kontakt-mail {
