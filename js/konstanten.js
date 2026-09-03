@@ -1,4 +1,4 @@
-const ANZAHL_ANZEIGEN = 3;
+const ANZAHL_ANZEIGEN = 4;
 
 function zahlwort(zahl) {
 
