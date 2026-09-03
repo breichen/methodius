@@ -787,17 +787,25 @@ hr {
 
 .autor-tagline {
   margin: 6px 0 24px 116px;
-  font-size: .78rem;
-  line-height: 1.5;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
   font-style: normal;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--color-accent);
 }
 
 .autor-box .autor-tagline {
   margin: 6px 0 0 0;
   max-width: 42ch;
+}
+
+.autor-funktion {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-accent);
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
 }
 
 #autor .autor-signatur {
