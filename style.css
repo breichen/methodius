@@ -687,17 +687,13 @@ hr {
   margin-bottom: 0;
 
 }
-
 .autor-box {
-
   display: flex;
-
   align-items: center;
-
   gap: 18px;
-
   margin: 48px 0 32px;
-
+  padding-left: 18px;
+  border-left: 3px solid var(--color-accent);
 }
 
 .autor-foto {
