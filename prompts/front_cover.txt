@@ -12,6 +12,33 @@ Extract automatically:
 Create a print-ready front cover.
 
 --------------------------------------------------
+READER ADDRESSING RULE
+--------------------------------------------------
+
+The guide series consistently addresses readers using:
+
+DU
+
+Never use:
+
+Sie
+Ihnen
+Ihr
+Ihre
+
+When generating titles, subtitles, taglines or any reader-facing text,
+use the informal German second person singular.
+
+Examples:
+
+Wie du bessere Entscheidungen triffst.
+Nicht:
+Wie Sie bessere Entscheidungen treffen.
+
+This rule applies to the entire guide series and should be treated as a
+permanent editorial style guideline.
+
+--------------------------------------------------
 SERIES IDENTITY
 --------------------------------------------------
 
