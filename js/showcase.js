@@ -7,7 +7,6 @@
 
 (function () {
   const cover = document.getElementById("showcase-cover");
-  const titel = document.getElementById("showcase-title");
   const link = document.getElementById("showcase-link");
   const prevBtn = document.getElementById("showcase-prev");
   const nextBtn = document.getElementById("showcase-next");
@@ -38,7 +37,6 @@
 
     cover.src = `pics/ratgeber-3d/${pfad}.png`;
     cover.alt = `Cover: ${buch.titel}`;
-    titel.textContent = buch.titel;
     link.href = `buch.html?titel=${pfad}`;
 
     prevBtn.disabled = index <= 0;

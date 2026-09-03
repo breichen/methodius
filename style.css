@@ -1223,24 +1223,6 @@ hr {
 
 }
 
-.showcase-title {
-
-  margin-top: 18px;
-
-  margin-bottom: 0;
-
-  font-family: var(--font-display);
-
-  font-weight: 600;
-
-  font-size: 1.2rem;
-
-  line-height: 1.25;
-
-  color: var(--color-text);
-
-}
-
 @media (max-width: 480px) {
 
   .showcase-box {
