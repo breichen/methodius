@@ -1417,19 +1417,25 @@ hr {
 }
 
 .flipbook-page-number {
-  background: transparent;
+  position: absolute;
+  bottom: 18px;
+  right: 20px;
+
   color: var(--color-text-muted);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 0.78rem;
+  font-style: italic;
+
+  background: transparent;
   border: none;
   padding: 0;
-  font-size: .72rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  font-family: var(--font-body);
 }
 
 .flipbook-page-number.left {
-  right: auto;
   left: 20px;
+  right: auto;
 }
 
 /* ============================================
