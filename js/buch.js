@@ -309,21 +309,50 @@ function styleAutorErwaehnung(bloecke) {
   const ersterKapitelStart = kapitelStarts[0];
   const letzterKapitelStart = kapitelStarts[kapitelStarts.length - 1];
 
-  const vorstellungIndex = namensIndizes.find(i => i > ersterKapitelStart);
+  const vorstellungIndex = namensIndizes.find(
+    i => i > ersterKapitelStart
+  );
+
   const signaturIndex = [...namensIndizes]
     .reverse()
     .find(i => i > letzterKapitelStart);
 
   const ergebnis = [...bloecke];
 
-  // --- Unterschrift im letzten Kapitel (Index bleibt gleich, also zuerst) ---
+  /* ==========================================
+     ABSCHLUSS IM LETZTEN KAPITEL
+     ========================================== */
+
   if (signaturIndex !== undefined) {
-    ergebnis[signaturIndex] =
-      `<p class="autor-signatur">${AUTOR_SIGNATUR_TEXT}</p>` +
-      ergebnis[signaturIndex];
+    const letzterBlockIndex = ergebnis.length - 1;
+
+    const autorBeschreibung =
+      ergebnis[letzterBlockIndex]
+        .replace(/^<p>/, "")
+        .replace(/<\/p>$/, "")
+        .replace(/^<em>/, "")
+        .replace(/<\/em>$/, "");
+
+    const autorName = ergebnis[signaturIndex]
+      .replace(/^<p>|<\/p>$/g, "");
+
+    ergebnis[signaturIndex] = `
+      <div class="autor-abschluss">
+        <p class="autor-signatur">${AUTOR_SIGNATUR_TEXT}</p>
+        <p class="autor-name">${autorName}</p>
+        <p class="autor-abschluss-text">${autorBeschreibung}</p>
+      </div>
+    `;
+
+    if (letzterBlockIndex !== signaturIndex) {
+      ergebnis.splice(letzterBlockIndex, 1);
+    }
   }
 
-  // --- Vorstellung im ersten Kapitel ---
+  /* ==========================================
+     VORSTELLUNG IM ERSTEN KAPITEL
+     ========================================== */
+
   if (
     vorstellungIndex !== undefined &&
     vorstellungIndex !== signaturIndex
@@ -340,13 +369,23 @@ function styleAutorErwaehnung(bloecke) {
     const nameOhneTags = ergebnis[vorstellungIndex]
       .replace(/^<p>|<\/p>$/g, "");
 
-    const nameBox = `<div class="autor-box">
-      <img class="autor-foto" src="pics/team/autor-portrait.png" alt="Porträt von Dr. Maximilian Methodius">
-      <div>
-        <p class="autor-name">${nameOhneTags}</p>
-        <p class="autor-tagline">Experte in allen Gebieten, Spezialist für ungewöhnliche Lösungen und anerkannter Fachmann für die großen und kleinen Probleme des modernen Lebens.</p>
+    const nameBox = `
+      <div class="autor-box">
+        <img
+          class="autor-foto"
+          src="pics/team/autor-portrait.png"
+          alt="Porträt von Dr. Maximilian Methodius"
+        >
+        <div>
+          <p class="autor-name">${nameOhneTags}</p>
+          <p class="autor-tagline">
+            Experte in allen Gebieten, Spezialist für ungewöhnliche
+            Lösungen und anerkannter Fachmann für die großen und kleinen
+            Probleme des modernen Lebens.
+          </p>
+        </div>
       </div>
-    </div>`;
+    `;
 
     const neueBloecke = [
       ergebnis[ersterKapitelStart],
