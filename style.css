@@ -784,13 +784,15 @@ hr {
   margin: 0;
 
 }
+
 .autor-tagline {
   margin: 6px 0 24px 116px;
-  font-size: .84rem;
+  font-size: .78rem;
+  line-height: 1.5;
   font-style: normal;
-  letter-spacing: .05em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  letter-spacing: .08em;
+  color: var(--color-accent);
 }
 
 .autor-box .autor-tagline {
