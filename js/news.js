@@ -103,6 +103,14 @@ const newsListe = [
   },
 
   {
+    datei: "methodius-orden.md",
+    titel: "Hohe Auszeichnung für Dr. Maximilian Methodius",
+    datum: "2027-06-12",
+    bild: "pics/news/methodius-orden.png",
+    kategorie: NewsKategorie.INSTITUTSLEBEN,
+  },
+
+  {
     datei: "teamevent-hiking.md",
     titel: "Teamevent in den Bergen",
     datum: "2027-06-05",
