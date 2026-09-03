@@ -672,6 +672,43 @@ hr {
   margin: 56px 0 2px 0;
 }
 
+.autor-abschluss-name {
+  display: block;
+
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: var(--color-text);
+}
+
+.autor-abschluss-tagline {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: .88rem;
+
+  line-height: 1.45;
+
+  color: var(--color-text-muted);
+
+  font-style: italic;
+
+  max-width: 42ch;
+}
+
+.autor-abschluss {
+  margin-top: 40px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(27,35,64,.12);
+}
+
 /* ============================================
    AUTOR-VORSTELLUNG
    ============================================ */
