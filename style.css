@@ -784,25 +784,18 @@ hr {
   margin: 0;
 
 }
-
 .autor-tagline {
-
-  color: var(--color-text-muted);
-
-  font-style: italic;
-
-  font-size: 0.95rem;
-
   margin: 6px 0 24px 116px;
-
+  font-size: .84rem;
+  font-style: normal;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
 }
 
 .autor-box .autor-tagline {
-
-  margin: 4px 0 0 0;
-
-  max-width: 40ch;
-
+  margin: 6px 0 0 0;
+  max-width: 42ch;
 }
 
 #autor .autor-signatur {
