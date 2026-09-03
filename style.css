@@ -652,9 +652,13 @@ hr {
   font-size: 1.9rem;
   font-weight: 400;
   color: var(--color-accent);
+
   letter-spacing: -0.03em;
+
   transform: rotate(-3deg) skewX(-6deg);
-  margin: 0 0 2px 0;
+
+  margin: 32px 0 4px;
+
   display: block;
 }
 
