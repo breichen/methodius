@@ -609,6 +609,7 @@ hr {
   gap: 18px;
 }
 
+/* Gemeinsame Typografie */
 .blaettern-link,
 .teilen-button,
 .kommentar-link {
@@ -620,6 +621,19 @@ hr {
   text-decoration: none;
   color: var(--color-accent);
   transition: color .15s ease;
+}
+
+/* Nur für den echten Button */
+.teilen-button {
+  background: none;
+  border: none;
+  padding: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
 }
 
 .blaettern-link:hover,
