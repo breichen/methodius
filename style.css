@@ -1279,6 +1279,9 @@ hr {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   border: 1px solid #D6CDBB;
+  background: #F5F0E6;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.18);
 
   /* Festes Seitenverhältnis: 373x527 pro Seite, hier also 746x527 für
      die Doppelseite (2 x 373 Breite). aspect-ratio erzwingt das exakte
