@@ -800,23 +800,25 @@ hr {
 
 .quiz-start-button {
   display: inline-block;
-  padding: 10px 0;
+  padding: 12px 24px;
   background: transparent;
-  border: none;
   color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  border-radius: 0;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: .82rem;
   letter-spacing: .03em;
   text-transform: uppercase;
   cursor: pointer;
-  text-decoration: none;
-  transition: color .15s ease;
+  transition:
+    background-color .15s ease,
+    color .15s ease;
 }
 
 .quiz-start-button:hover {
-  color: var(--color-accent-warm);
-  text-decoration: underline;
+  background: var(--color-accent);
+  color: white;
 }
 
 .quiz-overlay {
@@ -946,22 +948,25 @@ hr {
 
 .quiz-auswerten-button {
   display: inline-block;
-  margin-top: 12px;
-  padding: 10px 0;
+  padding: 12px 24px;
   background: transparent;
-  border: none;
   color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  border-radius: 0;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: .82rem;
   letter-spacing: .03em;
   text-transform: uppercase;
   cursor: pointer;
+  transition:
+    background-color .15s ease,
+    color .15s ease;
 }
 
 .quiz-auswerten-button:hover {
-  color: var(--color-accent-warm);
-  text-decoration: underline;
+  background: var(--color-accent);
+  color: white;
 }
 
 .quiz-score {
@@ -993,21 +998,25 @@ hr {
 
 .quiz-zurueck-button {
   display: inline-block;
-  margin-top: 28px;
+  padding: 12px 24px;
   background: transparent;
-  border: none;
   color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  border-radius: 0;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: .82rem;
   letter-spacing: .03em;
   text-transform: uppercase;
   cursor: pointer;
+  transition:
+    background-color .15s ease,
+    color .15s ease;
 }
 
 .quiz-zurueck-button:hover {
-  color: var(--color-accent-warm);
-  text-decoration: underline;
+  background: var(--color-accent);
+  color: white;
 }
 
 /* ============================================
