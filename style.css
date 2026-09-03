@@ -2576,10 +2576,12 @@ hr {
 }
 
 .institutsfoto-datum {
-  margin-bottom: 0.4rem;
-
-  font-size: 0.9rem;
-  color: var(--color-text-light);
+  margin-bottom: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
 .institutsfoto h3 {
@@ -2622,7 +2624,7 @@ hr {
   max-width: min(95vw, 1400px);
   max-height: 85vh;
 
-  border-radius: 12px;
+  border-radius: 0;
 }
 
 .foto-lightbox-beschriftung {
@@ -2634,15 +2636,14 @@ hr {
 }
 
 .foto-lightbox-schliessen {
-
   position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-
+  top: 1.5rem;
+  right: 2rem;
   border: none;
   background: transparent;
-
   color: white;
-  font-size: 3rem;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  line-height: 1;
   cursor: pointer;
 }
