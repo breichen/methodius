@@ -247,6 +247,7 @@ const newsListe = [
     datei: "erkenntnis-hofer-limonade-preise.md",
     titel: "Bemerkenswerte Preisgestaltung im Discounter",
     datum: "2026-08-06",
+    bild: "pics/news/erkenntnis-hofer-limonade-preise.png",
     kategorie: NewsKategorie.KURIOSItAETEN,
   },
 
