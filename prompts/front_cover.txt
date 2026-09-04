@@ -12,10 +12,10 @@ Extract automatically:
 Create a print-ready front cover.
 
 --------------------------------------------------
-READER ADDRESSING RULE
+READER ADDRESSING
 --------------------------------------------------
 
-The guide series consistently addresses readers using:
+All reader-facing text must use:
 
 DU
 
@@ -23,36 +23,22 @@ Never use:
 
 Sie
 Ihnen
-Ihr
 Ihre
-
-When generating titles, subtitles, taglines or any reader-facing text,
-use the informal German second person singular.
-
-Examples:
-
-Wie du bessere Entscheidungen triffst.
-Nicht:
-Wie Sie bessere Entscheidungen treffen.
-
-This rule applies to the entire guide series and should be treated as a
-permanent editorial style guideline.
+Ihr
 
 --------------------------------------------------
 SERIES IDENTITY
 --------------------------------------------------
 
-The cover must look like part of an existing premium satirical non-fiction guide series.
-
-Visual inspiration:
+Visual references:
 
 - The Economist
-- Harvard Business Review illustrations
+- Harvard Business Review
 - Premium German non-fiction publishing
 - Intelligent editorial magazine covers
 - Modern literary bestsellers
 
-The overall impression should be:
+The cover must feel:
 
 intelligent
 satirical
@@ -61,12 +47,32 @@ premium
 timeless
 confident
 
-Never look cartoonish.
-Never look childish.
-Never look self-published.
-Never look like AI-generated fantasy art.
+Never:
 
-The cover should feel like a bestselling satirical guide from an established publisher.
+cartoonish
+childish
+self-published
+AI fantasy art
+comic-book style
+
+--------------------------------------------------
+CANVAS
+--------------------------------------------------
+
+True DIN proportions
+
+Aspect ratio:
+
+1 : 1.4142
+
+Portrait orientation
+
+Flat front cover only
+
+No mockup
+No spine
+No back cover
+No perspective
 
 --------------------------------------------------
 COLOR SYSTEM
@@ -88,54 +94,107 @@ Accent:
 #B5292C
 
 --------------------------------------------------
+SERIES ORNAMENT SYSTEM
+--------------------------------------------------
+
+The cover contains two permanent ornaments.
+
+TOP PUBLISHER ORNAMENT
+
+Position:
+4–5% below top edge
+
+Structure:
+
+two red horizontal lines on left
+two red horizontal lines on right
+
+Visual reference:
+
+──────────────          LOGO          ──────────────
+──────────────                         ──────────────
+
+Requirements:
+
+- perfectly symmetrical
+- identical lengths
+- identical thickness
+- large centered logo gap
+- no logo
+- no placeholder
+- leave empty space only
+
+Line length:
+
+22–28% of cover width
+
+Gap width:
+
+12–15% of cover width
+
+Line thickness:
+
+2–3 px
+
+Color:
+
+#B5292C
+
+The top ornament must resemble a premium publisher mark.
+
+--------------------------------------------------
+
+BOTTOM AUTHOR ORNAMENT
+
+Position:
+
+directly below author name
+
+Structure:
+
+two red lines left
+small red diamond center
+two red lines right
+
+Visual reference:
+
+──────── ◇ ────────
+────────   ────────
+
+Requirements:
+
+- perfectly centered
+- perfectly symmetrical
+- identical line lengths
+- same line thickness as top ornament
+
+Diamond:
+
+solid red diamond
+
+Color:
+
+#B5292C
+
+The bottom ornament is smaller than the top ornament.
+
+--------------------------------------------------
 TITLE BLOCK
 --------------------------------------------------
 
-The title is the primary visual element.
+The title is the dominant visual element.
 
-The title must occupy approximately
-45–55% of the cover height.
+The title occupies:
 
-The illustration supports the title.
+45–55% of cover height.
 
-The title should remain readable at thumbnail size.
+Typography must dominate the cover.
 
-The title should feel oversized and iconic.
+The title should be readable at Amazon thumbnail size.
 
-Prefer:
+Use an oversized editorial serif.
 
-2–4 title lines.
-
-Avoid narrow line breaks.
-
-Create a strong compact title block.
-
-TITLE DOMINANCE RULE
-
-The title block is the single largest element on the cover.
-
-The title should visually occupy
-at least twice the area of the illustration.
-
-When viewed from a distance:
-
-1. Title
-2. Illustration
-3. Subtitle
-4. Author
-
-must be perceived in exactly that order.
-
-If there is a conflict between illustration size
-and title size, reduce the illustration.
-
---------------------------------------------------
-TYPOGRAPHY
---------------------------------------------------
-
-Use a very heavy high-contrast serif.
-
-Visual reference:
+Visual references:
 
 - Fraunces Black
 - Canela Black
@@ -143,438 +202,167 @@ Visual reference:
 
 Weight:
 
-ExtraBold to Black.
+Black
+ExtraBold
 
-The typography must feel expensive and editorial.
+Tight line spacing.
 
-Never use:
-
-- thin serif fonts
-- elegant fashion typography
-- light typography
-- delicate typography
-
-Use tight line spacing.
-
-Lines should visually lock together into a powerful typographic block.
-
-Typography should dominate the cover.
+Strong compact title block.
 
 --------------------------------------------------
-TITLE COLOR RULE
+TITLE COLOR SYSTEM
 --------------------------------------------------
 
-Use only:
+Line 1:
 
 #1B2340
+
+Abnehmen
+
+Line 2:
+
 #B5292C
 
-Color entire title lines.
+dank
+
+Line 3:
+
+#1B2340
+
+Muskelabbau
 
 Never highlight individual words.
 
-Preferred pattern:
-
-Line 1:
-#1B2340
-
-Line 2:
-#B5292C
-
-Line 3:
-#1B2340
-
-Line 4 (if needed):
-#1B2340
-
-This should become a recognizable series signature.
+Color entire title lines only.
 
 --------------------------------------------------
 SUBTITLE
 --------------------------------------------------
 
-Use a clean modern sans-serif inspired by Inter.
-
-Weight:
-
-Medium.
-
 Centered.
+
+Inter-style sans-serif.
+
+Medium weight.
 
 Color:
 
 #1B2340
 
-Readable but secondary.
-
-Do not compete with the title.
+Secondary to title.
 
 --------------------------------------------------
-AUTHOR
+ILLUSTRATION CONCEPT
 --------------------------------------------------
 
-Use the same serif family as the title.
+Create one memorable editorial satire scene.
 
-Weight:
+The scene should instantly communicate the central joke:
 
-Medium to SemiBold.
+A person proudly follows a ridiculous weight-loss strategy by reducing muscle mass instead of body fat.
 
-Centered.
+Preferred scene:
 
-Traditional publisher aesthetic.
+A confident protagonist stands beside a large gym scale.
 
-No excessive letter spacing.
+On one side:
 
-No minimalist styling.
+a visibly muscular version.
 
-The author should feel like a respected non-fiction imprint.
+On the other side:
 
-Color:
+a noticeably smaller and less muscular version.
 
-#1B2340
+Between them:
 
-TOP ORNAMENT (FIXED SERIES ELEMENT)
+a bold red arrow.
 
-At the very top of the cover place two horizontal red lines on the left and two horizontal red lines on the right.
+The protagonist appears pleased with the lower number on the scale.
 
-Color:
-#B5292C
+The absurdity should be immediately obvious.
 
-Each pair consists of:
+The image should communicate:
 
-two parallel lines
-identical length
-identical thickness
-perfectly aligned
-
-The left pair and right pair must be separated by a large centered empty space.
-
-Center gap:
-approximately 13–15% of cover width.
-
-This empty space is reserved for a future publisher logo and must remain completely empty.
-
-Visual reference:
-
-══════════ LOGO ══════════
-══════════ ══════════
-
-The lines should be elegant, restrained and longer than the lower ornament.
-
-Do NOT allow the lines to approach the center too closely.
-
-The top ornament should feel like a permanent publisher mark.
-
-BOTTOM ORNAMENT (FIXED SERIES ELEMENT)
-
-Directly above the author name place a centered decorative ornament consisting of:
-
-two horizontal red lines on the left
-one small red diamond in the center
-two horizontal red lines on the right
-
-Color:
-#B5292C
-
-Visual reference:
-
-────────── ◇ ──────────
-────────── ──────────
-
-Requirements:
-
-perfectly centered
-symmetrical
-identical line lengths
-diamond approximately 1.5–2% of cover width
-elegant editorial style
-very restrained
-premium publishing aesthetic
-
-The bottom ornament should be noticeably smaller than the top ornament.
-
-Never replace the diamond with another shape.
-
-Never use decorative flourishes.
-
-The ornament should feel like a timeless non-fiction publisher design element.
-
-HIERARCHY RULE
-Title
-Illustration
-Subtitle
-Bottom ornament
-Author
-
-The ornaments support the design and must never compete with the title.
-
-
---------------------------------------------------
-LAYOUT
---------------------------------------------------
-
-Top section:
-8–10%
-
-Title block:
-45–55%
-
-Subtitle:
-6–8%
-
-Illustration:
-25–35%
-
-Author:
-4–6%
-
-Typography must visually dominate.
-
---------------------------------------------------
-ILLUSTRATION COLORS
---------------------------------------------------
-
-The illustration is intentionally restrained.
-
-Allowed:
-
-- grayscale
-- charcoal
-- warm gray
-- cream paper tones
-- navy shadows
-
-Accent red (#B5292C) may be used sparingly.
-
-Maximum:
-
-5% of illustration area.
-
-Examples:
-
-- tie
-- notebook
-- folder
-- coffee mug
-- pocket square
-- single focal object
-
-Do NOT use:
-
-- bright blue
-- green
-- yellow
-- orange
-- purple
-
-The illustration should feel almost monochrome.
+"Technically lighter.
+Obviously not the point."
 
 --------------------------------------------------
 ILLUSTRATION STYLE
 --------------------------------------------------
 
-Create one memorable editorial scene.
+Economist-style editorial illustration.
 
-The scene should directly visualize the manuscript's central joke, method or promise.
+Harvard Business Review style.
 
-Avoid:
-
-- generic symbolism
-- abstract concepts
-- floating icons
-- concept-art metaphors
-
-Prefer:
-
-- workplace satire
-- social interaction
-- home office scene
-- everyday absurdity
-- visual irony
-- confident protagonist applying the guide's advice
-
-The viewer should understand the joke immediately.
-
-ILLUSTRATION BOUNDARY RULE
-
-The illustration must remain entirely
-within the lower third of the cover.
-
-The illustration may not visually intersect
-the title block.
-
-Maintain a clear separation between:
-
-title
-subtitle
-illustration
-
-The illustration should appear grounded
-on an invisible baseline near the bottom.
-
---------------------------------------------------
-CHARACTER
---------------------------------------------------
-
-If a person is shown:
-
-50% female
-50% male
-
-Only one protagonist.
-
-The protagonist should appear:
-
-confident
-composed
-slightly self-satisfied
-intellectually amused
-
-
-POSTER CONTRAST RULE
-
-The protagonist should be readable
-as a silhouette before facial details become visible.
-
-Large dark shape masses are preferred
-over fine rendering.
-
-If the image is blurred,
-the main figure should still be recognizable.
-
---------------------------------------------------
-ILLUSTRATION RENDERING
---------------------------------------------------
-
-ILLUSTRATION RENDERING
-
-The illustration should be built primarily from
-large graphic shadow shapes.
-
-Think:
+Large shadow shapes.
 
 70% shape
 20% silhouette
 10% detail
 
-NOT:
-
-70% linework
-20% detail
-10% shadow
-
-The illustration must remain immediately readable
-at Amazon thumbnail size.
-
-Visual references:
-
-- The Economist cover illustrations
-- Harvard Business Review artwork
-- Mid-century advertising illustration
-- Saul Bass poster composition
-- Vintage corporate editorial illustration
-
 Use:
 
-- large navy shadow masses
-- bold charcoal shapes
-- simplified facial features
-- simplified clothing folds
-- simplified environments
+- charcoal
+- warm gray
+- cream tones
+- navy shadows
+
+Maximum red accent:
+
+5% of illustration area.
 
 Avoid:
 
-- excessive hatching
-- pen-and-ink rendering
-- engraving aesthetics
-- newspaper illustration style
-- sketchbook aesthetics
-- intricate detail
-
-Shadows should define the image.
-
-Lines should only support the shapes.
-
-The illustration should feel sculpted from
-light and shadow.
-
-The result should resemble a premium editorial poster,
-not a drawing.
-
-CONTRAST RULE
-
-Use strong contrast.
-
-At least:
-
-60–70% of the illustration should consist of
-medium-to-dark values.
-
-Avoid pale illustrations.
-
-Avoid low-contrast scenes.
-
-The focal character should contain
-large navy shadow regions.
-
-The illustration must remain recognizable
-when reduced to 150px height.
-
-SERIES ILLUSTRATION RULE
-
-Every cover in the series should feel like it was
-illustrated by the same artist.
-
-Use:
-
-- identical shadow treatment
-- identical facial simplification
-- identical shape language
-- identical contrast level
-
-The illustration style should become
-a recognizable series signature.
-
-Avoid:
-
-- engraving style
-- newspaper illustration style
-- excessive line detail
-- sketchbook style
-- comic style
 - photorealism
+- comic style
+- sketch style
+- engraving style
+- excessive detail
 
-The illustration should feel sculpted through shape and shadow rather than linework.
-
---------------------------------------------------
-DECORATIVE ELEMENTS
---------------------------------------------------
-
-Use minimal red divider lines.
-
-Small red diamond ornaments permitted.
-
-Very restrained.
-
-Never decorative for the sake of decoration.
+The illustration should remain recognizable at thumbnail size.
 
 --------------------------------------------------
-SERIES RULE
+CHARACTER
 --------------------------------------------------
 
-Visual hierarchy should closely resemble:
+One protagonist only.
 
-"The Art of Looking Busy"
+Expression:
 
-Typography first.
-Illustration second.
+confident
+slightly self-satisfied
+intellectually amused
 
-The title should feel iconic from a distance.
+Silhouette readable before facial details.
 
-The illustration should support the joke,
-not dominate the page.
+--------------------------------------------------
+LAYOUT
+--------------------------------------------------
 
-Every cover in the series should feel instantly related.
+Top ornament:
+8%
+
+Title:
+50%
+
+Subtitle:
+7%
+
+Illustration:
+28%
+
+Author:
+5%
+
+Hierarchy:
+
+1. Title
+2. Illustration
+3. Subtitle
+4. Author
+5. Ornaments
+
+Typography must dominate.
 
 --------------------------------------------------
 OUTPUT
@@ -582,44 +370,18 @@ OUTPUT
 
 Single front cover.
 
-Flat 2D artwork.
-
-No mockup.
-
-No perspective.
-
-No spine.
-
-No back cover.
-
-No publisher name.
-
-No logo.
-
-Print-ready.
-
 Premium publishing quality.
 
 Looks like a bestselling satirical guide from an established publisher.
 
-CANVAS FORMAT
+Editorial poster aesthetic.
 
-True DIN A-series proportions.
+Typography first.
+Illustration second.
 
-Portrait orientation.
+No publisher logo.
+No publisher name.
+No barcode.
+No marketing stickers.
 
-Aspect ratio exactly:
-
-1 : 1.4142
-
-Equivalent to:
-
-DIN A5
-DIN A4
-DIN A6
-
-Do not use 2:3 proportions.
-
-Do not use standard poster proportions.
-
-Maintain true DIN proportions throughout the composition.
+Print-ready.
