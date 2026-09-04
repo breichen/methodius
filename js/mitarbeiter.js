@@ -16,6 +16,15 @@ const mitarbeiter = [
       "Donnerstag 14:00–15:00 Uhr"
     ],
 
+    aufgaben: [
+      "Leitung des Methodius-Instituts für Lebenswissenschaften.",
+      "Herausgeber sämtlicher institutseigener Ratgeber und Handlungsempfehlungen.",
+      "Abschließende Begutachtung und Diagnose eingesandter Fälle.",
+      "Entwicklung neuer Theorien, Methoden und plausibel klingender Erklärungsmodelle.",
+      "Leitung und Koordination institutsweiter Forschungsprojekte.",
+      "Entscheidung über wissenschaftliche Streitfragen durch begründete Selbstzustimmung."
+    ],
+
     lebenslauf: [
         "1968: Geburt in Oberunterbach.",
         "1987–1993: Studium der Allgemeinen Problemerkennung und Theoretischen Lösungsfindung.",
@@ -25,7 +34,7 @@ const mitarbeiter = [
         "2008–2025: Leiter des Zentrums für Empirische Plausibilität und Methodische Gewissheit.",
         "2018: Auszeichnung mit dem Goldenen Zirkelschluss der Gesellschaft für fortgeschrittene Argumentationskunst.",
         "2026: Gründung des Methodius-Instituts für Lebenswissenschaften.",
-        "Seit 2026: Direktor und wissenschaftlicher Leiter des Methodius-Instituts für Lebenswissenschaften."
+        "Seit 2026: Direktor und wissenschaftlicher Leiter des Methodius-Instituts für Lebenswissenschaften.",
     ]
   },
 
@@ -43,6 +52,15 @@ const mitarbeiter = [
     sprechstunden: [
       "Dienstag 09:00–10:00 Uhr",
       "Mittwoch 15:00–16:00 Uhr"
+    ],
+
+    aufgaben: [
+      "Leitung der Abteilung für angewandte Fehlberatung.",
+      "Erarbeitung individueller Behandlungsvorschläge für eingesandte Problemfälle.",
+      "Regelmäßige Überprüfung und Anpassung der eigenen Auffassungslage.",
+      "Grundlagenrecherche für Ratgeber aus den Bereichen Verhaltensdeutung und Lebensführung.",
+      "Entwicklung innovativer Interventionskonzepte mit unklarem Wirkmechanismus.",
+      "Forschung zur praktischen Anwendbarkeit spontaner Vermutungen.",
     ],
 
     lebenslauf: [
@@ -72,6 +90,15 @@ const mitarbeiter = [
       "Freitag 09:00–10:00 Uhr"
     ],
 
+    aufgaben: [
+      "Leitung der Abteilung für Statistik und empirische Plausibilität.",
+      "Wachsame statistische Analyse von Alltagssituationen aller Art.",
+      "Bereitstellung quantitativer Grundlagen für institutseigene Ratgeber.",
+      "Ermittlung signifikanter Zusammenhänge bei ausreichend kreativer Datenauswahl.",
+      "Prüfung eingereichter Fallberichte auf rechnerische Verwertbarkeit.",
+      "Forschung zu Wahrscheinlichkeiten, Plausibilitäten und deren flexibler Interpretation.",
+    ],
+
     lebenslauf: [
         "1981: Geburt in Zahlenberg.",
         "2000–2005: Studium der Statistik und empirischen Plausibilität.",
@@ -95,6 +122,15 @@ const mitarbeiter = [
 
     sprechstunden: [
       "Mittwoch 11:00–12:00 Uhr"
+    ],
+
+    aufgaben: [
+      "Mitwirkung als wissenschaftlicher Beirat des Instituts.",
+      "Verfassen regelmäßiger kritischer Stellungnahmen zu Institutsprojekten.",
+      "Identifikation methodischer Schwächen, logischer Brüche und unbelegter Behauptungen.",
+      "Unterstützung laufender Forschungsarbeiten durch konstruktive Einwände.",
+      "Dokumentation wissenschaftlicher Risiken und vorhersehbarer Fehlentwicklungen.",
+      "Erinnerung der Institutsleitung an etablierte Standards der Wissenschaft.",
     ],
 
     lebenslauf: [
@@ -122,6 +158,15 @@ const mitarbeiter = [
     sprechstunden: [
       "Montag–Donnerstag 08:00–16:00 Uhr",
       "Freitag 08:00–12:00 Uhr"
+    ],
+
+    aufgaben: [
+      "Zentrale Fallkoordination des Instituts.",
+      "Führung und Archivierung sämtlicher Fallakten.",
+      "Organisation des administrativen Tagesgeschäfts.",
+      "Koordination von Terminen, Fristen und versehentlich zugesagten Projekten.",
+      "Vermittlung zwischen Forschung, Verwaltung und Realität.",
+      "Durchführung organisatorischer Schadensbegrenzungsmaßnahmen bei vorhersehbaren Ereignissen.",
     ],
 
     lebenslauf: [
