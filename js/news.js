@@ -193,6 +193,14 @@ const newsListe = [
   },
 
   {
+    datei: "erkenntnis-windows-suche.md",
+    titel: "Auffälligkeiten bei der lokalen Programmsuche",
+    datum: "2026-10-12",
+    bild: "pics/news/erkenntnis-windows-suche.png",
+    kategorie: NewsKategorie.KURIOSITAETEN,
+  },
+
+  {
     datei: "jahrestagung-2026-poster.md",
     titel: "Ankündigung der Jahrestagung 2026",
     datum: "2026-09-29",
