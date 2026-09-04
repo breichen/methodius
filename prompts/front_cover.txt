@@ -1,3 +1,6 @@
+MASTER PROMPT — FINAL FRONT COVER
+VERSION 1.0 (LOCKED)
+
 Analyze the uploaded guide manuscript.
 
 Extract automatically:
@@ -11,290 +14,273 @@ Extract automatically:
 
 Create a print-ready front cover.
 
---------------------------------------------------
-READER ADDRESSING
---------------------------------------------------
+==================================================
+PURPOSE
+==================================================
 
-All reader-facing text must use:
+Create a premium German non-fiction front cover.
 
-DU
+Flat 2D artwork.
 
-Never use:
+No mockup.
+No spine.
+No back cover.
+No perspective.
 
-Sie
-Ihnen
-Ihre
-Ihr
-
---------------------------------------------------
-SERIES IDENTITY
---------------------------------------------------
+Looks like a bestselling title from an established publisher.
 
 Visual references:
 
 - The Economist
 - Harvard Business Review
-- Premium German non-fiction publishing
-- Intelligent editorial magazine covers
+- Penguin Modern Classics
+- Hanser Sachbuch
+- Klett-Cotta
 - Modern literary bestsellers
 
-The cover must feel:
+Style:
 
 intelligent
-satirical
-professional
+editorial
 premium
 timeless
 confident
+slightly ironic
 
 Never:
 
 cartoonish
-childish
 self-published
 AI fantasy art
 comic-book style
 
---------------------------------------------------
+==================================================
 CANVAS
---------------------------------------------------
+==================================================
 
-True DIN proportions
+DIN A-series proportions.
+
+Canvas:
+1748 × 2474 px
 
 Aspect ratio:
-
 1 : 1.4142
 
-Portrait orientation
+Portrait orientation.
 
-Flat front cover only
-
-No mockup
-No spine
-No back cover
-No perspective
-
---------------------------------------------------
+==================================================
 COLOR SYSTEM
---------------------------------------------------
+==================================================
 
 Background:
 #F1ECE2
 
-Secondary background:
+Secondary Accent Area:
 #E7E0D2
 
-Primary typography:
+Primary Typography:
 #1B2340
 
-Muted typography:
+Muted Typography:
 #5A5F72
 
-Accent:
+Accent Red:
 #B5292C
 
---------------------------------------------------
-SERIES ORNAMENT SYSTEM
---------------------------------------------------
+==================================================
+BACKGROUND
+==================================================
 
-The cover contains two permanent ornaments.
-
-TOP PUBLISHER ORNAMENT
-
-Position:
-4–5% below top edge
-
-Structure:
-
-two red horizontal lines on left
-two red horizontal lines on right
-
-Visual reference:
-
-──────────────          LOGO          ──────────────
-──────────────                         ──────────────
-
-Requirements:
-
-- perfectly symmetrical
-- identical lengths
-- identical thickness
-- large centered logo gap
-- no logo
-- no placeholder
-- leave empty space only
-
-Line length:
-
-22–28% of cover width
-
-Gap width:
-
-12–15% of cover width
-
-Line thickness:
-
-2–3 px
+Solid background.
 
 Color:
+#F1ECE2
 
-#B5292C
+No gradients.
 
-The top ornament must resemble a premium publisher mark.
+No texture.
 
---------------------------------------------------
+No paper grain.
 
-BOTTOM AUTHOR ORNAMENT
+==================================================
+TOP AREA
+==================================================
 
-Position:
+No ornament.
 
-directly below author name
+No lines.
 
-Structure:
+No publisher mark.
 
-two red lines left
-small red diamond center
-two red lines right
+No logo.
 
-Visual reference:
+No placeholder.
 
-──────── ◇ ────────
-────────   ────────
+Leave empty.
 
-Requirements:
-
-- perfectly centered
-- perfectly symmetrical
-- identical line lengths
-- same line thickness as top ornament
-
-Diamond:
-
-solid red diamond
-
-Color:
-
-#B5292C
-
-The bottom ornament is smaller than the top ornament.
-
---------------------------------------------------
+==================================================
 TITLE BLOCK
---------------------------------------------------
+==================================================
 
-The title is the dominant visual element.
+Primary visual element.
 
-The title occupies:
+Typography must dominate.
 
-45–55% of cover height.
+Occupies approximately:
 
-Typography must dominate the cover.
+50% of cover height.
 
-The title should be readable at Amazon thumbnail size.
+Centered.
 
-Use an oversized editorial serif.
+Maximum width:
+1450 px
 
-Visual references:
+Center axis:
+X = 874 px
 
-- Fraunces Black
-- Canela Black
-- Noe Display Black
+Top of title block:
+Y = 250 px
+
+Font:
+
+Fraunces Black
+Canela Black
+Noe Display Black
 
 Weight:
 
 Black
 ExtraBold
 
-Tight line spacing.
+==================================================
+TITLE
+==================================================
 
-Strong compact title block.
-
---------------------------------------------------
-TITLE COLOR SYSTEM
---------------------------------------------------
+Three-line structure.
 
 Line 1:
-
 #1B2340
-
-Abnehmen
 
 Line 2:
-
 #B5292C
 
-dank
-
 Line 3:
-
 #1B2340
 
+Entire lines change color.
+
+Never color individual words.
+
+Font size:
+180–200 px
+
+Line spacing:
+0.84
+
+Optically centered.
+
+Readable at Amazon thumbnail size.
+
+Strong compact block.
+
+==================================================
+TITLE CASE RULE
+==================================================
+
+Use normal German capitalization.
+
+Examples:
+
+Abnehmen
+dank
 Muskelabbau
 
-Never highlight individual words.
+Leichter werden
+war nie einfacher.
 
-Color entire title lines only.
+Never convert text to ALL CAPS.
 
---------------------------------------------------
+Never use small caps.
+
+Never use title-wide uppercase styling.
+
+==================================================
 SUBTITLE
---------------------------------------------------
+==================================================
 
 Centered.
 
-Inter-style sans-serif.
+Position:
+Y ≈ 1080 px
 
-Medium weight.
+Maximum width:
+1100 px
+
+Font:
+Inter Medium
+
+Size:
+34 px
+
+Line height:
+1.35
 
 Color:
-
 #1B2340
 
 Secondary to title.
 
---------------------------------------------------
+==================================================
+ILLUSTRATION
+==================================================
+
+Position:
+Lower middle area.
+
+Top:
+≈ 1220 px
+
+Bottom:
+≈ 2080 px
+
+Maximum width:
+1100 px
+
+Centered.
+
+==================================================
 ILLUSTRATION CONCEPT
---------------------------------------------------
+==================================================
 
-Create one memorable editorial satire scene.
+Create one memorable editorial scene.
 
-The scene should instantly communicate the central joke:
+The scene should directly visualize the manuscript's central joke, method or promise.
 
-A person proudly follows a ridiculous weight-loss strategy by reducing muscle mass instead of body fat.
+Avoid:
 
-Preferred scene:
+- generic symbolism
+- abstract concepts
+- floating icons
+- concept-art metaphors
 
-A confident protagonist stands beside a large gym scale.
+Prefer:
 
-On one side:
+- workplace satire
+- social interaction
+- home office scene
+- everyday absurdity
+- visual irony
+- confident protagonist applying the guide's advice
 
-a visibly muscular version.
+The viewer should understand the joke immediately.
 
-On the other side:
-
-a noticeably smaller and less muscular version.
-
-Between them:
-
-a bold red arrow.
-
-The protagonist appears pleased with the lower number on the scale.
-
-The absurdity should be immediately obvious.
-
-The image should communicate:
-
-"Technically lighter.
-Obviously not the point."
-
---------------------------------------------------
+==================================================
 ILLUSTRATION STYLE
---------------------------------------------------
+==================================================
 
-Economist-style editorial illustration.
+Economist illustration style.
 
 Harvard Business Review style.
-
-Large shadow shapes.
 
 70% shape
 20% silhouette
@@ -302,30 +288,31 @@ Large shadow shapes.
 
 Use:
 
-- charcoal
-- warm gray
-- cream tones
-- navy shadows
+charcoal
+warm gray
+cream
+navy shadow shapes
 
-Maximum red accent:
+Maximum red usage:
+5%
 
-5% of illustration area.
+No photorealism.
 
-Avoid:
+No sketching.
 
-- photorealism
-- comic style
-- sketch style
-- engraving style
-- excessive detail
+No engraving.
 
-The illustration should remain recognizable at thumbnail size.
+No comic style.
 
---------------------------------------------------
+No excessive detail.
+
+Recognizable at thumbnail size.
+
+==================================================
 CHARACTER
---------------------------------------------------
+==================================================
 
-One protagonist only.
+One protagonist.
 
 Expression:
 
@@ -335,53 +322,198 @@ intellectually amused
 
 Silhouette readable before facial details.
 
+==================================================
+AUTHOR
+==================================================
+
+Must be mathematically centered.
+
+Text center:
+X = 874 px
+
+Baseline:
+Y = 2260 px
+
+Optical tolerance:
+maximum ±2 px
+
+Font:
+Inter Medium
+
+Size:
+30 px
+
+Letter spacing:
+2%
+
+Color:
+#1B2340
+
+Use normal capitalization.
+
+Never ALL CAPS.
+
+Never small caps.
+
+==================================================
+BOTTOM ORNAMENT
+==================================================
+
+Only ornament on cover.
+
+Must be mathematically centered.
+
+Absolute center:
+
+X = 874 px
+Y = 2395 px
+
+Optical tolerance:
+maximum ±1 px
+
+Color:
+#B5292C
+
+Stroke thickness:
+3 px
+
+The ornament must match the back cover ornament
+exactly in:
+
+- diamond size
+- line length
+- line thickness
+- spacing
+- visual weight
+
+No deviations allowed.
+
 --------------------------------------------------
-LAYOUT
+CENTER DIAMOND
 --------------------------------------------------
 
-Top ornament:
-8%
+Shape:
+Square rotated 45°
 
-Title:
-50%
+Size:
+20 × 20 px
 
-Subtitle:
-7%
+Fill:
+#B5292C
 
-Illustration:
-28%
-
-Author:
-5%
-
-Hierarchy:
-
-1. Title
-2. Illustration
-3. Subtitle
-4. Author
-5. Ornaments
-
-Typography must dominate.
+Center:
+874 px, 2395 px
 
 --------------------------------------------------
-OUTPUT
+LEFT LINE
 --------------------------------------------------
 
-Single front cover.
+Start:
+654 px
 
-Premium publishing quality.
+End:
+794 px
 
-Looks like a bestselling satirical guide from an established publisher.
+Length:
+140 px
+
+Y:
+2395 px
+
+Thickness:
+3 px
+
+Color:
+#B5292C
+
+--------------------------------------------------
+RIGHT LINE
+--------------------------------------------------
+
+Start:
+954 px
+
+End:
+1094 px
+
+Length:
+140 px
+
+Y:
+2395 px
+
+Thickness:
+3 px
+
+Color:
+#B5292C
+
+
+==================================================
+LAYER ORDER
+==================================================
+
+1 Background
+2 Illustration
+3 Subtitle
+4 Author
+5 Ornament
+6 Title
+
+==================================================
+NEGATIVE PROMPT
+==================================================
+
+No barcode.
+
+No publisher name.
+
+No stickers.
+
+No bestseller badge.
+
+No QR code.
+
+No ISBN.
+
+No top ornaments.
+
+No double lines.
+
+No decorative borders.
+
+No gradients.
+
+No glossy effects.
+
+No shadows outside illustration.
+
+No 3D effects.
+
+No mockup.
+
+No spine.
+
+No back cover.
+
+No clutter.
+
+==================================================
+FINAL IMPRESSION
+==================================================
+
+Typography first.
+
+Illustration second.
+
+Feels like a premium German non-fiction bestseller.
 
 Editorial poster aesthetic.
 
-Typography first.
-Illustration second.
+Confident.
 
-No publisher logo.
-No publisher name.
-No barcode.
-No marketing stickers.
+Minimal.
 
-Print-ready.
+Highly readable.
+
+Instantly recognizable as part of a coherent guide series.

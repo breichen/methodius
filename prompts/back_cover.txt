@@ -1,55 +1,71 @@
-Analyze the uploaded guide manuscript.
+MASTER PROMPT — FINAL BACK COVER
+VERSION 1.0 (LOCKED)
 
-Extract automatically:
+==================================================
+PURPOSE
+==================================================
 
-- Main title
-- Subtitle
-- Author name
-- Central topic
-- Core promise
-- Tone of voice
-- Key lessons
+Create a premium German non-fiction back cover.
 
-Create a print-ready BACK COVER.
+Flat 2D artwork.
 
---------------------------------------------------
-SERIES IDENTITY
---------------------------------------------------
+No mockup.
+No spine.
+No perspective.
+No photographs.
+No illustrations.
 
-This back cover must perfectly match the corresponding front cover.
-
-It belongs to the same premium satirical non-fiction guide series.
+The result must look like the back cover of a bestselling German non-fiction title from an established publisher.
 
 Visual references:
 
-- Premium German publishing
-- Literary magazine design
-- High-end non-fiction bestsellers
-- Editorial publishing aesthetics
+- The Economist
+- Harvard Business Review
+- Hanser
+- Suhrkamp
+- Klett-Cotta
+- Penguin Modern Classics
 
-The design should feel:
+Style:
 
 intelligent
-confident
-timeless
+editorial
 premium
 understated
+confident
+timeless
 
-Never look like self-publishing.
-Never look like direct-response marketing.
-Never look like an online course sales page.
+Never:
 
-The result should feel like the reverse side of a premium bestseller from an established publisher.
+self-published
+course marketing
+sales page
+clickbait
+Amazon guru design
 
---------------------------------------------------
-COLOR SYSTEM
---------------------------------------------------
+==================================================
+CANVAS
+==================================================
+
+DIN A-series proportions.
+
+Canvas:
+1748 × 2474 px
+
+Aspect ratio:
+1 : 1.4142
+
+Portrait.
 
 Background:
 #F1ECE2
 
-Secondary background:
-#E7E0D2
+==================================================
+COLOR SYSTEM
+==================================================
+
+Background:
+#F1ECE2
 
 Primary text:
 #1B2340
@@ -60,504 +76,530 @@ Muted text:
 Accent:
 #B5292C
 
---------------------------------------------------
+==================================================
 TYPOGRAPHY
---------------------------------------------------
+==================================================
 
-Headlines:
+Headline Serif:
 
-Heavy editorial serif.
+Fraunces Black
+Canela Black
+Noe Display Black
 
-Visual reference:
+Body Sans:
 
-- Fraunces Black
-- Canela Black
-- Noe Display Black
+Inter
 
-Weight:
+Typography must dominate.
 
-Bold to Black.
-
-Color:
-
-#1B2340
-
---------------------------------------------------
-
-Body text:
-
-Inter-inspired sans-serif.
-
-Weight:
-
-Regular.
-
-Readable.
-
-Editorial.
-
-Comfortable line length.
-
-Color:
-
-#1B2340
-
---------------------------------------------------
-LAYOUT
---------------------------------------------------
-
-Very generous whitespace.
+Large whitespace.
 
 Strong editorial hierarchy.
 
-Typography-driven design.
+==================================================
+HEADLINE
+==================================================
 
-The layout should feel calm and confident.
+Headline derived from manuscript promise.
+
+Centered.
+
+Top position:
+Y = 120 px
+
+Maximum width:
+1450 px
+
+Font:
+Editorial Serif Black
+
+Size:
+165 px
+
+Line spacing:
+0.86
+
+Color:
+#1B2340
+
+Maximum two lines.
+
+Must feel literary.
+
+Not promotional.
+
+==================================================
+HEADLINE CASE RULE
+==================================================
+
+Use normal German capitalization.
+
+Example:
+
+Leichter werden
+war nie einfacher.
+
+Never use ALL CAPS.
+
+Never use small caps.
+
+Never convert entire headline to uppercase.
+
+==================================================
+DESCRIPTION
+==================================================
+
+Two short paragraphs.
+
+40–80 words total.
+
+Purpose:
+
+- who the book is for
+- challenge addressed
+- insight offered
+
+Tone:
+
+clever
+slightly amused
+intellectual
+
+No marketing language.
+
+No hype.
+
+Text block:
+
+Left:
+254 px
+
+Right:
+1494 px
+
+Width:
+1240 px
 
 Top:
-Headline
+720 px
 
-Upper middle:
-Short description
+Font:
+Inter Regular
 
-Middle:
-DU LERNST section
+Size:
+30 px
 
-Lower:
-Slogan
+Line height:
+1.45
 
-Bottom:
-Logo gap
-Barcode
+Color:
+#1B2340
 
---------------------------------------------------
-HEADLINE
---------------------------------------------------
+Paragraph spacing:
+40 px
 
-Create a short headline derived directly from the manuscript's core promise.
+Alignment:
+left
+
+==================================================
+DU LERNST
+==================================================
+
+Text:
+
+Du lernst:
+
+Use normal capitalization.
+
+Only first letter uppercase.
+
+Never:
+
+DU LERNST
+
+Position:
+Y = 1220 px
+
+Font:
+Inter Bold
+
+Size:
+58 px
+
+Color:
+#B5292C
+
+==================================================
+LEARNING SECTION
+==================================================
+
+Dominant content area.
+
+Five learning points.
+
+Each point contains:
+
+- navy circle icon
+- short headline
+- short explanation
+
+Section width:
+
+1260 px
+
+Left:
+190 px
+
+Right:
+1450 px
+
+Item height:
+145 px
+
+Vertical gap:
+34 px
+
+==================================================
+ICON SYSTEM
+==================================================
+
+Circle diameter:
+78 px
+
+Circle fill:
+#1B2340
+
+Icon color:
+#F1ECE2
+
+No outline.
+
+No gradients.
+
+Flat editorial icon style.
+
+Icon center X:
+250 px
+
+First icon center Y:
+1360 px
+
+Following icons:
++145 px vertical spacing
+
+==================================================
+LEARNING HEADLINES
+==================================================
+
+Position X:
+365 px
+
+Font:
+Inter SemiBold
+
+Size:
+27 px
+
+Color:
+#1B2340
+
+==================================================
+LEARNING EXPLANATIONS
+==================================================
+
+Position X:
+365 px
+
+Offset below headline:
+42 px
+
+Font:
+Inter Regular
+
+Size:
+21 px
+
+Line height:
+1.35
+
+Color:
+#1B2340
+
+==================================================
+SLOGAN
+==================================================
+
+Centered.
+
+Same serif family as front cover.
+
+Weight:
+SemiBold
+
+Size:
+72 px
+
+Color:
+#1B2340
+
+Baseline:
+Y = 2175 px
 
 Length:
+2–6 words.
 
-3–8 words.
+Literary.
 
-Should feel intelligent, memorable and understated.
+Memorable.
 
-Examples:
+Understated.
 
-Die Kunst des überzeugenden Ratens.
+==================================================
+BARCODE
+==================================================
 
-Selbstsicherheit schlägt Telepathie.
+Professional retail barcode.
 
-Mehr Wirkung durch Vermutungen.
+Mandatory.
 
-Avoid:
+Position:
 
-marketing language
-clickbait
-sales copy
-exaggeration
+Right edge:
+X = 1615 px
 
-Use strong editorial typography.
+Bottom edge:
+Y = 2395 px
+
+Barcode box size:
+
+Width:
+250 px
+
+Height:
+145 px
+
+Background:
+#FFFFFF
+
+Border:
+2 px
+
+Border color:
+#1B2340
+
+Padding inside box:
+10 px
+
+Barcode centered inside box.
+
+Include:
+
+- machine-readable bars
+- ISBN digits below bars
+
+Typography:
+
+Inter Medium
+
+Size:
+18 px
+
+Color:
+#1B2340
+
+The barcode must appear exactly like a
+professionally printed bookstore barcode.
+
+No stylization.
+
+No shadows.
+
+No rounded corners.
+
+No perspective.
+
+No transparent background.
+
+==================================================
+BOTTOM ORNAMENT
+==================================================
+
+Must be IDENTICAL to the front cover ornament.
+
+Absolute center:
+
+X = 874 px
+Y = 2295 px
+
+Optical tolerance:
+maximum ±1 px
+
+Color:
+#B5292C
+
+Stroke thickness:
+3 px
+
+Center diamond:
+20 × 20 px
+
+Left line:
+140 px
+
+Right line:
+140 px
+
+Spacing and geometry must exactly match
+the front cover ornament.
+
+No deviations allowed.
 
 --------------------------------------------------
-READER ADDRESSING RULE
+CENTER DIAMOND
 --------------------------------------------------
 
-The guide series consistently addresses readers using:
+Shape:
+Square rotated 45°
 
-DU
+Size:
+20 × 20 px
 
-All reader-facing copy must use:
+Fill:
+#B5292C
+
+Center:
+874 px, 2295 px
+
+--------------------------------------------------
+LEFT LINE
+--------------------------------------------------
+
+Start:
+654 px
+
+End:
+794 px
+
+Length:
+140 px
+
+Y:
+2295 px
+
+Thickness:
+3 px
+
+Color:
+#B5292C
+
+--------------------------------------------------
+RIGHT LINE
+--------------------------------------------------
+
+Start:
+954 px
+
+End:
+1094 px
+
+Length:
+140 px
+
+Y:
+2295 px
+
+Thickness:
+3 px
+
+Color:
+#B5292C
+
+==================================================
+BOTTOM AREA
+==================================================
+
+Barcode only.
+
+No publisher logo.
+
+No logo placeholder.
+
+No QR code.
+
+No ISBN block outside barcode.
+
+No additional ornaments.
+
+Minimum distance:
+
+Barcode bottom to trim:
+55 px
+
+Barcode right side to trim:
+55 px
+
+Maintain large whitespace around barcode.
+
+
+==================================================
+READER ADDRESSING
+==================================================
+
+All reader-facing text must use:
 
 du
-dich
 dir
+dich
 dein
 deine
 
-Never use:
+Never:
 
 Sie
 Ihnen
 Ihr
 Ihre
 
-Examples:
+==================================================
+NEGATIVE PROMPT
+==================================================
 
-Dieses Buch zeigt dir ...
-Du lernst ...
-Für alle, die ...
-
-Not:
-
-Dieses Buch zeigt Ihnen ...
-Sie lernen ...
-
-This rule applies to:
-
-- description text
-- DU LERNST section
-- benefit statements
-- slogans
-- all reader-facing copy
-
-Institutional and editorial text may remain neutral,
-but direct reader communication must always use DU.
-
---------------------------------------------------
-DESCRIPTION
---------------------------------------------------
-
-Length:
-
-40–80 words.
-
-Maximum:
-
-2 short paragraphs.
-
-The description should establish context only.
-
-Do not explain everything.
-
-The learning section should carry most of the informational weight.
-
-Write like a premium publisher.
-
-Explain:
-
-- who the guide is for
-- what challenge it addresses
-- what insight it offers
-
-Tone:
-
-clever
-slightly amused
-self-assured
-intellectual
-
-Do NOT use:
-
-"Jetzt"
-"Endlich"
-"Geheimnis"
-"Erfolgsformel"
-"Satire"
-"satirisch"
-
-Avoid marketing language.
-
-Avoid bullet points.
-
---------------------------------------------------
-LEARNING SECTION
---------------------------------------------------
-
-Headline:
-
-DU LERNST
-
-Color:
-
-#B5292C
-
-No divider line above.
-
-No diamond ornament above.
-
-The section starts directly with:
-
-DU LERNST
-
-The learning section should be the dominant content area of the back cover.
-
---------------------------------------------------
-
-Each learning point contains:
-
-- Navy circular icon
-- Short benefit headline
-- One short explanatory sentence
-
-Length:
-
-15–25 words total per learning point.
-
-Use five learning points.
-
-Derive all learning points directly from the manuscript.
-
---------------------------------------------------
-ICONS
---------------------------------------------------
-
-Place every icon inside a solid navy circle.
-
-Circle color:
-
-#1B2340
-
-Icon color:
-
-#F1ECE2
-
-Flat editorial icon style.
-
-Consistent size.
-
-No outlines.
-
+No illustrations.
+No photos.
+No people.
+No textures.
+No shadows.
 No gradients.
-
-No colorful icons.
-
-Use only navy and cream.
-
---------------------------------------------------
-LEARNING POINT STYLE
---------------------------------------------------
-
-Example structure:
-
-● Beobachtungen richtig deuten
-
-Erkennen Sie, welche Bedeutung Sie Blicken, Gesten und Pausen überzeugend zuschreiben können.
-
-Keep each point concise.
-
-Useful.
-
-Specific.
-
-Readable.
-
---------------------------------------------------
-BOTTOM SECTION
---------------------------------------------------
-
-Generate one memorable closing line.
-
-Length:
-
-2–6 words.
-
-Examples:
-
-Überzeugung schlägt Gewissheit.
-
-Mehr Deutung. Weniger Wissen.
-
-Wirkung vor Wahrheit.
-
-Use the same serif family as the front cover.
-
-Weight:
-
-SemiBold.
-
-Centered.
-
-Color:
-
-#1B2340
-
-No decorative lines above.
-
-No decorative lines below.
-
-Use whitespace instead.
-
---------------------------------------------------
-BOTTOM ORNAMENT
---------------------------------------------------
-
-Directly below the slogan:
-
-───── ◇ ─────
-
-Color:
-
-#B5292C
-
-Line length:
-
-10–15% of cover width per side.
-
-Visual weight:
-
-1–2 px.
-
-Centered.
-
-Use the same ornament style as the front cover.
-
-This should be the only decorative ornament in the lower section.
-
---------------------------------------------------
-LOGO AREA
---------------------------------------------------
-
-Below the bottom ornament:
-
-leave a very small centered empty area.
-
-IMPORTANT
-
-Do NOT create a logo.
-
-Do NOT redraw a logo.
-
-Do NOT create a placeholder.
-
-Do NOT create a dashed rectangle.
-
-Do NOT create a box.
-
-Do NOT create a border.
-
-Do NOT write a publisher name.
-
-Do NOT write "MM Editions".
-
-Simply leave empty space.
-
-The logo will be inserted manually later.
-
-The empty space should be subtle and unobtrusive.
-
---------------------------------------------------
-BARCODE
---------------------------------------------------
-
-Bottom right.
-
-Small.
-
-Traditional publishing placement.
-
-White barcode area.
-
-Black barcode bars.
-
-Surround the barcode area with a thin black outline.
-
-Outline:
-
-1–2 px visual weight.
-
-No fill.
-
-No shadow.
-
-No dark background.
-
-The purpose of the outline is only to separate
-the white barcode area from the cream cover background.
-
-The frame should feel subtle and publishing-standard.
-
-Approximately:
-
-8–12% of cover width.
-
-Keep visually unobtrusive.
-
---------------------------------------------------
-DECORATIVE ELEMENTS
---------------------------------------------------
-
-Use the same visual language as the front cover.
-
-Avoid decorative clutter.
-
-No extra dividers.
-
-No ornament above DU LERNST.
-
-Only the bottom ornament below the slogan.
-
---------------------------------------------------
-VISUAL HIERARCHY
---------------------------------------------------
-
-1. Headline
-2. Learning section
-3. Description
-4. Slogan
-
-The learning section should occupy more space than the description.
-
-The back cover should feel informative rather than promotional.
-
---------------------------------------------------
-SERIES RULE
---------------------------------------------------
-
-The back cover should visually belong to the same series as:
-
-"The Art of Looking Busy"
-
-Editorial.
+No gold foil.
+No embossing.
+No 3D effects.
+No glossy effects.
+No mockup.
+No publisher logo.
+No barcode.
+No marketing stickers.
+No bestseller badge.
+No decorative borders.
+No top ornaments.
+No double lines.
+No visual clutter.
+
+==================================================
+FINAL IMPRESSION
+==================================================
+
+Typography-first.
+
+Editorial publishing aesthetic.
+
+Feels like a premium German non-fiction bestseller.
+
+Calm.
 
 Confident.
 
 Minimal.
 
-Premium.
+Highly readable.
 
-Typography-driven.
-
-Lots of whitespace.
-
-Instantly recognizable as part of the same guide collection.
-
---------------------------------------------------
-OUTPUT
---------------------------------------------------
-
-Back cover only.
-
-Flat 2D artwork.
-
-No illustrations.
-
-No photographs.
-
-No mockup.
-
-No perspective.
-
-No spine.
-
-No publisher name.
-
-No logo.
-
-Perfect print-ready alignment.
-
-Premium publishing quality.
-
-Looks like the back cover of a bestselling German non-fiction guide.
-
-CANVAS FORMAT
-
-True DIN A-series proportions.
-
-Portrait orientation.
-
-Aspect ratio exactly:
-
-1 : 1.4142
-
-Equivalent to:
-
-DIN A5
-DIN A4
-DIN A6
-
-Do not use 2:3 proportions.
-
-Do not use standard poster proportions.
-
-Maintain true DIN proportions throughout the composition.
+Instantly recognizable as part of a sophisticated guide series.
