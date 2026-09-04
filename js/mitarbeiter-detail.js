@@ -32,6 +32,11 @@ if (!person) {
       .map(eintrag => `<li>${eintrag}</li>`)
       .join("");
 
+  const aufgaben =
+    person.aufgaben
+      .map(eintrag => `<li>${eintrag}</li>`)
+      .join("");
+
  container.innerHTML = `
 
     <section class="section">
@@ -93,6 +98,18 @@ if (!person) {
     </section>
 
     <section class="section">
+        <div class="wrap">
+
+        <h2>Aufgaben</h2>
+
+        <ul>
+            ${aufgaben}
+        </ul>
+
+        </div>
+    </section>
+
+    <section class="section section-alt">
         <div class="wrap">
 
         <h2>Biographische Stationen</h2>
@@ -195,7 +212,7 @@ function ladePublikationen(person) {
         .insertAdjacentHTML(
           "beforeend",
           `
-            <section class="section section-alt">
+            <section class="section">
               <div class="wrap">
 
                 <h2>Publikationen</h2>
