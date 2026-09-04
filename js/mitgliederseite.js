@@ -38,10 +38,12 @@ function baueTeamBereich() {
     <article class="team-card">
 
       <div class="team-photo-wrap">
-        <img
-          class="team-photo"
-          src="${person.bild}"
-          alt="Porträt von ${person.name}">
+        <a href="mitarbeiter.html?person=${person.slug}">
+          <img
+            class="team-photo"
+            src="${person.bild}"
+            alt="Porträt von ${person.name}">
+        </a>
       </div>
 
       <div class="team-card-content">
