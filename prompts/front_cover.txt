@@ -274,6 +274,35 @@ Prefer:
 
 The viewer should understand the joke immediately.
 
+The illustration must communicate exactly one central visual joke.
+
+No secondary jokes.
+
+No hidden jokes.
+
+No visual subplots.
+
+No additional humorous details.
+
+One scene.
+
+One idea.
+
+One protagonist.
+
+One focal action.
+Composition should resemble a magazine editorial illustration rather than a narrative book illustration.
+
+Static composition.
+
+Single frozen moment.
+
+No cinematic action.
+
+No dynamic perspective.
+
+No storytelling sequence.
+
 ==================================================
 ILLUSTRATION STYLE
 ==================================================
@@ -307,6 +336,69 @@ No comic style.
 No excessive detail.
 
 Recognizable at thumbnail size.
+
+The illustration must be contained inside one clearly defined rectangular image area.
+
+No elements may extend beyond the rectangle.
+
+No floating objects outside the illustration frame.
+
+The illustration must read as a self-contained editorial panel.
+
+The rectangle should occupy approximately 65–75% of the illustration area.
+
+Strong visual boundaries.
+
+No open composition.
+Use clean vector-like contours.
+
+Large simplified shapes.
+
+Minimal internal linework.
+
+Avoid texture detail.
+
+Avoid small decorative objects.
+
+Avoid visual noise.
+
+Every object should be recognizable at 100 px thumbnail size.
+
+==================================================
+COMPOSITION RULES
+==================================================
+
+One protagonist only.
+
+One environment only.
+
+Maximum 5 significant objects.
+
+No background characters.
+
+No crowd scenes.
+
+No visual clutter.
+
+No speech bubbles.
+
+No infographics.
+
+No floating symbols.
+
+No conceptual icons.
+
+Illustration must feel calm and controlled.
+
+Strong silhouette readability.
+
+Large negative space.
+
+Editorial magazine illustration.
+
+Contained inside a single rectangular panel.
+
+Immediately understandable in under 2 seconds.
 
 ==================================================
 CHARACTER
@@ -393,7 +485,7 @@ CENTER DIAMOND
 --------------------------------------------------
 
 Shape:
-Square rotated 45°
+Solid square rotated 45°
 
 Size:
 20 × 20 px
