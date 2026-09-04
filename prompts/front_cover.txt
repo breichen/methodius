@@ -233,94 +233,80 @@ Color:
 
 #1B2340
 
---------------------------------------------------
-TOP SECTION
---------------------------------------------------
+TOP ORNAMENT (FIXED SERIES ELEMENT)
 
-Two horizontal red lines.
+At the very top of the cover place two horizontal red lines on the left and two horizontal red lines on the right.
 
 Color:
-
 #B5292C
 
-Visual weight:
+Each pair consists of:
 
-2–3 px.
+two parallel lines
+identical length
+identical thickness
+perfectly aligned
 
-The lines should feel elegant and restrained.
+The left pair and right pair must be separated by a large centered empty space.
 
---------------------------------------------------
+Center gap:
+approximately 13–15% of cover width.
 
-LINE LENGTH
+This empty space is reserved for a future publisher logo and must remain completely empty.
 
-Each line:
+Visual reference:
 
-20–25% of cover width.
+══════════ LOGO ══════════
+══════════ ══════════
 
-Both lines must have identical length.
+The lines should be elegant, restrained and longer than the lower ornament.
 
---------------------------------------------------
+Do NOT allow the lines to approach the center too closely.
 
-CENTER GAP
+The top ornament should feel like a permanent publisher mark.
 
-Leave a clearly visible centered gap between the lines.
+BOTTOM ORNAMENT (FIXED SERIES ELEMENT)
 
-The gap should be approximately:
+Directly above the author name place a centered decorative ornament consisting of:
 
-12–15% of cover width.
+two horizontal red lines on the left
+one small red diamond in the center
+two horizontal red lines on the right
 
-The gap is intentionally larger than necessary.
+Color:
+#B5292C
 
-Do NOT let the lines approach the center too closely.
+Visual reference:
 
---------------------------------------------------
+────────── ◇ ──────────
+────────── ──────────
 
-LOGO AREA
+Requirements:
 
-No logo.
+perfectly centered
+symmetrical
+identical line lengths
+diamond approximately 1.5–2% of cover width
+elegant editorial style
+very restrained
+premium publishing aesthetic
 
-No placeholder.
+The bottom ornament should be noticeably smaller than the top ornament.
 
-No box.
+Never replace the diamond with another shape.
 
-No rectangle.
+Never use decorative flourishes.
 
-No icon.
+The ornament should feel like a timeless non-fiction publisher design element.
 
-Simply leave empty space.
+HIERARCHY RULE
+Title
+Illustration
+Subtitle
+Bottom ornament
+Author
 
-The empty space should feel intentional and balanced.
-
-The logo will be inserted later.
-
---------------------------------------------------
-
-SERIES RULE
-
-The top ornament should visually resemble:
-
-────────────      MM      ────────────
-
-not
-
-──── MM ────
-
-The generous center gap is a fixed series element and should remain consistent across all covers.
-
-SERIES CONSISTENCY RULE
-
-The top red line ornament is a permanent branding element.
-
-Across all books:
-
-- same line thickness
-- same line length
-- same gap size
-- same vertical position
-
-Treat this as a publisher mark.
-
-Do not redesign it.
+The ornaments support the design and must never compete with the title.
 
 
 --------------------------------------------------
