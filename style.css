@@ -771,6 +771,15 @@ hr {
   color: var(--color-accent);
 }
 
+/* Im Blättermodus ist die Seite viel kleiner - Versalschrift und der
+   für die Fließtext-Ansicht gedachte Schriftgrad wirken dort zu groß
+   und zu dominant. Deshalb hier kleiner und in normaler Schreibweise. */
+.flipbook-page .autor-abschluss-text {
+  font-size: .68rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
 /* ============================================
    AUTOR-VORSTELLUNG
    ============================================ */
