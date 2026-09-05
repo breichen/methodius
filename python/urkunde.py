@@ -311,34 +311,39 @@ def generiere_urkunde(name):
     # Signatur
     # --------------------------------------------------
 
-    c.setFont(
-        "Helvetica",
-        11
+    SIGNATUR_DATEI = "assets/signatur/methodius-signatur.png"
+    SIGNATUR_ORIG_W = 457
+    SIGNATUR_ORIG_H = 65
+    SIGNATUR_WIDTH = 60 * mm
+    SIGNATUR_HEIGH = SIGNATUR_WIDTH * SIGNATUR_ORIG_H / SIGNATUR_ORIG_W
+
+    c.drawImage(
+        SIGNATUR_DATEI,
+        w / 2 - 30 * mm,
+        h - 255 * mm,
+        width=SIGNATUR_WIDTH,
+        height=SIGNATUR_HEIGH,
+        mask="auto"
     )
 
-    # Signatur
+    c.setFont("Helvetica", 11)
 
     c.drawCentredString(
         w / 2,
-        h - 250 * mm,
-        "Dr. Maximilien Methodius"
-    )
-
-    c.drawCentredString(
-        w / 2,
-        h - 256 * mm,
-        "Institutsleiter"
+        h - 262 * mm,
+        "Dr. Maximilien Methodius, Institutsleiter"
     )
 
     # --------------------------------------------------
     # Ornament
     # --------------------------------------------------
 
-    zeichne_ornament(
-        c,
-        w,
-        55 * mm
-    )
+    # Not enough free space
+    #zeichne_ornament(
+    #    c,
+    #    w,
+    #    55 * mm
+    #)
 
     # --------------------------------------------------
     # Hinweis
