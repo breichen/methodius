@@ -135,11 +135,12 @@ def add_logo(
     print(f"Gespeichert: {output_path}")
 
 
-def get_all_cover_names(source_dir="../pics/ratgeber-front-nologo"):
+def get_all_cover_names(typ):
     """
     Liefert alle Cover-Namen (ohne .png-Endung) aus dem
     Quellordner zurück.
     """
+    source_dir = f"../pics/ratgeber-{typ}-nologo"
     pattern = os.path.join(source_dir, "*.png")
     return [
         os.path.splitext(os.path.basename(path))[0]
@@ -174,7 +175,7 @@ if __name__ == "__main__":
     args = parse_args()
 
     if args.name == "*":
-        cover_names = get_all_cover_names()
+        cover_names = get_all_cover_names(args.type)
 
         if not cover_names:
             print("Keine Cover im Quellordner gefunden.")

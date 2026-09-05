@@ -307,20 +307,59 @@ No storytelling sequence.
 ILLUSTRATION STYLE
 ==================================================
 
-Economist illustration style.
+Premium literary editorial illustration.
 
-Harvard Business Review style.
+Modern German publishing illustration.
 
-70% shape
-20% silhouette
+Visual references:
+
+- Hanser Sachbuch
+- Penguin Modern Classics
+- Mid-century editorial illustration
+- Contemporary literary cover art
+
+70% large tonal shapes
+20% lighting and atmosphere
 10% detail
 
 Use:
 
-charcoal
-warm gray
-cream
-navy shadow shapes
+deep navy shadows
+warm cream highlights
+soft charcoal midtones
+high tonal contrast
+
+Strong light source.
+
+Large illuminated surfaces.
+
+Large shadow masses.
+
+Soft volumetric modelling.
+
+Subtle depth.
+
+Elegant figure design.
+
+Refined facial simplification.
+
+Stylized realism.
+
+Not flat vector art.
+
+Not infographic style.
+
+Not corporate illustration.
+
+Not icon-like.
+
+Objects should feel sculpted through light rather than outlined.
+
+Use painterly shape transitions while remaining clean and graphic.
+
+Thumbnail readable.
+
+Premium literary publishing aesthetic.
 
 Maximum red usage:
 5%
@@ -338,6 +377,8 @@ No excessive detail.
 Recognizable at thumbnail size.
 
 The illustration must be contained inside one clearly defined rectangular image area.
+
+This image area has no visual border.
 
 No elements may extend beyond the rectangle.
 
@@ -363,6 +404,19 @@ Avoid small decorative objects.
 Avoid visual noise.
 
 Every object should be recognizable at 100 px thumbnail size.
+
+The illustration should feel like a premium literary magazine cover rather than a business magazine illustration.
+
+Avoid:
+
+flat vector illustration
+corporate explainer style
+startup illustration style
+infographic aesthetic
+clipart appearance
+uniform lighting
+hard contour dominance
+over-simplified silhouettes
 
 ==================================================
 COMPOSITION RULES
@@ -404,7 +458,7 @@ Immediately understandable in under 2 seconds.
 CHARACTER
 ==================================================
 
-One protagonist.
+The protagonist is male with 50% probability, otherwise female.
 
 Expression:
 
