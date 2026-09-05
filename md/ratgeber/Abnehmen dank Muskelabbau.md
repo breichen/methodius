@@ -73,24 +73,6 @@ Die Muskeln sind schwer? Dann müssen die Muskeln weg. Logisch. Mathematisch nah
 
 # Kapitel 4
 
-## Das Geheimnis der Vorher-Nachher-Fotos
-
-Jeder gute Ratgeber braucht Vorher-Nachher-Bilder.
-
-Links: Ein beeindruckend muskulöser Mann. Breite Schultern. Starke Beine. Kräftige Arme. Deutlich sichtbare Muskulatur.
-
-Rechts: Ein deutlich schmalerer Mann. Weniger Muskeln. Weniger Umfang. Weniger Kraft.
-
-Aber immerhin: **Die Waage ist begeistert.**
-
-Der rote Pfeil zwischen den Bildern symbolisiert den wissenschaftlichen Fortschritt. Er zeigt nicht etwa: „Fettabbau“.
-
-Nein. Er zeigt: **„Warum hast du das eigentlich alles trainiert?“**
-
----
-
-# Kapitel 5
-
 ## Das Trainingsprogramm
 
 Du hast bisher im Fitnessstudio schwere Gewichte gehoben? Damit ist jetzt Schluss.
@@ -111,7 +93,7 @@ Die meisten Fitnessprogramme scheitern schließlich daran, dass Menschen keine L
 
 ---
 
-# Kapitel 6
+# Kapitel 5
 
 ## Ernährung für Fortgeschrittene
 
@@ -140,7 +122,7 @@ Aber sie ist hervorragend geeignet, um in einem Ratgeber dramatisch präsentiert
 
 ---
 
-# Kapitel 7
+# Kapitel 6
 
 ## Der große Feind: die Hantel
 
@@ -154,7 +136,7 @@ Deshalb empfehlen wir: Lass die Hantel liegen. Sie versteht das schon.
 
 ---
 
-# Kapitel 8
+# Kapitel 7
 
 ## Was tun mit Menschen, die sagen: „Muskeln sind wichtig“?
 
@@ -173,7 +155,7 @@ Wenn sie darauf keine Antwort haben, nicke wissend. Du hast gewonnen. Zumindest 
 
 ---
 
-# Kapitel 9
+# Kapitel 8
 
 ## Die sieben Stufen des erfolgreichen Muskelabbaus
 
@@ -217,7 +199,7 @@ Herzlichen Glückwunsch.
 
 ---
 
-# Kapitel 10
+# Kapitel 9
 
 ## Der Muskelabbau-Masterplan
 
@@ -238,7 +220,7 @@ Hier ist er, der ultimative Plan. Der Plan, auf den die Welt gewartet hat.
 
 ---
 
-# Kapitel 11
+# Kapitel 10
 
 ## Die Wahrheit über den roten Pfeil
 
@@ -252,7 +234,7 @@ Der Pfeil weiß es nicht. Der Pfeil urteilt nicht. Der Pfeil zeigt einfach nach 
 
 ---
 
-# Kapitel 12
+# Kapitel 11
 
 ## Das Fitnessstudio als kulturelles Missverständnis
 
@@ -274,7 +256,7 @@ Dein Muskel: **„Bis morgen.“**
 
 ---
 
-# Kapitel 13
+# Kapitel 12
 
 ## Die revolutionäre Schlussfolgerung
 
