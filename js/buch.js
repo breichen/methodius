@@ -626,7 +626,7 @@ function extrahiereBonusQuiz(bloecke) {
   const outroBloecke = bonusBloecke.slice(verbrauchteAnzahl);
 
   const buttonBlock = `<div class="quiz-start-wrap">
-    <button class="quiz-start-button" id="quiz-start-button" type="button">📝 ${quiz.titel} – Quiz starten</button>
+    <button class="quiz-start-button" id="quiz-start-button" type="button">📝 Lehrgangsprüfung ablegen</button>
   </div>`;
 
   const neueBloecke = [
