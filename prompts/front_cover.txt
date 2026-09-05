@@ -1,5 +1,5 @@
 MASTER PROMPT — FINAL FRONT COVER
-VERSION 1.0 (LOCKED)
+VERSION 2.0 (EDITORIAL OPEN PANEL)
 
 Analyze the uploaded guide manuscript.
 
@@ -75,7 +75,7 @@ COLOR SYSTEM
 Background:
 #F1ECE2
 
-Secondary Accent Area:
+Secondary Accent:
 #E7E0D2
 
 Primary Typography:
@@ -86,6 +86,45 @@ Muted Typography:
 
 Accent Red:
 #B5292C
+
+==================================================
+ABSOLUTE COLOR RESTRICTIONS
+==================================================
+
+The entire cover must use ONLY the following colors:
+
+#F1ECE2
+#E7E0D2
+#1B2340
+#5A5F72
+#B5292C
+
+No additional colors are permitted.
+
+No orange.
+No yellow.
+No green.
+No cyan.
+No turquoise.
+No purple.
+No pink.
+No gold.
+No saturated brown.
+
+No color grading.
+
+No cinematic color treatment.
+
+No secondary accent colors.
+
+All lighting, shading and atmosphere must be created exclusively from the approved palette.
+
+Any other color is a failure.
+
+Visual impression:
+
+95% cream, navy and warm gray
+maximum 5% red
 
 ==================================================
 BACKGROUND
@@ -189,20 +228,11 @@ TITLE CASE RULE
 
 Use normal German capitalization.
 
-Examples:
+Never ALL CAPS.
 
-Abnehmen
-dank
-Muskelabbau
+Never small caps.
 
-Leichter werden
-war nie einfacher.
-
-Never convert text to ALL CAPS.
-
-Never use small caps.
-
-Never use title-wide uppercase styling.
+Never title-wide uppercase styling.
 
 ==================================================
 SUBTITLE
@@ -249,6 +279,38 @@ Maximum width:
 Centered.
 
 ==================================================
+ILLUSTRATION FIELD
+==================================================
+
+The illustration occupies a coherent editorial image field.
+
+The image field should be perceived as one visual unit.
+
+However, the field does not need to be fully enclosed.
+
+Open edges are encouraged.
+
+Partial cropping is encouraged.
+
+Large shapes may dissolve naturally into the cream background.
+
+The illustration may fade softly into the cover background.
+
+No visible frame.
+
+No border.
+
+No hard rectangular box.
+
+The image field should feel integrated into the cover design rather than placed inside it.
+
+Visual references:
+
+- Hanser Sachbuch
+- Penguin literary covers
+- Editorial magazine illustrations
+
+==================================================
 ILLUSTRATION CONCEPT
 ==================================================
 
@@ -274,34 +336,25 @@ Prefer:
 
 The viewer should understand the joke immediately.
 
-The illustration must communicate exactly one central visual joke.
+Exactly one central visual idea.
+
+One scene.
+
+One protagonist.
+
+One focal action.
 
 No secondary jokes.
 
 No hidden jokes.
 
-No visual subplots.
-
-No additional humorous details.
-
-One scene.
-
-One idea.
-
-One protagonist.
-
-One focal action.
-Composition should resemble a magazine editorial illustration rather than a narrative book illustration.
+No subplots.
 
 Static composition.
 
 Single frozen moment.
 
-No cinematic action.
-
-No dynamic perspective.
-
-No storytelling sequence.
+Editorial illustration rather than narrative illustration.
 
 ==================================================
 ILLUSTRATION STYLE
@@ -309,7 +362,7 @@ ILLUSTRATION STYLE
 
 Premium literary editorial illustration.
 
-Modern German publishing illustration.
+Modern German publishing aesthetic.
 
 Visual references:
 
@@ -318,16 +371,46 @@ Visual references:
 - Mid-century editorial illustration
 - Contemporary literary cover art
 
+Image construction:
+
 70% large tonal shapes
-20% lighting and atmosphere
+20% tonal modelling
 10% detail
 
-Use:
+Color treatment:
 
-deep navy shadows
-warm cream highlights
-soft charcoal midtones
-high tonal contrast
+Restricted editorial palette.
+
+Use only:
+
+#F1ECE2
+#E7E0D2
+#1B2340
+#5A5F72
+#B5292C
+
+Subtle tonal variation is allowed.
+
+Warm gray transitions are allowed.
+
+Cream highlights are allowed.
+
+No realistic object colors.
+
+No local color rendering.
+
+Skin is rendered in palette tones.
+
+Clothing is rendered in palette tones.
+
+Objects are rendered in palette tones.
+
+No saturated color accents.
+
+Maximum red usage:
+5%.
+
+Lighting:
 
 Strong light source.
 
@@ -335,88 +418,27 @@ Large illuminated surfaces.
 
 Large shadow masses.
 
-Soft volumetric modelling.
+Soft tonal transitions.
 
-Subtle depth.
+Subtle atmospheric depth.
 
-Elegant figure design.
-
-Refined facial simplification.
-
-Stylized realism.
-
-Not flat vector art.
-
-Not infographic style.
-
-Not corporate illustration.
-
-Not icon-like.
-
-Objects should feel sculpted through light rather than outlined.
-
-Use painterly shape transitions while remaining clean and graphic.
-
-Thumbnail readable.
-
-Premium literary publishing aesthetic.
-
-Maximum red usage:
-5%
-
-No photorealism.
-
-No sketching.
-
-No engraving.
-
-No comic style.
-
-No excessive detail.
-
-Recognizable at thumbnail size.
-
-The illustration must be contained inside one clearly defined rectangular image area.
-
-This image area has no visual border.
-
-No elements may extend beyond the rectangle.
-
-No floating objects outside the illustration frame.
-
-The illustration must read as a self-contained editorial panel.
-
-The rectangle should occupy approximately 65–75% of the illustration area.
-
-Strong visual boundaries.
-
-No open composition.
-Use clean vector-like contours.
-
-Large simplified shapes.
+Objects are defined primarily through light and shadow.
 
 Minimal internal linework.
 
-Avoid texture detail.
+Stylized realism.
 
-Avoid small decorative objects.
+Refined figure design.
 
-Avoid visual noise.
+Elegant facial simplification.
 
-Every object should be recognizable at 100 px thumbnail size.
+Painterly editorial illustration.
 
-The illustration should feel like a premium literary magazine cover rather than a business magazine illustration.
+Magazine-quality artwork.
 
-Avoid:
+Thumbnail readable.
 
-flat vector illustration
-corporate explainer style
-startup illustration style
-infographic aesthetic
-clipart appearance
-uniform lighting
-hard contour dominance
-over-simplified silhouettes
+Recognizable at 100 px height.
 
 ==================================================
 COMPOSITION RULES
@@ -426,7 +448,7 @@ One protagonist only.
 
 One environment only.
 
-Maximum 5 significant objects.
+Maximum five significant objects.
 
 No background characters.
 
@@ -442,17 +464,17 @@ No floating symbols.
 
 No conceptual icons.
 
-Illustration must feel calm and controlled.
-
 Strong silhouette readability.
 
 Large negative space.
 
-Editorial magazine illustration.
+Calm composition.
 
-Contained inside a single rectangular panel.
+Controlled composition.
 
-Immediately understandable in under 2 seconds.
+Editorial magazine aesthetic.
+
+Immediately understandable within two seconds.
 
 ==================================================
 CHARACTER
@@ -466,7 +488,7 @@ confident
 slightly self-satisfied
 intellectually amused
 
-Silhouette readable before facial details.
+Silhouette must read before facial details.
 
 ==================================================
 AUTHOR
@@ -481,7 +503,7 @@ Baseline:
 Y = 2260 px
 
 Optical tolerance:
-maximum ±2 px
+±2 px
 
 Font:
 Inter Medium
@@ -495,7 +517,7 @@ Letter spacing:
 Color:
 #1B2340
 
-Use normal capitalization.
+Normal capitalization.
 
 Never ALL CAPS.
 
@@ -509,37 +531,22 @@ Only ornament on cover.
 
 Must be mathematically centered.
 
-Absolute center:
+Center:
 
 X = 874 px
 Y = 2395 px
 
-Optical tolerance:
-maximum ±1 px
-
 Color:
 #B5292C
 
-Stroke thickness:
+Stroke:
 3 px
-
-The ornament must match the back cover ornament
-exactly in:
-
-- diamond size
-- line length
-- line thickness
-- spacing
-- visual weight
-
-No deviations allowed.
 
 --------------------------------------------------
 CENTER DIAMOND
 --------------------------------------------------
 
-Shape:
-Solid square rotated 45°
+Solid square rotated 45°.
 
 Size:
 20 × 20 px
@@ -594,7 +601,6 @@ Thickness:
 Color:
 #B5292C
 
-
 ==================================================
 LAYER ORDER
 ==================================================
@@ -624,15 +630,11 @@ No ISBN.
 
 No top ornaments.
 
-No double lines.
-
 No decorative borders.
 
 No gradients.
 
 No glossy effects.
-
-No shadows outside illustration.
 
 No 3D effects.
 
@@ -643,6 +645,36 @@ No spine.
 No back cover.
 
 No clutter.
+
+No photorealism.
+
+No AI fantasy art.
+
+No comic-book rendering.
+
+No corporate illustration.
+
+No startup illustration style.
+
+No infographic style.
+
+No clipart appearance.
+
+No multicolor illustration.
+
+No realistic object colors.
+
+No colorful clothing.
+
+No colorful interiors.
+
+No environmental color variation.
+
+No secondary accent colors.
+
+No visible illustration frame.
+
+No hard image box.
 
 ==================================================
 FINAL IMPRESSION
@@ -662,4 +694,6 @@ Minimal.
 
 Highly readable.
 
-Instantly recognizable as part of a coherent guide series.
+Part of a coherent publishing series.
+
+The illustration should feel naturally embedded into the cover rather than enclosed inside a separate rectangle.
