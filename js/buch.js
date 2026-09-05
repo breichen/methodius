@@ -796,14 +796,343 @@ function zeigeQuizErgebnis(quiz) {
         <path d="M50 24 L56.5 38.5 L72 40.5 L60.5 51 L63.5 66.5 L50 58.5 L36.5 66.5 L39.5 51 L28 40.5 L43.5 38.5 Z" fill="#fff"></path>
       </svg>
     </div>
+
     <p class="quiz-score">${anzahl}/${anzahl} Antworten richtig</p>
+
     <div class="quiz-ergebnis-text">
-      <p>Herzlichen Glückwunsch! Du bist Experte zum Thema <strong>${buch.titel}</strong>!</p>
+      <p>
+        Herzlichen Glückwunsch!
+        Du bist Experte zum Thema <strong>${buch.titel}</strong>!
+      </p>
     </div>
-    <button class="quiz-zurueck-button" id="quiz-zurueck-button" type="button">Zurück</button>
+
+    <div class="quiz-ergebnis-buttons">
+      <button
+        class="quiz-zurueck-button"
+        id="quiz-zertifikat-button"
+        type="button">
+        Zertifikat erstellen
+      </button>
+
+      <button
+        class="quiz-zurueck-button"
+        id="quiz-zurueck-button"
+        type="button">
+        Zurück
+      </button>
+    </div>
   `;
 
-  document.getElementById("quiz-zurueck-button").addEventListener("click", schliesseQuiz);
+  document
+    .getElementById("quiz-zurueck-button")
+    .addEventListener("click", schliesseQuiz);
+
+  document
+    .getElementById("quiz-zertifikat-button")
+    .addEventListener("click", () => {
+      zeigeZertifikatDialog(anzahl, quiz);
+    });
+}
+
+function zeigeZertifikatDialog(anzahl, quiz) {
+  const panel = document.getElementById("quiz-panel");
+
+  panel.innerHTML = `
+    <h3>Zertifikat erstellen</h3>
+
+    <p>
+      Bitte gib deinen Namen ein, der auf dem Zertifikat erscheinen soll.
+    </p>
+
+    <p class="quiz-zertifikat-hinweis">
+      Name des zukünftigen Zertifikatsträgers:
+    </p>
+
+    <input
+      id="zertifikat-name"
+      type="text"
+      placeholder="Max Mustermann"
+      class="quiz-name-input">
+
+    <div class="quiz-ergebnis-buttons">
+      <button
+        id="zertifikat-erstellen"
+        class="quiz-zurueck-button"
+        type="button">
+        Zertifikat herunterladen
+      </button>
+
+      <button
+        id="zertifikat-zurueck"
+        class="quiz-zurueck-button"
+        type="button">
+        Zurück
+      </button>
+    </div>
+  `;
+
+  document
+    .getElementById("zertifikat-zurueck")
+    .addEventListener("click", () => zeigeQuizErgebnis(quiz));
+
+  document
+    .getElementById("zertifikat-erstellen")
+    .addEventListener("click", () => {
+
+      const name =
+        document.getElementById("zertifikat-name").value.trim();
+
+      if (!name) {
+        alert("Bitte gib einen Namen ein.");
+        return;
+      }
+
+      erstelleZertifikat(name, anzahl);
+    });
+}
+
+const zertifikatsNummer =
+  "MI-" +
+  new Date().getFullYear() +
+  "-" +
+  Math.floor(Math.random() * 100000)
+    .toString()
+    .padStart(5, "0");
+
+function erstelleZertifikat(name, anzahl) {
+
+  const lehrgang =
+    buch.lehrgang ||
+    buch.titel ||
+    buch.slug;
+
+  const zertifikat = document.createElement("div");
+
+  zertifikat.style.width = "1200px";
+  zertifikat.style.padding = "80px";
+  zertifikat.style.background = "#f7f4ec";
+  zertifikat.style.color = "#1f2747";
+  zertifikat.style.fontFamily = "Georgia, serif";
+  zertifikat.style.border = "10px solid #c22d2d";
+  zertifikat.style.position = "fixed";
+  zertifikat.style.left = "-99999px";
+
+  zertifikat.innerHTML = `
+    <p style="font-size:14px;color:#666;">
+      Zertifikatsnummer: ${zertifikatsNummer}
+    </p>
+
+    <div style="text-align:center">
+
+      <img
+        src="assets/favicon/methodius-512x512-nobg.png"
+        alt="Methodius-Institut"
+        style="
+          width:120px;
+          height:auto;
+          margin:25px auto 35px;
+          display:block;
+        ">
+
+      <h2 style="margin-bottom:10px">
+        Methodius-Institut für angewandte Lebenswissenschaften
+      </h2>
+      <br>
+
+      <div
+        style="
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin:30px 0;
+        ">
+        
+        <div
+          style="
+            width:140px;
+            height:3px;
+            background:#B5292C;
+          ">
+        </div>
+
+        <div
+          style="
+            width:20px;
+            height:20px;
+            background:#B5292C;
+            transform:rotate(45deg);
+            margin:0 20px;
+          ">
+        </div>
+
+        <div
+          style="
+            width:140px;
+            height:3px;
+            background:#B5292C;
+          ">
+        </div>
+
+      </div>
+
+      <div
+        style="
+          font-size:72px;
+          font-weight:700;
+          letter-spacing:8px;
+          margin:30px 0 50px;
+          text-transform:uppercase;
+          color:#B5292C;
+        ">
+        Zertifikat
+      </div>
+
+      <br>
+
+      <p>Hiermit wird bestätigt, dass</p>
+
+      <h1>${name}</h1>
+
+      <p
+        style="
+          margin-top:35px;
+          margin-bottom:15px;
+          color:#666;
+        ">
+        den Lehrgang
+      </p>
+
+      <div
+        style="
+          font-size:52px;
+          font-weight:700;
+          line-height:1.15;
+
+          color:#B5292C;
+
+          max-width:900px;
+          margin:0 auto;
+
+          font-style:italic;
+        ">
+        ${lehrgang}
+      </div>
+
+      <div
+        style="
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin:25px 0 45px;
+        ">
+
+        <div style="width:100px;height:2px;background:#B5292C;"></div>
+
+        <div
+          style="
+            width:14px;
+            height:14px;
+            background:#B5292C;
+            transform:rotate(45deg);
+            margin:0 16px;
+          ">
+        </div>
+
+        <div style="width:100px;height:2px;background:#B5292C;"></div>
+
+      </div>
+
+      <p>mit der Höchstpunktzahl von</p>
+
+      <h2>${anzahl} von ${anzahl} Punkten</h2>
+
+      <p>erfolgreich abgeschlossen hat.</p>
+
+      <br>
+
+      <p>
+        Die Möglichkeit eines Nichtbestehens
+        war im Prüfungsverfahren nicht vorgesehen.
+      </p>
+
+      <p>
+        Ausgestellt durch das
+        Methodius-Institut für angewandte Lebenswissenschaften.
+      </p>
+
+      <br>
+      
+      <div
+        style="
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          margin:30px 0;
+        ">
+        
+        <div
+          style="
+            width:140px;
+            height:3px;
+            background:#B5292C;
+          ">
+        </div>
+
+        <div
+          style="
+            width:20px;
+            height:20px;
+            background:#B5292C;
+            transform:rotate(45deg);
+            margin:0 20px;
+          ">
+        </div>
+
+        <div
+          style="
+            width:140px;
+            height:3px;
+            background:#B5292C;
+          ">
+        </div>
+
+      </div>
+      
+      <br>
+
+      <div style="margin-top:80px">
+
+        <p class="autor-signatur">
+          ${AUTOR_SIGNATUR_TEXT}
+        </p>
+
+        <p class="autor-name">
+          Dr. Maximilian Methodius
+        </p>
+
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(zertifikat);
+
+  html2canvas(zertifikat, {
+    scale: 2
+  }).then(canvas => {
+
+    const link = document.createElement("a");
+
+    link.download =
+      `methodius-zertifikat-${name
+        .replace(/\s+/g, "-")
+        .toLowerCase()}.png`;
+
+    link.href = canvas.toDataURL("image/png");
+
+    link.click();
+
+    zertifikat.remove();
+  });
 }
 
 /* ============================================

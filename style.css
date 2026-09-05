@@ -1114,6 +1114,55 @@ hr {
   color: #fff;
 }
 
+.quiz-name-input {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+
+  margin: 1.5rem auto;
+
+  padding: 12px 16px;
+
+  background: transparent;
+
+  color: var(--color-text);
+
+  border: 2px solid var(--color-accent);
+
+  border-radius: 0;
+
+  font-family: var(--font-body);
+
+  font-size: 1rem;
+
+  transition:
+    border-color .15s ease,
+    box-shadow .15s ease;
+}
+
+.quiz-name-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(181, 41, 44, 0.15);
+}
+
+.quiz-name-input::placeholder {
+  color: #888;
+}
+
+.quiz-zertifikat-hinweis {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+
+  text-transform: uppercase;
+  letter-spacing: .08em;
+
+  font-size: .75rem;
+  font-weight: 600;
+
+  color: var(--color-accent);
+}
+
 /* ============================================
    RATGEBER-SHOWCASE
    ============================================ */
