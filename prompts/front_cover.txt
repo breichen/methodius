@@ -480,7 +480,11 @@ Immediately understandable within two seconds.
 CHARACTER
 ==================================================
 
-The protagonist is male with 50% probability, otherwise female.
+For each generation, independently choose exactly one protagonist: an adult woman or an adult man.
+Target probability: approximately 50% woman / 50% man across many generations.
+Do not default to male.
+The gender choice must not be inferred from the workplace, subject matter, profession, confidence, intelligence, or editorial style.
+Once chosen, make the selected gender visually unambiguous and maintain it consistently throughout the illustration.
 
 Expression:
 
