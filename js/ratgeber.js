@@ -78,10 +78,13 @@ const ratgeberRohdaten = [
   {slug: "Plötzlich Privatdetektiv - Völlig unverdächtige Leute observieren", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {slug: "Zugausfälle als Chance nutzen", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Unsinn mit wissenschaftlichen Diagrammen belegen", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
-
   {slug: "Permanente Enttäuschung dank zu hoch gesteckter Ziele", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
   {slug: "Befördert werden ohne Qualifikation", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Verwendung von KI durch Fehler vertuschen", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
+
+  {slug: "Die besten Ausreden für Verspätungen", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
+  {slug: "Wie man aus einer kleinen Aufgabe ein Großprojekt macht", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
+  {slug: "Komplimente machen, die garantiert falsch verstanden werden", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
 ];
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel, ... }-Objekte
