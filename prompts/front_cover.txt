@@ -495,6 +495,76 @@ intellectually amused
 Silhouette must read before facial details.
 
 ==================================================
+CHARACTER VARIATION RULE
+==================================================
+
+For every new image generation, create a completely different individual.
+
+Do not reuse facial features, hairstyle, age, body shape, ethnicity, clothing silhouette or proportions from previous generations.
+
+Randomize:
+
+- age (25–65)
+- face shape
+- hairstyle
+- hair texture
+- body type
+- height impression
+- clothing cut
+- posture
+- facial proportions
+
+The character must look like a unique real person.
+
+Never generate the same face twice.
+
+Avoid model-default faces.
+
+Avoid stereotypical stock-photo attractiveness.
+
+The character should appear naturally diverse across repeated generations.
+
+Generate a previously unseen individual with unique facial identity.
+
+No recurring cover-series protagonist.
+Each cover features a different person.
+
+Before creating the illustration, randomly generate a unique character profile.
+
+Randomly select:
+
+gender
+age
+hair length
+hair texture
+face shape
+nose shape
+body type
+clothing style
+posture
+facial expression
+
+The illustration must be based on this newly generated profile.
+
+Never use a default character template.
+
+Avoid recurring publishing-cover archetypes.
+
+Avoid:
+
+generic attractive woman
+generic attractive businessman
+stock-photo face
+symmetrical model face
+default AI portrait proportions
+
+Generate a unique protagonist ID internally.
+
+Character identity must be different from previous generations.
+
+Treat every cover as belonging to a different individual with a different biography and appearance.
+
+==================================================
 AUTHOR
 ==================================================
 
