@@ -85,6 +85,9 @@ const ratgeberRohdaten = [
   {slug: "Die besten Ausreden für Verspätungen", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Wie man aus einer kleinen Aufgabe ein Großprojekt macht", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Komplimente machen, die garantiert falsch verstanden werden", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
+  {slug: "E-Mails schreiben, die niemand beantworten möchte", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
+  {slug: "Wie man beim ersten Eindruck einen bleibenden Schaden hinterlässt", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
+  {slug: "Quellenangaben erfinden für Fortgeschrittene", erstellt: "", kategorie: RatgeberKategorie.MEDIEN},
 ];
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel, ... }-Objekte

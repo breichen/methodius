@@ -44,7 +44,7 @@ Wenn das Thema beispielsweise „Die besten Ausreden für Verspätungen“ laute
 
 Verwende folgende Struktur:
 
-# [Auffälliger, lustiger Titel]
+# [Titel aus dem Prompt]
 
 Direkt darunter eine kurze, pointierte Unterzeile, die das Konzept des Ratgebers erklärt. Sie beginnt mit "Der revolutionäre Ratgeber für alle, die ..." oder mit "Der ultimative Ratgeber für alle, die ...".
 
