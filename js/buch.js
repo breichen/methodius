@@ -18,6 +18,10 @@ const container = document.getElementById("buch-inhalt");
 function baueDatumsHinweis(buch) {
   const zeilen = [];
 
+  if (buch.kategorie) {
+    zeilen.push(`<p class="buch-datum">Kategorie: ${buch.kategorie}</p>`);
+  }
+
   if (buch.einsender) {
     zeilen.push(`<p class="buch-datum">Vorgeschlagen von: ${buch.einsender}</p>`);
   }
