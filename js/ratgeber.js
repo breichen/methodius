@@ -88,6 +88,8 @@ const ratgeberRohdaten = [
   {slug: "E-Mails schreiben, die niemand beantworten möchte", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Wie man beim ersten Eindruck einen bleibenden Schaden hinterlässt", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {slug: "Quellenangaben erfinden für Fortgeschrittene", erstellt: "", kategorie: RatgeberKategorie.MEDIEN},
+  {slug: "Smalltalk ohne Worte beenden", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
+  {slug: "Texte kurz und knackig halten", erstellt: "", kategorie: RatgeberKategorie.MEDIEN},
 ];
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel, ... }-Objekte
