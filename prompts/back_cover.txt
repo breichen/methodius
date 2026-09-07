@@ -100,7 +100,7 @@ Strong editorial hierarchy.
 HEADLINE
 ==================================================
 
-Headline derived from manuscript promise.
+Headline derived from manuscript promise. Must not be the title of the manuscript.
 
 Centered.
 
