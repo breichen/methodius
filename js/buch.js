@@ -19,7 +19,11 @@ function baueDatumsHinweis(buch) {
   const zeilen = [];
 
   if (buch.kategorie) {
-    zeilen.push(`<p class="buch-datum">Kategorie: ${buch.kategorie}</p>`);
+    const slug = RatgeberKategorieInfo[buch.kategorie]?.slug;
+    const kategorieHtml = slug
+      ? `<a href="alle-ratgeber.html?kategorie=${slug}">${buch.kategorie}</a>`
+      : buch.kategorie;
+    zeilen.push(`<p class="buch-datum">Kategorie: ${kategorieHtml}</p>`);
   }
 
   if (buch.einsender) {
