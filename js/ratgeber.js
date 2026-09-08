@@ -72,7 +72,7 @@ const ratgeberRohdaten = [
   {slug: "Die Kunst, am Monatsanfang schon pleite zu sein", erstellt: "2026-08-30", kategorie: RatgeberKategorie.LEBEN},
   {slug: "So beweist man, dass die globale Erwärmung erfunden ist", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
   {slug: "Sicherheit beim Bewerbungsgespräch trotz Mangel an Fachwissen", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
-  {slug: "Diskussionen gewinnen durch konsequentes Dagegenreden", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
+  {slug: "Diskussionen gewinnen durch konsequentes Dagegenreden", erstellt: "2026-08-30", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {slug: "Warum das Leben leichter ist, wenn man nichts versteht", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
   {slug: "Wie man aus Junk-Food Gourmet-Menüs bastelt", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
   {slug: "Plötzlich Privatdetektiv - Völlig unverdächtige Leute observieren", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
@@ -82,7 +82,7 @@ const ratgeberRohdaten = [
   {slug: "Befördert werden ohne Qualifikation", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Verwendung von KI durch Fehler vertuschen", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
 
-  {slug: "Die besten Ausreden für Verspätungen", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
+  {slug: "Die besten Ausreden für Verspätungen", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Wie man aus einer kleinen Aufgabe ein Großprojekt macht", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Komplimente machen, die garantiert falsch verstanden werden", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
   {slug: "E-Mails schreiben, die niemand beantworten möchte", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
