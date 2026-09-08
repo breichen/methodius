@@ -133,7 +133,7 @@ Die Kapitel sollen dabei nicht wie voneinander unabhängige Witze wirken, sonder
 ----------
 
 
-# BONUS: Der große [THEMA]-Test
+# BONUS: Der große [Thema]-Test
 
 Füge am Ende einen kurzen Multiple-Choice-Test ein.
 
@@ -207,7 +207,7 @@ Stattdessen soll der Test mit einer kurzen, pointierten Erkenntnis enden, die si
 
 Zum Beispiel:
 
-**Herzlichen Glückwunsch!**
+Wenn du alle Fragen beantworten kannst: **Herzlichen Glückwunsch!**
 
 Du hast soeben bewiesen, dass es nicht darauf ankommt, das Problem zu lösen.
 
@@ -215,15 +215,15 @@ Es kommt darauf an, **eine überzeugende Erklärung dafür zu haben, warum das P
 
 Oder:
 
-**Herzlichen Glückwunsch!**
+Egal, was du angekreuzt hast: **Herzlichen Glückwunsch!**
 
-Egal, was du angekreuzt hast – du hast alles richtig gemacht.
-
-Genau das ist schließlich die wichtigste Erkenntnis dieses Ratgebers.
+Du hast alles richtig gemacht. Genau das ist schließlich die wichtigste Erkenntnis dieses Ratgebers.
 
 **Du bist bereit für die Praxis.**
 
-Die konkrete Auswertung soll immer **individuell zum Thema des Ratgebers passen** und dessen zentrale satirische Grundidee noch einmal auf den Punkt bringen.
+Die konkrete Auswertung soll immer **individuell zum Thema des Ratgebers passen** und dessen zentrale satirische Grundidee noch einmal knapp auf den Punkt bringen.
+
+dieser Text steht direkt nach dem Quiz, ohne eigene Überschrift.
 
 ----------
 
