@@ -45,7 +45,7 @@ const ratgeberRohdaten = [
   {slug: "KI (gar nicht) sicher nutzen", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
   {slug: "Smalltalk für Fortgeschrittene", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {slug: "Stress reduzieren durch Faulheit", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
-  {slug: "Intelligent werden mit KI", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
+  {slug: "Intelligent werden mit KI", erstellt: "2026-08-30", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
   {slug: "Muskelkater ohne Training", erstellt: "2026-08-30", kategorie: RatgeberKategorie.LEBEN},
   {slug: "Erfolgreich werden ohne Leistung", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Aluhüte im Alltag richtig verwenden", erstellt: "2026-08-30", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
@@ -82,6 +82,7 @@ const ratgeberRohdaten = [
   {slug: "Befördert werden ohne Qualifikation", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Verwendung von KI durch Fehler vertuschen", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
 
+  {slug: "Wie man jedes Buch als gesellschaftskritisch interpretiert", erstellt: "", kategorie: RatgeberKategorie.KUNST_KULTUR},
   {slug: "Die besten Ausreden für Verspätungen", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Wie man aus einer kleinen Aufgabe ein Großprojekt macht", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Komplimente machen, die garantiert falsch verstanden werden", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
