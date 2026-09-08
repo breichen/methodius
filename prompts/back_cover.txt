@@ -576,7 +576,6 @@ No 3D effects.
 No glossy effects.
 No mockup.
 No publisher logo.
-No barcode.
 No marketing stickers.
 No bestseller badge.
 No decorative borders.
