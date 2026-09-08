@@ -84,6 +84,7 @@ const ratgeberRohdaten = [
 
   {slug: "Kunstkritiker werden in nur 15 Minuten", erstellt: "", kategorie: RatgeberKategorie.KUNST_KULTUR},
   {slug: "Wie man jedes Buch als gesellschaftskritisch interpretiert", erstellt: "", kategorie: RatgeberKategorie.KUNST_KULTUR},
+  {slug: "Meisterwerke erkennen am Preisetikett", erstellt: "", kategorie: RatgeberKategorie.KUNST_KULTUR},
   {slug: "Die besten Ausreden für Verspätungen", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Wie man aus einer kleinen Aufgabe ein Großprojekt macht", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Komplimente machen, die garantiert falsch verstanden werden", erstellt: "", kategorie: RatgeberKategorie.LEBEN},

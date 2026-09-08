@@ -318,6 +318,76 @@ Denn manchmal ist die beste technische Lösung nicht die komplizierteste. Manchm
 
 ---
 
+# BONUS: Der große Passwort-Effizienz-Test
+
+### 1. Wie viele Passwörter brauchst du nach der Methodius-Methode?
+
+☐ Eines.  
+☐ Ein Hauptpasswort und ein Ersatzpasswort für den Fall, dass du das Hauptpasswort vergisst.  
+☐ Eines, das du bei Bedarf leicht abwandelst.
+
+### 2. Was machst du, wenn eine Website dein Passwort nicht akzeptiert?
+
+☐ Du verwendest eine minimale Variation und bleibst dem Grundprinzip treu.  
+☐ Du erklärst, dass die Website das Konzept der Einfachheit noch nicht verstanden hat.  
+☐ Du legst ein neues Konto an und verwendest dort wieder dein Passwort.
+
+### 3. Du hast dein Passwort vergessen. Was ist zu tun?
+
+☐ Kurz nachdenken, bis es wieder einfällt.  
+☐ Auf „Passwort vergessen?“ klicken und anschließend wieder dasselbe Passwort verwenden.  
+☐ Feststellen, dass man sich immerhin nur ein Passwort merken muss.
+
+### 4. Was macht ein gutes Passwort besonders wertvoll?
+
+☐ Dass es kompliziert genug aussieht, um wichtig zu wirken.  
+☐ Dass du es dir merken kannst, ohne dein gesamtes Gedächtnis zu belasten.  
+☐ Dass du es überall einsetzen kannst.
+
+### 5. Du erstellst ein neues Online-Konto. Was ist dein nächster Schritt?
+
+☐ Das bewährte Passwort verwenden.  
+☐ Nicht lange überlegen, weil die Entscheidung bereits vor Jahren getroffen wurde.  
+☐ Das Passwort erneut eingeben und damit die digitale Einheitlichkeit stärken.
+
+### 6. Warum sind 20 verschiedene Passwörter problematisch?
+
+☐ Weil du dir 20 verschiedene Dinge merken musst.  
+☐ Weil irgendwann unklar wird, welches Passwort zu welchem Konto gehört.  
+☐ Weil dadurch unnötig viel persönliche Organisation entsteht.
+
+### 7. Was ist der größte Vorteil eines einzigen Passworts?
+
+☐ Du musst nur eine Zeichenfolge kennen.  
+☐ Du kannst dich bei der Eingabe auf eine einzige vertraute Lösung konzentrieren.  
+☐ Du ersparst dir die tägliche Frage, welches Passwort diesmal gemeint ist.
+
+### 8. Ein Passwort funktioniert plötzlich bei einem Dienst nicht.
+
+☐ Du passt das Passwort geringfügig an und verwendest weiterhin dasselbe Grundmuster.  
+☐ Du betrachtest die Anforderung als unnötige Komplikation.  
+☐ Du suchst eine möglichst elegante Variante, die weiterhin leicht zu merken ist.
+
+### 9. Was beschreibt die Passwort-Philosophie am besten?
+
+☐ Weniger Passwörter bedeuten weniger Verwirrung.  
+☐ Ein einziges Passwort schafft maximale Übersicht.  
+☐ Warum kompliziert erinnern, wenn einfach merken genügt?
+
+### 10. Du hast am Ende dieses Ratgebers noch 17 verschiedene Passwörter.
+
+☐ Du beginnst mit der Vereinfachung.  
+☐ Du fragst dich, welches davon wirklich notwendig ist.  
+☐ Du erkennst, dass 17 Passwörter eigentlich 16 zu viel sein könnten.
+
+Egal, was du angekreuzt hast: **Herzlichen Glückwunsch!**
+
+Du hast das wichtigste Prinzip verstanden. Es geht nicht darum, möglichst viele Passwörter zu kennen. Es geht darum, **möglichst wenig darüber nachdenken zu müssen**.
+
+Du hast damit einen entscheidenden Schritt in Richtung digitaler Einfachheit gemacht. Jetzt fehlt nur noch eines: **Dein Passwort.** Und du weißt bereits, welches.
+
+---
+
 **Dr. Maximilian Methodius**
 
 *Autor, Passwortoptimierer und überzeugter Verfechter einer Welt, in der niemand mehr 37 verschiedene Passwörter auf einen Zettel schreiben muss.*
