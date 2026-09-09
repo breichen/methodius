@@ -389,6 +389,19 @@ h3 {
   margin-top: 40px;
 }
 
+:root {
+  --cover-border: rgba(27, 35, 64, 0.18);
+  --cover-border-hover: rgba(27, 35, 64, 0.20);
+
+  --cover-shadow-base:
+    0 1px 0 rgba(27, 35, 64, 0.08),
+    0 2px 5px rgba(27, 35, 64, 0.12);
+
+  --cover-shadow-base-hover:
+    0 1px 0 rgba(27, 35, 64, 0.10),
+    0 4px 8px rgba(27, 35, 64, 0.16);
+}
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -401,13 +414,10 @@ h3 {
   height: auto;
 
   border-radius: 0;
-  border: 1px solid rgba(27, 35, 64, 0.18);
+  border: 1px solid var(--cover-border);
 
-  /* Kombination aus enger "Kontaktschattierung" (macht die Kante
-     sichtbar) und weiterem, weichem Schatten (sorgt für Tiefe) */
   box-shadow:
-    0 1px 0 rgba(27, 35, 64, 0.08),
-    0 2px 5px rgba(27, 35, 64, 0.12),
+    var(--cover-shadow-base),
     0 8px 18px rgba(27, 35, 64, 0.14);
 
   display: block;
@@ -420,8 +430,7 @@ h3 {
 
 .book-card:hover img {
   box-shadow:
-    0 1px 0 rgba(27, 35, 64, 0.10),
-    0 4px 8px rgba(27, 35, 64, 0.16),
+    var(--cover-shadow-base-hover),
     0 16px 30px rgba(27, 35, 64, 0.18);
 }
 
@@ -508,12 +517,11 @@ h3 {
   max-width: 370px;
   height: auto;
 
-  border: 1px solid rgba(27, 35, 64, .18);
+  border: 1px solid var(--cover-border);
 
   box-shadow:
-    0 1px 0 rgba(27, 35, 64, .08),
-    0 2px 5px rgba(27, 35, 64, .12),
-    0 8px 18px rgba(27, 35, 64, .14);
+    var(--cover-shadow-base),
+    0 8px 18px rgba(27, 35, 64, 0.14);
 
   display: block;
 
@@ -1264,11 +1272,10 @@ hr {
 
   height: auto;
 
-  border: 1px solid rgba(27, 35, 64, 0.18);
+  border: 1px solid var(--cover-border);
 
   box-shadow:
-    0 1px 0 rgba(27, 35, 64, 0.08),
-    0 2px 5px rgba(27, 35, 64, 0.12),
+    var(--cover-shadow-base),
     0 10px 24px rgba(27, 35, 64, 0.16);
 
   transition:
@@ -1281,9 +1288,10 @@ hr {
 
   opacity: 0.92;
 
+  border-color: var(--cover-border-hover);
+
   box-shadow:
-    0 1px 0 rgba(27, 35, 64, 0.10),
-    0 4px 8px rgba(27, 35, 64, 0.16),
+    var(--cover-shadow-base-hover),
     0 18px 34px rgba(27, 35, 64, 0.20);
 
 }
