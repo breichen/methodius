@@ -4,6 +4,11 @@ import os
 import random
 
 from PIL import Image, ImageDraw
+from tempfile import NamedTemporaryFile
+from barcode import EAN13
+from barcode.writer import ImageWriter
+
+used_isbns = set()
 
 
 def add_corner_area(
@@ -38,85 +43,106 @@ def add_corner_area(
 
 
 def generate_isbn13():
-    digits = [9, 7, 8, 3]
+    while True:
+        digits = [9, 7, 8, 3]
 
-    digits += [random.randint(0, 9) for _ in range(8)]
+        digits += [random.randint(0, 9) for _ in range(8)]
 
-    total = 0
+        total = 0
 
-    for i, digit in enumerate(digits):
-        total += digit if i % 2 == 0 else digit * 3
+        for i, digit in enumerate(digits):
+            total += digit if i % 2 == 0 else digit * 3
 
-    checksum = (10 - (total % 10)) % 10
+        checksum = (10 - (total % 10)) % 10
 
-    digits.append(checksum)
+        isbn = "".join(map(str, digits)) + str(checksum)
 
-    return "".join(map(str, digits))
+        if isbn not in used_isbns:
+            used_isbns.add(isbn)
+            return isbn
 
 
 def draw_barcode(cover):
-    draw = ImageDraw.Draw(cover)
-
-    cover_width, cover_height = cover.size
-
-    box_width = int(cover_width * 0.16)
-    box_height = int(box_width * 0.58)
-
-    margin = int(cover_width * 0.035)
-
-    x0 = cover_width - margin - box_width
-    y0 = cover_height - margin - box_height
-
-    x1 = x0 + box_width
-    y1 = y0 + box_height
-
-    navy = (27, 35, 64)
-
-    draw.rectangle(
-        [x0, y0, x1, y1],
-        fill="white",
-        outline=navy,
-        width=2
-    )
 
     isbn = generate_isbn13()
 
-    bars_left = x0 + 14
-    bars_right = x1 - 14
+    with NamedTemporaryFile(suffix=".png", delete=False) as tmp:
 
-    bars_top = y0 + 10
-    bars_bottom = y0 + int(box_height * 0.72)
+        barcode = EAN13(
+            isbn[:-1],
+            writer=ImageWriter()
+        )
 
-    x = bars_left
+        barcode.save(
+            tmp.name[:-4],
+            options={
+                "module_width": 0.26,
+                "module_height": 12,
+                "quiet_zone": 3.5,
+                "font_size": 9,
+                "text_distance": 4,
+                "write_text": True,
+                "dpi": 300,
+            }
+        )
 
-    while x < bars_right:
+        barcode_path = tmp.name
 
-        if random.random() < 0.48:
+    barcode_img = Image.open(barcode_path).convert("RGBA")
 
-            bar_width = random.choice(
-                [1, 1, 1, 2, 2, 2, 3]
-            )
+    padding_x = 2
+    padding_top = 6
+    padding_bottom = 0
 
-            draw.rectangle(
-                [x, bars_top, x + bar_width, bars_bottom],
-                fill=navy
-            )
+    BARCODE_SCALE = 0.45
+    
+    barcode_img = barcode_img.resize(
+        (
+            int(barcode_img.width * BARCODE_SCALE),
+            int(barcode_img.height * BARCODE_SCALE)
+        ),
+        Image.LANCZOS
+    )
+    
+    box_width = barcode_img.width + padding_x * 2
+    box_height = barcode_img.height + padding_top + padding_bottom
 
-        x += random.choice([2, 3, 4])
-
-    isbn_text = (
-        f"{isbn[:3]}-"
-        f"{isbn[3]}-"
-        f"{isbn[4:6]}-"
-        f"{isbn[6:11]}-"
-        f"{isbn[11:]}"
+    barcode_box = Image.new(
+        "RGBA",
+        (box_width, box_height),
+        (255, 255, 255, 255)
+    )
+    
+    barcode_box.alpha_composite(
+        barcode_img,
+        (padding_x, padding_top)
     )
 
-    draw.text(
-        (x0 + 18, bars_bottom + 6),
-        isbn_text,
-        fill=navy
+    draw = ImageDraw.Draw(barcode_box)
+
+    draw.rectangle(
+        [0, 0, box_width - 1, box_height - 1],
+        outline=(27, 35, 64),
+        width=2
     )
+
+    cover_width, cover_height = cover.size
+
+    margin_right = 55
+    margin_bottom = 55
+
+    x = cover_width - margin_right - box_width
+    y = cover_height - margin_bottom - box_height
+
+    cover.alpha_composite(
+        barcode_box,
+        (x, y)
+    )
+
+    try:
+        os.remove(barcode_path)
+    except OSError:
+        pass
 
     return cover
 
