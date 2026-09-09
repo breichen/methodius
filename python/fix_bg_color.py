@@ -109,8 +109,8 @@ def parse_args():
 def main():
     args = parse_args()
 
-    source_dir = f"../pics/ratgeber-{args.type}-nologo"
-    target_dir = f"../pics/ratgeber-{args.type}-nologo-normalized"
+    source_dir = f"../pics/ratgeber-{args.type}-raw"
+    target_dir = f"../pics/ratgeber-{args.type}-nologo"
 
     os.makedirs(target_dir, exist_ok=True)
 
