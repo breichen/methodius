@@ -1,0 +1,206 @@
+Ich betreibe eine satirische Website des fiktiven „Methodius-Instituts für Lebenswissenschaften“. Die Seite gibt sich den Anschein einer seriösen wissenschaftlichen Institution, deren Forschung, Ratgeber und Kommunikation jedoch bewusst wissenschaftlich fragwürdig, überinterpretierend und teilweise absurd sind.
+
+Ich gebe dir einen oder mehrere Ratgeber. Erstelle für JEDEN Ratgeber eine eigene Kommentar-Section als Markdown-Text.
+
+## Grundprinzip der Kommentar-Sections
+
+Die Kommentare sollen wie echte Diskussionen unter einem Artikel wirken, aber den satirischen Charakter der Website verstärken.
+
+Vor jedem Kommentar steht immer:
+
+[Name | Hierarchie-Level]
+
+Das Hierarchie-Level ist eine ganze Zahl:
+- 0 = direkter Kommentar zum Artikel
+- 1 = Antwort auf den vorherigen Kommentar
+- 2 = Antwort auf die Antwort
+- usw.
+
+Beispiel:
+
+[Unbedacht | 0]
+
+Ich möchte darauf hinweisen, dass gezielter Muskelabbau nach meinem Kenntnisstand nicht als sinnvolle Methode zur Gewichtsreduktion gilt.
+
+[Redaktion | 1]
+
+Vielen Dank für Ihren Hinweis. Wir haben ihn zur Kenntnis genommen und uns entschieden, den Ratgeber trotzdem zu veröffentlichen.
+
+Die Kommentare sollen nicht bloß einzelne Gags sein, sondern kleine Threads mit nachvollziehbarer Dynamik. Nicht jeder Kommentar muss auf einen sachlichen Fehler hinweisen; die Unterhaltung zwischen den Figuren ist selbst Teil der Satire.
+
+## Die Rollen
+
+### Unbedacht
+
+Unbedacht ist der wissenschaftliche Beirat des Instituts.
+
+Er kommentiert grundsätzlich JEDEN Ratgeber mindestens einmal.
+
+Er ist kritisch, pedantisch und grundsätzlich wissenschaftlich orientiert. Er weist auf:
+- unklare oder unschlüssige Formulierungen,
+- logische Fehler,
+- unbelegte Behauptungen,
+- fehlende Definitionen,
+- falsche Schlussfolgerungen,
+- methodische Probleme
+hin.
+
+Manchmal ist er dabei auch naiv und erkennt die Satire oder offensichtliche Absurdität nicht vollständig.
+
+Seine Einwände sollen häufig völlig berechtigt sein, aber von der Redaktion nicht wirklich berücksichtigt werden.
+
+Unbedacht darf auch sehr konkrete Nachfragen stellen, worauf die Redaktion dann ausweichend antwortet.
+
+### Huber
+
+Dr. Konrad P. Huber ist der Statistiker des Instituts.
+
+Er muss NICHT in jedem Ratgeber vorkommen.
+
+Wenn der Ratgeber statistische Aussagen, Zahlen, Wahrscheinlichkeiten, Studien, Korrelationen oder empirische Behauptungen enthält, kann Huber diese kommentieren.
+
+Besonders lustig ist es, wenn er klarstellt, dass eine statistische Aussage zwar auf Daten von ihm zurückgeht, aber im Ratgeber anders dargestellt wurde als ursprünglich gemeint.
+
+Beispielsweise kann er sinngemäß sagen:
+„Ich möchte darauf hinweisen, dass ich diese Zahl ursprünglich anders interpretiert hatte.“
+
+Er kann aber auch Aussagen kommentieren, an deren Entstehung er gar nicht beteiligt war.
+
+Huber soll statistisch kompetent wirken, aber gelegentlich etwas zu trocken oder pedantisch sein.
+
+Er muss nicht immer den Artikel vollständig widerlegen. Manchmal reicht eine kleine statistische Präzisierung, die den Gag verstärkt.
+
+### Wankelmuth
+
+Prof. Dr. Hildegard Wankelmuth beschäftigt sich mit:
+- der kontrollierten Überinterpretation alltäglicher Verhaltensweisen,
+- wissenschaftlich fragwürdigen Erklärungen,
+- der Entwicklung wissenschaftlich fragwürdiger Behandlungsmethoden.
+
+Sie ist eine besonders wichtige satirische Figur.
+
+Bei den MEISTEN Ratgebern soll sie zunächst sehr positiv auf eine Idee reagieren und deren wissenschaftliches oder psychologisches Potenzial überhöhen.
+
+Danach antwortet sie auf ihren eigenen Kommentar und relativiert ihre Aussage.
+
+Diese Selbstantwort beginnt IMMER mit:
+
+„Wobei“
+
+Beispiel:
+
+[Wankelmuth | 0]
+
+Ich finde den Ansatz ausgesprochen interessant. Die konsequente Neubewertung von Muskelmasse als eigentlich überflüssigem Ballast könnte Menschen helfen, sich von unrealistischen Vorstellungen körperlicher Leistungsfähigkeit zu lösen.
+
+[Wankelmuth | 1]
+
+Wobei man vielleicht erwähnen sollte, dass der Verlust von Muskelmasse langfristig gewisse Nebenwirkungen haben könnte. Zum Beispiel weniger Muskeln.
+
+Die Selbstrelativierung darf unterschiedlich stark ausfallen. Sie kann:
+- eine offensichtliche Schwäche des Ansatzes nennen,
+- eine alternative Erklärung liefern,
+- eine absurd vorsichtige Einschränkung machen,
+- eine wissenschaftlich fragwürdige Behandlung vorschlagen,
+- oder die ursprüngliche Aussage durch eine noch absurdere Interpretation ersetzen.
+
+Wankelmuth soll NICHT einfach sich selbst loben. Sie darf vielmehr zeigen, dass sie an der Entwicklung einer Idee oder Behandlung beteiligt war, wenn das thematisch passt.
+
+### Redaktion
+
+Die Redaktion spricht im Namen des Instituts.
+
+Sie antwortet vor allem auf Unbedachts Kommentare, kann aber auch auf Huber, Wankelmuth oder andere Kommentare reagieren.
+
+Die Redaktion ist:
+- höflich,
+- professionell,
+- freundlich formuliert,
+- aber auffällig uninteressiert daran, berechtigte Kritik tatsächlich umzusetzen.
+
+Typische Reaktionen sind:
+- „Vielen Dank für den Hinweis.“
+- „Wir haben Ihre Anmerkung zur Kenntnis genommen.“
+- „Wir werden dies intern prüfen.“
+- „Wir haben uns dennoch entschieden, den Ratgeber in der vorliegenden Form zu veröffentlichen.“
+
+Besonders gut ist es, wenn die Redaktion einen völlig berechtigten Einwand formal anerkennt, anschließend aber aus einem absurden Grund nichts verändert.
+
+Die Redaktion darf Kritik auch semantisch umgehen, indem sie einen nebensächlichen Aspekt der Kritik beantwortet und den eigentlichen Einwand ignoriert.
+
+Beispiel:
+
+[Unbedacht | 0]
+
+Die vorgeschlagene Methode scheint das eigentliche Problem nicht zu lösen.
+
+[Redaktion | 1]
+
+Vielen Dank. Wir freuen uns, dass Ihnen aufgefallen ist, dass die Methode sehr einfach umzusetzen ist.
+
+### Methodius
+
+Dr. Maximilian Methodius ist Institutsleiter und Verfasser der Ratgeber.
+
+Er kommentiert unter seinem eigenen Account nur SEHR selten.
+
+Normalerweise wird seine Position bereits durch die Redaktion vertreten.
+
+Wenn Methodius auftaucht, soll sein Kommentar deshalb einen besonderen Effekt haben. Er kann beispielsweise:
+- eine völlig absurde Aussage mit großer wissenschaftlicher Selbstsicherheit verteidigen,
+- einen nebensächlichen Aspekt des Ratgebers erläutern,
+- eine übertriebene institutionelle Selbstsicherheit zeigen,
+- oder einen Kommentar verfassen, der erkennen lässt, warum die Redaktion so reagiert.
+
+Methodius sollte NICHT in jedem Ratgeber auftauchen.
+
+## Thread-Dynamik
+
+Erstelle pro Ratgeber typischerweise 2–4 kleine Threads bzw. etwa 5–10 Kommentare insgesamt. Die Länge darf je nach Ratgeber variieren.
+
+Die Threads sollen abwechslungsreich sein.
+
+Bevorzuge:
+- Unbedacht → Redaktion
+- Wankelmuth → Wankelmuth
+- Unbedacht → Redaktion → Unbedacht
+- Huber → Redaktion
+- Wankelmuth → Unbedacht
+- Unbedacht → Redaktion → Huber
+- gelegentlich Methodius als überraschenden Abschluss
+
+Nicht jeder Thread muss alle Rollen enthalten.
+
+Vermeide ein starres Muster, bei dem immer dieselben Rollen in derselben Reihenfolge auftreten.
+
+## Satirischer Stil
+
+Der Humor soll trocken, bürokratisch und wissenschaftlich klingen.
+
+Die Figuren sollen ihre Aussagen möglichst ernst meinen. Die Satire entsteht dadurch, dass:
+1. Unbedacht vernünftige Einwände vorbringt,
+2. die Redaktion diese höflich ignoriert,
+3. Wankelmuth absurde Alltagsbeobachtungen wissenschaftlich überhöht,
+4. Huber statistische Präzision in eine ansonsten völlig absurde Diskussion bringt,
+5. Methodius gelegentlich die institutionelle Absurdität mit großer Selbstsicherheit bestätigt.
+
+Vermeide zu offensichtliche Punchlines, Slapstick und moderne Meme-Sprache. Die Kommentare sollen möglichst wie echte Kommentare einer leicht absurden wissenschaftlichen Institution wirken.
+
+## Wichtig
+
+- Unbedacht MUSS jeden Ratgeber kommentieren.
+- Huber nur, wenn Statistik oder empirische Aussagen einen sinnvollen Ansatzpunkt bieten.
+- Wankelmuth soll bei den meisten Ratgebern vorkommen.
+- Wenn Wankelmuth auf ihren eigenen Kommentar antwortet, MUSS diese Antwort mit „Wobei“ beginnen.
+- Methodius nur selten.
+- Die Redaktion darf berechtigte Kritik nicht plötzlich ernsthaft umsetzen.
+- Die Kommentare sollen den jeweiligen Inhalt des konkreten Ratgebers aufgreifen und nicht wie austauschbare Standardkommentare wirken.
+- Erfinde keine zusätzlichen Fakten, die für den Ratgeber nicht benötigt werden.
+- Die Satire darf wissenschaftliche Fragwürdigkeit deutlich überzeichnen.
+- Gib ausschließlich die fertigen Markdown-Kommentare aus, ohne Vorbemerkung oder Erläuterung.
+
+## Eingabe
+
+Eingabe: Die zu kommentierenden Ratgeber werden als Datei/Anhang bereitgestellt. Lies sämtliche enthaltenen Ratgeber vollständig und erstelle für jeden einzelnen Ratgeber einen eigenen Kommentarbereich. Verwende die Inhalte der Ratgeber als Grundlage für die Kommentare und gehe dabei konkret auf Thema, Argumentation, Formulierungen und gegebenenfalls erkennbare Schwachstellen des jeweiligen Ratgebers ein.
+
+Arbeitsgrundlage: Die im Anhang bereitgestellten Ratgeber.

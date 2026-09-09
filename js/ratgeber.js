@@ -81,7 +81,6 @@ const ratgeberRohdaten = [
   {slug: "Permanente Enttäuschung dank zu hoch gesteckter Ziele", erstellt: "2026-08-30", kategorie: RatgeberKategorie.LEBEN},
   {slug: "Befördert werden ohne Qualifikation", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Verwendung von KI durch Fehler vertuschen", erstellt: "2026-08-30", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
-
   {slug: "Kunstkritiker werden in nur 15 Minuten", erstellt: "", kategorie: RatgeberKategorie.KUNST_KULTUR},
   {slug: "Wie man jedes Buch als gesellschaftskritisch interpretiert", erstellt: "", kategorie: RatgeberKategorie.KUNST_KULTUR},
   {slug: "Meisterwerke erkennen am Preisetikett", erstellt: "", kategorie: RatgeberKategorie.KUNST_KULTUR},
