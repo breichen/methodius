@@ -508,11 +508,12 @@ h3 {
   max-width: 370px;
   height: auto;
 
-  border: 1px solid rgba(27, 35, 64, .08);
+  border: 1px solid rgba(27, 35, 64, .18);
 
   box-shadow:
-    0 4px 10px rgba(27, 35, 64, .08),
-    0 1px 2px rgba(27, 35, 64, .06);
+    0 1px 0 rgba(27, 35, 64, .08),
+    0 2px 5px rgba(27, 35, 64, .12),
+    0 8px 18px rgba(27, 35, 64, .14);
 
   display: block;
 
