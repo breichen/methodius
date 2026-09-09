@@ -358,9 +358,7 @@ Understated.
 BARCODE
 ==================================================
 
-Professional retail barcode.
-
-Mandatory.
+Will be added in postproduction. But leave space for it.
 
 Position:
 
@@ -377,48 +375,6 @@ Width:
 
 Height:
 145 px
-
-Background:
-#FFFFFF
-
-Border:
-2 px
-
-Border color:
-#1B2340
-
-Padding inside box:
-10 px
-
-Barcode centered inside box.
-
-Include:
-
-- machine-readable bars
-- ISBN digits below bars
-
-Typography:
-
-Inter Medium
-
-Size:
-18 px
-
-Color:
-#1B2340
-
-The barcode must appear exactly like a
-professionally printed bookstore barcode.
-
-No stylization.
-
-No shadows.
-
-No rounded corners.
-
-No perspective.
-
-No transparent background.
 
 ==================================================
 BOTTOM ORNAMENT
