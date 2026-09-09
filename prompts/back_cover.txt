@@ -100,7 +100,9 @@ Strong editorial hierarchy.
 HEADLINE
 ==================================================
 
-Headline derived from manuscript promise. Must not be the title of the manuscript.
+Headline derived from manuscript promise.
+
+The headline must not be the title of the manuscript. It shall be a new slogan fitting the manuscript.
 
 Centered.
 
@@ -355,10 +357,12 @@ Memorable.
 Understated.
 
 ==================================================
-BARCODE
+RIGHT BOTTOM AREA
 ==================================================
 
 Will be added in postproduction. But leave space for it.
+
+No barcode placeholder!
 
 Position:
 
@@ -368,7 +372,7 @@ X = 1615 px
 Bottom edge:
 Y = 2395 px
 
-Barcode box size:
+Minimum reserved box size:
 
 Width:
 250 px
