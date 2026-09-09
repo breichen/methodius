@@ -518,7 +518,7 @@ Color:
 BOTTOM AREA
 ==================================================
 
-Barcode only.
+No barcode.
 
 No publisher logo.
 
@@ -530,15 +530,7 @@ No ISBN block outside barcode.
 
 No additional ornaments.
 
-Minimum distance:
-
-Barcode bottom to trim:
-55 px
-
-Barcode right side to trim:
-55 px
-
-Maintain large whitespace around barcode.
+Leave the lower right area as well as the lower left area completely empty. Do not place any text, ornaments, graphics or decorative elements in the bottom-right corner. Reserve sufficient whitespace for a logo and a barcode to be added in post-production.
 
 
 ==================================================
@@ -575,6 +567,7 @@ No embossing.
 No 3D effects.
 No glossy effects.
 No mockup.
+No barcode.
 No publisher logo.
 No marketing stickers.
 No bestseller badge.
