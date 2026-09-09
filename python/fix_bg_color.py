@@ -1,12 +1,10 @@
+import argparse
 import glob
 import math
 import os
 
 from PIL import Image
 
-
-SOURCE_DIR = "../pics/ratgeber-back-nologo"
-TARGET_DIR = "../pics/ratgeber-back-nologo-normalized"
 
 TARGET_COLOR = (241, 236, 226)
 
@@ -15,8 +13,6 @@ TARGET_COLOR = (241, 236, 226)
 # 25 = meist sinnvoll
 # 30 = aggressiver
 THRESHOLD = 25
-
-os.makedirs(TARGET_DIR, exist_ok=True)
 
 
 def color_distance(c1, c2):
@@ -48,7 +44,7 @@ def normalize_background(img):
     return img, replaced
 
 
-def process_file(path):
+def process_file(path, target_dir):
 
     filename = os.path.basename(path)
 
@@ -57,7 +53,7 @@ def process_file(path):
     img, replaced = normalize_background(img)
 
     output_path = os.path.join(
-        TARGET_DIR,
+        target_dir,
         filename
     )
 
@@ -73,22 +69,75 @@ def process_file(path):
     )
 
 
-def main():
+def get_all_cover_names(source_dir):
+    pattern = os.path.join(source_dir, "*.png")
 
-    files = sorted(
-        glob.glob(
-            os.path.join(SOURCE_DIR, "*.png")
+    return [
+        os.path.splitext(os.path.basename(path))[0]
+        for path in sorted(glob.glob(pattern))
+    ]
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description=(
+            "Normalisiert die Hintergrundfarbe eines Covers "
+            "(oder aller Cover)."
         )
     )
 
-    if not files:
-        print("Keine PNG-Dateien gefunden.")
-        return
+    parser.add_argument(
+        "type",
+        choices=["front", "back"],
+        help='Cover-Typ: "front" oder "back".'
+    )
+
+    parser.add_argument(
+        "name",
+        nargs="?",
+        default="*",
+        help=(
+            'Name des Covers (ohne .png-Endung). '
+            'Ohne Angabe (oder "*") wird der komplette Ordner '
+            'verarbeitet.'
+        )
+    )
+
+    return parser.parse_args()
+
+
+def main():
+    args = parse_args()
+
+    source_dir = f"../pics/ratgeber-{args.type}-nologo"
+    target_dir = f"../pics/ratgeber-{args.type}-nologo-normalized"
+
+    os.makedirs(target_dir, exist_ok=True)
+
+    if args.name == "*":
+        cover_names = get_all_cover_names(source_dir)
+
+        if not cover_names:
+            print("Keine PNG-Dateien gefunden.")
+            return
+
+        files = [
+            os.path.join(source_dir, f"{name}.png")
+            for name in cover_names
+        ]
+    else:
+        path = os.path.join(source_dir, f"{args.name}.png")
+
+        if not os.path.isfile(path):
+            print(f"Datei nicht gefunden: {path}")
+            return
+
+        files = [path]
 
     print(f"{len(files)} Dateien gefunden.\n")
 
     for path in files:
-        process_file(path)
+        process_file(path, target_dir)
 
     print("\nFertig.")
 
