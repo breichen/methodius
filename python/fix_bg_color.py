@@ -5,7 +5,7 @@ import os
 from PIL import Image
 
 
-SOURCE_DIR = "../pics/ratgeber-back-nologo-removed-barcode"
+SOURCE_DIR = "../pics/ratgeber-back-nologo"
 TARGET_DIR = "../pics/ratgeber-back-nologo-normalized"
 
 TARGET_COLOR = (241, 236, 226)
