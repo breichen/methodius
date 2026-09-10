@@ -59,37 +59,6 @@ def normalize_background(img):
 used_isbns = set()
 
 
-def add_corner_area(
-    cover,
-    area,
-    color=(0xE7, 0xE0, 0xD2, 255),
-    crease_color=(199, 190, 172, 255)
-):
-    cover_width, cover_height = cover.size
-    flap_size = int(cover_width * area)
-
-    if flap_size <= 0:
-        return cover
-
-    overlay = Image.new("RGBA", cover.size, (0, 0, 0, 0))
-    draw = ImageDraw.Draw(overlay)
-
-    p1 = (0, cover_height - flap_size)
-    p2 = (0, cover_height)
-    p3 = (flap_size, cover_height)
-
-    draw.polygon([p1, p2, p3], fill=color)
-
-    draw.line(
-        [p1, p3],
-        fill=crease_color,
-        width=max(1, int(flap_size * 0.015))
-    )
-
-    cover.alpha_composite(overlay)
-    return cover
-
-
 def generate_isbn13():
     while True:
         digits = [9, 7, 8, 3]
@@ -195,20 +164,16 @@ def draw_barcode(cover):
     return cover
 
 
-def add_logo(cover, cover_type, area=None):
+def add_logo(cover, cover_type):
     """
-    Fügt einem bereits geladenen Cover (RGBA) das Logo hinzu und
-    zeichnet für Back-Cover ggf. einen Barcode. Gibt das fertige
-    Cover zurück.
+    Fügt einem bereits geladenen Cover (RGBA) das Logo hinzu.
+    Gibt das fertige Cover zurück.
     """
 
     cover_width, cover_height = cover.size
 
     logo_path = "../assets/favicon/methodius-512x512-nobg.png"
     logo = Image.open(logo_path).convert("RGBA")
-
-    if area is not None:
-        cover = add_corner_area(cover, area)
 
     if cover_type.lower() == "front":
         target_logo_width = int(cover_width * 0.07)
@@ -250,7 +215,7 @@ def add_logo(cover, cover_type, area=None):
 # Zusammengeführte Pipeline
 # ---------------------------------------------------------------------------
 
-def process_cover(name, cover_type, area=None):
+def process_cover(name, cover_type):
     """
     Führt für ein einzelnes Cover beide Schritte aus:
     1. Hintergrundfarbe normalisieren (raw -> nologo)
@@ -279,7 +244,7 @@ def process_cover(name, cover_type, area=None):
     if cover_type.lower() == "back":
         cover = draw_barcode(cover)
 
-    cover = add_logo(cover, cover_type, area=area)
+    cover = add_logo(cover, cover_type)
 
     output_dir = f"../pics/ratgeber-{cover_type}"
     os.makedirs(output_dir, exist_ok=True)
@@ -327,16 +292,6 @@ def parse_args():
         )
     )
 
-    parser.add_argument(
-        "--area",
-        type=float,
-        default=None,
-        help=(
-            "Anteil der Coverbreite "
-            "(z.B. 0.12) für eine Logofläche links unten."
-        )
-    )
-
     return parser.parse_args()
 
 
@@ -355,11 +310,7 @@ def main():
     print(f"{len(names)} Cover werden verarbeitet.\n")
 
     for name in names:
-        process_cover(
-            name,
-            args.type,
-            area=args.area
-        )
+        process_cover(name, args.type)
 
     print("\nFertig.")
 
