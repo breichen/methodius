@@ -234,7 +234,9 @@ AUTHOR_COLOR = (0, 28, 73)        # Navy, wie im Beispielcover gemessen
 AUTHOR_Y_RATIO = 0.910            # vertikale Mitte des Textes
 
 ORNAMENT_COLOR = (180, 24, 30)    # Rot, wie im Beispielcover gemessen
-ORNAMENT_Y_RATIO = 0.950          # vertikale Mitte von Linie/Raute
+ORNAMENT_Y_RATIO_FRONT = 0.950    # vertikale Mitte von Linie/Raute (Front)
+ORNAMENT_Y_RATIO_BACK = 0.930     # vertikale Mitte von Linie/Raute (Back)
+                                   # Platzhalter - bitte an dein Layout anpassen
 ORNAMENT_LINE_LENGTH_RATIO = 0.125 # Länge je Linie (links/rechts)
 ORNAMENT_GAP_RATIO = 0.016        # Abstand zwischen Linie und Raute
 ORNAMENT_DIAMOND_SIZE_RATIO = 0.012  # halbe Rautenhöhe/-breite
@@ -273,13 +275,13 @@ def draw_author_name(cover):
     return cover
 
 
-def draw_ornament(cover):
+def draw_ornament(cover, y_ratio):
     cover_width, cover_height = cover.size
 
     draw = ImageDraw.Draw(cover)
 
     center_x = cover_width // 2
-    center_y = int(cover_height * ORNAMENT_Y_RATIO)
+    center_y = int(cover_height * y_ratio)
 
     line_length = int(cover_width * ORNAMENT_LINE_LENGTH_RATIO)
     gap = int(cover_width * ORNAMENT_GAP_RATIO)
@@ -322,7 +324,7 @@ def draw_ornament(cover):
 
 def add_author_and_ornament(cover):
     cover = draw_author_name(cover)
-    cover = draw_ornament(cover)
+    cover = draw_ornament(cover, ORNAMENT_Y_RATIO_FRONT)
     return cover
 
 
@@ -358,6 +360,7 @@ def process_cover(name, cover_type):
 
     if cover_type.lower() == "back":
         cover = draw_barcode(cover)
+        cover = draw_ornament(cover, ORNAMENT_Y_RATIO_BACK)
 
     if cover_type.lower() == "front":
         cover = add_author_and_ornament(cover)
