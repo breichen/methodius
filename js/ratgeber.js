@@ -72,7 +72,7 @@ const ratgeberRohdaten = [
   {slug: "Gedanken lesen durch geschicktes Raten", erstellt: "2026-08-30", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
   {slug: "Statistiken fälschen leicht gemacht", erstellt: "2026-08-30", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
   {slug: "Die Kunst, am Monatsanfang schon pleite zu sein", erstellt: "2026-08-30", kategorie: RatgeberKategorie.LEBEN},
-  {slug: "So beweist man, dass die globale Erwärmung erfunden ist", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
+  {slug: "So beweist man, dass die globale Erwärmung erfunden ist", erstellt: "2026-08-30", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
   {slug: "Pünktlichkeit verbessern durch Zugausfälle", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Diskussionen gewinnen durch konsequentes Dagegenreden", erstellt: "2026-08-30", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {slug: "Warum das Leben leichter ist, wenn man nichts versteht", erstellt: "2026-08-30", kategorie: RatgeberKategorie.LEBEN},
@@ -89,7 +89,7 @@ const ratgeberRohdaten = [
   {slug: "Wie man aus einer kleinen Aufgabe ein Großprojekt macht", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Komplimente machen, die garantiert falsch verstanden werden", erstellt: "2026-08-30", kategorie: RatgeberKategorie.LEBEN},
   {slug: "E-Mails schreiben, die niemand beantworten möchte", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
-  {slug: "Wie man beim ersten Eindruck einen bleibenden Schaden hinterlässt", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
+  {slug: "Wie man beim ersten Eindruck einen bleibenden Schaden hinterlässt", erstellt: "2026-08-30", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {slug: "Smalltalk ohne Worte beenden", erstellt: "2026-08-30", kategorie: RatgeberKategorie.ALLTAG_BERUF},
   {slug: "Texte kurz und knackig halten", erstellt: "2026-08-30", kategorie: RatgeberKategorie.MEDIEN},
 ];
