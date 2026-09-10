@@ -380,7 +380,9 @@ Width:
 Height:
 145 px
 
+==================================================
 BOTTOM ORNAMENT AREA (RESERVED)
+==================================================
 
 The front-cover ornament will be added in post-production.
 
