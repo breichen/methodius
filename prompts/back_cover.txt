@@ -380,99 +380,52 @@ Width:
 Height:
 145 px
 
-==================================================
-BOTTOM ORNAMENT
-==================================================
+BOTTOM ORNAMENT AREA (RESERVED)
 
-Must be IDENTICAL to the front cover ornament.
+The front-cover ornament will be added in post-production.
 
-Absolute center:
+Do not draw any ornament.
+
+Do not draw lines.
+
+Do not draw a diamond.
+
+Do not draw decorative elements.
+
+Reserve the exact ornament area as empty whitespace.
+
+Reserved center position:
 
 X = 874 px
 Y = 2295 px
 
-Optical tolerance:
-maximum ±1 px
+Reserved area width:
 
-Color:
-#B5292C
+460 px
 
-Stroke thickness:
-3 px
+Reserved area height:
 
-Center diamond:
-20 × 20 px
+40 px
 
-Left line:
-140 px
+Keep this area completely empty.
 
-Right line:
-140 px
+No text.
 
-Spacing and geometry must exactly match
-the front cover ornament.
+No graphics.
 
-No deviations allowed.
+No separators.
 
---------------------------------------------------
-CENTER DIAMOND
---------------------------------------------------
+No decorative marks.
 
-Shape:
-Solid square rotated 45°
+No horizontal rules.
 
-Size:
-20 × 20 px
+No visual substitutes.
 
-Fill:
-#B5292C
+The reserved area must remain visually unobstructed so that the ornament can be inserted later without repositioning any surrounding elements.
 
-Center:
-874 px, 2295 px
+The slogan above and all other elements must keep their original positions.
 
---------------------------------------------------
-LEFT LINE
---------------------------------------------------
-
-Start:
-654 px
-
-End:
-794 px
-
-Length:
-140 px
-
-Y:
-2295 px
-
-Thickness:
-3 px
-
-Color:
-#B5292C
-
---------------------------------------------------
-RIGHT LINE
---------------------------------------------------
-
-Start:
-954 px
-
-End:
-1094 px
-
-Length:
-140 px
-
-Y:
-2295 px
-
-Thickness:
-3 px
-
-Color:
-#B5292C
+Do not compensate for the missing ornament by adding other design elements.
 
 ==================================================
 BOTTOM AREA
@@ -535,6 +488,12 @@ No decorative borders.
 No top ornaments.
 No double lines.
 No visual clutter.
+No bottom ornament.
+No center diamond.
+No decorative divider.
+No horizontal separator lines.
+No ornamental elements.
+No visual replacement for the ornament.
 
 ==================================================
 FINAL IMPRESSION
