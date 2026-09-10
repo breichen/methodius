@@ -229,12 +229,12 @@ AUTHOR_FONT_INDEX = 10
 # und als Anteil von Coverbreite/-höhe ausgedrückt, damit sie bei
 # anderen Bildgrößen automatisch mitskalieren. Bei Bedarf anpassen.
 
-AUTHOR_FONT_SIZE_RATIO = 0.026    # Schriftgröße relativ zur Coverbreite
+AUTHOR_FONT_SIZE_RATIO = 0.03    # Schriftgröße relativ zur Coverbreite
 AUTHOR_COLOR = (0, 28, 73)        # Navy, wie im Beispielcover gemessen
-AUTHOR_Y_RATIO = 0.887            # vertikale Mitte des Textes
+AUTHOR_Y_RATIO = 0.910            # vertikale Mitte des Textes
 
 ORNAMENT_COLOR = (180, 24, 30)    # Rot, wie im Beispielcover gemessen
-ORNAMENT_Y_RATIO = 0.930          # vertikale Mitte von Linie/Raute
+ORNAMENT_Y_RATIO = 0.950          # vertikale Mitte von Linie/Raute
 ORNAMENT_LINE_LENGTH_RATIO = 0.125 # Länge je Linie (links/rechts)
 ORNAMENT_GAP_RATIO = 0.016        # Abstand zwischen Linie und Raute
 ORNAMENT_DIAMOND_SIZE_RATIO = 0.012  # halbe Rautenhöhe/-breite
