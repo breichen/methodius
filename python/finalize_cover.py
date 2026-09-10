@@ -222,7 +222,7 @@ def process_cover(name, cover_type):
     2. Logo (und bei Back-Covern Barcode) hinzufügen (nologo -> final)
     """
 
-    raw_path = f"../pics/ratgeber-{cover_type}-raw/{name}.png"
+    raw_path = f"../pics/ratgeber-{cover_type}-todo/{name}.png"
 
     if not os.path.isfile(raw_path):
         print(f"Datei nicht gefunden: {raw_path}")
@@ -246,7 +246,7 @@ def process_cover(name, cover_type):
 
     cover = add_logo(cover, cover_type)
 
-    output_dir = f"../pics/ratgeber-{cover_type}"
+    output_dir = f"../pics/ratgeber-{cover_type}-finalized"
     os.makedirs(output_dir, exist_ok=True)
 
     output_path = os.path.join(output_dir, f"{name}.png")
