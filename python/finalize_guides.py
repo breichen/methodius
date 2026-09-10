@@ -1,5 +1,6 @@
 import argparse
 import glob
+import math
 import os
 import random
 
@@ -7,6 +8,53 @@ from PIL import Image, ImageDraw
 from tempfile import NamedTemporaryFile
 from barcode import EAN13
 from barcode.writer import ImageWriter
+
+
+# ---------------------------------------------------------------------------
+# Schritt 1: Hintergrundfarbe normalisieren (ehemals fix_bg_color.py)
+# ---------------------------------------------------------------------------
+
+TARGET_COLOR = (241, 236, 226)
+
+# Startwert:
+# 20 = konservativ
+# 25 = meist sinnvoll
+# 30 = aggressiver
+THRESHOLD = 25
+
+
+def color_distance(c1, c2):
+    return math.sqrt(
+        (c1[0] - c2[0]) ** 2 +
+        (c1[1] - c2[1]) ** 2 +
+        (c1[2] - c2[2]) ** 2
+    )
+
+
+def normalize_background(img):
+    img = img.convert("RGB")
+
+    pixels = img.load()
+
+    width, height = img.size
+
+    replaced = 0
+
+    for y in range(height):
+        for x in range(width):
+
+            pixel = pixels[x, y]
+
+            if color_distance(pixel, TARGET_COLOR) <= THRESHOLD:
+                pixels[x, y] = TARGET_COLOR
+                replaced += 1
+
+    return img, replaced
+
+
+# ---------------------------------------------------------------------------
+# Schritt 2: Logo (und ggf. Barcode) hinzufügen (ehemals add_logo.py)
+# ---------------------------------------------------------------------------
 
 used_isbns = set()
 
@@ -95,7 +143,7 @@ def draw_barcode(cover):
     padding_bottom = 0
 
     BARCODE_SCALE = 0.45
-    
+
     barcode_img = barcode_img.resize(
         (
             int(barcode_img.width * BARCODE_SCALE),
@@ -103,7 +151,7 @@ def draw_barcode(cover):
         ),
         Image.LANCZOS
     )
-    
+
     box_width = barcode_img.width + padding_x * 2
     box_height = barcode_img.height + padding_top + padding_bottom
 
@@ -112,7 +160,7 @@ def draw_barcode(cover):
         (box_width, box_height),
         (255, 255, 255, 255)
     )
-    
+
     barcode_box.alpha_composite(
         barcode_img,
         (padding_x, padding_top)
@@ -147,34 +195,17 @@ def draw_barcode(cover):
     return cover
 
 
-def add_logo(
-    cover_name,
-    cover_type="front",
-    area=None,
-    no_barcode=False
-):
-    if cover_type.lower() == "back" and no_barcode:
-        cover_path = (
-            f"../pics/ratgeber-{cover_type}-nologo-barcode/"
-            f"{cover_name}.png"
-        )
-    else:
-        cover_path = (
-            f"../pics/ratgeber-{cover_type}-nologo/"
-            f"{cover_name}.png"
-        )
-
-    output_path = f"../pics/ratgeber-{cover_type}/{cover_name}.png"
-
-    logo_path = "../assets/favicon/methodius-512x512-nobg.png"
-
-    cover = Image.open(cover_path).convert("RGBA")
-    logo = Image.open(logo_path).convert("RGBA")
-
-    if cover_type.lower() == "back" and not no_barcode:
-        cover = draw_barcode(cover)
+def add_logo(cover, cover_type, area=None):
+    """
+    Fügt einem bereits geladenen Cover (RGBA) das Logo hinzu und
+    zeichnet für Back-Cover ggf. einen Barcode. Gibt das fertige
+    Cover zurück.
+    """
 
     cover_width, cover_height = cover.size
+
+    logo_path = "../assets/favicon/methodius-512x512-nobg.png"
+    logo = Image.open(logo_path).convert("RGBA")
 
     if area is not None:
         cover = add_corner_area(cover, area)
@@ -212,16 +243,78 @@ def add_logo(
 
     cover.alpha_composite(logo, (x, y))
 
+    return cover
+
+
+# ---------------------------------------------------------------------------
+# Zusammengeführte Pipeline
+# ---------------------------------------------------------------------------
+
+def process_cover(name, cover_type, area=None, no_barcode=False):
+    """
+    Führt für ein einzelnes Cover beide Schritte aus:
+    1. Hintergrundfarbe normalisieren (raw -> nologo)
+    2. Logo (und ggf. Barcode) hinzufügen (nologo -> final)
+
+    Bei Back-Covern mit --no-barcode wird Schritt 1 übersprungen,
+    da in diesem Fall ein bereits fertiges Bild mit Original-Barcode
+    aus ratgeber-back-nologo-barcode verwendet wird (kein neuer
+    Barcode wird gezeichnet).
+    """
+
+    use_existing_barcode = cover_type.lower() == "back" and no_barcode
+
+    if use_existing_barcode:
+        source_path = (
+            f"../pics/ratgeber-{cover_type}-nologo-barcode/"
+            f"{name}.png"
+        )
+
+        if not os.path.isfile(source_path):
+            print(f"Datei nicht gefunden: {source_path}")
+            return
+
+        cover = Image.open(source_path).convert("RGBA")
+
+    else:
+        raw_path = f"../pics/ratgeber-{cover_type}-raw/{name}.png"
+
+        if not os.path.isfile(raw_path):
+            print(f"Datei nicht gefunden: {raw_path}")
+            return
+
+        img = Image.open(raw_path)
+        img, replaced = normalize_background(img)
+
+        nologo_dir = f"../pics/ratgeber-{cover_type}-nologo"
+        os.makedirs(nologo_dir, exist_ok=True)
+
+        nologo_path = os.path.join(nologo_dir, f"{name}.png")
+        img.save(nologo_path, optimize=True, compress_level=9)
+
+        print(f"{name}.png: {replaced:,} Pixel ersetzt (Hintergrund)")
+
+        cover = img.convert("RGBA")
+
+        if cover_type.lower() == "back":
+            cover = draw_barcode(cover)
+
+    cover = add_logo(cover, cover_type, area=area)
+
+    output_dir = f"../pics/ratgeber-{cover_type}"
+    os.makedirs(output_dir, exist_ok=True)
+
+    output_path = os.path.join(output_dir, f"{name}.png")
     cover.save(output_path)
 
     print(f"Gespeichert: {output_path}")
 
 
-def get_all_cover_names(typ, no_barcode=False):
-    if typ == "back" and no_barcode:
-        source_dir = "../pics/ratgeber-back-nologo-barcode"
+def get_all_names(cover_type, no_barcode=False):
+    if cover_type.lower() == "back" and no_barcode:
+        source_dir = f"../pics/ratgeber-{cover_type}-nologo-barcode"
     else:
-        source_dir = f"../pics/ratgeber-{typ}-nologo"
+        source_dir = f"../pics/ratgeber-{cover_type}-raw"
 
     pattern = os.path.join(source_dir, "*.png")
 
@@ -233,14 +326,10 @@ def get_all_cover_names(typ, no_barcode=False):
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Fügt einem Cover (oder allen Covern) ein Logo hinzu."
-    )
-
-    parser.add_argument(
-        "name",
-        help=(
-            'Name des Covers (ohne .png-Endung). '
-            '"*" verarbeitet den kompletten Ordner.'
+        description=(
+            "Normalisiert die Hintergrundfarbe eines Covers "
+            "(oder aller Cover) und fügt anschließend Logo "
+            "(und bei Back-Covern ggf. Barcode) hinzu."
         )
     )
 
@@ -248,6 +337,17 @@ def parse_args():
         "type",
         choices=["front", "back"],
         help='Cover-Typ: "front" oder "back".'
+    )
+
+    parser.add_argument(
+        "name",
+        nargs="?",
+        default="*",
+        help=(
+            'Name des Covers (ohne .png-Endung). '
+            'Ohne Angabe (oder "*") wird der komplette Ordner '
+            'verarbeitet.'
+        )
     )
 
     parser.add_argument(
@@ -264,42 +364,40 @@ def parse_args():
         "--no-barcode",
         action="store_true",
         help=(
-            "Nur für Back-Cover: "
-            "kein Barcode zeichnen und Bilder aus "
-            "ratgeber-back-nologo-barcode verwenden."
+            "Nur für Back-Cover: kein neuer Barcode. Stattdessen wird "
+            "ein bereits fertiges Bild aus "
+            "ratgeber-back-nologo-barcode verwendet (Hintergrund-"
+            "Normalisierung entfällt in diesem Fall)."
         )
     )
 
     return parser.parse_args()
 
 
-if __name__ == "__main__":
+def main():
     args = parse_args()
 
     if args.name == "*":
+        names = get_all_names(args.type, args.no_barcode)
 
-        cover_names = get_all_cover_names(
-            args.type,
-            args.no_barcode
-        )
-
-        if not cover_names:
-            print("Keine Cover im Quellordner gefunden.")
-
-        for cover_name in cover_names:
-
-            add_logo(
-                cover_name=cover_name,
-                cover_type=args.type,
-                area=args.area,
-                no_barcode=args.no_barcode
-            )
-
+        if not names:
+            print("Keine Cover gefunden.")
+            return
     else:
+        names = [args.name]
 
-        add_logo(
-            cover_name=args.name,
-            cover_type=args.type,
+    print(f"{len(names)} Cover werden verarbeitet.\n")
+
+    for name in names:
+        process_cover(
+            name,
+            args.type,
             area=args.area,
             no_barcode=args.no_barcode
         )
+
+    print("\nFertig.")
+
+
+if __name__ == "__main__":
+    main()
