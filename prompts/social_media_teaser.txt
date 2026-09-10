@@ -45,8 +45,9 @@ Sophisticated and witty.
 COLOR SYSTEM
 --------------------------------------------------
 
-Background:
-#F1ECE2
+Background: #FCFAF5
+Extremely light warm ivory, almost off-white.
+The book cover must clearly contrast against the background and never visually blend into it.
 
 Primary text:
 #1B2340
@@ -65,6 +66,37 @@ Cover slightly angled.
 Soft realistic shadow.
 
 Premium presentation.
+
+--------------------------------------------------
+PRODUCT TYPE
+--------------------------------------------------
+
+This is NOT a thick book.
+
+It is a slim premium guide booklet.
+
+Approximate thickness:
+
+15–20 interior pages.
+
+Very thin spine.
+
+Maximum spine width:
+3–5 mm.
+
+Looks like:
+
+- premium workbook
+- slim guide
+- booklet
+- short non-fiction publication
+
+NOT:
+
+- hardcover
+- textbook
+- thick business book
+- novel
 
 --------------------------------------------------
 HEADLINE
@@ -113,6 +145,11 @@ No clutter.
 No stock-photo look.
 
 No excessive graphics.
+
+The book cover must remain visually distinct from the background.
+Preserve the original cover exactly as supplied.
+Do not recolor, brighten, retouch, redesign, or reconstruct the cover.
+Use a subtle but realistic contact shadow around and beneath the book to reinforce separation.
 
 --------------------------------------------------
 CTA
