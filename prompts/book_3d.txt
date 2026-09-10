@@ -103,9 +103,9 @@ Do not exaggerate thickness.
 BACKGROUND
 --------------------------------------------------
 
-Solid background:
-
-#F1ECE2
+Solid background: #FAF8F2
+Very light warm ivory / soft editorial white.
+The background must be clearly lighter than the book cover, creating strong visual separation while remaining warm and premium.
 
 No texture.
 
