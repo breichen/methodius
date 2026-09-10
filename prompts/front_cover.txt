@@ -561,115 +561,50 @@ Character identity must be different from previous generations.
 Treat every cover as belonging to a different individual with a different biography and appearance.
 
 ==================================================
-AUTHOR
+AUTHOR RESERVED AREA
 ==================================================
 
-Must be mathematically centered.
+Do not render the author name.
 
-Text center:
-X = 874 px
+Reserve the entire author region.
 
-Baseline:
-Y = 2260 px
+Keep the area around Y = 2260 px visually free.
 
-Optical tolerance:
-±2 px
+No text.
 
-Font:
-Inter Medium
+No placeholder text.
 
-Size:
-30 px
+No initials.
 
-Letter spacing:
-2%
+No signature.
 
-Color:
-#1B2340
-
-Normal capitalization.
-
-Never ALL CAPS.
-
-Never small caps.
+This space is intentionally left empty for later manual placement.
 
 ==================================================
-BOTTOM ORNAMENT
+BOTTOM RESERVED AREA
 ==================================================
 
-Only ornament on cover.
+Do not render any ornament.
 
-Must be mathematically centered.
+Reserve the entire lower footer area.
 
-Center:
+Keep the region from Y = 2220 px to the bottom edge visually free.
 
-X = 874 px
-Y = 2395 px
+No text.
 
-Color:
-#B5292C
+No decorative elements.
 
-Stroke:
-3 px
+No lines.
 
---------------------------------------------------
-CENTER DIAMOND
---------------------------------------------------
+No diamond.
 
-Solid square rotated 45°.
+No symbols.
 
-Size:
-20 × 20 px
+No graphics.
 
-Fill:
-#B5292C
+No placeholders.
 
-Center:
-874 px, 2395 px
-
---------------------------------------------------
-LEFT LINE
---------------------------------------------------
-
-Start:
-654 px
-
-End:
-794 px
-
-Length:
-140 px
-
-Y:
-2395 px
-
-Thickness:
-3 px
-
-Color:
-#B5292C
-
---------------------------------------------------
-RIGHT LINE
---------------------------------------------------
-
-Start:
-954 px
-
-End:
-1094 px
-
-Length:
-140 px
-
-Y:
-2395 px
-
-Thickness:
-3 px
-
-Color:
-#B5292C
+This area must remain empty for later manual placement of author name and ornament.
 
 ==================================================
 LAYER ORDER
@@ -678,8 +613,8 @@ LAYER ORDER
 1 Background
 2 Illustration
 3 Subtitle
-4 Author
-5 Ornament
+4 Reserved Author Area
+5 Reserved Ornament Area
 6 Title
 
 ==================================================
@@ -745,6 +680,22 @@ No secondary accent colors.
 No visible illustration frame.
 
 No hard image box.
+
+No author name.
+
+No author initials.
+
+No author placeholder.
+
+No ornament.
+
+No decorative lines.
+
+No decorative diamond.
+
+No footer decoration.
+
+No bottom embellishments.
 
 ==================================================
 FINAL IMPRESSION
