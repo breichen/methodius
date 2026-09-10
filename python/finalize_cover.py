@@ -4,7 +4,7 @@ import math
 import os
 import random
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 from tempfile import NamedTemporaryFile
 from barcode import EAN13
 from barcode.writer import ImageWriter
@@ -212,6 +212,121 @@ def add_logo(cover, cover_type):
 
 
 # ---------------------------------------------------------------------------
+# Schritt 3: Autorenname und Ornament (nur Front-Cover)
+# ---------------------------------------------------------------------------
+
+AUTHOR_NAME = "Dr. Maximilian Methodius"
+
+# Pfad zur Inter-Schriftdatei. Bitte an den tatsächlichen Speicherort
+# anpassen (z.B. "../assets/fonts/Inter-SemiBold.ttf").
+AUTHOR_FONT_PATH = "../assets/fonts/Inter.ttc"
+
+# Index des gewünschten Schriftschnitts innerhalb der .ttc-Datei.
+# Herausfinden z.B. mit list_ttc_fonts.py <pfad-zur-ttc-datei>.
+AUTHOR_FONT_INDEX = 10
+
+# Werte unten wurden anhand des Beispielcovers (1054x1492 px) vermessen
+# und als Anteil von Coverbreite/-höhe ausgedrückt, damit sie bei
+# anderen Bildgrößen automatisch mitskalieren. Bei Bedarf anpassen.
+
+AUTHOR_FONT_SIZE_RATIO = 0.026    # Schriftgröße relativ zur Coverbreite
+AUTHOR_COLOR = (0, 28, 73)        # Navy, wie im Beispielcover gemessen
+AUTHOR_Y_RATIO = 0.887            # vertikale Mitte des Textes
+
+ORNAMENT_COLOR = (180, 24, 30)    # Rot, wie im Beispielcover gemessen
+ORNAMENT_Y_RATIO = 0.930          # vertikale Mitte von Linie/Raute
+ORNAMENT_LINE_LENGTH_RATIO = 0.125 # Länge je Linie (links/rechts)
+ORNAMENT_GAP_RATIO = 0.016        # Abstand zwischen Linie und Raute
+ORNAMENT_DIAMOND_SIZE_RATIO = 0.012  # halbe Rautenhöhe/-breite
+ORNAMENT_STROKE_RATIO = 0.0019    # Linienstärke
+
+
+def draw_author_name(cover):
+    cover_width, cover_height = cover.size
+
+    draw = ImageDraw.Draw(cover)
+
+    font_size = max(1, int(cover_width * AUTHOR_FONT_SIZE_RATIO))
+
+    try:
+        font = ImageFont.truetype(
+            AUTHOR_FONT_PATH, font_size, index=AUTHOR_FONT_INDEX
+        )
+    except OSError:
+        print(
+            f"Warnung: Schriftart nicht gefunden unter "
+            f"{AUTHOR_FONT_PATH}, verwende Standardschrift."
+        )
+        font = ImageFont.load_default()
+
+    center_x = cover_width // 2
+    center_y = int(cover_height * AUTHOR_Y_RATIO)
+
+    draw.text(
+        (center_x, center_y),
+        AUTHOR_NAME,
+        font=font,
+        fill=AUTHOR_COLOR,
+        anchor="mm",
+    )
+
+    return cover
+
+
+def draw_ornament(cover):
+    cover_width, cover_height = cover.size
+
+    draw = ImageDraw.Draw(cover)
+
+    center_x = cover_width // 2
+    center_y = int(cover_height * ORNAMENT_Y_RATIO)
+
+    line_length = int(cover_width * ORNAMENT_LINE_LENGTH_RATIO)
+    gap = int(cover_width * ORNAMENT_GAP_RATIO)
+    diamond_size = max(1, int(cover_width * ORNAMENT_DIAMOND_SIZE_RATIO))
+    stroke = max(1, int(cover_width * ORNAMENT_STROKE_RATIO))
+
+    # Linie links
+    draw.line(
+        [
+            (center_x - gap - line_length, center_y),
+            (center_x - gap, center_y),
+        ],
+        fill=ORNAMENT_COLOR,
+        width=stroke,
+    )
+
+    # Linie rechts
+    draw.line(
+        [
+            (center_x + gap, center_y),
+            (center_x + gap + line_length, center_y),
+        ],
+        fill=ORNAMENT_COLOR,
+        width=stroke,
+    )
+
+    # Raute in der Mitte
+    draw.polygon(
+        [
+            (center_x, center_y - diamond_size),
+            (center_x + diamond_size, center_y),
+            (center_x, center_y + diamond_size),
+            (center_x - diamond_size, center_y),
+        ],
+        fill=ORNAMENT_COLOR,
+    )
+
+    return cover
+
+
+def add_author_and_ornament(cover):
+    cover = draw_author_name(cover)
+    cover = draw_ornament(cover)
+    return cover
+
+
+# ---------------------------------------------------------------------------
 # Zusammengeführte Pipeline
 # ---------------------------------------------------------------------------
 
@@ -243,6 +358,9 @@ def process_cover(name, cover_type):
 
     if cover_type.lower() == "back":
         cover = draw_barcode(cover)
+
+    if cover_type.lower() == "front":
+        cover = add_author_and_ornament(cover)
 
     cover = add_logo(cover, cover_type)
 
