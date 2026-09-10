@@ -256,7 +256,7 @@ def process_cover(name, cover_type):
 
 
 def get_all_names(cover_type):
-    source_dir = f"../pics/ratgeber-{cover_type}-raw"
+    source_dir = f"../pics/ratgeber-{cover_type}-todo"
 
     pattern = os.path.join(source_dir, "*.png")
 
