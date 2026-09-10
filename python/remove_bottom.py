@@ -44,7 +44,7 @@ def detect_background_color(img):
     return (r, g, b)
 
 
-def remove_bottom(img, strip_height):
+def remove_bottom(img, strip_height, ratio=1.0):
     width, height = img.size
 
     bg = detect_background_color(img)
@@ -57,12 +57,17 @@ def remove_bottom(img, strip_height):
 
     y = height - strip_height
 
-    # Volle Breite des Bildes, vom Startpunkt bis zum unteren Rand.
+    strip_width = width * ratio
+
+    x_start = (width - strip_width) / 2
+    x_end = x_start + strip_width
+
+    # Bei ratio=1.0 die volle Breite, sonst nur der mittlere Anteil.
     draw.rectangle(
         (
-            0,
+            x_start,
             y - cleanup_margin,
-            width,
+            x_end,
             height,
         ),
         fill=bg,
@@ -71,12 +76,12 @@ def remove_bottom(img, strip_height):
     return img
 
 
-def process_file(path, target_dir, strip_height):
+def process_file(path, target_dir, strip_height, ratio=1.0):
     filename = os.path.basename(path)
 
     img = Image.open(path).convert("RGB")
 
-    img = remove_bottom(img, strip_height)
+    img = remove_bottom(img, strip_height, ratio=ratio)
 
     output_path = os.path.join(target_dir, filename)
 
@@ -120,6 +125,15 @@ def parse_args():
             f"{DEFAULT_HEIGHT_BACK} (back)."
         ),
     )
+    parser.add_argument(
+        "--ratio",
+        type=float,
+        default=1.0,
+        help=(
+            "Anteil der Breite (0.0 bis 1.0), der in der horizontalen "
+            "Mitte entfernt wird. Standard: 1.0 (volle Breite)."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -149,8 +163,12 @@ def resolve_files(source_dir, filename):
 def main():
     args = parse_args()
 
-    source_dir = f"../pics/ratgeber-{args.type}-nologo"
-    target_dir = f"../pics/ratgeber-{args.type}-nologo-removed-bottom"
+    if not 0.0 <= args.ratio <= 1.0:
+        print("Fehler: --ratio muss zwischen 0.0 und 1.0 liegen.")
+        return
+
+    source_dir = f"../pics/ratgeber-{args.type}-todo"
+    target_dir = f"../pics/ratgeber-{args.type}-removed-bottom"
 
     os.makedirs(target_dir, exist_ok=True)
 
@@ -171,7 +189,7 @@ def main():
     print(f"{len(files)} Dateien gefunden.")
 
     for path in files:
-        process_file(path, target_dir, strip_height)
+        process_file(path, target_dir, strip_height, ratio=args.ratio)
 
     print("Fertig.")
 
