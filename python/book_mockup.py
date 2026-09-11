@@ -124,6 +124,19 @@ clear_scene()
 # 4. HILFSFUNKTIONEN
 # ---------------------------------------------------------------------------
 
+def srgb_to_linear(c):
+    """Wandelt einen sRGB-Farbwert (0..1, wie ein Hexcode) in Blenders
+    lineare Farbraum-Werte um, damit z.B. #FAF8F2 auch wirklich als
+    #FAF8F2 im gerenderten Bild ankommt."""
+    if c <= 0.04045:
+        return c / 12.92
+    return ((c + 0.055) / 1.055) ** 2.4
+
+
+def srgb_tuple(rgb):
+    return tuple(srgb_to_linear(c) for c in rgb)
+
+
 def load_cover_image(path: Path):
     """Laedt das Cover 1:1, ohne jegliche Bearbeitung."""
     img = bpy.data.images.load(str(path), check_existing=True)
@@ -144,11 +157,11 @@ def make_cover_material(name, image):
     output.location = (300, 0)
     bsdf = nodes.new("ShaderNodeBsdfPrincipled")
     bsdf.location = (0, 0)
-    bsdf.inputs["Roughness"].default_value = 0.38
+    bsdf.inputs["Roughness"].default_value = 0.55
     if "Specular IOR Level" in bsdf.inputs:
-        bsdf.inputs["Specular IOR Level"].default_value = 0.4
+        bsdf.inputs["Specular IOR Level"].default_value = 0.15
     elif "Specular" in bsdf.inputs:
-        bsdf.inputs["Specular"].default_value = 0.4
+        bsdf.inputs["Specular"].default_value = 0.15
 
     tex = nodes.new("ShaderNodeTexImage")
     tex.location = (-350, 0)
@@ -265,7 +278,7 @@ def create_book(basename, image_path, aspect, spine_on_right, x_position, turn_d
                            spine_on_right)
 
     cover_mat = make_cover_material(f"Mat_Cover_{basename}", image)
-    cream_mat = make_plain_material(f"Mat_Cream_{basename}", CREAM_SPINE_COLOR)
+    cream_mat = make_plain_material(f"Mat_Cream_{basename}", (*srgb_tuple(CREAM_SPINE_COLOR[:3]), 1.0))
     obj.data.materials.append(cover_mat)
     obj.data.materials.append(cream_mat)
 
@@ -318,14 +331,31 @@ right_book = create_book(
 bpy.ops.mesh.primitive_plane_add(size=6, location=(0, 0.15, 0))
 floor = bpy.context.active_object
 floor.name = "Floor"
-floor_mat = make_plain_material("Mat_Floor", (*BACKGROUND_HEX, 1.0), roughness=0.85)
+floor_mat = make_plain_material("Mat_Floor", (*srgb_tuple(BACKGROUND_HEX), 1.0), roughness=0.85)
 floor.data.materials.append(floor_mat)
 
 world = bpy.data.worlds.new("World_Ivory")
 bpy.context.scene.world = world
 world.use_nodes = True
-bg_node = world.node_tree.nodes.get("Background")
-bg_node.inputs["Color"].default_value = (*BACKGROUND_HEX, 1.0)
+nt = world.node_tree
+nt.nodes.clear()
+
+bg_node = nt.nodes.new("ShaderNodeBackground")
+output_node = nt.nodes.new("ShaderNodeOutputWorld")
+
+# Trick: Die Kamera sieht eine helle, warme Ivory-Flaeche direkt,
+# waehrend der Beitrag des Weltenhintergrunds als Umgebungslicht
+# (fuer indirekte/Fuell-Beleuchtung der Buecher) separat und deutlich
+# dunkler gehalten wird. So bleibt der Hintergrund hell #FAF8F2, ohne
+# die Buecher zusaetzlich zu ueberbelichten.
+light_path = nt.nodes.new("ShaderNodeLightPath")
+mix_color = nt.nodes.new("ShaderNodeMixRGB")
+mix_color.inputs["Color1"].default_value = (*srgb_tuple((0.55, 0.545, 0.53)), 1.0)  # Umgebungslicht (dezent)
+mix_color.inputs["Color2"].default_value = (*srgb_tuple(BACKGROUND_HEX), 1.0)        # was die Kamera sieht
+
+nt.links.new(light_path.outputs["Is Camera Ray"], mix_color.inputs["Fac"])
+nt.links.new(mix_color.outputs["Color"], bg_node.inputs["Color"])
+nt.links.new(bg_node.outputs["Background"], output_node.inputs["Surface"])
 bg_node.inputs["Strength"].default_value = 1.0
 
 
@@ -370,7 +400,7 @@ add_area_light(
     location=(-0.6, -1.1, 1.1),
     rotation_euler=(math.radians(58), 0, math.radians(-28)),
     size=1.4,
-    energy=180,
+    energy=15,
 )
 
 # Fill-Light: schwaecher, von der anderen Seite, hellt Schatten dezent auf
@@ -379,7 +409,7 @@ add_area_light(
     location=(0.9, -0.9, 0.7),
     rotation_euler=(math.radians(65), 0, math.radians(35)),
     size=1.6,
-    energy=70,
+    energy=6,
 )
 
 # Top-Light: gleichmaessiges Overhead-Licht fuer sauberen, editorial Look
@@ -388,7 +418,7 @@ add_area_light(
     location=(0.0, -0.2, 1.8),
     rotation_euler=(0, 0, 0),
     size=2.2,
-    energy=90,
+    energy=8,
 )
 
 
