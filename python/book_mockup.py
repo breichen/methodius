@@ -92,14 +92,14 @@ OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 # ---------------------------------------------------------------------------
 
 BOOK_HEIGHT = 0.210          # 21 cm Hoehe (A5-artig), Basis fuer Seitenverhaeltnis
-SPINE_THICKNESS = 0.004      # 4 mm Ruecken -> "duennes Booklet", nicht dick
+SPINE_THICKNESS = 0.005      # 5 mm Ruecken -> oberes Ende von "duennes Booklet"
 BEVEL_WIDTH = 0.0006         # minimale Kantenrundung fuer realistische Optik
 
 CREAM_SPINE_COLOR = (0.93, 0.895, 0.82, 1.0)   # gleiche warme Cremepalette wie Cover
 BACKGROUND_HEX = (0.980, 0.973, 0.949)          # #FAF8F2
 
-GAP_BETWEEN_BOOKS = 0.11
-TURN_ANGLE_DEG = 14.0        # leichte Drehung "toward the viewer"
+GAP_BETWEEN_BOOKS = 0.14
+TURN_ANGLE_DEG = 24.0        # leichte Drehung "toward the viewer"
 
 
 # ---------------------------------------------------------------------------
@@ -325,37 +325,76 @@ right_book = create_book(
 
 
 # ---------------------------------------------------------------------------
-# 6. BODEN / HINTERGRUND (nahtlose, warme Ivory-Flaeche, keine Requisiten)
+# 6. HINTERGRUND: durchgehende "Infinity Cove" (Boden + gebogene Rueckwand
+#    aus EINEM Mesh/Material, damit keine Naht/Horizontlinie entsteht)
 # ---------------------------------------------------------------------------
 
-bpy.ops.mesh.primitive_plane_add(size=6, location=(0, 0.15, 0))
-floor = bpy.context.active_object
-floor.name = "Floor"
-floor_mat = make_plain_material("Mat_Floor", (*srgb_tuple(BACKGROUND_HEX), 1.0), roughness=0.85)
-floor.data.materials.append(floor_mat)
+def build_infinity_cove(name, half_width, wall_y, wall_top_z, corner_radius, floor_extent_y):
+    """
+    Erzeugt eine klassische Fotostudio-Kurve: flacher Boden, der ohne
+    sichtbare Kante in eine senkrechte Ruckwand uebergeht (wie nahtloses
+    Fotokarton-Papier). Alles ein zusammenhaengendes Mesh -> keine Naht,
+    keine zwei unterschiedlich belichteten Flaechen.
+    """
+    yc = wall_y - corner_radius
+    zc = corner_radius
 
-world = bpy.data.worlds.new("World_Ivory")
+    profile = [(-floor_extent_y, 0.0)]
+    steps = 10
+    for i in range(steps + 1):
+        phi = math.radians(-90 + (90.0 * i / steps))
+        y = yc + corner_radius * math.cos(phi)
+        z = zc + corner_radius * math.sin(phi)
+        profile.append((y, z))
+    profile.append((wall_y, wall_top_z))
+
+    mesh = bpy.data.meshes.new(name)
+    bm = bmesh.new()
+
+    rows = []
+    for (y, z) in profile:
+        v_left = bm.verts.new((-half_width, y, z))
+        v_right = bm.verts.new((half_width, y, z))
+        rows.append((v_left, v_right))
+
+    for i in range(len(rows) - 1):
+        a_left, a_right = rows[i]
+        b_left, b_right = rows[i + 1]
+        bm.faces.new((a_left, a_right, b_right, b_left))
+
+    bm.faces.ensure_lookup_table()
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+
+    bm.to_mesh(mesh)
+    bm.free()
+
+    obj = bpy.data.objects.new(name, mesh)
+    bpy.context.collection.objects.link(obj)
+    bpy.context.view_layer.objects.active = obj
+    obj.select_set(True)
+    bpy.ops.object.shade_smooth()
+    obj.select_set(False)
+    return obj
+
+
+cove = build_infinity_cove(
+    "InfinityCove",
+    half_width=2.5,
+    wall_y=1.2,
+    wall_top_z=2.0,
+    corner_radius=0.35,
+    floor_extent_y=2.0,
+)
+cove_mat = make_plain_material("Mat_Cove", (*srgb_tuple(BACKGROUND_HEX), 1.0), roughness=0.92)
+cove.data.materials.append(cove_mat)
+
+# Grosses, breites Licht speziell fuer den Hintergrund, damit die Kurve
+# gleichmaessig hell bleibt (keine Verlaeufe/Flecken).
+world = bpy.data.worlds.new("World_Neutral")
 bpy.context.scene.world = world
 world.use_nodes = True
-nt = world.node_tree
-nt.nodes.clear()
-
-bg_node = nt.nodes.new("ShaderNodeBackground")
-output_node = nt.nodes.new("ShaderNodeOutputWorld")
-
-# Trick: Die Kamera sieht eine helle, warme Ivory-Flaeche direkt,
-# waehrend der Beitrag des Weltenhintergrunds als Umgebungslicht
-# (fuer indirekte/Fuell-Beleuchtung der Buecher) separat und deutlich
-# dunkler gehalten wird. So bleibt der Hintergrund hell #FAF8F2, ohne
-# die Buecher zusaetzlich zu ueberbelichten.
-light_path = nt.nodes.new("ShaderNodeLightPath")
-mix_color = nt.nodes.new("ShaderNodeMixRGB")
-mix_color.inputs["Color1"].default_value = (*srgb_tuple((0.55, 0.545, 0.53)), 1.0)  # Umgebungslicht (dezent)
-mix_color.inputs["Color2"].default_value = (*srgb_tuple(BACKGROUND_HEX), 1.0)        # was die Kamera sieht
-
-nt.links.new(light_path.outputs["Is Camera Ray"], mix_color.inputs["Fac"])
-nt.links.new(mix_color.outputs["Color"], bg_node.inputs["Color"])
-nt.links.new(bg_node.outputs["Background"], output_node.inputs["Surface"])
+bg_node = world.node_tree.nodes.get("Background")
+bg_node.inputs["Color"].default_value = (*srgb_tuple((0.55, 0.545, 0.53)), 1.0)
 bg_node.inputs["Strength"].default_value = 1.0
 
 
@@ -369,7 +408,7 @@ cam_obj = bpy.data.objects.new("Camera", cam_data)
 bpy.context.collection.objects.link(cam_obj)
 bpy.context.scene.camera = cam_obj
 
-cam_pos = Vector((0.0, -1.05, BOOK_HEIGHT * 0.58))
+cam_pos = Vector((0.0, -1.20, BOOK_HEIGHT * 0.58))
 target = Vector((0.0, 0.0, BOOK_HEIGHT * 0.50))
 direction = (target - cam_pos).normalized()
 cam_obj.location = cam_pos
@@ -419,6 +458,17 @@ add_area_light(
     rotation_euler=(0, 0, 0),
     size=2.2,
     energy=8,
+)
+
+# Background-Light: breites, weiches Licht speziell auf die Cove gerichtet,
+# damit der Hintergrund gleichmaessig und ohne Flecken/Verlauf hell bleibt.
+add_area_light(
+    "Background_Fill",
+    location=(0.0, 0.6, 1.0),
+    rotation_euler=(math.radians(20), 0, 0),
+    size=3.0,
+    energy=10,
+    color=(1.0, 0.995, 0.98),
 )
 
 
