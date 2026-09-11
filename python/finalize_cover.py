@@ -23,6 +23,15 @@ TARGET_COLOR = (241, 236, 226)
 # 30 = aggressiver
 BACKGROUND_THRESHOLD = 25
 
+# #B5292C - einheitlicher Rotton, auf den alle rötlichen Farbtöne im
+# Cover vereinheitlicht werden (analog zur Hintergrundfarbe).
+TARGET_RED = (181, 41, 44)
+
+# Wie groß die Farbabweichung sein darf, damit ein Pixel noch als
+# "dieser Rotton" erkannt und ersetzt wird. Bei Bedarf anpassen:
+# kleiner = konservativer, größer = aggressiver.
+RED_THRESHOLD = 45
+
 # Textfarben auf Back-Covern, die vereinheitlicht werden sollen.
 # #1B2340 (dunkles Navy, Überschriften) und #5A5F72 (helleres
 # Graublau, Fließtext).
@@ -71,6 +80,10 @@ def normalize_color(img, target, threshold):
 
 def normalize_background(img):
     return normalize_color(img, TARGET_COLOR, BACKGROUND_THRESHOLD)
+
+
+def normalize_red(img):
+    return normalize_color(img, TARGET_RED, RED_THRESHOLD)
 
 
 def normalize_text_colors(img):
@@ -267,7 +280,7 @@ AUTHOR_FONT_SIZE_RATIO = 0.03    # Schriftgröße relativ zur Coverbreite
 AUTHOR_COLOR = (0, 28, 73)        # Navy, wie im Beispielcover gemessen
 AUTHOR_Y_RATIO = 0.910            # vertikale Mitte des Textes
 
-ORNAMENT_COLOR = (181, 41, 44)    # Rot, wie im Beispielcover gemessen
+ORNAMENT_COLOR = TARGET_RED        # #B5292C, einheitlich mit normalize_red
 ORNAMENT_Y_RATIO_FRONT = 0.950    # vertikale Mitte von Linie/Raute (Front)
 ORNAMENT_Y_RATIO_BACK = 0.930     # vertikale Mitte von Linie/Raute (Back)
                                    # Platzhalter - bitte an dein Layout anpassen
@@ -500,8 +513,12 @@ def process_cover(name, cover_type):
 
     img = Image.open(raw_path)
     img, replaced_bg = normalize_background(img)
+    img, replaced_red = normalize_red(img)
 
-    log_line = f"{name}.png: {replaced_bg:,} Pixel (Hintergrund)"
+    log_line = (
+        f"{name}.png: {replaced_bg:,} Pixel (Hintergrund), "
+        f"{replaced_red:,} Pixel (Rot)"
+    )
 
     if cover_type.lower() == "back":
         img, replaced_dark, replaced_light = normalize_text_colors(img)
