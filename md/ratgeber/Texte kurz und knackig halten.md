@@ -9,7 +9,7 @@ Wenn du fertig bist, hör auf.
 
 **Fertig.**
 
-----------
+---
 
 # Das Wichtigste zuerst
 
@@ -31,7 +31,7 @@ Damit wäre eigentlich alles gesagt.
 
 **Das ist wichtig.**
 
-----------
+---
 
 # Noch ein letzter Punkt
 
@@ -49,7 +49,7 @@ Mehr muss man dazu eigentlich nicht sagen.
 
 **Bis auf einen letzten wichtigen Punkt.**
 
-----------
+---
 
 # Der letzte wichtige Punkt
 
@@ -65,7 +65,7 @@ Und wenn man verbessert hat, sollte man aufhören. Das ist eigentlich schon die 
 
 **Wirklich.**
 
-----------
+---
 
 # Ein letzter letzter Punkt
 
@@ -91,7 +91,7 @@ Das reicht. Man könnte jetzt noch erwähnen, dass die Teilnehmer über den Ersa
 
 **Jetzt ist wirklich Schluss.**
 
-----------
+---
 
 # Wobei eine Kleinigkeit noch fehlt
 
@@ -111,7 +111,7 @@ Kurz schreiben. Klar schreiben. Nicht wiederholen. Dann ist man fertig.
 
 **Fast.**
 
-----------
+---
 
 # Ein wirklich letzter Gedanke
 
@@ -123,7 +123,7 @@ Deshalb sollte man ihn nicht wiederholen. Auch wenn er gerade sehr gut als Zusam
 
 **Fertig.**
 
-----------
+---
 
 # Jetzt aber wirklich zum Schluss
 
@@ -139,7 +139,7 @@ Wenn alles klar ist, kann der Text raus. Nicht noch einmal umformulieren. Nicht 
 
 **Das war der letzte Punkt.**
 
-----------
+---
 
 # Der allerletzte Punkt
 
@@ -153,7 +153,7 @@ Das ist die vielleicht wichtigste Regel überhaupt. Und damit endet dieser Ratge
 
 **Fertig.**
 
-----------
+---
 
 # Eine kleine Ergänzung zum Ende
 
@@ -171,7 +171,7 @@ Die Änderung ist der Punkt. Nicht die Tatsache, dass man sie gerade ankündigt.
 
 **Wirklich.**
 
-----------
+---
 
 # Und noch ein letzter Hinweis
 
@@ -185,7 +185,7 @@ Und manchmal lautet die Antwort: „Nein, eigentlich nicht.“ Dann kommt sie ra
 
 **Jetzt wirklich Schluss.**
 
-----------
+---
 
 # Die letzte Prüfung
 
@@ -197,7 +197,7 @@ Es ist einfach. Es ist praktisch. Und es lässt sich auf fast jeden Text anwende
 
 **Fertig.**
 
-----------
+---
 
 # BONUS: Der große Kurztext-Test
 
@@ -267,7 +267,7 @@ Das ist menschlich. Vor allem beim Schreiben. Wichtig ist nur, dass man irgendwa
 
 **Fertig.**
 
-----------
+---
 
 **Dr. Maximilian Methodius**  
 _Autor, Satiriker und ausgewiesener Experte für angewandte Kürze, präzises Weglassen und das rechtzeitige Beenden von Texten_
