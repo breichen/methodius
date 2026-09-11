@@ -3,7 +3,15 @@
 
 ## Ein Ratgeber über die Kunst, sich kurz zu fassen
 
-Schreib nicht zu viel. Komm schnell zum Punkt. Erkläre nur das Nötigste und vermeide unnötige Wiederholungen.
+**Dr. Maximilian Methodius**
+
+---
+
+# Herzlichen Glückwunsch!
+
+Du willst deine Texte kurz und verständlich halten.
+
+Also schreib nicht zu viel. Komm schnell zum Punkt. Erkläre nur das Nötigste und vermeide unnötige Wiederholungen.
 
 Wenn du fertig bist, hör auf.
 
