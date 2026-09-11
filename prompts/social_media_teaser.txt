@@ -1,4 +1,4 @@
-Create a premium social media teaser graphic using the previously generated FRONT COVER artwork.
+Create a premium social media teaser graphic using the previously generated FRONT COVER artwork and the supplied MANUSCRIPT TEXT.
 
 IMPORTANT
 
@@ -11,6 +11,55 @@ Do not change colors.
 Do not alter the illustration.
 
 Treat the cover as finished artwork.
+
+The manuscript text is provided below and must be used as the primary source for all marketing copy.
+
+The generated headline, teaser text and hook must be derived from the actual content, arguments, insights, tone and surprises found in the manuscript.
+
+Do NOT create generic marketing copy.
+
+Avoid clichés.
+
+Avoid vague self-help language.
+
+Extract the most unexpected, ironic, controversial, amusing, counterintuitive or curiosity-inducing idea from the manuscript and build the teaser around it.
+
+Always address the reader using "du".
+
+Never use:
+
+- Sie
+- Ihnen
+- Ihrerseits
+- Formal language
+
+--------------------------------------------------
+MANUSCRIPT
+--------------------------------------------------
+
+[PASTE FULL MANUSCRIPT HERE]
+
+--------------------------------------------------
+TASK
+--------------------------------------------------
+
+Analyze the manuscript.
+
+Identify:
+
+- the most surprising idea
+- the strongest contrarian argument
+- the most entertaining insight
+- the most shareable statement
+- the most curiosity-generating concept
+
+Use those insights to create the teaser.
+
+The teaser should make someone stop scrolling immediately.
+
+The reader should feel:
+
+"I need to know what this is about."
 
 --------------------------------------------------
 FORMAT
@@ -41,12 +90,28 @@ Luxury magazine quality.
 
 Sophisticated and witty.
 
+Feels like:
+
+- bestselling non-fiction
+- premium magazine campaign
+- intelligent publishing house
+- European editorial design
+
+Not:
+
+- sales page
+- internet marketer
+- clickbait ad
+- cheap self-help promotion
+
 --------------------------------------------------
 COLOR SYSTEM
 --------------------------------------------------
 
 Background: #FCFAF5
-Extremely light warm ivory, almost off-white.
+
+Extremely light warm ivory.
+
 The book cover must clearly contrast against the background and never visually blend into it.
 
 Primary text:
@@ -61,11 +126,17 @@ LAYOUT
 
 Book cover positioned on the left side.
 
+Use the supplied cover exactly as provided.
+
 Cover slightly angled.
 
 Soft realistic shadow.
 
 Premium presentation.
+
+Lots of breathing room.
+
+Elegant negative space.
 
 --------------------------------------------------
 PRODUCT TYPE
@@ -102,35 +173,90 @@ NOT:
 HEADLINE
 --------------------------------------------------
 
-Generate a short attention-grabbing headline based on the manuscript.
+Create ONE headline.
 
-Maximum:
+Requirements:
 
-5–10 words.
+- 5–10 words
+- based directly on manuscript content
+- intelligent
+- witty
+- curiosity-driven
+- surprising
+- memorable
+
+Prefer:
+
+- irony
+- contradiction
+- unexpected conclusions
+- provocative observations
+
+Avoid:
+
+- generic promises
+- obvious benefits
+- self-help clichés
 
 Examples:
 
-"Freundschaften pflegen? Warum eigentlich?"
+"Mehr Muskeln. Mehr Probleme."
 
-"Endlich weniger soziale Verpflichtungen."
+"Warum weniger manchmal tatsächlich mehr ist."
 
-"Die Kunst des professionellen Ignorierens."
+"Die Fitnessindustrie wird das nicht mögen."
 
-The headline should be humorous, intelligent and curiosity-driven.
+"Vielleicht war dein Ziel das Problem."
 
 --------------------------------------------------
 SUPPORTING TEXT
 --------------------------------------------------
 
-Generate one short teaser sentence.
+Create ONE teaser sentence.
 
 Maximum:
 
 20 words.
 
-Create curiosity.
+Requirements:
 
-Do not reveal everything.
+- based directly on manuscript content
+- creates curiosity
+- reveals only part of the idea
+- encourages further reading
+
+Avoid generic summaries.
+
+--------------------------------------------------
+HOOK STRATEGY
+--------------------------------------------------
+
+The teaser should be built around one of the following:
+
+- irony
+- paradox
+- counterintuitive insight
+- unexpected consequence
+- hidden truth
+- humorous observation
+- unpopular opinion
+
+The manuscript should determine which approach is strongest.
+
+--------------------------------------------------
+CTA
+--------------------------------------------------
+
+Create a subtle premium CTA.
+
+Examples:
+
+- Jetzt entdecken
+- Mehr erfahren
+- Zum Ratgeber
+- Weiterlesen
+
+Small and understated.
 
 --------------------------------------------------
 VISUAL DETAILS
@@ -147,25 +273,20 @@ No stock-photo look.
 No excessive graphics.
 
 The book cover must remain visually distinct from the background.
+
 Preserve the original cover exactly as supplied.
-Do not recolor, brighten, retouch, redesign, or reconstruct the cover.
-Use a subtle but realistic contact shadow around and beneath the book to reinforce separation.
 
---------------------------------------------------
-CTA
---------------------------------------------------
+Do not recolor.
 
-Small subtle CTA.
+Do not brighten.
 
-Examples:
+Do not retouch.
 
-"Jetzt entdecken"
+Do not redesign.
 
-"Mehr erfahren"
+Do not reconstruct.
 
-"Zum Ratgeber"
-
-Keep understated and premium.
+Use a subtle but realistic contact shadow around and beneath the book.
 
 --------------------------------------------------
 LIGHTING
@@ -177,34 +298,49 @@ Subtle shadows.
 
 Luxury publishing aesthetic.
 
+Premium publishing campaign quality.
+
+--------------------------------------------------
+COPY QUALITY
+--------------------------------------------------
+
+Before finalizing:
+
+Ask yourself:
+
+"What single sentence from this manuscript would make somebody stop scrolling?"
+
+Use that insight.
+
+Do not generate generic advertising copy.
+
+Do not summarize the book.
+
+Sell curiosity.
+
 --------------------------------------------------
 OUTPUT
 --------------------------------------------------
 
-One premium social media teaser.
+Create ONE premium social media teaser graphic.
 
-Cover visible.
+Include:
 
-Headline visible.
+- original supplied cover
+- headline
+- teaser sentence
+- CTA
 
-Teaser text visible.
+Requirements:
 
-Clean minimalist composition.
+- visually clean
+- editorial
+- premium
+- highly shareable
+- high engagement potential
+- no watermarks
+- no badges
+- no ratings
+- no pricing
 
-High engagement potential.
-
-No watermarks.
-
-No badges.
-
-No ratings.
-
-No pricing.
-
-Create a provocative social media hook.
-
-Use irony, humor or a surprising statement.
-
-The graphic should make users stop scrolling within 1 second.
-
-Maintain premium publishing aesthetics.
+The graphic should stop scrolling within one second and feel like a bestselling non-fiction campaign from a premium publishing house.

@@ -1,4 +1,6 @@
-Create a premium 3D product mockup using the previously generated FRONT COVER and BACK COVER artwork.
+Verwende die hochgeladene Frontcover-Datei als Textur für das linke Booklet und die hochgeladene Backcover-Datei als Textur für das rechte Booklet. Keine Texterkennung. Keine Neusetzung von Text.
+
+Keine Rekonstruktion. Keine inhaltlichen Änderungen. Pixelgenaue Übernahme der gelieferten Covergrafiken.
 
 IMPORTANT
 
