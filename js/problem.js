@@ -198,6 +198,15 @@ function baueDatumsHinweis(problem) {
 
   const zeilen = [];
 
+  // Fallnummer anhand der Reihenfolge in problemeListe bestimmen
+  const fallnummer = problemeListe.findIndex(p => p.slug === problem.slug) + 1;
+
+  if (fallnummer > 0) {
+    zeilen.push(
+      `<p class="buch-datum">FALL NR. ${String(fallnummer).padStart(3, "0")}</p>`
+    );
+  }
+
 
   if (problem.einsender) {
 
