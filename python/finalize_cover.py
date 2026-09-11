@@ -3,6 +3,7 @@ import glob
 import math
 import os
 import random
+import re
 
 from PIL import Image, ImageDraw, ImageFont
 from tempfile import NamedTemporaryFile
@@ -266,7 +267,7 @@ AUTHOR_FONT_SIZE_RATIO = 0.03    # Schriftgröße relativ zur Coverbreite
 AUTHOR_COLOR = (0, 28, 73)        # Navy, wie im Beispielcover gemessen
 AUTHOR_Y_RATIO = 0.910            # vertikale Mitte des Textes
 
-ORNAMENT_COLOR = (180, 24, 30)    # Rot, wie im Beispielcover gemessen
+ORNAMENT_COLOR = (181, 41, 44)    # Rot, wie im Beispielcover gemessen
 ORNAMENT_Y_RATIO_FRONT = 0.950    # vertikale Mitte von Linie/Raute (Front)
 ORNAMENT_Y_RATIO_BACK = 0.930     # vertikale Mitte von Linie/Raute (Back)
                                    # Platzhalter - bitte an dein Layout anpassen
@@ -362,6 +363,125 @@ def add_author_and_ornament(cover):
 
 
 # ---------------------------------------------------------------------------
+# Schritt 4: Nummern-Kreis unten rechts (nur Front-Cover)
+# ---------------------------------------------------------------------------
+
+RATGEBER_JS_PATH = "../js/ratgeber.js"
+
+CIRCLE_COLOR = (27, 35, 64)      # Navy, #1B2340
+CIRCLE_NUMBER_COLOR = TARGET_COLOR  # Creme, #F1ECE2 (wie Hintergrund)
+
+# Orientiert an Position/Größe des Logos (siehe add_logo): Logo sitzt
+# bei x=0.04*Breite (linker Rand) / y=0.93*Höhe, Breite 0.07*Breite.
+# Der Kreis spiegelt das unten rechts, mit etwas mehr Durchmesser,
+# damit auch dreistellige Zahlen gut hineinpassen.
+CIRCLE_DIAMETER_RATIO = 0.09       # Durchmesser relativ zur Coverbreite
+CIRCLE_MARGIN_RIGHT_RATIO = 0.03   # Abstand zum rechten Rand
+CIRCLE_Y_RATIO = 0.92              # vertikale Position (oben am Kreis)
+
+# Schriftgröße relativ zum Kreisdurchmesser. Der Wert ist so gewählt,
+# dass auch dreistellige Zahlen (z.B. "123") noch bequem hineinpassen.
+CIRCLE_FONT_SIZE_RATIO = 0.42
+
+
+def load_ratgeber_order(path=RATGEBER_JS_PATH):
+    """
+    Liest ../js/ratgeber.js ein und liefert die Liste aller Slugs in
+    der Reihenfolge, in der sie dort auftauchen (sowohl einfache
+    String-Einträge als auch { slug: "...", ... }-Objekte).
+    """
+
+    if not os.path.isfile(path):
+        print(f"Warnung: {path} nicht gefunden, keine Nummerierung möglich.")
+        return []
+
+    with open(path, encoding="utf-8") as f:
+        content = f.read()
+
+    match = re.search(
+        r"ratgeberRohdaten\s*=\s*\[(.*?)\]\s*;", content, re.DOTALL
+    )
+
+    if not match:
+        print(
+            f"Warnung: 'ratgeberRohdaten' in {path} nicht gefunden, "
+            "keine Nummerierung möglich."
+        )
+        return []
+
+    array_body = match.group(1)
+
+    slugs = []
+
+    for entry_match in re.finditer(r"\{[^}]*\}|\"[^\"]*\"", array_body):
+        entry = entry_match.group(0)
+
+        if entry.startswith("{"):
+            slug_match = re.search(r'slug:\s*"([^"]*)"', entry)
+            if slug_match:
+                slugs.append(slug_match.group(1))
+        else:
+            slugs.append(entry.strip('"'))
+
+    return slugs
+
+
+def get_cover_number(name, path=RATGEBER_JS_PATH):
+    """
+    Bestimmt die (1-basierte) Nummer eines Covers anhand seiner
+    Position in der ratgeberRohdaten-Liste. Gibt None zurück, wenn
+    der Name nicht gefunden wurde.
+    """
+
+    slugs = load_ratgeber_order(path)
+
+    try:
+        return slugs.index(name) + 1
+    except ValueError:
+        print(f"Warnung: '{name}' nicht in {path} gefunden.")
+        return None
+
+
+def draw_number_circle(cover, number):
+    cover_width, cover_height = cover.size
+
+    diameter = int(cover_width * CIRCLE_DIAMETER_RATIO)
+    margin_right = int(cover_width * CIRCLE_MARGIN_RIGHT_RATIO)
+
+    x = cover_width - margin_right - diameter
+    y = int(cover_height * CIRCLE_Y_RATIO)
+
+    draw = ImageDraw.Draw(cover)
+
+    draw.ellipse(
+        (x, y, x + diameter, y + diameter),
+        fill=CIRCLE_COLOR,
+    )
+
+    font_size = max(1, int(diameter * CIRCLE_FONT_SIZE_RATIO))
+
+    try:
+        font = ImageFont.truetype(
+            AUTHOR_FONT_PATH, font_size, index=AUTHOR_FONT_INDEX
+        )
+    except OSError:
+        font = ImageFont.load_default()
+
+    center_x = x + diameter // 2
+    center_y = y + diameter // 2
+
+    draw.text(
+        (center_x, center_y),
+        str(number),
+        font=font,
+        fill=CIRCLE_NUMBER_COLOR,
+        anchor="mm",
+    )
+
+    return cover
+
+
+# ---------------------------------------------------------------------------
 # Zusammengeführte Pipeline
 # ---------------------------------------------------------------------------
 
@@ -408,6 +528,10 @@ def process_cover(name, cover_type):
 
     if cover_type.lower() == "front":
         cover = add_author_and_ornament(cover)
+
+        number = get_cover_number(name)
+        if number is not None:
+            cover = draw_number_circle(cover, number)
 
     cover = add_logo(cover, cover_type)
 
