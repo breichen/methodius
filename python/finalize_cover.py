@@ -32,7 +32,7 @@ TARGET_RED = (181, 41, 44)
 # kleiner = konservativer, größer = aggressiver.
 RED_THRESHOLD = 45
 
-# Textfarben auf Back-Covern, die vereinheitlicht werden sollen.
+# Textfarben, die vereinheitlicht werden sollen (Front und Back).
 # #1B2340 (dunkles Navy, Überschriften) und #5A5F72 (helleres
 # Graublau, Fließtext).
 TEXT_COLOR_DARK = (27, 35, 64)
@@ -41,6 +41,31 @@ TEXT_COLOR_LIGHT = (90, 95, 114)
 # Wie groß die Farbabweichung sein darf, damit ein Pixel noch als
 # "diese Textfarbe" erkannt und ersetzt wird. Bei Bedarf anpassen.
 TEXT_THRESHOLD = 30
+
+# Bei Front-Covern steht Text nur im oberen Bereich (Titel/Untertitel),
+# darunter beginnt die Illustration - die soll nicht angefasst werden.
+# Statt Textfarben-Lücken zu suchen (unzuverlässig - z.B. weil manche
+# Titelwörter rot statt navy sind, wodurch die Lücke zwischen Titel-
+# und Untertitel-Zeilen teils GRÖSSER ist als die Lücke zwischen
+# Untertitel und Illustration), wird die Grenze anhand einer
+# zusammenhängenden Fläche erkannt: Text besteht aus kurzen Zeilen mit
+# Lücken dazwischen, eine Illustration ist dagegen über hunderte
+# Zeilen hinweg durchgehend "belegt" (unabhängig von der Farbe).
+# TEXT_REGION_MAX_RATIO_FRONT wirkt als absolute Sicherheits-
+# Obergrenze, die nie überschritten wird.
+TEXT_REGION_MAX_RATIO_FRONT = 0.55
+
+# Ein Pixel gilt als "Inhalt" (nicht Hintergrund), wenn er weiter als
+# BACKGROUND_THRESHOLD vom Hintergrund entfernt ist. Eine Zeile gilt
+# als "leer", wenn weniger als dieser Anteil der Breite Inhalt ist.
+TEXT_BLANK_ROW_MAX_COVERAGE = 0.002
+
+# Mindestlänge einer durchgehenden (lückenlosen) Fläche, damit sie als
+# Illustration statt als einzelne Textzeile gilt. Am Beispielcover
+# gemessen: die längste einzelne Textzeile war 117 Zeilen (bei 1492 px
+# Höhe -> 7.8%), die Illustration lief 700 Zeilen (46.9%) am Stück.
+# 15% liegt komfortabel dazwischen.
+SUSTAINED_CONTENT_MIN_ROWS_RATIO = 0.15
 
 
 def color_distance(c1, c2):
@@ -51,11 +76,15 @@ def color_distance(c1, c2):
     )
 
 
-def normalize_color(img, target, threshold):
+def normalize_color(img, target, threshold, y_start=0, y_end=None):
     """
     Ersetzt alle Pixel, deren Farbe nahe genug (innerhalb threshold)
     an target liegt, durch target selbst. Generische Grundlage für
-    normalize_background und normalize_text_colors.
+    normalize_background, normalize_red und normalize_text_colors.
+
+    Über y_start/y_end lässt sich der Bereich auf einen horizontalen
+    Streifen einschränken (z.B. nur den oberen Textbereich eines
+    Front-Covers, ohne die Illustration darunter zu berühren).
     """
 
     img = img.convert("RGB")
@@ -64,9 +93,12 @@ def normalize_color(img, target, threshold):
 
     width, height = img.size
 
+    if y_end is None:
+        y_end = height
+
     replaced = 0
 
-    for y in range(height):
+    for y in range(y_start, y_end):
         for x in range(width):
 
             pixel = pixels[x, y]
@@ -89,12 +121,111 @@ def normalize_red(img):
 def normalize_text_colors(img):
     """
     Vereinheitlicht beide Textfarben (dunkles Navy und helleres
-    Graublau) auf Back-Covern. Gibt das Bild sowie die jeweils
-    ersetzte Pixelanzahl zurück.
+    Graublau) auf dem GESAMTEN Bild. Für Back-Cover gedacht, wo es
+    keine Illustration gibt, die versehentlich mitgetroffen werden
+    könnte. Gibt das Bild sowie die jeweils ersetzte Pixelanzahl
+    zurück.
     """
 
     img, replaced_dark = normalize_color(img, TEXT_COLOR_DARK, TEXT_THRESHOLD)
     img, replaced_light = normalize_color(img, TEXT_COLOR_LIGHT, TEXT_THRESHOLD)
+
+    return img, replaced_dark, replaced_light
+
+
+def find_text_block_end(img):
+    """
+    Ermittelt die Zeile, an der der obere Textblock (Titel/Untertitel)
+    endet, indem die erste ausreichend lange, LÜCKENLOSE Fläche
+    gesucht wird (unabhängig von deren Farbe). Textzeilen sind kurz
+    und durch Lücken getrennt, eine Illustration ist dagegen über
+    viele hundert Zeilen hinweg durchgehend "belegt" - dieser
+    qualitative Unterschied ist robuster als eine Suche nach
+    bestimmten Textfarben (die z.B. durch farbig hervorgehobene
+    Titelwörter in die Irre geführt werden kann).
+
+    TEXT_REGION_MAX_RATIO_FRONT wirkt als absolute Obergrenze, die nie
+    überschritten wird. Gibt 0 zurück, wenn im Bild gar keine "leeren"
+    Zeilen gefunden wurden (z.B. weil es komplett ungewöhnlich
+    aufgebaut ist) - in dem Fall wird die Normalisierung sicherheits-
+    halber komplett übersprungen.
+    """
+
+    width, height = img.size
+    pixels = img.load()
+
+    max_y_cap = int(height * TEXT_REGION_MAX_RATIO_FRONT)
+    max_coverage_pixels = int(width * TEXT_BLANK_ROW_MAX_COVERAGE)
+    sustained_min_rows = max(10, int(height * SUSTAINED_CONTENT_MIN_ROWS_RATIO))
+
+    def is_row_blank(y):
+        count = 0
+        for x in range(width):
+            if color_distance(pixels[x, y], TARGET_COLOR) > BACKGROUND_THRESHOLD:
+                count += 1
+                if count > max_coverage_pixels:
+                    return False
+        return True
+
+    row_blank = [is_row_blank(y) for y in range(height)]
+
+    # Zusammenhängende "leere" Bereiche (Lücken) finden.
+    gaps = []
+    start = None
+    for y in range(height):
+        if row_blank[y]:
+            if start is None:
+                start = y
+        elif start is not None:
+            gaps.append((start, y - 1))
+            start = None
+    if start is not None:
+        gaps.append((start, height - 1))
+
+    if not gaps:
+        return 0
+
+    # Für jede Lücke prüfen, wie lang die anschließende zusammen-
+    # hängende Fläche bis zur nächsten Lücke ist. Ist sie lang genug,
+    # markiert diese Lücke den Übergang von Text zu Illustration.
+    for i, (gap_start, gap_end) in enumerate(gaps):
+        if gap_start > max_y_cap:
+            break
+
+        next_gap_start = gaps[i + 1][0] if i + 1 < len(gaps) else height
+        span = next_gap_start - (gap_end + 1)
+
+        if span >= sustained_min_rows:
+            return min(max_y_cap, gap_end + 1)
+
+    # Kein eindeutiger Übergang gefunden - sicherheitshalber die
+    # Obergrenze verwenden.
+    return max_y_cap
+
+
+def normalize_front_text_colors(img):
+    """
+    Vereinheitlicht beide Textfarben, aber NUR im automatisch
+    erkannten oberen Textbereich (Titel/Untertitel). Die Illustration
+    im unteren Bereich bleibt unangetastet. Wird kein Textbereich
+    erkannt, passiert nichts (sicherer Fallback).
+    """
+
+    y_end = find_text_block_end(img)
+
+    if y_end == 0:
+        print(
+            "Warnung: Kein Textbereich erkannt, "
+            "Textfarben-Normalisierung übersprungen."
+        )
+        return img, 0, 0
+
+    img, replaced_dark = normalize_color(
+        img, TEXT_COLOR_DARK, TEXT_THRESHOLD, y_end=y_end
+    )
+    img, replaced_light = normalize_color(
+        img, TEXT_COLOR_LIGHT, TEXT_THRESHOLD, y_end=y_end
+    )
 
     return img, replaced_dark, replaced_light
 
@@ -389,8 +520,8 @@ CIRCLE_NUMBER_COLOR = TARGET_COLOR  # Creme, #F1ECE2 (wie Hintergrund)
 # Der Kreis spiegelt das unten rechts, mit etwas mehr Durchmesser,
 # damit auch dreistellige Zahlen gut hineinpassen.
 CIRCLE_DIAMETER_RATIO = 0.09       # Durchmesser relativ zur Coverbreite
-CIRCLE_MARGIN_RIGHT_RATIO = 0.03   # Abstand zum rechten Rand
-CIRCLE_Y_RATIO = 0.92              # vertikale Position (oben am Kreis)
+CIRCLE_MARGIN_RIGHT_RATIO = 0.04   # Abstand zum rechten Rand
+CIRCLE_Y_RATIO = 0.93              # vertikale Position (oben am Kreis)
 
 # Schriftgröße relativ zum Kreisdurchmesser. Der Wert ist so gewählt,
 # dass auch dreistellige Zahlen (z.B. "123") noch bequem hineinpassen.
@@ -522,6 +653,13 @@ def process_cover(name, cover_type):
 
     if cover_type.lower() == "back":
         img, replaced_dark, replaced_light = normalize_text_colors(img)
+        log_line += (
+            f", {replaced_dark:,} Pixel (Text dunkel), "
+            f"{replaced_light:,} Pixel (Text hell)"
+        )
+
+    if cover_type.lower() == "front":
+        img, replaced_dark, replaced_light = normalize_front_text_colors(img)
         log_line += (
             f", {replaced_dark:,} Pixel (Text dunkel), "
             f"{replaced_light:,} Pixel (Text hell)"
