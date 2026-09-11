@@ -339,7 +339,7 @@ def draw_barcode(cover):
     except OSError:
         pass
 
-    return cover
+    return cover, (x, y, box_width, box_height)
 
 
 def add_logo(cover, cover_type):
@@ -507,8 +507,14 @@ def add_author_and_ornament(cover):
 
 
 # ---------------------------------------------------------------------------
-# Schritt 4: Nummern-Kreis unten rechts (nur Front-Cover)
+# Schritt 4: Nummern-Kreis unten rechts (nur Front-Cover, standardmäßig AUS)
 # ---------------------------------------------------------------------------
+
+# Muss explizit auf True gesetzt werden, damit der Nummern-Kreis auf dem
+# Front-Cover erscheint. Standardmäßig aus - stattdessen steht die
+# Nummer als "BAND N" über dem Barcode auf dem Back-Cover (siehe
+# draw_band_label weiter unten).
+SHOW_FRONT_NUMBER_CIRCLE = False
 
 RATGEBER_JS_PATH = "../js/ratgeber.js"
 
@@ -626,6 +632,86 @@ def draw_number_circle(cover, number):
 
 
 # ---------------------------------------------------------------------------
+# Schritt 5: "BAND N"-Beschriftung über dem Barcode (nur Back-Cover)
+# ---------------------------------------------------------------------------
+
+BAND_LABEL_TEXT_TEMPLATE = "BAND {}"
+
+# Index des "Medium"-Schnitts innerhalb der Inter-.ttc-Datei (anderer
+# Schnitt als AUTHOR_FONT_INDEX, der z.B. SemiBold verwendet).
+# Herausfinden z.B. mit list_ttc_fonts.py <pfad-zur-ttc-datei>.
+BAND_LABEL_FONT_INDEX = 8
+
+# 20-24pt, als Pixelgröße interpretiert (siehe AUTHOR_FONT_SIZE_RATIO,
+# das für vergleichbare Cover-Größen auf einen ähnlichen Wertebereich
+# kommt). Bei Bedarf anpassen.
+BAND_LABEL_FONT_SIZE = 22
+
+BAND_LABEL_COLOR = (90, 95, 114)  # #5A5F72
+
+# Laufweite (Tracking) in "1/1000 em" - Standard-Einheit in Layout-
+# Programmen wie InDesign/Illustrator. +20 bis +40 laut Vorgabe, 30
+# als Mittelwert. Wird in draw_tracked_text in Pixel umgerechnet
+# (font_size * tracking/1000).
+BAND_LABEL_TRACKING = 30
+
+# Abstand zwischen Textmitte und Oberkante des Barcodes, in Pixeln.
+BAND_LABEL_GAP = 18
+
+
+def draw_tracked_text(draw, center, text, font, fill, tracking_px):
+    """
+    Zeichnet text horizontal zentriert um center=(x, y), mit
+    zusätzlichem Abstand (tracking_px) zwischen den Buchstaben.
+    PIL unterstützt keine Laufweite nativ, daher wird jedes Zeichen
+    einzeln positioniert.
+    """
+
+    widths = [draw.textlength(ch, font=font) for ch in text]
+
+    total_width = sum(widths)
+    if len(text) > 1:
+        total_width += tracking_px * (len(text) - 1)
+
+    x = center[0] - total_width / 2
+    y = center[1]
+
+    for ch, width in zip(text, widths):
+        draw.text((x, y), ch, font=font, fill=fill, anchor="lm")
+        x += width + tracking_px
+
+
+def draw_band_label(cover, number, barcode_box):
+    """
+    Schreibt "BAND N" horizontal zentriert über dem Barcode.
+    barcode_box ist das (x, y, box_width, box_height)-Tupel, das
+    draw_barcode zurückgibt.
+    """
+
+    x, y, box_width, box_height = barcode_box
+
+    text = BAND_LABEL_TEXT_TEMPLATE.format(number)
+
+    try:
+        font = ImageFont.truetype(
+            AUTHOR_FONT_PATH, BAND_LABEL_FONT_SIZE, index=BAND_LABEL_FONT_INDEX
+        )
+    except OSError:
+        font = ImageFont.load_default()
+
+    draw = ImageDraw.Draw(cover)
+
+    tracking_px = BAND_LABEL_FONT_SIZE * (BAND_LABEL_TRACKING / 1000)
+
+    center_x = x + box_width / 2
+    center_y = y - BAND_LABEL_GAP
+
+    draw_tracked_text(draw, (center_x, center_y), text, font, BAND_LABEL_COLOR, tracking_px)
+
+    return cover
+
+
+# ---------------------------------------------------------------------------
 # Zusammengeführte Pipeline
 # ---------------------------------------------------------------------------
 
@@ -678,15 +764,20 @@ def process_cover(name, cover_type):
     cover = img.convert("RGBA")
 
     if cover_type.lower() == "back":
-        cover = draw_barcode(cover)
+        cover, barcode_box = draw_barcode(cover)
         cover = draw_ornament(cover, ORNAMENT_Y_RATIO_BACK)
+
+        number = get_cover_number(name)
+        if number is not None:
+            cover = draw_band_label(cover, number, barcode_box)
 
     if cover_type.lower() == "front":
         cover = add_author_and_ornament(cover)
 
-        number = get_cover_number(name)
-        if number is not None:
-            cover = draw_number_circle(cover, number)
+        if SHOW_FRONT_NUMBER_CIRCLE:
+            number = get_cover_number(name)
+            if number is not None:
+                cover = draw_number_circle(cover, number)
 
     cover = add_logo(cover, cover_type)
 
