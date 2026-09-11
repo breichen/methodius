@@ -20,7 +20,17 @@ TARGET_COLOR = (241, 236, 226)
 # 20 = konservativ
 # 25 = meist sinnvoll
 # 30 = aggressiver
-THRESHOLD = 25
+BACKGROUND_THRESHOLD = 25
+
+# Textfarben auf Back-Covern, die vereinheitlicht werden sollen.
+# #1B2340 (dunkles Navy, Überschriften) und #5A5F72 (helleres
+# Graublau, Fließtext).
+TEXT_COLOR_DARK = (27, 35, 64)
+TEXT_COLOR_LIGHT = (90, 95, 114)
+
+# Wie groß die Farbabweichung sein darf, damit ein Pixel noch als
+# "diese Textfarbe" erkannt und ersetzt wird. Bei Bedarf anpassen.
+TEXT_THRESHOLD = 30
 
 
 def color_distance(c1, c2):
@@ -31,7 +41,13 @@ def color_distance(c1, c2):
     )
 
 
-def normalize_background(img):
+def normalize_color(img, target, threshold):
+    """
+    Ersetzt alle Pixel, deren Farbe nahe genug (innerhalb threshold)
+    an target liegt, durch target selbst. Generische Grundlage für
+    normalize_background und normalize_text_colors.
+    """
+
     img = img.convert("RGB")
 
     pixels = img.load()
@@ -45,11 +61,28 @@ def normalize_background(img):
 
             pixel = pixels[x, y]
 
-            if color_distance(pixel, TARGET_COLOR) <= THRESHOLD:
-                pixels[x, y] = TARGET_COLOR
+            if color_distance(pixel, target) <= threshold:
+                pixels[x, y] = target
                 replaced += 1
 
     return img, replaced
+
+
+def normalize_background(img):
+    return normalize_color(img, TARGET_COLOR, BACKGROUND_THRESHOLD)
+
+
+def normalize_text_colors(img):
+    """
+    Vereinheitlicht beide Textfarben (dunkles Navy und helleres
+    Graublau) auf Back-Covern. Gibt das Bild sowie die jeweils
+    ersetzte Pixelanzahl zurück.
+    """
+
+    img, replaced_dark = normalize_color(img, TEXT_COLOR_DARK, TEXT_THRESHOLD)
+    img, replaced_light = normalize_color(img, TEXT_COLOR_LIGHT, TEXT_THRESHOLD)
+
+    return img, replaced_dark, replaced_light
 
 
 # ---------------------------------------------------------------------------
@@ -346,7 +379,18 @@ def process_cover(name, cover_type):
         return
 
     img = Image.open(raw_path)
-    img, replaced = normalize_background(img)
+    img, replaced_bg = normalize_background(img)
+
+    log_line = f"{name}.png: {replaced_bg:,} Pixel (Hintergrund)"
+
+    if cover_type.lower() == "back":
+        img, replaced_dark, replaced_light = normalize_text_colors(img)
+        log_line += (
+            f", {replaced_dark:,} Pixel (Text dunkel), "
+            f"{replaced_light:,} Pixel (Text hell)"
+        )
+
+    log_line += " ersetzt"
 
     nologo_dir = f"../pics/ratgeber-{cover_type}-nologo"
     os.makedirs(nologo_dir, exist_ok=True)
@@ -354,7 +398,7 @@ def process_cover(name, cover_type):
     nologo_path = os.path.join(nologo_dir, f"{name}.png")
     img.save(nologo_path, optimize=True, compress_level=9)
 
-    print(f"{name}.png: {replaced:,} Pixel ersetzt (Hintergrund)")
+    print(log_line)
 
     cover = img.convert("RGBA")
 
