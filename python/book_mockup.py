@@ -61,6 +61,8 @@ def parse_args():
     parser.add_argument("--res-x", type=int, default=2400)
     parser.add_argument("--res-y", type=int, default=1800)
     parser.add_argument("--samples", type=int, default=128)
+    parser.add_argument("--denoise", action="store_true",
+                         help="Denoising aktivieren (benoetigt Blender-Build mit OIDN)")
     return parser.parse_args(argv)
 
 
@@ -96,8 +98,8 @@ BEVEL_WIDTH = 0.0006         # minimale Kantenrundung fuer realistische Optik
 CREAM_SPINE_COLOR = (0.93, 0.895, 0.82, 1.0)   # gleiche warme Cremepalette wie Cover
 BACKGROUND_HEX = (0.980, 0.973, 0.949)          # #FAF8F2
 
-GAP_BETWEEN_BOOKS = 0.09
-TURN_ANGLE_DEG = 20.0        # leichte Drehung "toward the viewer"
+GAP_BETWEEN_BOOKS = 0.11
+TURN_ANGLE_DEG = 14.0        # leichte Drehung "toward the viewer"
 
 
 # ---------------------------------------------------------------------------
@@ -337,8 +339,8 @@ cam_obj = bpy.data.objects.new("Camera", cam_data)
 bpy.context.collection.objects.link(cam_obj)
 bpy.context.scene.camera = cam_obj
 
-cam_pos = Vector((0.0, -0.95, BOOK_HEIGHT * 0.62))
-target = Vector((0.0, 0.0, BOOK_HEIGHT * 0.46))
+cam_pos = Vector((0.0, -1.05, BOOK_HEIGHT * 0.58))
+target = Vector((0.0, 0.0, BOOK_HEIGHT * 0.50))
 direction = (target - cam_pos).normalized()
 cam_obj.location = cam_pos
 cam_obj.rotation_euler = direction.to_track_quat('-Z', 'Y').to_euler()
@@ -397,7 +399,7 @@ add_area_light(
 scene = bpy.context.scene
 scene.render.engine = 'CYCLES'
 scene.cycles.samples = ARGS.samples
-scene.cycles.use_denoising = True
+scene.cycles.use_denoising = bool(ARGS.denoise)
 
 scene.render.resolution_x = ARGS.res_x
 scene.render.resolution_y = ARGS.res_y

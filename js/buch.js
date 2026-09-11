@@ -18,6 +18,13 @@ const container = document.getElementById("buch-inhalt");
 function baueDatumsHinweis(buch) {
   const zeilen = [];
 
+  // Bandnummer anhand der Reihenfolge in ratgeberListe bestimmen
+  const bandnummer = ratgeberListe.findIndex(r => r.slug === buch.slug) + 1;
+
+  if (bandnummer > 0) {
+    zeilen.push(`<p class="buch-datum">BAND ${bandnummer}</p>`);
+  }
+
   if (buch.kategorie) {
     const slug = RatgeberKategorieInfo[buch.kategorie]?.slug;
     const kategorieHtml = slug
