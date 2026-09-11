@@ -103,7 +103,7 @@ function ladeNews() {
       beitrag.datum &&
       istDatumErreicht(beitrag.datum) &&
       (!kategorieFilterAktiv || beitrag.kategorie === NEWS_SEITE_KATEGORIE)
-  );
+  ).sort((a, b) => new Date(b.datum) - new Date(a.datum));
 
   if (sichtbareNews.length === 0) {
     newsContainer.innerHTML = `
@@ -119,7 +119,8 @@ function ladeNews() {
   }
 
   /*
-    Die neuesten Beiträge stehen in news.js oben.
+    Nach Datum absteigend sortiert:
+    neueste Beiträge zuerst.
   */
 
   Promise.all(
