@@ -1,346 +1,370 @@
-Create a premium social media teaser graphic using the previously generated FRONT COVER artwork and the supplied MANUSCRIPT TEXT.
+# DESIGN REFERENCE SYSTEM (MANDATORY)
 
-IMPORTANT
+The final graphic must visually match the supplied reference examples.
 
-Use the exact supplied front cover.
+Use the references as the primary design language.
+
+The goal is that different guidebooks appear as part of the same publishing campaign.
+
+The supplied front cover must be used exactly as provided.
 
 Do not redesign it.
 Do not recreate it.
 Do not modify typography.
 Do not change colors.
 Do not alter the illustration.
+Do not reconstruct any cover elements.
 
 Treat the cover as finished artwork.
 
-The manuscript text is provided below and must be used as the primary source for all marketing copy.
+---
 
-The generated headline, teaser text and hook must be derived from the actual content, arguments, insights, tone and surprises found in the manuscript.
+# CANVAS
 
-Do NOT create generic marketing copy.
+Format: 1:1
 
-Avoid clichés.
+Size: 2048 × 2048 px
 
-Avoid vague self-help language.
+Background:
+#FCFAF5
 
-Extract the most unexpected, ironic, controversial, amusing, counterintuitive or curiosity-inducing idea from the manuscript and build the teaser around it.
+Warm ivory.
 
-Always address the reader using "du".
+No gradients.
+No texture.
+No patterns.
 
-Never use:
+Clean editorial appearance.
 
-- Sie
-- Ihnen
-- Ihrerseits
-- Formal language
+---
 
---------------------------------------------------
-MANUSCRIPT
---------------------------------------------------
+# COLOR SYSTEM
 
-[PASTE FULL MANUSCRIPT HERE]
+Primary Editorial Blue:
+#1B2340
 
---------------------------------------------------
-TASK
---------------------------------------------------
+Use for:
 
-Analyze the manuscript.
+- headline
+- teaser copy
+- author name
+- decorative elements
 
-Identify:
+Accent Red:
+#B5292C
 
-- the most surprising idea
-- the strongest contrarian argument
-- the most entertaining insight
-- the most shareable statement
-- the most curiosity-generating concept
+Use ONLY for:
 
-Use those insights to create the teaser.
+- the most important word or phrase in the headline
+- decorative divider line
+- CTA
 
-The teaser should make someone stop scrolling immediately.
+Maximum red usage:
+15–20% of total text.
 
-The reader should feel:
+The design must remain predominantly blue.
 
-"I need to know what this is about."
+---
 
---------------------------------------------------
-FORMAT
---------------------------------------------------
+# BOOK PLACEMENT
 
-Square format.
+Place the supplied cover on the LEFT side.
 
-1:1 aspect ratio.
+Book height:
+55–65% of canvas height.
 
-Optimized for:
+Book occupies approximately:
+30–35% of total canvas width.
 
-- Instagram Feed
-- LinkedIn Posts
-- Facebook Posts
-- Pinterest
+Book angle:
+4–8° perspective rotation.
 
---------------------------------------------------
-STYLE
---------------------------------------------------
+Slim booklet appearance.
 
-Premium editorial publishing brand.
+Spine width:
+3–5 mm.
 
-Modern intellectual bestseller aesthetic.
+Apply:
 
-Clean European publishing design.
+- soft contact shadow
+- subtle realistic drop shadow
+- premium studio lighting
 
-Luxury magazine quality.
+The book must clearly contrast against the background and remain visually distinct.
 
-Sophisticated and witty.
+---
 
-Feels like:
+# TYPOGRAPHY
 
-- bestselling non-fiction
-- premium magazine campaign
-- intelligent publishing house
-- European editorial design
+Headline font style:
+
+Elegant editorial serif.
+
+Similar characteristics to:
+
+- Freight Display
+- Chronicle Display
+- Tiempos Headline
+- Canela Display
+
+Font weight:
+Bold
+
+Optical appearance:
+700–800
+
+Tracking:
+slightly tight
+
+Line height:
+85–92%
+
+Headline size:
+
+Very large.
+
+Headline block should occupy:
+
+45–60% of the right-side area.
+
+Headline must dominate the composition.
+
+---
+
+# HEADLINE STRUCTURE
+
+Use 2–4 lines.
+
+Preferred structure:
+
+Line 1:
+dark blue
+
+Line 2:
+dark blue
+
+Line 3:
+accent red
+
+Example:
+
+Mehr Muskeln.
+Mehr
+Probleme.
+
+or
+
+Du musst nicht
+kompetent sein.
+Nur kompetent
+wirken.
+
+The red phrase should contain:
+
+- the contradiction
+- the punchline
+- the irony
+- the reveal
+
+Only one phrase should be red.
+
+Never color more than 35% of the headline red.
+
+---
+
+# TEXT BLOCK POSITIONING
+
+Headline begins:
+
+approximately 58–62% from left edge.
+
+Top edge:
+
+18–24% from top.
+
+Text aligned LEFT.
+
+Never centered.
+Never justified.
+
+Maintain a strong rectangular text block.
+
+---
+
+# DECORATIVE DIVIDER
+
+Place a thin horizontal red line between headline and teaser text.
+
+Color:
+#B5292C
+
+Length:
+90–110 px
+
+Thickness:
+4 px
+
+Corner style:
+square
+
+Position:
+
+40–60 px below headline.
+
+---
+
+# TEASER TEXT
+
+Position:
+
+below divider line.
+
+Maximum:
+3–5 lines.
+
+Width:
+28–35% of canvas width.
+
+Font:
+
+modern editorial sans serif.
+
+Examples:
+
+- Inter
+- Suisse Int'l
+- Neue Haas Grotesk
+- Source Sans
+
+Weight:
+400–500
+
+Color:
+#1B2340
+
+Font size:
+
+28–38 px
+(relative to a 2048 × 2048 canvas)
+
+Line height:
+140–150%
+
+Must feel calm and intelligent.
+
+Never promotional.
+
+Never use marketing clichés.
+
+---
+
+# CTA
+
+Position:
+
+bottom right.
+
+Alignment:
+left
+
+Text:
+
+- Jetzt entdecken
+- Weiterlesen
+- Mehr erfahren
+- Zum Ratgeber
+
+Font:
+
+same as teaser text.
+
+Weight:
+600
+
+Letter spacing:
++180 to +250
+
+Uppercase.
+
+Color:
+#B5292C
+
+Font size:
+22–28 px
+
+Add a thin right-arrow.
+
+Arrow thickness:
+2 px
+
+Arrow color:
+#B5292C
+
+Distance from CTA text:
+16–24 px
+
+---
+
+# WHITESPACE
+
+Extremely important.
+
+At least:
+
+40% of canvas should remain empty.
+
+The design must feel:
+
+- premium
+- calm
+- intellectual
+- expensive
+
+Never crowded.
+Never busy.
+Never advertising-like.
+
+---
+
+# VISUAL QUALITY TARGET
+
+The result should resemble:
+
+- a premium European publishing campaign
+- a literary magazine advertisement
+- a bestselling non-fiction launch from an established publishing house
 
 Not:
 
 - sales page
-- internet marketer
-- clickbait ad
-- cheap self-help promotion
+- online marketing ad
+- self-help funnel
+- clickbait graphic
 
---------------------------------------------------
-COLOR SYSTEM
---------------------------------------------------
+The overall impression should be:
 
-Background: #FCFAF5
+minimal,
+intelligent,
+ironic,
+elegant,
+highly readable,
+and instantly recognizable as part of the same book series.
 
-Extremely light warm ivory.
+---
 
-The book cover must clearly contrast against the background and never visually blend into it.
+# CRITICAL COMPOSITION RULE
 
-Primary text:
-#1B2340
+The visual hierarchy must always be:
 
-Accent:
-#B5292C
+1. Headline (largest element)
+2. Book cover
+3. Teaser text
+4. CTA
 
---------------------------------------------------
-LAYOUT
---------------------------------------------------
+The headline should immediately attract attention within one second of viewing.
 
-Book cover positioned on the left side.
+The book cover supports the message.
 
-Use the supplied cover exactly as provided.
+The typography drives the design.
 
-Cover slightly angled.
-
-Soft realistic shadow.
-
-Premium presentation.
-
-Lots of breathing room.
-
-Elegant negative space.
-
---------------------------------------------------
-PRODUCT TYPE
---------------------------------------------------
-
-This is NOT a thick book.
-
-It is a slim premium guide booklet.
-
-Approximate thickness:
-
-15–20 interior pages.
-
-Very thin spine.
-
-Maximum spine width:
-3–5 mm.
-
-Looks like:
-
-- premium workbook
-- slim guide
-- booklet
-- short non-fiction publication
-
-NOT:
-
-- hardcover
-- textbook
-- thick business book
-- novel
-
---------------------------------------------------
-HEADLINE
---------------------------------------------------
-
-Create ONE headline.
-
-Requirements:
-
-- 5–10 words
-- based directly on manuscript content
-- intelligent
-- witty
-- curiosity-driven
-- surprising
-- memorable
-
-Prefer:
-
-- irony
-- contradiction
-- unexpected conclusions
-- provocative observations
-
-Avoid:
-
-- generic promises
-- obvious benefits
-- self-help clichés
-
-Examples:
-
-"Mehr Muskeln. Mehr Probleme."
-
-"Warum weniger manchmal tatsächlich mehr ist."
-
-"Die Fitnessindustrie wird das nicht mögen."
-
-"Vielleicht war dein Ziel das Problem."
-
---------------------------------------------------
-SUPPORTING TEXT
---------------------------------------------------
-
-Create ONE teaser sentence.
-
-Maximum:
-
-20 words.
-
-Requirements:
-
-- based directly on manuscript content
-- creates curiosity
-- reveals only part of the idea
-- encourages further reading
-
-Avoid generic summaries.
-
---------------------------------------------------
-HOOK STRATEGY
---------------------------------------------------
-
-The teaser should be built around one of the following:
-
-- irony
-- paradox
-- counterintuitive insight
-- unexpected consequence
-- hidden truth
-- humorous observation
-- unpopular opinion
-
-The manuscript should determine which approach is strongest.
-
---------------------------------------------------
-CTA
---------------------------------------------------
-
-Create a subtle premium CTA.
-
-Examples:
-
-- Jetzt entdecken
-- Mehr erfahren
-- Zum Ratgeber
-- Weiterlesen
-
-Small and understated.
-
---------------------------------------------------
-VISUAL DETAILS
---------------------------------------------------
-
-Minimal decorative red lines.
-
-Lots of whitespace.
-
-No clutter.
-
-No stock-photo look.
-
-No excessive graphics.
-
-The book cover must remain visually distinct from the background.
-
-Preserve the original cover exactly as supplied.
-
-Do not recolor.
-
-Do not brighten.
-
-Do not retouch.
-
-Do not redesign.
-
-Do not reconstruct.
-
-Use a subtle but realistic contact shadow around and beneath the book.
-
---------------------------------------------------
-LIGHTING
---------------------------------------------------
-
-Soft editorial lighting.
-
-Subtle shadows.
-
-Luxury publishing aesthetic.
-
-Premium publishing campaign quality.
-
---------------------------------------------------
-COPY QUALITY
---------------------------------------------------
-
-Before finalizing:
-
-Ask yourself:
-
-"What single sentence from this manuscript would make somebody stop scrolling?"
-
-Use that insight.
-
-Do not generate generic advertising copy.
-
-Do not summarize the book.
-
-Sell curiosity.
-
---------------------------------------------------
-OUTPUT
---------------------------------------------------
-
-Create ONE premium social media teaser graphic.
-
-Include:
-
-- original supplied cover
-- headline
-- teaser sentence
-- CTA
-
-Requirements:
-
-- visually clean
-- editorial
-- premium
-- highly shareable
-- high engagement potential
-- no watermarks
-- no badges
-- no ratings
-- no pricing
-
-The graphic should stop scrolling within one second and feel like a bestselling non-fiction campaign from a premium publishing house.
+The overall layout should feel 70% typography and 30% product presentation.
