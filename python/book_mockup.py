@@ -37,6 +37,7 @@ import bmesh
 import sys
 import os
 import math
+import random
 import argparse
 from pathlib import Path
 from mathutils import Vector, Matrix
@@ -63,6 +64,11 @@ def parse_args():
     parser.add_argument("--samples", type=int, default=128)
     parser.add_argument("--denoise", action="store_true",
                          help="Denoising aktivieren (benoetigt Blender-Build mit OIDN)")
+    parser.add_argument("--seed", type=int, default=None,
+                         help="Zufalls-Seed fuer die leichte Variation pro Buch "
+                              "(Default: aus --name abgeleitet, also reproduzierbar)")
+    parser.add_argument("--no-variation", action="store_true",
+                         help="Deaktiviert die zufaellige Mikro-Variation der Buecher")
     return parser.parse_args(argv)
 
 
@@ -86,6 +92,12 @@ else:
     OUTPUT_PATH = (SCRIPT_DIR / ".." / "out" / f"{ARGS.name}_mockup.png").resolve()
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
+# Seed fuer die kleine zufaellige Variation: standardmaessig aus dem Namen
+# abgeleitet, damit derselbe Ratgeber immer dasselbe Ergebnis liefert,
+# aber unterschiedliche Ratgeber sich optisch leicht unterscheiden.
+SEED = ARGS.seed if ARGS.seed is not None else abs(hash(ARGS.name)) % (2**31)
+random.seed(SEED)
+
 
 # ---------------------------------------------------------------------------
 # 2. KONSTANTEN / PRODUKTMASSE (schlankes Booklet)
@@ -96,10 +108,17 @@ SPINE_THICKNESS = 0.005      # 5 mm Ruecken -> oberes Ende von "duennes Booklet"
 BEVEL_WIDTH = 0.0006         # minimale Kantenrundung fuer realistische Optik
 
 CREAM_SPINE_COLOR = (0.93, 0.895, 0.82, 1.0)   # gleiche warme Cremepalette wie Cover
-BACKGROUND_HEX = (0.980, 0.973, 0.949)          # #FAF8F2
+BACKGROUND_HEX = (0.9882, 0.9804, 0.9608)       # #FCFAF5
 
-GAP_BETWEEN_BOOKS = 0.14
+GAP_BETWEEN_BOOKS = 0.075
 TURN_ANGLE_DEG = 24.0        # leichte Drehung "toward the viewer"
+
+# Kleine zufaellige Variation pro Buch, damit nicht jedes Rendering wie eine
+# perfekte Spiegelung aussieht. Bewusst klein gehalten, damit die Vorderkanten
+# trotz GAP_BETWEEN_BOOKS niemals kollidieren.
+JITTER_Z_DEG = 2.5      # zusaetzliche Drehung um die Hochachse
+JITTER_TILT_DEG = 1.0   # minimales Kippen (Vor-/Rueckneigung, seitlich)
+JITTER_POS = 0.006      # Positions-Jitter in Metern (X/Y)
 
 
 # ---------------------------------------------------------------------------
@@ -270,7 +289,7 @@ def add_bevel_and_shading(obj):
     obj.select_set(False)
 
 
-def create_book(basename, image_path, aspect, spine_on_right, x_position, turn_deg):
+def create_book(basename, image_path, aspect, spine_on_right, x_position, turn_deg, apply_jitter=True):
     image, _ = load_cover_image(image_path)
 
     width = BOOK_HEIGHT * aspect
@@ -285,7 +304,9 @@ def create_book(basename, image_path, aspect, spine_on_right, x_position, turn_d
     add_bevel_and_shading(obj)
 
     # Position: Objektursprung ist am Boden -> z bleibt 0 (steht auf der "Buehne")
-    obj.location = (x_position, 0.0, 0.0)
+    jitter_x = random.uniform(-JITTER_POS, JITTER_POS) if apply_jitter else 0.0
+    jitter_y = random.uniform(-JITTER_POS, JITTER_POS) if apply_jitter else 0.0
+    obj.location = (x_position + jitter_x, jitter_y, 0.0)
 
     # Leichte Drehung um Z ("slightly turned toward the viewer")
     # spine_on_right=False (Frontcover-Exemplar): positive Drehung zeigt
@@ -293,7 +314,10 @@ def create_book(basename, image_path, aspect, spine_on_right, x_position, turn_d
     # spine_on_right=True (Backcover-Exemplar): Spiegelbildliche negative
     #   Drehung zeigt den rechten Buchruecken minimal an.
     sign = 1.0 if not spine_on_right else -1.0
-    obj.rotation_euler = (0.0, 0.0, math.radians(turn_deg) * sign)
+    z_jitter = random.uniform(-JITTER_Z_DEG, JITTER_Z_DEG) if apply_jitter else 0.0
+    x_tilt = math.radians(random.uniform(-JITTER_TILT_DEG, JITTER_TILT_DEG)) if apply_jitter else 0.0
+    y_tilt = math.radians(random.uniform(-JITTER_TILT_DEG, JITTER_TILT_DEG)) if apply_jitter else 0.0
+    obj.rotation_euler = (x_tilt, y_tilt, math.radians(turn_deg) * sign + math.radians(z_jitter))
 
     return obj
 
@@ -312,6 +336,7 @@ left_book = create_book(
     spine_on_right=False,
     x_position=-GAP_BETWEEN_BOOKS,
     turn_deg=TURN_ANGLE_DEG,
+    apply_jitter=not ARGS.no_variation,
 )
 
 right_book = create_book(
@@ -321,6 +346,7 @@ right_book = create_book(
     spine_on_right=True,
     x_position=GAP_BETWEEN_BOOKS,
     turn_deg=TURN_ANGLE_DEG,
+    apply_jitter=not ARGS.no_variation,
 )
 
 
@@ -388,14 +414,15 @@ cove = build_infinity_cove(
 cove_mat = make_plain_material("Mat_Cove", (*srgb_tuple(BACKGROUND_HEX), 1.0), roughness=0.92)
 cove.data.materials.append(cove_mat)
 
-# Grosses, breites Licht speziell fuer den Hintergrund, damit die Kurve
-# gleichmaessig hell bleibt (keine Verlaeufe/Flecken).
+# Sehr dezentes, neutrales Umgebungslicht (nur fuer sanfte Reflexe/Fuellung,
+# absichtlich schwach, damit weder Buecher noch Hintergrund davon spuerbar
+# aufgehellt werden).
 world = bpy.data.worlds.new("World_Neutral")
 bpy.context.scene.world = world
 world.use_nodes = True
 bg_node = world.node_tree.nodes.get("Background")
 bg_node.inputs["Color"].default_value = (*srgb_tuple((0.55, 0.545, 0.53)), 1.0)
-bg_node.inputs["Strength"].default_value = 1.0
+bg_node.inputs["Strength"].default_value = 0.25
 
 
 # ---------------------------------------------------------------------------
@@ -408,7 +435,7 @@ cam_obj = bpy.data.objects.new("Camera", cam_data)
 bpy.context.collection.objects.link(cam_obj)
 bpy.context.scene.camera = cam_obj
 
-cam_pos = Vector((0.0, -1.20, BOOK_HEIGHT * 0.58))
+cam_pos = Vector((0.0, -1.02, BOOK_HEIGHT * 0.58))
 target = Vector((0.0, 0.0, BOOK_HEIGHT * 0.50))
 direction = (target - cam_pos).normalized()
 cam_obj.location = cam_pos
@@ -419,7 +446,8 @@ cam_obj.rotation_euler = direction.to_track_quat('-Z', 'Y').to_euler()
 # 8. STUDIOLICHT (weich, dezente Schatten, keine Drama-Beleuchtung)
 # ---------------------------------------------------------------------------
 
-def add_area_light(name, location, rotation_euler, size, energy, color=(1.0, 0.98, 0.94)):
+def add_area_light(name, location, rotation_euler, size, energy, color=(1.0, 0.98, 0.94),
+                    receiver_collection=None):
     light_data = bpy.data.lights.new(name=name, type='AREA')
     light_data.shape = 'RECTANGLE'
     light_data.size = size
@@ -430,46 +458,66 @@ def add_area_light(name, location, rotation_euler, size, energy, color=(1.0, 0.9
     bpy.context.collection.objects.link(light_obj)
     light_obj.location = location
     light_obj.rotation_euler = rotation_euler
+    if receiver_collection is not None:
+        light_obj.light_linking.receiver_collection = receiver_collection
     return light_obj
 
 
-# Key-Light: grosse weiche Softbox von vorne-oben
+# Light-Linking: Buch-Lichter beleuchten NUR die Buecher, das Hintergrund-
+# Licht NUR die Cove. So bleibt der Hintergrund unabhaengig regelbar (fuer
+# gleichmaessige Ausleuchtung ohne Verlauf oben/unten) und die Cover werden
+# nicht zusaetzlich vom Hintergrundlicht aufgehellt.
+books_link = bpy.data.collections.new("BooksLink")
+books_link.objects.link(left_book)
+books_link.objects.link(right_book)
+
+cove_link = bpy.data.collections.new("CoveLink")
+cove_link.objects.link(cove)
+
+# Key-Light: fokussierte Softbox von vorne-oben -> wirft einen klaren,
+# nach hinten (vom Betrachter weg) fallenden Schatten hinter jedem Buch.
+# Nur auf die Buecher gelinkt.
 add_area_light(
     "Key_Softbox",
-    location=(-0.6, -1.1, 1.1),
-    rotation_euler=(math.radians(58), 0, math.radians(-28)),
-    size=1.4,
-    energy=15,
+    location=(-0.25, -1.6, 1.05),
+    rotation_euler=(math.radians(42), 0, math.radians(-9)),
+    size=0.8,
+    energy=25,
+    receiver_collection=books_link,
 )
 
-# Fill-Light: schwaecher, von der anderen Seite, hellt Schatten dezent auf
+# Fill-Light: sehr dezent, nur damit die Schattenseite nicht komplett absaeuft.
 add_area_light(
     "Fill_Light",
     location=(0.9, -0.9, 0.7),
     rotation_euler=(math.radians(65), 0, math.radians(35)),
     size=1.6,
-    energy=6,
+    energy=0.8,
+    receiver_collection=books_link,
 )
 
-# Top-Light: gleichmaessiges Overhead-Licht fuer sauberen, editorial Look
+# Top-Light: dezentes Streiflicht nur auf die Buecher.
 add_area_light(
     "Top_Fill",
     location=(0.0, -0.2, 1.8),
     rotation_euler=(0, 0, 0),
     size=2.2,
-    energy=8,
+    energy=1.5,
+    receiver_collection=books_link,
 )
 
-# Background-Light: breites, weiches Licht speziell auf die Cove gerichtet,
-# damit der Hintergrund gleichmaessig und ohne Flecken/Verlauf hell bleibt.
-add_area_light(
-    "Background_Fill",
-    location=(0.0, 0.6, 1.0),
-    rotation_euler=(math.radians(20), 0, 0),
-    size=3.0,
-    energy=10,
-    color=(1.0, 0.995, 0.98),
-)
+# Hintergrund-Licht: eine Sonne (Parallellicht, KEIN Abfall mit Entfernung),
+# damit Boden (nah an der Kamera) und Ruckwand (weiter weg) gleich hell
+# ausgeleuchtet werden -> kein Verlauf mehr oben/unten. Nur auf die Cove
+# gelinkt, beeinflusst die Buecher also nicht.
+sun_data = bpy.data.lights.new("Cove_Sun", type='SUN')
+sun_data.energy = 3.1
+sun_data.angle = math.radians(9)  # weicher Schattenwurf auf der Kurve
+sun_data.color = (1.0, 0.995, 0.985)
+sun_obj = bpy.data.objects.new("Cove_Sun", sun_data)
+bpy.context.collection.objects.link(sun_obj)
+sun_obj.rotation_euler = (math.radians(45), 0, math.radians(10))
+sun_obj.light_linking.receiver_collection = cove_link
 
 
 # ---------------------------------------------------------------------------
