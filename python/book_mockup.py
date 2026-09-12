@@ -110,7 +110,7 @@ BEVEL_WIDTH = 0.0006         # minimale Kantenrundung fuer realistische Optik
 CREAM_SPINE_COLOR = (0.93, 0.895, 0.82, 1.0)   # gleiche warme Cremepalette wie Cover
 BACKGROUND_HEX = (0.9882, 0.9804, 0.9608)       # #FCFAF5
 
-GAP_BETWEEN_BOOKS = 0.075
+GAP_BETWEEN_BOOKS = 0.09
 TURN_ANGLE_DEG = 24.0        # leichte Drehung "toward the viewer"
 
 # Kleine zufaellige Variation pro Buch, damit nicht jedes Rendering wie eine
@@ -119,6 +119,11 @@ TURN_ANGLE_DEG = 24.0        # leichte Drehung "toward the viewer"
 JITTER_Z_DEG = 2.5      # zusaetzliche Drehung um die Hochachse
 JITTER_TILT_DEG = 1.0   # minimales Kippen (Vor-/Rueckneigung, seitlich)
 JITTER_POS = 0.006      # Positions-Jitter in Metern (X/Y)
+
+COVER_COLOR_FIDELITY = 0.35   # 0.0 = komplett normal beleuchtet (kann blasser
+                               # wirken), 1.0 = Cover komplett unbeleuchtet
+                               # (100% Originalfarbe, aber flach/ohne 3D-Schattierung).
+                               # 0.3-0.4 ist ein guter Kompromiss.
 
 
 # ---------------------------------------------------------------------------
@@ -166,6 +171,20 @@ def load_cover_image(path: Path):
 
 
 def make_cover_material(name, image):
+    """
+    Cover-Material mit Farbtreue-Kompensation:
+
+    Jedes Umgebungs-/Fuelllicht hebt zwangslaeufig die Schwaerzen an und
+    verringert dadurch Saettigung/Kontrast der Textur, egal wie gut die
+    Belichtung kalibriert ist (das ist ein grundsaetzlicher Effekt von
+    3D-Beleuchtung, keine falsche Einstellung). Um trotzdem nah am
+    Original zu bleiben, wird ein kleiner Anteil (COVER_COLOR_FIDELITY)
+    der Textur ALS EMISSION beigemischt -- diese ignoriert die
+    Szenenbeleuchtung komplett und liefert exakt die Originalfarbe.
+    Der Rest bleibt normal beleuchtetes Principled-BSDF fuer realistische
+    3D-Schattierung/Hochglanzverlauf. Ergebnis: Cover behaelt die Original-
+    Farbtreue, sieht aber trotzdem dreidimensional beleuchtet aus.
+    """
     mat = bpy.data.materials.new(name=name)
     mat.use_nodes = True
     nodes = mat.node_tree.nodes
@@ -173,9 +192,10 @@ def make_cover_material(name, image):
     nodes.clear()
 
     output = nodes.new("ShaderNodeOutputMaterial")
-    output.location = (300, 0)
+    output.location = (500, 0)
+
     bsdf = nodes.new("ShaderNodeBsdfPrincipled")
-    bsdf.location = (0, 0)
+    bsdf.location = (0, 150)
     bsdf.inputs["Roughness"].default_value = 0.55
     if "Specular IOR Level" in bsdf.inputs:
         bsdf.inputs["Specular IOR Level"].default_value = 0.15
@@ -187,8 +207,19 @@ def make_cover_material(name, image):
     tex.image = image
     tex.interpolation = 'Cubic'  # sanftes, aber nicht verfaelschendes Sampling
 
+    emission = nodes.new("ShaderNodeEmission")
+    emission.location = (0, -150)
+    emission.inputs["Strength"].default_value = 1.0
+
+    mix_shader = nodes.new("ShaderNodeMixShader")
+    mix_shader.location = (280, 0)
+    mix_shader.inputs["Fac"].default_value = COVER_COLOR_FIDELITY
+
     links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
-    links.new(bsdf.outputs["BSDF"], output.inputs["Surface"])
+    links.new(tex.outputs["Color"], emission.inputs["Color"])
+    links.new(bsdf.outputs["BSDF"], mix_shader.inputs[1])
+    links.new(emission.outputs["Emission"], mix_shader.inputs[2])
+    links.new(mix_shader.outputs["Shader"], output.inputs["Surface"])
     return mat
 
 
@@ -435,7 +466,7 @@ cam_obj = bpy.data.objects.new("Camera", cam_data)
 bpy.context.collection.objects.link(cam_obj)
 bpy.context.scene.camera = cam_obj
 
-cam_pos = Vector((0.0, -1.02, BOOK_HEIGHT * 0.58))
+cam_pos = Vector((0.0, -0.92, BOOK_HEIGHT * 0.58))
 target = Vector((0.0, 0.0, BOOK_HEIGHT * 0.50))
 direction = (target - cam_pos).normalized()
 cam_obj.location = cam_pos
