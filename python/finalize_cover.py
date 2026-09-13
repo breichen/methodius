@@ -720,6 +720,12 @@ def process_cover(name, cover_type):
     Führt für ein einzelnes Cover beide Schritte aus:
     1. Hintergrundfarbe normalisieren (raw -> nologo)
     2. Logo (und bei Back-Covern Barcode) hinzufügen (nologo -> final)
+
+    Ausnahme: Beim Typ "mockup" wird NUR die Rot-Korrektur
+    (normalize_red) angewendet - keine Hintergrund- oder Textfarben-
+    Normalisierung, kein Logo, kein Barcode etc. Gedacht für schnelle
+    Vorschau-/Mockup-Durchläufe, bei denen nur der Rotton korrigiert
+    werden soll.
     """
 
     raw_path = f"../pics/ratgeber-{cover_type}-todo/{name}.png"
@@ -729,6 +735,22 @@ def process_cover(name, cover_type):
         return
 
     img = Image.open(raw_path)
+
+    if cover_type.lower() == "mockup":
+        img, replaced_red = normalize_red(img)
+
+        log_line = f"{name}.png: {replaced_red:,} Pixel (Rot) ersetzt"
+        print(log_line)
+
+        output_dir = f"../pics/ratgeber-{cover_type}-finalized"
+        os.makedirs(output_dir, exist_ok=True)
+
+        output_path = os.path.join(output_dir, f"{name}.png")
+        img.save(output_path, optimize=True, compress_level=9)
+
+        print(f"Gespeichert: {output_path}")
+        return
+
     img, replaced_bg = normalize_background(img)
     img, replaced_red = normalize_red(img)
 
@@ -806,14 +828,19 @@ def parse_args():
         description=(
             "Normalisiert die Hintergrundfarbe eines Covers "
             "(oder aller Cover) und fügt anschließend Logo "
-            "(und bei Back-Covern ggf. Barcode) hinzu."
+            "(und bei Back-Covern ggf. Barcode) hinzu. Beim Typ "
+            '"mockup" wird stattdessen nur die Rot-Korrektur '
+            "angewendet."
         )
     )
 
     parser.add_argument(
         "type",
-        choices=["front", "back"],
-        help='Cover-Typ: "front" oder "back".'
+        choices=["front", "back", "mockup"],
+        help=(
+            'Cover-Typ: "front", "back" oder "mockup" '
+            "(nur Rot-Korrektur, sonst keine Bearbeitung)."
+        )
     )
 
     parser.add_argument(
