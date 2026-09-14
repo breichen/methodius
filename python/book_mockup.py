@@ -36,6 +36,7 @@ import bpy
 import bmesh
 import sys
 import os
+import re
 import math
 import random
 import argparse
@@ -86,10 +87,23 @@ if not FRONT_PATH.exists():
 if not BACK_PATH.exists():
     raise FileNotFoundError(f"Back-Cover nicht gefunden: {BACK_PATH}")
 
+def sanitize_filename(name):
+    """
+    Ersetzt Zeichen, die unter Windows in Dateinamen verboten sind
+    (\\ / : * ? " < > |), durch "-". Ratgeber-Titel enthalten oft
+    einen Doppelpunkt (Titel: Untertitel) - ohne diese Bereinigung
+    wuerde das Speichern auf Windows fehlschlagen, obwohl die
+    Konsole trotzdem "Fertig gespeichert" meldet (siehe Erfolgs-
+    pruefung unten).
+    """
+    return re.sub(r'[\\/:*?"<>|]', "-", name)
+
+
 if ARGS.output:
     OUTPUT_PATH = Path(ARGS.output).resolve()
 else:
-    OUTPUT_PATH = (SCRIPT_DIR / ".." / "out" / f"{ARGS.name}_mockup.png").resolve()
+    safe_name = sanitize_filename(ARGS.name)
+    OUTPUT_PATH = (SCRIPT_DIR / ".." / "out" / f"{safe_name}_mockup.png").resolve()
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 # Seed fuer die kleine zufaellige Variation: standardmaessig aus dem Namen
@@ -646,10 +660,42 @@ scene.render.image_settings.file_format = 'PNG'
 scene.render.image_settings.color_mode = 'RGBA'
 scene.render.filepath = str(OUTPUT_PATH)
 
+# Explizit erzwingen (nicht auf den Default/Preferences-Wert verlassen):
+# ist "Overwrite" deaktiviert (z.B. weil das mal fuer Render-Farm-
+# Workflows so gespeichert wurde), wuerde Blender eine bereits
+# existierende Datei stillschweigend NICHT neu schreiben - ohne
+# Fehler und ohne Warnung.
+scene.render.use_overwrite = True
+
 
 # ---------------------------------------------------------------------------
 # 10. RENDERN
 # ---------------------------------------------------------------------------
 
+# mtime VOR dem Rendern merken, um zu erkennen, ob eine bereits
+# vorhandene Datei wirklich NEU geschrieben wurde (ein reiner
+# exists()-Check wuerde eine unveraenderte alte Datei faelschlich
+# als Erfolg werten, z.B. wenn use_overwrite doch irgendwo False
+# waere oder das Schreiben aus einem anderen Grund fehlschlaegt).
+mtime_before = OUTPUT_PATH.stat().st_mtime if OUTPUT_PATH.exists() else None
+
 bpy.ops.render.render(write_still=True)
-print(f"Fertig. Mockup gespeichert unter: {OUTPUT_PATH}")
+
+mtime_after = OUTPUT_PATH.stat().st_mtime if OUTPUT_PATH.exists() else None
+
+if mtime_after is None:
+    raise RuntimeError(
+        f"Rendern abgeschlossen, aber Datei wurde NICHT gefunden: "
+        f"{OUTPUT_PATH}. Pfad/Dateiname pruefen (z.B. Sonderzeichen, "
+        f"Schreibrechte, Pfadlaenge)."
+    )
+elif mtime_before is not None and mtime_after <= mtime_before:
+    raise RuntimeError(
+        f"Datei existiert bereits, wurde aber NICHT neu geschrieben: "
+        f"{OUTPUT_PATH}. Moegliche Ursachen: 'Overwrite' war "
+        f"deaktiviert, die Datei ist durch ein anderes Programm "
+        f"gesperrt (z.B. Viewer, OneDrive-Sync), oder fehlende "
+        f"Schreibrechte."
+    )
+else:
+    print(f"Fertig. Mockup gespeichert unter: {OUTPUT_PATH}")
