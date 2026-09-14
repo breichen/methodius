@@ -125,6 +125,19 @@ COVER_COLOR_FIDELITY = 0.35   # 0.0 = komplett normal beleuchtet (kann blasser
                                # (100% Originalfarbe, aber flach/ohne 3D-Schattierung).
                                # 0.3-0.4 ist ein guter Kompromiss.
 
+COVE_COLOR_FIDELITY = 0.82    # Gleiches Prinzip wie COVER_COLOR_FIDELITY, nur
+                               # deutlich hoeher: Boden und Rueckwand der Cove
+                               # haben unterschiedliche Flaechennormalen und
+                               # bekommen dadurch (Lichtwinkel + indirektes
+                               # Bounce-Licht) unterschiedlich viel Belichtung -
+                               # das liess die Rueckwand bisher Richtung Weiss
+                               # auslaufen, waehrend der Boden elfenbeinfarben
+                               # blieb. Ein hoher Fixfarben-Anteil haelt beide
+                               # Flaechen im selben Elfenbeinton; der kleine
+                               # Rest (1 - Wert) bleibt normal beleuchtet und
+                               # sorgt weiterhin fuer einen sichtbaren, aber
+                               # dezenten Kontaktschatten unter den Buechern.
+
 
 # ---------------------------------------------------------------------------
 # 3. SZENE LEEREN
@@ -229,6 +242,52 @@ def make_plain_material(name, rgba, roughness=0.5):
     bsdf = mat.node_tree.nodes.get("Principled BSDF")
     bsdf.inputs["Base Color"].default_value = rgba
     bsdf.inputs["Roughness"].default_value = roughness
+    return mat
+
+
+def make_fidelity_material(name, rgba, fidelity, roughness=0.5):
+    """
+    Wie make_cover_material, aber fuer eine einfarbige Flaeche statt einer
+    Bildtextur (gedacht fuer den Cove-Hintergrund). Mischt eine normal
+    beleuchtete Principled-BSDF (liefert Schattierung UND Schattenwurf)
+    mit einer fixen Emission in exakt derselben Farbe (ignoriert
+    Beleuchtung/Lichtwinkel/indirekte Beleuchtung komplett).
+
+    Ein hoher 'fidelity'-Wert haelt die Flaeche dadurch praktisch ueberall
+    im selben Farbton, unabhaengig davon, wie viel Licht eine bestimmte
+    Stelle (Boden vs. gebogene Ruckwand, je nach Flaechennormale)
+    tatsaechlich abbekommt - genau das Problem, das Boden und Ruckwand
+    bisher unterschiedlich hell (elfenbein vs. fast weiss) aussehen liess.
+    Der kleine beleuchtete Rest (1 - fidelity) bleibt erhalten und macht
+    einen dezenten, aber ueberall gleichmaessig sichtbaren Kontaktschatten
+    unter den Buechern moeglich.
+    """
+    mat = bpy.data.materials.new(name=name)
+    mat.use_nodes = True
+    nodes = mat.node_tree.nodes
+    links = mat.node_tree.links
+    nodes.clear()
+
+    output = nodes.new("ShaderNodeOutputMaterial")
+    output.location = (500, 0)
+
+    bsdf = nodes.new("ShaderNodeBsdfPrincipled")
+    bsdf.location = (0, 150)
+    bsdf.inputs["Base Color"].default_value = rgba
+    bsdf.inputs["Roughness"].default_value = roughness
+
+    emission = nodes.new("ShaderNodeEmission")
+    emission.location = (0, -150)
+    emission.inputs["Color"].default_value = rgba
+    emission.inputs["Strength"].default_value = 1.0
+
+    mix_shader = nodes.new("ShaderNodeMixShader")
+    mix_shader.location = (280, 0)
+    mix_shader.inputs["Fac"].default_value = fidelity
+
+    links.new(bsdf.outputs["BSDF"], mix_shader.inputs[1])
+    links.new(emission.outputs["Emission"], mix_shader.inputs[2])
+    links.new(mix_shader.outputs["Shader"], output.inputs["Surface"])
     return mat
 
 
@@ -442,7 +501,12 @@ cove = build_infinity_cove(
     corner_radius=0.35,
     floor_extent_y=2.0,
 )
-cove_mat = make_plain_material("Mat_Cove", (*srgb_tuple(BACKGROUND_HEX), 1.0), roughness=0.92)
+cove_mat = make_fidelity_material(
+    "Mat_Cove",
+    (*srgb_tuple(BACKGROUND_HEX), 1.0),
+    fidelity=COVE_COLOR_FIDELITY,
+    roughness=0.92,
+)
 cove.data.materials.append(cove_mat)
 
 # Sehr dezentes, neutrales Umgebungslicht (nur fuer sanfte Reflexe/Fuellung,
@@ -541,13 +605,21 @@ add_area_light(
 # damit Boden (nah an der Kamera) und Ruckwand (weiter weg) gleich hell
 # ausgeleuchtet werden -> kein Verlauf mehr oben/unten. Nur auf die Cove
 # gelinkt, beeinflusst die Buecher also nicht.
+#
+# Bewusst OHNE seitlichen (Z-)Versatz: Die beiden Buecher stehen
+# spiegelbildlich links/rechts der Mitte. Ein seitlicher Versatz der
+# Sonne wuerde die Schatten der beiden Buecher unterschiedlich stark
+# sichtbar machen (der eine faellt eher hinter/unter das Buch, der
+# andere sichtbar zur Seite). Rein frontal-schraeg von oben (nur
+# X-Rotation) sorgt dafuer, dass beide Buecher spiegelgleich und damit
+# gleich stark sichtbaren Schatten werfen.
 sun_data = bpy.data.lights.new("Cove_Sun", type='SUN')
 sun_data.energy = 3.1
 sun_data.angle = math.radians(9)  # weicher Schattenwurf auf der Kurve
 sun_data.color = (1.0, 0.995, 0.985)
 sun_obj = bpy.data.objects.new("Cove_Sun", sun_data)
 bpy.context.collection.objects.link(sun_obj)
-sun_obj.rotation_euler = (math.radians(45), 0, math.radians(10))
+sun_obj.rotation_euler = (math.radians(45), 0, 0)
 sun_obj.light_linking.receiver_collection = cove_link
 
 
