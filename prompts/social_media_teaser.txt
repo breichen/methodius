@@ -146,29 +146,92 @@ dark blue
 Line 3:
 accent red
 
-Example:
-
-Mehr Muskeln.
-Mehr
-Probleme.
-
-or
-
-Du musst nicht
-kompetent sein.
-Nur kompetent
-wirken.
-
-The red phrase should contain:
+The red phrase must contain:
 
 - the contradiction
 - the punchline
 - the irony
 - the reveal
 
-Only one phrase should be red.
+Only one phrase may be red.
 
 Never color more than 35% of the headline red.
+
+---
+
+# HEADLINE CONTENT RULE (CRITICAL)
+
+The campaign headline must NEVER repeat:
+
+- the book title
+- parts of the book title
+- the subtitle
+- parts of the subtitle
+
+The headline is an independent campaign statement.
+
+It must function as a magazine-ad headline, not as a book title.
+
+The headline should express:
+
+- the core irony
+- the central promise
+- the hidden contradiction
+- the social observation
+
+without copying wording from the cover.
+
+The headline should feel like it was written by a senior art director for a premium publishing campaign.
+
+Examples:
+
+Book:
+"Die Kunst, beschäftigt auszusehen"
+
+Allowed:
+
+"Mehr Schein.
+Weniger Arbeit."
+
+"Karriere ist
+oft nur
+glaubwürdige
+Beschäftigung."
+
+"Wer wichtig wirkt,
+wird seltener
+gestört."
+
+Not allowed:
+
+"Die Kunst,
+beschäftigt auszusehen"
+
+---
+
+Book:
+"Diskussionen gewinnen durch konsequentes Dagegenreden"
+
+Allowed:
+
+"Wer länger redet,
+hat irgendwann
+Recht."
+
+"Zustimmung ist
+auch nur eine
+Form von
+Aufgeben."
+
+"Argumente sind
+optional.
+Ausdauer nicht."
+
+Not allowed:
+
+"Diskussionen gewinnen
+durch konsequentes
+Dagegenreden"
 
 ---
 
@@ -258,6 +321,46 @@ Never use marketing clichés.
 
 ---
 
+# TEASER TEXT RULE (CRITICAL)
+
+The teaser text must NEVER repeat:
+
+- the subtitle
+- the title
+- the back-cover copy
+- any sentence visible on the cover
+
+The teaser should be newly written campaign copy.
+
+Purpose:
+
+Expand the idea of the headline.
+
+Length:
+
+2–4 lines.
+
+Tone:
+
+- intelligent
+- literary
+- dry humor
+- editorial
+
+Not promotional.
+
+Examples:
+
+For a book about appearing busy:
+
+"Warum Ergebnisse überschätzt werden und der richtige Gesichtsausdruck oft völlig ausreicht."
+
+For a book about winning arguments through persistence:
+
+"Ein satirischer Leitfaden über Menschen, die lieber widersprechen als überzeugt werden."
+
+---
+
 # CTA
 
 Position:
@@ -269,10 +372,14 @@ left
 
 Text:
 
-- Jetzt entdecken
-- Weiterlesen
-- Mehr erfahren
-- Zum Ratgeber
+Text:
+
+JETZT ENTDECKEN
+
+This CTA is mandatory.
+No alternatives.
+No variations.
+No substitutions.
 
 Font:
 
@@ -303,6 +410,83 @@ Arrow color:
 Distance from CTA text:
 16–24 px
 
+# CTA LOCK RULE (ABSOLUTE PRIORITY)
+
+The CTA is fixed.
+
+Always use exactly:
+
+JETZT ENTDECKEN
+
+No alternatives are allowed.
+
+Do NOT generate:
+
+- WEITERLESEN
+- MEHR ERFAHREN
+- ZUM RATGEBER
+- any custom CTA
+- any dynamic CTA
+
+The CTA must always read:
+
+JETZT ENTDECKEN
+
+in uppercase.
+
+---
+
+# AUTHOR NAME PROTECTION RULE (CRITICAL)
+
+The author name is part of the book cover only.
+
+The author name must NEVER be used as:
+
+- CTA
+- campaign headline
+- teaser text
+- footer text
+- decorative text
+- editorial copy
+- replacement text
+- fallback text
+- placeholder text
+
+The author name must remain exclusively on the supplied book cover.
+
+Outside the cover, the author name must not appear anywhere.
+
+---
+
+# CTA VALIDATION CHECK
+
+Before finalizing the advertisement:
+
+Check the bottom-right CTA.
+
+If the CTA is not exactly:
+
+JETZT ENTDECKEN
+
+replace it.
+
+If the CTA contains:
+
+- the author name
+- parts of the author name
+- book title words
+- subtitle words
+
+replace it with:
+
+JETZT ENTDECKEN
+
+Only accept the final layout when the CTA equals:
+
+JETZT ENTDECKEN
+
+and nothing else.
+
 ---
 
 # WHITESPACE
@@ -326,9 +510,303 @@ Never advertising-like.
 
 ---
 
-# VISUAL QUALITY TARGET
+# CAMPAIGN COPY GENERATION RULE
 
-The result should resemble:
+All advertising copy outside the book cover must be newly generated.
+
+The following elements may NEVER be copied from the cover:
+
+- title
+- subtitle
+- author line
+- chapter names
+- slogans
+- teaser copy
+
+The campaign text must feel like it was written by an art director promoting the book in a premium publishing campaign.
+
+---
+
+# CONTENT SEPARATION RULE (MANDATORY)
+
+Treat the supplied cover as a finished product already visible to the viewer.
+
+Do not use cover text as advertising copy.
+
+The campaign headline and teaser must introduce:
+
+- a new perspective
+- a new observation
+- a new irony
+- a new contradiction
+- a new interpretation
+
+The advertisement should reward a second look.
+
+A viewer who covers the book mockup should still see a complete and compelling campaign concept.
+
+A viewer who hides the campaign text should still see a complete book cover.
+
+Both elements must complement each other, not duplicate each other.
+
+---
+
+# NO DUPLICATION RULE (ABSOLUTE)
+
+Outside the book cover, NEVER reproduce:
+
+- title wording
+- subtitle wording
+- author wording
+- chapter wording
+- any visible sentence from the cover
+
+This includes:
+
+- exact matches
+- partial matches
+- obvious rewrites
+- close paraphrases
+
+All campaign copy must be independently written.
+
+The campaign text should feel like editorial advertising, not a transcription of the cover.
+
+# COVER TEXT IS NOT CAMPAIGN TEXT (ABSOLUTE PRIORITY)
+
+The supplied cover already contains its own title and subtitle.
+
+These elements belong exclusively to the book cover.
+
+They must NEVER be reused as:
+
+- headline
+- teaser
+- CTA
+- campaign copy
+- supporting copy
+- editorial copy
+
+Assume the viewer can already read the cover.
+
+The campaign must communicate a NEW idea.
+
+---
+
+# HEADLINE GENERATION PROCESS (MANDATORY)
+
+Before writing the headline:
+
+Step 1:
+Read the book title.
+
+Step 2:
+Identify the underlying joke, irony, contradiction, or observation.
+
+Step 3:
+Create a NEW headline that expresses the same underlying idea WITHOUT using any words from the title or subtitle.
+
+The headline must be conceptually related.
+
+The headline must not be textually related.
+
+---
+
+# WORD OVERLAP RESTRICTION
+
+Outside the book cover, no campaign text may contain words that appear in:
+
+- the title
+- the subtitle
+
+Allowed overlap:
+0–2 insignificant words
+(e.g. articles, conjunctions, pronouns)
+
+Not allowed:
+
+Title:
+"Diskussionen gewinnen durch konsequentes Dagegenreden"
+
+Headline:
+"Wer Diskussionen gewinnen will ..."
+
+Headline:
+"Dagegenreden funktioniert ..."
+
+Headline:
+"Gewinnen ohne Argumente"
+
+These are considered title-derived copy.
+
+---
+
+# CAMPAIGN TEST (MANDATORY)
+
+After generating the advertisement, perform this check:
+
+If the book cover is hidden:
+
+The headline and teaser must still make sense.
+
+If the campaign text is hidden:
+
+The book cover must still communicate the book.
+
+If both communicate the same information:
+
+Rewrite the headline and teaser.
+
+Only accept a result where the campaign adds new meaning.
+
+---
+
+# CREATIVE DISTANCE RULE
+
+The campaign headline should feel as if it was written by someone who only knows the IDEA of the book, not its wording.
+
+Use conceptual similarity.
+
+Avoid textual similarity.
+
+Target similarity:
+
+- Idea similarity: HIGH
+- Word similarity: LOW
+
+# CAMPAIGN HEADLINE REPLACEMENT RULE (HIGHEST PRIORITY)
+
+The campaign headline is NOT derived from the wording of the title.
+
+The title serves only as source material for extracting the underlying idea.
+
+Workflow:
+
+1. Read title
+2. Ignore title wording
+3. Extract underlying joke
+4. Generate a completely new campaign headline
+
+The campaign headline must never contain any noun,
+verb or adjective that appears in the title or subtitle.
+
+The campaign headline should feel like a newspaper
+or magazine headline inspired by the book's idea.
+
+Not by its wording.
+
+---
+
+Example
+
+TITLE:
+
+"Diskussionen gewinnen durch konsequentes Dagegenreden"
+
+FORBIDDEN WORDS:
+
+Diskussionen
+gewinnen
+durch
+konsequentes
+Dagegenreden
+
+Headline examples:
+
+✓ Wer zuletzt spricht,
+hat meistens Erfolg.
+
+✓ Überzeugung ist
+überschätzt.
+
+✓ Beharrlichkeit schlägt
+Logik.
+
+✗ Diskussionen gewinnen
+durch ...
+
+✗ Gewinnen ohne Argumente
+
+✗ Erfolgreich widersprechen
+
+---
+
+# FORBIDDEN WORD LIST GENERATION
+
+Before generating campaign copy:
+
+Create an internal forbidden-word list from:
+
+- title
+- subtitle
+
+These words may not appear anywhere outside the cover.
+
+This applies to:
+
+- headline
+- teaser
+- CTA
+- decorative copy
+
+Allowed exceptions:
+
+articles
+pronouns
+prepositions
+
+Everything else is forbidden.
+
+---
+
+# SELF-CHECK
+
+Before final output:
+
+Compare campaign headline against title.
+
+If any meaningful word appears in both:
+
+Discard headline.
+
+Generate a new one.
+
+Repeat until there is zero meaningful overlap.
+
+---
+
+# SERIES CONSISTENCY RULE
+
+The cover communicates WHAT the book is.
+
+The campaign headline communicates WHY someone immediately understands the joke.
+
+The teaser deepens the joke.
+
+Never repeat information already visible on the cover.
+
+Assume the viewer can already read the cover.
+
+The advertisement must add a second layer of meaning rather than restating the first one.
+
+---
+
+# CREATIVE HIERARCHY RULE
+
+1. Campaign headline
+2. Book cover
+3. Teaser text
+4. CTA
+
+The headline must be the primary communication element.
+
+The cover confirms the joke.
+
+The teaser deepens the joke.
+
+The CTA remains secondary.
+
+The advertisement should feel like:
 
 - a premium European publishing campaign
 - a literary magazine advertisement
@@ -336,10 +814,11 @@ The result should resemble:
 
 Not:
 
-- sales page
-- online marketing ad
-- self-help funnel
-- clickbait graphic
+- a sales page
+- a performance marketing ad
+- a self-help funnel
+- a product sheet
+- clickbait
 
 The overall impression should be:
 
@@ -349,22 +828,3 @@ ironic,
 elegant,
 highly readable,
 and instantly recognizable as part of the same book series.
-
----
-
-# CRITICAL COMPOSITION RULE
-
-The visual hierarchy must always be:
-
-1. Headline (largest element)
-2. Book cover
-3. Teaser text
-4. CTA
-
-The headline should immediately attract attention within one second of viewing.
-
-The book cover supports the message.
-
-The typography drives the design.
-
-The overall layout should feel 70% typography and 30% product presentation.
