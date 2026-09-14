@@ -22,8 +22,8 @@ Optionale Parameter:
     --front-dir   Ordner mit Front-Covern   (Default: ../pics/ratgeber-front)
     --back-dir    Ordner mit Back-Covern    (Default: ../pics/ratgeber-back)
     --output      Zieldatei fuer den Render (Default: ../out/<name>_mockup.png)
-    --res-x       Render-Breite in Pixeln   (Default: 2400)
-    --res-y       Render-Hoehe in Pixeln    (Default: 1800)
+    --res-x       Render-Breite in Pixeln   (Default: 1536)
+    --res-y       Render-Hoehe in Pixeln    (Default: 1024)
     --samples     Cycles Samples            (Default: 128)
 
 Erwartete Eingabedateien:
@@ -60,8 +60,8 @@ def parse_args():
     parser.add_argument("--front-dir", default="../pics/ratgeber-front")
     parser.add_argument("--back-dir", default="../pics/ratgeber-back")
     parser.add_argument("--output", default=None)
-    parser.add_argument("--res-x", type=int, default=2400)
-    parser.add_argument("--res-y", type=int, default=1800)
+    parser.add_argument("--res-x", type=int, default=1536)
+    parser.add_argument("--res-y", type=int, default=1024)
     parser.add_argument("--samples", type=int, default=128)
     parser.add_argument("--denoise", action="store_true",
                          help="Denoising aktivieren (benoetigt Blender-Build mit OIDN)")
@@ -118,18 +118,28 @@ random.seed(SEED)
 # ---------------------------------------------------------------------------
 
 BOOK_HEIGHT = 0.210          # 21 cm Hoehe (A5-artig), Basis fuer Seitenverhaeltnis
-SPINE_THICKNESS = 0.005      # 5 mm Ruecken -> oberes Ende von "duennes Booklet"
+SPINE_THICKNESS = 0.016      # 5 mm Ruecken -> oberes Ende von "duennes Booklet"
 BEVEL_WIDTH = 0.0006         # minimale Kantenrundung fuer realistische Optik
 
 CREAM_SPINE_COLOR = (0.93, 0.895, 0.82, 1.0)   # gleiche warme Cremepalette wie Cover
 BACKGROUND_HEX = (0.9882, 0.9804, 0.9608)       # #FCFAF5
 
-GAP_BETWEEN_BOOKS = 0.09
+BOOK_SCALE = 1.1             # Buch insgesamt 50% groesser (Hoehe UND Breite
+                              # gleichermassen skaliert -> Seitenverhaeltnis
+                              # bleibt exakt erhalten, Cover wird NICHT
+                              # verzerrt). Kamera wird weiter unten passend
+                              # dazu angepasst, damit nichts abgeschnitten wird.
+
+EDGE_GAP = 0.02              # Abstand zwischen den einander zugewandten
+                              # Buchkanten (vorher effektiv ca. 0.033 m bei
+                              # GAP_BETWEEN_BOOKS=0.09 und kleineren Buechern;
+                              # jetzt enger UND bezogen auf die neue,
+                              # groessere Buchbreite berechnet)
 TURN_ANGLE_DEG = 24.0        # leichte Drehung "toward the viewer"
 
 # Kleine zufaellige Variation pro Buch, damit nicht jedes Rendering wie eine
 # perfekte Spiegelung aussieht. Bewusst klein gehalten, damit die Vorderkanten
-# trotz GAP_BETWEEN_BOOKS niemals kollidieren.
+# trotz EDGE_GAP niemals kollidieren.
 JITTER_Z_DEG = 2.5      # zusaetzliche Drehung um die Hochachse
 JITTER_TILT_DEG = 1.0   # minimales Kippen (Vor-/Rueckneigung, seitlich)
 JITTER_POS = 0.006      # Positions-Jitter in Metern (X/Y)
@@ -139,7 +149,7 @@ COVER_COLOR_FIDELITY = 0.35   # 0.0 = komplett normal beleuchtet (kann blasser
                                # (100% Originalfarbe, aber flach/ohne 3D-Schattierung).
                                # 0.3-0.4 ist ein guter Kompromiss.
 
-COVE_COLOR_FIDELITY = 0.82    # Gleiches Prinzip wie COVER_COLOR_FIDELITY, nur
+COVE_COLOR_FIDELITY = 0.50    # Gleiches Prinzip wie COVER_COLOR_FIDELITY, nur
                                # deutlich hoeher: Boden und Rueckwand der Cove
                                # haben unterschiedliche Flaechennormalen und
                                # bekommen dadurch (Lichtwinkel + indirektes
@@ -407,6 +417,12 @@ def create_book(basename, image_path, aspect, spine_on_right, x_position, turn_d
 
     add_bevel_and_shading(obj)
 
+    # Gleichmaessige Skalierung um den Objektursprung (der am Boden, mittig
+    # in X und Y liegt) -> Buch wird insgesamt groesser, Seitenverhaeltnis
+    # des Covers bleibt exakt erhalten (keine Verzerrung), Buch steht
+    # weiterhin exakt auf der "Buehne" (z=0).
+    obj.scale = (BOOK_SCALE, BOOK_SCALE, BOOK_SCALE)
+
     # Position: Objektursprung ist am Boden -> z bleibt 0 (steht auf der "Buehne")
     jitter_x = random.uniform(-JITTER_POS, JITTER_POS) if apply_jitter else 0.0
     jitter_y = random.uniform(-JITTER_POS, JITTER_POS) if apply_jitter else 0.0
@@ -433,12 +449,20 @@ def create_book(basename, image_path, aspect, spine_on_right, x_position, turn_d
 _, front_aspect = load_cover_image(FRONT_PATH)
 _, back_aspect = load_cover_image(BACK_PATH)
 
+# Positionen aus der tatsaechlichen (skalierten) Buchbreite herleiten, damit
+# EDGE_GAP wirklich der Abstand zwischen den einander zugewandten Kanten ist
+# und die Buecher bei groesserer BOOK_WIDTH_SCALE nicht ueberlappen.
+width_left = BOOK_HEIGHT * front_aspect * BOOK_SCALE
+width_right = BOOK_HEIGHT * back_aspect * BOOK_SCALE
+left_x = -(EDGE_GAP / 2.0 + width_left / 2.0)
+right_x = (EDGE_GAP / 2.0 + width_right / 2.0)
+
 left_book = create_book(
     basename=f"{ARGS.name}_front",
     image_path=FRONT_PATH,
     aspect=front_aspect,
     spine_on_right=False,
-    x_position=-GAP_BETWEEN_BOOKS,
+    x_position=left_x,
     turn_deg=TURN_ANGLE_DEG,
     apply_jitter=not ARGS.no_variation,
 )
@@ -448,7 +472,7 @@ right_book = create_book(
     image_path=BACK_PATH,
     aspect=back_aspect,
     spine_on_right=True,
-    x_position=GAP_BETWEEN_BOOKS,
+    x_position=right_x,
     turn_deg=TURN_ANGLE_DEG,
     apply_jitter=not ARGS.no_variation,
 )
@@ -544,8 +568,8 @@ cam_obj = bpy.data.objects.new("Camera", cam_data)
 bpy.context.collection.objects.link(cam_obj)
 bpy.context.scene.camera = cam_obj
 
-cam_pos = Vector((0.0, -0.92, BOOK_HEIGHT * 0.58))
-target = Vector((0.0, 0.0, BOOK_HEIGHT * 0.50))
+cam_pos = Vector((0.0, -0.92 * BOOK_SCALE, BOOK_HEIGHT * BOOK_SCALE * 0.58))
+target = Vector((0.0, 0.0, BOOK_HEIGHT * BOOK_SCALE * 0.50))
 direction = (target - cam_pos).normalized()
 cam_obj.location = cam_pos
 cam_obj.rotation_euler = direction.to_track_quat('-Z', 'Y').to_euler()
