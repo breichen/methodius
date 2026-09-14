@@ -721,11 +721,11 @@ def process_cover(name, cover_type):
     1. Hintergrundfarbe normalisieren (raw -> nologo)
     2. Logo (und bei Back-Covern Barcode) hinzufügen (nologo -> final)
 
-    Ausnahme: Beim Typ "mockup" wird NUR die Rot-Korrektur
-    (normalize_red) angewendet - keine Hintergrund- oder Textfarben-
-    Normalisierung, kein Logo, kein Barcode etc. Gedacht für schnelle
-    Vorschau-/Mockup-Durchläufe, bei denen nur der Rotton korrigiert
-    werden soll.
+    Ausnahme: Bei den Typen "mockup" und "teaser" wird NUR die
+    Rot-Korrektur (normalize_red) angewendet - keine Hintergrund- oder
+    Textfarben-Normalisierung, kein Logo, kein Barcode etc. Gedacht für
+    schnelle Vorschau-/Mockup-/Teaser-Durchläufe, bei denen nur der
+    Rotton korrigiert werden soll.
     """
 
     raw_path = f"../pics/ratgeber-{cover_type}-todo/{name}.png"
@@ -736,7 +736,7 @@ def process_cover(name, cover_type):
 
     img = Image.open(raw_path)
 
-    if cover_type.lower() == "mockup":
+    if cover_type.lower() in ("mockup", "teaser"):
         img, replaced_red = normalize_red(img)
 
         log_line = f"{name}.png: {replaced_red:,} Pixel (Rot) ersetzt"
@@ -828,18 +828,19 @@ def parse_args():
         description=(
             "Normalisiert die Hintergrundfarbe eines Covers "
             "(oder aller Cover) und fügt anschließend Logo "
-            "(und bei Back-Covern ggf. Barcode) hinzu. Beim Typ "
-            '"mockup" wird stattdessen nur die Rot-Korrektur '
-            "angewendet."
+            "(und bei Back-Covern ggf. Barcode) hinzu. Bei den Typen "
+            '"mockup" und "teaser" wird stattdessen nur die '
+            "Rot-Korrektur angewendet."
         )
     )
 
     parser.add_argument(
         "type",
-        choices=["front", "back", "mockup"],
+        choices=["front", "back", "mockup", "teaser"],
         help=(
-            'Cover-Typ: "front", "back" oder "mockup" '
-            "(nur Rot-Korrektur, sonst keine Bearbeitung)."
+            'Cover-Typ: "front", "back", "mockup" oder "teaser" '
+            "(bei mockup/teaser nur Rot-Korrektur, sonst keine "
+            "Bearbeitung)."
         )
     )
 
