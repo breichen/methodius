@@ -277,5 +277,6 @@ Das ist menschlich. Vor allem beim Schreiben. Wichtig ist nur, dass man irgendwa
 
 ---
 
-**Dr. Maximilian Methodius**  
-_Autor, Satiriker und ausgewiesener Experte für angewandte Kürze, präzises Weglassen und das rechtzeitige Beenden von Texten_
+**Dr. Maximilian Methodius**
+
+*Autor, Satiriker und ausgewiesener Experte für angewandte Kürze, präzises Weglassen und das rechtzeitige Beenden von Texten*
