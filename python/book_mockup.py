@@ -149,7 +149,7 @@ COVER_COLOR_FIDELITY = 0.35   # 0.0 = komplett normal beleuchtet (kann blasser
                                # (100% Originalfarbe, aber flach/ohne 3D-Schattierung).
                                # 0.3-0.4 ist ein guter Kompromiss.
 
-COVE_COLOR_FIDELITY = 0.50    # Gleiches Prinzip wie COVER_COLOR_FIDELITY, nur
+COVE_COLOR_FIDELITY = 1.0    # Gleiches Prinzip wie COVER_COLOR_FIDELITY, nur
                                # deutlich hoeher: Boden und Rueckwand der Cove
                                # haben unterschiedliche Flaechennormalen und
                                # bekommen dadurch (Lichtwinkel + indirektes
@@ -547,6 +547,54 @@ cove_mat = make_fidelity_material(
 )
 cove.data.materials.append(cove_mat)
 
+# ---------------------------------------------------------------------------
+# 8a. ZUSAETZLICHE KONTakT-SCHATTENFLAECHE
+# ---------------------------------------------------------------------------
+# Sehr flache Flaeche unter den Buechern. Sie ist nahezu selbstleuchtend in
+# der Hintergrundfarbe, bleibt aber ein echter Schattenempfaenger. Dadurch
+# bleibt der Schatten direkt unter den Buechern sichtbar, waehrend der
+# eigentliche Hintergrund nahezu vollkommen gleichmaessig bleibt.
+
+def add_shadow_surface():
+    mesh = bpy.data.meshes.new("BookShadowSurface")
+    bm = bmesh.new()
+
+    x0, x1 = -1.8, 1.8
+    y0, y1 = -1.25, 0.75
+    z = 0.0007
+
+    v0 = bm.verts.new((x0, y0, z))
+    v1 = bm.verts.new((x1, y0, z))
+    v2 = bm.verts.new((x1, y1, z))
+    v3 = bm.verts.new((x0, y1, z))
+    bm.faces.new((v0, v1, v2, v3))
+
+    bm.to_mesh(mesh)
+    bm.free()
+
+    obj = bpy.data.objects.new("BookShadowSurface", mesh)
+    bpy.context.collection.objects.link(obj)
+
+    mat = bpy.data.materials.new("Mat_BookShadowSurface")
+    mat.use_nodes = True
+    bsdf = mat.node_tree.nodes.get("Principled BSDF")
+    bsdf.inputs["Base Color"].default_value = (*srgb_tuple(BACKGROUND_HEX), 1.0)
+    bsdf.inputs["Roughness"].default_value = 1.0
+
+    if "Emission Color" in bsdf.inputs:
+        bsdf.inputs["Emission Color"].default_value = (*srgb_tuple(BACKGROUND_HEX), 1.0)
+        bsdf.inputs["Emission Strength"].default_value = 0.88
+    elif "Emission" in bsdf.inputs:
+        bsdf.inputs["Emission"].default_value = (*srgb_tuple(BACKGROUND_HEX), 1.0)
+        if "Emission Strength" in bsdf.inputs:
+            bsdf.inputs["Emission Strength"].default_value = 0.88
+
+    obj.data.materials.append(mat)
+    return obj
+
+shadow_surface = add_shadow_surface()
+
+
 # Sehr dezentes, neutrales Umgebungslicht (nur fuer sanfte Reflexe/Fuellung,
 # absichtlich schwach, damit weder Buecher noch Hintergrund davon spuerbar
 # aufgehellt werden).
@@ -639,30 +687,33 @@ add_area_light(
     receiver_collection=books_link,
 )
 
-# Hintergrund-Licht: eine Sonne (Parallellicht, KEIN Abfall mit Entfernung),
-# damit Boden (nah an der Kamera) und Ruckwand (weiter weg) gleich hell
-# ausgeleuchtet werden -> kein Verlauf mehr oben/unten. Nur auf die Cove
-# gelinkt, beeinflusst die Buecher also nicht.
+# Hintergrund-/Schattenlicht:
+# Die Cove wird fast vollstaendig ueber Emission auf der exakten
+# Hintergrundfarbe gehalten. Das Licht hier ist deshalb absichtlich schwach:
+# Es liefert vor allem den physikalischen Schatten der Buecher, ohne den
+# Hintergrund sichtbar unterschiedlich zu belichten.
 #
-# Bewusst OHNE seitlichen (Z-)Versatz: Die beiden Buecher stehen
-# spiegelbildlich links/rechts der Mitte. Ein seitlicher Versatz der
-# Sonne wuerde die Schatten der beiden Buecher unterschiedlich stark
-# sichtbar machen (der eine faellt eher hinter/unter das Buch, der
-# andere sichtbar zur Seite). Rein frontal-schraeg von oben (nur
-# X-Rotation) sorgt dafuer, dass beide Buecher spiegelgleich und damit
-# gleich stark sichtbaren Schatten werfen.
-sun_data = bpy.data.lights.new("Cove_Sun", type='SUN')
-sun_data.energy = 3.1
-sun_data.angle = math.radians(9)  # weicher Schattenwurf auf der Kurve
-sun_data.color = (1.0, 0.995, 0.985)
-sun_obj = bpy.data.objects.new("Cove_Sun", sun_data)
-bpy.context.collection.objects.link(sun_obj)
-sun_obj.rotation_euler = (math.radians(45), 0, 0)
-sun_obj.light_linking.receiver_collection = cove_link
+# Eine grosse AREA-LIGHT-Quelle erzeugt einen weichen, fotografischen Schatten.
+# Sie sitzt mittig vor/ueber der Szene, damit beide Buecher vergleichbar
+# beleuchtet werden.
+shadow_data = bpy.data.lights.new("Cove_Shadow_Light", type='AREA')
+shadow_data.shape = 'DISK'
+shadow_data.size = 1.8
+shadow_data.energy = 0.0
+shadow_data.color = (1.0, 0.995, 0.985)
+
+shadow_obj = bpy.data.objects.new("Cove_Shadow_Light", shadow_data)
+bpy.context.collection.objects.link(shadow_obj)
+shadow_obj.location = (0.0, -1.0, 1.5)
+
+shadow_target = Vector((0.0, 0.15, 0.15))
+shadow_direction = (shadow_target - shadow_obj.location).normalized()
+shadow_obj.rotation_euler = shadow_direction.to_track_quat('-Z', 'Y').to_euler()
+shadow_obj.light_linking.receiver_collection = cove_link
 
 
 # ---------------------------------------------------------------------------
-# 9. RENDER-EINSTELLUNGEN
+# 10. RENDER-EINSTELLUNGEN
 # ---------------------------------------------------------------------------
 
 scene = bpy.context.scene
@@ -693,7 +744,7 @@ scene.render.use_overwrite = True
 
 
 # ---------------------------------------------------------------------------
-# 10. RENDERN
+# 11. RENDERN
 # ---------------------------------------------------------------------------
 
 # mtime VOR dem Rendern merken, um zu erkennen, ob eine bereits
