@@ -149,18 +149,15 @@ COVER_COLOR_FIDELITY = 0.35   # 0.0 = komplett normal beleuchtet (kann blasser
                                # (100% Originalfarbe, aber flach/ohne 3D-Schattierung).
                                # 0.3-0.4 ist ein guter Kompromiss.
 
-COVE_COLOR_FIDELITY = 1.0    # Gleiches Prinzip wie COVER_COLOR_FIDELITY, nur
-                               # deutlich hoeher: Boden und Rueckwand der Cove
-                               # haben unterschiedliche Flaechennormalen und
-                               # bekommen dadurch (Lichtwinkel + indirektes
-                               # Bounce-Licht) unterschiedlich viel Belichtung -
-                               # das liess die Rueckwand bisher Richtung Weiss
-                               # auslaufen, waehrend der Boden elfenbeinfarben
-                               # blieb. Ein hoher Fixfarben-Anteil haelt beide
-                               # Flaechen im selben Elfenbeinton; der kleine
-                               # Rest (1 - Wert) bleibt normal beleuchtet und
-                               # sorgt weiterhin fuer einen sichtbaren, aber
-                               # dezenten Kontaktschatten unter den Buechern.
+# HINWEIS zum Hintergrund: frueher gab es hier COVE_COLOR_FIDELITY, das
+# versucht hat, die unterschiedliche Beleuchtung von Boden und Rueckwand
+# durch einen hohen Fixfarben-Anteil zu kaschieren. Das kann eine echte
+# Richtungslichtquelle auf gekruemmter Geometrie aber nie vollstaendig
+# ausgleichen (an der Rundung selbst entsteht durch den Winkel zur Sonne
+# fast immer ein helleres/dunkleres Band). Die Loesung jetzt: die Cove
+# ist ein Shadow Catcher (siehe Abschnitt 6) und im Bild gar nicht mehr
+# direkt sichtbar - nur ihr Schattenwurf. Die eigentliche Hintergrundfarbe
+# kommt danach absolut gleichmaessig aus dem Compositing (Abschnitt 9).
 
 
 # ---------------------------------------------------------------------------
@@ -539,56 +536,23 @@ cove = build_infinity_cove(
     corner_radius=0.35,
     floor_extent_y=2.0,
 )
-cove_mat = make_fidelity_material(
+cove_mat = make_plain_material(
     "Mat_Cove",
     (*srgb_tuple(BACKGROUND_HEX), 1.0),
-    fidelity=COVE_COLOR_FIDELITY,
     roughness=0.92,
 )
 cove.data.materials.append(cove_mat)
 
-# ---------------------------------------------------------------------------
-# 8a. ZUSAETZLICHE KONTakT-SCHATTENFLAECHE
-# ---------------------------------------------------------------------------
-# Sehr flache Flaeche unter den Buechern. Sie ist nahezu selbstleuchtend in
-# der Hintergrundfarbe, bleibt aber ein echter Schattenempfaenger. Dadurch
-# bleibt der Schatten direkt unter den Buechern sichtbar, waehrend der
-# eigentliche Hintergrund nahezu vollkommen gleichmaessig bleibt.
-
-def add_shadow_surface():
-    """
-    Unsichtbarer Cycles-Shadow-Catcher fuer die weichen Kontaktschatten.
-    Die Flaeche selbst ist fuer die Kamera unsichtbar, daher kann keine
-    rechteckige Kante mehr im Hintergrund erscheinen.
-    """
-    mesh = bpy.data.meshes.new("BookShadowSurface")
-    bm = bmesh.new()
-
-    x0, x1 = -2.2, 2.2
-    y0, y1 = -1.8, 1.4
-    z = 0.0007
-
-    v0 = bm.verts.new((x0, y0, z))
-    v1 = bm.verts.new((x1, y0, z))
-    v2 = bm.verts.new((x1, y1, z))
-    v3 = bm.verts.new((x0, y1, z))
-    bm.faces.new((v0, v1, v2, v3))
-
-    bm.to_mesh(mesh)
-    bm.free()
-
-    obj = bpy.data.objects.new("BookShadowSurface", mesh)
-    bpy.context.collection.objects.link(obj)
-
-    # Cycles rendert nur den Schatteneffekt, die Flaeche selbst bleibt
-    # fuer die Kamera unsichtbar. So gibt es garantiert keine sichtbare
-    # Rechteckkante oder einen zweiten Hintergrundfarbton.
-    obj.is_shadow_catcher = True
-    return obj
-
-
-shadow_surface = add_shadow_surface()
-
+# Cove als Shadow Catcher: die Flaeche selbst wird im Rendering unsichtbar
+# (kein Boden/Wand-Look mehr, also auch keine unterschiedliche Beleuchtung
+# von Boden vs. Rueckwand mehr moeglich) - sie hinterlaesst im Bild nur noch
+# dort einen transparenten, abgedunkelten Pixel, wo tatsaechlich ein Schatten
+# der Buecher darauf faellt. Die sichtbare Hintergrundfarbe kommt erst im
+# Compositing (Abschnitt 9) dazu, dort absolut einheitlich.
+try:
+    cove.is_shadow_catcher = True          # Blender 4.x
+except AttributeError:
+    cove.cycles.is_shadow_catcher = True   # Blender 3.x
 
 # Sehr dezentes, neutrales Umgebungslicht (nur fuer sanfte Reflexe/Fuellung,
 # absichtlich schwach, damit weder Buecher noch Hintergrund davon spuerbar
@@ -682,33 +646,30 @@ add_area_light(
     receiver_collection=books_link,
 )
 
-# Hintergrund-/Schattenlicht:
-# Die Cove wird fast vollstaendig ueber Emission auf der exakten
-# Hintergrundfarbe gehalten. Das Licht hier ist deshalb absichtlich schwach:
-# Es liefert vor allem den physikalischen Schatten der Buecher, ohne den
-# Hintergrund sichtbar unterschiedlich zu belichten.
+# Hintergrund-Licht: eine Sonne (Parallellicht, KEIN Abfall mit Entfernung),
+# damit Boden (nah an der Kamera) und Ruckwand (weiter weg) gleich hell
+# ausgeleuchtet werden -> kein Verlauf mehr oben/unten. Nur auf die Cove
+# gelinkt, beeinflusst die Buecher also nicht.
 #
-# Eine grosse AREA-LIGHT-Quelle erzeugt einen weichen, fotografischen Schatten.
-# Sie sitzt mittig vor/ueber der Szene, damit beide Buecher vergleichbar
-# beleuchtet werden.
-shadow_data = bpy.data.lights.new("Cove_Shadow_Light", type='AREA')
-shadow_data.shape = 'DISK'
-shadow_data.size = 1.8
-shadow_data.energy = 18.0
-shadow_data.color = (1.0, 0.995, 0.985)
-
-shadow_obj = bpy.data.objects.new("Cove_Shadow_Light", shadow_data)
-bpy.context.collection.objects.link(shadow_obj)
-shadow_obj.location = (0.0, -1.0, 1.5)
-
-shadow_target = Vector((0.0, 0.15, 0.15))
-shadow_direction = (shadow_target - shadow_obj.location).normalized()
-shadow_obj.rotation_euler = shadow_direction.to_track_quat('-Z', 'Y').to_euler()
-# No cove shadow light: the Cycles shadow catcher below receives book shadows.
+# Bewusst OHNE seitlichen (Z-)Versatz: Die beiden Buecher stehen
+# spiegelbildlich links/rechts der Mitte. Ein seitlicher Versatz der
+# Sonne wuerde die Schatten der beiden Buecher unterschiedlich stark
+# sichtbar machen (der eine faellt eher hinter/unter das Buch, der
+# andere sichtbar zur Seite). Rein frontal-schraeg von oben (nur
+# X-Rotation) sorgt dafuer, dass beide Buecher spiegelgleich und damit
+# gleich stark sichtbaren Schatten werfen.
+sun_data = bpy.data.lights.new("Cove_Sun", type='SUN')
+sun_data.energy = 3.1
+sun_data.angle = math.radians(9)  # weicher Schattenwurf auf der Kurve
+sun_data.color = (1.0, 0.995, 0.985)
+sun_obj = bpy.data.objects.new("Cove_Sun", sun_data)
+bpy.context.collection.objects.link(sun_obj)
+sun_obj.rotation_euler = (math.radians(45), 0, 0)
+sun_obj.light_linking.receiver_collection = cove_link
 
 
 # ---------------------------------------------------------------------------
-# 10. RENDER-EINSTELLUNGEN
+# 9. RENDER-EINSTELLUNGEN
 # ---------------------------------------------------------------------------
 
 scene = bpy.context.scene
@@ -719,7 +680,6 @@ scene.cycles.use_denoising = bool(ARGS.denoise)
 scene.render.resolution_x = ARGS.res_x
 scene.render.resolution_y = ARGS.res_y
 scene.render.resolution_percentage = 100
-scene.render.film_transparent = False
 
 # Standard-Farbwiedergabe, damit die Coverfarben moeglichst originalgetreu
 # (pixelgenau) bleiben und nicht durch Filmic/Kontrastkurven veraendert werden.
@@ -727,8 +687,108 @@ scene.view_settings.view_transform = 'Standard'
 scene.view_settings.look = 'None'
 
 scene.render.image_settings.file_format = 'PNG'
-scene.render.image_settings.color_mode = 'RGBA'
+scene.render.image_settings.color_mode = 'RGB'
 scene.render.filepath = str(OUTPUT_PATH)
+
+
+def setup_compositing(background_hex):
+    """
+    Macht den Hintergrund ueberall exakt gleich, unabhaengig von
+    Lichtwinkel/Flaechennormale, UND behaelt trotzdem einen echten
+    Schattenwurf der Buecher:
+
+    Die Cove ist ein Shadow Catcher (Abschnitt 6) und dadurch im Render
+    komplett unsichtbar/transparent - ausser dort, wo ein Schatten auf sie
+    faellt, dort liefert sie einen abgedunkelten Pixel mit passendem
+    Alpha-Wert. Der Compositor legt dieses Ergebnis anschliessend ueber
+    eine absolut einfarbige Flaeche. Der Hintergrund kann dadurch NIE
+    mehr unterschiedlich beleuchtet aussehen (er wird ja gar nicht mehr
+    beleuchtet gerendert), der Schatten bleibt aber vollstaendig erhalten.
+    """
+    scene = bpy.context.scene
+    scene.render.film_transparent = True
+
+    # Ab Blender 5.0 ist der Compositor-Node-Baum ein eigenstaendiger
+    # Datenblock (kein "scene.node_tree" mehr, sondern
+    # "scene.compositing_node_group"), und der frueherer "Composite"-
+    # Ausgabeknoten wurde durch einen generischen Group-Output ersetzt.
+    # "node_tree" auf der Scene gibt es nur noch vor 5.0 - das nutzen
+    # wir als zuverlaessige Versionsweiche.
+    def link_alpha_over(tree, alpha_over, background_socket, foreground_socket):
+        """
+        Verbindet den AlphaOver-Knoten robust ueber Socket-NAMEN statt
+        Indizes. Grund: Der urspruengliche verwaschene Render kam genau
+        daher, dass in einer neueren Blender-Version die Eingangs-
+        Reihenfolge des AlphaOver-Knotens nicht mehr exakt der alten
+        (< 5.0) Reihenfolge [Fac, Hintergrund, Vordergrund] entsprach -
+        mit Indizes rutschte die Verbindung dadurch auf einen falschen
+        Socket, was zu genau diesem extrem blassen "Geister"-Ergebnis
+        fuehrte. Namen ("Background"/"Foreground" bzw. das aeltere
+        doppelte "Image") sind stabiler als Positionen.
+        """
+        try:
+            bg_input = alpha_over.inputs["Background"]
+            fg_input = alpha_over.inputs["Foreground"]
+        except KeyError:
+            bg_input = alpha_over.inputs[1]
+            fg_input = alpha_over.inputs[2]
+        tree.links.new(background_socket, bg_input)
+        tree.links.new(foreground_socket, fg_input)
+        # Cycles liefert bei film_transparent=True premultiplizierten Alpha-
+        # Kanal; ohne diese Option kann es an Kanten/Schatten-Uebergaengen
+        # zu falschen (zu dunklen) Mischwerten kommen.
+        if hasattr(alpha_over, "use_premultiply"):
+            alpha_over.use_premultiply = True
+
+    if hasattr(scene, "node_tree"):
+        # Blender <= 4.5
+        scene.use_nodes = True
+        tree = scene.node_tree
+        tree.nodes.clear()
+
+        render_layers = tree.nodes.new("CompositorNodeRLayers")
+        render_layers.location = (0, 0)
+
+        bg_color = tree.nodes.new("CompositorNodeRGB")
+        bg_color.location = (0, -250)
+        bg_color.outputs[0].default_value = (*srgb_tuple(background_hex), 1.0)
+
+        alpha_over = tree.nodes.new("CompositorNodeAlphaOver")
+        alpha_over.location = (300, 0)
+
+        output_node = tree.nodes.new("CompositorNodeComposite")
+        output_node.location = (600, 0)
+        output_image_input = output_node.inputs["Image"]
+    else:
+        # Blender >= 5.0
+        tree = bpy.data.node_groups.new(
+            name="Compositing Nodes", type="CompositorNodeTree"
+        )
+        tree.interface.new_socket(
+            name="Image", in_out="OUTPUT", socket_type="NodeSocketColor"
+        )
+
+        render_layers = tree.nodes.new("CompositorNodeRLayers")
+        render_layers.location = (0, 0)
+
+        bg_color = tree.nodes.new("CompositorNodeRGB")
+        bg_color.location = (0, -250)
+        bg_color.outputs[0].default_value = (*srgb_tuple(background_hex), 1.0)
+
+        alpha_over = tree.nodes.new("CompositorNodeAlphaOver")
+        alpha_over.location = (300, 0)
+
+        output_node = tree.nodes.new("NodeGroupOutput")
+        output_node.location = (600, 0)
+        output_image_input = output_node.inputs["Image"]
+
+        scene.compositing_node_group = tree
+
+    link_alpha_over(tree, alpha_over, bg_color.outputs[0], render_layers.outputs["Image"])
+    tree.links.new(alpha_over.outputs[0], output_image_input)
+
+
+setup_compositing(BACKGROUND_HEX)
 
 # Explizit erzwingen (nicht auf den Default/Preferences-Wert verlassen):
 # ist "Overwrite" deaktiviert (z.B. weil das mal fuer Render-Farm-
@@ -739,7 +799,7 @@ scene.render.use_overwrite = True
 
 
 # ---------------------------------------------------------------------------
-# 11. RENDERN
+# 10. RENDERN
 # ---------------------------------------------------------------------------
 
 # mtime VOR dem Rendern merken, um zu erkennen, ob eine bereits
