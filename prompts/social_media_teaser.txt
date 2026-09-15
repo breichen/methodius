@@ -296,14 +296,7 @@ Width:
 
 Font:
 
-modern editorial sans serif.
-
-Examples:
-
-- Inter
-- Suisse Int'l
-- Neue Haas Grotesk
-- Source Sans
+modern editorial sans serif: Inter
 
 Weight:
 400–500
@@ -363,7 +356,7 @@ For a book about appearing busy:
 
 For a book about winning arguments through persistence:
 
-"Ein satirischer Leitfaden über Menschen, die lieber widersprechen als überzeugt werden."
+"Ein Leitfaden über Menschen, die lieber widersprechen als überzeugt werden."
 
 ---
 
@@ -596,6 +589,165 @@ They must NEVER be reused as:
 Assume the viewer can already read the cover.
 
 The campaign must communicate a NEW idea.
+
+---
+
+# MANUSCRIPT-FIRST COPY RULE (ABSOLUTE PRIORITY)
+
+The campaign copy must be derived primarily from the supplied manuscript content, not from the book title.
+
+The title is only a label.
+
+The manuscript contains the actual idea.
+
+Before generating any campaign text:
+
+1. Read the manuscript.
+2. Identify:
+   - the recurring joke
+   - the central satire
+   - the behavioral observation
+   - the hidden contradiction
+   - the mechanism being mocked
+3. Generate the campaign concept from these observations.
+
+The campaign headline must reflect what the reader will discover inside the book.
+
+The headline must never feel generic enough to fit a different book.
+
+A viewer should immediately understand the specific satirical topic even if the book cover is hidden.
+
+---
+
+# CONTENT-SPECIFICITY TEST
+
+Before accepting the headline and teaser:
+
+Ask:
+
+"Could this exact headline also work for a book about productivity, leadership, office politics, success, communication, motivation, networking, meetings or career advice?"
+
+If YES:
+
+Reject the headline.
+
+Generate a more manuscript-specific concept.
+
+Only accept campaign copy that clearly points to the unique satirical subject of the manuscript.
+
+---
+
+# MANUSCRIPT UNIQUENESS RULE
+
+The campaign text should reference the specific mechanism mocked by the book.
+
+Examples for this manuscript:
+
+Extract all campaign themes exclusively from the manuscript.
+
+Do not use any predefined concepts,
+examples, themes or mechanisms.
+
+Ignore all example concepts.
+
+The manuscript is the only source of truth.
+
+If manuscript themes contradict example themes,
+always follow the manuscript.
+
+The campaign should be built around these concepts.
+
+Do not generate generic observations about:
+
+- success
+- work ethic
+- productivity
+- career
+- ambition
+- leadership
+
+unless they are explicitly central to the manuscript.
+
+Before generating campaign copy:
+
+Write a hidden internal summary in one sentence:
+
+"This book satirizes ..."
+
+Use only this summary as the basis
+for headline and teaser generation.
+
+---
+
+# CAMPAIGN RELEVANCE CHECK
+
+Hide the cover.
+
+If the campaign text no longer suggests:
+
+- charts
+- numbers
+- statistics
+- visual credibility
+- manufactured authority
+- pseudo-scientific persuasion
+
+the campaign is too generic.
+
+Rewrite it.
+
+---
+
+# BOOK-SPECIFIC COPY PRIORITY (CRITICAL)
+
+The generated campaign headline and teaser must feel impossible to reuse for another book.
+
+The copy should point to the exact satirical mechanism explored in the manuscript.
+
+Avoid broad life lessons.
+
+Avoid motivational language.
+
+Avoid career advice framing.
+
+Avoid productivity framing.
+
+Avoid generic social observations.
+
+Instead, focus on:
+
+- the gap between appearance and truth
+- the persuasive power of presentation
+- the misuse of numbers
+- the illusion of objectivity
+- the authority of professional-looking graphics
+- the performance of expertise
+
+The campaign should communicate:
+
+"Why people believe it"
+
+not merely
+
+"What the book is about."
+
+---
+
+# FINAL VALIDATION
+
+Before finalizing the advertisement:
+
+Ask:
+
+"Could this campaign headline be used for a book about business, leadership, productivity, self-improvement, office politics or success?"
+
+If YES:
+
+Reject it.
+
+Generate a more manuscript-specific concept.
+
+Only accept the result when the campaign text clearly reflects the unique satirical idea explored in the manuscript.
 
 ---
 

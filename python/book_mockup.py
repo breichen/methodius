@@ -556,11 +556,16 @@ cove.data.materials.append(cove_mat)
 # eigentliche Hintergrund nahezu vollkommen gleichmaessig bleibt.
 
 def add_shadow_surface():
+    """
+    Unsichtbarer Cycles-Shadow-Catcher fuer die weichen Kontaktschatten.
+    Die Flaeche selbst ist fuer die Kamera unsichtbar, daher kann keine
+    rechteckige Kante mehr im Hintergrund erscheinen.
+    """
     mesh = bpy.data.meshes.new("BookShadowSurface")
     bm = bmesh.new()
 
-    x0, x1 = -1.8, 1.8
-    y0, y1 = -1.25, 0.75
+    x0, x1 = -2.2, 2.2
+    y0, y1 = -1.8, 1.4
     z = 0.0007
 
     v0 = bm.verts.new((x0, y0, z))
@@ -575,22 +580,12 @@ def add_shadow_surface():
     obj = bpy.data.objects.new("BookShadowSurface", mesh)
     bpy.context.collection.objects.link(obj)
 
-    mat = bpy.data.materials.new("Mat_BookShadowSurface")
-    mat.use_nodes = True
-    bsdf = mat.node_tree.nodes.get("Principled BSDF")
-    bsdf.inputs["Base Color"].default_value = (*srgb_tuple(BACKGROUND_HEX), 1.0)
-    bsdf.inputs["Roughness"].default_value = 1.0
-
-    if "Emission Color" in bsdf.inputs:
-        bsdf.inputs["Emission Color"].default_value = (*srgb_tuple(BACKGROUND_HEX), 1.0)
-        bsdf.inputs["Emission Strength"].default_value = 0.88
-    elif "Emission" in bsdf.inputs:
-        bsdf.inputs["Emission"].default_value = (*srgb_tuple(BACKGROUND_HEX), 1.0)
-        if "Emission Strength" in bsdf.inputs:
-            bsdf.inputs["Emission Strength"].default_value = 0.88
-
-    obj.data.materials.append(mat)
+    # Cycles rendert nur den Schatteneffekt, die Flaeche selbst bleibt
+    # fuer die Kamera unsichtbar. So gibt es garantiert keine sichtbare
+    # Rechteckkante oder einen zweiten Hintergrundfarbton.
+    obj.is_shadow_catcher = True
     return obj
+
 
 shadow_surface = add_shadow_surface()
 
@@ -699,7 +694,7 @@ add_area_light(
 shadow_data = bpy.data.lights.new("Cove_Shadow_Light", type='AREA')
 shadow_data.shape = 'DISK'
 shadow_data.size = 1.8
-shadow_data.energy = 0.0
+shadow_data.energy = 18.0
 shadow_data.color = (1.0, 0.995, 0.985)
 
 shadow_obj = bpy.data.objects.new("Cove_Shadow_Light", shadow_data)
@@ -709,7 +704,7 @@ shadow_obj.location = (0.0, -1.0, 1.5)
 shadow_target = Vector((0.0, 0.15, 0.15))
 shadow_direction = (shadow_target - shadow_obj.location).normalized()
 shadow_obj.rotation_euler = shadow_direction.to_track_quat('-Z', 'Y').to_euler()
-shadow_obj.light_linking.receiver_collection = cove_link
+# No cove shadow light: the Cycles shadow catcher below receives book shadows.
 
 
 # ---------------------------------------------------------------------------
