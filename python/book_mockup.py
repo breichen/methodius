@@ -124,7 +124,7 @@ BEVEL_WIDTH = 0.0006         # minimale Kantenrundung fuer realistische Optik
 CREAM_SPINE_COLOR = (0.93, 0.895, 0.82, 1.0)   # gleiche warme Cremepalette wie Cover
 BACKGROUND_HEX = (0.9882, 0.9804, 0.9608)       # #FCFAF5
 
-BOOK_SCALE = 1.1             # Buch insgesamt 50% groesser (Hoehe UND Breite
+BOOK_SCALE = 1.0             # Buch insgesamt 50% groesser (Hoehe UND Breite
                               # gleichermassen skaliert -> Seitenverhaeltnis
                               # bleibt exakt erhalten, Cover wird NICHT
                               # verzerrt). Kamera wird weiter unten passend
@@ -389,7 +389,7 @@ def build_book_mesh(name, width, height, thickness, spine_on_right):
 def add_bevel_and_shading(obj):
     bevel = obj.modifiers.new(name="EdgeBevel", type='BEVEL')
     bevel.width = BEVEL_WIDTH
-    bevel.segments = 2
+    bevel.segments = 4
     bevel.limit_method = 'ANGLE'
     bpy.context.view_layer.objects.active = obj
     obj.select_set(True)
@@ -408,7 +408,11 @@ def create_book(basename, image_path, aspect, spine_on_right, x_position, turn_d
                            spine_on_right)
 
     cover_mat = make_cover_material(f"Mat_Cover_{basename}", image)
-    cream_mat = make_plain_material(f"Mat_Cream_{basename}", (*srgb_tuple(CREAM_SPINE_COLOR[:3]), 1.0))
+    cream_mat = make_plain_material(
+        f"Mat_Cream_{basename}",
+        (*srgb_tuple(CREAM_SPINE_COLOR[:3]), 1.0),
+        roughness=0.85,
+    )
     obj.data.materials.append(cover_mat)
     obj.data.materials.append(cream_mat)
 
@@ -575,7 +579,21 @@ cam_obj = bpy.data.objects.new("Camera", cam_data)
 bpy.context.collection.objects.link(cam_obj)
 bpy.context.scene.camera = cam_obj
 
-cam_pos = Vector((0.0, -0.92 * BOOK_SCALE, BOOK_HEIGHT * BOOK_SCALE * 0.58))
+# CAMERA_ZOOM steuert den Kameraabstand UNABHAENGIG von BOOK_SCALE.
+#
+# Vorher stand hier direkt "0.92 * BOOK_SCALE": Buchgroesse UND
+# Kameraabstand skalierten dadurch im exakt gleichen Verhaeltnis, was
+# sich gegenseitig aufhebt (groesseres Buch, aber die Kamera geht im
+# selben Mass weiter weg -> die scheinbare Groesse im Bild blieb immer
+# exakt gleich). BOOK_SCALE hatte dadurch de facto keinen sichtbaren
+# Effekt. CAMERA_ZOOM ist bewusst als separater Wert (Default = alter
+# BOOK_SCALE-Wert, damit sich am Bild bei unveraenderten Werten nichts
+# aendert) - jetzt aendert BOOK_SCALE wirklich die Buchgroesse im Bild,
+# und CAMERA_ZOOM kann bei Bedarf unabhaengig davon nachjustiert werden
+# (kleiner = Kamera naeher dran = Buecher groesser im Bild).
+CAMERA_ZOOM = 1.1
+
+cam_pos = Vector((0.0, -0.92 * CAMERA_ZOOM, BOOK_HEIGHT * BOOK_SCALE * 0.58))
 target = Vector((0.0, 0.0, BOOK_HEIGHT * BOOK_SCALE * 0.50))
 direction = (target - cam_pos).normalized()
 cam_obj.location = cam_pos
@@ -631,7 +649,7 @@ cove_link.objects.link(cove)
 BOOKS_TARGET = (0.0, 0.0, BOOK_HEIGHT * BOOK_SCALE * 0.45)
 add_area_light(
     "Key_Light_Right",
-    location=(1.9, -1.75, 1.9),
+    location=(0.9, -1.75, 1.9),
     target=BOOKS_TARGET,
     size=3.2,
     energy=70,
