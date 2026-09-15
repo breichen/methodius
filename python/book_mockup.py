@@ -562,7 +562,7 @@ bpy.context.scene.world = world
 world.use_nodes = True
 bg_node = world.node_tree.nodes.get("Background")
 bg_node.inputs["Color"].default_value = (*srgb_tuple((0.55, 0.545, 0.53)), 1.0)
-bg_node.inputs["Strength"].default_value = 0.25
+bg_node.inputs["Strength"].default_value = 0.35
 
 
 # ---------------------------------------------------------------------------
@@ -586,8 +586,8 @@ cam_obj.rotation_euler = direction.to_track_quat('-Z', 'Y').to_euler()
 # 8. STUDIOLICHT (weich, dezente Schatten, keine Drama-Beleuchtung)
 # ---------------------------------------------------------------------------
 
-def add_area_light(name, location, rotation_euler, size, energy, color=(1.0, 0.98, 0.94),
-                    receiver_collection=None):
+def add_area_light(name, location, size, energy, rotation_euler=None, target=None,
+                    color=(1.0, 0.98, 0.94), receiver_collection=None):
     light_data = bpy.data.lights.new(name=name, type='AREA')
     light_data.shape = 'RECTANGLE'
     light_data.size = size
@@ -597,7 +597,14 @@ def add_area_light(name, location, rotation_euler, size, energy, color=(1.0, 0.9
     light_obj = bpy.data.objects.new(name, light_data)
     bpy.context.collection.objects.link(light_obj)
     light_obj.location = location
-    light_obj.rotation_euler = rotation_euler
+    if target is not None:
+        # Robuster als von Hand geschaetzte Euler-Winkel: das Licht wird
+        # (wie die Kamera in Abschnitt 7) exakt auf den Zielpunkt
+        # ausgerichtet, unabhaengig von seiner Position.
+        direction = (Vector(target) - Vector(location)).normalized()
+        light_obj.rotation_euler = direction.to_track_quat('-Z', 'Y').to_euler()
+    else:
+        light_obj.rotation_euler = rotation_euler
     if receiver_collection is not None:
         light_obj.light_linking.receiver_collection = receiver_collection
     return light_obj
@@ -614,35 +621,20 @@ books_link.objects.link(right_book)
 cove_link = bpy.data.collections.new("CoveLink")
 cove_link.objects.link(cove)
 
-# Key-Light: fokussierte Softbox von vorne-oben -> wirft einen klaren,
-# nach hinten (vom Betrachter weg) fallenden Schatten hinter jedem Buch.
-# Nur auf die Buecher gelinkt.
+# EINE einzige Lichtquelle fuer die Buecher: eine Softbox schraeg oben-
+# rechts, auf Buchmitte ausgerichtet. Sorgt fuer klar erkennbaren
+# Lichteinfall von rechts (helle rechte Kanten/Seiten, weicher Schatten
+# nach links), wie im Referenzfoto. Das (sehr schwache) Umgebungslicht
+# aus Abschnitt 6 hellt die Schattenseite minimal aussenauf, damit sie
+# nicht komplett absaeuft - das ist kein zweites Licht im fotografischen
+# Sinne, sondern der uebliche neutrale Raumfuellton.
+BOOKS_TARGET = (0.0, 0.0, BOOK_HEIGHT * BOOK_SCALE * 0.45)
 add_area_light(
-    "Key_Softbox",
-    location=(-0.25, -1.6, 1.05),
-    rotation_euler=(math.radians(42), 0, math.radians(-9)),
-    size=0.8,
-    energy=25,
-    receiver_collection=books_link,
-)
-
-# Fill-Light: sehr dezent, nur damit die Schattenseite nicht komplett absaeuft.
-add_area_light(
-    "Fill_Light",
-    location=(0.9, -0.9, 0.7),
-    rotation_euler=(math.radians(65), 0, math.radians(35)),
-    size=1.6,
-    energy=0.8,
-    receiver_collection=books_link,
-)
-
-# Top-Light: dezentes Streiflicht nur auf die Buecher.
-add_area_light(
-    "Top_Fill",
-    location=(0.0, -0.2, 1.8),
-    rotation_euler=(0, 0, 0),
-    size=2.2,
-    energy=1.5,
+    "Key_Light_Right",
+    location=(1.9, -1.75, 1.9),
+    target=BOOKS_TARGET,
+    size=3.2,
+    energy=70,
     receiver_collection=books_link,
 )
 
