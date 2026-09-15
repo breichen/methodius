@@ -1452,7 +1452,7 @@ hr {
 }
 
 .flipbook-page p {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-body);
   font-size: 0.86rem;
   line-height: 1.55;
   color: var(--color-text);
