@@ -147,6 +147,138 @@ Only after reading the title should the viewer notice the absurdity.
 The image must feel unmistakably part of the Methodius Institute visual universe.
 
 ==================================================
+INSTITUTE BRANDING
+==================================================
+
+The Methodius Institute has a recognizable institutional visual identity.
+
+The Institute logo and the official Institute ornament may appear in the scene.
+
+They must be integrated naturally as part of the environment.
+
+Possible placements:
+
+- framed wall plaque
+- brass sign next to a door
+- conference banner
+- lectern emblem
+- presentation backdrop
+- annual report cover on a desk
+- institute folder
+- nameplate
+- event signage
+
+The branding should reinforce institutional credibility.
+
+It should never become the focal point of the image.
+
+Maximum:
+
+- one logo application
+- one ornament application
+
+The branding should appear intentional and professionally designed.
+
+It should look as if the Institute employs a dedicated communications department.
+
+Avoid:
+
+- oversized logos
+- repeated logos
+- logo wallpaper
+- promotional appearance
+- advertising aesthetics
+
+For staff portraits:
+
+Include a subtle visual indication of Institute affiliation.
+
+Examples:
+
+- framed Institute emblem in the background
+- Institute stationery on a desk
+- Institute folder held by the subject
+- small plaque displaying the Institute mark
+
+The logo should remain secondary to the person.
+
+Use the uploaded Institute logo and the Institute ornament described below exactly as provided.
+
+Do not redesign them.
+
+Do not reinterpret them.
+
+Preserve proportions and visual structure.
+
+Integrate them naturally into the scene as institutional branding.
+
+==================================================
+METHODIUS ORNAMENT
+==================================================
+
+The Methodius Institute uses an official institutional ornament.
+
+The ornament consists of:
+
+- one small solid red diamond
+- rotated exactly 45 degrees
+- centered horizontally
+- a thin horizontal line extending to the left
+- a thin horizontal line extending to the right
+- perfect bilateral symmetry
+
+Visual appearance:
+
+———— ◇ ————
+
+The diamond and lines use the Institute accent red:
+
+#B5292C
+
+The ornament is minimalist.
+
+Editorial rather than decorative.
+
+Modern rather than historical.
+
+Academic rather than ceremonial.
+
+The ornament should communicate:
+
+authority
+institutional confidence
+formal seriousness
+quiet self-importance
+
+Avoid:
+
+coats of arms
+laurel wreaths
+crests
+ribbons
+shields
+medals
+classical university symbolism
+baroque decoration
+
+The ornament should always remain clean, geometric and restrained.
+
+For staff portraits, the ornament may appear subtly as part of the environment.
+
+Examples:
+
+- framed wall plaque
+- small sign on an office wall
+- cover of an Institute report
+- stationery
+- folder design
+- conference binder
+
+Maximum one visible ornament.
+
+The ornament should remain secondary to the person.
+
+==================================================
 NEGATIVE PROMPT
 ==================================================
 

@@ -4,7 +4,7 @@ const mitarbeiter = [
     slug: "methodius",
     name: "Dr. Maximilian Methodius",
     rolle: "Gründer und Direktor",
-    bild: "pics/team/autor-portrait.png",
+    bild: "pics/team/Methodius.png",
     text: "Gründer des Instituts und wissenschaftlicher Leiter. Verfügt über umfassende Kenntnisse in praktisch allen Gebieten, die dringend einer Expertenmeinung bedürfen. Entwickelt die zentralen Theorien des Instituts, verfasst die Ratgeber und trifft die abschließenden Entscheidungen.",
 
     raum: "A-101",
