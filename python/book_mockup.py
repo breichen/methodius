@@ -21,7 +21,7 @@ Optionale Parameter:
 
     --front-dir   Ordner mit Front-Covern   (Default: ../pics/ratgeber-front)
     --back-dir    Ordner mit Back-Covern    (Default: ../pics/ratgeber-back)
-    --output      Zieldatei fuer den Render (Default: ../pics/mockup_py/<name>.png)
+    --output      Zieldatei fuer den Render (Default: ../pics/mockup/<name>.png)
     --res-x       Render-Breite in Pixeln   (Default: 1536)
     --res-y       Render-Hoehe in Pixeln    (Default: 1024)
     --samples     Cycles Samples            (Default: 128)
@@ -103,7 +103,7 @@ if ARGS.output:
     OUTPUT_PATH = Path(ARGS.output).resolve()
 else:
     safe_name = sanitize_filename(ARGS.name)
-    OUTPUT_PATH = (SCRIPT_DIR / ".." / "pics" / "ratgeber-mockup_py" / f"{safe_name}.png").resolve()
+    OUTPUT_PATH = (SCRIPT_DIR / ".." / "pics" / "ratgeber-mockup" / f"{safe_name}.png").resolve()
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 # Seed fuer die kleine zufaellige Variation: standardmaessig aus dem Namen
