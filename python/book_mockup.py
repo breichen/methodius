@@ -141,7 +141,7 @@ TURN_ANGLE_DEG = 24.0        # leichte Drehung "toward the viewer"
 # perfekte Spiegelung aussieht. Bewusst klein gehalten, damit die Vorderkanten
 # trotz EDGE_GAP niemals kollidieren.
 JITTER_Z_DEG = 2.5      # zusaetzliche Drehung um die Hochachse
-JITTER_TILT_DEG = 1.0   # minimales Kippen (Vor-/Rueckneigung, seitlich)
+JITTER_TILT_DEG = 0.0   # minimales Kippen (Vor-/Rueckneigung, seitlich) -> disabled
 JITTER_POS = 0.006      # Positions-Jitter in Metern (X/Y)
 
 COVER_COLOR_FIDELITY = 0.35   # 0.0 = komplett normal beleuchtet (kann blasser
