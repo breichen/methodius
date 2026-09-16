@@ -17,11 +17,19 @@ VERWENDUNG (Kommandozeile):
 
     blender -b -P book_mockup.py -- --name mein-ratgeber
 
+Wird KEIN --name angegeben, iteriert das Script automatisch ueber alle
+Dateinamen, fuer die sowohl im Front- als auch im Back-Ordner eine
+gleichnamige .png existiert (Schnittmenge der Dateinamen):
+
+    blender -b -P book_mockup.py --
+
 Optionale Parameter:
 
     --front-dir   Ordner mit Front-Covern   (Default: ../pics/ratgeber-front)
     --back-dir    Ordner mit Back-Covern    (Default: ../pics/ratgeber-back)
     --output      Zieldatei fuer den Render (Default: ../pics/mockup/<name>.png)
+                  Im Batch-Modus (kein --name) wird --output, falls gesetzt,
+                  als ZielORDNER interpretiert (Datei je Titel: <output>/<name>.png)
     --res-x       Render-Breite in Pixeln   (Default: 1536)
     --res-y       Render-Hoehe in Pixeln    (Default: 1024)
     --samples     Cycles Samples            (Default: 128)
@@ -56,7 +64,12 @@ def parse_args():
         argv = []
 
     parser = argparse.ArgumentParser(description="Book Mockup Generator")
-    parser.add_argument("--name", required=True, help="Name des Ratgebers (Dateiname ohne .png)")
+    parser.add_argument("--name", default=None,
+                         help="Name des Ratgebers (Dateiname ohne .png). "
+                              "Wird kein Name angegeben, werden automatisch "
+                              "alle Titel gerendert, die sowohl im "
+                              "--front-dir als auch im --back-dir als .png "
+                              "vorhanden sind.")
     parser.add_argument("--front-dir", default="../pics/ratgeber-front")
     parser.add_argument("--back-dir", default="../pics/ratgeber-back")
     parser.add_argument("--output", default=None)
@@ -67,7 +80,10 @@ def parse_args():
                          help="Denoising aktivieren (benoetigt Blender-Build mit OIDN)")
     parser.add_argument("--seed", type=int, default=None,
                          help="Zufalls-Seed fuer die leichte Variation pro Buch "
-                              "(Default: aus --name abgeleitet, also reproduzierbar)")
+                              "(Default: aus dem jeweiligen Namen abgeleitet, "
+                              "also reproduzierbar). Bei mehreren Titeln im "
+                              "Batch-Modus wird --seed ignoriert, da sonst "
+                              "alle Titel identisch aussehen wuerden.")
     parser.add_argument("--no-variation", action="store_true",
                          help="Deaktiviert die zufaellige Mikro-Variation der Buecher")
     return parser.parse_args(argv)
@@ -78,14 +94,9 @@ ARGS = parse_args()
 # Pfade werden relativ zum Skript-Verzeichnis aufgeloest, damit
 # "../pics/..." unabhaengig vom aktuellen Arbeitsverzeichnis funktioniert.
 SCRIPT_DIR = Path(__file__).resolve().parent
+FRONT_DIR = (SCRIPT_DIR / ARGS.front_dir).resolve()
+BACK_DIR = (SCRIPT_DIR / ARGS.back_dir).resolve()
 
-FRONT_PATH = (SCRIPT_DIR / ARGS.front_dir / f"{ARGS.name}.png").resolve()
-BACK_PATH = (SCRIPT_DIR / ARGS.back_dir / f"{ARGS.name}.png").resolve()
-
-if not FRONT_PATH.exists():
-    raise FileNotFoundError(f"Front-Cover nicht gefunden: {FRONT_PATH}")
-if not BACK_PATH.exists():
-    raise FileNotFoundError(f"Back-Cover nicht gefunden: {BACK_PATH}")
 
 def sanitize_filename(name):
     """
@@ -99,18 +110,22 @@ def sanitize_filename(name):
     return re.sub(r'[\\/:*?"<>|]', "-", name)
 
 
-if ARGS.output:
-    OUTPUT_PATH = Path(ARGS.output).resolve()
-else:
-    safe_name = sanitize_filename(ARGS.name)
-    OUTPUT_PATH = (SCRIPT_DIR / ".." / "pics" / "ratgeber-mockup" / f"{safe_name}.png").resolve()
-OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+def find_common_names(front_dir: Path, back_dir: Path):
+    """
+    Liefert (sortiert) alle Dateinamen (ohne .png-Endung), die als .png
+    sowohl im front_dir als auch im back_dir vorhanden sind. Das ist die
+    Grundlage fuer den Batch-Modus ohne --name: es wird nur ueber Titel
+    iteriert, fuer die tatsaechlich BEIDE Cover existieren, damit nicht
+    versehentlich ein Titel mit nur einem vorhandenen Cover versucht wird.
+    """
+    if not front_dir.is_dir():
+        raise FileNotFoundError(f"Front-Ordner nicht gefunden: {front_dir}")
+    if not back_dir.is_dir():
+        raise FileNotFoundError(f"Back-Ordner nicht gefunden: {back_dir}")
 
-# Seed fuer die kleine zufaellige Variation: standardmaessig aus dem Namen
-# abgeleitet, damit derselbe Ratgeber immer dasselbe Ergebnis liefert,
-# aber unterschiedliche Ratgeber sich optisch leicht unterscheiden.
-SEED = ARGS.seed if ARGS.seed is not None else abs(hash(ARGS.name)) % (2**31)
-random.seed(SEED)
+    front_names = {p.stem for p in front_dir.glob("*.png")}
+    back_names = {p.stem for p in back_dir.glob("*.png")}
+    return sorted(front_names & back_names)
 
 
 # ---------------------------------------------------------------------------
@@ -169,13 +184,11 @@ def clear_scene():
     bpy.ops.object.delete(use_global=False)
     for block_collection in (bpy.data.meshes, bpy.data.materials,
                               bpy.data.images, bpy.data.lights,
-                              bpy.data.cameras, bpy.data.worlds):
+                              bpy.data.cameras, bpy.data.worlds,
+                              bpy.data.node_groups):
         for block in list(block_collection):
             if block.users == 0:
                 block_collection.remove(block)
-
-
-clear_scene()
 
 
 # ---------------------------------------------------------------------------
@@ -443,47 +456,6 @@ def create_book(basename, image_path, aspect, spine_on_right, x_position, turn_d
     return obj
 
 
-# ---------------------------------------------------------------------------
-# 5. BUECHER ERZEUGEN
-# ---------------------------------------------------------------------------
-
-_, front_aspect = load_cover_image(FRONT_PATH)
-_, back_aspect = load_cover_image(BACK_PATH)
-
-# Positionen aus der tatsaechlichen (skalierten) Buchbreite herleiten, damit
-# EDGE_GAP wirklich der Abstand zwischen den einander zugewandten Kanten ist
-# und die Buecher bei groesserer BOOK_WIDTH_SCALE nicht ueberlappen.
-width_left = BOOK_HEIGHT * front_aspect * BOOK_SCALE
-width_right = BOOK_HEIGHT * back_aspect * BOOK_SCALE
-left_x = -(EDGE_GAP / 2.0 + width_left / 2.0)
-right_x = (EDGE_GAP / 2.0 + width_right / 2.0)
-
-left_book = create_book(
-    basename=f"{ARGS.name}_front",
-    image_path=FRONT_PATH,
-    aspect=front_aspect,
-    spine_on_right=False,
-    x_position=left_x,
-    turn_deg=TURN_ANGLE_DEG,
-    apply_jitter=not ARGS.no_variation,
-)
-
-right_book = create_book(
-    basename=f"{ARGS.name}_back",
-    image_path=BACK_PATH,
-    aspect=back_aspect,
-    spine_on_right=True,
-    x_position=right_x,
-    turn_deg=TURN_ANGLE_DEG,
-    apply_jitter=not ARGS.no_variation,
-)
-
-
-# ---------------------------------------------------------------------------
-# 6. HINTERGRUND: durchgehende "Infinity Cove" (Boden + gebogene Rueckwand
-#    aus EINEM Mesh/Material, damit keine Naht/Horizontlinie entsteht)
-# ---------------------------------------------------------------------------
-
 def build_infinity_cove(name, half_width, wall_y, wall_top_z, corner_radius, floor_extent_y):
     """
     Erzeugt eine klassische Fotostudio-Kurve: flacher Boden, der ohne
@@ -532,78 +504,6 @@ def build_infinity_cove(name, half_width, wall_y, wall_top_z, corner_radius, flo
     return obj
 
 
-cove = build_infinity_cove(
-    "InfinityCove",
-    half_width=2.5,
-    wall_y=1.2,
-    wall_top_z=2.0,
-    corner_radius=0.35,
-    floor_extent_y=2.0,
-)
-cove_mat = make_plain_material(
-    "Mat_Cove",
-    (*srgb_tuple(BACKGROUND_HEX), 1.0),
-    roughness=0.92,
-)
-cove.data.materials.append(cove_mat)
-
-# Cove als Shadow Catcher: die Flaeche selbst wird im Rendering unsichtbar
-# (kein Boden/Wand-Look mehr, also auch keine unterschiedliche Beleuchtung
-# von Boden vs. Rueckwand mehr moeglich) - sie hinterlaesst im Bild nur noch
-# dort einen transparenten, abgedunkelten Pixel, wo tatsaechlich ein Schatten
-# der Buecher darauf faellt. Die sichtbare Hintergrundfarbe kommt erst im
-# Compositing (Abschnitt 9) dazu, dort absolut einheitlich.
-try:
-    cove.is_shadow_catcher = True          # Blender 4.x
-except AttributeError:
-    cove.cycles.is_shadow_catcher = True   # Blender 3.x
-
-# Sehr dezentes, neutrales Umgebungslicht (nur fuer sanfte Reflexe/Fuellung,
-# absichtlich schwach, damit weder Buecher noch Hintergrund davon spuerbar
-# aufgehellt werden).
-world = bpy.data.worlds.new("World_Neutral")
-bpy.context.scene.world = world
-world.use_nodes = True
-bg_node = world.node_tree.nodes.get("Background")
-bg_node.inputs["Color"].default_value = (*srgb_tuple((0.55, 0.545, 0.53)), 1.0)
-bg_node.inputs["Strength"].default_value = 0.35
-
-
-# ---------------------------------------------------------------------------
-# 7. KAMERA (Dreiviertelperspektive)
-# ---------------------------------------------------------------------------
-
-cam_data = bpy.data.cameras.new("Camera")
-cam_data.lens = 85  # leichtes Tele, verzerrungsarm, klassisch fuer Produktfotos
-cam_obj = bpy.data.objects.new("Camera", cam_data)
-bpy.context.collection.objects.link(cam_obj)
-bpy.context.scene.camera = cam_obj
-
-# CAMERA_ZOOM steuert den Kameraabstand UNABHAENGIG von BOOK_SCALE.
-#
-# Vorher stand hier direkt "0.92 * BOOK_SCALE": Buchgroesse UND
-# Kameraabstand skalierten dadurch im exakt gleichen Verhaeltnis, was
-# sich gegenseitig aufhebt (groesseres Buch, aber die Kamera geht im
-# selben Mass weiter weg -> die scheinbare Groesse im Bild blieb immer
-# exakt gleich). BOOK_SCALE hatte dadurch de facto keinen sichtbaren
-# Effekt. CAMERA_ZOOM ist bewusst als separater Wert (Default = alter
-# BOOK_SCALE-Wert, damit sich am Bild bei unveraenderten Werten nichts
-# aendert) - jetzt aendert BOOK_SCALE wirklich die Buchgroesse im Bild,
-# und CAMERA_ZOOM kann bei Bedarf unabhaengig davon nachjustiert werden
-# (kleiner = Kamera naeher dran = Buecher groesser im Bild).
-CAMERA_ZOOM = 1.1
-
-cam_pos = Vector((0.0, -0.92 * CAMERA_ZOOM, BOOK_HEIGHT * BOOK_SCALE * 0.58))
-target = Vector((0.0, 0.0, BOOK_HEIGHT * BOOK_SCALE * 0.50))
-direction = (target - cam_pos).normalized()
-cam_obj.location = cam_pos
-cam_obj.rotation_euler = direction.to_track_quat('-Z', 'Y').to_euler()
-
-
-# ---------------------------------------------------------------------------
-# 8. STUDIOLICHT (weich, dezente Schatten, keine Drama-Beleuchtung)
-# ---------------------------------------------------------------------------
-
 def add_area_light(name, location, size, energy, rotation_euler=None, target=None,
                     color=(1.0, 0.98, 0.94), receiver_collection=None):
     light_data = bpy.data.lights.new(name=name, type='AREA')
@@ -626,79 +526,6 @@ def add_area_light(name, location, size, energy, rotation_euler=None, target=Non
     if receiver_collection is not None:
         light_obj.light_linking.receiver_collection = receiver_collection
     return light_obj
-
-
-# Light-Linking: Buch-Lichter beleuchten NUR die Buecher, das Hintergrund-
-# Licht NUR die Cove. So bleibt der Hintergrund unabhaengig regelbar (fuer
-# gleichmaessige Ausleuchtung ohne Verlauf oben/unten) und die Cover werden
-# nicht zusaetzlich vom Hintergrundlicht aufgehellt.
-books_link = bpy.data.collections.new("BooksLink")
-books_link.objects.link(left_book)
-books_link.objects.link(right_book)
-
-cove_link = bpy.data.collections.new("CoveLink")
-cove_link.objects.link(cove)
-
-# EINE einzige Lichtquelle fuer die Buecher: eine Softbox schraeg oben-
-# rechts, auf Buchmitte ausgerichtet. Sorgt fuer klar erkennbaren
-# Lichteinfall von rechts (helle rechte Kanten/Seiten, weicher Schatten
-# nach links), wie im Referenzfoto. Das (sehr schwache) Umgebungslicht
-# aus Abschnitt 6 hellt die Schattenseite minimal aussenauf, damit sie
-# nicht komplett absaeuft - das ist kein zweites Licht im fotografischen
-# Sinne, sondern der uebliche neutrale Raumfuellton.
-BOOKS_TARGET = (0.0, 0.0, BOOK_HEIGHT * BOOK_SCALE * 0.45)
-add_area_light(
-    "Key_Light_Right",
-    location=(0.9, -1.75, 1.9),
-    target=BOOKS_TARGET,
-    size=3.2,
-    energy=70,
-    receiver_collection=books_link,
-)
-
-# Hintergrund-Licht: eine Sonne (Parallellicht, KEIN Abfall mit Entfernung),
-# damit Boden (nah an der Kamera) und Ruckwand (weiter weg) gleich hell
-# ausgeleuchtet werden -> kein Verlauf mehr oben/unten. Nur auf die Cove
-# gelinkt, beeinflusst die Buecher also nicht.
-#
-# Bewusst OHNE seitlichen (Z-)Versatz: Die beiden Buecher stehen
-# spiegelbildlich links/rechts der Mitte. Ein seitlicher Versatz der
-# Sonne wuerde die Schatten der beiden Buecher unterschiedlich stark
-# sichtbar machen (der eine faellt eher hinter/unter das Buch, der
-# andere sichtbar zur Seite). Rein frontal-schraeg von oben (nur
-# X-Rotation) sorgt dafuer, dass beide Buecher spiegelgleich und damit
-# gleich stark sichtbaren Schatten werfen.
-sun_data = bpy.data.lights.new("Cove_Sun", type='SUN')
-sun_data.energy = 3.1
-sun_data.angle = math.radians(9)  # weicher Schattenwurf auf der Kurve
-sun_data.color = (1.0, 0.995, 0.985)
-sun_obj = bpy.data.objects.new("Cove_Sun", sun_data)
-bpy.context.collection.objects.link(sun_obj)
-sun_obj.rotation_euler = (math.radians(45), 0, 0)
-sun_obj.light_linking.receiver_collection = cove_link
-
-
-# ---------------------------------------------------------------------------
-# 9. RENDER-EINSTELLUNGEN
-# ---------------------------------------------------------------------------
-
-scene = bpy.context.scene
-scene.render.engine = 'CYCLES'
-scene.cycles.samples = ARGS.samples
-scene.cycles.use_denoising = bool(ARGS.denoise)
-
-scene.render.resolution_x = ARGS.res_x
-scene.render.resolution_y = ARGS.res_y
-scene.render.resolution_percentage = 100
-
-# Standard-Farbwiedergabe, damit die Coverfarben moeglichst originalgetreu
-# (pixelgenau) bleiben und nicht durch Filmic/Kontrastkurven veraendert werden.
-scene.view_settings.view_transform = 'Standard'
-scene.view_settings.look = 'None'
-
-scene.render.image_settings.file_format = 'PNG'
-scene.render.image_settings.color_mode = 'RGB'
-scene.render.filepath = str(OUTPUT_PATH)
 
 
 def setup_compositing(background_hex):
@@ -798,44 +625,255 @@ def setup_compositing(background_hex):
     tree.links.new(alpha_over.outputs[0], output_image_input)
 
 
-setup_compositing(BACKGROUND_HEX)
+# ---------------------------------------------------------------------------
+# 5. PRO-TITEL-PIPELINE: SZENE AUFBAUEN + RENDERN
+# ---------------------------------------------------------------------------
 
-# Explizit erzwingen (nicht auf den Default/Preferences-Wert verlassen):
-# ist "Overwrite" deaktiviert (z.B. weil das mal fuer Render-Farm-
-# Workflows so gespeichert wurde), wuerde Blender eine bereits
-# existierende Datei stillschweigend NICHT neu schreiben - ohne
-# Fehler und ohne Warnung.
-scene.render.use_overwrite = True
+def resolve_output_path(name):
+    """
+    Ermittelt die Ziel-PNG-Datei fuer <name>.
+
+    - Einzel-Modus (ARGS.name gesetzt) + --output gesetzt: --output ist die
+      exakte Zieldatei.
+    - Batch-Modus (mehrere Titel) + --output gesetzt: --output wird als
+      Zielordner interpretiert, Datei wird "<output>/<name>.png".
+    - Ohne --output: wie bisher unter ../pics/ratgeber-mockup/<name>.png.
+    """
+    safe_name = sanitize_filename(name)
+    if ARGS.output:
+        output_arg = Path(ARGS.output)
+        if ARGS.name is not None:
+            # Einzelner, explizit angegebener Titel -> --output ist die Datei selbst.
+            return output_arg.resolve()
+        # Batch-Modus -> --output ist ein Zielordner.
+        return (output_arg / f"{safe_name}.png").resolve()
+    return (SCRIPT_DIR / ".." / "pics" / "ratgeber-mockup" / f"{safe_name}.png").resolve()
+
+
+def render_book(name):
+    """
+    Baut die komplette Szene fuer einen einzelnen Ratgeber-Titel auf und
+    rendert sie. Kapselt das, was frueher linearer Top-Level-Code war,
+    damit es fuer mehrere Titel nacheinander (in derselben Blender-
+    Sitzung) wiederholt werden kann.
+    """
+    front_path = (FRONT_DIR / f"{name}.png").resolve()
+    back_path = (BACK_DIR / f"{name}.png").resolve()
+
+    if not front_path.exists():
+        raise FileNotFoundError(f"Front-Cover nicht gefunden: {front_path}")
+    if not back_path.exists():
+        raise FileNotFoundError(f"Back-Cover nicht gefunden: {back_path}")
+
+    output_path = resolve_output_path(name)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Seed fuer die kleine zufaellige Variation: standardmaessig aus dem
+    # jeweiligen Namen abgeleitet, damit derselbe Ratgeber immer dasselbe
+    # Ergebnis liefert, aber unterschiedliche Ratgeber sich optisch leicht
+    # unterscheiden. --seed wird im Batch-Modus ignoriert (sonst saehen
+    # alle Titel identisch aus).
+    if ARGS.seed is not None and ARGS.name is not None:
+        seed = ARGS.seed
+    else:
+        seed = abs(hash(name)) % (2**31)
+    random.seed(seed)
+
+    clear_scene()
+
+    # --- Buecher erzeugen --------------------------------------------------
+    _, front_aspect = load_cover_image(front_path)
+    _, back_aspect = load_cover_image(back_path)
+
+    # Positionen aus der tatsaechlichen (skalierten) Buchbreite herleiten, damit
+    # EDGE_GAP wirklich der Abstand zwischen den einander zugewandten Kanten ist
+    # und die Buecher bei groesserer BOOK_WIDTH_SCALE nicht ueberlappen.
+    width_left = BOOK_HEIGHT * front_aspect * BOOK_SCALE
+    width_right = BOOK_HEIGHT * back_aspect * BOOK_SCALE
+    left_x = -(EDGE_GAP / 2.0 + width_left / 2.0)
+    right_x = (EDGE_GAP / 2.0 + width_right / 2.0)
+
+    left_book = create_book(
+        basename=f"{name}_front",
+        image_path=front_path,
+        aspect=front_aspect,
+        spine_on_right=False,
+        x_position=left_x,
+        turn_deg=TURN_ANGLE_DEG,
+        apply_jitter=not ARGS.no_variation,
+    )
+
+    right_book = create_book(
+        basename=f"{name}_back",
+        image_path=back_path,
+        aspect=back_aspect,
+        spine_on_right=True,
+        x_position=right_x,
+        turn_deg=TURN_ANGLE_DEG,
+        apply_jitter=not ARGS.no_variation,
+    )
+
+    # --- Hintergrund: durchgehende "Infinity Cove" --------------------------
+    cove = build_infinity_cove(
+        "InfinityCove",
+        half_width=2.5,
+        wall_y=1.2,
+        wall_top_z=2.0,
+        corner_radius=0.35,
+        floor_extent_y=2.0,
+    )
+    cove_mat = make_plain_material(
+        "Mat_Cove",
+        (*srgb_tuple(BACKGROUND_HEX), 1.0),
+        roughness=0.92,
+    )
+    cove.data.materials.append(cove_mat)
+
+    # Cove als Shadow Catcher: die Flaeche selbst wird im Rendering unsichtbar
+    # (kein Boden/Wand-Look mehr, also auch keine unterschiedliche Beleuchtung
+    # von Boden vs. Rueckwand mehr moeglich) - sie hinterlaesst im Bild nur noch
+    # dort einen transparenten, abgedunkelten Pixel, wo tatsaechlich ein Schatten
+    # der Buecher darauf faellt. Die sichtbare Hintergrundfarbe kommt erst im
+    # Compositing dazu, dort absolut einheitlich.
+    try:
+        cove.is_shadow_catcher = True          # Blender 4.x
+    except AttributeError:
+        cove.cycles.is_shadow_catcher = True   # Blender 3.x
+
+    # Sehr dezentes, neutrales Umgebungslicht (nur fuer sanfte Reflexe/Fuellung,
+    # absichtlich schwach, damit weder Buecher noch Hintergrund davon spuerbar
+    # aufgehellt werden).
+    world = bpy.data.worlds.new("World_Neutral")
+    bpy.context.scene.world = world
+    world.use_nodes = True
+    bg_node = world.node_tree.nodes.get("Background")
+    bg_node.inputs["Color"].default_value = (*srgb_tuple((0.55, 0.545, 0.53)), 1.0)
+    bg_node.inputs["Strength"].default_value = 0.35
+
+    # --- Kamera (Dreiviertelperspektive) ------------------------------------
+    cam_data = bpy.data.cameras.new("Camera")
+    cam_data.lens = 85  # leichtes Tele, verzerrungsarm, klassisch fuer Produktfotos
+    cam_obj = bpy.data.objects.new("Camera", cam_data)
+    bpy.context.collection.objects.link(cam_obj)
+    bpy.context.scene.camera = cam_obj
+
+    # CAMERA_ZOOM steuert den Kameraabstand UNABHAENGIG von BOOK_SCALE.
+    CAMERA_ZOOM = 1.1
+
+    cam_pos = Vector((0.0, -0.92 * CAMERA_ZOOM, BOOK_HEIGHT * BOOK_SCALE * 0.58))
+    target = Vector((0.0, 0.0, BOOK_HEIGHT * BOOK_SCALE * 0.50))
+    direction = (target - cam_pos).normalized()
+    cam_obj.location = cam_pos
+    cam_obj.rotation_euler = direction.to_track_quat('-Z', 'Y').to_euler()
+
+    # --- Studiolicht (weich, dezente Schatten, keine Drama-Beleuchtung) ----
+    # Light-Linking: Buch-Lichter beleuchten NUR die Buecher, das Hintergrund-
+    # Licht NUR die Cove. So bleibt der Hintergrund unabhaengig regelbar (fuer
+    # gleichmaessige Ausleuchtung ohne Verlauf oben/unten) und die Cover werden
+    # nicht zusaetzlich vom Hintergrundlicht aufgehellt.
+    books_link = bpy.data.collections.new("BooksLink")
+    books_link.objects.link(left_book)
+    books_link.objects.link(right_book)
+
+    cove_link = bpy.data.collections.new("CoveLink")
+    cove_link.objects.link(cove)
+
+    # EINE einzige Lichtquelle fuer die Buecher: eine Softbox schraeg oben-
+    # rechts, auf Buchmitte ausgerichtet.
+    BOOKS_TARGET = (0.0, 0.0, BOOK_HEIGHT * BOOK_SCALE * 0.45)
+    add_area_light(
+        "Key_Light_Right",
+        location=(0.9, -1.75, 1.9),
+        target=BOOKS_TARGET,
+        size=3.2,
+        energy=70,
+        receiver_collection=books_link,
+    )
+
+    # Hintergrund-Licht: eine Sonne (Parallellicht, KEIN Abfall mit Entfernung),
+    # damit Boden (nah an der Kamera) und Ruckwand (weiter weg) gleich hell
+    # ausgeleuchtet werden -> kein Verlauf mehr oben/unten. Nur auf die Cove
+    # gelinkt, beeinflusst die Buecher also nicht.
+    sun_data = bpy.data.lights.new("Cove_Sun", type='SUN')
+    sun_data.energy = 3.1
+    sun_data.angle = math.radians(9)  # weicher Schattenwurf auf der Kurve
+    sun_data.color = (1.0, 0.995, 0.985)
+    sun_obj = bpy.data.objects.new("Cove_Sun", sun_data)
+    bpy.context.collection.objects.link(sun_obj)
+    sun_obj.rotation_euler = (math.radians(45), 0, 0)
+    sun_obj.light_linking.receiver_collection = cove_link
+
+    # --- Render-Einstellungen ------------------------------------------------
+    scene = bpy.context.scene
+    scene.render.engine = 'CYCLES'
+    scene.cycles.samples = ARGS.samples
+    scene.cycles.use_denoising = bool(ARGS.denoise)
+
+    scene.render.resolution_x = ARGS.res_x
+    scene.render.resolution_y = ARGS.res_y
+    scene.render.resolution_percentage = 100
+
+    # Standard-Farbwiedergabe, damit die Coverfarben moeglichst originalgetreu
+    # (pixelgenau) bleiben und nicht durch Filmic/Kontrastkurven veraendert werden.
+    scene.view_settings.view_transform = 'Standard'
+    scene.view_settings.look = 'None'
+
+    scene.render.image_settings.file_format = 'PNG'
+    scene.render.image_settings.color_mode = 'RGB'
+    scene.render.filepath = str(output_path)
+
+    setup_compositing(BACKGROUND_HEX)
+
+    # Explizit erzwingen (nicht auf den Default/Preferences-Wert verlassen):
+    # ist "Overwrite" deaktiviert, wuerde Blender eine bereits existierende
+    # Datei stillschweigend NICHT neu schreiben - ohne Fehler und ohne Warnung.
+    scene.render.use_overwrite = True
+
+    # --- Rendern ---------------------------------------------------------
+    # mtime VOR dem Rendern merken, um zu erkennen, ob eine bereits
+    # vorhandene Datei wirklich NEU geschrieben wurde (ein reiner
+    # exists()-Check wuerde eine unveraenderte alte Datei faelschlich
+    # als Erfolg werten, z.B. wenn use_overwrite doch irgendwo False
+    # waere oder das Schreiben aus einem anderen Grund fehlschlaegt).
+    mtime_before = output_path.stat().st_mtime if output_path.exists() else None
+
+    bpy.ops.render.render(write_still=True)
+
+    mtime_after = output_path.stat().st_mtime if output_path.exists() else None
+
+    if mtime_after is None:
+        raise RuntimeError(
+            f"Rendern abgeschlossen, aber Datei wurde NICHT gefunden: "
+            f"{output_path}. Pfad/Dateiname pruefen (z.B. Sonderzeichen, "
+            f"Schreibrechte, Pfadlaenge)."
+        )
+    elif mtime_before is not None and mtime_after <= mtime_before:
+        raise RuntimeError(
+            f"Datei existiert bereits, wurde aber NICHT neu geschrieben: "
+            f"{output_path}. Moegliche Ursachen: 'Overwrite' war "
+            f"deaktiviert, die Datei ist durch ein anderes Programm "
+            f"gesperrt (z.B. Viewer, OneDrive-Sync), oder fehlende "
+            f"Schreibrechte."
+        )
+    else:
+        print(f"Fertig. Mockup gespeichert unter: {output_path}")
 
 
 # ---------------------------------------------------------------------------
-# 10. RENDERN
+# 6. AUSFUEHRUNG: EIN TITEL (--name) ODER ALLE GEMEINSAMEN TITEL (Batch)
 # ---------------------------------------------------------------------------
 
-# mtime VOR dem Rendern merken, um zu erkennen, ob eine bereits
-# vorhandene Datei wirklich NEU geschrieben wurde (ein reiner
-# exists()-Check wuerde eine unveraenderte alte Datei faelschlich
-# als Erfolg werten, z.B. wenn use_overwrite doch irgendwo False
-# waere oder das Schreiben aus einem anderen Grund fehlschlaegt).
-mtime_before = OUTPUT_PATH.stat().st_mtime if OUTPUT_PATH.exists() else None
-
-bpy.ops.render.render(write_still=True)
-
-mtime_after = OUTPUT_PATH.stat().st_mtime if OUTPUT_PATH.exists() else None
-
-if mtime_after is None:
-    raise RuntimeError(
-        f"Rendern abgeschlossen, aber Datei wurde NICHT gefunden: "
-        f"{OUTPUT_PATH}. Pfad/Dateiname pruefen (z.B. Sonderzeichen, "
-        f"Schreibrechte, Pfadlaenge)."
-    )
-elif mtime_before is not None and mtime_after <= mtime_before:
-    raise RuntimeError(
-        f"Datei existiert bereits, wurde aber NICHT neu geschrieben: "
-        f"{OUTPUT_PATH}. Moegliche Ursachen: 'Overwrite' war "
-        f"deaktiviert, die Datei ist durch ein anderes Programm "
-        f"gesperrt (z.B. Viewer, OneDrive-Sync), oder fehlende "
-        f"Schreibrechte."
-    )
+if ARGS.name:
+    render_book(ARGS.name)
 else:
-    print(f"Fertig. Mockup gespeichert unter: {OUTPUT_PATH}")
+    names = find_common_names(FRONT_DIR, BACK_DIR)
+    if not names:
+        raise FileNotFoundError(
+            f"Kein --name angegeben und keine gemeinsamen Dateinamen "
+            f"gefunden (Schnittmenge von {FRONT_DIR} und {BACK_DIR} ist leer)."
+        )
+    print(f"Kein --name angegeben - rendere {len(names)} Titel: {', '.join(names)}")
+    for i, name in enumerate(names, start=1):
+        print(f"[{i}/{len(names)}] {name}")
+        render_book(name)
+    print(f"Fertig. {len(names)} Mockups gerendert.")
