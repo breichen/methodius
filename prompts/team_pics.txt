@@ -1,30 +1,35 @@
 Create an official staff portrait of a member of the Methodius Institute.
 
-STYLE
+==================================================
+VISUAL UNIVERSE
+==================================================
 
-Premium editorial portrait.
+The portrait must belong to the exact same visual world as the Institute's publications, book covers and website.
 
-Looks like a portrait from a prestigious institute website or annual report.
+Visual references:
 
-Current day.
-
-Professional.
-
-Intelligent.
-
-Academic.
-
-Slightly self-important.
-
-VISUAL REFERENCES
-
-- Harvard Business Review illustrations
-- The Economist portraits
+- The Economist
+- Harvard Business Review
+- Hanser Sachbuch
+- Penguin literary illustration
 - premium editorial portraiture
-- German research institutes
-- annual reports
 
+The image should feel like a portrait published in the annual report of an extremely prestigious research institute.
+
+Tone:
+
+serious
+intelligent
+academic
+confident
+slightly self-important
+completely sincere
+
+Humor must emerge only from the person's title.
+
+==================================================
 COLOR PALETTE
+==================================================
 
 Use exclusively:
 
@@ -40,29 +45,52 @@ No realistic skin tones.
 
 No photographic color rendering.
 
+No yellow tint.
+
 No sepia.
 
 No vintage treatment.
 
-The portrait should clearly feel contemporary.
+No warm archive look.
 
+Maximum red usage:
+5%
+
+The portrait must visually match the Institute's book covers.
+
+==================================================
 RENDERING
+==================================================
 
 Flat 2D editorial illustration.
 
-Large shadow shapes.
+Premium literary publishing aesthetic.
 
-Strong silhouette.
+Stylized realism.
+
+Painterly editorial rendering.
+
+Strong light source.
+
+Large illuminated surfaces.
+
+Large shadow masses.
+
+Soft tonal transitions.
 
 Minimal linework.
 
-Simplified facial features.
+Facial features simplified but recognizable.
 
 Visual weight comes from light and shadow.
 
 Readable at small size.
 
+Magazine-quality artwork.
+
+==================================================
 CHARACTER
+==================================================
 
 Institute member.
 
@@ -76,33 +104,62 @@ slightly pleased with their own conclusions
 
 Avoid:
 
-smug comedy
+cartoon faces
 exaggerated expressions
-cartoon reactions
+satirical caricature
+stock-photo attractiveness
 
+Generate a unique individual every time.
+
+==================================================
 POSE
+==================================================
 
-Simple portrait composition.
+Head-and-shoulders portrait or half-body portrait.
 
-Head and shoulders.
+Simple composition.
 
-Or half-body portrait.
+Strong silhouette.
+
+Direct gaze or thoughtful off-camera gaze.
 
 Neutral institutional background.
 
-A few carefully selected objects may support the person's role.
+Optional supporting object:
 
-Examples:
+- stack of reports
+- binder
+- clipboard
+- conference folder
+- academic diagram
+- framed certificate
 
-- Director of Applied Speculation
-- Senior Researcher for Plausibility Studies
-- Fellow for Strategic Misinterpretation
-- Head of Department for Theoretical Certainty
+Maximum two supporting objects.
 
+==================================================
 ATMOSPHERE
+==================================================
 
-The portrait should look completely serious.
+The portrait should initially appear completely serious.
 
-The viewer should only notice the absurdity after reading the person's title.
+Only after reading the title should the viewer notice the absurdity.
 
 The image must feel unmistakably part of the Methodius Institute visual universe.
+
+==================================================
+NEGATIVE PROMPT
+==================================================
+
+No photography.
+No photorealism.
+No sepia.
+No vintage look.
+No yellow cast.
+No old paper texture.
+No comic style.
+No caricature.
+No startup illustration style.
+No corporate stock illustration.
+No colorful clothing.
+No colorful background.
+No secondary colors.

@@ -1,96 +1,164 @@
-Create an official archive photograph of the Methodius Institute.
+Create an official institutional image of the Methodius Institute.
 
-STYLE
+==================================================
+VISUAL UNIVERSE
+==================================================
 
-Institutional archive image.
+The image must belong to the exact same visual world as the Institute's publications, staff portraits and book covers.
 
-Looks like a carefully preserved photograph from the internal archives of a prestigious scientific institute.
+Visual references:
 
-The scene takes place in the present day.
+- university annual reports
+- institutional documentation
+- official conference photography
+- scientific organizations
+- editorial magazine illustration
 
-However, the institute deliberately documents everything as if it were already historical.
+The image documents an event of great importance to the Institute.
 
-Visual tone:
+The Institute treats ordinary events with excessive seriousness.
 
-serious
-academic
-institutional
-self-important
-slightly absurd
+Humor must emerge entirely from the documented situation.
 
-Humor must emerge from the situation itself.
+==================================================
+COLOR PALETTE
+==================================================
 
-Never cartoonish.
-Never parody.
-Never slapstick.
+Use exclusively:
 
-VISUAL REFERENCES
+#F1ECE2
+#E7E0D2
+#1B2340
+#5A5F72
+#B5292C
 
-- German institutional archive photography
-- university archives
-- newspaper photography
-- historical commemorative photographs
-- annual reports
-- scientific institutions
+No other colors.
 
-COLOR
+No realistic object colors.
 
-Monochrome archival palette.
+No realistic skin tones.
 
-Cream paper tones.
-Warm charcoal shadows.
-Very subtle sepia tint.
+No yellow.
 
-No vivid colors.
+No sepia.
 
-No modern color photography appearance.
+No archive tint.
 
-The image should feel like a digitized archive print.
+No vintage treatment.
 
+Maximum red usage:
+5%
+
+The image must visually match the Institute's publications.
+
+==================================================
+RENDERING
+==================================================
+
+Flat 2D editorial illustration.
+
+Premium literary publishing aesthetic.
+
+Stylized realism.
+
+Painterly editorial rendering.
+
+Strong directional lighting.
+
+Large tonal shapes.
+
+Minimal linework.
+
+Soft atmospheric depth.
+
+Readable faces.
+
+Recognizable expressions.
+
+No photorealism.
+
+No simulated photography.
+
+==================================================
 COMPOSITION
+==================================================
 
-Formal group photography.
+Formal institutional composition.
 
 People pose deliberately.
 
-Directors, researchers and institute members appear proud and convinced of their importance.
-
-Symmetrical compositions preferred.
+Everyone appears convinced of the importance of the occasion.
 
 Strong hierarchy.
 
 Clear focal point.
 
-DETAIL LEVEL
+Controlled composition.
 
-Stylized realism.
+No visual clutter.
 
-Readable faces.
+Maximum 8 people.
 
-Moderately simplified features.
+Symmetrical compositions preferred.
 
-Not photorealistic.
-
-Not illustrated like a magazine cover.
-
-Facial expressions:
+==================================================
+FACIAL EXPRESSIONS
+==================================================
 
 confident
 composed
 self-assured
-slightly self-satisfied
+professional
+slightly pleased with the significance of the event
 
-ATMOSPHERE
+Avoid:
 
-The image should look as if future historians might mistakenly consider this an important scientific milestone.
+comedy reactions
+exaggeration
+cartoon humor
 
-Examples:
+==================================================
+EXAMPLES
+==================================================
 
-- institute founding ceremony
 - annual conference
-- presentation of a questionable study
 - opening of a new department
-- award ceremony
+- presentation of a questionable study
+- certification ceremony
+- strategic planning retreat
+- award presentation
+- team-building workshop
 - official group portrait
 
-The absurdity should come entirely from the content being documented with excessive seriousness.
+==================================================
+ATMOSPHERE
+==================================================
+
+The image should look like a perfectly serious institutional document.
+
+The absurdity comes solely from what is being documented.
+
+The viewer should initially believe they are looking at a real academic institution.
+
+Only afterwards should the satire become apparent.
+
+The image must feel like it was created by the same publisher, designer and art director who created the Institute's book covers.
+
+==================================================
+NEGATIVE PROMPT
+==================================================
+
+No photography.
+No photorealism.
+No sepia.
+No archive texture.
+No vintage treatment.
+No yellow cast.
+No old paper.
+No historical effect.
+No comic style.
+No parody illustration.
+No colorful objects.
+No secondary colors.
+No visual clutter.
+No crowd scenes.
