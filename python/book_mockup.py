@@ -103,7 +103,7 @@ if ARGS.output:
     OUTPUT_PATH = Path(ARGS.output).resolve()
 else:
     safe_name = sanitize_filename(ARGS.name)
-    OUTPUT_PATH = (SCRIPT_DIR / ".." / "out" / f"{safe_name}_mockup.png").resolve()
+    OUTPUT_PATH = (SCRIPT_DIR / ".." / "pics" / "ratgeber-mockup_py" / f"{safe_name}.png").resolve()
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 # Seed fuer die kleine zufaellige Variation: standardmaessig aus dem Namen
@@ -122,9 +122,9 @@ SPINE_THICKNESS = 0.016      # 5 mm Ruecken -> oberes Ende von "duennes Booklet"
 BEVEL_WIDTH = 0.0006         # minimale Kantenrundung fuer realistische Optik
 
 CREAM_SPINE_COLOR = (0.93, 0.895, 0.82, 1.0)   # gleiche warme Cremepalette wie Cover
-BACKGROUND_HEX = (0.9882, 0.9804, 0.9608)       # #FCFAF5
+BACKGROUND_HEX = (254/255, 250/255, 239/255)       # #FEFAEF
 
-BOOK_SCALE = 1.0             # Buch insgesamt 50% groesser (Hoehe UND Breite
+BOOK_SCALE = 1.07             # Buch insgesamt 50% groesser (Hoehe UND Breite
                               # gleichermassen skaliert -> Seitenverhaeltnis
                               # bleibt exakt erhalten, Cover wird NICHT
                               # verzerrt). Kamera wird weiter unten passend
