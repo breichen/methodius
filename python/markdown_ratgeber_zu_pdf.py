@@ -489,6 +489,38 @@ def wrap_first_page(html_text: str) -> str:
     return str(soup)
 
 
+def wrap_last_page(html_text: str) -> str:
+    """
+    Schiebt die Autoren-Signatur (.autor-abschluss) an den unteren Rand
+    der Seite, auf der sie landet.
+
+    Nur der Signatur-Block selbst wird in einen Flexbox-Wrapper mit voller
+    Seitenhöhe gepackt - NICHT das gesamte letzte Kapitel. Grund: Flexbox-
+    Container brechen beim PDF-Export in Chromium nicht zuverlässig über
+    mehrere Seiten um; war zu viel Text (inkl. Quiz-Box) im Wrapper, wurde
+    der Container zusammengequetscht und Text ragte in die Quiz-Box hinein.
+
+    Der kleine Wrapper hier ist dagegen immer kurz genug, um auf eine
+    einzelne Seite zu passen. Passt er nicht mehr auf die aktuelle Seite,
+    sorgt 'break-inside: avoid' dafür, dass er komplett auf eine neue Seite
+    rutscht - und wird dort dank 'margin-top: auto' an den unteren Rand
+    gedrückt. Passt er noch auf die aktuelle Seite, bleibt er dort und wird
+    an deren unteres Ende gedrückt.
+    """
+    bs4 = __import__("bs4")
+    soup = bs4.BeautifulSoup(html_text, "html.parser")
+
+    target = soup.find(class_="autor-abschluss")
+    if target is None:
+        return str(soup)
+
+    wrapper = soup.new_tag("div", attrs={"class": "last-page-fill"})
+    target.insert_before(wrapper)
+    wrapper.append(target.extract())
+
+    return str(soup)
+
+
 def make_html(
     content_html: str,
     image_uri: str,
@@ -855,6 +887,22 @@ def make_html(
     margin-top: auto;
   }}
 
+  /* Autoren-Signatur wird an das untere Ende der Seite gedrückt, auf der
+     sie landet (passt sie nicht mehr auf die aktuelle Seite, rutscht der
+     ganze Wrapper dank break-inside:avoid auf eine neue Seite und wird dort
+     ans untere Ende gedrückt). */
+  .last-page-fill {{
+    display: flex;
+    flex-direction: column;
+    min-height: calc({page_height} - {content_margin} - {bottom_margin});
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }}
+
+  .last-page-fill .autor-abschluss {{
+    margin-top: auto;
+  }}
+
   /* BONUS-Quiz optisch abgrenzen: von der Überschrift bis zur letzten
      Antwortzeile, alles danach bleibt außerhalb der Box. */
   .quiz-box {{
@@ -1043,6 +1091,7 @@ def main() -> int:
             )
             html_text = wrap_first_page(html_text)
             html_text = wrap_quiz_boxes(html_text)
+            html_text = wrap_last_page(html_text)
 
             temp_html = output.with_suffix(".pdf_work.html")
             temp_html.write_text(
