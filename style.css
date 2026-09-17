@@ -1416,16 +1416,16 @@ hr {
   overflow: hidden;
   position: relative;
 
-  /* Eigener Flexbox-Kontext für den Seiteninhalt (nicht zu verwechseln
+  /* Eigener Flexbox-Kontext fÃ¼r den Seiteninhalt (nicht zu verwechseln
      mit "flex: 1 1 50%" oben, das ist die Rolle als Flex-ITEM im Buch):
      dadurch kann die Autoren-Signatur per margin-top:auto ans untere
-     Ende der jeweiligen Seite gedrückt werden, wenn sie dort landet
+     Ende der jeweiligen Seite gedrÃ¼ckt werden, wenn sie dort landet
      (siehe .flipbook-page .autor-abschluss weiter unten). Da die
      Seitenaufteilung in teileInSeiten() den Inhalt schon exakt auf die
-     Seitenhöhe zuschneidet, bleibt dafür immer nur der Rest an freiem
-     Platz übrig - kein Risiko, dass etwas zusammengequetscht wird.
+     SeitenhÃ¶he zuschneidet, bleibt dafÃ¼r immer nur der Rest an freiem
+     Platz Ã¼brig - kein Risiko, dass etwas zusammengequetscht wird.
      flex-shrink:0 auf den Kindern verhindert, dass sie trotzdem
-     schrumpfen und damit die Höhenmessung in teileInSeiten() verfälschen. */
+     schrumpfen und damit die HÃ¶henmessung in teileInSeiten() verfÃ¤lschen. */
   display: flex;
   flex-direction: column;
 }
@@ -1633,7 +1633,8 @@ hr {
 }
 
 .flipbook-page .autor-box {
-  gap: 10px;
+  gap: 14px;
+  padding: 14px 16px;
   margin-bottom: 16px;
 }
 
@@ -1641,6 +1642,10 @@ hr {
   width: 64px;
   height: 64px;
   border-width: 2px;
+}
+
+.flipbook-page .autor-box .autor-kicker {
+  font-size: 0.58rem;
 }
 
 .flipbook-page .autor-box .autor-name {
