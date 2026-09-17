@@ -8,6 +8,7 @@
   --color-muted: #5A5F72;
   --color-accent: #B5292C;
   --color-accent-warm: #1B2340;
+  --color-border: #D6CDBB;
   --cover-border: rgba(27, 35, 64, 0.3);
   --cover-shadow: 4px 4px 0 rgba(27, 35, 64, 0.18);
   --cover-shadow-hover: 6px 6px 0 rgba(27, 35, 64, 0.22);
@@ -832,7 +833,7 @@ hr {
 
 .autor-tagline {
   margin: 6px 0 24px 116px;
-  color: var(--color-text-muted);
+  color: var(--color-muted);
   font-size: 0.9rem;
   line-height: 1.55;
   font-style: normal;
