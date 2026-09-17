@@ -553,6 +553,16 @@ def make_html(
     color: var(--color-accent);
     margin: 0 0 16px;
     margin-top: 4mm;
+    break-after: avoid;
+    page-break-after: avoid;
+  }}
+
+  h2 + p,
+  h2 + ul,
+  h2 + ol,
+  h2 + blockquote {{
+      break-before: avoid;
+      page-break-before: avoid;
   }}
 
   h3 {{
