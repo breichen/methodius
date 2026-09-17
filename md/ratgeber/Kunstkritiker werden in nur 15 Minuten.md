@@ -290,52 +290,52 @@ Damit ist deine erste Kunstkritik abgeschlossen.
 
 # BONUS: Der große Kunstkritik-Test
 
-### 1. Du stehst vor einem Bild und weißt nicht, was es darstellt. Was machst du?
+**1. Du stehst vor einem Bild und weißt nicht, was es darstellt. Was machst du?**
 
 ☐ Du erklärst, dass sich das Werk einer eindeutigen Lesbarkeit entzieht.  
 ☐ Du untersuchst, welche Erwartungen an Verständlichkeit das Werk möglicherweise infrage stellt.
 
-### 2. Eine rote Fläche dominiert das Bild.
+**2. Eine rote Fläche dominiert das Bild.**
 
 ☐ Du beschreibst ihre intensive Präsenz und Wirkung im Gesamtgefüge.  
 ☐ Du fragst, welche emotionale oder symbolische Spannung durch die Farbe entsteht.
 
-### 3. Eine Skulptur sieht beschädigt aus.
+**3. Eine Skulptur sieht beschädigt aus.**
 
 ☐ Du untersuchst den Bruch als Teil der materiellen Wirkung.  
 ☐ Du fragst, wie die Beschädigung die Wahrnehmung des Objekts verändert.
 
-### 4. Du verstehst den Titel nicht.
+**4. Du verstehst den Titel nicht.**
 
 ☐ Du deutest die Distanz zwischen Titel und Werk als produktive Spannung.  
 ☐ Du untersuchst, wie der Titel eine eindeutige Interpretation möglicherweise verhindert.
 
-### 5. Jemand fragt dich, was der Künstler damit sagen wollte.
+**5. Jemand fragt dich, was der Künstler damit sagen wollte.**
 
 ☐ Du erklärst, dass sich das Werk nicht auf eine einzige Intention reduzieren lässt.  
 ☐ Du betonst, dass auch die Wahrnehmung des Betrachters Bedeutung erzeugt.
 
-### 6. Das Bild wirkt auf dich einfach schön.
+**6. Das Bild wirkt auf dich einfach schön.**
 
 ☐ Du sprichst von einer unmittelbaren ästhetischen Wirkung.  
 ☐ Du untersuchst, wodurch das Werk seine formale Anziehungskraft entfaltet.
 
-### 7. Du entdeckst etwas, das scheinbar nicht ins Bild passt.
+**7. Du entdeckst etwas, das scheinbar nicht ins Bild passt.**
 
 ☐ Du beschreibst es als bewusste oder produktive Störung.  
 ☐ Du untersuchst das Spannungsverhältnis zwischen diesem Element und dem Rest.
 
-### 8. Im Ausstellungsraum steht eine merkwürdige Pflanze.
+**8. Im Ausstellungsraum steht eine merkwürdige Pflanze.**
 
 ☐ Du überlegst, wie der Raum deine Wahrnehmung des Werks beeinflusst.  
 ☐ Du fragst dich, ob die Grenze zwischen Ausstellung und Umgebung überhaupt eindeutig ist.
 
-### 9. Deine Interpretation widerspricht dem, was du vor zwei Minuten gesagt hast.
+**9. Deine Interpretation widerspricht dem, was du vor zwei Minuten gesagt hast.**
 
 ☐ Du sprichst von Ambivalenz.  
 ☐ Du betonst die produktive Widersprüchlichkeit des Werks.
 
-### 10. Was ist nach fünfzehn Minuten dein wichtigstes Werkzeug?
+**10. Was ist nach fünfzehn Minuten dein wichtigstes Werkzeug?**
 
 ☐ Die Fähigkeit, genau hinzusehen und anschließend Möglichkeiten statt Gewissheiten zu formulieren.  
 ☐ Die Fähigkeit, aus einer Beobachtung eine Deutung zu entwickeln, ohne sie unnötig endgültig zu machen.

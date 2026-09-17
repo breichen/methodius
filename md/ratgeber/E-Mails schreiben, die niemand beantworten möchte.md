@@ -347,61 +347,61 @@ Damit ist alles erreicht:
 
 # BONUS: Der große E-Mail-Test
 
-### 1. Du möchtest eine einfache Information bekommen. Was steht im Betreff?
+**1. Du möchtest eine einfache Information bekommen. Was steht im Betreff?**
 
 ☐ „Rückfrage“  
 ☐ „Kurze Abstimmung“  
 ☐ „Wie besprochen“
 
-### 2. Wie lang sollte eine E-Mail mit einer einzigen Frage sein?
+**2. Wie lang sollte eine E-Mail mit einer einzigen Frage sein?**
 
 ☐ So lang, dass der Kontext eindeutig unklar wird.  
 ☐ Lang genug, damit die eigentliche Frage erst im letzten Drittel auftaucht.  
 ☐ Die Länge spielt keine Rolle, solange „kurz“ darin vorkommt.
 
-### 3. Wie viele Personen sollten eine E-Mail erhalten?
+**3. Wie viele Personen sollten eine E-Mail erhalten?**
 
 ☐ Alle, die direkt beteiligt sind.  
 ☐ Alle, die möglicherweise irgendwann beteiligt sein könnten.  
 ☐ Alle, bei denen du vermeiden möchtest, dass später jemand sagt: „Davon wusste ich nichts.“
 
-### 4. Jemand fragt: „Was genau soll ich jetzt tun?“
+**4. Jemand fragt: „Was genau soll ich jetzt tun?“**
 
 ☐ Du erklärst, dass zunächst ein gemeinsames Verständnis geschaffen werden sollte.  
 ☐ Du verweist auf den bisherigen Mailverlauf.  
 ☐ Du antwortest: „Genau das sollten wir noch einmal kurz abstimmen.“
 
-### 5. Wann ist „zeitnah“?
+**5. Wann ist „zeitnah“?**
 
 ☐ Wenn es dringend ist.  
 ☐ Wenn es irgendwann passieren sollte.  
 ☐ Wenn später jemand nachfragt, warum es noch nicht passiert ist.
 
-### 6. Was ist ein guter E-Mail-Anhang?
+**6. Was ist ein guter E-Mail-Anhang?**
 
 ☐ Ein Dokument mit 38 Seiten.  
 ☐ Eine Datei namens „final_aktuell_neu“.  
 ☐ Ein Dokument, in dem auf Seite 24 steht: „Hierzu wäre noch eine Rückmeldung erforderlich.“
 
-### 7. Wie stellst du sicher, dass niemand die Verantwortung übernimmt?
+**7. Wie stellst du sicher, dass niemand die Verantwortung übernimmt?**
 
 ☐ Du formulierst die Frage an mehrere Personen gleichzeitig.  
 ☐ Du fragst zunächst, wer grundsätzlich zuständig sein könnte.  
 ☐ Du schreibst „Vielleicht kann hier jemand kurz weiterhelfen“.
 
-### 8. Was ist die beste Antwort auf eine konkrete Frage?
+**8. Was ist die beste Antwort auf eine konkrete Frage?**
 
 ☐ Eine strategische Einordnung.  
 ☐ Ein Verweis auf den bisherigen Prozess.  
 ☐ Eine neue Frage, die zunächst geklärt werden muss.
 
-### 9. Wann ist eine E-Mail wirklich erfolgreich?
+**9. Wann ist eine E-Mail wirklich erfolgreich?**
 
 ☐ Wenn niemand widerspricht.  
 ☐ Wenn niemand sicher weiß, ob eine Antwort erforderlich ist.  
 ☐ Wenn nach drei Tagen jemand persönlich fragt: „Du hattest doch mal diese Mail geschickt – was wolltest du eigentlich?“
 
-### 10. Was machst du, wenn tatsächlich jemand sofort antwortet?
+**10. Was machst du, wenn tatsächlich jemand sofort antwortet?**
 
 ☐ Du bedankst dich und eröffnest damit höflich die nächste Gesprächsrunde.  
 ☐ Du stellst fest, dass noch ein weiterer Punkt geklärt werden sollte.  

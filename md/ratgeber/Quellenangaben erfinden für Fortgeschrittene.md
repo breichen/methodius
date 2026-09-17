@@ -320,61 +320,61 @@ Und wenn du das verstanden hast, brauchst du eigentlich keine erfundene Quelle m
 
 # BONUS: Der große **Quellenangaben-für-Fortgeschrittene-Test**
 
-### 1. Was macht eine Quellenangabe besonders überzeugend?
+**1. Was macht eine Quellenangabe besonders überzeugend?**
 
 ☐ Ein plausibler Autor.  
 ☐ Ein seriös klingender Titel.  
 ☐ So viele bibliografische Details, dass niemand mehr weiß, welches davon überprüft werden müsste.
 
-### 2. Welches Jahr eignet sich besonders gut für eine schwer überprüfbare Quelle?
+**2. Welches Jahr eignet sich besonders gut für eine schwer überprüfbare Quelle?**
 
 ☐ Ein plausibles älteres Jahr.  
 ☐ Ein Jahr, das lange genug zurückliegt, damit niemand mehr genau weiß, was damals veröffentlicht wurde.  
 ☐ Das Jahr, in dem die Quelle angeblich erschienen ist.
 
-### 3. Was bewirkt eine Seitenzahl?
+**3. Was bewirkt eine Seitenzahl?**
 
 ☐ Sie vermittelt Genauigkeit.  
 ☐ Sie suggeriert, dass jemand das Dokument tatsächlich gelesen hat.  
 ☐ Sie macht aus einer Behauptung einen Ort.
 
-### 4. Jemand fragt nach deiner Quelle. Was sagst du?
+**4. Jemand fragt nach deiner Quelle. Was sagst du?**
 
 ☐ „Ich müsste kurz nachsehen.“  
 ☐ „Das war, glaube ich, in einem Sammelband.“  
 ☐ „Ich suche dir die genaue Fundstelle heraus.“
 
-### 5. Warum wirken Initialen in Autorennamen so wissenschaftlich?
+**5. Warum wirken Initialen in Autorennamen so wissenschaftlich?**
 
 ☐ Weil sie Informationen weglassen.  
 ☐ Weil sie nach bibliografischer Ordnung aussehen.  
 ☐ Weil niemand weiß, wofür sie stehen.
 
-### 6. Was ist ein guter Quellentitel?
+**6. Was ist ein guter Quellentitel?**
 
 ☐ „Aspekte der angewandten Alltagskommunikation“.  
 ☐ „Beiträge zur strukturierten Entscheidungsforschung“.  
 ☐ Etwas so sachlich, dass niemand freiwillig danach suchen möchte.
 
-### 7. Was bedeutet „vgl.“ in der fortgeschrittenen Quellenkunst?
+**7. Was bedeutet „vgl.“ in der fortgeschrittenen Quellenkunst?**
 
 ☐ Vergleiche.  
 ☐ Vielleicht ist die Quelle relevant.  
 ☐ Die elegante Möglichkeit, eine Verbindung anzudeuten, ohne zu behaupten, dass dort exakt dasselbe steht.
 
-### 8. Was macht eine institutionelle Quelle besonders interessant?
+**8. Was macht eine institutionelle Quelle besonders interessant?**
 
 ☐ Sie klingt offiziell.  
 ☐ Sie könnte theoretisch in einem Archiv liegen.  
 ☐ Niemand weiß genau, wer dort eigentlich arbeitet.
 
-### 9. Was ist die größte Gefahr einer erfundenen Quelle?
+**9. Was ist die größte Gefahr einer erfundenen Quelle?**
 
 ☐ Jemand findet sie nicht.  
 ☐ Jemand sucht sie.  
 ☐ Jemand findet heraus, dass sie erfunden wurde.
 
-### 10. Was ist die wichtigste Erkenntnis dieses Ratgebers?
+**10. Was ist die wichtigste Erkenntnis dieses Ratgebers?**
 
 ☐ Eine Quellenangabe macht eine Behauptung nicht automatisch wahr.  
 ☐ Präzision kann überzeugender wirken als Inhalt.  

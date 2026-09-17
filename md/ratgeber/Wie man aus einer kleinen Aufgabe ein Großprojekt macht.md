@@ -305,61 +305,61 @@ Wenn dir das gelingt, hast du aus einer kleinen Aufgabe ein Großprojekt gemacht
 
 # BONUS: Der große Großprojekt-Test
 
-### 1. Du bekommst die Nachricht: „Kannst du das kurz erledigen?“
+**1. Du bekommst die Nachricht: „Kannst du das kurz erledigen?“**
 
 ☐ Du erledigst es sofort, nachdem du kurz geklärt hast, was „kurz“ bedeutet.  
 ☐ Du fragst nach dem übergeordneten Ziel der Anfrage.  
 ☐ Du schlägst zunächst einen kurzen Abstimmungstermin vor, um den Begriff „erledigen“ gemeinsam zu definieren.
 
-### 2. Eine Aufgabe dauert tatsächlich nur fünf Minuten. Was ist zu tun?
+**2. Eine Aufgabe dauert tatsächlich nur fünf Minuten. Was ist zu tun?**
 
 ☐ Du prüfst, ob die fünf Minuten im aktuellen Prozessmodell ausreichend berücksichtigt sind.  
 ☐ Du entwickelst einen Prozess, in dem die fünf Minuten künftig nachvollziehbar dokumentiert werden.  
 ☐ Du hinterfragst, warum eine so wichtige Tätigkeit überhaupt nur fünf Minuten dauert.
 
-### 3. Jemand fragt: „Warum brauchen wir dafür ein Meeting?“
+**3. Jemand fragt: „Warum brauchen wir dafür ein Meeting?“**
 
 ☐ Du erklärst, dass genau diese Frage bereits ein Thema für das Meeting ist.  
 ☐ Du weist darauf hin, dass ohne Meeting nicht gemeinsam festgestellt werden kann, ob ein Meeting notwendig ist.  
 ☐ Du verschiebst die Frage auf den nächsten Status-Termin.
 
-### 4. Du hast endlich eine Entscheidung getroffen. Was passiert als Nächstes?
+**4. Du hast endlich eine Entscheidung getroffen. Was passiert als Nächstes?**
 
 ☐ Du dokumentierst die Entscheidung.  
 ☐ Du prüfst die Auswirkungen der Entscheidung.  
 ☐ Du stellst fest, dass für die Umsetzung der Entscheidung eine weitere Entscheidung erforderlich ist.
 
-### 5. Ein Kollege schlägt vor, die Aufgabe einfach zu machen.
+**5. Ein Kollege schlägt vor, die Aufgabe einfach zu machen.**
 
 ☐ Du lobst seine Lösungsorientierung und erklärst, dass genau diese Haltung im weiteren Projektverlauf berücksichtigt werden sollte.  
 ☐ Du fragst, ob „einfach machen“ bereits als standardisierter Prozess dokumentiert wurde.  
 ☐ Du schlägst vor, zunächst die Risiken des einfachen Machens zu analysieren.
 
-### 6. Dein Projekt ist nach drei Monaten noch nicht abgeschlossen. Wie bewertest du das?
+**6. Dein Projekt ist nach drei Monaten noch nicht abgeschlossen. Wie bewertest du das?**
 
 ☐ Positiv, weil die Komplexität des Vorhabens offenbar angemessen berücksichtigt wurde.  
 ☐ Als Zeichen dafür, dass das Thema nachhaltig bearbeitet wird.  
 ☐ Als Hinweis darauf, dass die ursprüngliche Aufgabenstellung möglicherweise unterschätzt wurde.
 
-### 7. Eine Person fragt, ob man das alles nicht etwas kleiner halten könnte.
+**7. Eine Person fragt, ob man das alles nicht etwas kleiner halten könnte.**
 
 ☐ Du erklärst, dass genau diese Frage im Rahmen der Skalierungsstrategie betrachtet werden sollte.  
 ☐ Du schlägst eine Arbeitsgruppe zur Prüfung der möglichen Verkleinerung vor.  
 ☐ Du vertagst die Entscheidung, bis die langfristigen Auswirkungen einer Verkleinerung bekannt sind.
 
-### 8. Die ursprüngliche Aufgabe ist inzwischen längst erledigt. Was machst du?
+**8. Die ursprüngliche Aufgabe ist inzwischen längst erledigt. Was machst du?**
 
 ☐ Du führst eine Abschlussanalyse durch, um festzustellen, ob sie tatsächlich erledigt wurde.  
 ☐ Du prüfst, welche Folgeprozesse sich aus ihrer Erledigung ergeben.  
 ☐ Du startest eine Nachbesprechung zur nachhaltigen Sicherung der erzielten Ergebnisse.
 
-### 9. Was ist das wichtigste Kennzeichen eines erfolgreichen Projekts?
+**9. Was ist das wichtigste Kennzeichen eines erfolgreichen Projekts?**
 
 ☐ Es gibt mehr Dokumentation als zu Beginn.  
 ☐ Niemand kann mehr genau sagen, wann das Projekt ursprünglich begonnen hat.  
 ☐ Die Aufgabe wurde irgendwann von jemandem erledigt, aber niemand weiß mehr genau, ob das Teil des Projekts war.
 
-### 10. Was tust du, wenn plötzlich jemand fragt: „Was war eigentlich die ursprüngliche Aufgabe?“
+**10. Was tust du, wenn plötzlich jemand fragt: „Was war eigentlich die ursprüngliche Aufgabe?“**
 
 ☐ Du verweist auf die Projektdokumentation und schlägst vor, die relevante Stelle gemeinsam zu identifizieren.  
 ☐ Du erklärst, dass sich die ursprüngliche Aufgabenstellung im Laufe der Projektentwicklung weiterentwickelt hat.  

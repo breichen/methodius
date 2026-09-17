@@ -267,61 +267,61 @@ Und wenn jemand fragt, woran man ein Meisterwerk erkennt, hast du endlich eine k
 
 # BONUS: Der große Meisterwerke-am-Preisetikett-erkennen-Test
 
-### 1. Du siehst ein Bild für 250 Euro. Was denkst du?
+**1. Du siehst ein Bild für 250 Euro. Was denkst du?**
 
 ☐ „Interessant, aber vermutlich noch nicht ganz ausgereift.“
 ☐ „Da steckt Potenzial drin.“
 ☐ „Ich warte lieber, bis jemand den Preis erhöht.“
 
-### 2. Ein Bild kostet 80.000 Euro und du verstehst es nicht. Was bedeutet das?
+**2. Ein Bild kostet 80.000 Euro und du verstehst es nicht. Was bedeutet das?**
 
 ☐ Du brauchst mehr Zeit.
 ☐ Das Werk verlangt nach einer komplexeren Betrachtung.
 ☐ Du hast soeben erfolgreich erkannt, dass es anspruchsvoll ist.
 
-### 3. Was solltest du tun, wenn dir ein teures Bild sofort gefällt?
+**3. Was solltest du tun, wenn dir ein teures Bild sofort gefällt?**
 
 ☐ Misstrauisch werden und noch einmal hinschauen.
 ☐ Prüfen, ob der Preis wirklich stimmt.
 ☐ Einen ernsten Gesichtsausdruck annehmen, damit das Gefallen nach fundierter Erkenntnis aussieht.
 
-### 4. Jemand fragt dich: „Was findest du an diesem Bild gut?“
+**4. Jemand fragt dich: „Was findest du an diesem Bild gut?“**
 
 ☐ „Die Spannung.“
 ☐ „Die Zurückhaltung.“
 ☐ „Die Art, wie es sich einer eindeutigen Lesbarkeit entzieht.“
 
-### 5. Das Preisetikett fehlt. Wie reagierst du?
+**5. Das Preisetikett fehlt. Wie reagierst du?**
 
 ☐ Du wartest ab.
 ☐ Du formulierst keine endgültige Meinung.
 ☐ Du betrachtest das Werk so lange, bis jemand den Preis nennt.
 
-### 6. Ein Bild steigt innerhalb eines Jahres von 5.000 auf 25.000 Euro. Was ändert sich?
+**6. Ein Bild steigt innerhalb eines Jahres von 5.000 auf 25.000 Euro. Was ändert sich?**
 
 ☐ Deine Einschätzung wird differenzierter.
 ☐ Du erinnerst dich plötzlich an deine frühere Begeisterung.
 ☐ Du erwähnst beiläufig, dass du das Werk schon damals interessant fandest.
 
-### 7. Was sagst du zu einem Werk für 900.000 Euro?
+**7. Was sagst du zu einem Werk für 900.000 Euro?**
 
 ☐ „Das ist bemerkenswert.“
 ☐ „Hier wird es interessant.“
 ☐ Nichts. Du nickst und lässt den Preis für dich sprechen.
 
-### 8. Ein Freund sagt: „Das hätte ich auch malen können.“
+**8. Ein Freund sagt: „Das hätte ich auch malen können.“**
 
 ☐ Du erklärst ihm den Unterschied zwischen Machbarkeit und Bedeutung.
 ☐ Du fragst ihn, ob er auch bereit wäre, es für 50.000 Euro zu verkaufen.
 ☐ Du sagst: „Genau diese scheinbare Einfachheit ist Teil des Problems.“
 
-### 9. Woran erkennst du ein wirklich großes Meisterwerk?
+**9. Woran erkennst du ein wirklich großes Meisterwerk?**
 
 ☐ Daran, dass du dich plötzlich anders hinstellst.
 ☐ Daran, dass dein Schweigen länger wird.
 ☐ Daran, dass du nach dem Preisetikett noch einmal hinschaust.
 
-### 10. Was ist die wichtigste Erkenntnis dieses Ratgebers?
+**10. Was ist die wichtigste Erkenntnis dieses Ratgebers?**
 
 ☐ Der Preis erklärt nicht alles.
 ☐ Der Preis erklärt erstaunlich viel.

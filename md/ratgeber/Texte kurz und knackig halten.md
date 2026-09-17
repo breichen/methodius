@@ -211,52 +211,52 @@ Es ist einfach. Es ist praktisch. Und es lässt sich auf fast jeden Text anwende
 
 Beantworte die folgenden Fragen über diesen kurzen Text über das schreiben von kurzen Texten.
 
-### 1. Dein Text ist fertig. Was machst du?
+**1. Dein Text ist fertig. Was machst du?**
 
 ☐ Ich prüfe ihn noch einmal auf unnötige Wörter und schicke ihn dann ab.  
 ☐ Ich lese ihn kurz durch, streiche Überflüssiges und beende ihn anschließend.
 
-### 2. Dein erster Satz ist sehr lang.
+**2. Dein erster Satz ist sehr lang. Was machst du?**
 
 ☐ Ich prüfe, ob sich die Aussage einfacher formulieren lässt.  
 ☐ Ich teile ihn auf, wenn mehrere Gedanken enthalten sind.
 
-### 3. Du hast etwas bereits erklärt.
+**3. Du hast etwas bereits erklärt. Was machst du?**
 
 ☐ Ich wiederhole es nicht.  
 ☐ Ich lasse die Wiederholung weg.
 
-### 4. Eine wichtige Information fehlt.
+**4. Eine wichtige Information fehlt. Was machst du?**
 
 ☐ Ich ergänze sie, auch wenn der Text dadurch etwas länger wird.  
 ☐ Ich nehme sie auf, weil Vollständigkeit wichtiger ist als unnötige Kürze.
 
-### 5. Der Text ist vollständig und verständlich.
+**5. Der Text ist vollständig und verständlich. Was machst du?**
 
 ☐ Ich lasse ihn so.  
 ☐ Ich ändere nichts mehr und höre auf.
 
-### 6. Du möchtest „Kurz gesagt“ schreiben.
+**6. Du möchtest „Kurz gesagt“ schreiben. Was machst du?**
 
 ☐ Ich prüfe, ob ich direkt mit der Aussage beginnen kann.  
 ☐ Ich lasse die Einleitung weg, wenn sie nichts zusätzlich erklärt.
 
-### 7. Du bist beim letzten Satz angekommen.
+**7. Du bist beim letzten Satz angekommen. Was machst du?**
 
 ☐ Wenn nichts mehr fehlt, beende ich den Text.  
 ☐ Wenn alles gesagt ist, füge ich nichts Neues mehr hinzu.
 
-### 8. Eine Formulierung lässt sich kürzen.
+**8. Eine Formulierung lässt sich kürzen. Was machst du?**
 
 ☐ Ich ersetze sie durch die kürzere, gleichwertige Form.  
 ☐ Ich streiche die überflüssigen Wörter und behalte die eigentliche Aussage.
 
-### 9. Du hast einen kurzen Text geschrieben.
+**9. Du hast einen kurzen Text geschrieben. Was machst du?**
 
 ☐ Ich prüfe, ob er trotzdem alle nötigen Informationen enthält.  
 ☐ Ich stelle sicher, dass die Kürze nicht auf Kosten der Klarheit geht.
 
-### 10. Was ist die wichtigste Regel?
+**10. Was ist die wichtigste Regel?**
 
 ☐ Sag, was gesagt werden muss, und hör danach auf.  
 ☐ Schreib nur das, was nötig ist, und beende den Text, sobald nichts Wichtiges mehr fehlt.

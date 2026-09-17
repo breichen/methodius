@@ -327,52 +327,52 @@ Und falls sich keine finden lässt? Dann kannst du immer noch untersuchen, warum
 
 # BONUS: Der große Gesellschaftskritik-Test
 
-### 1. Eine Figur sitzt allein am Tisch. Was bedeutet das?
+**1. Eine Figur sitzt allein am Tisch. Was bedeutet das?**
 
 ☐ Die Figur könnte gesellschaftlich isoliert sein.  
 ☐ Der Tisch kann als Raum sozialer Zugehörigkeit interpretiert werden.
 
-### 2. Eine Figur hat kein Geld.
+**2. Eine Figur hat kein Geld.**
 
 ☐ Du untersuchst ihre gesellschaftliche Position.  
 ☐ Du fragst, welche Rolle Besitz und Zugang in ihrem Umfeld spielen.
 
-### 3. Im Buch gibt es eine Tür.
+**3. Im Buch gibt es eine Tür.**
 
 ☐ Du kannst sie als Grenze zwischen sozialen oder persönlichen Räumen lesen.  
 ☐ Du kannst untersuchen, wer hindurchgehen darf und was diese Grenze bedeutet.
 
-### 4. Eine Figur schweigt.
+**4. Eine Figur schweigt.**
 
 ☐ Du deutest das Schweigen als mögliche Reaktion auf gesellschaftliche Erwartungen.  
 ☐ Du untersuchst, ob das Schweigen etwas über Macht, Anpassung oder Ausschluss verrät.
 
-### 5. Der Roman spielt auf dem Land.
+**5. Der Roman spielt auf dem Land.**
 
 ☐ Du kannst nach Besitz, Arbeit und sozialer Ordnung fragen.  
 ☐ Du kannst untersuchen, welche gesellschaftlichen Beziehungen durch den ländlichen Raum sichtbar werden.
 
-### 6. Im Buch passiert scheinbar nichts.
+**6. Im Buch passiert scheinbar nichts.**
 
 ☐ Du untersuchst, ob das Warten oder der Stillstand gesellschaftlich gedeutet werden kann.  
 ☐ Du fragst, welche sozialen Bedingungen dazu führen, dass die Figuren nicht handeln.
 
-### 7. Eine Textstelle widerspricht deiner Interpretation.
+**7. Eine Textstelle widerspricht deiner Interpretation.**
 
 ☐ Du kannst daraus ein Spannungsverhältnis entwickeln.  
 ☐ Du kannst den Widerspruch als Hinweis auf die Komplexität der gesellschaftlichen Situation lesen.
 
-### 8. Du findest überhaupt keinen gesellschaftskritischen Bezug.
+**8. Du findest überhaupt keinen gesellschaftskritischen Bezug.**
 
 ☐ Du untersuchst, warum der Bezug scheinbar fehlt.  
 ☐ Du machst gerade diese Abwesenheit zum Gegenstand deiner Interpretation.
 
-### 9. Was ist die wichtigste Frage bei einer gesellschaftskritischen Interpretation?
+**9. Was ist die wichtigste Frage bei einer gesellschaftskritischen Interpretation?**
 
 ☐ Welche gesellschaftlichen Strukturen lassen sich im Text erkennen?  
 ☐ Welche Elemente des Textes lassen sich sinnvoll auf gesellschaftliche Strukturen beziehen?
 
-### 10. Du hast deine Interpretation abgeschlossen. Was fehlt noch?
+**10. Du hast deine Interpretation abgeschlossen. Was fehlt noch?**
 
 ☐ Eine vorsichtige Formulierung, die deutlich macht, dass es sich um eine Lesart handelt.  
 ☐ Ein Hinweis darauf, dass die gesellschaftliche Bedeutung aus dem Text heraus begründet werden sollte.

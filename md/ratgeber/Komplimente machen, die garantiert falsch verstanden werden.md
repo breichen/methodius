@@ -299,61 +299,61 @@ Wenn jemand drei Stunden später noch über deinen Satz nachdenkt, war er erfolg
 
 # BONUS: Der große Komplimente-Test
 
-### 1. Jemand hat heute eine besonders gute Frisur. Was sagst du?
+**1. Jemand hat heute eine besonders gute Frisur. Was sagst du?**
 
 ☐ „Die Frisur steht dir wirklich gut.“  
 ☐ „Interessant, was eine gute Frisur alles verändern kann.“  
 ☐ „Heute verstehe ich endlich, warum Menschen zum Friseur gehen.“
 
-### 2. Du möchtest jemandem sagen, dass er sehr sympathisch ist. Welche Formulierung eignet sich?
+**2. Du möchtest jemandem sagen, dass er sehr sympathisch ist. Welche Formulierung eignet sich?**
 
 ☐ „Du bist wirklich sympathisch.“  
 ☐ „Du bist viel sympathischer, als ich erwartet hatte.“  
 ☐ „Ich mag dich inzwischen erstaunlich gern.“
 
-### 3. Jemand trägt ein ungewöhnliches Outfit. Wie reagierst du?
+**3. Jemand trägt ein ungewöhnliches Outfit. Wie reagierst du?**
 
 ☐ Du lobst den Mut.  
 ☐ Du erklärst, dass du selbst überrascht bist, wie gut es funktioniert.  
 ☐ Du sagst, dass du es an niemand anderem sehen möchtest.
 
-### 4. Eine Person wirkt heute besonders gut gelaunt. Was ist dein nächster Schritt?
+**4. Eine Person wirkt heute besonders gut gelaunt. Was ist dein nächster Schritt?**
 
 ☐ Du lobst ihre gute Laune.  
 ☐ Du fragst, ob es einen besonderen Grund dafür gibt.  
 ☐ Du bemerkst, dass sie heute „ungewöhnlich positiv“ wirkt.
 
-### 5. Wie lobst du jemanden für seine Intelligenz?
+**5. Wie lobst du jemanden für seine Intelligenz?**
 
 ☐ „Du denkst wirklich schnell.“  
 ☐ „Du bist schlauer, als man zunächst vermutet.“  
 ☐ „Ich hätte nicht erwartet, dass du das so schnell verstehst.“
 
-### 6. Jemand hält eine Präsentation. Was sagst du danach?
+**6. Jemand hält eine Präsentation. Was sagst du danach?**
 
 ☐ „Das war überraschend professionell.“  
 ☐ „Du hast erstaunlich souverän gewirkt.“  
 ☐ „Ich glaube, du hast gerade verhindert, dass es unangenehm wird.“
 
-### 7. Du möchtest die Kleidung einer Person loben, ohne dich festzulegen.
+**7. Du möchtest die Kleidung einer Person loben, ohne dich festzulegen.**
 
 ☐ „Das ist ein interessantes Outfit.“  
 ☐ „Das würde nicht jeder tragen, aber bei dir funktioniert es.“  
 ☐ „Du hast wirklich deinen eigenen Stil.“
 
-### 8. Jemand fragt dich direkt: „War das gerade ein Kompliment?“
+**8. Jemand fragt dich direkt: „War das gerade ein Kompliment?“**
 
 ☐ Du sagst: „Natürlich.“  
 ☐ Du sagst: „Das kommt darauf an, wie du es verstanden hast.“  
 ☐ Du lächelst und wechselst das Thema.
 
-### 9. Du möchtest ein besonders nachhaltiges Kompliment machen. Was ist entscheidend?
+**9. Du möchtest ein besonders nachhaltiges Kompliment machen. Was ist entscheidend?**
 
 ☐ Es sollte positiv sein, aber eine kleine Frage offenlassen.  
 ☐ Es sollte so formuliert sein, dass der Empfänger später noch darüber nachdenkt.  
 ☐ Es sollte möglichst viele Informationen über deine ursprüngliche Einschätzung der Person enthalten.
 
-### 10. Was ist die höchste Stufe der Komplimentkunst?
+**10. Was ist die höchste Stufe der Komplimentkunst?**
 
 ☐ Jemand freut sich.  
 ☐ Jemand bedankt sich und fragt anschließend nach.  

@@ -307,61 +307,61 @@ Und offene Fragen haben die unangenehme Eigenschaft, dass Menschen sie selbst be
 
 # BONUS: Der große **„Bleibender Schaden“-Test**
 
-### 1. Wie betrittst du einen Raum, in dem du niemanden kennst?
+**1. Wie betrittst du einen Raum, in dem du niemanden kennst?**
 
 ☐ Mit freundlicher Selbstsicherheit.  
 ☐ Mit einem kurzen Blick, der erkennen lässt, dass du möglicherweise jemanden erwartest.  
 ☐ Mit der Haltung eines Menschen, der genau weiß, was er tut, aber nicht verrät, was.
 
-### 2. Jemand fragt dich: „Was machst du beruflich?“
+**2. Jemand fragt dich: „Was machst du beruflich?“**
 
 ☐ Du antwortest normal und ergänzt eine völlig unerwartete Nebensache.  
 ☐ Du gibst eine präzise Antwort und lässt bewusst einen merkwürdigen Zusammenhang offen.  
 ☐ Du beantwortest die Frage so, dass mindestens eine weitere Frage entstehen muss.
 
-### 3. Was ist ein besonders gutes Kompliment?
+**3. Was ist ein besonders gutes Kompliment?**
 
 ☐ „Du wirkst heute erstaunlich entspannt.“  
 ☐ „Ich hätte dich anders eingeschätzt.“  
 ☐ „Du bist viel interessanter, als ich erwartet hatte.“
 
-### 4. Dein Gesprächspartner erzählt etwas über sich. Was tust du?
+**4. Dein Gesprächspartner erzählt etwas über sich. Was tust du?**
 
 ☐ Du stellst eine überraschend persönliche Frage.  
 ☐ Du erkennst darin ein psychologisches Muster, das du nicht näher erklärst.  
 ☐ Du fragst freundlich nach und sorgst anschließend dafür, dass die Frage den ganzen Abend im Raum bleibt.
 
-### 5. Du hast jemanden versehentlich mit dem falschen Namen angesprochen. Wie reagierst du?
+**5. Du hast jemanden versehentlich mit dem falschen Namen angesprochen. Wie reagierst du?**
 
 ☐ Du korrigierst dich sofort und machst einfach weiter.  
 ☐ Du korrigierst dich und kommentierst kurz, wie überzeugend der Fehler war.  
 ☐ Du akzeptierst innerlich, dass dieser Name jetzt Teil eurer gemeinsamen Geschichte ist.
 
-### 6. Was lässt einen ersten Eindruck besonders lange wirken?
+**6. Was lässt einen ersten Eindruck besonders lange wirken?**
 
 ☐ Ein interessantes Gespräch.  
 ☐ Eine kleine ungeklärte Irritation.  
 ☐ Eine Information, die niemand richtig einordnen kann.
 
-### 7. Wann solltest du dich verabschieden?
+**7. Wann solltest du dich verabschieden?**
 
 ☐ Wenn das Gespräch seinen natürlichen Höhepunkt erreicht hat.  
 ☐ Kurz bevor dein Gegenüber mit dir fertig ist.  
 ☐ In dem Moment, in dem du bemerkst, dass bereits ein leichtes Fragezeichen entstanden ist.
 
-### 8. Jemand sagt: „Du bist schon ein bisschen eigenartig.“
+**8. Jemand sagt: „Du bist schon ein bisschen eigenartig.“**
 
 ☐ Du widersprichst höflich.  
 ☐ Du lächelst und sagst, dass du dich daran gewöhnt hast.  
 ☐ Du fragst: „In welche Richtung?“
 
-### 9. Was ist das beste Zeichen dafür, dass dein erster Eindruck erfolgreich war?
+**9. Was ist das beste Zeichen dafür, dass dein erster Eindruck erfolgreich war?**
 
 ☐ Man erinnert sich an deinen Namen.  
 ☐ Man erzählt anderen von dir.  
 ☐ Man kann nicht genau erklären, warum man anderen von dir erzählt.
 
-### 10. Was ist dein eigentliches Ziel?
+**10. Was ist dein eigentliches Ziel?**
 
 ☐ Einen guten Eindruck hinterlassen.  
 ☐ Einen interessanten Eindruck hinterlassen.  
