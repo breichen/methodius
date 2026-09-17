@@ -606,9 +606,6 @@ def make_html(
   }}
 
   strong {{ color: var(--color-accent); }}
-  blockquote strong {{
-    color: inherit;
-  }}
   em {{ font-style: italic; }}
 
   a {{
@@ -619,16 +616,27 @@ def make_html(
   blockquote {{
     position: relative;
     margin: 20px 0;
-    padding: 0 0 0 16px;
-    background: transparent;
-    border-left: 2px solid var(--color-accent);
+    padding: 12px 18px;
+    background: rgba(181, 41, 44, 0.045);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 3px 3px 0;
     color: var(--color-text);
     font-family: var(--font-display);
-    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.92rem;
     line-height: 1.5;
-    font-weight: 500;
     break-inside: avoid;
     page-break-inside: avoid;
+  }}
+
+  blockquote p {{
+    margin: 0;
+  }}
+
+  blockquote strong {{
+    color: inherit;
+    font-style: italic;
   }}
 
   ul, ol {{
