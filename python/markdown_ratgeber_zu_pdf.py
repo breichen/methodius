@@ -349,6 +349,49 @@ def style_author_mentions(html_text: str, site_root: Path, image_rel: str, signa
     return str(soup)
 
 
+def wrap_first_page(html_text: str) -> str:
+    """
+    Schiebt den Inhalt der ersten Seite, der auf die h1 folgt (Untertitel/h2,
+    Autoreneinleitung, Autorenbox), an den unteren Rand der ersten Seite.
+
+    Dazu wird die h1 zusammen mit allem bis zum ersten Element mit der
+    Klasse 'chapter-start' (siehe normalise_headings) in einen Flexbox-
+    Wrapper gepackt. Die h1 bleibt oben; auf das direkt folgende Element
+    wird per CSS 'margin-top: auto' gesetzt, wodurch es zusammen mit allem
+    Nachfolgenden an das untere Ende der ersten Seite rutscht.
+    """
+    bs4 = __import__("bs4")
+    soup = bs4.BeautifulSoup(html_text, "html.parser")
+    top = soup.body if soup.body else soup
+    blocks = [x for x in top.find_all(recursive=False) if getattr(x, "name", None)]
+
+    if not blocks or blocks[0].name != "h1":
+        return str(soup)
+
+    # Erstes Element mit "chapter-start" markiert das Ende von Seite 1.
+    split_index = len(blocks)
+    for i, b in enumerate(blocks):
+        if i == 0:
+            continue
+        classes = b.get("class", []) or []
+        if "chapter-start" in classes:
+            split_index = i
+            break
+
+    if split_index <= 1:
+        # Nach der h1 gibt es nichts (mehr), was verschoben werden könnte.
+        return str(soup)
+
+    page1_blocks = blocks[:split_index]
+
+    wrapper = soup.new_tag("div", attrs={"class": "page1-fill"})
+    page1_blocks[0].insert_before(wrapper)
+    for b in page1_blocks:
+        wrapper.append(b.extract())
+
+    return str(soup)
+
+
 def make_html(
     content_html: str,
     image_uri: str,
@@ -632,6 +675,18 @@ def make_html(
     break-before: page;
     page-break-before: always;
   }}
+
+  /* Erste Seite: h1 bleibt oben, der Rest (Untertitel/h2, Autorenbox)
+     wird an den unteren Rand der Seite gedrückt. */
+  .page1-fill {{
+    display: flex;
+    flex-direction: column;
+    min-height: calc({page_height} - 3 * {content_margin});
+  }}
+
+  .page1-fill > *:nth-child(2) {{
+    margin-top: auto;
+  }}
 </style>
 
 <!-- Dieselben Schriftfamilien wie auf der Website; Offline-Fallbacks bleiben aktiv. -->
@@ -745,6 +800,7 @@ def main() -> int:
                 signature=SIGNATURE,
                 author_name=AUTHOR_NAME,
             )
+            html_text = wrap_first_page(html_text)
 
             temp_html = output.with_suffix(".pdf_work.html")
             temp_html.write_text(
