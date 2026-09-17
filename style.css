@@ -478,7 +478,7 @@ h3 {
 .buch-datum {
   margin: 0 0 6px 0;
 
-  color: var(--color-text-muted);
+  color: var(--color-muted);
 
   font-family: var(--font-body);
 
@@ -728,7 +728,7 @@ hr {
 
   line-height: 1.45;
 
-  color: var(--color-text-muted);
+  color: var(--color-muted);
 
   font-style: italic;
 
@@ -1227,7 +1227,7 @@ hr {
 
 .showcase-arrow:disabled {
 
-  color: var(--color-text-muted);
+  color: var(--color-muted);
 
   cursor: default;
 
@@ -1595,7 +1595,7 @@ hr {
   bottom: 18px;
   right: 20px;
 
-  color: var(--color-text-muted);
+  color: var(--color-muted);
 
   font-family: Georgia, "Times New Roman", serif;
 
@@ -2004,7 +2004,7 @@ hr {
   font-size: .88rem;
   line-height: 1.55;
 
-  color: var(--color-text-muted);
+  color: var(--color-muted);
 }
 
 .problem-label {
@@ -2032,7 +2032,7 @@ hr {
 .problem-einsender {
   margin-top: 14px;
 
-  color: var(--color-text-muted);
+  color: var(--color-muted);
 
   font-size: .8rem;
 }
@@ -2291,7 +2291,7 @@ hr {
 }
 
 .kommentar-username {
-  color: var(--color-text-muted);
+  color: var(--color-muted);
   font-size: 0.82rem;
 }
 
@@ -2418,7 +2418,7 @@ hr {
 .news-meta {
   margin-bottom: 10px;
 
-  color: var(--color-text-muted);
+  color: var(--color-muted);
 
   font-family: "Inter", sans-serif;
 
@@ -2627,7 +2627,7 @@ hr {
 
 .institut-veroeffentlichung-datum {
   margin: 0 0 8px;
-  color: var(--color-text-muted);
+  color: var(--color-muted);
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
@@ -2650,7 +2650,7 @@ hr {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-muted);
 }
 
 .institut-veroeffentlichung h3::before {
