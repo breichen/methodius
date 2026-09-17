@@ -1,0 +1,3 @@
+Dr. Maximilian Methodius und Dr. Konrad P. Huber haben das Paper *Eine empirische Untersuchung des Zusammenhangs zwischen Selbstoptimierung und dem Wunsch, damit aufzuhören* veröffentlicht.
+
+Die Arbeit untersucht den möglichen Zusammenhang zwischen zunehmender Selbstoptimierung und dem Bedürfnis, diese zu beenden. Dabei wird insbesondere betrachtet, ob Optimierung irgendwann selbst zum Optimierungsproblem wird.

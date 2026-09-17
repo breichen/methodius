@@ -1,0 +1,3 @@
+Dr. Maximilian Methodius und Dr. Konrad P. Huber haben das Paper *Eine Untersuchung der Frage, warum gute Vorsätze bevorzugt am Montag beginnen* veröffentlicht.
+
+Die Arbeit untersucht zeitliche Muster bei der Formulierung guter Vorsätze und die besondere Bedeutung des Montags. Dabei wird auch betrachtet, ob der Montag als Beginntermin insbesondere deshalb beliebt ist, weil er einen weiteren Montag ermöglicht.

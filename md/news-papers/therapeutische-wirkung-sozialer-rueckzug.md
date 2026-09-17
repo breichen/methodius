@@ -1,0 +1,3 @@
+Prof. Dr. Hildegard Wankelmuth und Dr. Maximilian Methodius haben das Paper *Über die therapeutische Wirkung des kontrollierten sozialen Rückzugs* veröffentlicht.
+
+Untersucht wird der Rückzug aus sozialen Situationen als mögliche Methode zur kurzfristigen Steigerung des persönlichen Wohlbefindens. Die Ergebnisse liefern damit einen weiteren Beitrag zur wissenschaftlichen Neubewertung des Nicht-Erscheinens.

@@ -1,0 +1,3 @@
+Ein neues Paper von Dr. Maximilian Methodius und Prof. Dr. Hildegard Wankelmuth mit dem Titel *Warum Menschen Ratschläge suchen, obwohl sie bereits wissen, was sie tun werden* ist erschienen.
+
+Untersucht werden die psychologischen und sozialen Funktionen erbetener, anschließend jedoch ignorierter Ratschläge. Die Arbeit widmet sich damit einem verbreiteten, bislang unterschätzten Bereich menschlicher Entscheidungsfindung.

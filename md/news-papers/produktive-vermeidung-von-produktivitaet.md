@@ -1,0 +1,3 @@
+Ein neues Paper von Dr. Maximilian Methodius und Dr. Konrad P. Huber mit dem Titel *Die produktive Vermeidung von Produktivität: Eine empirische Untersuchung des bewussten Nichtstuns* ist erschienen.
+
+Untersucht wird, unter welchen Bedingungen bewusstes Nichtstun als effiziente Form des Zeitmanagements betrachtet werden kann. Besonderes Augenmerk liegt dabei auf der Frage, wie sich Untätigkeit durch geeignete Messgrößen produktiv darstellen lässt.

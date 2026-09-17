@@ -1,0 +1,3 @@
+Ein neues Paper von Dr. Maximilian Methodius und Prof. Dr. Hildegard Wankelmuth mit dem Titel *Vorläufige Ergebnisse zur kontrollierten Überinterpretation gewöhnlicher Verhaltensweisen* ist erschienen.
+
+Die Arbeit präsentiert erste Forschungsergebnisse zur systematischen Bedeutungsüberhöhung alltäglicher Handlungen. Zudem werden mögliche Anwendungen des Ansatzes in der modernen Lebensberatung diskutiert.
