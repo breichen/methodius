@@ -198,7 +198,25 @@ def normalise_headings(html_text: str, new_page_per_chapter: bool) -> str:
                     nxt.name = "h1"
                 h.decompose()
     
+    # Der Untertitel auf Seite 1 ist immer das erste h2 im Dokument. Er ist
+    # inhaltlich kein Kapitel und braucht daher weder den h2-Kapitelstrich
+    # noch eine :first-of-type-Sonderbehandlung dafür. Statt ihn als h2 zu
+    # belassen (was :first-of-type in der Folge fälschlich auf das nächste
+    # "echte" h2 verschiebt, sobald wrap_first_page ihn in einen eigenen
+    # Wrapper verpackt), bekommt er ein eigenes, nicht-heading Element.
+    h2s = soup.find_all("h2")
+    if h2s:
+        subtitle = h2s[0]
+        subtitle.name = "p"
+        classes = subtitle.get("class", []) or []
+        classes.append("seite1-untertitel")
+        subtitle["class"] = classes
+
     if new_page_per_chapter:
+        # Ab jetzt ist h2s[0] die erste echte Kapitelüberschrift (der
+        # Untertitel wurde oben aus der h2-Liste entfernt); sie bekommt ihren
+        # Seitenumbruch bereits über die anschließende, unbedingte Markierung
+        # weiter unten, deshalb hier bei h2s[1:] weitermachen.
         h2s = soup.find_all("h2")
 
         for heading in h2s[1:]:
@@ -206,17 +224,18 @@ def normalise_headings(html_text: str, new_page_per_chapter: bool) -> str:
             classes.append("chapter-start")
             heading["class"] = classes
 
-    # Das zweite h2 insgesamt markiert immer das Ende von Seite 1
-    # (unabhängig von --new-page-per-chapter, siehe wrap_first_page).
+    # Die erste echte Kapitelüberschrift (jetzt h2s[0], da der Untertitel
+    # kein h2 mehr ist) markiert immer das Ende von Seite 1 (unabhängig von
+    # --new-page-per-chapter, siehe wrap_first_page).
     h2s = soup.find_all("h2")
 
-    if len(h2s) > 1:
-        classes = h2s[1].get("class", [])
+    if h2s:
+        classes = h2s[0].get("class", [])
 
         if "chapter-start" not in classes:
             classes.append("chapter-start")
 
-        h2s[1]["class"] = classes
+        h2s[0]["class"] = classes
 
     return str(soup)
 
@@ -575,12 +594,17 @@ def make_html(
     background: var(--color-accent);
   }}
 
-  h2:first-of-type {{
-    border-bottom: none;
-  }}
-
-  h2:first-of-type::after {{
-    display: none;
+  /* Untertitel auf Seite 1: optisch wie h2, aber ohne Kapitelstrich und
+     ohne an der h2-Kapitellogik teilzunehmen (siehe normalise_headings). */
+  .seite1-untertitel {{
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin: 9mm 0 7mm;
   }}
 
   h2 + p,
