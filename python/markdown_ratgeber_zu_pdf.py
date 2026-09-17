@@ -205,17 +205,18 @@ def normalise_headings(html_text: str, new_page_per_chapter: bool) -> str:
             classes = heading.get("class", [])
             classes.append("chapter-start")
             heading["class"] = classes
-    
-    # zweites h2 immer auf neue Seite
+
+    # Das zweite h2 insgesamt markiert immer das Ende von Seite 1
+    # (unabhängig von --new-page-per-chapter, siehe wrap_first_page).
     h2s = soup.find_all("h2")
 
-    for h2 in h2s[1:]:
-        classes = h2.get("class", [])
+    if len(h2s) > 1:
+        classes = h2s[1].get("class", [])
 
         if "chapter-start" not in classes:
             classes.append("chapter-start")
 
-        h2["class"] = classes
+        h2s[1]["class"] = classes
 
     return str(soup)
 
@@ -384,11 +385,30 @@ def wrap_quiz_boxes(html_text: str) -> str:
                         classes.append("quiz-question")
                     b["class"] = classes
 
-                quiz_blocks = blocks[i:end + 1]
+                # Jede Frage mit ihren Antworten zu einer Gruppe zusammenfassen,
+                # damit eine einzelne Frage nicht mitten im Seitenumbruch
+                # auseinandergerissen wird (die Box als Ganzes darf trotzdem
+                # über mehrere Seiten gehen).
+                groups: list[list] = []
+                current: list = []
+                for k in range(i + 1, end + 1):
+                    b = blocks[k]
+                    if "quiz-question" in (b.get("class") or []) and current:
+                        groups.append(current)
+                        current = []
+                    current.append(b)
+                if current:
+                    groups.append(current)
+
+                heading = blocks[i]
                 wrapper = soup.new_tag("div", attrs={"class": "quiz-box"})
-                quiz_blocks[0].insert_before(wrapper)
-                for b in quiz_blocks:
-                    wrapper.append(b.extract())
+                heading.insert_before(wrapper)
+                wrapper.append(heading.extract())
+                for group in groups:
+                    item = soup.new_tag("div", attrs={"class": "quiz-item"})
+                    for b in group:
+                        item.append(b.extract())
+                    wrapper.append(item)
 
                 blocks = [x for x in top.find_all(recursive=False) if getattr(x, "name", None)]
                 i = blocks.index(wrapper) + 1
@@ -746,8 +766,8 @@ def make_html(
     border-left: 4px solid var(--color-accent);
     border-radius: 3px;
     background: #FBF8F1;
-    break-inside: avoid;
-    page-break-inside: avoid;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }}
 
   .quiz-box > *:first-child {{ margin-top: 0; }}
@@ -762,6 +782,11 @@ def make_html(
   .quiz-box h1::before,
   .quiz-box h1::after {{
     display: none;
+  }}
+
+  .quiz-item {{
+    break-inside: avoid;
+    page-break-inside: avoid;
   }}
 
   .quiz-box p.quiz-question {{
