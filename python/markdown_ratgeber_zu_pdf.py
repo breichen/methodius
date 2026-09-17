@@ -683,7 +683,7 @@ def make_html(
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 48px 0 16px;
+    margin: 12px 0 0px;
     padding-left: 18px;
     border-left: 3px solid var(--color-accent);
     break-inside: avoid;
@@ -761,7 +761,11 @@ def make_html(
   .page1-fill {{
     display: flex;
     flex-direction: column;
-    min-height: calc({page_height} - 3 * {content_margin});
+    /* Volle nutzbare Höhe der ersten Seite: Seitenhöhe minus oberem
+       @page-Rand (content_margin) und unterem @page-Rand (bottom_margin).
+       So rutscht der Inhalt wirklich bis zum unteren Seitenrand, statt
+       vorher stehen zu bleiben. */
+    min-height: calc({page_height} - {content_margin} - {bottom_margin});
   }}
 
   .page1-fill > *:nth-child(2) {{
