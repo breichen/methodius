@@ -349,6 +349,55 @@ def style_author_mentions(html_text: str, site_root: Path, image_rel: str, signa
     return str(soup)
 
 
+def wrap_quiz_boxes(html_text: str) -> str:
+    """
+    Grenzt den BONUS-Quiz optisch mit einer Box ab: von der Überschrift, die
+    mit 'BONUS:' beginnt, bis zur letzten Antwortzeile mit Checkbox-Symbol
+    (☐). Absätze danach (z.B. Auflösung/Schlusswort des Kapitels) gehören
+    laut Markdown nicht mehr zum Quiz und bleiben außerhalb der Box.
+    """
+    bs4 = __import__("bs4")
+    soup = bs4.BeautifulSoup(html_text, "html.parser")
+    top = soup.body if soup.body else soup
+    blocks = [x for x in top.find_all(recursive=False) if getattr(x, "name", None)]
+
+    i = 0
+    while i < len(blocks):
+        block = blocks[i]
+        if block.name in ("h1", "h2", "h3") and block.get_text(" ", strip=True).upper().startswith("BONUS:"):
+            # Letzten Block mit Checkbox-Symbol innerhalb desselben Abschnitts suchen.
+            end = i
+            j = i + 1
+            while j < len(blocks) and blocks[j].name not in ("h1", "h2", "h3"):
+                if "☐" in blocks[j].get_text():
+                    end = j
+                j += 1
+
+            if end > i:
+                # Fragen/Antworten innerhalb der Box zusätzlich klassifizieren.
+                for k in range(i + 1, end + 1):
+                    b = blocks[k]
+                    classes = b.get("class", []) or []
+                    if "☐" in b.get_text():
+                        classes.append("quiz-options")
+                    elif b.name == "p":
+                        classes.append("quiz-question")
+                    b["class"] = classes
+
+                quiz_blocks = blocks[i:end + 1]
+                wrapper = soup.new_tag("div", attrs={"class": "quiz-box"})
+                quiz_blocks[0].insert_before(wrapper)
+                for b in quiz_blocks:
+                    wrapper.append(b.extract())
+
+                blocks = [x for x in top.find_all(recursive=False) if getattr(x, "name", None)]
+                i = blocks.index(wrapper) + 1
+                continue
+        i += 1
+
+    return str(soup)
+
+
 def wrap_first_page(html_text: str) -> str:
     """
     Schiebt den Inhalt der ersten Seite, der auf die h1 folgt (Untertitel/h2,
@@ -687,6 +736,46 @@ def make_html(
   .page1-fill > *:nth-child(2) {{
     margin-top: auto;
   }}
+
+  /* BONUS-Quiz optisch abgrenzen: von der Überschrift bis zur letzten
+     Antwortzeile, alles danach bleibt außerhalb der Box. */
+  .quiz-box {{
+    margin: 28px 0;
+    padding: 18px 22px 22px;
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 3px;
+    background: #FBF8F1;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }}
+
+  .quiz-box > *:first-child {{ margin-top: 0; }}
+  .quiz-box > *:last-child {{ margin-bottom: 0; }}
+
+  .quiz-box h1,
+  .quiz-box h2,
+  .quiz-box h3 {{
+    margin-top: 0;
+  }}
+
+  .quiz-box h1::before,
+  .quiz-box h1::after {{
+    display: none;
+  }}
+
+  .quiz-box p.quiz-question {{
+    margin: 16px 0 6px;
+  }}
+
+  .quiz-box p.quiz-question:first-of-type {{
+    margin-top: 4px;
+  }}
+
+  .quiz-box p.quiz-options {{
+    margin: 0 0 4px;
+    color: var(--color-muted);
+  }}
 </style>
 
 <!-- Dieselben Schriftfamilien wie auf der Website; Offline-Fallbacks bleiben aktiv. -->
@@ -801,6 +890,7 @@ def main() -> int:
                 author_name=AUTHOR_NAME,
             )
             html_text = wrap_first_page(html_text)
+            html_text = wrap_quiz_boxes(html_text)
 
             temp_html = output.with_suffix(".pdf_work.html")
             temp_html.write_text(
