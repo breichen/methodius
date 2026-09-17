@@ -21,189 +21,6 @@ const NewsKategorie = Object.freeze({
 const newsListe = [
 
 
-  // PAPERS
-
-  {
-    datei: "neues-paper-problem-tatsaechlich-geloest.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2028-08-22",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-produktive-vermeidung-von-produktivitaet.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2028-07-07",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-wiss-fundierte-gruende.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2028-05-19",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-wobei-longitudinale-untersuchung.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2028-03-03",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-statistische-bedeutung-des-satzes.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2028-01-14",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-therapeutische-wirkung-sozialer-rueckzug.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2027-11-28",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-gute-vorsaetze-bevorzugt.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2027-09-09",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-ueberinterpretation-alltaeglicher-muedigkeit.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2027-07-21",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-
-  {
-    datei: "neues-paper-die-rolle-unbequemer-einwaende.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2027-05-02",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-  {
-    datei: "neues-paper-warum-menschen-ratschlaege-suchen.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2027-02-16",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-empirische-untersuchung-zus-selbstoptimierung.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-12-08",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-vorlaeufige-erkenntnisse-kontr-ueberinterpretation.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-10-17",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-ratgeber-als-wissenschaftliches-Instrument.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-08-28",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-grenzen-der-wiss-ueberinterpretation.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-08-17",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-korrelation-kausalitaet.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-08-03",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-muskelabbau.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-07-09",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-ueberinterpretation.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-06-21",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-empirische-plausibilitaet-unvollstaendige-datenlage.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-06-02",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-kontrollierte-fehlberatung.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-05-18",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-  {
-    datei: "neues-paper-gegenstromorientierte-lebenswissenschaft.md",
-    titel: "Neues Paper veröffentlicht",
-    datum: "2026-05-04",
-    link: "veroeffentlichungen.html",
-    linkText: "Zu den Veröffentlichungen",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-
   // RATGEBER
 
   {
@@ -365,3 +182,41 @@ const newsListe = [
   },
 
 ];
+
+
+
+
+function erzeugePaperNews(veroeffentlichungen) {
+  return veroeffentlichungen.map(paper => ({
+    datei: `../news-papers/${paper.datei}`,
+    titel: `Neues Paper: ${paper.titel}`,
+    datum: paper.datum,
+    link: "veroeffentlichungen.html",
+    linkText: "Zur Veröffentlichung",
+    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
+  }));
+}
+
+async function ladeAlleNews() {
+
+  const response =
+    await fetch("data/veroeffentlichungen.json");
+
+  if (!response.ok) {
+    throw new Error(
+      "Veröffentlichungsdatei nicht gefunden"
+    );
+  }
+
+  const veroeffentlichungen =
+    await response.json();
+
+  const paperNews =
+    erzeugePaperNews(veroeffentlichungen);
+
+  return [
+    ...newsListe,
+    ...paperNews
+  ];
+
+}

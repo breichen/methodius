@@ -77,7 +77,7 @@ newsContainer.addEventListener("click", event => {
 });
 
 
-function ladeNews() {
+async function ladeNews() {
 
   /*
     Nur Beiträge anzeigen, die ein "datum" haben UND dessen Datum
@@ -98,7 +98,8 @@ function ladeNews() {
     typeof NEWS_SEITE_KATEGORIE !== "undefined" &&
     NEWS_SEITE_KATEGORIE !== null;
 
-  const sichtbareNews = (newsListe || []).filter(
+  const alleNews = await ladeAlleNews();
+  const sichtbareNews = alleNews.filter(
     beitrag =>
       beitrag.datum &&
       istDatumErreicht(beitrag.datum) &&

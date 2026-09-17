@@ -1,3 +1,0 @@
-Ein neues Paper von Prof. Dr. Hildegard Wankelmuth mit dem Titel *Zur Überinterpretation alltäglicher Müdigkeit als Zeichen persönlicher Entwicklung* ist erschienen.
-
-Darin wird ein Deutungsmodell für die wissenschaftliche Interpretation gewöhnlicher Erschöpfungszustände entwickelt. Müdigkeit wird dabei unter anderem als möglicher Hinweis auf tiefgreifende persönliche Veränderungsprozesse betrachtet.
