@@ -53,13 +53,13 @@ function ladeAlleVeroeffentlichungen() {
                 ${formatiereDatumDeutsch(veroeffentlichung.datum)}
               </p>
 
-              <h3>
-                ${veroeffentlichung.titel}
-              </h3>
-
               <p class="institut-veroeffentlichung-autoren">
                 ${veroeffentlichung.autoren.join(", ")}
               </p>
+
+              <h3>
+                ${veroeffentlichung.titel}
+              </h3>
 
               ${
                 veroeffentlichung.journal
