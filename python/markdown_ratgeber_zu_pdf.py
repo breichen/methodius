@@ -575,6 +575,14 @@ def make_html(
     background: var(--color-accent);
   }}
 
+  h2:first-of-type {{
+    border-bottom: none;
+  }}
+
+  h2:first-of-type::after {{
+    display: none;
+  }}
+
   h2 + p,
   h2 + ul,
   h2 + ol,
@@ -598,6 +606,9 @@ def make_html(
   }}
 
   strong {{ color: var(--color-accent); }}
+  blockquote strong {{
+    color: inherit;
+  }}
   em {{ font-style: italic; }}
 
   a {{
