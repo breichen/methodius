@@ -231,7 +231,7 @@ dieser Text steht direkt nach dem Quiz, ohne eigene Überschrift.
 
 **Dr. Maximilian Methodius**
 
-_Autor, Satiriker und ausgewiesener Experte für [passende absurde Eigenschaft zum Thema]._
+*Autor, Satiriker und ausgewiesener Experte für [passende absurde Eigenschaft zum Thema].*
 
 ## Stilregeln zum Schluss
 

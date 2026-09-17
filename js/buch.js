@@ -323,6 +323,7 @@ const AUTOR_SIGNATUR_TEXT = "Maximilian Methodius";
 // dieselbe Namenszeile im LETZTEN Kapitel und setzt eine erfundene,
 // handschriftliche Unterschrift direkt darüber.
 function styleAutorErwaehnung(bloecke) {
+
   const NAME_REGEX = /<strong>Dr\. Maximilian Methodius<\/strong>/;
 
   const kapitelStarts = bloecke.reduce((acc, block, i) => {
@@ -357,17 +358,19 @@ function styleAutorErwaehnung(bloecke) {
      ========================================== */
 
   if (signaturIndex !== undefined) {
+
     const letzterBlockIndex = ergebnis.length - 1;
 
     const autorBeschreibung =
       ergebnis[letzterBlockIndex]
-        .replace(/^<p>/, "")
+        .replace(/^\<p>/, "")
         .replace(/<\/p>$/, "")
-        .replace(/^<em>/, "")
-        .replace(/<\/em>$/, "");
+        .replace(/^\<em>/, "")
+        .replace(/<\/em>$/, "")
+        .replace(/Autor, Satiriker/g, "Forscher, Autor");
 
     const autorName = ergebnis[signaturIndex]
-      .replace(/^<p>|<\/p>$/g, "");
+      .replace(/^\<p>|<\/p>$/g, "");
 
     ergebnis[signaturIndex] = `
       <div class="autor-abschluss">
@@ -390,6 +393,7 @@ function styleAutorErwaehnung(bloecke) {
     vorstellungIndex !== undefined &&
     vorstellungIndex !== signaturIndex
   ) {
+
     const einleitungsBloecke = ergebnis.slice(
       ersterKapitelStart + 1,
       vorstellungIndex
@@ -400,7 +404,7 @@ function styleAutorErwaehnung(bloecke) {
       : "";
 
     const nameOhneTags = ergebnis[vorstellungIndex]
-      .replace(/^<p>|<\/p>$/g, "");
+      .replace(/^\<p>|<\/p>$/g, "");
 
     const nameBox = `
       <div class="autor-box">
@@ -435,6 +439,7 @@ function styleAutorErwaehnung(bloecke) {
 
   return ergebnis;
 }
+
 
 // Vereinheitlicht alle Kapitelüberschriften auf H2 - unabhängig davon,
 // ob ein Kapitel mit einer generischen "Kapitel ..."/"Schlusswort"-
