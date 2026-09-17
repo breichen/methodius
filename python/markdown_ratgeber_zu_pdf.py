@@ -406,6 +406,12 @@ def wrap_quiz_boxes(html_text: str) -> str:
                         classes.append("quiz-options")
                     elif b.name == "p":
                         classes.append("quiz-question")
+                        # Manuelle Nummerierung im Markdown ("1. ", "2) " ...)
+                        # entfernen, da die Frage per CSS-Badge nummeriert wird.
+                        first_text = b.find(string=True)
+                        if first_text:
+                            stripped = re.sub(r"^\s*\d+[\.\)]\s*", "", str(first_text))
+                            first_text.replace_with(stripped)
                     b["class"] = classes
 
                 # Jede Frage mit ihren Antworten zu einer Gruppe zusammenfassen,
@@ -852,28 +858,35 @@ def make_html(
   /* BONUS-Quiz optisch abgrenzen: von der Überschrift bis zur letzten
      Antwortzeile, alles danach bleibt außerhalb der Box. */
   .quiz-box {{
-    margin: 28px 0;
-    padding: 18px 22px 22px;
+    position: relative;
+    margin: 32px 0 28px;
+    padding: 20px 22px 22px;
     border: 1px solid var(--color-border);
     border-left: 4px solid var(--color-accent);
     border-radius: 3px;
     background: rgba(181, 41, 44, 0.045);
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+    counter-reset: quizq;
   }}
 
   .quiz-box > *:first-child {{ margin-top: 0; }}
   .quiz-box > *:last-child {{ margin-bottom: 0; }}
 
-  .quiz-box h1,
-  .quiz-box h2,
-  .quiz-box h3 {{
-    margin-top: 0;
-  }}
-
-  .quiz-box h1::before,
-  .quiz-box h1::after {{
-    display: none;
+  /* Kleines "QUIZ"-Tag, das auf der oberen Box-Kante sitzt. */
+  .quiz-box::before {{
+    content: "QUIZ";
+    position: absolute;
+    top: -11px;
+    left: 20px;
+    background: var(--color-accent);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    padding: 3px 10px;
+    border-radius: 3px;
   }}
 
   .quiz-item {{
@@ -882,7 +895,28 @@ def make_html(
   }}
 
   .quiz-box p.quiz-question {{
-    margin: 16px 0 6px;
+    position: relative;
+    margin: 18px 0 6px;
+    padding-left: 26px;
+    counter-increment: quizq;
+  }}
+
+  /* Nummerierter Kreis vor jeder Frage. */
+  .quiz-box p.quiz-question::before {{
+    content: counter(quizq);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: 3px;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 18px;
   }}
 
   .quiz-box .quiz-item:first-of-type p.quiz-question {{
@@ -891,6 +925,7 @@ def make_html(
 
   .quiz-box p.quiz-options {{
     margin: 0 0 4px;
+    padding-left: 26px;
     color: var(--color-muted);
   }}
 </style>
