@@ -345,6 +345,10 @@ def style_author_mentions(html_text: str, site_root: Path, image_rel: str, signa
             box.append(img)
 
             text_div = soup.new_tag("div")
+            kicker_p = soup.new_tag("p", attrs={"class": "autor-kicker"})
+            kicker_p.string = "AUTOR"
+            text_div.append(kicker_p)
+
             name_p = soup.new_tag("p", attrs={"class": "autor-name"})
             name_p.string = target_text
             text_div.append(name_p)
@@ -743,29 +747,42 @@ def make_html(
   .autor-box {{
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 12px 0 0px;
-    padding-left: 18px;
+    gap: 16px;
+    margin: 12px 0 0;
+    padding: 16px 20px;
+    border: 1px solid var(--color-border);
     border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
     break-inside: avoid;
     page-break-inside: avoid;
   }}
 
   .autor-foto {{
-    width: 64px;
-    height: 64px;
+    width: 68px;
+    height: 68px;
     object-fit: cover;
     object-position: center 25%;
-    border-radius: 0;
-    border: 2px solid rgba(27, 35, 64, 0.12);
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
     flex-shrink: 0;
   }}
 
   .autor-box > div {{ flex: 1; }}
 
+  .autor-box .autor-kicker {{
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin: 0 0 4px;
+  }}
+
   .autor-box .autor-name {{
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
     margin: 0;
   }}
