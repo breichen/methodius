@@ -858,7 +858,7 @@ def make_html(
     border: 1px solid var(--color-border);
     border-left: 4px solid var(--color-accent);
     border-radius: 3px;
-    background: #FBF8F1;
+    background: rgba(181, 41, 44, 0.045);
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
   }}
