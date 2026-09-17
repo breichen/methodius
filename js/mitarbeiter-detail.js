@@ -179,19 +179,30 @@ function ladePublikationen(person) {
             <article class="institut-veroeffentlichung">
 
                 <p class="institut-veroeffentlichung-datum">
-                ${formatiereDatumDeutsch(veroeffentlichung.datum)}
+                  ${formatiereDatumDeutsch(veroeffentlichung.datum)}
                 </p>
 
+                ${
+                  autorenText
+                    ? `
+                      <p class="institut-veroeffentlichung-autoren">
+                        ${autorenText}
+                      </p>
+                    `
+                    : ""
+                }
+
                 <h3>
-                ${veroeffentlichung.titel}
+                  ${veroeffentlichung.titel}
                 </h3>
 
                 ${
-                autorenText
+                  veroeffentlichung.journal
                     ? `
-                    <p class="institut-veroeffentlichung-autoren">
-                        ${autorenText}
-                    </p>
+                      <p class="institut-veroeffentlichung-journal">
+                        <em>${veroeffentlichung.journal}</em>,
+                        ${veroeffentlichung.seite_start}&ndash;${veroeffentlichung.seite_ende}
+                      </p>
                     `
                     : ""
                 }
