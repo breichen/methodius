@@ -406,17 +406,32 @@ def make_html(
   }}
 
   h1 {{
-    font-size: 1.25rem;
-    margin: 0 0 20px;
-    margin-top: 6mm;
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--color-text);
+    margin: 10mm 0 12mm;
+  }}
+
+  h1::before {{
+      content: "RATGEBER";
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      color: var(--color-accent);
+      margin-bottom: 10px;
   }}
 
   h1::after {{
     content: "";
     display: block;
-    width: 48px;
-    height: 2px;
-    margin-top: 10px;
+    width: 80px;
+    height: 3px;
+    margin-top: 14px;
     background: var(--color-accent);
   }}
 
