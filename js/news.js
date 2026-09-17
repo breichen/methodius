@@ -27,7 +27,7 @@ const newsListe = [
     datei: "neuer-ratgeber-muskelabbau.md",
     titel: "Neuer Ratgeber erschienen",
     datum: "2026-08-30",
-    bild: "pics/ratgeber/Abnehmen dank Muskelabbau.png",
+    bild: "pics/ratgeber-mockup/Abnehmen dank Muskelabbau.png",
     link: "buch.html?titel=Abnehmen dank Muskelabbau",
     linkText: "Zum Ratgeber",
     kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,

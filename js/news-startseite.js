@@ -146,7 +146,7 @@ function ladeNewsStartseitenBeitrag(beitrag) {
 
       let bildHtml = "";
 
-      if (beitrag.bild && !beitrag.bild.startsWith("pics/ratgeber/")) {
+      if (beitrag.bild && !beitrag.bild.startsWith("pics/ratgeber-mockup/")) {
 
         bildHtml = `
           <img
