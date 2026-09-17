@@ -425,8 +425,7 @@ def wrap_quiz_boxes(html_text: str) -> str:
 
                 heading = blocks[i]
                 wrapper = soup.new_tag("div", attrs={"class": "quiz-box"})
-                heading.insert_before(wrapper)
-                wrapper.append(heading.extract())
+                heading.insert_after(wrapper)        # Box direkt nach der Überschrift einfügen
                 for group in groups:
                     item = soup.new_tag("div", attrs={"class": "quiz-item"})
                     for b in group:
@@ -887,7 +886,7 @@ def make_html(
   }}
 
   .quiz-box .quiz-item:first-of-type p.quiz-question {{
-    margin-top: 4px;
+    margin-top: 0px;
   }}
 
   .quiz-box p.quiz-options {{
