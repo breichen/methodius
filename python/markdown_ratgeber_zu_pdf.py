@@ -886,7 +886,7 @@ def make_html(
     margin: 16px 0 6px;
   }}
 
-  .quiz-box p.quiz-question:first-of-type {{
+  .quiz-box .quiz-item:first-of-type p.quiz-question {{
     margin-top: 4px;
   }}
 
