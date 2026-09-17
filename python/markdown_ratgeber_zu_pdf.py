@@ -549,12 +549,30 @@ def make_html(
   }}
 
   h2 {{
-    font-size: 1.1rem;
-    color: var(--color-accent);
-    margin: 0 0 16px;
-    margin-top: 4mm;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+
+    margin: 9mm 0 7mm;
+    padding-bottom: 7px;
+
+    position: relative;
+
     break-after: avoid;
     page-break-after: avoid;
+  }}
+
+  h2::after {{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 42px;
+    height: 3px;
+    background: var(--color-accent);
   }}
 
   h2 + p,
