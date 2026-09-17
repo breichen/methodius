@@ -1503,6 +1503,7 @@ hr {
    teilzunehmen (siehe entferneUntertitelAlsH2() in buch.js). */
 .flipbook-page .seite1-untertitel {
   font-family: var(--font-display);
+  font-style: italic;
   font-size: 1.2rem;
   line-height: 1.15;
   font-weight: 600;
