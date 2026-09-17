@@ -410,7 +410,7 @@ function styleAutorErwaehnung(bloecke) {
       <div class="autor-box">
         <img
           class="autor-foto"
-          src="pics/team/Methodius.png"
+          src="pics/team/Methodius-nah.png"
           alt="Porträt von Dr. Maximilian Methodius"
         >
         <div>

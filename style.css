@@ -797,7 +797,7 @@ hr {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 30%;
   border-radius: 50%;
   border: 2px solid var(--color-accent);
   flex-shrink: 0;

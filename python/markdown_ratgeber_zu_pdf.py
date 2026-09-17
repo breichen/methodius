@@ -40,7 +40,7 @@ MUTED = "#5A5F72"
 ACCENT = "#B5292C"
 BORDER = "#D6CDBB"
 
-AUTHOR_IMAGE = "pics/team/Methodius.png"
+AUTHOR_IMAGE = "pics/team/Methodius-nah.png"
 AUTHOR_NAME = "Dr. Maximilian Methodius"
 SIGNATURE = "Maximilian Methodius"
 
@@ -77,7 +77,7 @@ def parse_args() -> argparse.Namespace:
         "--site-root",
         type=Path,
         default=None,
-        help="Wurzel des Websites-Verzeichnisses; dort werden pics/team/Methodius.png usw. gesucht.",
+        help="Wurzel des Websites-Verzeichnisses; dort werden pics/team/Methodius-nah.png usw. gesucht.",
     )
     p.add_argument(
         "--a5",
@@ -128,7 +128,7 @@ def find_site_root(md_path: Path, explicit: Path | None) -> Path:
 
     # Typischer Aufbau: <root>/md/ratgeber/datei.md
     for candidate in [md_path.parent, *md_path.parents]:
-        if (candidate / "pics" / "team" / "Methodius.png").exists():
+        if (candidate / "pics" / "team" / "Methodius-nah.png").exists():
             return candidate.resolve()
 
     return md_path.parent.resolve()
@@ -798,7 +798,7 @@ def make_html(
     width: 68px;
     height: 68px;
     object-fit: cover;
-    object-position: center 25%;
+    object-position: center 30%;
     border-radius: 50%;
     border: 2px solid var(--color-accent);
     flex-shrink: 0;
