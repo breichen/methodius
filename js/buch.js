@@ -296,12 +296,12 @@ function verarbeiteRatgeberMarkdown(markdown) {
 
   // ... ab hier bleibt alles wie bisher ...
   const flipbookBloecke = styleAutorErwaehnung(
-    bereinigeKapitelUeberschriften(roh)
+    entferneUntertitelAlsH2(bereinigeKapitelUeberschriften(roh))
   );
 
   const { bloecke: ohneBonus, quiz } = extrahiereBonusQuiz(roh);
   const fliesstextBloecke = styleAutorErwaehnung(
-    bereinigeKapitelUeberschriften(ohneBonus)
+    entferneUntertitelAlsH2(bereinigeKapitelUeberschriften(ohneBonus))
   );
 
   return { fliesstextBloecke, flipbookBloecke, quiz };
@@ -534,6 +534,28 @@ function bereinigeKapitelUeberschriften(bloecke) {
     }
   }
 
+  return ergebnis;
+}
+
+// Der Untertitel direkt unter dem Buchtitel ("Der ultimative Ratgeber für
+// alle, die ...") ist im Markdown die H2 direkt nach der H1 und wird von
+// bereinigeKapitelUeberschriften() bewusst NICHT mit der H1 kombiniert
+// (siehe dortige Ausnahme für die allererste Überschrift) - er bleibt eine
+// eigene H2. Inhaltlich ist er aber kein Kapitel und soll deshalb weder den
+// Kapitel-Strich (.flipbook-page h2::after) bekommen noch als eigener
+// Kapitel-/Seitenbeginn zählen (weder in baueKapitelSections() noch in der
+// Flipbook-Paginierung, die beide anhand von "<h1"/"<h2" prüfen). Deshalb
+// wird er hier - VOR all diesen Prüfungen - in ein reines <p> umgewandelt.
+// Das ist die erste H2 im ganzen Buch, es gibt also immer höchstens eine
+// Umwandlung pro Ratgeber.
+function entferneUntertitelAlsH2(bloecke) {
+  const index = bloecke.findIndex(block => block.startsWith("<h2>"));
+
+  if (index === -1) return bloecke;
+
+  const inhalt = bloecke[index].slice(4, -5);
+  const ergebnis = [...bloecke];
+  ergebnis[index] = `<p class="seite1-untertitel">${inhalt}</p>`;
   return ergebnis;
 }
 

@@ -67,6 +67,19 @@ h3 {
   font-size: 1.2rem;
 }
 
+/* Untertitel auf Seite 1 ("Der ultimative Ratgeber für alle, die ..."):
+   optisch wie h2, aber als reines <p> (siehe entferneUntertitelAlsH2() in
+   buch.js), damit er weder den Kapitel-Strich im Flipbook bekommt noch als
+   eigener Kapitelbeginn zählt. */
+.seite1-untertitel {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 1.8rem;
+  margin: 0 0 16px 0;
+}
+
 p {
   margin: 0 0 16px 0;
   color: var(--color-text);
@@ -94,41 +107,33 @@ p {
 blockquote {
   position: relative;
 
-  margin: 48px 0;
-  padding: 0 0 0 28px;
+  margin: 32px 0;
+  padding: 18px 26px;
 
-  background: transparent;
+  background: rgba(181, 41, 44, 0.045);
   border-left: 3px solid var(--color-accent);
+  border-radius: 0 3px 3px 0;
 
   color: var(--color-text);
 
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  line-height: 1.55;
-  font-weight: 500;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .section-alt blockquote {
-  background: transparent;
+  background: rgba(181, 41, 44, 0.045);
 }
 
-blockquote::before {
-  content: "„";
-
-  position: absolute;
-  left: -6px;
-  top: -18px;
-
-  font-family: Georgia, serif;
-  font-size: 4rem;
-  line-height: 1;
-
-  color: var(--color-accent);
-  opacity: 0.18;
+blockquote p {
+  margin: 0;
 }
 
 blockquote strong {
   color: var(--color-text);
+  font-style: normal;
 }
 
 /* ============================================
@@ -1466,6 +1471,19 @@ hr {
   background: var(--color-accent);
 }
 
+/* Untertitel auf Seite 1: optisch wie .flipbook-page h2, aber ohne
+   Kapitel-Strich und ohne an der h1/h2-Kapitellogik der Paginierung
+   teilzunehmen (siehe entferneUntertitelAlsH2() in buch.js). */
+.flipbook-page .seite1-untertitel {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin: 0mm 0 7mm;
+}
+
 .flipbook-page h3 {
   font-family: var(--font-display);
   font-size: 0.98rem;
@@ -1487,24 +1505,30 @@ hr {
 
   margin: 20px 0;
 
-  padding: 0 0 0 16px;
+  padding: 12px 18px;
 
-  background: transparent;
+  background: rgba(181, 41, 44, 0.045);
 
-  border-left: 2px solid var(--color-accent);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 3px 3px 0;
 
   color: var(--color-text);
 
   font-family: var(--font-display);
+  font-style: italic;
 
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 
   line-height: 1.5;
 
-  font-weight: 500;
+  font-weight: 400;
 
   break-inside: avoid;
   page-break-inside: avoid;
+}
+
+.flipbook-page blockquote p {
+  margin: 0;
 }
 
 .flipbook-page blockquote::before {
@@ -1513,6 +1537,7 @@ hr {
 
 .flipbook-page blockquote strong {
   color: var(--color-text);
+  font-style: normal;
 }
 
 .flipbook-page p+ul,
@@ -1735,6 +1760,10 @@ hr {
   }
 
   .flipbook-page h2 {
+    font-size: 0.95rem;
+  }
+
+  .flipbook-page .seite1-untertitel {
     font-size: 0.95rem;
   }
 
