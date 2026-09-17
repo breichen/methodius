@@ -2653,6 +2653,12 @@ hr {
   color: var(--color-muted);
 }
 
+.institut-veroeffentlichung-journal {
+  margin: 0.25rem 0 1rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
 .institut-veroeffentlichung h3::before {
   content: "";
   display: block;

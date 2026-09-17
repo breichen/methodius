@@ -62,6 +62,17 @@ function ladeAlleVeroeffentlichungen() {
               </p>
 
               ${
+                veroeffentlichung.journal
+                  ? `
+                    <p class="institut-veroeffentlichung-journal">
+                      <em>${veroeffentlichung.journal}</em>,
+                      ${veroeffentlichung.seite_start}&ndash;${veroeffentlichung.seite_ende}
+                    </p>
+                  `
+                  : ""
+              }
+
+              ${
                 veroeffentlichung.beschreibung
                   ? `<p>${veroeffentlichung.beschreibung}</p>`
                   : ""
@@ -70,7 +81,6 @@ function ladeAlleVeroeffentlichungen() {
             </article>
           `)
           .join("\n");
-
     })
     .catch(fehler => {
 
