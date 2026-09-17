@@ -594,7 +594,7 @@ def make_html(
     left: 0;
     bottom: -1px;
     width: 42px;
-    height: 3px;
+    height: 2px;
     background: var(--color-accent);
   }}
 
