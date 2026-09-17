@@ -738,8 +738,6 @@ hr {
   margin-top: 40px;
 
   padding-top: 18px;
-
-  border-top: 1px solid var(--color-accent);
 }
 
 .autor-abschluss-text {
@@ -1417,6 +1415,23 @@ hr {
   padding: clamp(20px, 4vh, 48px) clamp(20px, 4vw, 40px);
   overflow: hidden;
   position: relative;
+
+  /* Eigener Flexbox-Kontext für den Seiteninhalt (nicht zu verwechseln
+     mit "flex: 1 1 50%" oben, das ist die Rolle als Flex-ITEM im Buch):
+     dadurch kann die Autoren-Signatur per margin-top:auto ans untere
+     Ende der jeweiligen Seite gedrückt werden, wenn sie dort landet
+     (siehe .flipbook-page .autor-abschluss weiter unten). Da die
+     Seitenaufteilung in teileInSeiten() den Inhalt schon exakt auf die
+     Seitenhöhe zuschneidet, bleibt dafür immer nur der Rest an freiem
+     Platz übrig - kein Risiko, dass etwas zusammengequetscht wird.
+     flex-shrink:0 auf den Kindern verhindert, dass sie trotzdem
+     schrumpfen und damit die Höhenmessung in teileInSeiten() verfälschen. */
+  display: flex;
+  flex-direction: column;
+}
+
+.flipbook-page>* {
+  flex-shrink: 0;
 }
 
 .flipbook-page:last-child {
@@ -1598,6 +1613,14 @@ hr {
 /* ============================================
    AUTOREN-ELEMENTE IM FLIPBOOK
    ============================================ */
+.flipbook-page .autor-abschluss {
+  /* Landet die Signatur auf ihrer Seite, wird sie dank des
+     Flexbox-Kontexts von .flipbook-page (siehe oben) ans untere Ende
+     dieser Seite gedrückt, statt direkt im Anschluss an den Text zu
+     stehen. */
+  margin-top: auto;
+}
+
 .flipbook-page .autor-signatur {
   font-size: 1.5rem;
   margin-top: 56px;
