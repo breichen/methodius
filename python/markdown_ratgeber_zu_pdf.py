@@ -468,7 +468,9 @@ def make_html(
     a5: bool,
 ) -> str:
     page_width, page_height = page_size(a5)
-    content_margin = "20mm" if not a5 else "8mm"
+    content_margin = "20mm" if not a5 else "14mm"
+    # We have the page number at the bottom.
+    bottom_margin = "24mm" if not a5 else "18mm"
 
     # image_uri wird absichtlich absolut eingesetzt; Chromium kann dann auch
     # lokal geöffnete Dateien laden.
@@ -480,7 +482,10 @@ def make_html(
 <style>
   @page {{
       size: {page_width} {page_height};
-      margin: {content_margin};
+      margin-top: {content_margin};
+      margin-left: {content_margin};
+      margin-right: {content_margin};
+      margin-bottom: {bottom_margin};
   }}
 
   :root {{
@@ -504,10 +509,6 @@ def make_html(
   body {{
     font-family: var(--font-body);
     line-height: 1.6;
-  }}
-
-  .document {{
-      padding: {content_margin};
   }}
 
   h1, h2, h3 {{
