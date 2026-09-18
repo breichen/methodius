@@ -1,7 +1,7 @@
 const NewsKategorie = Object.freeze({
   VEROEFFENTLICHUNGEN: "Veröffentlichungen",
   INSTITUTSLEBEN: "Institutsleben",
-  KURIOSITAETEN: "Kuriositäten des Alltags",
+  KURIOSItAETEN: "Kuriositäten des Alltags",
 });
 
 /*
@@ -76,13 +76,13 @@ function versieheMitKategorie(eintraege, kategorie) {
   }));
 }
 
-// praefix: wird vor jedes datei-Feld gehängt, z.B. "../news-institutsleben"
-// (Ordner md/news-institutsleben/ statt md/news/, analog zu den
-// Paper-News in ../news-papers/). Wird vor jedes datei-Feld gehängt,
-// sodass die JSON-Dateien selbst nur die reinen Dateinamen enthalten
-// müssen. Optional - ohne Angabe bleibt datei unverändert (z.B. für
-// Dateien direkt unter md/news/).
-async function ladeJsonNews(pfad, kategorie, praefix) {
+// ordner: Name des Ordners, der für diese Kategorie sowohl die
+// .md-Dateien (unter md/, z.B. "../news-institutsleben") als auch
+// die Bilder (unter pics/, z.B. "pics/news-institutsleben") enthält.
+// datei und bild müssen in der JSON-Datei selbst nur den reinen
+// Dateinamen enthalten - der jeweilige Pfad wird hier ergänzt.
+// Optional - ohne Angabe bleiben datei und bild unverändert.
+async function ladeJsonNews(pfad, kategorie, ordner) {
 
   const response = await fetch(pfad);
 
@@ -92,10 +92,11 @@ async function ladeJsonNews(pfad, kategorie, praefix) {
 
   const eintraege = await response.json();
 
-  const eintraegeMitPfad = praefix
+  const eintraegeMitPfad = ordner
     ? eintraege.map(eintrag => ({
         ...eintrag,
-        datei: `${praefix}/${eintrag.datei}`,
+        datei: `../${ordner}/${eintrag.datei}`,
+        ...(eintrag.bild && { bild: `pics/${ordner}/${eintrag.bild}` }),
       }))
     : eintraege;
 
@@ -121,8 +122,8 @@ async function ladeAlleNews() {
     erzeugePaperNews(veroeffentlichungen);
 
   const [institutslebenNews, kuriositaetenNews] = await Promise.all([
-    ladeJsonNews("data/institutsleben.json", NewsKategorie.INSTITUTSLEBEN, "../news-institutsleben"),
-    ladeJsonNews("data/kuriositaeten.json", NewsKategorie.KURIOSITAETEN, "../news-kuriositaeten"),
+    ladeJsonNews("data/institutsleben.json", NewsKategorie.INSTITUTSLEBEN, "news-institutsleben"),
+    ladeJsonNews("data/kuriositaeten.json", NewsKategorie.KURIOSITAETEN, "news-kuriositaeten"),
   ]);
 
   return [
