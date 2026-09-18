@@ -992,12 +992,61 @@ hr {
 }
 
 .quiz-frage legend {
+  position: relative;
+  padding: 0 0 0 28px;
   margin-bottom: 16px;
-  padding: 0;
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--color-text);
+}
+
+/* Nummerierter Kreis vor jeder Frage - exakt wie im PDF
+   (siehe .quiz-box p.quiz-question::before in markdown_ratgeber_zu_pdf.py). */
+.quiz-nummer {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin: 0 8px 2px 0;
+  vertical-align: middle;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 3px;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+/* Im Quiz-Dialog wird die Nummer absolut links platziert, statt inline
+   vor dem Text zu stehen - dadurch landet sie exakt auf derselben
+   X-Position wie die Checkboxen in .quiz-option darunter (beide starten
+   an der linken Kante des Fieldsets), und der Fragetext bleibt sauber
+   eingerückt, auch wenn er mehrzeilig umbricht. */
+.quiz-frage legend .quiz-nummer {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  margin: 0;
+}
+
+/* Dasselbe Einrückungsprinzip fürs Flipbook: die Frage bekommt links
+   Platz für die Badge, die Badge wird absolut positioniert, damit eine
+   zweite Textzeile nicht wieder ganz links beginnt, sondern unter dem
+   Fragetext (statt unter der Nummer) weiterläuft. */
+.quiz-frage-flipbook {
+  position: relative;
+  padding-left: 28px;
+}
+
+.quiz-frage-flipbook .quiz-nummer {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  margin: 0;
 }
 
 .quiz-option {

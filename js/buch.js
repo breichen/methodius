@@ -285,6 +285,44 @@ function setzeTabellenEin(bloecke, tabellenHtml) {
 // - flipbookBloecke: unverändert, BONUS-Abschnitt bleibt als normaler
 //   Text stehen - in einem physischen Buch kann man schließlich nicht
 //   klicken, daher zeigt die Blätter-Ansicht das Quiz statisch an.
+// Nummeriert die Bonus-Quiz-Fragen im Flipbook mit demselben Badge wie
+// im Quiz-Dialog und im PDF, statt der rohen Markdown-Nummerierung
+// ("1. Frage-Text"). Wirkt NUR innerhalb des BONUS-Abschnitts (von der
+// "BONUS:"-Überschrift bis zur nächsten <h1> bzw. bis zum Ende), damit
+// normale, nicht zum Quiz gehörende "1. ..."-Absätze unangetastet
+// bleiben.
+function nummeriereQuizFragenImFlipbook(bloecke) {
+  // WICHTIG: An dieser Stelle im Ablauf hat bereinigeKapitelUeberschriften()
+  // bereits gelaufen, das JEDE Überschrift außer der allerersten im ganzen
+  // Buch zu <h2> macht - die "BONUS:"-Überschrift ist an dieser Stelle also
+  // schon ein <h2>, kein <h1> mehr. Deshalb hier nach beidem suchen.
+  const headingIndizes = bloecke.reduce((acc, block, i) => {
+    if (block.startsWith("<h1") || block.startsWith("<h2")) acc.push(i);
+    return acc;
+  }, []);
+
+  const bonusStart = headingIndizes.find(i => {
+    const text = bloecke[i].replace(/^<h[12]>|<\/h[12]>$/g, "");
+    return text.startsWith("BONUS:");
+  });
+
+  if (bonusStart === undefined) {
+    return bloecke;
+  }
+
+  const naechsteHeading = headingIndizes.find(i => i > bonusStart);
+  const bonusEnde = naechsteHeading !== undefined ? naechsteHeading : bloecke.length;
+
+  return bloecke.map((block, i) => {
+    if (i <= bonusStart || i >= bonusEnde) return block;
+
+    const match = block.match(/^<p><strong>(\d+)\.\s*(.+?)<\/strong><\/p>$/);
+    if (!match) return block;
+
+    return `<p class="quiz-frage-flipbook"><strong><span class="quiz-nummer">${match[1]}</span>${match[2]}</strong></p>`;
+  });
+}
+
 function verarbeiteRatgeberMarkdown(markdown) {
   // NEU: Tabellen zuerst herausziehen, damit parseMarkdownBloecke()
   // die Pipe-Syntax nicht falsch interpretiert.
@@ -295,8 +333,10 @@ function verarbeiteRatgeberMarkdown(markdown) {
   const roh = setzeTabellenEin(rohMitPlatzhaltern, tabellenHtml);
 
   // ... ab hier bleibt alles wie bisher ...
-  const flipbookBloecke = styleAutorErwaehnung(
-    entferneUntertitelAlsH2(bereinigeKapitelUeberschriften(roh))
+  const flipbookBloecke = nummeriereQuizFragenImFlipbook(
+    styleAutorErwaehnung(
+      entferneUntertitelAlsH2(bereinigeKapitelUeberschriften(roh))
+    )
   );
 
   const { bloecke: ohneBonus, quiz } = extrahiereBonusQuiz(roh);
@@ -795,7 +835,7 @@ function zeigeQuizFragen(quiz) {
 
   const fragenHtml = quiz.fragen.map((frage, fIndex) => `
     <fieldset class="quiz-frage">
-      <legend>${frage.nummer}. ${frage.text}</legend>
+      <legend><span class="quiz-nummer">${frage.nummer}</span>${frage.text}</legend>
       ${frage.optionen.map((option, oIndex) => `
         <label class="quiz-option">
           <input type="radio" name="quiz-frage-${fIndex}" value="${oIndex}" required>

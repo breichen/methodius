@@ -1,4 +1,4 @@
-Am 4. Mai 2026 wurde das Methodius-Institut für Lebenswissenschaften gegründet.
+Am 4. September 2026 wurde das Methodius-Institut für Lebenswissenschaften gegründet.
 
 Das Institut widmet sich der wissenschaftlichen Untersuchung der großen und kleinen Fragen des menschlichen Lebens. Im Mittelpunkt stehen insbesondere jene Bereiche, in denen bislang erstaunlich viele Menschen glauben, bereits zu wissen, was für sie gut ist.
 
