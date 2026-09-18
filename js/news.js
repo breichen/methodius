@@ -1,7 +1,7 @@
 const NewsKategorie = Object.freeze({
   VEROEFFENTLICHUNGEN: "Veröffentlichungen",
   INSTITUTSLEBEN: "Institutsleben",
-  KURIOSItAETEN: "Kuriositäten des Alltags",
+  KURIOSITAETEN: "Kuriositäten des Alltags",
 });
 
 /*
@@ -88,7 +88,7 @@ async function erzeugeRatgeberNews(ratgeberListe) {
       datei: hatEigeneDatei
         ? `../news-ratgeber/${ratgeber.slug}.md`
         : "neuer-ratgeber-generisch.md",
-      titel: "Neuer Ratgeber erschienen",
+      titel: `Neuer Ratgeber: ${ratgeber.titel}`,
       datum: ratgeber.erstellt,
       bild: `pics/ratgeber-mockup/${ratgeber.slug}.png`,
       link: `buch.html?titel=${ratgeber.titel}`,
