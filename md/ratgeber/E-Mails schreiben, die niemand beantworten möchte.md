@@ -1,7 +1,7 @@
 
 # E-Mails schreiben, die niemand beantworten möchte
 
-_Der revolutionäre Ratgeber für alle, die eine einfache Nachricht in ein kommunikatives Großereignis verwandeln möchten, auf das vernünftigerweise niemand reagieren kann._
+## Der revolutionäre Ratgeber für alle, die eine einfache Nachricht in ein kommunikatives Großereignis verwandeln möchten, auf das vernünftigerweise niemand reagieren kann.
 
 **Dr. Maximilian Methodius**
 

@@ -396,4 +396,4 @@ Das ist zwar weniger beeindruckend, aber erheblich schwerer zu widerlegen.
 
 **Dr. Maximilian Methodius**
 
-_Autor, Satiriker und ausgewiesener Experte für bibliografische Glaubwürdigkeitsillusionen._
+*Autor, Satiriker und ausgewiesener Experte für bibliografische Glaubwürdigkeitsillusionen.*

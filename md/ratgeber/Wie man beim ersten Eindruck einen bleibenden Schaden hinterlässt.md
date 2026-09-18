@@ -1,7 +1,7 @@
 
 # Wie man beim ersten Eindruck einen bleibenden Schaden hinterlässt
 
-Der revolutionäre Ratgeber für alle, die nicht in Erinnerung bleiben wollen, sondern dafür sorgen möchten, dass andere sich noch Wochen später fragen, was da eigentlich passiert ist.
+## Der revolutionäre Ratgeber für alle, die nicht in Erinnerung bleiben wollen, sondern dafür sorgen möchten, dass andere sich noch Wochen später fragen, was da eigentlich passiert ist.
 
 **Dr. Maximilian Methodius**
 
