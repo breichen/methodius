@@ -45,20 +45,35 @@ const newsListe = [
 
 
 
-function erzeugePaperNews(veroeffentlichungen) {
-  return veroeffentlichungen.map(paper => ({
-    datei: `../news-papers/${paper.datei}`,
-    titel: `Neues Paper: ${paper.titel}`,
-    datum: paper.datum,
-    link: "veroeffentlichungen.html",
-    linkText: "Zur Veröffentlichung",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
+// Erzeugt aus der Veröffentlichungsliste automatisch einen News-Eintrag
+// pro Paper. Für die Ankündigung wird die Paper-Datei selbst unter
+// md/news-papers/<paper.datei> verwendet, falls sie existiert -
+// andernfalls der generische Text md/news/neues-paper-generisch.md.
+async function erzeugePaperNews(veroeffentlichungen) {
+
+  return Promise.all(veroeffentlichungen.map(async paper => {
+
+    const eigeneDatei = `md/news-papers/${paper.datei}`;
+    const hatEigeneDatei = await dateiExistiert(eigeneDatei);
+
+    return {
+      datei: hatEigeneDatei
+        ? `../news-papers/${paper.datei}`
+        : "neues-paper-generisch.md",
+      titel: `Neues Paper: ${paper.titel}`,
+      datum: paper.datum,
+      link: "veroeffentlichungen.html",
+      linkText: "Zur Veröffentlichung",
+      kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
+    };
+
   }));
+
 }
 
 // Prüft per HEAD-Request, ob unter dem gegebenen Pfad eine Datei
-// existiert (z.B. um pro Ratgeber eine eigene Ankündigungsdatei zu
-// verwenden, falls vorhanden).
+// existiert (z.B. um pro Paper/Ratgeber eine eigene Ankündigungsdatei
+// zu verwenden, falls vorhanden).
 async function dateiExistiert(pfad) {
   try {
     const response = await fetch(pfad, { method: "HEAD" });
@@ -153,7 +168,7 @@ async function ladeAlleNews() {
     await response.json();
 
   const paperNews =
-    erzeugePaperNews(veroeffentlichungen);
+    await erzeugePaperNews(veroeffentlichungen);
 
   const ratgeberNews =
     await erzeugeRatgeberNews(ratgeberListe);
