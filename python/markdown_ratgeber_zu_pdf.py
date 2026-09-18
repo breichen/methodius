@@ -47,6 +47,8 @@ SIGNATURE = "Maximilian Methodius"
 A4_PAGE = ("210mm", "297mm")
 A5_PAGE = ("148mm", "210mm")
 
+ENTFERNE_ANFUEHRUNGSZEICHEN = False
+
 
 def page_size(a5: bool) -> tuple[str, str]:
     return A5_PAGE if a5 else A4_PAGE
@@ -517,6 +519,27 @@ def wrap_last_page(html_text: str) -> str:
     wrapper = soup.new_tag("div", attrs={"class": "last-page-fill"})
     target.insert_before(wrapper)
     wrapper.append(target.extract())
+
+    return str(soup)
+
+
+def process_blockquotes(html_text: str) -> str:
+    if not ENTFERNE_ANFUEHRUNGSZEICHEN:
+        return html_text
+
+    bs4 = __import__("bs4")
+    soup = bs4.BeautifulSoup(html_text, "html.parser")
+
+    for blockquote in soup.find_all("blockquote"):
+        text = blockquote.get_text()
+
+        text = re.sub(r'^(["„“‚‘]+)', "", text)
+        text = re.sub(r'(["„“‚‘]+)$', "", text)
+
+        blockquote.clear()
+        p = soup.new_tag("p")
+        p.string = text
+        blockquote.append(p)
 
     return str(soup)
 
@@ -1078,6 +1101,7 @@ def main() -> int:
 
             md_text = md_path.read_text(encoding="utf-8")
             html_text = md_to_html(md_text)
+            html_text = process_blockquotes(html_text)
             html_text = strip_bonus_for_pdf(html_text)
             html_text = normalise_headings(html_text, args.new_page_per_chapter)
 
