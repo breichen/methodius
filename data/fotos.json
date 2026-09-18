@@ -2,7 +2,7 @@
     {
         "datum": "2027-10-28",
         "titel": "Teamevent im Nationaltheater",
-        "bild": "pics/news-institutsleben/oper.png",
+        "bild": "pics/news-institutsleben/teamevent-oper.png",
         "beschreibung": "Die Institutsmitglieder besuchten gemeinsam eine Aufführung im Nationaltheater. Die Veranstaltung diente der fachlichen Diskussion über die Bedeutung dramatischer Zuspitzungen in wissenschaftlichen Vorträgen."
     },
     {
@@ -14,7 +14,7 @@
     {
         "datum": "2027-06-05",
         "titel": "Teamevent in den Bergen",
-        "bild": "pics/news-institutsleben/hiking.png",
+        "bild": "pics/news-institutsleben/teamevent-hiking.png",
         "beschreibung": "Im Rahmen einer mehrstündigen Wanderung wurden verschiedene Methoden zur Erhebung empirischer Eindrücke unter erschwerten Bedingungen untersucht."
     },
     {
@@ -32,19 +32,19 @@
     {
         "datum": "2027-01-21",
         "titel": "Teamevent am Billardtisch",
-        "bild": "pics/news-institutsleben/billard.png",
+        "bild": "pics/news-institutsleben/teamevent-billard.png",
         "beschreibung": "Ein institutsinterner Abend zur Erforschung strategischer Entscheidungsprozesse und unbeabsichtigter Kollisionen komplexer Systeme."
     },
     {
         "datum": "2026-11-15",
         "titel": "Methodius-Institut richtet erfolgreiche Fachtagung aus",
-        "bild": "pics/news-institutsleben/eigene_konferenz.png",
+        "bild": "pics/news-institutsleben/jahrestagung-2026.png",
         "beschreibung": "Die erste Jahrestagung des Instituts brachte Forschende, Interessierte und zufällig Anwesende zu einem intensiven Austausch über aktuelle Entwicklungen der gegenstromorientierten Lebenswissenschaft zusammen."
     },
     {
         "datum": "2026-09-15",
         "titel": "Teamevent auf der Moldau",
-        "bild": "pics/news-institutsleben/rafting.png",
+        "bild": "pics/news-institutsleben/teamevent-rafting.png",
         "beschreibung": "Die Mitarbeiter des Instituts nahmen an einer gemeinsamen Rafting-Exkursion teil, um Kooperation und Krisenmanagement unter realistischen Bedingungen zu erproben."
     },
     {
