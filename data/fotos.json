@@ -2,55 +2,55 @@
     {
         "datum": "2027-10-28",
         "titel": "Teamevent im Nationaltheater",
-        "bild": "pics/news/oper.png",
+        "bild": "pics/news-institutsleben/oper.png",
         "beschreibung": "Die Institutsmitglieder besuchten gemeinsam eine Aufführung im Nationaltheater. Die Veranstaltung diente der fachlichen Diskussion über die Bedeutung dramatischer Zuspitzungen in wissenschaftlichen Vorträgen."
     },
     {
         "datum": "2027-06-12",
         "titel": "Hohe Auszeichnung für Dr. Maximilian Methodius",
-        "bild": "pics/news/methodius-orden.png",
+        "bild": "pics/news-institutsleben/methodius-orden.png",
         "beschreibung": "Dr. Maximilian Methodius wurde für seine herausragenden Verdienste um Wissenschaft, Lebensführung und die konsequente Überwindung unnötiger Unsicherheit mit dem Orden für außergewöhnliche Verdienste um die ganzheitliche Problemlösung ausgezeichnet. Die feierliche Verleihung würdigte insbesondere seine Fähigkeit, auch bei unklarer Datenlage zu überzeugenden Ergebnissen zu gelangen."
     },
     {
         "datum": "2027-06-05",
         "titel": "Teamevent in den Bergen",
-        "bild": "pics/news/hiking.png",
+        "bild": "pics/news-institutsleben/hiking.png",
         "beschreibung": "Im Rahmen einer mehrstündigen Wanderung wurden verschiedene Methoden zur Erhebung empirischer Eindrücke unter erschwerten Bedingungen untersucht."
     },
     {
         "datum": "2027-05-24",
         "titel": "Verleihung der Carl von Frisch-Medaille an Dr. Konrad P. Huber",
-        "bild": "pics/news/huber-carl-von-frisch-medaille.png",
+        "bild": "pics/news-institutsleben/huber-carl-von-frisch-medaille.png",
         "beschreibung": "Dr. Konrad P. Huber wurde für seine hervorragenden Beiträge zur empirischen Forschung und wissenschaftlichen Redlichkeit mit der Carl von Frisch-Medaille ausgezeichnet. Gewürdigt wurde insbesondere sein konsequenter Einsatz für eine sorgfältige Betrachtung von Daten und statistischen Zusammenhängen – auch dann, wenn diese nicht die gewünschte Interpretation stützen."
     },
     {
         "datum": "2027-04-26",
         "titel": "Verleihung der Sigismund-Freud-Medaille an Prof. Dr. Hildegard Wankelmuth",
-        "bild": "pics/news/wankelmuth-sigismund-freud-medaille.png",
+        "bild": "pics/news-institutsleben/wankelmuth-sigismund-freud-medaille.png",
         "beschreibung": "Prof. Dr. Hildegard Wankelmuth wurde für ihre herausragenden Beiträge zur kritischen Plausibilitätsforschung mit der Sigismund-Freud-Medaille ausgezeichnet. Gewürdigt wurden insbesondere ihre Forschungen zur kontrollierten Überinterpretation alltäglicher Beobachtungen und ihre Fähigkeit, aus auffälligem Verhalten Erklärungen abzuleiten, die deutlich plausibler klingen, als die Daten eigentlich hergeben."
     },
     {
         "datum": "2027-01-21",
         "titel": "Teamevent am Billardtisch",
-        "bild": "pics/news/billard.png",
+        "bild": "pics/news-institutsleben/billard.png",
         "beschreibung": "Ein institutsinterner Abend zur Erforschung strategischer Entscheidungsprozesse und unbeabsichtigter Kollisionen komplexer Systeme."
     },
     {
         "datum": "2026-11-15",
         "titel": "Methodius-Institut richtet erfolgreiche Fachtagung aus",
-        "bild": "pics/news/eigene_konferenz.png",
+        "bild": "pics/news-institutsleben/eigene_konferenz.png",
         "beschreibung": "Die erste Jahrestagung des Instituts brachte Forschende, Interessierte und zufällig Anwesende zu einem intensiven Austausch über aktuelle Entwicklungen der gegenstromorientierten Lebenswissenschaft zusammen."
     },
     {
         "datum": "2026-09-15",
         "titel": "Teamevent auf der Moldau",
-        "bild": "pics/news/rafting.png",
+        "bild": "pics/news-institutsleben/rafting.png",
         "beschreibung": "Die Mitarbeiter des Instituts nahmen an einer gemeinsamen Rafting-Exkursion teil, um Kooperation und Krisenmanagement unter realistischen Bedingungen zu erproben."
     },
     {
-        "datum": "2026-05-04",
+        "datum": "2026-09-04",
         "titel": "Gründung des Methodius-Instituts",
-        "bild": "pics/news/gruendung-methodius-institut.png",
+        "bild": "pics/news-institutsleben/gruendung-methodius-institut.png",
         "beschreibung": "Mit der feierlichen Eröffnung des Methodius-Instituts für Lebenswissenschaften begann die systematische Erforschung von Fragestellungen, die bislang aus gutem Grund unbeantwortet geblieben waren."
     }
 ]
