@@ -7,6 +7,8 @@
   unsere Texte.
 */
 
+const ENTFERNE_ANFUEHRUNGSZEICHEN = false;
+
 // Wandelt **fett** und *kursiv* um. Nutzt [\s\S] statt "." und das
 // "g"-Flag OHNE "s", damit die Formatierung auch über mehrere Zeilen
 // hinweg funktioniert (z.B. bei einem kursiven Absatz, der mit
@@ -53,8 +55,13 @@ function parseMarkdownBloecke(markdown) {
     if (zitatZeilen.length > 0 && zitatZeilen.every(z => z.startsWith(">"))) {
       const zitatInhalt = zitatZeilen
         .map(z => z.replace(/^>\s?/, ""))
-        .map(z => z.replace(/^(\*\*|__)?["„“‚‘]+/, "$1"))
-        .map(z => z.replace(/["„“‚‘]+(\*\*|__)?$/, "$1"))
+        .map(z => {
+          if (!ENTFERNE_ANFUEHRUNGSZEICHEN) return z;
+
+          return z
+            .replace(/^(\*\*\*|__)?["„“‚‘]+/, "$1")
+            .replace(/["„“‚‘]+(\*\*\*|__)?$/, "$1");
+        })
         .join("\n");
 
       return `<blockquote>${inlineFormat(zitatInhalt).replace(/\n/g, "<br>")}</blockquote>`;
