@@ -317,6 +317,7 @@
   <script src="js/probleme.js"></script>
   <script src="js/news.js"></script>
   <script src="js/ratgeber-filter.js"></script>
+  <script src="js/foto-lightbox.js"></script>
   <script src="js/news-startseite.js"></script>
   <script src="js/showcase.js"></script>
   <script src="js/buchgrid.js"></script>
@@ -324,6 +325,19 @@
 
   <!-- Tally-Widget: öffnet das Popup-Formular für "Thema anfragen" -->
   <script async src="https://tally.so/widgets/embed.js"></script>
+
+  <div id="foto-lightbox" class="foto-lightbox">
+
+    <button type="button" class="foto-lightbox-schliessen" aria-label="Bild schließen">
+      ×
+    </button>
+
+    <img id="foto-lightbox-bild" alt="">
+
+    <div id="foto-lightbox-beschriftung" class="foto-lightbox-beschriftung">
+    </div>
+
+  </div>
 
 </body>
 

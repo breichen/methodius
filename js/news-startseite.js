@@ -23,6 +23,57 @@ const newsStartseiteContainer =
   document.getElementById("news-startseite");
 
 
+/*
+  Lightbox zum vergrößerten Anzeigen des Beitragsbilds - nutzt
+  dasselbe Overlay (#foto-lightbox) und dieselbe Logik wie
+  Institutsleben-Galerie und news.html, siehe js/foto-lightbox.js.
+
+  Das Overlay-Markup steht im HTML erst NACH diesem <script>-Tag,
+  deshalb hier auf DOMContentLoaded warten (bzw. sofort ausführen,
+  falls das Dokument ohnehin schon fertig geparst ist) - siehe
+  ausführlicherer Kommentar dazu in js/news-seite.js.
+*/
+
+if (document.readyState === "loading") {
+  document.addEventListener(
+    "DOMContentLoaded",
+    initialisiereFotoLightboxSchliessen
+  );
+} else {
+  initialisiereFotoLightboxSchliessen();
+}
+
+if (newsStartseiteContainer) {
+
+  newsStartseiteContainer.addEventListener("click", event => {
+
+    const bild = event.target.closest(".institutsfoto-klickbar");
+
+    if (!bild) {
+      return;
+    }
+
+    oeffneFotoLightbox(bild.dataset.bild, bild.dataset.titel);
+  });
+
+  newsStartseiteContainer.addEventListener("keydown", event => {
+
+    if (event.key !== "Enter" && event.key !== " ") {
+      return;
+    }
+
+    const bild = event.target.closest(".institutsfoto-klickbar");
+
+    if (!bild) {
+      return;
+    }
+
+    event.preventDefault();
+    oeffneFotoLightbox(bild.dataset.bild, bild.dataset.titel);
+  });
+}
+
+
 async function ladeAktuellsteNews() {
 
   if (!newsStartseiteContainer) {
@@ -154,10 +205,13 @@ function ladeNewsStartseitenBeitrag(beitrag) {
 
         bildHtml = `
           <img
-            class="news-bild"
+            class="news-bild institutsfoto-klickbar"
             src="${beitrag.bild}"
-            alt=""
+            alt="${beitrag.titel}"
+            data-bild="${beitrag.bild}"
+            data-titel="${beitrag.titel}"
             loading="lazy"
+            tabindex="0"
           >
         `;
       }
