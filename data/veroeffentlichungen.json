@@ -7,6 +7,8 @@
         ],
         "beschreibung": "Gründungsschrift des Methodius-Instituts für Lebenswissenschaften.",
         "journal": "Schriftenreihe des Methodius-Instituts, Bd. 1, Heft 1",
+        "seite_start": 1,
+        "seite_ende": 27,
         "slug": "gegenstromorientierte-lebenswissenschaft"
     },
     {
@@ -18,6 +20,8 @@
         ],
         "beschreibung": "Erste gemeinsame institutsinterne Publikation.",
         "journal": "Journal für Praktische Fehlorientierung, Bd. 1, Heft 1",
+        "seite_start": 1,
+        "seite_ende": 13,
         "slug": "kontrollierte-fehlberatung-lebenshilfe"
     },
     {
@@ -29,6 +33,8 @@
         ],
         "beschreibung": "Eine statistische Untersuchung zur Frage, wann ein Ergebnis überzeugend genug klingt.",
         "journal": "Archiv für Ausreichende Evidenz, Bd. 14, Heft 2",
+        "seite_start": 35,
+        "seite_ende": 51,
         "slug": "empirische-plausibilitaet-datenlage"
     },
     {
@@ -39,6 +45,8 @@
         ],
         "beschreibung": "Entwicklung eines Modells zur systematischen Bedeutungsüberhöhung gewöhnlicher Handlungen.",
         "journal": "Methodenhefte der Alltagshermeneutik, Bd. 1, Heft 1",
+        "seite_start": 1,
+        "seite_ende": 18,
         "slug": "ueberinterpretation-alltaeglicher-verhaltensweisen"
     },
     {
@@ -49,6 +57,8 @@
         ],
         "beschreibung": "Grundlage des später erschienenen Ratgebers.",
         "journal": "Zeitschrift für Alternative Körperkomposition, Bd. 2, Heft 2",
+        "seite_start": 21,
+        "seite_ende": 34,
         "slug": "muskelabbau-gewichtsreduktion"
     },
     {
@@ -60,6 +70,8 @@
         ],
         "beschreibung": "Ein Beitrag zur praktischen Anwendung statistischer Argumentation.",
         "journal": "Statistische Irrtümer Quarterly, Bd. 13, Heft 2",
+        "seite_start": 45,
+        "seite_ende": 61,
         "slug": "korrelation-kausalitaet-missverstaendnisse"
     },
     {
@@ -71,6 +83,8 @@
         ],
         "beschreibung": "Ein Beitrag über die methodischen Grenzen der Überinterpretation alltäglicher Verhaltensweisen.",
         "journal": "Annalen der Bedeutungsüberhöhung, Bd. 10, Heft 4",
+        "seite_start": 103,
+        "seite_ende": 117,
         "slug": "grenzen-der-wissenschaftlichen-ueberinterpretation"
     },
     {
@@ -81,6 +95,8 @@
         ],
         "beschreibung": "Über die Möglichkeit, wissenschaftliche Erkenntnisse in alltagstaugliche Empfehlungen zu überführen.",
         "journal": "Praxisjournal für Evidenznahe Belehrung, Bd. 5, Heft 3",
+        "seite_start": 67,
+        "seite_ende": 80,
         "slug": "ratgeber-als-wissenschaftliches-instrument"
     },
     {
@@ -92,6 +108,8 @@
         ],
         "beschreibung": "Erste Forschungsergebnisse zur systematischen Bedeutungsüberhöhung alltäglicher Handlungen und ihrer möglichen Anwendung in der modernen Lebensberatung.",
         "journal": "Berichte aus der Überdeutungsforschung, Bd. 1, Heft 2",
+        "seite_start": 1,
+        "seite_ende": 16,
         "slug": "kontrollierte-ueberinterpretation-verhaltensweisen"
     },
     {
@@ -103,6 +121,8 @@
         ],
         "beschreibung": "Eine empirische Analyse des möglichen Zusammenhangs zwischen zunehmender Selbstoptimierung und dem wachsenden Bedürfnis, sich dieser zu entziehen.",
         "journal": "Journal of Recursive Self-Improvement Studies, Bd. 2, Heft 4",
+        "seite_start": 201,
+        "seite_ende": 220,
         "slug": "selbstoptimierung-und-der-wunsch-aufzuhoeren"
     },
     {
@@ -114,6 +134,8 @@
         ],
         "beschreibung": "Eine Untersuchung der psychologischen und sozialen Funktionen von Ratschlägen, die zwar ausdrücklich erbeten, anschließend jedoch konsequent ignoriert werden.",
         "journal": "Zeitschrift für Selektive Beratung, Bd. 8, Heft 1",
+        "seite_start": 1,
+        "seite_ende": 19,
         "slug": "warum-menschen-ratschlaege-suchen"
     },
     {
@@ -125,6 +147,8 @@
         ],
         "beschreibung": "Eine Untersuchung der Frage, in welchem Umfang kritische Einwände zur wissenschaftlichen Belastbarkeit von Ergebnissen beitragen und ab wann sie lediglich störend werden.",
         "journal": "Kritik & Evidenz, Bd. 7, Heft 1",
+        "seite_start": 77,
+        "seite_ende": 94,
         "slug": "rolle-unbequemer-einwaende"
     },
     {
@@ -135,6 +159,8 @@
         ],
         "beschreibung": "Entwicklung eines Deutungsmodells, nach dem gewöhnliche Erschöpfungszustände als Hinweise auf tiefgreifende persönliche Veränderungsprozesse interpretiert werden können.",
         "journal": "Annalen der Bedeutungsüberhöhung, Bd. 11, Heft 2",
+        "seite_start": 41,
+        "seite_ende": 55,
         "slug": "alltaegliche-muedigkeit-persoenliche-entwicklung"
     },
     {
@@ -146,6 +172,8 @@
         ],
         "beschreibung": "Eine interdisziplinäre Untersuchung zeitlicher Muster bei der Formulierung guter Vorsätze und der auffälligen Bevorzugung des Montags als Beginntermin.",
         "journal": "Wochenanfangsforschung Quarterly, Bd. 3, Heft 3",
+        "seite_start": 89,
+        "seite_ende": 106,
         "slug": "gute-vorsaetze-am-montag"
     },
     {
@@ -157,6 +185,8 @@
         ],
         "beschreibung": "Untersuchung des kontrollierten Rückzugs aus sozialen Situationen als mögliche Methode zur kurzfristigen Steigerung des persönlichen Wohlbefindens.",
         "journal": "Journal für Praktische Distanzpflege, Bd. 15, Heft 3",
+        "seite_start": 145,
+        "seite_ende": 161,
         "slug": "therapeutische-wirkung-sozialer-rueckzug"
     },
     {
@@ -168,6 +198,8 @@
         ],
         "beschreibung": "Eine statistische Analyse der Aussagekraft kollektiver Verhaltensbeobachtungen bei fehlender Kenntnis der tatsächlichen Grundgesamtheit.",
         "journal": "Zeitschrift für Populäre Grundgesamtheiten, Bd. 4, Heft 1",
+        "seite_start": 7,
+        "seite_ende": 22,
         "slug": "das-machen-doch-alle"
     },
     {
@@ -179,6 +211,8 @@
         ],
         "beschreibung": "Eine Langzeituntersuchung der Frage, wie häufig Menschen ihre Meinung ändern, nachdem sie feststellen, dass ihre ursprüngliche Meinung gerade ungünstig ist.",
         "journal": "Mitteilungen zur Dynamischen Überzeugungsforschung, Bd. 6, Heft 4",
+        "seite_start": 251,
+        "seite_ende": 269,
         "slug": "spontane-meinungsrevisionen-im-alltag"
     },
     {
@@ -189,6 +223,8 @@
         ],
         "beschreibung": "Zusammenstellung und systematische Bewertung wissenschaftlich klingender Argumente für die Verschiebung anstehender Vorhaben auf einen späteren Zeitpunkt.",
         "journal": "Archiv für Aufgeschobene Vorhaben, Bd. 18, Heft 1",
+        "seite_start": 1,
+        "seite_ende": 12,
         "slug": "gruende-heute-nichts-anzufangen"
     },
     {
@@ -200,6 +236,8 @@
         ],
         "beschreibung": "Eine empirische Untersuchung der Frage, unter welchen Bedingungen bewusste Untätigkeit als besonders effiziente Form des Zeitmanagements betrachtet werden kann.",
         "journal": "Jahrbuch für Strategische Untätigkeit, Bd. 9, Heft 2",
+        "seite_start": 33,
+        "seite_ende": 51,
         "slug": "produktive-vermeidung-von-produktivitaet"
     },
     {
@@ -211,6 +249,8 @@
         ],
         "beschreibung": "Eine grundsätzliche Untersuchung des verbreiteten Missverständnisses, wonach die bloße Existenz eines Problems bereits dessen Lösung erforderlich macht.",
         "journal": "Zeitschrift für Angewandte Problemunterlassung, Bd. 12, Heft 3",
+        "seite_start": 201,
+        "seite_ende": 216,
         "slug": "problem-geloest-werden-muss"
     }
 ]

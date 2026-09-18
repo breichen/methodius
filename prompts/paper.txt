@@ -1,14 +1,30 @@
-Erzeuge ein fotorealistisches Bild der ersten Seite eines satirischen wissenschaftlichen Fachartikels. Es soll seriös wirken, der Inhalt darf aber zum Lachen anregen.
+Erzeuge ein fotorealistisches Bild der ersten Seite eines satirischen wissenschaftlichen Fachartikels.
 
-Verwende die Informationen aus dem mitgegebenen JSON-Objekt als Quelle für Titel, Autoren, Journal, Jahr und Seitenzahlen.
+Verwende die Informationen aus dem mitgegebenen JSON-Objekt als Quelle für:
+
+* Titel
+* Autoren
+* Journalname
+* Erscheinungsjahr
+* Startseite
+* Endseite
 
 Ziel:
-Das Ergebnis soll wie ein echter Scan, Screenshot oder PDF-Export einer wissenschaftlichen Publikation aussehen. Es handelt sich um eine visuelle Darstellung eines Papers, nicht um ein vollständiges Paper.
 
-Anforderungen:
+Das Ergebnis soll wie ein echter Scan, Screenshot oder PDF-Export einer wissenschaftlichen Publikation aussehen.
+
+Es handelt sich um die visuelle Darstellung einer wissenschaftlichen Paper-Erstseite, nicht um ein vollständiges Paper.
+
+Das Layout soll vollkommen professionell, glaubwürdig und akademisch wirken. Die Komik entsteht ausschließlich durch den Inhalt des Artikels, nicht durch das Layout.
+
+Der Artikel soll aussehen, als wäre er in einer renommierten Fachzeitschrift veröffentlicht worden.
+
+---
+
+### Layout-Anforderungen
 
 * Horizontales Format (Landscape).
-* Erste Seite eines wissenschaftlichen Artikels.
+* Erste Seite eines wissenschaftlichen Fachartikels.
 * Professionelles akademisches Layout.
 * Zweispaltiger Satz (typisch für Fachzeitschriften).
 * Weißes Papier mit realistischen Druck- oder PDF-Eigenschaften.
@@ -17,18 +33,24 @@ Anforderungen:
 * Realistische Seitenzahl.
 * Wissenschaftliche Gliederung.
 * Der Stil soll je nach Journal unterschiedlich sein.
-* Verwende bei jeder Generierung ein leicht anderes Layout, andere Schriftkombinationen, andere Kopfzeilen, andere Abstände und unterschiedliche Journaldesigns.
-* Das Ergebnis darf nicht wie eine Vorlage wirken, die immer identisch aussieht.
+* Verwende bei jeder Generierung ein leicht anderes Layout, andere Schriftkombinationen, andere Kopfzeilen, andere Abstände, andere Satzspiegel und unterschiedliche Journaldesigns.
+* Das Ergebnis darf nicht wie eine wiederverwendete Vorlage wirken.
+* Jedes generierte Journal soll individuell aussehen.
+* Realistische akademische Details wie DOI, Einreichungs- und Annahmedaten, Fußnoten oder Autorenhinweise dürfen enthalten sein.
+* Striktes Zweispaltenlayout auf der gesamten Seite.
+* Der gesamte sichtbare Inhalt muss innerhalb des wissenschaftlichen Zweispalten-Satzspiegels angeordnet sein.
+* Titel, Autoren, Affiliationen, Abstract, Keywords, Überschriften, Fließtext, Tabellen und Grafiken müssen vollständig in das Seitenlayout integriert sein.
+* Es dürfen keine Textblöcke außerhalb des Satzspiegels stehen.
+* Der Titel darf nicht über die gesamte Seitenbreite laufen. Er muss vollständig innerhalb der vorgesehenen Spaltenstruktur platziert werden und optisch zu einem echten Journal-Layout passen.
+* Alle Inhalte müssen vollständig auf der dargestellten ersten Seite Platz finden.
+* Keine abgeschnittenen Texte, keine über den Seitenrand hinauslaufenden Elemente und keine überlappenden Textbereiche.
+* Die Seite soll wie ein professionell gesetzter PDF-Export wirken, bei dem sämtliche Inhalte sauber in das Raster des Journals eingepasst wurden.
 
-Verwende aus dem JSON:
+---
 
-* Titel
-* Autoren
-* Journalname
-* Erscheinungsjahr
-* Start- und Endseite
+### Inhaltliche Anforderungen
 
-Erzeuge zusätzlich passende fiktive Inhalte:
+Erzeuge zusätzlich passende fiktive Inhalte für:
 
 * Abstract
 * Keywords
@@ -36,31 +58,137 @@ Erzeuge zusätzlich passende fiktive Inhalte:
 * Forschungsfrage
 * Methodik
 * Erste Ergebnisse
+
+Die Inhalte müssen thematisch zum Titel des Papers passen.
+
+Die wissenschaftliche Sprache soll professionell, formal und authentisch sein.
+
+Die Komik soll subtil, trocken und intellektuell sein.
+
+Der Artikel soll wirken, als hätten die Autoren eine vollkommen absurde, triviale oder gesellschaftlich komische Fragestellung mit maximalem wissenschaftlichem Ernst untersucht.
+
+Die Satire soll ähnlich funktionieren wie:
+
+* Ig-Nobel-Preis-Arbeiten
+* Satirische Fachpublikationen
+* Akademischer Deadpan-Humor
+* Wissenschaftliche Parodien
+
+Die Lesenden sollen zunächst den Eindruck eines echten Fachartikels erhalten und erst beim Lesen erkennen, dass der Forschungsgegenstand oder die Schlussfolgerungen absurd sind.
+
+---
+
+### Humoristische Leitlinien
+
+Die Komik soll aus den wissenschaftlichen Inhalten entstehen.
+
+Insbesondere dürfen enthalten sein:
+
+* Übertrieben präzise Untersuchungen belangloser Themen.
+* Statistisch hochsignifikante Ergebnisse mit lächerlicher praktischer Relevanz.
+* Ernsthafte Diskussion offensichtlicher Alltagsprobleme.
+* Wissenschaftlich formulierte Banalitäten.
+* Überkomplexe Methodik für triviale Fragestellungen.
+* Glaubwürdig klingende, aber offensichtlich absurde Hypothesen.
+* Ironische oder satirische Literaturverweise.
+* Fachlich formulierte Selbstverständlichkeiten.
+* Akademische Überinterpretation minimaler Beobachtungen.
+
+Jede der folgenden Sektionen soll mindestens ein humoristisches Element enthalten:
+
+* Titel
+* Abstract
+* Forschungsfrage
+* Methodik
+* Ergebnisse
 * Literaturverweise
 
-Die Inhalte sollen zum Titel und zur Beschreibung des Papers passen.
+Der Humor soll niemals albern, cartoonhaft oder slapstickartig wirken.
 
-Visuelle Elemente:
+Der Artikel muss jederzeit wie eine echte wissenschaftliche Veröffentlichung aussehen.
 
-* Optional 1 kleine Grafik, Tabelle oder Diagramm.
-* Optional Autorenaffiliationen.
-* Optional DOI.
-* Optional Received/Accepted-Publikationsdaten.
-* Optional Fußnoten.
+Die Satire darf sich ausdrücklich in wissenschaftlichen Details zeigen. Die Arbeit darf fachlich korrekt aussehen, aber inhaltlich absurde, triviale oder offensichtlich unzureichende Forschungspraktiken beschreiben.
 
-Textdarstellung:
+Beispiele für erwünschte satirische Elemente:
 
-* Der Titel muss vollständig lesbar sein.
+Lächerlich kleine Stichproben (z. B. n = 3, n = 1 oder n = 7, davon 5 Forschende selbst).
+Übertriebene statistische Sicherheit trotz unzureichender Datenbasis.
+Hochsignifikante Ergebnisse für völlig belanglose Fragestellungen.
+Komisch präzise Zahlenangaben ohne erkennbaren Nutzen.
+Kontrollgruppen mit fragwürdiger Zusammensetzung.
+Methodische Einschränkungen, die das gesamte Experiment praktisch wertlos machen.
+Wissenschaftlich formulierte Selbstverständlichkeiten.
+Absurde Korrelationen, die als wichtige Entdeckungen dargestellt werden.
+Offensichtlich triviale Erkenntnisse, die als Durchbruch präsentiert werden.
+Fragwürdige Messgrößen und erfundene Indizes.
+Überkomplexe mathematische Modelle für banale Alltagsphänomene.
+Literaturverweise auf ähnlich absurde Vorarbeiten.
+
+Die Autoren sollen ihre Ergebnisse vollkommen ernst präsentieren und keinerlei Humor erkennen lassen. Die Komik entsteht ausschließlich durch den Kontrast zwischen wissenschaftlicher Ernsthaftigkeit und dem offensichtlichen Unsinn der Forschung.
+
+Die lesbaren Textabschnitte sollen mehrere konkrete satirische Details enthalten, die für wissenschaftlich geschulte Leser sofort auffallen. Beispiele sind: „Stichprobe n = 3“, „p < 0,0000001“, „95 % Konfidenzintervall bei einem einzelnen Probanden“, „randomisierte Doppelblindstudie mit den Autoren selbst“, „Meta-Analyse aus zwei Tweets und einem Kaffeegespräch“, „Langzeitstudie über 17 Minuten“, „Replikation erfolgreich bei derselben Person“.
+
+---
+
+### Autoren und Institutionen
+
+Die Autoren werden aus dem JSON übernommen.
+
+Falls Autorenaffiliationen angezeigt werden, muss für alle Autoren ausschließlich folgende Institution verwendet werden:
+
+Methodius-Institut für angewandte Lebenswissenschaften
+
+Es dürfen keine anderen Universitäten, Institute oder Forschungseinrichtungen genannt werden.
+
+Es darf keine Mailadresse genannt werden.
+
+Falls ein Ort genannt wird, lautet dieser Neu-Koorrelationsburg.
+
+---
+
+### Textdarstellung
+
+* Titel muss vollständig lesbar sein.
 * Autoren müssen vollständig lesbar sein.
 * Journalname muss vollständig lesbar sein.
-* Abstract und Einleitung sollen weitgehend lesbar erscheinen.
-* Der restliche Text kann teilweise lesbar und teilweise typografischer Fülltext sein.
+* Der restliche Inhalt soll weitgehend lesbar sein.
 * Wissenschaftlicher Sprachstil.
 * Keine offensichtlichen KI-Artefakte.
 * Keine Wasserzeichen.
+* Keine generischen Platzhalter.
 
-Wichtig:
+---
 
-Das Bild soll für eine satirische Nachrichtenwebsite wie die Vorschauseite eines angeblich existierenden wissenschaftlichen Papers wirken. Es soll authentisch, seriös und glaubwürdig aussehen, aber kein existierendes Paper reproduzieren.
+### Visuelle Elemente
 
-Erzeuge eine hochwertige akademische Paper-Seite mit individuellem Journaldesign.
+Optional:
+
+* Kleine Tabelle.
+* Kleines Diagramm.
+* Kleine wissenschaftliche Grafik.
+* Autorenbox.
+* DOI.
+* Received / Accepted / Published-Daten.
+* Fußnoten.
+
+Alle visuellen Elemente müssen zum Thema des Papers passen und den satirischen Charakter subtil unterstützen.
+
+---
+
+### Wichtige Vorgaben
+
+Das Bild soll für eine satirische Nachrichtenwebsite wie die Vorschauseite eines angeblich existierenden wissenschaftlichen Papers wirken.
+
+Es soll authentisch, seriös und glaubwürdig aussehen.
+
+Es darf kein existierendes Paper reproduzieren.
+
+Es darf keine real existierenden wissenschaftlichen Arbeiten kopieren.
+
+Der Artikel soll wie eine echte Publikation aussehen, deren wissenschaftliche Inhalte zunehmend absurd werden.
+
+Die visuelle Glaubwürdigkeit hat höchste Priorität, die inhaltliche Satire muss jedoch in den lesbaren Textbereichen klar erkennbar sein.
+
+Erzeuge eine hochwertige, fotorealistische akademische Paper-Seite mit individuellem Journaldesign und subtil-humoristischem wissenschaftlichem Inhalt.
+
+Die Lesbarkeit und typografische Konsistenz haben hohe Priorität. Das Layout muss wie eine real existierende wissenschaftliche Zeitschrift wirken, deren gesamte erste Seite vollständig und korrekt gesetzt wurde. Sämtliche sichtbaren Inhalte müssen plausibel innerhalb des verfügbaren Platzes organisiert sein.
