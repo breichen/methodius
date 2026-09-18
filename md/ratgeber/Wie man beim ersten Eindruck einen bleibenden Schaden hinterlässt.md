@@ -305,7 +305,7 @@ Und offene Fragen haben die unangenehme Eigenschaft, dass Menschen sie selbst be
 
 ---
 
-# BONUS: Der große **„Bleibender Schaden“-Test**
+# BONUS: Der große „Bleibender Schaden“-Test
 
 **1. Wie betrittst du einen Raum, in dem du niemanden kennst?**
 

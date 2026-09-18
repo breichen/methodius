@@ -337,4 +337,4 @@ Du bist nun bereit, Kunst auf einem Niveau zu betrachten, bei dem selbst dein ei
 
 **Dr. Maximilian Methodius**
 
-_Autor, Satiriker und ausgewiesener Experte für preisbasierte Kunstwahrnehmung und nachträgliche ästhetische Erkenntnis._
+*Autor, Satiriker und ausgewiesener Experte für preisbasierte Kunstwahrnehmung und nachträgliche ästhetische Erkenntnis.*

@@ -354,4 +354,4 @@ Und plötzlich stehen alle wieder vor dem Bild.
 
 **Dr. Maximilian Methodius**
 
-_Autor, Satiriker und ausgewiesener Experte für bedeutungsvolle Kopfneigungen, produktive Ratlosigkeit und das professionelle Erkennen von Spannungsverhältnissen._
+*Autor, Satiriker und ausgewiesener Experte für bedeutungsvolle Kopfneigungen, produktive Ratlosigkeit und das professionelle Erkennen von Spannungsverhältnissen.*

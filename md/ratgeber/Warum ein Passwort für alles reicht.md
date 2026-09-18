@@ -390,4 +390,4 @@ Du hast damit einen entscheidenden Schritt in Richtung digitaler Einfachheit gem
 
 **Dr. Maximilian Methodius**
 
-*Autor, Passwortoptimierer und überzeugter Verfechter einer Welt, in der niemand mehr 37 verschiedene Passwörter auf einen Zettel schreiben muss.*
+*Autor, Satiriker und überzeugter Verfechter einer Welt, in der niemand mehr 37 verschiedene Passwörter auf einen Zettel schreiben muss.*

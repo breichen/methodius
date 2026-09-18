@@ -356,7 +356,7 @@ Und wenn du dir nicht sicher bist: **Verschiebe die Entscheidung auf später.** 
 
 ---
 
-# BONUS: Das „Termine vermeiden leicht gemacht“-Quiz
+# BONUS: Der Termine-Vermeidungs-Test
 
 Finde bei jeder Frage die Antwort, die dich deinem Ziel näherbringt: **möglichst wenige Termine wahrnehmen, ohne jemals den Eindruck zu erwecken, du würdest Termine grundsätzlich vermeiden.**
 

@@ -325,4 +325,4 @@ Unseres schafft beides.
 
 **Dr. Maximilian Methodius**
 
-*Autor, Passwortforscher und vermutlich der einzige Mensch, der eine 18-stellige Zeichenfolge so lange erklären kann, bis sie fast wie ein Familienmitglied wirkt.*
+*Autor, Satiriker und vermutlich der einzige Mensch, der eine 18-stellige Zeichenfolge so lange erklären kann, bis sie fast wie ein Familienmitglied wirkt.*

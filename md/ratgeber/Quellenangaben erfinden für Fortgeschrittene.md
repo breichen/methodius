@@ -1,7 +1,7 @@
 
 # Quellenangaben erfinden für Fortgeschrittene
 
-Der ultimative Ratgeber für alle, die keine belastbaren Belege haben, aber trotzdem gerne so wirken möchten, als hätten sie gründlich recherchiert.
+## Der ultimative Ratgeber für alle, die keine belastbaren Belege haben, aber trotzdem gerne so wirken möchten, als hätten sie gründlich recherchiert.
 
 **Dr. Maximilian Methodius**
 
