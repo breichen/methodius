@@ -1,7 +1,3 @@
-# Titel
-
-Ans Bett gebunden
-
 ## Frage
 
 Warum kann ich morgens nicht aufstehen?
@@ -25,7 +21,3 @@ Hervorragend. Du wirst zwar weiterhin zu spät kommen, aber wesentlich ausgeschl
 ## Einsender
 
 Horst
-
-## Erstellt
-
-2026-08-27
