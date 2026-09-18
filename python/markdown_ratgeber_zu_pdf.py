@@ -723,8 +723,9 @@ def make_html(
   }}
 
   blockquote strong {{
+    font-style: normal;
+    font-weight: 700;
     color: inherit;
-    font-style: italic;
   }}
 
   ul, ol {{

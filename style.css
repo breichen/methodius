@@ -132,8 +132,9 @@ blockquote p {
 }
 
 blockquote strong {
-  color: var(--color-text);
   font-style: normal;
+  font-weight: 700;
+  color: inherit;
 }
 
 /* ============================================
