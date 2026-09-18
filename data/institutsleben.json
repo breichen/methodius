@@ -1,0 +1,76 @@
+[
+  {
+    "datei": "teamevent-oper.md",
+    "titel": "Teamevent im Nationaltheater",
+    "datum": "2027-10-28",
+    "bild": "pics/news/oper.png",
+    "link": "institutsleben.html",
+    "linkText": "Zum Institutsleben"
+  },
+  {
+    "datei": "methodius-orden.md",
+    "titel": "Hohe Auszeichnung für Dr. Maximilian Methodius",
+    "datum": "2027-06-12",
+    "bild": "pics/news/methodius-orden.png"
+  },
+  {
+    "datei": "teamevent-hiking.md",
+    "titel": "Teamevent in den Bergen",
+    "datum": "2027-06-05",
+    "bild": "pics/news/hiking.png",
+    "link": "institutsleben.html",
+    "linkText": "Zum Institutsleben"
+  },
+  {
+    "datei": "huber-carl-von-frisch-medaille.md",
+    "titel": "Verleihung der Carl von Frisch-Medaille an Dr. Konrad P. Huber",
+    "datum": "2027-05-24",
+    "bild": "pics/news/huber-carl-von-frisch-medaille.png"
+  },
+  {
+    "datei": "wankelmuth-sigismund-freud-medaille.md",
+    "titel": "Verleihung der Sigismund-Freud-Medaille an Prof. Dr. Hildegard Wankelmuth",
+    "datum": "2027-04-26",
+    "bild": "pics/news/wankelmuth-sigismund-freud-medaille.png"
+  },
+  {
+    "datei": "teamevent-billard.md",
+    "titel": "Teamevent am Billardtisch",
+    "datum": "2027-01-21",
+    "bild": "pics/news/billard.png",
+    "link": "institutsleben.html",
+    "linkText": "Zum Institutsleben"
+  },
+  {
+    "datei": "jahrestagung-2026.md",
+    "titel": "Methodius-Institut richtet erfolgreiche Fachtagung aus",
+    "datum": "2026-11-15",
+    "bild": "pics/news/jahrestagung-2026.png",
+    "link": "institutsleben.html",
+    "linkText": "Zum Institutsleben"
+  },
+  {
+    "datei": "jahrestagung-2026-poster.md",
+    "titel": "Ankündigung der Jahrestagung 2026",
+    "datum": "2026-09-29",
+    "bild": "pics/news/jahrestagung-2026-poster.png",
+    "link": "institutsleben.html",
+    "linkText": "Zum Institutsleben"
+  },
+  {
+    "datei": "teamevent-rafting.md",
+    "titel": "Teamevent auf der Moldau",
+    "datum": "2026-09-15",
+    "bild": "pics/news/rafting.png",
+    "link": "institutsleben.html",
+    "linkText": "Zum Institutsleben"
+  },
+  {
+    "datei": "gruendung-methodius-institut.md",
+    "titel": "Methodius-Institut für Lebenswissenschaften gegründet",
+    "datum": "2026-09-04",
+    "bild": "pics/news/gruendung-methodius-institut.png",
+    "link": "institutsleben.html",
+    "linkText": "Zum Institutsleben"
+  }
+]
