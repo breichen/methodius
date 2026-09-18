@@ -44,7 +44,12 @@ async function erzeugePaperNews(veroeffentlichungen) {
 
     const path = `news-papers/${paper.slug}.md`;
     const eigeneDatei = `md/${path}`;
-    const hatEigeneDatei = await dateiExistiert(eigeneDatei);
+    const bildPfad = `pics/papers/${paper.slug}.png`;
+
+    const [hatEigeneDatei, hatBild] = await Promise.all([
+      dateiExistiert(eigeneDatei),
+      dateiExistiert(bildPfad),
+    ]);
 
     return {
       datei: hatEigeneDatei
@@ -52,6 +57,7 @@ async function erzeugePaperNews(veroeffentlichungen) {
         : "neues-paper-generisch.md",
       titel: `Neues Paper: ${paper.titel}`,
       datum: paper.datum,
+      ...(hatBild && { bild: bildPfad }),
       link: "veroeffentlichungen.html",
       linkText: "Zur Veröffentlichung",
       kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
