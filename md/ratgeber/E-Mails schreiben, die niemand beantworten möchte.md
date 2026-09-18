@@ -425,4 +425,4 @@ Wenn darauf niemand antwortet, hast du alles richtig gemacht. Wenn doch jemand a
 
 **Dr. Maximilian Methodius**
 
-_Autor, Satiriker und ausgewiesener Experte für strategische Unbeantwortbarkeit im schriftlichen Geschäftsverkehr._
+*Autor, Satiriker und ausgewiesener Experte für strategische Unbeantwortbarkeit im schriftlichen Geschäftsverkehr.*

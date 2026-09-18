@@ -338,7 +338,7 @@ def _pruefe_optionale_md_datei(
 _UEBERSCHRIFT_MUSTER = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
 _FETTE_FRAGE_MUSTER = re.compile(r"^\*\*\d+\.\s*.*\*\*$")
 _UEBERMAESSIGE_TRENNER_MUSTER = re.compile(r"^-{4,}")
-_H2_INTRO_PRAEFIXE = ("Der ultimative Ratgeber", "Der revolutionäre Ratgeber")
+_H2_INTRO_PRAEFIXE = ("Der ultimative Ratgeber", "Der revolutionäre Ratgeber", "Ein Ratgeber")
 _KAESTCHEN = "☐"
 
 
@@ -444,10 +444,10 @@ def pruefe_ratgeber_markdown_struktur(pfad: Path, slug: str, meldungen: Meldunge
         if cursor >= 0 and _ist_trenner(zeilen[cursor]):
             erlaubte_trenner_zeilen.add(cursor)
 
-    # Rule: es gibt einen h1, der mit "BONUS:" beginnt und mit "Test" endet.
+    # Rule: es gibt einen h1, der mit "BONUS:" beginnt und mit "Test" oder "test" endet.
     bonus_kandidaten = [
         (idx, txt) for idx, txt in h1_positionen
-        if txt.startswith("BONUS:") and txt.endswith("Test")
+        if txt.startswith("BONUS:") and (txt.endswith("Test") or txt.endswith("test"))
     ]
     if len(bonus_kandidaten) != 1:
         meldungen.fehler_melden(
@@ -459,9 +459,9 @@ def pruefe_ratgeber_markdown_struktur(pfad: Path, slug: str, meldungen: Meldunge
     else:
         bonus_idx = bonus_kandidaten[0][0]
 
-    # Rule: alle H1, die mit "Kapitel" beginnen oder exakt "Schlusswort"
-    # heißen, haben ein H2 direkt darunter (Leerzeile + H2); alle anderen
-    # H1 außer der allerersten haben KEIN H2 direkt darunter.
+    # Rule: alle H1, die mit "Kapitel" oder "Tag" beginnen oder exakt
+    # "Schlusswort" heißen, haben ein H2 direkt darunter (Leerzeile + H2);
+    # alle anderen H1 außer der allerersten haben KEIN H2 direkt darunter.
     for idx, txt in h1_positionen[1:]:
         danach = _zeile_oder_none(zeilen, idx + 1)
         h2_kandidat = _zeile_oder_none(zeilen, idx + 2)
@@ -471,7 +471,9 @@ def pruefe_ratgeber_markdown_struktur(pfad: Path, slug: str, meldungen: Meldunge
             and h2_info is not None and h2_info[0] == 2
         )
 
-        ist_kapitel_oder_schlusswort = txt.startswith("Kapitel") or txt == "Schlusswort"
+        startet = txt.startswith("Kapitel") or txt.startswith("Tag")
+        exakt = txt == "Schlusswort" or txt == "Bonuskapitel"
+        ist_kapitel_oder_schlusswort = startet or exakt
 
         if ist_kapitel_oder_schlusswort and not hat_h2_direkt_darunter:
             meldungen.fehler_melden(

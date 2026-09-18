@@ -1,11 +1,11 @@
 
 # Wie man aus einer kleinen Aufgabe ein Großprojekt macht
 
-_Der revolutionäre Ratgeber für alle, die eine einfache Aufgabe niemals einfach erledigen würden, wenn daraus auch ein strategisches Großprojekt werden kann._
+## Der revolutionäre Ratgeber für alle, die eine einfache Aufgabe niemals einfach erledigen würden, wenn daraus auch ein strategisches Großprojekt werden kann.
 
 **Dr. Maximilian Methodius**
 
-----------
+---
 
 # Herzlichen Glückwunsch!
 
@@ -19,7 +19,7 @@ Dieser Ratgeber zeigt dir, wie du aus einer Aufgabe von fünf Minuten ein Vorhab
 
 Das Geheimnis ist einfach: **Eine Aufgabe ist niemals klein. Sie ist lediglich noch nicht ausreichend organisiert.**
 
-----------
+---
 
 # Kapitel 1
 
@@ -37,7 +37,7 @@ Besonders professionell wirkt es, wenn du diesen Perspektivwechsel nicht als Aus
 
 Am Ende des ersten Tages sollte die Datei noch immer nicht umbenannt sein. Dafür weißt du jetzt, dass es kompliziert werden könnte.
 
-----------
+---
 
 # Kapitel 2
 
@@ -55,7 +55,7 @@ Du kannst nun eine Analyse ansetzen, um die Ursache dieses Zustands zu untersuch
 
 Nach Möglichkeit sollte die Analyse am Ende ergeben, dass weitere Analysen erforderlich sind. Damit ist die Grundlage geschaffen.
 
-----------
+---
 
 # Kapitel 3
 
@@ -73,7 +73,7 @@ Aus diesen Fragen entsteht eine Teilnehmerliste. Aus der Teilnehmerliste entsteh
 
 Der ursprüngliche Termin hätte natürlich gepasst. Aber das ist jetzt nicht mehr wichtig.
 
-----------
+---
 
 # Kapitel 4
 
@@ -91,7 +91,7 @@ Jetzt besitzt die Aufgabe nicht nur einen Namen, sondern eine Identität. Du kan
 
 Vor allem kannst du irgendwann sagen, dass das Projekt „ins Stocken geraten“ sei. Das klingt erheblich besser, als zuzugeben, dass niemand die Datei umbenannt hat.
 
-----------
+---
 
 # Kapitel 5
 
@@ -109,7 +109,7 @@ Beim Kick-off selbst solltest du zunächst die Ausgangslage erläutern. Anschlie
 
 Das schafft Konsens. Danach kannst du das Zielbild präsentieren. Wenn niemand genau versteht, was damit gemeint ist, hast du alles richtig gemacht.
 
-----------
+---
 
 # Kapitel 6
 
@@ -125,7 +125,7 @@ Sollte jemand fragen, welche Version nun gültig ist, antworte nicht sofort. Die
 
 Du siehst: Dokumentation erzeugt nicht nur Ordnung. Sie erzeugt Arbeit.
 
-----------
+---
 
 # Kapitel 7
 
@@ -145,7 +145,7 @@ Eine Machbarkeitsprüfung muss nicht ergeben, dass etwas unmöglich ist. Sie mus
 
 Anschließend kannst du feststellen, dass die Voraussetzungen grundsätzlich gegeben sind. Damit ist die Aufgabe theoretisch machbar. Praktisch bleibt sie weiterhin offen.
 
-----------
+---
 
 # Kapitel 8
 
@@ -163,7 +163,7 @@ Nach zwei Stunden habt ihr 27 Klebezettel, vier Themencluster und eine erstaunli
 
 Das ist wertvoll. Denn solange es verschiedene Sichtweisen gibt, besteht Abstimmungsbedarf. Und solange Abstimmungsbedarf besteht, ist das Projekt eindeutig noch nicht abgeschlossen.
 
-----------
+---
 
 # Kapitel 9
 
@@ -190,7 +190,7 @@ Die Korrektur selbst dauert weiterhin zwölf Sekunden. Aber jetzt ist sie eingeb
 
 Sollte jemand vorschlagen, den Namen einfach zu ändern, kannst du ruhig bleiben. Du hast inzwischen einen Prozess. Gegen einen Prozess argumentiert man nicht. Man beantragt seine Überarbeitung.
 
-----------
+---
 
 # Kapitel 10
 
@@ -206,7 +206,7 @@ Nach einigen Wochen empfiehlt sich eine Ampel. Grün bedeutet, dass alles planm�
 
 Da niemand gern Rot sieht, wird nach kurzer Zeit fast alles Gelb. Gelb ist die perfekte Projektfarbe. Es signalisiert Handlungsbedarf, ohne dass jemand sofort handeln muss. So entsteht Stabilität.
 
-----------
+---
 
 # Kapitel 11
 
@@ -222,7 +222,7 @@ Wenn du die erforderlichen Daten schließlich erhältst, stellst du fest, dass s
 
 Damit ist das Projekt robust gegen schnelle Lösungen geworden. Du hast jetzt ein System geschaffen, das nur funktionieren kann, wenn mehrere Menschen gleichzeitig genau das Richtige tun. Das ist der organisatorische Endgegner.
 
-----------
+---
 
 # Kapitel 12
 
@@ -240,7 +240,7 @@ Sollte jemand Option B bevorzugen, kann auf die zusätzlichen Ressourcen hingewi
 
 Damit bleibt C. Und C braucht weitere Abstimmung. Eine gute Entscheidung erkennt man daran, dass nach ihr mehr Fragen existieren als davor.
 
-----------
+---
 
 # Kapitel 13
 
@@ -256,7 +256,7 @@ Es funktioniert. Das ist erfreulich. Nun stellt sich allerdings die Frage, ob da
 
 Nach der zweiten Pilotphase wird festgestellt, dass die erste Pilotphase unter anderen Rahmenbedingungen stattgefunden hat. Das ist eine wichtige Erkenntnis. Sie sollte dokumentiert werden.
 
-----------
+---
 
 # Kapitel 14
 
@@ -281,7 +281,7 @@ Und die Termine brauchen eine Terminabstimmung.
 
 Du hast das ursprüngliche Problem damit endgültig gelöst. Es existiert nicht mehr. Stattdessen existiert jetzt ein deutlich größeres Problem. Das ist ein Fortschritt.
 
-----------
+---
 
 # Kapitel 15
 
@@ -301,7 +301,7 @@ Die wirklich hohe Kunst besteht daher nicht darin, eine Aufgabe zu bewältigen. 
 
 Wenn dir das gelingt, hast du aus einer kleinen Aufgabe ein Großprojekt gemacht. Und aus dem Großprojekt eine dauerhafte Organisationsstruktur.
 
-----------
+---
 
 # BONUS: Der große Großprojekt-Test
 
@@ -379,4 +379,4 @@ Am besten beginnst du mit etwas Kleinem. Vielleicht mit dem Lesen dieses Ratgebe
 
 **Dr. Maximilian Methodius**
 
-_Autor, Satiriker und ausgewiesener Experte für strategische Überdimensionierung alltäglicher Tätigkeiten._
+*Autor, Satiriker und ausgewiesener Experte für strategische Überdimensionierung alltäglicher Tätigkeiten.*

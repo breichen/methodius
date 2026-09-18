@@ -1,11 +1,11 @@
 
 # Komplimente machen, die garantiert falsch verstanden werden
 
-_Der revolutionäre Ratgeber für alle, die endlich lernen wollen, ein nettes Kompliment so zu formulieren, dass beim Gegenüber möglichst viele Fragen offenbleiben._
+## Der revolutionäre Ratgeber für alle, die endlich lernen wollen, ein nettes Kompliment so zu formulieren, dass beim Gegenüber möglichst viele Fragen offenbleiben.
 
 **Dr. Maximilian Methodius**
 
-----------
+---
 
 # Herzlichen Glückwunsch!
 
@@ -17,7 +17,7 @@ Genau hier setzt dieser Ratgeber an. Die zentrale Methode lautet: **Lobe niemals
 
 Denn ein gutes Kompliment sagt: „Du bist toll.“ Ein hervorragendes Kompliment sagt: „Du bist toll – und ich habe nicht damit gerechnet.“
 
-----------
+---
 
 # Kapitel 1
 
@@ -35,7 +35,7 @@ Noch eleganter ist: „Du siehst besser aus, als ich erwartet hätte.“
 
 Hier hast du den entscheidenden Schritt geschafft. Du hast ein Kompliment gemacht und gleichzeitig eine Erwartung offenbart, von deren Existenz die andere Person bisher nichts wusste. Das ist kommunikative Präzisionsarbeit.
 
-----------
+---
 
 # Kapitel 2
 
@@ -53,7 +53,7 @@ Was genau damit gemeint ist, bleibt offen. Vielleicht ist PowerPoint schlecht. V
 
 Die andere Person wird es herausfinden wollen. Das Kompliment hat damit seine Arbeit aufgenommen.
 
-----------
+---
 
 # Kapitel 3
 
@@ -69,7 +69,7 @@ Noch wirkungsvoller ist: „Du hast eine interessante Art, in einen Raum zu komm
 
 Du bewunderst nicht mehr die Person. Du dokumentierst sie. Das schafft Nähe auf eine Weise, die klassische Höflichkeit niemals ermöglichen könnte.
 
-----------
+---
 
 # Kapitel 4
 
@@ -85,7 +85,7 @@ Offenbar gab es eine Phase, in der du die Person für weniger normal gehalten ha
 
 Diese Fragen sind völlig unnötig. Genau deshalb funktionieren sie so gut.
 
-----------
+---
 
 # Kapitel 5
 
@@ -105,7 +105,7 @@ Jetzt ist nicht mehr klar, ob du die Person lobst oder eine Krise vermutest. Bes
 
 „Das gefällt mir.“ Nun hat die Person die Wahl zwischen zwei Möglichkeiten. Entweder sie war bisher nicht freundlich genug oder du hast einen auffälligen Unterschied festgestellt. In beiden Fällen hat das Kompliment seine Wirkung entfaltet.
 
-----------
+---
 
 # Kapitel 6
 
@@ -121,7 +121,7 @@ Damit hast du aus einem einfachen Lob eine Entwicklungsgeschichte gemacht. Das G
 
 Falls du diese Vergangenheit gar nicht kennst, ist das kein Hindernis. Ein selbstbewusst vorgetragenes Kompliment benötigt nicht zwingend eine belastbare historische Grundlage.
 
-----------
+---
 
 # Kapitel 7
 
@@ -137,7 +137,7 @@ Die Person kann sich darüber freuen, dass du ihr Potenzial erkannt hast. Gleich
 
 Diese Form des Kompliments erzeugt eine angenehme Unsicherheit, die lange nachwirkt. Das ist wichtig. Ein gutes Kompliment endet nicht mit dem Satz. Es arbeitet weiter.
 
-----------
+---
 
 # Kapitel 8
 
@@ -157,7 +157,7 @@ Das ist bemerkenswert flexibel. Wenn die Person älter ist, kann sie sich über 
 
 Sollte anschließend Stille entstehen, darfst du nicht sofort nachbessern. Nachbesserung ist der Feind des Missverständnisses.
 
-----------
+---
 
 # Kapitel 9
 
@@ -173,7 +173,7 @@ Noch professioneller: „Ich hätte nicht gedacht, dass jemand das tragen kann, 
 
 Du hast soeben gleichzeitig drei Dinge gesagt: Das Kleidungsstück ist schwierig, andere Menschen würden darin vermutlich schlecht aussehen und diese Person hat es trotzdem geschafft. Das ist beinahe ein Kompliment. Und beinahe reicht vollkommen.
 
-----------
+---
 
 # Kapitel 10
 
@@ -195,7 +195,7 @@ Ein Satz, der hervorragend klingt und dennoch die subtile Botschaft enthält, da
 
 Die Person wird sich bedanken. Später wird sie darüber nachdenken. Genau das war das Ziel.
 
-----------
+---
 
 # Kapitel 11
 
@@ -213,7 +213,7 @@ Hier wird das Kompliment zu einer Charakterstudie. Die Person ist diplomatisch. 
 
 Das Gespräch erhält dadurch eine angenehme Spannung, die man sonst nur durch einen unpassenden Toast auf einer Hochzeit erreichen könnte.
 
-----------
+---
 
 # Kapitel 12
 
@@ -231,7 +231,7 @@ Eine andere Variante lautet: „Du hast wirklich Talent dafür, so zu tun, als h
 
 Hier wird Selbstvertrauen gleichzeitig gelobt und in Frage gestellt. Das ist die höchste Form der kommunikativen Präzision: Du gibst jemandem ein Kompliment, bei dem er sich nicht sicher sein kann, ob er sich bedanken oder einen Anwalt suchen sollte.
 
-----------
+---
 
 # Kapitel 13
 
@@ -247,7 +247,7 @@ Das Wort „wenigstens“ macht aus einem persönlichen Kompliment eine gesellsc
 
 Je weniger du erklärst, desto stärker wirkt die Aussage. Ein guter Komplimentierer gibt dem Gegenüber nicht die Antwort. Er gibt ihm eine Aufgabe.
 
-----------
+---
 
 # Kapitel 14
 
@@ -267,7 +267,7 @@ Das klingt nach enormem Vertrauen. Allerdings stellt sich die Frage, ob die Pfla
 
 Ein wirklich gutes Kompliment erzeugt eben keine Gewissheit. Es erzeugt Kontextbedarf.
 
-----------
+---
 
 # Kapitel 15
 
@@ -295,7 +295,7 @@ Du hast gelernt, dass ein Kompliment nicht unbedingt dafür sorgen muss, dass si
 
 Wenn jemand drei Stunden später noch über deinen Satz nachdenkt, war er erfolgreich. Wenn die Person nach drei Tagen fragt, was du damals eigentlich gemeint hast, war er hervorragend. Und wenn sie sich nach einer Woche immer noch nicht sicher ist, ob du sie gelobt oder beleidigt hast, kannst du sicher sein: Du hast kommunikativ alles richtig gemacht.
 
-----------
+---
 
 # BONUS: Der große Komplimente-Test
 
@@ -375,8 +375,8 @@ Zum Beispiel mit:
 
 Und wenn die Person fragt, was du damit meinst, hast du bereits gewonnen.
 
-----------
+---
 
 **Dr. Maximilian Methodius**
 
-_Autor, Satiriker und ausgewiesener Experte für strategisch missverständliche Wertschätzung._
+*Autor, Satiriker und ausgewiesener Experte für strategisch missverständliche Wertschätzung.*

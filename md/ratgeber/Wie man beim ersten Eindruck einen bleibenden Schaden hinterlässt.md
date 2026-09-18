@@ -379,4 +379,4 @@ Denn wenn Menschen nach deinem Weggang noch darüber diskutieren, ob du charmant
 
 **Dr. Maximilian Methodius**
 
-_Autor, Satiriker und ausgewiesener Experte für nachhaltige soziale Irritation._
+*Autor, Satiriker und ausgewiesener Experte für nachhaltige soziale Irritation.*

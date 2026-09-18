@@ -546,7 +546,7 @@ Dann hat dieser Ratgeber versagt. **Oder funktioniert.**
 
 ---
 
-## BONUS: Der Freundschaftsverlust-Test
+# BONUS: Der Freundschaftsverlust-Test
 
 **1. Hast du schon einmal eine Nachricht absichtlich nicht beantwortet?**
 
