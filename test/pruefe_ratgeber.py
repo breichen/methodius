@@ -436,6 +436,22 @@ def pruefe_ratgeber_markdown_struktur(pfad: Path, slug: str, meldungen: Meldunge
             f"{' oder '.join(repr(p) for p in _H2_INTRO_PRAEFIXE)} beginnt.",
         )
 
+    # Rule: nach dem ersten h2 (mit Leerzeile dazwischen) kommt
+    # "**Dr. Maximilian Methodius**".
+    if h2_vorhanden:
+        h2_idx = erster_h1_idx + 2
+        nach_h2_leer = _zeile_oder_none(zeilen, h2_idx + 1)
+        autor_zeile = _zeile_oder_none(zeilen, h2_idx + 2)
+
+        if nach_h2_leer is None or not _ist_leer(nach_h2_leer) \
+                or autor_zeile is None \
+                or autor_zeile.strip() != "**Dr. Maximilian Methodius**":
+            meldungen.fehler_melden(
+                slug,
+                f"{pfad}: nach der ersten H2 (mit Leerzeile dazwischen) "
+                f"fehlt '**Dr. Maximilian Methodius**'.",
+            )
+
     # Rule: die zweite H1-Überschrift ist "Herzlichen Glückwunsch!".
     if len(h1_positionen) < 2:
         meldungen.fehler_melden(
