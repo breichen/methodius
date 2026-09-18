@@ -41,7 +41,7 @@ Für jede Datei:
 
 Wir freuen uns, einen neuen Ratgeber des Instituts mit dem Titel *"[Titel]"* vorstellen zu können.
 
-In dieser Ausgabe beschäftigt sich [Autor] mit der Frage, [individuelle Beschreibung des Kerngedankens des jeweiligen Ratgebers].
+In dieser Ausgabe beschäftigt sich [Autor] mit der Frage, [individuelle Beschreibung des Kerngedankens des jeweiligen Ratgebers in einem oder zwei Sätzen].
 
 **Der Ratgeber ist ab sofort verfügbar.**
 
