@@ -1,0 +1,104 @@
+# Aufgabe
+
+Du erhältst eine ZIP-Datei oder mehrere Markdown-Dateien mit satirischen Ratgebern.
+
+Jede Datei enthält einen eigenständigen Ratgeber mit Titel, Autor und einem satirischen Grundthema.
+
+Für jede Datei soll ein kurzer News-Beitrag für die News-Seite des Instituts erstellt werden.
+
+---
+
+# Ziel
+
+Die News-Meldung soll die Veröffentlichung eines neuen Ratgebers ankündigen.
+
+Der Text muss wie eine seriöse Mitteilung einer wissenschaftlichen Einrichtung, eines Verlages oder einer Redaktion wirken.
+
+Die satirische Grundidee des Ratgebers soll sachlich beschrieben werden, ohne sie vollständig zu erklären oder die Pointe vorwegzunehmen.
+
+---
+
+# Analyse
+
+Analysiere für jede Datei:
+
+* Titel
+* Autor
+* zentrales Thema
+* behandelte Fragestellung
+* besondere Methode, Perspektive oder Denkweise
+* Zielgruppe des Ratgebers
+
+Berücksichtige den tatsächlichen Inhalt des Ratgebers und nicht nur den Titel.
+
+---
+
+# Ausgabeformat
+
+Für jede Datei:
+
+### [Titel des Ratgebers]
+
+Wir freuen uns, einen neuen Ratgeber des Instituts mit dem Titel *"[Titel]"* vorstellen zu können.
+
+In dieser Ausgabe beschäftigt sich [Autor] mit der Frage, [individuelle Beschreibung des Kerngedankens des jeweiligen Ratgebers].
+
+**Der Ratgeber ist ab sofort verfügbar.**
+
+Die Redaktion empfiehlt die Lektüre insbesondere allen Personen, die sich für [passendes Themengebiet] interessieren.
+
+---
+
+# Stilregeln
+
+* 60 bis 120 Wörter
+* sachlicher Ton
+* nüchterne Sprache
+* journalistisch
+* seriös
+* keine Umgangssprache
+* keine Emojis
+* keine Werbesprache
+* keine Ironie der Redaktion
+* keine direkten Zitate
+* keine Aufzählungen
+* keine Spoiler
+* keine Erklärung, dass es Satire ist
+
+Die Redaktion behandelt die dargestellten Ideen vollständig ernst.
+
+---
+
+# Individualisierung
+
+Jeder News-Beitrag muss deutlich anders formuliert sein.
+
+Vermeide wiederkehrende Formulierungen.
+
+Nutze unterschiedliche Satzstrukturen.
+
+Die Beschreibung des Kerngedankens muss konkret zum jeweiligen Ratgeber passen.
+
+Generische Formulierungen wie:
+
+* „beschäftigt sich mit einem ungewöhnlichen Thema“
+* „wirft einen besonderen Blick auf“
+* „beleuchtet interessante Fragestellungen“
+
+sind zu vermeiden.
+
+Stattdessen soll die konkrete Fragestellung des jeweiligen Ratgebers benannt werden.
+
+---
+
+# Qualitätskontrolle
+
+Vor der Ausgabe prüfen:
+
+1. Wurde der tatsächliche Inhalt des Ratgebers berücksichtigt?
+2. Ist die Meldung ohne Kenntnis des Ratgebers verständlich?
+3. Wird die Pointe nicht verraten?
+4. Klingt die Meldung wie eine echte Institutsnachricht?
+5. Unterscheidet sich die Meldung deutlich von den anderen News-Beiträgen?
+
+Nur wenn alle Punkte erfüllt sind, ausgeben.
