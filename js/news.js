@@ -27,7 +27,7 @@ const newsListe = [
     datei: "neuer-fall-ans-bett-gebunden.md",
     titel: "Neue Fallakte angelegt",
     datum: "2026-08-27",
-    link: "problem.html?datei=ans-bett-gebunden.md",
+    link: "problem.html?slug=ans-bett-gebunden",
     linkText: "Zur Fallakte",
     kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
   },

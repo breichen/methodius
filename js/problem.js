@@ -1,15 +1,18 @@
 /*
   Lädt eine Fallakte aus einer Markdown-Datei und zeigt sie vollständig an.
 
-  Die Datei wird über ?datei=... ausgewählt.
+  Die Fallakte wird über ?slug=... ausgewählt.
 
   Beispiel:
 
-    problem.html?datei=ans-bett-gebunden.md
+    problem.html?slug=ans-bett-gebunden
 
-  Die Fallakte liegt unter:
+  Titel, Erstellungs- und Aktualisierungsdatum kommen aus
+  problemeListe (siehe js/probleme.js). Der eigentliche Inhalt
+  (Frage, Diagnose, Behandlung, Begründung, Prognose, Einsender)
+  liegt als Markdown-Datei unter:
 
-    md/probleme/
+    md/probleme/<slug>.md
 */
 
 
@@ -18,7 +21,7 @@ const container =
 
 
 // ------------------------------------------------------------
-// Datei aus URL lesen
+// Slug aus URL lesen
 // ------------------------------------------------------------
 
 const parameter =
@@ -26,17 +29,17 @@ const parameter =
     window.location.search
   );
 
-const dateiParam =
-  parameter.get("datei");
+const slugParam =
+  parameter.get("slug");
 
 
-if (!dateiParam) {
+if (!slugParam) {
 
   zeigeFehler();
 
 } else {
 
-  ladeFallakte(dateiParam);
+  ladeFallakte(slugParam);
 
 }
 
@@ -45,10 +48,21 @@ if (!dateiParam) {
 // Fallakte laden
 // ------------------------------------------------------------
 
-function ladeFallakte(dateiname) {
+function ladeFallakte(slug) {
+
+  const eintrag =
+    problemeListe.find(
+      problem => problem.slug === slug
+    );
+
+  if (!eintrag) {
+
+    zeigeFehler();
+    return;
+  }
 
   const pfad =
-    `md/probleme/${encodeURIComponent(dateiname)}`;
+    `md/probleme/${encodeURIComponent(slug)}.md`;
 
   fetch(pfad)
 
@@ -57,7 +71,7 @@ function ladeFallakte(dateiname) {
       if (!antwort.ok) {
 
         throw new Error(
-          `Fallakten-Datei nicht gefunden: ${dateiname}`
+          `Fallakten-Datei nicht gefunden: ${slug}`
         );
 
       }
@@ -68,21 +82,20 @@ function ladeFallakte(dateiname) {
 
     .then(markdown => {
 
-      const problem =
+      const inhalt =
         parseFallakte(markdown);
 
-      if (!problem.titel) {
+      /*
+        Titel, erstellt und aktualisiert kommen aus problemeListe
+        (eintrag), der Rest aus der Markdown-Datei (inhalt).
+      */
 
-        throw new Error(
-          "Die Fallakte enthält keinen Titel."
-        );
+      const problem = {
+        ...eintrag,
+        ...inhalt,
+      };
 
-      }
-
-      zeigeFallakte(
-        problem,
-        dateiname
-      );
+      zeigeFallakte(problem);
 
     })
 
@@ -102,6 +115,10 @@ function ladeFallakte(dateiname) {
 
 // ------------------------------------------------------------
 // Fallakte aus Markdown auslesen
+//
+// Titel, Erstellt und Aktualisiert stehen NICHT mehr in der
+// Markdown-Datei - die kommen aus problemeListe (siehe
+// ladeFallakte oben).
 // ------------------------------------------------------------
 
 function parseFallakte(markdown) {
@@ -130,9 +147,6 @@ function parseFallakte(markdown) {
 
   return {
 
-    titel:
-      bereiche["titel"] || "",
-
     frage:
       bereiche["frage"] || "",
 
@@ -151,13 +165,7 @@ function parseFallakte(markdown) {
       bereiche["prognose"] || "",
 
     einsender:
-      bereiche["einsender"] || "",
-
-    erstellt:
-      bereiche["erstellt"] || "",
-
-    aktualisiert:
-      bereiche["aktualisiert"] || ""
+      bereiche["einsender"] || ""
 
   };
 
@@ -187,8 +195,8 @@ function zeigeFehler() {
 // ------------------------------------------------------------
 // Datums- und Einsender-Hinweise
 //
-// "erstellt" und "aktualisiert" werden im ISO-Format (YYYY-MM-DD)
-// aus der Fallakte gelesen und für die Anzeige über
+// "erstellt" und "aktualisiert" kommen bereits im ISO-Format
+// (YYYY-MM-DD) aus problemeListe und werden für die Anzeige über
 // formatiereDatumDeutsch() (siehe js/datumsformat.js) in die
 // deutsche Lesefassung umgewandelt - "einsender" ist dagegen kein
 // Datum und bleibt unverändert.
@@ -199,7 +207,10 @@ function baueDatumsHinweis(problem) {
   const zeilen = [];
 
   // Fallnummer anhand der Reihenfolge in problemeListe bestimmen
-  const fallnummer = problemeListe.findIndex(p => p.slug === problem.slug) + 1;
+  const fallnummer =
+    problemeListe.findIndex(
+      p => p.slug === problem.slug
+    ) + 1;
 
   if (fallnummer > 0) {
     zeilen.push(
@@ -258,10 +269,7 @@ function baueDatumsHinweis(problem) {
 // Fallakte anzeigen
 // ------------------------------------------------------------
 
-function zeigeFallakte(
-  problem,
-  dateiname
-) {
+function zeigeFallakte(problem) {
 
   document.title =
     problem.titel +
@@ -274,11 +282,13 @@ function zeigeFallakte(
 
   /*
     Fallnummer anhand der Position
-    des Dateinamens in problemeListe.
+    des slug in problemeListe.
   */
 
   const index =
-    problemeListe.indexOf(dateiname);
+    problemeListe.findIndex(
+      p => p.slug === problem.slug
+    );
 
   const fallnummerText =
     index >= 0
@@ -287,15 +297,12 @@ function zeigeFallakte(
 
 
   /*
-    Der Dateiname ohne .md ist die
-    eindeutige Kennung für Kommentare.
+    Der slug ist die eindeutige
+    Kennung für Kommentare.
   */
 
   const kommentarSlug =
-    dateiname.replace(
-      /\.md$/i,
-      ""
-    );
+    problem.slug;
 
 
   /*

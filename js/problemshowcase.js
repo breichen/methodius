@@ -3,9 +3,10 @@
 
   Die Fallakten liegen als Markdown-Dateien unter:
 
-    md/probleme/
+    md/probleme/<slug>.md
 
-  problemeListe enthält nur die Dateinamen.
+  Titel und Erstellungsdatum kommen aus problemeListe (siehe
+  js/probleme.js), die Frage aus der jeweiligen Markdown-Datei.
 
   Der neueste Fall ist der letzte Eintrag in problemeListe.
 */
@@ -78,9 +79,9 @@ document.addEventListener(
 
     Promise.all(
       problemeListe.map(
-        dateiname =>
+        eintrag =>
           ladeShowcaseFallakte(
-            dateiname
+            eintrag
           )
       )
     )
@@ -126,7 +127,9 @@ document.addEventListener(
 
           const fallnummer =
             String(
-              problemeListe.indexOf(problem.datei) + 1
+              problemeListe.findIndex(
+                p => p.slug === problem.slug
+              ) + 1
             ).padStart(3, "0");
 
 
@@ -140,9 +143,9 @@ document.addEventListener(
             `„${problem.frage}“`;
 
           link.href =
-            `problem.html?datei=${
+            `problem.html?slug=${
               encodeURIComponent(
-                problem.datei
+                problem.slug
               )
             }`;
 
@@ -226,11 +229,11 @@ document.addEventListener(
 // ------------------------------------------------------------
 
 function ladeShowcaseFallakte(
-  dateiname
+  eintrag
 ) {
 
   const pfad =
-    `md/probleme/${encodeURIComponent(dateiname)}`;
+    `md/probleme/${encodeURIComponent(eintrag.slug)}.md`;
 
   return fetch(pfad)
 
@@ -239,7 +242,7 @@ function ladeShowcaseFallakte(
       if (!antwort.ok) {
 
         throw new Error(
-          `Fallakten-Datei nicht gefunden: ${dateiname}`
+          `Fallakten-Datei nicht gefunden: ${eintrag.slug}`
         );
 
       }
@@ -274,26 +277,19 @@ function ladeShowcaseFallakte(
 
       return {
 
-        datei:
-          dateiname,
+        slug:
+          eintrag.slug,
 
         titel:
-          bereiche["titel"] || "",
+          eintrag.titel,
+
+        erstellt:
+          eintrag.erstellt,
 
         frage:
           markdownZuKlartext(
             bereiche["frage"] || ""
-          ),
-
-        /*
-          Wird gebraucht, um Fallakten mit einem
-          Erstellungsdatum in der Zukunft (oder ganz
-          ohne Erstellungsdatum) aus dem Showcase
-          auszublenden - siehe istDatumErreicht() in
-          js/datumsformat.js.
-        */
-        erstellt:
-          bereiche["erstellt"] || ""
+          )
 
       };
 

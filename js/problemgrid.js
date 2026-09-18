@@ -4,11 +4,11 @@
 
   Die eigentlichen Fallakten liegen unter:
 
-    md/probleme/
+    md/probleme/<slug>.md
 
-  Erwartete Struktur einer Fallakte:
-
-    # Titel
+  Titel, Erstellungs- und Aktualisierungsdatum kommen aus
+  problemeListe (siehe js/probleme.js). Erwartete Struktur einer
+  Fallakten-Markdown-Datei:
 
     ## Frage
 
@@ -34,13 +34,7 @@
 
     ...
 
-    ## Erstellt
-
-    ...
-
-    ## Aktualisiert
-
-  Für die Übersicht werden momentan nur Titel und Frage benötigt.
+  Für die Übersicht wird momentan nur die Frage benötigt.
 */
 
 
@@ -54,17 +48,17 @@ const ANZAHL_ZUFAELLIGE_PROBLEME = 3;
 // Markdown-Datei laden
 // ------------------------------------------------------------
 
-function ladeProblem(dateiname) {
+function ladeProblem(eintrag) {
 
   const pfad =
-    `md/probleme/${encodeURIComponent(dateiname)}`;
+    `md/probleme/${encodeURIComponent(eintrag.slug)}.md`;
 
   return fetch(pfad)
     .then(antwort => {
 
       if (!antwort.ok) {
         throw new Error(
-          `Fallakten-Datei nicht gefunden: ${dateiname}`
+          `Fallakten-Datei nicht gefunden: ${eintrag.slug}`
         );
       }
 
@@ -73,8 +67,10 @@ function ladeProblem(dateiname) {
     .then(markdown => {
 
       return {
-        datei: dateiname,
-        ...parseProblemMarkdown(markdown)
+        slug: eintrag.slug,
+        titel: eintrag.titel,
+        erstellt: eintrag.erstellt,
+        frage: parseProblemFrage(markdown)
       };
 
     });
@@ -83,17 +79,16 @@ function ladeProblem(dateiname) {
 
 
 // ------------------------------------------------------------
-// Markdown einer Fallakte auslesen
+// Frage aus der Markdown-Datei auslesen
 // ------------------------------------------------------------
 
-function parseProblemMarkdown(markdown) {
+function parseProblemFrage(markdown) {
 
   const bereiche = {};
 
   /*
     Erkennt Überschriften wie:
 
-      # Titel
       ## Frage
       ## Diagnose
       ## Behandlung
@@ -122,38 +117,15 @@ function parseProblemMarkdown(markdown) {
   }
 
 
-  const titel =
-    bereiche["titel"] || "";
-
-
   /*
     Die Frage kann Markdown enthalten.
     Für die Karte wird daraus eine einfache
     Textversion gemacht.
   */
 
-  const frage =
-    markdownZuKlartext(
-      bereiche["frage"] || ""
-    );
-
-
-  /*
-    Wird gebraucht, um Fallakten mit einem
-    Erstellungsdatum in der Zukunft (oder ganz
-    ohne Erstellungsdatum) aus den Übersichten
-    auszublenden - siehe istDatumErreicht() in
-    js/datumsformat.js.
-  */
-  const erstellt =
-    bereiche["erstellt"] || "";
-
-
-  return {
-    titel,
-    frage,
-    erstellt
-  };
+  return markdownZuKlartext(
+    bereiche["frage"] || ""
+  );
 }
 
 
@@ -186,7 +158,7 @@ function baueProblemKarte(problem, fallnummer) {
   return `
     <a
       class="problem-card-link"
-      href="problem.html?datei=${encodeURIComponent(problem.datei)}"
+      href="problem.html?slug=${encodeURIComponent(problem.slug)}"
     >
       <article class="problem-card">
 
@@ -236,7 +208,9 @@ function renderProblemKarten(
       .map(problem => {
 
         const fallnummer =
-          problemeListe.indexOf(problem.datei) + 1;
+          problemeListe.findIndex(
+            p => p.slug === problem.slug
+          ) + 1;
 
         return baueProblemKarte(
           problem,
@@ -296,8 +270,8 @@ document.addEventListener(
     */
 
     Promise.all(
-      problemeListe.map(dateiname =>
-        ladeProblem(dateiname)
+      problemeListe.map(eintrag =>
+        ladeProblem(eintrag)
       )
     )
 
