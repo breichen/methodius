@@ -21,19 +21,6 @@ const NewsKategorie = Object.freeze({
 const newsListe = [
 
 
-  // RATGEBER
-
-  {
-    datei: "neuer-ratgeber-muskelabbau.md",
-    titel: "Neuer Ratgeber erschienen",
-    datum: "2026-08-30",
-    bild: "pics/ratgeber-mockup/Abnehmen dank Muskelabbau.png",
-    link: "buch.html?titel=Abnehmen dank Muskelabbau",
-    linkText: "Zum Ratgeber",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-
   // FALLAKTEN
 
   {
@@ -47,6 +34,9 @@ const newsListe = [
 
 
 ];
+
+// Ratgeber-Einträge kommen automatisch aus ratgeberListe (ratgeber.js,
+// muss vor dieser Datei geladen sein - siehe erzeugeRatgeberNews unten).
 
 // Institutsleben- und Kuriositäten-Einträge liegen jeweils in einer
 // eigenen JSON-Datei (siehe data/institutsleben.json und
@@ -64,6 +54,50 @@ function erzeugePaperNews(veroeffentlichungen) {
     linkText: "Zur Veröffentlichung",
     kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
   }));
+}
+
+// Prüft per HEAD-Request, ob unter dem gegebenen Pfad eine Datei
+// existiert (z.B. um pro Ratgeber eine eigene Ankündigungsdatei zu
+// verwenden, falls vorhanden).
+async function dateiExistiert(pfad) {
+  try {
+    const response = await fetch(pfad, { method: "HEAD" });
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
+
+// Erzeugt aus ratgeberListe (ratgeber.js) automatisch einen News-Eintrag
+// pro Buch. Nur Bücher mit gesetztem "erstellt" tauchen auf (ohne
+// Datum kein Erscheinungsdatum für die News). Erwartet ein Mockup-Bild
+// unter pics/ratgeber-mockup/<slug>.png. Für die Ankündigung wird eine
+// eigene Datei unter md/news-ratgeber/<slug>.md verwendet, falls sie
+// existiert - andernfalls der generische Text
+// md/news/neuer-ratgeber-generisch.md.
+async function erzeugeRatgeberNews(ratgeberListe) {
+
+  const relevante = ratgeberListe.filter(ratgeber => ratgeber.erstellt);
+
+  return Promise.all(relevante.map(async ratgeber => {
+
+    const eigeneDatei = `md/news-ratgeber/${ratgeber.slug}.md`;
+    const hatEigeneDatei = await dateiExistiert(eigeneDatei);
+
+    return {
+      datei: hatEigeneDatei
+        ? `../news-ratgeber/${ratgeber.slug}.md`
+        : "neuer-ratgeber-generisch.md",
+      titel: "Neuer Ratgeber erschienen",
+      datum: ratgeber.erstellt,
+      bild: `pics/ratgeber-mockup/${ratgeber.slug}.png`,
+      link: `buch.html?titel=${ratgeber.titel}`,
+      linkText: "Zum Ratgeber",
+      kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
+    };
+
+  }));
+
 }
 
 // Versieht eine Liste roher News-Einträge (ohne kategorie-Feld) mit
@@ -121,6 +155,9 @@ async function ladeAlleNews() {
   const paperNews =
     erzeugePaperNews(veroeffentlichungen);
 
+  const ratgeberNews =
+    await erzeugeRatgeberNews(ratgeberListe);
+
   const [institutslebenNews, kuriositaetenNews] = await Promise.all([
     ladeJsonNews("data/institutsleben.json", NewsKategorie.INSTITUTSLEBEN, "news-institutsleben"),
     ladeJsonNews("data/kuriositaeten.json", NewsKategorie.KURIOSITAETEN, "news-kuriositaeten"),
@@ -129,6 +166,7 @@ async function ladeAlleNews() {
   return [
     ...newsListe,
     ...paperNews,
+    ...ratgeberNews,
     ...institutslebenNews,
     ...kuriositaetenNews,
   ];
