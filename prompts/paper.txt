@@ -1,0 +1,66 @@
+Erzeuge ein fotorealistisches Bild der ersten Seite eines satirischen wissenschaftlichen Fachartikels. Es soll seriös wirken, der Inhalt darf aber zum Lachen anregen.
+
+Verwende die Informationen aus dem mitgegebenen JSON-Objekt als Quelle für Titel, Autoren, Journal, Jahr und Seitenzahlen.
+
+Ziel:
+Das Ergebnis soll wie ein echter Scan, Screenshot oder PDF-Export einer wissenschaftlichen Publikation aussehen. Es handelt sich um eine visuelle Darstellung eines Papers, nicht um ein vollständiges Paper.
+
+Anforderungen:
+
+* Horizontales Format (Landscape).
+* Erste Seite eines wissenschaftlichen Artikels.
+* Professionelles akademisches Layout.
+* Zweispaltiger Satz (typisch für Fachzeitschriften).
+* Weißes Papier mit realistischen Druck- oder PDF-Eigenschaften.
+* Hochwertige wissenschaftliche Typografie.
+* Glaubwürdige Seitenköpfe und Metadaten.
+* Realistische Seitenzahl.
+* Wissenschaftliche Gliederung.
+* Der Stil soll je nach Journal unterschiedlich sein.
+* Verwende bei jeder Generierung ein leicht anderes Layout, andere Schriftkombinationen, andere Kopfzeilen, andere Abstände und unterschiedliche Journaldesigns.
+* Das Ergebnis darf nicht wie eine Vorlage wirken, die immer identisch aussieht.
+
+Verwende aus dem JSON:
+
+* Titel
+* Autoren
+* Journalname
+* Erscheinungsjahr
+* Start- und Endseite
+
+Erzeuge zusätzlich passende fiktive Inhalte:
+
+* Abstract
+* Keywords
+* Einleitung
+* Forschungsfrage
+* Methodik
+* Erste Ergebnisse
+* Literaturverweise
+
+Die Inhalte sollen zum Titel und zur Beschreibung des Papers passen.
+
+Visuelle Elemente:
+
+* Optional 1 kleine Grafik, Tabelle oder Diagramm.
+* Optional Autorenaffiliationen.
+* Optional DOI.
+* Optional Received/Accepted-Publikationsdaten.
+* Optional Fußnoten.
+
+Textdarstellung:
+
+* Der Titel muss vollständig lesbar sein.
+* Autoren müssen vollständig lesbar sein.
+* Journalname muss vollständig lesbar sein.
+* Abstract und Einleitung sollen weitgehend lesbar erscheinen.
+* Der restliche Text kann teilweise lesbar und teilweise typografischer Fülltext sein.
+* Wissenschaftlicher Sprachstil.
+* Keine offensichtlichen KI-Artefakte.
+* Keine Wasserzeichen.
+
+Wichtig:
+
+Das Bild soll für eine satirische Nachrichtenwebsite wie die Vorschauseite eines angeblich existierenden wissenschaftlichen Papers wirken. Es soll authentisch, seriös und glaubwürdig aussehen, aber kein existierendes Paper reproduzieren.
+
+Erzeuge eine hochwertige akademische Paper-Seite mit individuellem Journaldesign.
