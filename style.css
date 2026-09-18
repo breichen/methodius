@@ -1550,7 +1550,13 @@ hr {
 
 /* Untertitel auf Seite 1: optisch wie .flipbook-page h2, aber ohne
    Kapitel-Strich und ohne an der h1/h2-Kapitellogik der Paginierung
-   teilzunehmen (siehe entferneUntertitelAlsH2() in buch.js). */
+   teilzunehmen (siehe entferneUntertitelAlsH2() in buch.js).
+   margin-top: auto schiebt ihn (und alles Nachfolgende auf Seite 1,
+   z.B. autor-box) an den unteren Rand der Seite - genau wie im PDF
+   ueber .page1-fill > *:nth-child(2) { margin-top: auto; }, siehe
+   wrap_first_page() in markdown_ratgeber_zu_pdf.py. Funktioniert nur,
+   weil .flipbook-page bereits display:flex; flex-direction:column ist
+   und die H1 als erstes Kind direkt davor steht. */
 .flipbook-page .seite1-untertitel {
   font-family: var(--font-display);
   font-style: italic;
@@ -1559,7 +1565,40 @@ hr {
   font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--color-text);
-  margin: 0mm 0 7mm;
+  margin: 0 0 7mm;
+}
+
+/* Untertitel + Autor-Box auf Seite 1 an den unteren Rand schieben:
+   margin-top:auto muss auf dem direkten Flex-Kind sitzen, das auf die H1
+   folgt - NICHT auf .seite1-untertitel selbst, denn styleAutorErwaehnung()
+   in buch.js verpackt den Untertitel (und ggf. weitere Einleitungstexte)
+   in einen Wrapper <div class="autor-einleitung">, der zwischen H1 und
+   autor-box steht. .seite1-untertitel ist also nur noch ein VERSCHACHTELTES
+   Element innerhalb dieses Divs, kein direktes Flex-Kind von .flipbook-page
+   mehr - margin-top:auto hätte dort keine Wirkung auf die Position der
+   ganzen Gruppe.
+   ">h1 + *" trifft automatisch das jeweils richtige Element: entweder
+   .autor-einleitung (falls vorhanden) oder direkt .autor-box (falls keine
+   Einleitungstexte existieren) - und wirkt nur auf Seite 1, da die H1 laut
+   bereinigeKapitelUeberschriften() im ganzen Buch nur genau einmal
+   vorkommt. Siehe auch .page1-fill > *:nth-child(2) { margin-top: auto; }
+   in wrap_first_page() (markdown_ratgeber_zu_pdf.py) - gleiches Prinzip. */
+.flipbook-page>h1+* {
+  margin-top: auto !important;
+}
+
+/* WICHTIG: Während der Seitenaufteilung (teileInSeiten() in buch.js)
+   wird der Inhalt in einer versteckten .flipbook-measure-page gemessen,
+   um zu entscheiden, wie viele Blöcke auf eine Seite passen. margin-top:
+   auto würde dabei die gemessene Höhe verfälschen (der freie Platz, der
+   auf das Element verteilt wird, ändert sich mit jedem probeweise
+   hinzugefügten Block) und dazu führen, dass z.B. die Autor-Box
+   fälschlich auf Seite 2 einsortiert wird. Deshalb hier für die Messung
+   deaktivieren - dort zählt nur die normale, unverschobene Höhe. Bei der
+   echten Anzeige (ohne .flipbook-measure-page) bleibt margin-top:auto
+   wie gewünscht aktiv. */
+.flipbook-measure-page>h1+* {
+  margin-top: 0 !important;
 }
 
 .flipbook-page h3 {
