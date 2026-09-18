@@ -331,6 +331,259 @@ def _pruefe_optionale_md_datei(
         meldungen.fehler_melden(slug, f"{pfad_hinweis} fehlt.")
 
 
+# --------------------------------------------------------------------
+# Structural checks for md/ratgeber/<slug>.md
+# --------------------------------------------------------------------
+
+_UEBERSCHRIFT_MUSTER = re.compile(r"^(#{1,6})\s+(.*?)\s*$")
+_FETTE_FRAGE_MUSTER = re.compile(r"^\*\*\d+\.\s*.*\*\*$")
+_UEBERMAESSIGE_TRENNER_MUSTER = re.compile(r"^-{4,}")
+_H2_INTRO_PRAEFIXE = ("Der ultimative Ratgeber", "Der revolutionäre Ratgeber")
+_KAESTCHEN = "☐"
+
+
+def _ueberschrift_info(zeile: str):
+    """Returns (level, text) if zeile is a Markdown heading, else None."""
+    treffer = _UEBERSCHRIFT_MUSTER.match(zeile)
+    if not treffer:
+        return None
+    return len(treffer.group(1)), treffer.group(2)
+
+
+def _ist_leer(zeile: str) -> bool:
+    return zeile.strip() == ""
+
+
+def _ist_trenner(zeile: str) -> bool:
+    return zeile.strip() == "---"
+
+
+def _zeile_oder_none(zeilen: list, idx: int):
+    return zeilen[idx] if 0 <= idx < len(zeilen) else None
+
+
+def pruefe_ratgeber_markdown_struktur(pfad: Path, slug: str, meldungen: Meldungen):
+    """
+    Checks the fixed structure that every md/ratgeber/<slug>.md is
+    expected to follow (see script docstring / task description for
+    the exact rules). Collects everything into `meldungen` instead of
+    stopping at the first problem.
+    """
+
+    try:
+        text = pfad.read_text(encoding="utf-8")
+    except OSError as fehler:
+        meldungen.fehler_melden(slug, f"{pfad} konnte nicht gelesen werden: {fehler}")
+        return
+
+    zeilen = text.splitlines()
+
+    h1_positionen = []
+    h2_positionen = []
+    for i, z in enumerate(zeilen):
+        info = _ueberschrift_info(z)
+        if info is None:
+            continue
+        if info[0] == 1:
+            h1_positionen.append((i, info[1]))
+        elif info[0] == 2:
+            h2_positionen.append((i, info[1]))
+
+    if not h1_positionen:
+        meldungen.fehler_melden(slug, f"{pfad}: keine H1-Überschrift gefunden.")
+        return
+
+    # Rule: Datei beginnt mit einem h1 (führende Leerzeilen sind ok).
+    erste_nichtleere_idx = next(
+        (i for i, z in enumerate(zeilen) if not _ist_leer(z)), None
+    )
+    if erste_nichtleere_idx is None or h1_positionen[0][0] != erste_nichtleere_idx:
+        meldungen.fehler_melden(
+            slug, f"{pfad}: Die Datei beginnt nicht mit einer H1-Überschrift."
+        )
+
+    erlaubte_trenner_zeilen = set()
+
+    # Rule: direkt nach dem ersten h1 (mit Leerzeile dazwischen) kommt
+    # ein h2, der mit "Der ultimative Ratgeber" oder "Der revolutionäre
+    # Ratgeber" beginnt.
+    erster_h1_idx = h1_positionen[0][0]
+    danach = _zeile_oder_none(zeilen, erster_h1_idx + 1)
+    h2_kandidat = _zeile_oder_none(zeilen, erster_h1_idx + 2)
+    h2_info = _ueberschrift_info(h2_kandidat) if h2_kandidat is not None else None
+
+    if danach is None or not _ist_leer(danach) or h2_info is None or h2_info[0] != 2 \
+            or not h2_info[1].startswith(_H2_INTRO_PRAEFIXE):
+        meldungen.fehler_melden(
+            slug,
+            f"{pfad}: nach der ersten H1-Überschrift fehlt (mit Leerzeile "
+            f"dazwischen) ein H2, der mit "
+            f"{' oder '.join(repr(p) for p in _H2_INTRO_PRAEFIXE)} beginnt.",
+        )
+
+    # Rule: die zweite H1-Überschrift ist "Herzlichen Glückwunsch!".
+    if len(h1_positionen) < 2:
+        meldungen.fehler_melden(
+            slug, f"{pfad}: es gibt keine zweite H1-Überschrift."
+        )
+    elif h1_positionen[1][1] != "Herzlichen Glückwunsch!":
+        meldungen.fehler_melden(
+            slug,
+            f"{pfad}: die zweite H1-Überschrift lautet "
+            f"{h1_positionen[1][1]!r}, erwartet 'Herzlichen Glückwunsch!'.",
+        )
+
+    # Ein '---' direkt vor einer H1 (mit optionalen Leerzeilen dazwischen)
+    # zählt als Kapitel-Trenner und wird von der "keine anderen '---'"-
+    # Regel unten nicht als unerwartet gemeldet - die Formatierung davor
+    # wird hier nicht mehr geprüft.
+    for idx, _text in h1_positionen[1:]:
+        cursor = idx - 1
+        while cursor >= 0 and _ist_leer(zeilen[cursor]):
+            cursor -= 1
+        if cursor >= 0 and _ist_trenner(zeilen[cursor]):
+            erlaubte_trenner_zeilen.add(cursor)
+
+    # Rule: es gibt einen h1, der mit "BONUS:" beginnt und mit "Test" endet.
+    bonus_kandidaten = [
+        (idx, txt) for idx, txt in h1_positionen
+        if txt.startswith("BONUS:") and txt.endswith("Test")
+    ]
+    if len(bonus_kandidaten) != 1:
+        meldungen.fehler_melden(
+            slug,
+            f"{pfad}: erwartet genau eine H1-Überschrift, die mit 'BONUS:' "
+            f"beginnt und mit 'Test' endet, gefunden: {len(bonus_kandidaten)}.",
+        )
+        bonus_idx = None
+    else:
+        bonus_idx = bonus_kandidaten[0][0]
+
+    # Rule: alle H1, die mit "Kapitel" beginnen oder exakt "Schlusswort"
+    # heißen, haben ein H2 direkt darunter (Leerzeile + H2); alle anderen
+    # H1 außer der allerersten haben KEIN H2 direkt darunter.
+    for idx, txt in h1_positionen[1:]:
+        danach = _zeile_oder_none(zeilen, idx + 1)
+        h2_kandidat = _zeile_oder_none(zeilen, idx + 2)
+        h2_info = _ueberschrift_info(h2_kandidat) if h2_kandidat is not None else None
+        hat_h2_direkt_darunter = (
+            danach is not None and _ist_leer(danach)
+            and h2_info is not None and h2_info[0] == 2
+        )
+
+        ist_kapitel_oder_schlusswort = txt.startswith("Kapitel") or txt == "Schlusswort"
+
+        if ist_kapitel_oder_schlusswort and not hat_h2_direkt_darunter:
+            meldungen.fehler_melden(
+                slug,
+                f"{pfad}: H1-Überschrift {txt!r} (Zeile {idx + 1}) beginnt "
+                f"mit 'Kapitel' oder lautet 'Schlusswort', hat aber kein H2 "
+                f"direkt darunter.",
+            )
+        elif not ist_kapitel_oder_schlusswort and hat_h2_direkt_darunter:
+            meldungen.fehler_melden(
+                slug,
+                f"{pfad}: H1-Überschrift {txt!r} (Zeile {idx + 1}) beginnt "
+                f"weder mit 'Kapitel' noch lautet sie 'Schlusswort', hat "
+                f"aber ein H2 direkt darunter.",
+            )
+
+    # Rule: nach dem letzten '---' kommen Leerzeile, "Dr. Maximilian
+    # Methodius", Leerzeile, kursiver Text, der mit "Autor, Satiriker"
+    # beginnt.
+    letzte_trenner_idx = None
+    for i, z in enumerate(zeilen):
+        if _ist_trenner(z):
+            letzte_trenner_idx = i
+
+    if letzte_trenner_idx is None:
+        meldungen.fehler_melden(slug, f"{pfad}: kein '---' in der Datei gefunden.")
+    else:
+        erlaubte_trenner_zeilen.add(letzte_trenner_idx)
+        leer1 = _zeile_oder_none(zeilen, letzte_trenner_idx + 1)
+        autor_zeile = _zeile_oder_none(zeilen, letzte_trenner_idx + 2)
+        leer2 = _zeile_oder_none(zeilen, letzte_trenner_idx + 3)
+        kursiv_zeile = _zeile_oder_none(zeilen, letzte_trenner_idx + 4)
+
+        kursiv_ok = (
+            kursiv_zeile is not None
+            and kursiv_zeile.strip().startswith("*")
+            and not kursiv_zeile.strip().startswith("**")
+            and kursiv_zeile.strip()[1:].startswith("Autor, Satiriker")
+        )
+
+        if (
+            leer1 is None or not _ist_leer(leer1)
+            or autor_zeile is None or "Dr. Maximilian Methodius" not in autor_zeile
+            or leer2 is None or not _ist_leer(leer2)
+            or not kursiv_ok
+        ):
+            meldungen.fehler_melden(
+                slug,
+                f"{pfad}: nach dem letzten '---' (Zeile {letzte_trenner_idx + 1}) "
+                f"fehlt das Muster Leerzeile/'Dr. Maximilian Methodius'/"
+                f"Leerzeile/kursiver Text, der mit 'Autor, Satiriker' beginnt.",
+            )
+
+    # Rule: außer den oben geprüften Vorkommen gibt es keine weiteren '---'.
+    for i, z in enumerate(zeilen):
+        if _ist_trenner(z) and i not in erlaubte_trenner_zeilen:
+            meldungen.fehler_melden(
+                slug,
+                f"{pfad}: unerwartetes '---' in Zeile {i + 1} (nicht vor "
+                f"einer H1-Überschrift oder dem Autoren-Abschluss).",
+            )
+
+    # Rule: eine Zeile, die mit '---' beginnt, hat nie mehr als 3 '-'.
+    for i, z in enumerate(zeilen):
+        zs = z.strip()
+        if zs.startswith("---") and _UEBERMAESSIGE_TRENNER_MUSTER.match(zs):
+            meldungen.fehler_melden(
+                slug,
+                f"{pfad}: Zeile {i + 1} beginnt mit mehr als drei '-' ({zs!r}).",
+            )
+
+    # Rule: Kästchen-Zeilen im BONUS-Kapitel.
+    if bonus_idx is not None:
+        for i in range(bonus_idx + 1, len(zeilen)):
+            if not zeilen[i].strip().startswith(_KAESTCHEN):
+                continue
+
+            vor = _zeile_oder_none(zeilen, i - 1)
+            vor_ok = vor is not None and vor.strip().startswith(_KAESTCHEN)
+            if not vor_ok:
+                vor2 = _zeile_oder_none(zeilen, i - 2)
+                vor_ok = (
+                    vor is not None and _ist_leer(vor)
+                    and vor2 is not None
+                    and _FETTE_FRAGE_MUSTER.match(vor2.strip()) is not None
+                )
+            if not vor_ok:
+                meldungen.fehler_melden(
+                    slug,
+                    f"{pfad}: Kästchen-Zeile in Zeile {i + 1} hat davor weder "
+                    f"eine weitere Kästchen-Zeile noch Leerzeile + fette, "
+                    f"nummerierte Frage.",
+                )
+
+            danach = _zeile_oder_none(zeilen, i + 1)
+            danach_ok = danach is not None and danach.strip().startswith(_KAESTCHEN)
+            if not danach_ok:
+                danach2 = _zeile_oder_none(zeilen, i + 2)
+                danach_ok = (
+                    danach is not None and _ist_leer(danach)
+                    and danach2 is not None
+                    and not danach2.strip().startswith(_KAESTCHEN)
+                )
+            if not danach_ok:
+                meldungen.fehler_melden(
+                    slug,
+                    f"{pfad}: Kästchen-Zeile in Zeile {i + 1} hat danach weder "
+                    f"eine weitere Kästchen-Zeile noch Leerzeile + Nicht-"
+                    f"Kästchen-Zeile.",
+                )
+
+
 def pruefe_eintrag(eintrag: dict, root: Path, meldungen: Meldungen):
 
     slug = eintrag.get("slug")
@@ -349,8 +602,11 @@ def pruefe_eintrag(eintrag: dict, root: Path, meldungen: Meldungen):
     if not slug:
         return
 
-    if not datei_mit_slug_existiert(root / "md" / "ratgeber", slug, ".md"):
+    ratgeber_md_pfad = root / "md" / "ratgeber" / f"{slug}.md"
+    if not ratgeber_md_pfad.is_file():
         meldungen.fehler_melden(slug, f"md/ratgeber/{slug}.md fehlt.")
+    else:
+        pruefe_ratgeber_markdown_struktur(ratgeber_md_pfad, slug, meldungen)
 
     _pruefe_optionale_md_datei(
         root / "md" / "ratgeber-kommentare", slug, eintrag, meldungen,
