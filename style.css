@@ -1681,7 +1681,10 @@ hr {
 .flipbook-page-number {
   position: absolute;
   bottom: 18px;
-  right: 20px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
 
   color: var(--color-muted);
 
@@ -1693,11 +1696,6 @@ hr {
   background: transparent;
   border: none;
   padding: 0;
-}
-
-.flipbook-page-number.left {
-  left: 20px;
-  right: auto;
 }
 
 /* ============================================

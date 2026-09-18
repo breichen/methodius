@@ -1700,7 +1700,7 @@ function zeigeSpread() {
 
   linkeSeite.innerHTML =
     inhaltLinks.join("\n") +
-    `<span class="flipbook-page-number${einzelseite ? "" : " left"}">${flipIndex + 1}</span>`;
+    `<span class="flipbook-page-number">${flipIndex + 1}</span>`;
 
   if (einzelseite) {
     // Rechte Seite bleibt leer (und ist per CSS im Hochformat
