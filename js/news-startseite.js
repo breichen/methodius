@@ -1,11 +1,10 @@
 /*
   Zeigt den aktuellsten News-Beitrag auf der Startseite.
 
-  Die Reihenfolge der Beiträge wird in news.js festgelegt:
-  Der NEUESTE Beitrag steht dort an erster Stelle.
-
   Verwendet werden:
-    - newsListe aus js/news.js
+    - ladeAlleNews() aus js/news.js (kombiniert die manuelle
+      newsListe mit den automatisch erzeugten Papers-, Ratgeber-,
+      Fallakten-, Institutsleben- und Kuriositäten-Einträgen)
     - parseMarkdownBloecke() aus js/markdown.js
 
   Unterstützt:
@@ -24,33 +23,38 @@ const newsStartseiteContainer =
   document.getElementById("news-startseite");
 
 
-function ladeAktuellsteNews() {
+async function ladeAktuellsteNews() {
 
   if (!newsStartseiteContainer) {
     return;
   }
 
-  if (!newsListe || newsListe.length === 0) {
-    newsStartseiteContainer.innerHTML = "";
-    return;
-  }
+  const alleNews = await ladeAlleNews();
 
   /*
     Nur Beiträge berücksichtigen, die ein "datum" haben UND dessen
     Datum bereits erreicht ist (heute oder in der Vergangenheit) -
     siehe istDatumErreicht() in js/datumsformat.js. Beiträge ohne
     Datum oder mit einem Datum in der Zukunft werden ignoriert.
+
+    Anders als bei der früher direkt verwendeten (manuellen)
+    newsListe steht der neueste Beitrag hier NICHT automatisch an
+    erster Stelle - die einzelnen Quellen (Papers, Ratgeber,
+    Fallakten, Institutsleben, Kuriositäten) werden von
+    ladeAlleNews() einfach hintereinandergehängt. Deshalb wird hier
+    zusätzlich nach Datum absteigend sortiert, genau wie in
+    js/news-seite.js.
   */
-  const sichtbareNews = newsListe.filter(
-    beitrag => beitrag.datum && istDatumErreicht(beitrag.datum)
-  );
+  const sichtbareNews = alleNews
+    .filter(beitrag => beitrag.datum && istDatumErreicht(beitrag.datum))
+    .sort((a, b) => new Date(b.datum) - new Date(a.datum));
 
   if (sichtbareNews.length === 0) {
     newsStartseiteContainer.innerHTML = "";
     return;
   }
 
-  // Der erste Eintrag ist laut news.js der aktuellste.
+  // Nach der Sortierung oben ist der erste Eintrag der aktuellste.
   const beitrag = sichtbareNews[0];
 
   ladeNewsStartseitenBeitrag(beitrag)
