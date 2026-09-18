@@ -96,59 +96,17 @@ function ladeInstitutsfotos() {
 
 function initialisiereLightbox() {
 
-  const lightbox =
-    document.getElementById("foto-lightbox");
-
-  const lightboxBild =
-    document.getElementById("foto-lightbox-bild");
-
-  const beschriftung =
-    document.getElementById(
-      "foto-lightbox-beschriftung"
-    );
-
-  if (!lightbox || !lightboxBild) return;
+  initialisiereFotoLightboxSchliessen();
 
   document
     .querySelectorAll(".institutsfoto-klickbar")
     .forEach(bild => {
 
       bild.addEventListener("click", () => {
-
-        lightboxBild.src =
-          bild.dataset.bild;
-
-        lightboxBild.alt =
-          bild.dataset.titel;
-
-        beschriftung.textContent =
-          bild.dataset.titel;
-
-        lightbox.classList.add("offen");
+        oeffneFotoLightbox(bild.dataset.bild, bild.dataset.titel);
       });
 
     });
-
-  lightbox.addEventListener("click", event => {
-
-    if (
-      event.target === lightbox ||
-      event.target.classList.contains(
-        "foto-lightbox-schliessen"
-      )
-    ) {
-      lightbox.classList.remove("offen");
-    }
-
-  });
-
-  document.addEventListener("keydown", event => {
-
-    if (event.key === "Escape") {
-      lightbox.classList.remove("offen");
-    }
-
-  });
 }
 
 ladeInstitutsfotos();

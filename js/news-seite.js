@@ -77,6 +77,60 @@ newsContainer.addEventListener("click", event => {
 });
 
 
+/*
+  Lightbox zum vergrößerten Anzeigen von News-Bildern - nutzt dasselbe
+  Overlay (#foto-lightbox) und dieselbe Logik wie die Institutsleben-
+  Galerie, siehe js/foto-lightbox.js.
+
+  Das Overlay-Markup steht im HTML erst NACH diesem <script>-Tag -
+  initialisiereFotoLightboxSchliessen() müsste es also zu früh suchen,
+  wenn wir sie sofort aufrufen. Deshalb hier auf DOMContentLoaded
+  warten (bzw. sofort ausführen, falls das Dokument - z.B. bei
+  langsamem Skript-Download - ohnehin schon fertig geparst ist).
+*/
+
+if (document.readyState === "loading") {
+  document.addEventListener(
+    "DOMContentLoaded",
+    initialisiereFotoLightboxSchliessen
+  );
+} else {
+  initialisiereFotoLightboxSchliessen();
+}
+
+// Delegierter Klick-Handler für alle News-Bilder - genau wie beim
+// "Mehr"-Button funktioniert das auch für Bilder, die erst später
+// (nach dem Laden der Beiträge) in den Container eingefügt werden.
+newsContainer.addEventListener("click", event => {
+
+  const bild = event.target.closest(".institutsfoto-klickbar");
+
+  if (!bild) {
+    return;
+  }
+
+  oeffneFotoLightbox(bild.dataset.bild, bild.dataset.titel);
+});
+
+// Bedienung auch per Tastatur (Enter/Leertaste), da die Bilder
+// unten als fokussierbare, aber nicht-native Buttons markiert sind.
+newsContainer.addEventListener("keydown", event => {
+
+  if (event.key !== "Enter" && event.key !== " ") {
+    return;
+  }
+
+  const bild = event.target.closest(".institutsfoto-klickbar");
+
+  if (!bild) {
+    return;
+  }
+
+  event.preventDefault();
+  oeffneFotoLightbox(bild.dataset.bild, bild.dataset.titel);
+});
+
+
 async function ladeNews() {
 
   /*
@@ -243,10 +297,13 @@ function ladeNewsBeitrag(beitrag, index) {
 
         bildHtml = `
           <img
-            class="news-bild"
+            class="news-bild institutsfoto-klickbar"
             src="${beitrag.bild}"
-            alt=""
+            alt="${beitrag.titel}"
+            data-bild="${beitrag.bild}"
+            data-titel="${beitrag.titel}"
             loading="lazy"
+            tabindex="0"
           >
         `;
       }
