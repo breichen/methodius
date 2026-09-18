@@ -19,21 +19,10 @@ const NewsKategorie = Object.freeze({
 */
 
 const newsListe = [
-
-
-  // FALLAKTEN
-
-  {
-    datei: "neuer-fall-ans-bett-gebunden.md",
-    titel: "Neue Fallakte angelegt",
-    datum: "2026-08-27",
-    link: "problem.html?slug=ans-bett-gebunden",
-    linkText: "Zur Fallakte",
-    kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
-  },
-
-
 ];
+
+// Fallakten-Einträge kommen automatisch aus problemeListe (probleme.js,
+// muss vor dieser Datei geladen sein - siehe erzeugeProblemNews unten).
 
 // Ratgeber-Einträge kommen automatisch aus ratgeberListe (ratgeber.js,
 // muss vor dieser Datei geladen sein - siehe erzeugeRatgeberNews unten).
@@ -115,6 +104,36 @@ async function erzeugeRatgeberNews(ratgeberListe) {
 
 }
 
+// Erzeugt aus problemeListe (probleme.js) automatisch einen News-Eintrag
+// pro Fallakte. Nur Fallakten mit gesetztem "erstellt" tauchen auf
+// (ohne Datum kein Erscheinungsdatum für die News). Für die Ankündigung
+// wird eine eigene Datei unter md/news-probleme/<slug>.md verwendet,
+// falls sie existiert - andernfalls der generische Text
+// md/news/neue-fallakte-generisch.md.
+async function erzeugeProblemNews(problemeListe) {
+
+  const relevante = problemeListe.filter(problem => problem.erstellt);
+
+  return Promise.all(relevante.map(async problem => {
+
+    const eigeneDatei = `md/news-probleme/${problem.slug}.md`;
+    const hatEigeneDatei = await dateiExistiert(eigeneDatei);
+
+    return {
+      datei: hatEigeneDatei
+        ? `../news-probleme/${problem.slug}.md`
+        : "neue-fallakte-generisch.md",
+      titel: `Neue Fallakte: ${problem.titel}`,
+      datum: problem.erstellt,
+      link: `problem.html?slug=${problem.slug}`,
+      linkText: "Zur Fallakte",
+      kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
+    };
+
+  }));
+
+}
+
 // Versieht eine Liste roher News-Einträge (ohne kategorie-Feld) mit
 // der übergebenen Kategorie. Wird für die ausgelagerten JSON-Dateien
 // (Institutsleben, Kuriositäten) verwendet.
@@ -173,6 +192,9 @@ async function ladeAlleNews() {
   const ratgeberNews =
     await erzeugeRatgeberNews(ratgeberListe);
 
+  const problemNews =
+    await erzeugeProblemNews(problemeListe);
+
   const [institutslebenNews, kuriositaetenNews] = await Promise.all([
     ladeJsonNews("data/institutsleben.json", NewsKategorie.INSTITUTSLEBEN, "news-institutsleben"),
     ladeJsonNews("data/kuriositaeten.json", NewsKategorie.KURIOSITAETEN, "news-kuriositaeten"),
@@ -182,6 +204,7 @@ async function ladeAlleNews() {
     ...newsListe,
     ...paperNews,
     ...ratgeberNews,
+    ...problemNews,
     ...institutslebenNews,
     ...kuriositaetenNews,
   ];
