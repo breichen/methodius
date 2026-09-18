@@ -1,75 +1,65 @@
 [
   {
-    "datei": "teamevent-oper.md",
+    "slug": "teamevent-oper",
     "titel": "Teamevent im Nationaltheater",
     "datum": "2027-10-28",
-    "bild": "oper.png",
     "link": "institutsleben.html",
     "linkText": "Zum Institutsleben"
   },
   {
-    "datei": "methodius-orden.md",
+    "slug": "methodius-orden",
     "titel": "Hohe Auszeichnung für Dr. Maximilian Methodius",
-    "datum": "2027-06-12",
-    "bild": "methodius-orden.png"
+    "datum": "2027-06-12"
   },
   {
-    "datei": "teamevent-hiking.md",
+    "slug": "teamevent-hiking",
     "titel": "Teamevent in den Bergen",
     "datum": "2027-06-05",
-    "bild": "hiking.png",
     "link": "institutsleben.html",
     "linkText": "Zum Institutsleben"
   },
   {
-    "datei": "huber-carl-von-frisch-medaille.md",
+    "slug": "huber-carl-von-frisch-medaille",
     "titel": "Verleihung der Carl von Frisch-Medaille an Dr. Konrad P. Huber",
-    "datum": "2027-05-24",
-    "bild": "huber-carl-von-frisch-medaille.png"
+    "datum": "2027-05-24"
   },
   {
-    "datei": "wankelmuth-sigismund-freud-medaille.md",
+    "slug": "wankelmuth-sigismund-freud-medaille",
     "titel": "Verleihung der Sigismund-Freud-Medaille an Prof. Dr. Hildegard Wankelmuth",
-    "datum": "2027-04-26",
-    "bild": "wankelmuth-sigismund-freud-medaille.png"
+    "datum": "2027-04-26"
   },
   {
-    "datei": "teamevent-billard.md",
+    "slug": "teamevent-billard",
     "titel": "Teamevent am Billardtisch",
     "datum": "2027-01-21",
-    "bild": "billard.png",
     "link": "institutsleben.html",
     "linkText": "Zum Institutsleben"
   },
   {
-    "datei": "jahrestagung-2026.md",
+    "slug": "jahrestagung-2026",
     "titel": "Methodius-Institut richtet erfolgreiche Fachtagung aus",
     "datum": "2026-11-15",
-    "bild": "jahrestagung-2026.png",
     "link": "institutsleben.html",
     "linkText": "Zum Institutsleben"
   },
   {
-    "datei": "jahrestagung-2026-poster.md",
+    "slug": "jahrestagung-2026-poster",
     "titel": "Ankündigung der Jahrestagung 2026",
     "datum": "2026-09-29",
-    "bild": "jahrestagung-2026-poster.png",
     "link": "institutsleben.html",
     "linkText": "Zum Institutsleben"
   },
   {
-    "datei": "teamevent-rafting.md",
+    "slug": "teamevent-rafting",
     "titel": "Teamevent auf der Moldau",
     "datum": "2026-09-15",
-    "bild": "rafting.png",
     "link": "institutsleben.html",
     "linkText": "Zum Institutsleben"
   },
   {
-    "datei": "gruendung-methodius-institut.md",
+    "slug": "gruendung-methodius-institut",
     "titel": "Methodius-Institut für Lebenswissenschaften gegründet",
     "datum": "2026-09-04",
-    "bild": "gruendung-methodius-institut.png",
     "link": "institutsleben.html",
     "linkText": "Zum Institutsleben"
   }

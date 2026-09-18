@@ -170,8 +170,8 @@ async function ladeJsonNews(pfad, kategorie, ordner) {
   const eintraegeMitPfad = ordner
     ? eintraege.map(eintrag => ({
         ...eintrag,
-        datei: `../${ordner}/${eintrag.datei}`,
-        ...(eintrag.bild && { bild: `pics/${ordner}/${eintrag.bild}` }),
+        datei: `../${ordner}/${eintrag.slug}.md`,
+        bild: `pics/${ordner}/${eintrag.slug}.png`,
       }))
     : eintraege;
 
