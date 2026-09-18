@@ -1,235 +1,16 @@
 [
     {
-        "datum": "2028-08-22",
-        "titel": "Zur Frage, ob ein Problem tatsächlich gelöst werden muss, nur weil es existiert",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Dr. Friedrich Unbedacht"
-        ],
-        "beschreibung": "Eine grundsätzliche Untersuchung des verbreiteten Missverständnisses, wonach die bloße Existenz eines Problems bereits dessen Lösung erforderlich macht.",
-        "journal": "Zeitschrift für Angewandte Problemunterlassung, Bd. 12, Heft 3",
-        "seite_start": 41,
-        "seite_ende": 58,
-        "slug": "problem-geloest-werden-muss"
-    },
-    {
-        "datum": "2028-07-07",
-        "titel": "Die produktive Vermeidung von Produktivität: Eine empirische Untersuchung des bewussten Nichtstuns",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Dr. Konrad P. Huber"
-        ],
-        "beschreibung": "Eine empirische Untersuchung der Frage, unter welchen Bedingungen bewusste Untätigkeit als besonders effiziente Form des Zeitmanagements betrachtet werden kann.",
-        "journal": "Jahrbuch für Strategische Untätigkeit, Bd. 9, Heft 2",
-        "seite_start": 112,
-        "seite_ende": 129,
-        "slug": "produktive-vermeidung-von-produktivitaet"
-    },
-    {
-        "datum": "2028-05-19",
-        "titel": "Wissenschaftlich fundierte Gründe, heute nichts mehr anzufangen",
+        "datum": "2026-09-04",
+        "titel": "Grundlagen einer gegenstromorientierten Lebenswissenschaft",
         "autoren": [
             "Dr. Maximilian Methodius"
         ],
-        "beschreibung": "Zusammenstellung und systematische Bewertung wissenschaftlich klingender Argumente für die Verschiebung anstehender Vorhaben auf einen späteren Zeitpunkt.",
-        "journal": "Archiv für Aufgeschobene Vorhaben, Bd. 18, Heft 1",
-        "seite_start": 7,
-        "seite_ende": 24,
-        "slug": "gruende-heute-nichts-anzufangen"
+        "beschreibung": "Gründungsschrift des Methodius-Instituts für Lebenswissenschaften.",
+        "journal": "Schriftenreihe des Methodius-Instituts, Bd. 1, Heft 1",
+        "slug": "gegenstromorientierte-lebenswissenschaft"
     },
     {
-        "datum": "2028-03-03",
-        "titel": "Wobei – eine longitudinale Untersuchung spontaner Meinungsrevisionen im Alltag",
-        "autoren": [
-            "Prof. Dr. Hildegard Wankelmuth",
-            "Dr. Konrad P. Huber"
-        ],
-        "beschreibung": "Eine Langzeituntersuchung der Frage, wie häufig Menschen ihre Meinung ändern, nachdem sie feststellen, dass ihre ursprüngliche Meinung gerade ungünstig ist.",
-        "journal": "Mitteilungen zur Dynamischen Überzeugungsforschung, Bd. 6, Heft 4",
-        "seite_start": 201,
-        "seite_ende": 220,
-        "slug": "spontane-meinungsrevisionen-im-alltag"
-    },
-    {
-        "datum": "2028-01-14",
-        "titel": "Die statistische Bedeutung des Satzes „Das machen doch alle“",
-        "autoren": [
-            "Dr. Konrad P. Huber",
-            "Dr. Maximilian Methodius"
-        ],
-        "beschreibung": "Eine statistische Analyse der Aussagekraft kollektiver Verhaltensbeobachtungen bei fehlender Kenntnis der tatsächlichen Grundgesamtheit.",
-        "journal": "Zeitschrift für Populäre Grundgesamtheiten, Bd. 4, Heft 1",
-        "seite_start": 66,
-        "seite_ende": 81,
-        "slug": "das-machen-doch-alle"
-    },
-    {
-        "datum": "2027-11-28",
-        "titel": "Über die therapeutische Wirkung des kontrollierten sozialen Rückzugs",
-        "autoren": [
-            "Prof. Dr. Hildegard Wankelmuth",
-            "Dr. Maximilian Methodius"
-        ],
-        "beschreibung": "Untersuchung des kontrollierten Rückzugs aus sozialen Situationen als mögliche Methode zur kurzfristigen Steigerung des persönlichen Wohlbefindens.",
-        "journal": "Journal für Praktische Distanzpflege, Bd. 15, Heft 3",
-        "seite_start": 88,
-        "seite_ende": 104,
-        "slug": "therapeutische-wirkung-sozialer-rueckzug"
-    },
-    {
-        "datum": "2027-09-09",
-        "titel": "Eine Untersuchung der Frage, warum gute Vorsätze bevorzugt am Montag beginnen",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Dr. Konrad P. Huber"
-        ],
-        "beschreibung": "Eine interdisziplinäre Untersuchung zeitlicher Muster bei der Formulierung guter Vorsätze und der auffälligen Bevorzugung des Montags als Beginntermin.",
-        "journal": "Wochenanfangsforschung Quarterly, Bd. 3, Heft 3",
-        "seite_start": 14,
-        "seite_ende": 31,
-        "slug": "gute-vorsaetze-am-montag"
-    },
-    {
-        "datum": "2027-07-21",
-        "titel": "Zur Überinterpretation alltäglicher Müdigkeit als Zeichen persönlicher Entwicklung",
-        "autoren": [
-            "Prof. Dr. Hildegard Wankelmuth"
-        ],
-        "beschreibung": "Entwicklung eines Deutungsmodells, nach dem gewöhnliche Erschöpfungszustände als Hinweise auf tiefgreifende persönliche Veränderungsprozesse interpretiert werden können.",
-        "journal": "Annalen der Bedeutungsüberhöhung, Bd. 11, Heft 2",
-        "seite_start": 145,
-        "seite_ende": 162,
-        "slug": "alltaegliche-muedigkeit-persoenliche-entwicklung"
-    },
-    {
-        "datum": "2027-05-02",
-        "titel": "Die Rolle unbequemer Einwände bei der Stabilisierung wissenschaftlich haltbarer Ergebnisse",
-        "autoren": [
-            "Dr. Friedrich Unbedacht",
-            "Dr. Konrad P. Huber"
-        ],
-        "beschreibung": "Eine Untersuchung der Frage, in welchem Umfang kritische Einwände zur wissenschaftlichen Belastbarkeit von Ergebnissen beitragen und ab wann sie lediglich störend werden.",
-        "journal": "Kritik & Evidenz, Bd. 7, Heft 1",
-        "seite_start": 93,
-        "seite_ende": 110,
-        "slug": "rolle-unbequemer-einwaende"
-    },
-    {
-        "datum": "2027-02-16",
-        "titel": "Warum Menschen Ratschläge suchen, obwohl sie bereits wissen, was sie tun werden",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Prof. Dr. Hildegard Wankelmuth"
-        ],
-        "beschreibung": "Eine Untersuchung der psychologischen und sozialen Funktionen von Ratschlägen, die zwar ausdrücklich erbeten, anschließend jedoch konsequent ignoriert werden.",
-        "journal": "Zeitschrift für Selektive Beratung, Bd. 8, Heft 1",
-        "seite_start": 22,
-        "seite_ende": 39,
-        "slug": "warum-menschen-ratschlaege-suchen"
-    },
-    {
-        "datum": "2026-12-08",
-        "titel": "Eine empirische Untersuchung des Zusammenhangs zwischen Selbstoptimierung und dem Wunsch, damit aufzuhören",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Dr. Konrad P. Huber"
-        ],
-        "beschreibung": "Eine empirische Analyse des möglichen Zusammenhangs zwischen zunehmender Selbstoptimierung und dem wachsenden Bedürfnis, sich dieser zu entziehen.",
-        "journal": "Journal of Recursive Self-Improvement Studies, Bd. 2, Heft 4",
-        "seite_start": 171,
-        "seite_ende": 189,
-        "slug": "selbstoptimierung-und-der-wunsch-aufzuhoeren"
-    },
-    {
-        "datum": "2026-10-17",
-        "titel": "Vorläufige Ergebnisse zur kontrollierten Überinterpretation gewöhnlicher Verhaltensweisen",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Prof. Dr. Hildegard Wankelmuth"
-        ],
-        "beschreibung": "Erste Forschungsergebnisse zur systematischen Bedeutungsüberhöhung alltäglicher Handlungen und ihrer möglichen Anwendung in der modernen Lebensberatung.",
-        "journal": "Berichte aus der Überdeutungsforschung, Bd. 1, Heft 2",
-        "seite_start": 5,
-        "seite_ende": 19,
-        "slug": "kontrollierte-ueberinterpretation-verhaltensweisen"
-    },
-    {
-        "datum": "2026-08-28",
-        "titel": "Der Ratgeber als wissenschaftliches Instrument",
-        "autoren": [
-            "Dr. Maximilian Methodius"
-        ],
-        "beschreibung": "Über die Möglichkeit, wissenschaftliche Erkenntnisse in alltagstaugliche Empfehlungen zu überführen.",
-        "journal": "Praxisjournal für Evidenznahe Belehrung, Bd. 5, Heft 3",
-        "seite_start": 54,
-        "seite_ende": 68,
-        "slug": "ratgeber-als-wissenschaftliches-instrument"
-    },
-    {
-        "datum": "2026-08-17",
-        "titel": "Grenzen der wissenschaftlichen Überinterpretation",
-        "autoren": [
-            "Prof. Dr. Hildegard Wankelmuth",
-            "Dr. Friedrich Unbedacht"
-        ],
-        "beschreibung": "Ein Beitrag über die methodischen Grenzen der Überinterpretation alltäglicher Verhaltensweisen.",
-        "journal": "Annalen der Bedeutungsüberhöhung, Bd. 10, Heft 4",
-        "seite_start": 233,
-        "seite_ende": 247,
-        "slug": "grenzen-der-wissenschaftlichen-ueberinterpretation"
-    },
-    {
-        "datum": "2026-08-03",
-        "titel": "Korrelation, Kausalität und andere vermeidbare Missverständnisse",
-        "autoren": [
-            "Dr. Maximilian Methodius",
-            "Dr. Konrad P. Huber"
-        ],
-        "beschreibung": "Ein Beitrag zur praktischen Anwendung statistischer Argumentation.",
-        "journal": "Statistische Irrtümer Quarterly, Bd. 13, Heft 2",
-        "seite_start": 118,
-        "seite_ende": 136,
-        "slug": "korrelation-kausalitaet-missverstaendnisse"
-    },
-    {
-        "datum": "2026-07-09",
-        "titel": "Muskelabbau als unterschätzte Strategie der Gewichtsreduktion",
-        "autoren": [
-            "Dr. Maximilian Methodius"
-        ],
-        "beschreibung": "Grundlage des später erschienenen Ratgebers.",
-        "journal": "Zeitschrift für Alternative Körperkomposition, Bd. 2, Heft 2",
-        "seite_start": 39,
-        "seite_ende": 51,
-        "slug": "muskelabbau-gewichtsreduktion"
-    },
-    {
-        "datum": "2026-06-21",
-        "titel": "Überinterpretation alltäglicher Verhaltensweisen: Ein methodischer Leitfaden",
-        "autoren": [
-            "Prof. Dr. Hildegard Wankelmuth"
-        ],
-        "beschreibung": "Entwicklung eines Modells zur systematischen Bedeutungsüberhöhung gewöhnlicher Handlungen.",
-        "journal": "Methodenhefte der Alltagshermeneutik, Bd. 1, Heft 1",
-        "seite_start": 1,
-        "seite_ende": 21,
-        "slug": "ueberinterpretation-alltaeglicher-verhaltensweisen"
-    },
-    {
-        "datum": "2026-06-02",
-        "titel": "Empirische Plausibilität bei unvollständiger Datenlage",
-        "autoren": [
-            "Dr. Konrad P. Huber",
-            "Dr. Maximilian Methodius"
-        ],
-        "beschreibung": "Eine statistische Untersuchung zur Frage, wann ein Ergebnis überzeugend genug klingt.",
-        "journal": "Archiv für Ausreichende Evidenz, Bd. 14, Heft 2",
-        "seite_start": 72,
-        "seite_ende": 87,
-        "slug": "empirische-plausibilitaet-datenlage"
-    },
-    {
-        "datum": "2026-05-18",
+        "datum": "2026-10-16",
         "titel": "Zur kontrollierten Fehlberatung als angewandte Lebenshilfe",
         "autoren": [
             "Dr. Maximilian Methodius",
@@ -237,20 +18,199 @@
         ],
         "beschreibung": "Erste gemeinsame institutsinterne Publikation.",
         "journal": "Journal für Praktische Fehlorientierung, Bd. 1, Heft 1",
-        "seite_start": 3,
-        "seite_ende": 16,
         "slug": "kontrollierte-fehlberatung-lebenshilfe"
     },
     {
-        "datum": "2026-05-04",
-        "titel": "Grundlagen einer gegenstromorientierten Lebenswissenschaft",
+        "datum": "2026-11-27",
+        "titel": "Empirische Plausibilität bei unvollständiger Datenlage",
+        "autoren": [
+            "Dr. Konrad P. Huber",
+            "Dr. Maximilian Methodius"
+        ],
+        "beschreibung": "Eine statistische Untersuchung zur Frage, wann ein Ergebnis überzeugend genug klingt.",
+        "journal": "Archiv für Ausreichende Evidenz, Bd. 14, Heft 2",
+        "slug": "empirische-plausibilitaet-datenlage"
+    },
+    {
+        "datum": "2027-01-08",
+        "titel": "Überinterpretation alltäglicher Verhaltensweisen: Ein methodischer Leitfaden",
+        "autoren": [
+            "Prof. Dr. Hildegard Wankelmuth"
+        ],
+        "beschreibung": "Entwicklung eines Modells zur systematischen Bedeutungsüberhöhung gewöhnlicher Handlungen.",
+        "journal": "Methodenhefte der Alltagshermeneutik, Bd. 1, Heft 1",
+        "slug": "ueberinterpretation-alltaeglicher-verhaltensweisen"
+    },
+    {
+        "datum": "2027-02-19",
+        "titel": "Muskelabbau als unterschätzte Strategie der Gewichtsreduktion",
         "autoren": [
             "Dr. Maximilian Methodius"
         ],
-        "beschreibung": "Gründungsschrift des Methodius-Instituts für Lebenswissenschaften.",
-        "journal": "Schriftenreihe des Methodius-Instituts, Bd. 1, Heft 1",
-        "seite_start": 1,
-        "seite_ende": 27,
-        "slug": "gegenstromorientierte-lebenswissenschaft"
+        "beschreibung": "Grundlage des später erschienenen Ratgebers.",
+        "journal": "Zeitschrift für Alternative Körperkomposition, Bd. 2, Heft 2",
+        "slug": "muskelabbau-gewichtsreduktion"
+    },
+    {
+        "datum": "2027-04-02",
+        "titel": "Korrelation, Kausalität und andere vermeidbare Missverständnisse",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Dr. Konrad P. Huber"
+        ],
+        "beschreibung": "Ein Beitrag zur praktischen Anwendung statistischer Argumentation.",
+        "journal": "Statistische Irrtümer Quarterly, Bd. 13, Heft 2",
+        "slug": "korrelation-kausalitaet-missverstaendnisse"
+    },
+    {
+        "datum": "2027-05-14",
+        "titel": "Grenzen der wissenschaftlichen Überinterpretation",
+        "autoren": [
+            "Prof. Dr. Hildegard Wankelmuth",
+            "Dr. Friedrich Unbedacht"
+        ],
+        "beschreibung": "Ein Beitrag über die methodischen Grenzen der Überinterpretation alltäglicher Verhaltensweisen.",
+        "journal": "Annalen der Bedeutungsüberhöhung, Bd. 10, Heft 4",
+        "slug": "grenzen-der-wissenschaftlichen-ueberinterpretation"
+    },
+    {
+        "datum": "2027-06-25",
+        "titel": "Der Ratgeber als wissenschaftliches Instrument",
+        "autoren": [
+            "Dr. Maximilian Methodius"
+        ],
+        "beschreibung": "Über die Möglichkeit, wissenschaftliche Erkenntnisse in alltagstaugliche Empfehlungen zu überführen.",
+        "journal": "Praxisjournal für Evidenznahe Belehrung, Bd. 5, Heft 3",
+        "slug": "ratgeber-als-wissenschaftliches-instrument"
+    },
+    {
+        "datum": "2027-08-06",
+        "titel": "Vorläufige Ergebnisse zur kontrollierten Überinterpretation gewöhnlicher Verhaltensweisen",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Prof. Dr. Hildegard Wankelmuth"
+        ],
+        "beschreibung": "Erste Forschungsergebnisse zur systematischen Bedeutungsüberhöhung alltäglicher Handlungen und ihrer möglichen Anwendung in der modernen Lebensberatung.",
+        "journal": "Berichte aus der Überdeutungsforschung, Bd. 1, Heft 2",
+        "slug": "kontrollierte-ueberinterpretation-verhaltensweisen"
+    },
+    {
+        "datum": "2027-09-17",
+        "titel": "Eine empirische Untersuchung des Zusammenhangs zwischen Selbstoptimierung und dem Wunsch, damit aufzuhören",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Dr. Konrad P. Huber"
+        ],
+        "beschreibung": "Eine empirische Analyse des möglichen Zusammenhangs zwischen zunehmender Selbstoptimierung und dem wachsenden Bedürfnis, sich dieser zu entziehen.",
+        "journal": "Journal of Recursive Self-Improvement Studies, Bd. 2, Heft 4",
+        "slug": "selbstoptimierung-und-der-wunsch-aufzuhoeren"
+    },
+    {
+        "datum": "2027-10-29",
+        "titel": "Warum Menschen Ratschläge suchen, obwohl sie bereits wissen, was sie tun werden",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Prof. Dr. Hildegard Wankelmuth"
+        ],
+        "beschreibung": "Eine Untersuchung der psychologischen und sozialen Funktionen von Ratschlägen, die zwar ausdrücklich erbeten, anschließend jedoch konsequent ignoriert werden.",
+        "journal": "Zeitschrift für Selektive Beratung, Bd. 8, Heft 1",
+        "slug": "warum-menschen-ratschlaege-suchen"
+    },
+    {
+        "datum": "2027-12-10",
+        "titel": "Die Rolle unbequemer Einwände bei der Stabilisierung wissenschaftlich haltbarer Ergebnisse",
+        "autoren": [
+            "Dr. Friedrich Unbedacht",
+            "Dr. Konrad P. Huber"
+        ],
+        "beschreibung": "Eine Untersuchung der Frage, in welchem Umfang kritische Einwände zur wissenschaftlichen Belastbarkeit von Ergebnissen beitragen und ab wann sie lediglich störend werden.",
+        "journal": "Kritik & Evidenz, Bd. 7, Heft 1",
+        "slug": "rolle-unbequemer-einwaende"
+    },
+    {
+        "datum": "2028-01-21",
+        "titel": "Zur Überinterpretation alltäglicher Müdigkeit als Zeichen persönlicher Entwicklung",
+        "autoren": [
+            "Prof. Dr. Hildegard Wankelmuth"
+        ],
+        "beschreibung": "Entwicklung eines Deutungsmodells, nach dem gewöhnliche Erschöpfungszustände als Hinweise auf tiefgreifende persönliche Veränderungsprozesse interpretiert werden können.",
+        "journal": "Annalen der Bedeutungsüberhöhung, Bd. 11, Heft 2",
+        "slug": "alltaegliche-muedigkeit-persoenliche-entwicklung"
+    },
+    {
+        "datum": "2028-03-03",
+        "titel": "Eine Untersuchung der Frage, warum gute Vorsätze bevorzugt am Montag beginnen",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Dr. Konrad P. Huber"
+        ],
+        "beschreibung": "Eine interdisziplinäre Untersuchung zeitlicher Muster bei der Formulierung guter Vorsätze und der auffälligen Bevorzugung des Montags als Beginntermin.",
+        "journal": "Wochenanfangsforschung Quarterly, Bd. 3, Heft 3",
+        "slug": "gute-vorsaetze-am-montag"
+    },
+    {
+        "datum": "2028-04-14",
+        "titel": "Über die therapeutische Wirkung des kontrollierten sozialen Rückzugs",
+        "autoren": [
+            "Prof. Dr. Hildegard Wankelmuth",
+            "Dr. Maximilian Methodius"
+        ],
+        "beschreibung": "Untersuchung des kontrollierten Rückzugs aus sozialen Situationen als mögliche Methode zur kurzfristigen Steigerung des persönlichen Wohlbefindens.",
+        "journal": "Journal für Praktische Distanzpflege, Bd. 15, Heft 3",
+        "slug": "therapeutische-wirkung-sozialer-rueckzug"
+    },
+    {
+        "datum": "2028-05-26",
+        "titel": "Die statistische Bedeutung des Satzes „Das machen doch alle“",
+        "autoren": [
+            "Dr. Konrad P. Huber",
+            "Dr. Maximilian Methodius"
+        ],
+        "beschreibung": "Eine statistische Analyse der Aussagekraft kollektiver Verhaltensbeobachtungen bei fehlender Kenntnis der tatsächlichen Grundgesamtheit.",
+        "journal": "Zeitschrift für Populäre Grundgesamtheiten, Bd. 4, Heft 1",
+        "slug": "das-machen-doch-alle"
+    },
+    {
+        "datum": "2028-07-07",
+        "titel": "Wobei – eine longitudinale Untersuchung spontaner Meinungsrevisionen im Alltag",
+        "autoren": [
+            "Prof. Dr. Hildegard Wankelmuth",
+            "Dr. Konrad P. Huber"
+        ],
+        "beschreibung": "Eine Langzeituntersuchung der Frage, wie häufig Menschen ihre Meinung ändern, nachdem sie feststellen, dass ihre ursprüngliche Meinung gerade ungünstig ist.",
+        "journal": "Mitteilungen zur Dynamischen Überzeugungsforschung, Bd. 6, Heft 4",
+        "slug": "spontane-meinungsrevisionen-im-alltag"
+    },
+    {
+        "datum": "2028-08-18",
+        "titel": "Wissenschaftlich fundierte Gründe, heute nichts mehr anzufangen",
+        "autoren": [
+            "Dr. Maximilian Methodius"
+        ],
+        "beschreibung": "Zusammenstellung und systematische Bewertung wissenschaftlich klingender Argumente für die Verschiebung anstehender Vorhaben auf einen späteren Zeitpunkt.",
+        "journal": "Archiv für Aufgeschobene Vorhaben, Bd. 18, Heft 1",
+        "slug": "gruende-heute-nichts-anzufangen"
+    },
+    {
+        "datum": "2028-09-29",
+        "titel": "Die produktive Vermeidung von Produktivität: Eine empirische Untersuchung des bewussten Nichtstuns",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Dr. Konrad P. Huber"
+        ],
+        "beschreibung": "Eine empirische Untersuchung der Frage, unter welchen Bedingungen bewusste Untätigkeit als besonders effiziente Form des Zeitmanagements betrachtet werden kann.",
+        "journal": "Jahrbuch für Strategische Untätigkeit, Bd. 9, Heft 2",
+        "slug": "produktive-vermeidung-von-produktivitaet"
+    },
+    {
+        "datum": "2028-11-10",
+        "titel": "Zur Frage, ob ein Problem tatsächlich gelöst werden muss, nur weil es existiert",
+        "autoren": [
+            "Dr. Maximilian Methodius",
+            "Dr. Friedrich Unbedacht"
+        ],
+        "beschreibung": "Eine grundsätzliche Untersuchung des verbreiteten Missverständnisses, wonach die bloße Existenz eines Problems bereits dessen Lösung erforderlich macht.",
+        "journal": "Zeitschrift für Angewandte Problemunterlassung, Bd. 12, Heft 3",
+        "slug": "problem-geloest-werden-muss"
     }
 ]
