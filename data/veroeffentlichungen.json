@@ -10,7 +10,7 @@
         "journal": "Zeitschrift für Angewandte Problemunterlassung, Bd. 12, Heft 3",
         "seite_start": 41,
         "seite_ende": 58,
-        "datei": "problem-geloest-werden-muss.md"
+        "slug": "problem-geloest-werden-muss"
     },
     {
         "datum": "2028-07-07",
@@ -23,7 +23,7 @@
         "journal": "Jahrbuch für Strategische Untätigkeit, Bd. 9, Heft 2",
         "seite_start": 112,
         "seite_ende": 129,
-        "datei": "produktive-vermeidung-von-produktivitaet.md"
+        "slug": "produktive-vermeidung-von-produktivitaet"
     },
     {
         "datum": "2028-05-19",
@@ -35,7 +35,7 @@
         "journal": "Archiv für Aufgeschobene Vorhaben, Bd. 18, Heft 1",
         "seite_start": 7,
         "seite_ende": 24,
-        "datei": "gruende-heute-nichts-anzufangen.md"
+        "slug": "gruende-heute-nichts-anzufangen"
     },
     {
         "datum": "2028-03-03",
@@ -48,7 +48,7 @@
         "journal": "Mitteilungen zur Dynamischen Überzeugungsforschung, Bd. 6, Heft 4",
         "seite_start": 201,
         "seite_ende": 220,
-        "datei": "spontane-meinungsrevisionen-im-alltag.md"
+        "slug": "spontane-meinungsrevisionen-im-alltag"
     },
     {
         "datum": "2028-01-14",
@@ -61,7 +61,7 @@
         "journal": "Zeitschrift für Populäre Grundgesamtheiten, Bd. 4, Heft 1",
         "seite_start": 66,
         "seite_ende": 81,
-        "datei": "das-machen-doch-alle.md"
+        "slug": "das-machen-doch-alle"
     },
     {
         "datum": "2027-11-28",
@@ -74,7 +74,7 @@
         "journal": "Journal für Praktische Distanzpflege, Bd. 15, Heft 3",
         "seite_start": 88,
         "seite_ende": 104,
-        "datei": "therapeutische-wirkung-sozialer-rueckzug.md"
+        "slug": "therapeutische-wirkung-sozialer-rueckzug"
     },
     {
         "datum": "2027-09-09",
@@ -87,7 +87,7 @@
         "journal": "Wochenanfangsforschung Quarterly, Bd. 3, Heft 3",
         "seite_start": 14,
         "seite_ende": 31,
-        "datei": "gute-vorsaetze-am-montag.md"
+        "slug": "gute-vorsaetze-am-montag"
     },
     {
         "datum": "2027-07-21",
@@ -99,7 +99,7 @@
         "journal": "Annalen der Bedeutungsüberhöhung, Bd. 11, Heft 2",
         "seite_start": 145,
         "seite_ende": 162,
-        "datei": "alltaegliche-muedigkeit-persoenliche-entwicklung.md"
+        "slug": "alltaegliche-muedigkeit-persoenliche-entwicklung"
     },
     {
         "datum": "2027-05-02",
@@ -112,7 +112,7 @@
         "journal": "Kritik & Evidenz, Bd. 7, Heft 1",
         "seite_start": 93,
         "seite_ende": 110,
-        "datei": "rolle-unbequemer-einwaende.md"
+        "slug": "rolle-unbequemer-einwaende"
     },
     {
         "datum": "2027-02-16",
@@ -125,7 +125,7 @@
         "journal": "Zeitschrift für Selektive Beratung, Bd. 8, Heft 1",
         "seite_start": 22,
         "seite_ende": 39,
-        "datei": "warum-menschen-ratschlaege-suchen.md"
+        "slug": "warum-menschen-ratschlaege-suchen"
     },
     {
         "datum": "2026-12-08",
@@ -138,7 +138,7 @@
         "journal": "Journal of Recursive Self-Improvement Studies, Bd. 2, Heft 4",
         "seite_start": 171,
         "seite_ende": 189,
-        "datei": "selbstoptimierung-und-der-wunsch-aufzuhoeren.md"
+        "slug": "selbstoptimierung-und-der-wunsch-aufzuhoeren"
     },
     {
         "datum": "2026-10-17",
@@ -151,7 +151,7 @@
         "journal": "Berichte aus der Überdeutungsforschung, Bd. 1, Heft 2",
         "seite_start": 5,
         "seite_ende": 19,
-        "datei": "kontrollierte-ueberinterpretation-verhaltensweisen.md"
+        "slug": "kontrollierte-ueberinterpretation-verhaltensweisen"
     },
     {
         "datum": "2026-08-28",
@@ -163,7 +163,7 @@
         "journal": "Praxisjournal für Evidenznahe Belehrung, Bd. 5, Heft 3",
         "seite_start": 54,
         "seite_ende": 68,
-        "datei": "ratgeber-als-wissenschaftliches-instrument.md"
+        "slug": "ratgeber-als-wissenschaftliches-instrument"
     },
     {
         "datum": "2026-08-17",
@@ -176,7 +176,7 @@
         "journal": "Annalen der Bedeutungsüberhöhung, Bd. 10, Heft 4",
         "seite_start": 233,
         "seite_ende": 247,
-        "datei": "grenzen-der-wissenschaftlichen-ueberinterpretation.md"
+        "slug": "grenzen-der-wissenschaftlichen-ueberinterpretation"
     },
     {
         "datum": "2026-08-03",
@@ -189,7 +189,7 @@
         "journal": "Statistische Irrtümer Quarterly, Bd. 13, Heft 2",
         "seite_start": 118,
         "seite_ende": 136,
-        "datei": "korrelation-kausalitaet-missverstaendnisse.md"
+        "slug": "korrelation-kausalitaet-missverstaendnisse"
     },
     {
         "datum": "2026-07-09",
@@ -201,7 +201,7 @@
         "journal": "Zeitschrift für Alternative Körperkomposition, Bd. 2, Heft 2",
         "seite_start": 39,
         "seite_ende": 51,
-        "datei": "muskelabbau-gewichtsreduktion.md"
+        "slug": "muskelabbau-gewichtsreduktion"
     },
     {
         "datum": "2026-06-21",
@@ -213,7 +213,7 @@
         "journal": "Methodenhefte der Alltagshermeneutik, Bd. 1, Heft 1",
         "seite_start": 1,
         "seite_ende": 21,
-        "datei": "ueberinterpretation-alltaeglicher-verhaltensweisen.md"
+        "slug": "ueberinterpretation-alltaeglicher-verhaltensweisen"
     },
     {
         "datum": "2026-06-02",
@@ -226,7 +226,7 @@
         "journal": "Archiv für Ausreichende Evidenz, Bd. 14, Heft 2",
         "seite_start": 72,
         "seite_ende": 87,
-        "datei": "empirische-plausibilitaet-datenlage.md"
+        "slug": "empirische-plausibilitaet-datenlage"
     },
     {
         "datum": "2026-05-18",
@@ -239,7 +239,7 @@
         "journal": "Journal für Praktische Fehlorientierung, Bd. 1, Heft 1",
         "seite_start": 3,
         "seite_ende": 16,
-        "datei": "kontrollierte-fehlberatung-lebenshilfe.md"
+        "slug": "kontrollierte-fehlberatung-lebenshilfe"
     },
     {
         "datum": "2026-05-04",
@@ -251,6 +251,6 @@
         "journal": "Schriftenreihe des Methodius-Instituts, Bd. 1, Heft 1",
         "seite_start": 1,
         "seite_ende": 27,
-        "datei": "gegenstromorientierte-lebenswissenschaft.md"
+        "slug": "gegenstromorientierte-lebenswissenschaft"
     }
 ]

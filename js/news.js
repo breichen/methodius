@@ -42,12 +42,13 @@ async function erzeugePaperNews(veroeffentlichungen) {
 
   return Promise.all(veroeffentlichungen.map(async paper => {
 
-    const eigeneDatei = `md/news-papers/${paper.datei}`;
+    const path = `news-papers/${paper.slug}.md`;
+    const eigeneDatei = `md/${path}`;
     const hatEigeneDatei = await dateiExistiert(eigeneDatei);
 
     return {
       datei: hatEigeneDatei
-        ? `../news-papers/${paper.datei}`
+        ? `../${path}`
         : "neues-paper-generisch.md",
       titel: `Neues Paper: ${paper.titel}`,
       datum: paper.datum,
