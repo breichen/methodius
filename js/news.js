@@ -76,7 +76,13 @@ function versieheMitKategorie(eintraege, kategorie) {
   }));
 }
 
-async function ladeJsonNews(pfad, kategorie) {
+// praefix: wird vor jedes datei-Feld gehängt, z.B. "../news-institutsleben"
+// (Ordner md/news-institutsleben/ statt md/news/, analog zu den
+// Paper-News in ../news-papers/). Wird vor jedes datei-Feld gehängt,
+// sodass die JSON-Dateien selbst nur die reinen Dateinamen enthalten
+// müssen. Optional - ohne Angabe bleibt datei unverändert (z.B. für
+// Dateien direkt unter md/news/).
+async function ladeJsonNews(pfad, kategorie, praefix) {
 
   const response = await fetch(pfad);
 
@@ -86,7 +92,14 @@ async function ladeJsonNews(pfad, kategorie) {
 
   const eintraege = await response.json();
 
-  return versieheMitKategorie(eintraege, kategorie);
+  const eintraegeMitPfad = praefix
+    ? eintraege.map(eintrag => ({
+        ...eintrag,
+        datei: `${praefix}/${eintrag.datei}`,
+      }))
+    : eintraege;
+
+  return versieheMitKategorie(eintraegeMitPfad, kategorie);
 
 }
 
@@ -108,8 +121,8 @@ async function ladeAlleNews() {
     erzeugePaperNews(veroeffentlichungen);
 
   const [institutslebenNews, kuriositaetenNews] = await Promise.all([
-    ladeJsonNews("data/institutsleben.json", NewsKategorie.INSTITUTSLEBEN),
-    ladeJsonNews("data/kuriositaeten.json", NewsKategorie.KURIOSITAETEN),
+    ladeJsonNews("data/institutsleben.json", NewsKategorie.INSTITUTSLEBEN, "../news-institutsleben"),
+    ladeJsonNews("data/kuriositaeten.json", NewsKategorie.KURIOSITAETEN, "../news-kuriositaeten"),
   ]);
 
   return [
