@@ -341,6 +341,12 @@ _UEBERMAESSIGE_TRENNER_MUSTER = re.compile(r"^-{4,}")
 _H2_INTRO_PRAEFIXE = ("Der ultimative Ratgeber", "Der revolutionäre Ratgeber", "Ein Ratgeber")
 _KAESTCHEN = "☐"
 
+# Slugs, bei denen die erste H2 nach der ersten H1 nicht mit einem der
+# _H2_INTRO_PRAEFIXE beginnen muss (aber trotzdem existieren muss).
+_SLUGS_MIT_ABWEICHENDER_H2_EINLEITUNG = {
+    "Smalltalk für Fortgeschrittene",
+}
+
 
 def _ueberschrift_info(zeile: str):
     """Returns (level, text) if zeile is a Markdown heading, else None."""
@@ -405,14 +411,23 @@ def pruefe_ratgeber_markdown_struktur(pfad: Path, slug: str, meldungen: Meldunge
     erlaubte_trenner_zeilen = set()
 
     # Rule: direkt nach dem ersten h1 (mit Leerzeile dazwischen) kommt
-    # ein h2, der mit "Der ultimative Ratgeber" oder "Der revolutionäre
-    # Ratgeber" beginnt.
+    # ein h2 - normalerweise einer, der mit "Der ultimative Ratgeber"
+    # o.ä. beginnt; für Slugs in _SLUGS_MIT_ABWEICHENDER_H2_EINLEITUNG
+    # reicht es, wenn irgendein h2 dort steht.
     erster_h1_idx = h1_positionen[0][0]
     danach = _zeile_oder_none(zeilen, erster_h1_idx + 1)
     h2_kandidat = _zeile_oder_none(zeilen, erster_h1_idx + 2)
     h2_info = _ueberschrift_info(h2_kandidat) if h2_kandidat is not None else None
+    h2_vorhanden = h2_info is not None and h2_info[0] == 2
 
-    if danach is None or not _ist_leer(danach) or h2_info is None or h2_info[0] != 2 \
+    if slug in _SLUGS_MIT_ABWEICHENDER_H2_EINLEITUNG:
+        if danach is None or not _ist_leer(danach) or not h2_vorhanden:
+            meldungen.fehler_melden(
+                slug,
+                f"{pfad}: nach der ersten H1-Überschrift fehlt (mit Leerzeile "
+                f"dazwischen) ein H2.",
+            )
+    elif danach is None or not _ist_leer(danach) or not h2_vorhanden \
             or not h2_info[1].startswith(_H2_INTRO_PRAEFIXE):
         meldungen.fehler_melden(
             slug,
