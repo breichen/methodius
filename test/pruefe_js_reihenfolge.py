@@ -87,6 +87,8 @@ ABHAENGIGKEITEN = [
     ("showcase", "datumsformat"),
     ("showcase", "ratgeber"),
     ("veroeffentlichungen-seite", "datumsformat"),
+    ("zeitschrift", "datumsformat"),
+    ("zeitschrift", "markdown"),
 ]
 
 

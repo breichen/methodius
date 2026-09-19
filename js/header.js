@@ -84,6 +84,7 @@ function baueHeader() {
                 <li><a href="veroeffentlichungen.html">Publikationen</a></li>
                 <li><a href="institutsleben.html">Institutsleben</a></li>
                 <li><a href="studium.html">Methodius-Studium</a></li>
+                <li><a href="zeitschrift.html">Zeitschrift</a></li>
               </ul>
             </li>
           </ul>
