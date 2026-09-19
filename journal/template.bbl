@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{1}
+Zhang Y, Gong D.
+\newblock Generating test data for both paths coverage and faults detection
+  using genetic algorithms: multi-path case.
+\newblock Frontiers of Computer Science in China, 2014, 8(5): 726--740
+
+\bibitem{2}
+Gaydon A~G.
+\newblock Wolfhard {H G}. flames. 2nd ed.
+\newblock London: Chapman and Hall Ltd, 1960
+
+\bibitem{3}
+Karger D~R, Ruhl M.
+\newblock Simple efficient load balancing algorithms for peer-to-peer systems.
+\newblock In: Proceedings of the sixteenth annual ACM symposium on parallelism
+  in algorithms and architectures, SPAA '04.
+\newblock 2004,  36--43
+
+\end{thebibliography}
