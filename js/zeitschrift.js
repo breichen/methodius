@@ -125,7 +125,27 @@ function baueCallForPapersSection() {
   `;
 }
 
-fetch("md/zeitschrift.md")
+/*
+  Die Seite ist noch nicht offiziell veröffentlicht - solange der
+  Debug-Modus nicht aktiv ist (siehe istDebugModusAktiv() in
+  js/datumsformat.js), wird statt des eigentlichen Inhalts nur ein
+  Hinweis angezeigt. Einfach diesen Block entfernen, sobald die Seite
+  freigegeben werden soll.
+*/
+if (!istDebugModusAktiv()) {
+
+  container.innerHTML = `
+    <section class="section">
+      <div class="wrap">
+        <h1>Zeitschrift für Angewandte Lebensführung</h1>
+        <p>Diese Seite ist derzeit noch nicht öffentlich verfügbar.</p>
+      </div>
+    </section>
+  `;
+
+} else {
+
+  fetch("md/zeitschrift.md")
   .then(antwort => {
     if (!antwort.ok) throw new Error("Datei nicht gefunden");
     return antwort.text();
@@ -157,3 +177,5 @@ fetch("md/zeitschrift.md")
       </section>
     ` + baueAusgabenSection() + baueCallForPapersSection();
   });
+
+}
