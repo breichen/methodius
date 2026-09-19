@@ -538,6 +538,13 @@ def pruefe_ratgeber_markdown_struktur(pfad: Path, slug: str, meldungen: Meldunge
         leer2 = _zeile_oder_none(zeilen, letzte_trenner_idx + 3)
         kursiv_zeile = _zeile_oder_none(zeilen, letzte_trenner_idx + 4)
 
+        autor_ok = (
+            autor_zeile is not None
+            and autor_zeile.strip().startswith("**")
+            and autor_zeile.strip().endswith("**")
+            and "Dr. Maximilian Methodius" in autor_zeile
+        )
+
         kursiv_ok = (
             kursiv_zeile is not None
             and kursiv_zeile.strip().startswith("*")
@@ -547,14 +554,14 @@ def pruefe_ratgeber_markdown_struktur(pfad: Path, slug: str, meldungen: Meldunge
 
         if (
             leer1 is None or not _ist_leer(leer1)
-            or autor_zeile is None or "Dr. Maximilian Methodius" not in autor_zeile
+            or not autor_ok
             or leer2 is None or not _ist_leer(leer2)
             or not kursiv_ok
         ):
             meldungen.fehler_melden(
                 slug,
                 f"{pfad}: nach dem letzten '---' (Zeile {letzte_trenner_idx + 1}) "
-                f"fehlt das Muster Leerzeile/'Dr. Maximilian Methodius'/"
+                f"fehlt das Muster Leerzeile/fett '**Dr. Maximilian Methodius**'/"
                 f"Leerzeile/kursiver Text, der mit 'Autor, Satiriker' beginnt.",
             )
 
