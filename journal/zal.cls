@@ -1,11 +1,10 @@
 % !TeX root = ./template.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
-%%% Copyright (C) 2020 by Zhao Chongbin <zhao_chongbin@126.com>
-%%% Copyright (C) 2025 by Shi Jiale <shi.jiale@outlook.com>
+%%% Copyright (C) 2026 by Dr. Maximilian Methodius
 %%%
 %%% DESCRIPTION:
-%%% This class provides a template for the Frontiers of Computer Science journal
+%%% This class provides a template for the Dr. Methodius journal
 %%% with proper formatting according to journal guidelines.
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,7 +19,7 @@
 %%%        + : This author is the corresponding author.
 %%% 4. \address[<address label>]{<address>}
 %%% 5. \corremail{<correspondence e-mail>}
-%%% 6. \fcssetup{<key-value>}
+%%% 6. \zalsetup{<key-value>}
 %%%      <key>          : <value>                   |<default>
 %%%      doi            = <doi>                     |10.1007/sxxxxx-yyy-zzzz-1
 %%%      received       = <received time>           |\today
@@ -59,7 +58,7 @@
 %%%     own work or one laboratory or a group of researchers;
 %%%   "editorials" providing overview on certain topic written by well known
 %%%     scientists in the field.
-%%%   example: \documentclass[research]{fcs}
+%%%   example: \documentclass[research]{zal}
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -69,7 +68,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesExplClass{fcs}{2026/06/11}{v1.5}{Front. Comput. Sci journal template}
+\ProvidesExplClass{zal}{2026/06/11}{v1.5}{Z. Angew. Lebens. journal template}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Required packages and L3 compatibility checks
@@ -78,12 +77,12 @@
 \RequirePackage{ xparse, xtemplate }
 
 % Define error messaging functions
-\cs_new:Npn \__fcs_msg_new:nn   { \msg_new:nnn { fcs } }
-\cs_new:Npn \__fcs_msg_error:nn { \msg_error:nnn { fcs } }
-\cs_generate_variant:Nn \__fcs_msg_error:nn { nx } % For variable messages
+\cs_new:Npn \__zal_msg_new:nn   { \msg_new:nnn { zal } }
+\cs_new:Npn \__zal_msg_error:nn { \msg_error:nnn { zal } }
+\cs_generate_variant:Nn \__zal_msg_error:nn { nx } % For variable messages
 
 % Show error message for old l3 packages
-\__fcs_msg_new:nn { l3-too-old }
+\__zal_msg_new:nn { l3-too-old }
   {
     Package~"#1"~is~too~old. \\\\
     Please~update~an~up-to-date~version~of~the~bundles \\
@@ -95,7 +94,7 @@
 \clist_map_inline:nn { expl3, xparse, xtemplate }
   {
     \@ifpackagelater { #1 } { 2020/01/01 } { }
-      { \__fcs_msg_error:nn { l3-too-old } { #1 } }
+      { \__zal_msg_error:nn { l3-too-old } { #1 } }
   }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -103,22 +102,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Define variables for class options
-\tl_new:N \g__fcs_article_type_tl
-\tl_new:N \g__fcs_article_fontsize_tl
+\tl_new:N \g__zal_article_type_tl
+\tl_new:N \g__zal_article_fontsize_tl
 
 % Helper function to set default values if not already set
-\cs_new_protected:Npn \__fcs_set_default_value:Nn #1#2
+\cs_new_protected:Npn \__zal_set_default_value:Nn #1#2
   { \tl_if_empty:NT #1 { \tl_gset:Nn #1 { #2 } } }
 
 % Define keys for document options
-\keys_define:nn { fcs / option }
+\keys_define:nn { zal / option }
   {
     % Article type options
-    review      .code:n = { \tl_gset:Nn \g__fcs_article_type_tl { REVIEW~ARTICLE } },
-    research    .code:n = { \tl_gset:Nn \g__fcs_article_type_tl { RESEARCH~ARTICLE } },
-    editorials  .code:n = { \tl_gset:Nn \g__fcs_article_type_tl { EDITORIALS } },
-    letters     .code:n = { \tl_gset:Nn \g__fcs_article_type_tl { LETTERS } },
-    perspectives.code:n = { \tl_gset:Nn \g__fcs_article_type_tl { PERSPECTIVES } },
+    review      .code:n = { \tl_gset:Nn \g__zal_article_type_tl { REVIEW~ARTICLE } },
+    research    .code:n = { \tl_gset:Nn \g__zal_article_type_tl { RESEARCH~ARTICLE } },
+    editorials  .code:n = { \tl_gset:Nn \g__zal_article_type_tl { EDITORIALS } },
+    letters     .code:n = { \tl_gset:Nn \g__zal_article_type_tl { LETTERS } },
+    perspectives.code:n = { \tl_gset:Nn \g__zal_article_type_tl { PERSPECTIVES } },
 
     % No value allowed for these options
     review      .value_forbidden:n = true,
@@ -131,19 +130,19 @@
 % Process options based on LaTeX version
 \IfFormatAtLeastTF { 2022-06-01 }
   {
-    \ProcessKeyOptions [ fcs / option ]
+    \ProcessKeyOptions [ zal / option ]
   }
   {
     \RequirePackage { l3keys2e }
-    \ProcessKeysOptions { fcs / option }
+    \ProcessKeysOptions { zal / option }
   }
 
 % Set default values if not specified through options
-\__fcs_set_default_value:Nn \g__fcs_article_type_tl { RESEARCH~ARTICLE }
-\__fcs_set_default_value:Nn \g__fcs_article_fontsize_tl { 9pt }
+\__zal_set_default_value:Nn \g__zal_article_type_tl { RESEARCH~ARTICLE }
+\__zal_set_default_value:Nn \g__zal_article_fontsize_tl { 9pt }
 
 % Load the base class with appropriate options
-\LoadClass [ twoside, \g__fcs_article_fontsize_tl ] { extarticle }
+\LoadClass [ twoside, \g__zal_article_fontsize_tl ] { extarticle }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Required Packages
@@ -183,7 +182,7 @@
 % Configure graphics
 \graphicspath { { figures/ } }
 
-% Add FCS logo
+% Add zal logo
 \ExplSyntaxOff
 
 \usetikzlibrary{calc}
@@ -196,7 +195,7 @@
 	\begin{tikzpicture}[remember picture, overlay, every node/.style={inner sep=0pt}]
 		\node[anchor=north east, xshift=-22mm, yshift=-5mm] (methodiuslogo) 
 		at (current page.north east) 
-		{\phantom{\includegraphics[width=1.5cm]{methodius-512x512-nobg.png}}};
+		{\phantom{\includegraphics[width=1.5cm]{logo.png}}};
 		
 		% Untere linke und obere rechte Ecke direkt bestimmen
 		\coordinate (frame-bl) at ($(methodiuslogo.south west) + (-\logoframepad,-\logoframepad)$);
@@ -216,7 +215,7 @@
 		% Logo zuletzt zeichnen, damit es oben liegt
 		\node[anchor=north east, xshift=-22mm, yshift=-5mm] 
 		at (current page.north east) 
-		{\includegraphics[width=1.5cm]{methodius-512x512-nobg.png}};
+		{\includegraphics[width=1.5cm]{logo.png}};
 	\end{tikzpicture}
 }
 
@@ -269,25 +268,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Author and address storage
-\seq_new:N \g__fcs_authors_seq
-\seq_new:N \g__fcs_addresses_seq
-\tl_new:N \g__fcs_corr_email_tl
-\tl_new:N \g__fcs_first_author_tl
-\tl_new:N \g__fcs_short_author_tl
-\tl_new:N \g__fcs_short_title_tl
-\bool_new:N \g__fcs_has_equal_contrib_bool
+\seq_new:N \g__zal_authors_seq
+\seq_new:N \g__zal_addresses_seq
+\tl_new:N \g__zal_corr_email_tl
+\tl_new:N \g__zal_first_author_tl
+\tl_new:N \g__zal_short_author_tl
+\tl_new:N \g__zal_short_title_tl
+\bool_new:N \g__zal_has_equal_contrib_bool
 
 % New counter for addresses
-\newcounter { fcs@address }
-\setcounter { fcs@address } { 0 }
+\newcounter { zal@address }
+\setcounter { zal@address } { 0 }
 
 % Common journal strings
-\tl_set:Nn \l__fcs_etal_tl
+\tl_set:Nn \l__zal_etal_tl
   { et~al. }
 
 \ExplSyntaxOff
 
-\NewTotalTColorBox { \fcsheaderbox } { O{methodiuscream} m } {
+\NewTotalTColorBox { \zalheaderbox } { O{methodiuscream} m } {
 	on line,
 	colback = #1,
 	colframe = #1,
@@ -302,52 +301,59 @@
 \ExplSyntaxOn
 
 % Page header/footer strings
-\tl_set:Nn \l__fcs_short_detailed_page_tl
+\tl_set:Nn \l__zal_short_detailed_page_tl
 {
-	\fcsheaderbox
+	\zalheaderbox
 	{
-		\l__fcs_short_journal_name_tl
+		\l__zal_short_journal_name_tl
 		,~
-		\int_use:N \l__fcs_publish_year_int
+		\int_use:N \l__zal_publish_year_int
 		,~
-		\int_to_arabic:n \l__fcs_issue_int
+		\int_to_arabic:n \l__zal_issue_int
 		(
-		\int_to_arabic:n \l__fcs_volume_int
+		\int_to_arabic:n \l__zal_volume_int
 		):~
-		\int_to_arabic:n \l__fcs_first_page_int
+		\int_to_arabic:n \l__zal_first_page_int
 	}
 }
 
-\tl_set:Nn \l__fcs_long_detailed_page_tl
+\tl_set:Nn \l__zal_long_detailed_page_tl
 {
 	\normalsize
-	\fcsheaderbox
+	\zalheaderbox
 	{
-		\textbf{ \l__fcs_long_journal_name_tl }
+		\textbf{ \l__zal_long_journal_name_tl }
 		\footnotesize
 		\ $\vert$\
-		Issue~\int_to_arabic:n \l__fcs_issue_int
+		Heft~\int_to_arabic:n \l__zal_issue_int
 		\ $\vert$\
-		Volume~\int_to_arabic:n \l__fcs_volume_int
+		Band~\int_to_arabic:n \l__zal_volume_int
 		\ $\vert$\
-		\l__fcs_publish_month_tl\ {\int_use:N \l__fcs_publish_year_int}
+		\l__zal_publish_month_tl\ {\int_use:N \l__zal_publish_year_int}
 		\ $\vert$\
-		\l__fcs_article_id_tl
+		ZAL~\l__zal_article_id_tl
 		-
 		\int_use:c { c@page }
 	}
 }
 
 % Journal name strings
-\tl_set:Nn \l__fcs_short_journal_name_tl
-  { Front.~Comput.~Sci. }
+\tl_set:Nn \l__zal_short_journal_name_tl
+  { Z.~Angew.~Lebensf. }
 
-\tl_set:Nn \l__fcs_long_journal_name_tl
-  { \textbf{\textsf{Frontiers}}~\textit{of}~\textbf{\textsf{Computer~Science}} }
+% Zeitschrift für angewandte Lebensführung
+% Mitteilungen aus der angewandten Lebenswissenschaft
+% Beiträge zur fragwürdigen Lebensoptimierung
+% Notizen aus der angewandten Daseinsbewältigung
+% Rundschreiben für praktische Lebensfragen
+% Fortschritte der angewandten Lebenswissenschaft
+
+\tl_set:Nn \l__zal_long_journal_name_tl
+  { \textbf{\textsf{Zeitschrift}}~\textit{für}~\textbf{\textsf{angewandte~Lebensführung}} }
 
 % DOI URL string
-\tl_set:Nn \l__fcs_doi_url_tl
-  { https://doi.org/ \l__fcs_doi_tl }
+\tl_set:Nn \l__zal_doi_url_tl
+  { https://doi.org/ \l__zal_doi_tl }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Page Setup and Layout
@@ -381,16 +387,16 @@
 \fancyhead [ CO ]
   {
     \small
-    \textnavy{ \l__fcs_short_detailed_page_tl }
+    \textnavy{ \l__zal_short_detailed_page_tl }
   }
 \fancyhead [ CE ]
   {
 	\small
-	\textnavy{ \fcsheaderbox{ \g__fcs_short_author_tl \quad \g__fcs_short_title_tl } }
+	\textnavy{ \zalheaderbox{ \g__zal_short_author_tl \quad \g__zal_short_title_tl } }
   }
 \fancyfoot [ RO, LE ]
   {
-    \l__fcs_long_detailed_page_tl
+    \l__zal_long_detailed_page_tl
   }
 
 \RenewDocumentCommand \headrulewidth { } { 0pt }
@@ -402,11 +408,11 @@
     \fancyhead [ L ]
       {
         \normalsize
-        \textnavy { \l__fcs_doi_url_tl }
+        \textnavy { \l__zal_doi_url_tl }
       }
     \fancyfoot [ RO, LE ]
       {
-        \l__fcs_long_detailed_page_tl
+        \l__zal_long_detailed_page_tl
       }
   }
 
@@ -523,19 +529,19 @@
 
 % Short title command
 \NewDocumentCommand \shorttitle { m }
-  { \tl_gset:Nn \g__fcs_short_title_tl { #1 } }
+  { \tl_gset:Nn \g__zal_short_title_tl { #1 } }
 
 % Title command
 \RenewDocumentCommand \title { m }
   {
-    \tl_gset:Nn \g__fcs_title_tl { #1 }
-    \__fcs_set_default_value:Nn \g__fcs_short_title_tl { #1 }
+    \tl_gset:Nn \g__zal_title_tl { #1 }
+    \__zal_set_default_value:Nn \g__zal_short_title_tl { #1 }
   }
 
 % Author command with optional arguments
 \RenewDocumentCommand \author { O{} m }
   {
-    \seq_put_right:Nn \g__fcs_authors_seq
+    \seq_put_right:Nn \g__zal_authors_seq
       {
         % Print author name
         \group_begin:
@@ -560,7 +566,7 @@
           }
           { % With address
             \clist_set:Nx \l_tmpa_clist 
-              { \clist_map_function:NN \l_tmpa_clist \__fcs_ref:n }
+              { \clist_map_function:NN \l_tmpa_clist \__zal_ref:n }
             \textsuperscript 
               { 
                 \clist_use:Nn \l_tmpa_clist { , }
@@ -574,28 +580,28 @@
               \huge \Letter
             \group_end:
           }
-        % Assign value for \g__fcs_has_equal_contrib_bool
+        % Assign value for \g__zal_has_equal_contrib_bool
         \clist_if_in:NnT \l_tmpb_clist { * } 
-          { \bool_set_true:N \g__fcs_has_equal_contrib_bool }
+          { \bool_set_true:N \g__zal_has_equal_contrib_bool }
       }
-    \__fcs_set_default_value:Nn \g__fcs_first_author_tl { #2 }
+    \__zal_set_default_value:Nn \g__zal_first_author_tl { #2 }
   }
 
 % Helper function for reference formatting
-\cs_new:Npn \__fcs_ref:n #1
+\cs_new:Npn \__zal_ref:n #1
   { \exp_not:N \ref { #1 } , }
 
 % Address command with optional label
 \NewDocumentCommand \address { o m }
   {
     \IfNoValueTF { #1 }
-      { \seq_put_right:Nn \g__fcs_addresses_seq { #2 } }
+      { \seq_put_right:Nn \g__zal_addresses_seq { #2 } }
       {
-        \seq_put_right:Nn \g__fcs_addresses_seq
+        \seq_put_right:Nn \g__zal_addresses_seq
           {
-            \refstepcounter { fcs@address }
+            \refstepcounter { zal@address }
             \label { #1 }
-            \int_use:c { c@fcs@address }
+            \int_use:c { c@zal@address }
             .~#2
           }
       }
@@ -603,56 +609,56 @@
 
 % Correspondence email
 \NewDocumentCommand \corremail { m }
-  { \tl_gset:Nn \g__fcs_corr_email_tl { #1 } }
+  { \tl_gset:Nn \g__zal_corr_email_tl { #1 } }
 
 % Document setup command with key-value interface
-\NewDocumentCommand \fcssetup { m }
-  { \keys_set:nn { fcs } { #1 } }
+\NewDocumentCommand \zalsetup { m }
+  { \keys_set:nn { zal } { #1 } }
 
 % Define keys for document setup
-\keys_define:nn { fcs }
+\keys_define:nn { zal }
   {
     % Metadata keys
-    doi            .tl_set:N  = \l__fcs_doi_tl,
-    received       .tl_set:N  = \l__fcs_received_time_tl,
-    accepted       .tl_set:N  = \l__fcs_accepted_time_tl,
-    copyright      .tl_set:N  = \l__fcs_copyright_tl,
-    article-id     .tl_set:N  = \l__fcs_article_id_tl,
-    issue          .int_set:N = \l__fcs_issue_int,
-    volume         .int_set:N = \l__fcs_volume_int,
-    first-page     .int_set:N = \l__fcs_first_page_int,
-    publish-year   .int_set:N = \l__fcs_publish_year_int,
-    publish-month  .tl_set:N = \l__fcs_publish_month_tl,
+    doi            .tl_set:N  = \l__zal_doi_tl,
+    received       .tl_set:N  = \l__zal_received_time_tl,
+    accepted       .tl_set:N  = \l__zal_accepted_time_tl,
+    copyright      .tl_set:N  = \l__zal_copyright_tl,
+    article-id     .tl_set:N  = \l__zal_article_id_tl,
+    issue          .int_set:N = \l__zal_issue_int,
+    volume         .int_set:N = \l__zal_volume_int,
+    first-page     .int_set:N = \l__zal_first_page_int,
+    publish-year   .int_set:N = \l__zal_publish_year_int,
+    publish-month  .tl_set:N = \l__zal_publish_month_tl,
 
     % Default values
     doi            .initial:n = { 10.1007/sxxxxx-yyy-zzzz-1 },
     received       .initial:n = \today,
     accepted       .initial:n = \today,
-    copyright      .initial:n = { \copyright\ Higher~Education~Press\ \int_use:N \year },
+    copyright      .initial:n = { \copyright\ Methodius-Institut\ \int_use:N \year },
     article-id     .initial:n = { 1 },
     issue          .initial:n = { 0 },
     volume         .initial:n = { 0 },
     first-page     .initial:n = { 1 },
     publish-year   .initial:n = \year,
-    publish-month  .initial:n = January,
+    publish-month  .initial:n = Jänner,
 
     % Special handling for first-page
     first-page     .code:n    =
       {
         \int_set:cn { c@page } { #1 }
-        \int_set:Nn \l__fcs_first_page_int { #1 }
+        \int_set:Nn \l__zal_first_page_int { #1 }
       },
   }
 
 % Format function for abstract and keywords
-\cs_new_protected:Npn \__fcs_abstract_keywords_format:nn #1#2
+\cs_new_protected:Npn \__zal_abstract_keywords_format:nn #1#2
   { \noindent \bfseries #1 \\ \normalfont #2 \par }
 
 % Keywords command
 \NewDocumentCommand \keywords { m }
   {
-    \tl_set:Nn \l__fcs_keywords_tl
-      { \__fcs_abstract_keywords_format:nn { Keywords } { #1 } }
+    \tl_set:Nn \l__zal_keywords_tl
+      { \__zal_abstract_keywords_format:nn { Schlüsselwörter } { #1 } }
   }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -661,8 +667,8 @@
 
 \RenewDocumentEnvironment { abstract } { +b }
   {
-    \tl_gset:Nn \g__fcs_abstract_tl
-      { \__fcs_abstract_keywords_format:nn { Abstract } { #1 } }
+    \tl_gset:Nn \g__zal_abstract_tl
+      { \__zal_abstract_keywords_format:nn { Abstract } { #1 } }
   } { }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -706,18 +712,18 @@
 % Set up titlecase function based on expl3 version
 \@ifpackagelater { expl3 } { 2019/11/20 }
   {
-    \cs_set_eq:NN \__fcs_titlecase:n \text_titlecase:n
+    \cs_set_eq:NN \__zal_titlecase:n \text_titlecase:n
   }
   {
     % Fallback for older expl3 versions
-    \cs_new_protected:Npn \__fcs_titlecase:n #1
+    \cs_new_protected:Npn \__zal_titlecase:n #1
       {
-        \tl_set:Nn \l__fcs_titlecase_tl { #1 }
-        \tl_set:Nn \l__fcs_titlecase_head_tl { \tl_head:n { #1 } }
+        \tl_set:Nn \l__zal_titlecase_tl { #1 }
+        \tl_set:Nn \l__zal_titlecase_head_tl { \tl_head:n { #1 } }
         \cs_generate_variant:Nn \tl_remove_once:Nn { Nx }
-        \tl_remove_once:Nx \l__fcs_titlecase_tl \l__fcs_titlecase_head_tl
-        \__fcs_uppercase:n \l__fcs_titlecase_head_tl
-        \l__fcs_titlecase_tl
+        \tl_remove_once:Nx \l__zal_titlecase_tl \l__zal_titlecase_head_tl
+        \__zal_uppercase:n \l__zal_titlecase_head_tl
+        \l__zal_titlecase_tl
       }
   }
 
@@ -725,10 +731,10 @@
 \theoremstyle { definition }
 
 % Function to create theorem-like environments
-\cs_new_protected_nopar:Npn \__fcs_new_theorem:n #1
+\cs_new_protected_nopar:Npn \__zal_new_theorem:n #1
   {
-    \newtheorem { #1 } { \__fcs_titlecase:n { #1 } }
-    \newtheorem* { #1* } { \__fcs_titlecase:n { #1 } }
+    \newtheorem { #1 } { \__zal_titlecase:n { #1 } }
+    \newtheorem* { #1* } { \__zal_titlecase:n { #1 } }
   }
 
 % Define theorem-like environments
@@ -736,7 +742,7 @@
   {
     lemma, definition, corollary, proposition, theorem, example
   }
-\clist_map_function:NN \l__theorem_label_clist \__fcs_new_theorem:n
+\clist_map_function:NN \l__theorem_label_clist \__zal_new_theorem:n
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Bibliography Environment
@@ -758,28 +764,28 @@
 %%% Biography Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\dim_const:Nn \c__fcs_biography_photo_width_dim { 15mm }
+\dim_const:Nn \c__zal_biography_photo_width_dim { 15mm }
 
 \NewDocumentEnvironment { biography } { O{} m +b }
-  { \__fcs_biography:nnn { #1 } { #2 } { #3 } } { }
+  { \__zal_biography:nnn { #1 } { #2 } { #3 } } { }
 
-\cs_new_protected:Npn \__fcs_biography:nnn #1#2#3
+\cs_new_protected:Npn \__zal_biography:nnn #1#2#3
   {
     \noindent
     \begin{minipage}{\linewidth}
-      \begin{minipage}[c]{\c__fcs_biography_photo_width_dim}
+      \begin{minipage}[c]{\c__zal_biography_photo_width_dim}
           \begin{tikzpicture}
-            \clip (0,0) circle (\dimexpr\c__fcs_biography_photo_width_dim/2);
+            \clip (0,0) circle (\dimexpr\c__zal_biography_photo_width_dim/2);
             \node[inner~sep=0pt] at (0,0)
               {
                 \includegraphics
                 [
-                  width=\c__fcs_biography_photo_width_dim,
-                  height=\c__fcs_biography_photo_width_dim,
+                  width=\c__zal_biography_photo_width_dim,
+                  height=\c__zal_biography_photo_width_dim,
                   keepaspectratio
                 ]{#2}
               };
-              \draw[methodiusred, line~width = 0.75pt] (0,0) circle (\dimexpr\c__fcs_biography_photo_width_dim/2);
+              \draw[methodiusred, line~width = 0.75pt] (0,0) circle (\dimexpr\c__zal_biography_photo_width_dim/2);
           \end{tikzpicture}
       \end{minipage}
       \hspace{3mm}
@@ -821,59 +827,59 @@
 
         % Article type
         \begin{articletypebox}
-          \g__fcs_article_type_tl
+          \g__zal_article_type_tl
         \end{articletypebox}
 
         \skip_vertical:N 6mm
 
         % Title
         \group_begin:
-          \fontsize{18pt}{14pt} \selectfont \bfseries \g__fcs_title_tl \par
+          \fontsize{18pt}{14pt} \selectfont \bfseries \g__zal_title_tl \par
         \group_end:
 
         \skip_vertical:N 5mm
 
         % Author list
-        \seq_use:Nn \g__fcs_authors_seq {,~}
+        \seq_use:Nn \g__zal_authors_seq {,~}
 
         \skip_vertical:N 5mm
 
         % Set short author format for header
-        \if_int_compare:w 1 < \seq_count:N \g__fcs_authors_seq
-          \tl_gset:Nn \g__fcs_short_author_tl { \g__fcs_first_author_tl \ \l__fcs_etal_tl}
+        \if_int_compare:w 1 < \seq_count:N \g__zal_authors_seq
+          \tl_gset:Nn \g__zal_short_author_tl { \g__zal_first_author_tl \ \l__zal_etal_tl}
         \else:
-          \tl_gset:Nn \g__fcs_short_author_tl \g__fcs_first_author_tl
+          \tl_gset:Nn \g__zal_short_author_tl \g__zal_first_author_tl
         \fi:
 
         % Addresses
         \color_group_begin:
         \color_select:n { black!70 }
-        \seq_use:Nn \g__fcs_addresses_seq { \par }
+        \seq_use:Nn \g__zal_addresses_seq { \par }
         \color_group_end:
 
         \skip_vertical:N 5mm
 
         % Publication metadata
-        \textred{ Received\ \l__fcs_received_time_tl;\ accepted\ \l__fcs_accepted_time_tl }
+        \textred{ Erhalten\ \l__zal_received_time_tl;\ akzeptiert\ \l__zal_accepted_time_tl }
         \par
         \color_group_begin:
         \color_select:n { black!70 }
-        E-mail:\ \g__fcs_corr_email_tl .
-        \IfBooleanT { \g__fcs_has_equal_contrib_bool }
-          { \quad *\ These\ authors\ contributed\ equally\ to\ this\ work. }
+        E-mail:\ \g__zal_corr_email_tl .
+        \IfBooleanT { \g__zal_has_equal_contrib_bool }
+          { \quad *\ Diese\ Autoren\ haben\ gleichermaßen\ zu\ dieser\ Arbeit\ beigettragen. }
         \color_group_end:
         \par
-        \textred{ \bfseries \l__fcs_copyright_tl }
+        \textred{ \bfseries \l__zal_copyright_tl }
 
         \skip_vertical:N 5mm
 
         % Abstract
-        \g__fcs_abstract_tl
+        \g__zal_abstract_tl
 
         \skip_vertical:N 5mm
 
         % Keywords
-        \l__fcs_keywords_tl
+        \l__zal_keywords_tl
 
         \skip_vertical:N 5mm
       ]
