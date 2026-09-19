@@ -1,4 +1,7 @@
 out/*
 journal/template.aux
+journal/template.bbl
+journal/template.blg
 journal/template.log
+journal/template.out
 journal/template.synctex.gz
