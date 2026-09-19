@@ -778,9 +778,9 @@
 % Define article type box
 \newtcolorbox { articletypebox }
   {
-    colback = methodiusred,
+    colback = methodiuscream,
     sharp~corners,
-    rounded~corners = southeast,
+    %rounded~corners = southeast,
     width = \dimexpr .5\textwidth - 6mm,
     height = 17pt,
     arc = 8.5pt,
@@ -788,7 +788,7 @@
     left = 1.5ex,
     valign = center,
     fontupper = \fontsize { 11pt } { 13pt } \selectfont,
-    before~upper = { \color { white } },
+    before~upper = { \color { methodiusred } },
     nobeforeafter,
   }
 
