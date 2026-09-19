@@ -345,6 +345,78 @@ Wenn du wirklich trainieren möchtest: Trainiere. Wenn du dich ausruhen möchtes
 
 ---
 
+# BONUS: Der große Muskelkater-ohne-Training-Test
+
+**1. Jemand fragt dich, welches Training deinen Muskelkater verursacht hat. Was antwortest du?**
+
+☐ „Eine Mischung aus Beintraining und innerer Überzeugung.“  
+☐ „Das war ein sehr intensiver Regenerationstag.“  
+☐ „Ich möchte nicht über die Details sprechen. Es war hart.“
+
+**2. Du stehst vom Sofa auf. Wie gehst du dabei idealerweise vor?**
+
+☐ Mit einem tiefen Seufzer und einem Blick in die Ferne.  
+☐ Als würdest du gerade einen persönlichen Rekord brechen.  
+☐ Langsam genug, damit alle merken, dass etwas Großes passiert.
+
+**3. Was ist der wichtigste Bestandteil eines erfolgreichen Muskelkaters ohne Training?**
+
+☐ Die richtige Körpersprache.  
+☐ Das richtige Timing beim Stöhnen.  
+☐ Eine überzeugende Geschichte.
+
+**4. Du gehst eine Treppe hinunter. Was ist jetzt zu tun?**
+
+☐ Kurz das Geländer als emotionalen Beistand nutzen.  
+☐ Jeden Schritt behandeln, als wäre er eine strategische Entscheidung.  
+☐ So aussehen, als hättest du gestern zu viel gegeben.
+
+**5. Woran erkennst du, dass deine Regeneration erfolgreich war?**
+
+☐ Du regenerierst bereits seit mehreren Tagen.  
+☐ Du denkst über weiteres Regenerieren nach.  
+☐ Du fühlst dich bereit für eine Pause von der Regeneration.
+
+**6. Deine Sporttasche steht im Flur. Welches Vorgehen ist korrekt?**
+
+☐ Respektvoll ansehen.  
+☐ Kurz öffnen und sofort wieder schließen.  
+☐ Die Tasche als Beweis deiner sportlichen Absichten betrachten.
+
+**7. Was bedeutet der Satz „Heute ist es richtig schlimm“?**
+
+☐ Gestern muss etwas Eindrucksvolles passiert sein.  
+☐ Irgendwann in letzter Zeit wurde vermutlich eine Treppe benutzt.  
+☐ Die Legende wächst weiter.
+
+**8. Jemand schlägt vor, gemeinsam Sport zu machen. Wie reagierst du?**
+
+☐ „Heute leider nicht. Aktive Regeneration.“  
+☐ „Ich würde ja, aber mein Muskelkater arbeitet noch nach.“  
+☐ „Mein Körper befindet sich aktuell in einer wichtigen Aufbauphase.“
+
+**9. Welche Mahlzeit unterstützt dein Konzept am besten?**
+
+☐ Diejenige, die sich am besten vom Sofa aus erreichen lässt.  
+☐ Diejenige, nach der Regeneration besonders glaubwürdig klingt.  
+☐ Diejenige, die genug Energie liefert, um über Sport nachzudenken.
+
+**10. Was ist das eigentliche Ziel dieses Ratgebers?**
+
+☐ Muskelkater überzeugend zu präsentieren.  
+☐ Möglichst sportlich zu wirken, ohne unnötige Risiken einzugehen.  
+☐ Die Grenze zwischen Training und Erzählung neu zu definieren.
+
+Egal, was du angekreuzt hast: **Herzlichen Glückwunsch!**
+
+Du hast verstanden, worum es beim Muskelkater ohne Training wirklich geht: Nicht der Muskelkater ist entscheidend. Nicht einmal das Training.
+
+Entscheidend ist, jederzeit überzeugend erklären zu können, warum du dich gerade dringend regenerieren musst.
+
+**Du bist bereit für die Praxis.**
+
+---
+
 **Dr. Maximilian Methodius**
 
 *Autor, Satiriker, Spezialist für ungewöhnliche Lösungen und einer der wenigen Menschen, die es geschafft haben, 16 Kapitel über Muskelkater zu schreiben, ohne dabei einen einzigen Muskel zu belasten.*
