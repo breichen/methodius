@@ -104,22 +104,34 @@ function baueCallForPapersSection() {
         </ul>
 
         <p>
-          Für die Manuskriptvorbereitung steht eine LaTeX-Vorlage zum
-          Download bereit:
-        </p>
-
-        <p>
-          <a class="quiz-start-button" href="assets/zeitschrift/vorlage.zip" download>
-            LaTeX-Vorlage herunterladen (.zip)
-          </a>
-        </p>
-
-        <p>
           Themenvorschläge und vollständige Manuskripte sind
           an
           <a href="mailto:service@dr-methodius.com">service@dr-methodius.com</a> 
           zu senden.
         </p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <h2>Vorlagen für Einreichungen</h2>
+        <p>
+          Für die Manuskriptvorbereitung steht eine LaTeX-Vorlage zum
+          Download bereit. Alternativ kann auch ein Word-Dokument
+          ausgefüllt und eingereicht werden:
+        </p>
+
+        <p">
+          <a class="quiz-start-button" href="assets/zeitschrift/vorlage.zip" download>
+            Vorlage herunterladen
+          </a>
+        </p>
+
+        <p>
+          In beiden Fällen ist sicherzustellen, dass jegliches
+          Zusatzmaterial – etwa Bilder – mitgeschickt wird.
+        </p>
+
       </div>
     </section>
   `;
