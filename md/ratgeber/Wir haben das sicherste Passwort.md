@@ -323,6 +323,78 @@ Unseres schafft beides.
 
 ---
 
+# BONUS: Der große Passwort-Test
+
+**1. Du sollst ein neues Passwort erstellen. Was ist dein erster Gedanke?**
+
+☐ Es sollte so aussehen, als hätte ein Computer einen schlechten Tag gehabt.  
+☐ Es sollte selbstbewusst genug wirken, um Hacker einzuschüchtern.  
+☐ Es sollte aus Zeichen bestehen, die nicht einmal miteinander verwandt sind.
+
+**2. Jemand fragt, warum dein Passwort so kompliziert aussieht. Was antwortest du?**
+
+☐ „Sicherheit braucht Charakter.“  
+☐ „Das ist kein Passwort, das ist digitale Architektur.“  
+☐ „Ich verstehe es selbst nicht vollständig. Genau das macht es sicher.“
+
+**3. Wie erkennst du ein wirklich beeindruckendes Passwort?**
+
+☐ Du musst beim Anschauen zweimal blinzeln.  
+☐ Es sieht aus wie ein Tippfehler mit Hochschulabschluss.  
+☐ Selbst das Kopieren fühlt sich nach Arbeit an.
+
+**4. Du hast dein Passwort erfolgreich auswendig gelernt. Was bedeutet das?**
+
+☐ Es ist ein Teil deiner Persönlichkeit geworden.  
+☐ Du hast eine Beziehung zu einer Zeichenfolge aufgebaut.  
+☐ Dein Gehirn hat neue Prioritäten gesetzt.
+
+**5. Welche Aufgabe hat ein Sonderzeichen in einem Passwort?**
+
+☐ Es sorgt für eine angemessene Portion Dramatik.  
+☐ Es signalisiert technische Entschlossenheit.  
+☐ Es macht deutlich, dass hier nicht einfach irgendwer reinkommt.
+
+**6. Was ist die größte Stärke eines langen Passworts?**
+
+☐ Es wirkt beeindruckend, selbst wenn niemand es sieht.  
+☐ Es hat genug Zeichen, um mehrere kurze Passwörter zu beschäftigen.  
+☐ Es vermittelt den Eindruck, dass ein Plan dahintersteckt.
+
+**7. Jemand schlägt vor, als Passwort den Namen seines Hundes zu verwenden. Wie reagierst du?**
+
+☐ Du empfiehlst zusätzlich mindestens zwölf zufällige Zeichen zur emotionalen Distanzierung.  
+☐ Du fragst, ob der Hund auch Sonderzeichen im Namen hat.  
+☐ Du erklärst, dass wahre Sicherheit keine Lieblingshaustiere kennt.
+
+**8. Wo sollte ein sicheres Passwort idealerweise gespeichert werden?**
+
+☐ An einem Ort, den nur du kennst.  
+☐ An einem Ort, den sogar du gelegentlich suchen musst.  
+☐ Definitiv nicht auf einem Zettel mit der Überschrift „Passwörter“.
+
+**9. Warum ist unser Passwort das sicherste?**
+
+☐ Weil es aussieht, als hätte es sich selbst erfunden.  
+☐ Weil niemand freiwillig versuchen würde, es abzutippen.  
+☐ Weil selbst das Passwort kurz überlegen muss, wie es eigentlich lautet.
+
+**10. Was ist das eigentliche Ziel moderner Passwortsicherheit?**
+
+☐ Möglichst schwer vorhersehbar zu sein.  
+☐ Möglichst wenig mit normalen menschlichen Gedanken zu tun zu haben.  
+☐ Eine Zeichenfolge zu erschaffen, die gleichzeitig verwirrend und vertrauenswürdig wirkt.
+
+Egal, was du angekreuzt hast: **Herzlichen Glückwunsch!**
+
+Du hast die wichtigste Erkenntnis dieses Ratgebers verstanden: Ein gutes Passwort besteht nicht einfach aus Buchstaben, Zahlen und Sonderzeichen.
+
+Es besteht vor allem aus der festen Überzeugung, dass niemand auf die gleiche absurde Zeichenkombination kommen wird wie du. Und falls doch, sollte sie zumindest beeindruckend aussehen.
+
+**Du bist bereit für die nächste Stufe der Passwort-Erleuchtung.**
+
+---
+
 **Dr. Maximilian Methodius**
 
 *Autor, Satiriker und vermutlich der einzige Mensch, der eine 18-stellige Zeichenfolge so lange erklären kann, bis sie fast wie ein Familienmitglied wirkt.*
