@@ -287,7 +287,7 @@
 
 \ExplSyntaxOff
 
-\NewTotalTColorBox { \fcsheaderbox } { O{methodiusred} m } {
+\NewTotalTColorBox { \fcsheaderbox } { O{methodiuscream} m } {
 	on line,
 	colback = #1,
 	colframe = #1,
@@ -296,7 +296,7 @@
 	left = 3pt, right = 3pt,
 	top = 1pt, bottom = 1pt,
 	boxsep = 0pt,
-	fontupper = \color{white},
+	fontupper = \color{methodiusred},
 } { #2 }
 
 \ExplSyntaxOn
