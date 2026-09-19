@@ -122,7 +122,7 @@ function baueCallForPapersSection() {
         </p>
 
         <p">
-          <a class="quiz-start-button" href="assets/zeitschrift/vorlage.zip" download>
+          <a class="quiz-start-button" href="assets/zeitschrift/zal-vorlage.zip" download>
             Vorlage herunterladen
           </a>
         </p>
