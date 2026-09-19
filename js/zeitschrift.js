@@ -4,45 +4,45 @@
 
     1. Einleitungstext - aus md/zeitschrift.md geladen, genau wie bei
        js/institutseite.js.
-    2. Die einzelnen Ausgaben zum Download (siehe zeitschriftAusgaben
-       weiter unten). Die Liste ist aktuell noch leer - die Seite muss
-       trotzdem sauber funktionieren, siehe baueAusgabenSection().
-    3. Call for Papers - statischer Text mit Kontakt-E-Mail.
+    2. Die bisher erschienenen Ausgaben (Band und Heft). Ein Klick
+       führt zur Seite zeitschrift-heft.html (js/zeitschrift-heft.js),
+       die alle Beiträge der Ausgabe auflistet. Die Daten stehen in
+       js/zeitschrift-ausgaben.js. Solange dort noch keine Ausgabe
+       eingetragen ist, muss die Seite trotzdem sauber funktionieren,
+       siehe baueAusgabenSection().
+    3. Call for Papers - statischer Text mit Kontakt-E-Mail, gefolgt
+       von den Vorlagen für Einreichungen.
 
   Ausgaben mit einem "erstellt"-Datum in der Zukunft werden - wie bei
   Ratgeber, News und Fallakten auch - erst ab diesem Datum angezeigt
   (siehe istDatumErreicht() in js/datumsformat.js). Muss VOR dieser
-  Datei geladen sein, ebenso wie js/markdown.js (parseMarkdownBloecke).
+  Datei geladen sein, ebenso wie js/zeitschrift-ausgaben.js und
+  js/markdown.js (parseMarkdownBloecke).
 */
-
-// Hier werden künftige Ausgaben eingetragen, sobald sie fertig sind.
-// Beispiel für einen Eintrag:
-//
-//   {
-//     nummer: 1,
-//     titel: "Über das disziplinierte Nichtstun",
-//     erstellt: "2026-10-01",
-//     pdf: "assets/zeitschrift/ausgabe-01.pdf",
-//   },
-//
-const zeitschriftAusgaben = [];
 
 const container = document.getElementById("zeitschrift-inhalt");
 
 function baueAusgabenKarte(ausgabe) {
+
+  const anzahl = (ausgabe.beitraege || []).length;
+
+  const details = [
+    ausgabe.erstellt
+      ? `Erschienen: ${formatiereDatumDeutsch(ausgabe.erstellt)}`
+      : "",
+    anzahl > 0
+      ? (anzahl === 1 ? "1 Beitrag" : `${anzahl} Beiträge`)
+      : "",
+  ].filter(Boolean).join(" · ");
+
   return `
     <li class="zeitschrift-ausgabe">
-      <div class="zeitschrift-ausgabe-info">
-        <span class="zeitschrift-ausgabe-nummer">Ausgabe ${ausgabe.nummer}</span>
-        <span class="zeitschrift-ausgabe-titel">${ausgabe.titel}</span>
-        ${
-          ausgabe.erstellt
-            ? `<span class="zeitschrift-ausgabe-datum">${formatiereDatumDeutsch(ausgabe.erstellt)}</span>`
-            : ""
-        }
-      </div>
-      <a class="zeitschrift-ausgabe-download" href="${ausgabe.pdf}" download>
-        PDF herunterladen
+      <a class="zeitschrift-ausgabe-link" href="${zeitschriftEscape(zeitschriftHeftUrl(ausgabe))}">
+        <span class="zeitschrift-ausgabe-info">
+          <span class="zeitschrift-ausgabe-nummer">Band ${zeitschriftEscape(ausgabe.band)}, Heft ${zeitschriftEscape(ausgabe.heft)}</span>
+          ${details ? `<span class="zeitschrift-ausgabe-datum">${details}</span>` : ""}
+        </span>
+        <span class="zeitschrift-ausgabe-cta">Beiträge ansehen &rarr;</span>
       </a>
     </li>
   `;
@@ -50,10 +50,7 @@ function baueAusgabenKarte(ausgabe) {
 
 function baueAusgabenSection() {
 
-  const sichtbareAusgaben =
-    zeitschriftAusgaben
-      .filter(ausgabe => istDatumErreicht(ausgabe.erstellt))
-      .sort((a, b) => new Date(b.erstellt) - new Date(a.erstellt));
+  const sichtbareAusgaben = zeitschriftSichtbareAusgaben();
 
   const inhalt =
     sichtbareAusgaben.length > 0
@@ -65,14 +62,15 @@ function baueAusgabenSection() {
       : `
         <p class="zeitschrift-leer">
           Die erste Ausgabe befindet sich derzeit in Vorbereitung.
-          Sobald sie erschienen ist, steht sie hier zum Download bereit.
+          Sobald sie erschienen ist, werden hier alle Ausgaben mit
+          ihren Beiträgen aufgelistet.
         </p>
       `;
 
   return `
     <section class="section section-alt">
       <div class="wrap">
-        <h2>Ausgaben zum Download</h2>
+        <h2>Bisher erschienene Ausgaben</h2>
         ${inhalt}
       </div>
     </section>
@@ -121,7 +119,7 @@ function baueCallForPapersSection() {
           ausgefüllt und eingereicht werden:
         </p>
 
-        <p">
+        <p>
           <a class="quiz-start-button" href="assets/zeitschrift/zal-vorlage.zip" download>
             Vorlage herunterladen
           </a>

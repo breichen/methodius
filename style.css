@@ -3053,3 +3053,179 @@ hr {
 .institut-hinweis p {
   margin: 0;
 }
+
+/* ============================================
+   ZEITSCHRIFT: AUSGABEN UND BEITRÄGE
+   (am Ende von style.css einfügen)
+   ============================================ */
+
+/* --- Liste der Ausgaben (zeitschrift.html) --- */
+
+.zeitschrift-ausgaben-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Globales li-Styling (Einzug, Abstand, roter Punkt via li::before)
+   hier zurücksetzen - die Zeilen brauchen keinen Aufzählungspunkt. */
+.zeitschrift-ausgabe {
+  margin: 0;
+  padding-left: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.zeitschrift-ausgabe::before {
+  content: none;
+}
+
+.zeitschrift-ausgabe-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color .15s ease;
+}
+
+.zeitschrift-ausgabe-link:hover {
+  background: rgba(27, 35, 64, 0.05);
+}
+
+.zeitschrift-ausgabe-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.zeitschrift-ausgabe-nummer {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.zeitschrift-ausgabe-datum {
+  font-size: .88rem;
+  color: var(--color-muted);
+}
+
+.zeitschrift-ausgabe-cta {
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.zeitschrift-leer {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* --- Beitragsübersicht einer Ausgabe (zeitschrift-heft.html) --- */
+
+.zeitschrift-zurueck {
+  margin: 0 0 24px 0;
+  font-size: .9rem;
+}
+
+.zeitschrift-heft-kopf {
+  margin: 0 0 8px 0;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.zeitschrift-heft-datum {
+  margin: 0 0 32px 0;
+  color: var(--color-muted);
+}
+
+.zeitschrift-beitraege {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .95rem;
+}
+
+.zeitschrift-beitraege th {
+  padding: 0 16px 10px 0;
+  text-align: left;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  border-bottom: 2px solid var(--color-text);
+}
+
+.zeitschrift-beitraege td {
+  padding: 14px 16px 14px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.zeitschrift-beitraege th:last-child,
+.zeitschrift-beitraege td:last-child {
+  padding-right: 0;
+  white-space: nowrap;
+}
+
+.zeitschrift-beitraege .zeitschrift-beitrag-titel {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* Auf schmalen Bildschirmen: jede Zeile wird zu einem kleinen Block,
+   die Spaltenüberschriften kommen aus data-label. */
+@media (max-width: 640px) {
+  .zeitschrift-ausgabe-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .zeitschrift-beitraege,
+  .zeitschrift-beitraege tbody,
+  .zeitschrift-beitraege tr,
+  .zeitschrift-beitraege td {
+    display: block;
+  }
+
+  .zeitschrift-beitraege thead {
+    display: none;
+  }
+
+  .zeitschrift-beitraege tr {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .zeitschrift-beitraege td {
+    padding: 2px 0;
+    border-bottom: none;
+  }
+
+  .zeitschrift-beitraege td:last-child {
+    white-space: normal;
+  }
+
+  .zeitschrift-beitraege td::before {
+    content: attr(data-label) ": ";
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .zeitschrift-beitraege .zeitschrift-beitrag-titel::before {
+    display: block;
+  }
+}

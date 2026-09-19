@@ -89,6 +89,8 @@ ABHAENGIGKEITEN = [
     ("veroeffentlichungen-seite", "datumsformat"),
     ("zeitschrift", "datumsformat"),
     ("zeitschrift", "markdown"),
+    ("zeitschrift-ausgaben", "datumsformat"),
+    ("zeitschrift-heft", "datumsformat"),
 ]
 
 
