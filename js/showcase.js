@@ -6,12 +6,19 @@
 */
 
 (function () {
+  const showcase = document.getElementById("ratgeber-showcase");
   const cover = document.getElementById("showcase-cover");
   const link = document.getElementById("showcase-link");
   const prevBtn = document.getElementById("showcase-prev");
   const nextBtn = document.getElementById("showcase-next");
 
-  if (!cover || typeof ratgeberListe === "undefined" || ratgeberListe.length === 0) return;
+  if (!cover) return;
+
+  // Keine Ratgeberliste vorhanden.
+  if (typeof ratgeberListe === "undefined" || ratgeberListe.length === 0) {
+    if (showcase) showcase.style.display = "none";
+    return;
+  }
 
   // Nur Ratgeber anzeigen, die ein "erstellt"-Datum haben UND dessen
   // Datum bereits erreicht ist (heute oder in der Vergangenheit) -
@@ -22,7 +29,11 @@
     buch => istDatumErreicht(buch.erstellt)
   );
 
-  if (sichtbareRatgeberAlle.length === 0) return;
+  // Keine sichtbaren Ratgeber übrig.
+  if (sichtbareRatgeberAlle.length === 0) {
+    if (showcase) showcase.style.display = "none";
+    return;
+  }
 
   // Chronologie, neuestes zuerst: Laut ratgeber.js werden neue Bücher
   // am ENDE der Liste ergänzt ("Neueste Ratgeber" zeigt die letzten
