@@ -294,7 +294,7 @@
 	boxrule = 0pt,
 	arc = 0pt,
 	left = 3pt, right = 3pt,
-	top = 1pt, bottom = 1pt,
+	top = 3pt, bottom = 1pt,
 	boxsep = 0pt,
 	fontupper = \color{methodiusred},
 } { #2 }
