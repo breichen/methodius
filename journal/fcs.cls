@@ -385,8 +385,8 @@
   }
 \fancyhead [ CE ]
   {
-    \small
-    \textnavy{ \g__fcs_short_author_tl \quad \g__fcs_short_title_tl }
+	\small
+	\textnavy{ \fcsheaderbox{ \g__fcs_short_author_tl \quad \g__fcs_short_title_tl } }
   }
 \fancyfoot [ RO, LE ]
   {
