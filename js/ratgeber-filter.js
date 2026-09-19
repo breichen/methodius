@@ -15,7 +15,6 @@ function holeGefilterteRatgeber() {
 
   let ratgeber = ratgeberListe.filter(
     buch =>
-      buch.erstellt &&
       istDatumErreicht(buch.erstellt)
   );
 

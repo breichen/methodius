@@ -97,7 +97,7 @@ async function ladeAktuellsteNews() {
     js/news-seite.js.
   */
   const sichtbareNews = alleNews
-    .filter(beitrag => beitrag.datum && istDatumErreicht(beitrag.datum))
+    .filter(beitrag => istDatumErreicht(beitrag.datum))
     .sort((a, b) => new Date(b.datum) - new Date(a.datum));
 
   if (sichtbareNews.length === 0) {

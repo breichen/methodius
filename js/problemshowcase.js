@@ -98,7 +98,6 @@ document.addEventListener(
         */
         probleme =
           probleme.filter(problem =>
-            problem.erstellt &&
             istDatumErreicht(problem.erstellt)
           );
 

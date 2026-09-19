@@ -287,7 +287,6 @@ document.addEventListener(
         */
         const sichtbareProbleme =
           probleme.filter(problem =>
-            problem.erstellt &&
             istDatumErreicht(problem.erstellt)
           );
 

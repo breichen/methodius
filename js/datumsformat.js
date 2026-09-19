@@ -42,6 +42,38 @@ function formatiereDatumDeutsch(isoDatum) {
 }
 
 /*
+  Debug-Modus: zeigt auch Inhalte mit einem "erstellt"-/"datum"-Feld
+  in der Zukunft an (noch unveröffentlichte Ratgeber, News, etc.).
+
+  Aktivieren:   irgendeine Seite mit ?debug=1 aufrufen
+  Deaktivieren: irgendeine Seite mit ?debug=0 aufrufen
+  Der Zustand wird in localStorage gemerkt, gilt also seitenübergreifend,
+  bis er wieder ausgeschaltet wird - praktisch beim lokalen Testen mit
+  `python3 -m http.server`.
+*/
+function istDebugModusAktiv() {
+
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.has("debug")) {
+    const aktiv = params.get("debug") !== "0" && params.get("debug") !== "false";
+    try {
+      localStorage.setItem("debugModus", aktiv ? "1" : "0");
+    } catch (fehler) {
+      // localStorage evtl. nicht verfügbar (z.B. privater Modus) -
+      // dann gilt der Debug-Modus nur für diesen einen Seitenaufruf.
+    }
+    return aktiv;
+  }
+
+  try {
+    return localStorage.getItem("debugModus") === "1";
+  } catch (fehler) {
+    return false;
+  }
+}
+
+/*
   Prüft, ob ein ISO-Datum bereits erreicht ist (heute oder in der
   Vergangenheit liegt). Funktioniert zuverlässig, weil "datum" im
   ISO-Format vorliegt (new Date("2028-08-22") lässt sich überall
@@ -50,8 +82,14 @@ function formatiereDatumDeutsch(isoDatum) {
   Wird von js/institutseite.js UND js/veroeffentlichungen-seite.js
   genutzt, um Veröffentlichungen mit einem Datum in der Zukunft
   auszublenden.
+
+  Im Debug-Modus (siehe istDebugModusAktiv() oben) wird der Filter
+  übersprungen - dann gilt jedes Datum als "erreicht".
 */
 function istDatumErreicht(isoDatum) {
+  if (istDebugModusAktiv()) {
+    return true;
+  }
   const heute = new Date();
   return new Date(isoDatum) <= heute;
 }

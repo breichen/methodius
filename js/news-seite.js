@@ -155,7 +155,6 @@ async function ladeNews() {
   const alleNews = await ladeAlleNews();
   const sichtbareNews = alleNews.filter(
     beitrag =>
-      beitrag.datum &&
       istDatumErreicht(beitrag.datum) &&
       (!kategorieFilterAktiv || beitrag.kategorie === NEWS_SEITE_KATEGORIE)
   ).sort((a, b) => new Date(b.datum) - new Date(a.datum));

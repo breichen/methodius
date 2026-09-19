@@ -49,7 +49,7 @@
 */
 
 const problemeRohdaten = [
-  { slug: "ans-bett-gebunden", titel: "Ans Bett gebunden", erstellt: "2026-08-27" },
+  { slug: "ans-bett-gebunden", titel: "Ans Bett gebunden", erstellt: "" },
 ];
 
 // Wandelt die Rohdaten oben in einheitliche { slug, titel, ... }-Objekte

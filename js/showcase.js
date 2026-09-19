@@ -19,7 +19,7 @@
   // Datum oder mit einem Datum in der Zukunft werden im Showcase
   // ausgeblendet.
   const sichtbareRatgeberAlle = ratgeberListe.filter(
-    buch => buch.erstellt && istDatumErreicht(buch.erstellt)
+    buch => istDatumErreicht(buch.erstellt)
   );
 
   if (sichtbareRatgeberAlle.length === 0) return;
