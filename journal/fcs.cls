@@ -285,39 +285,58 @@
 \tl_set:Nn \l__fcs_etal_tl
   { et~al. }
 
+\ExplSyntaxOff
+
+\NewTotalTColorBox { \fcsheaderbox } { O{methodiusred} m } {
+	on line,
+	colback = #1,
+	colframe = #1,
+	boxrule = 0pt,
+	arc = 0pt,
+	left = 3pt, right = 3pt,
+	top = 1pt, bottom = 1pt,
+	boxsep = 0pt,
+	fontupper = \color{white},
+} { #2 }
+
+\ExplSyntaxOn
+
 % Page header/footer strings
 \tl_set:Nn \l__fcs_short_detailed_page_tl
-  {
-    \l__fcs_short_journal_name_tl
-    ,~
-    \int_use:N \l__fcs_publish_year_int
-    ,~
-    \int_to_arabic:n \l__fcs_issue_int
-    (
-    \int_to_arabic:n \l__fcs_volume_int
-    ):~
-    \int_to_arabic:n \l__fcs_first_page_int
-  }
+{
+	\fcsheaderbox
+	{
+		\l__fcs_short_journal_name_tl
+		,~
+		\int_use:N \l__fcs_publish_year_int
+		,~
+		\int_to_arabic:n \l__fcs_issue_int
+		(
+		\int_to_arabic:n \l__fcs_volume_int
+		):~
+		\int_to_arabic:n \l__fcs_first_page_int
+	}
+}
 
 \tl_set:Nn \l__fcs_long_detailed_page_tl
-  {
-    \normalsize
-    \textred{\l__fcs_long_journal_name_tl}
-    \footnotesize
-    \textnavy
-      {
-        \ $\vert$\
-        Issue~\int_to_arabic:n \l__fcs_issue_int
-        \ $\vert$\
-        Volume~\int_to_arabic:n \l__fcs_volume_int
-        \ $\vert$\
-        \l__fcs_publish_month_tl\ {\int_use:N \l__fcs_publish_year_int}
-        \ $\vert$\
-      }
-    \l__fcs_article_id_tl
-    -
-    \int_use:c { c@page }
-  }
+{
+	\normalsize
+	\fcsheaderbox
+	{
+		\textbf{ \l__fcs_long_journal_name_tl }
+		\footnotesize
+		\ $\vert$\
+		Issue~\int_to_arabic:n \l__fcs_issue_int
+		\ $\vert$\
+		Volume~\int_to_arabic:n \l__fcs_volume_int
+		\ $\vert$\
+		\l__fcs_publish_month_tl\ {\int_use:N \l__fcs_publish_year_int}
+		\ $\vert$\
+		\l__fcs_article_id_tl
+		-
+		\int_use:c { c@page }
+	}
+}
 
 % Journal name strings
 \tl_set:Nn \l__fcs_short_journal_name_tl
