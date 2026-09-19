@@ -79,11 +79,11 @@ function baueHeader() {
             <li class="hat-untermenue">
               <a href="institut.html">Institut</a>
               <ul class="untermenue">
-                <li><a href="institut.html">Das Methodius-Institut</a></li>
+                <li><a href="institut.html">Methodius-Institut</a></li>
                 <li><a href="mitglieder.html">Mitglieder</a></li>
                 <li><a href="veroeffentlichungen.html">Publikationen</a></li>
                 <li><a href="institutsleben.html">Institutsleben</a></li>
-                <li><a href="studium.html">Das Methodius-Studium</a></li>
+                <li><a href="studium.html">Methodius-Studium</a></li>
               </ul>
             </li>
           </ul>
