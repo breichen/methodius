@@ -184,13 +184,43 @@
 \graphicspath { { figures/ } }
 
 % Add FCS logo
+\ExplSyntaxOff
+
+\usetikzlibrary{calc}
+
+\newlength{\logoframepad}
+\setlength{\logoframepad}{3mm}
+
 \AddToShipoutPictureBG*
-  {
-    \begin{tikzpicture}[remember~picture, overlay, every~node/.style={inner~sep=0pt}]
-      \node[anchor=north~east, xshift=-22mm, yshift=-5mm] at (current~page.north~east) 
-        {\includegraphics[width=1.5cm]{methodius-512x512-nobg.png}};
-    \end{tikzpicture}
-  }
+{
+	\begin{tikzpicture}[remember picture, overlay, every node/.style={inner sep=0pt}]
+		\node[anchor=north east, xshift=-22mm, yshift=-5mm] (methodiuslogo) 
+		at (current page.north east) 
+		{\phantom{\includegraphics[width=1.5cm]{methodius-512x512-nobg.png}}};
+		
+		% Untere linke und obere rechte Ecke direkt bestimmen
+		\coordinate (frame-bl) at ($(methodiuslogo.south west) + (-\logoframepad,-\logoframepad)$);
+		\coordinate (frame-tr) at ($(methodiuslogo.north east |- current page.north east) + (\logoframepad,0)$);
+		
+		% Die anderen beiden Ecken EXPLIZIT aus x/y von bl und tr zusammensetzen
+		\path let \p1 = (frame-bl), \p2 = (frame-tr) in
+		coordinate (frame-tl) at (\x1,\y2)
+		coordinate (frame-br) at (\x2,\y1);
+		
+		% Fläche füllen (ohne Rand)
+		\fill[methodiuscream] (frame-bl) rectangle (frame-tr);
+		
+		% Nur linke, untere und rechte Kante zeichnen
+		%\draw[thick] (frame-tl) -- (frame-bl) -- (frame-br) -- (frame-tr);
+		
+		% Logo zuletzt zeichnen, damit es oben liegt
+		\node[anchor=north east, xshift=-22mm, yshift=-5mm] 
+		at (current page.north east) 
+		{\includegraphics[width=1.5cm]{methodius-512x512-nobg.png}};
+	\end{tikzpicture}
+}
+
+\ExplSyntaxOn
 
 % Configure fonts
 \RequirePackage { newtxtext, newtxmath }
@@ -226,6 +256,7 @@
 % Define standard colors
 \definecolor { methodiusred }   { HTML } { B5292C }
 \definecolor { methodiusnavy } { HTML } { 1B2340 }
+\definecolor { methodiuscream } { HTML } { F1ECE2 }
 
 % Color text commands
 \NewDocumentCommand \textred { m }
