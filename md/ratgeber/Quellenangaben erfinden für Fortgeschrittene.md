@@ -318,7 +318,7 @@ Und wenn du das verstanden hast, brauchst du eigentlich keine erfundene Quelle m
 
 ---
 
-# BONUS: Der große **Quellenangaben-für-Fortgeschrittene-Test**
+# BONUS: Der große Quellenangaben-für-Fortgeschrittene-Test
 
 **1. Was macht eine Quellenangabe besonders überzeugend?**
 
