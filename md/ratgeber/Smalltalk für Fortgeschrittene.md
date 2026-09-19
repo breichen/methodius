@@ -503,9 +503,7 @@ Deshalb haben wir für dich die 100 wichtigsten Smalltalk-Sätze zusammengestell
 99. „War schön, mal wieder zu quatschen.“
 100. **„Na dann, bis bald.“**
 
----
-
-## Die wissenschaftliche Auswertung
+### Die wissenschaftliche Auswertung
 
 Nach jahrzehntelanger Forschung konnten fünf besonders leistungsfähige Smalltalk-Sätze identifiziert werden:
 
@@ -515,9 +513,7 @@ Nach jahrzehntelanger Forschung konnten fünf besonders leistungsfähige Smallta
 - **„Da hast du recht.“** funktioniert besonders gut, wenn du keine Ahnung hast, worum es geht.
 - Und schließlich: **„Na dann, bis bald.“** funktioniert immer. Außer natürlich, du bist gerade auf einer Beerdigung. Dann vielleicht nicht.
 
----
-
-## Die Notfallformel
+### Die Notfallformel
 
 Wenn du dir nur **einen einzigen Satz** aus diesem Kapitel merken möchtest, nimm diesen:
 
