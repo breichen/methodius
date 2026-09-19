@@ -222,17 +222,36 @@ function baueKategorienBereich() {
   `;
 }
 
+/*
+  Färbt alle <section> der Seite abwechselnd ein (hell, dunkel, hell, ...).
+  Die section-alt-Klassen im HTML werden dabei überschrieben - maßgeblich
+  ist allein die Reihenfolge der Sections auf der Seite.
+
+  Showcase-Sections (class="showcase") zählen nicht mit: Sie gehören
+  optisch zur Section davor (siehe .showcase { padding-top: 8px }) und
+  übernehmen deren Farbe. Damit bleibt der Wechsel auch dann stimmig,
+  wenn ein Showcase ausgeblendet wird (z. B. wenn es noch keine
+  Fallakten gibt).
+*/
 function aktualisiereSectionFarben() {
 
   const sektionen = Array.from(
     document.querySelectorAll("section")
   );
 
-  sektionen.forEach((sektion, index) => {
+  let gezaehlt = 0;
+  let istAlt = false;   // Farbe der zuletzt gezählten Section
+
+  sektionen.forEach(sektion => {
 
     sektion.classList.remove("section-alt");
 
-    if (index % 2 === 1) {
+    if (!sektion.classList.contains("showcase")) {
+      istAlt = gezaehlt % 2 === 1;
+      gezaehlt++;
+    }
+
+    if (istAlt) {
       sektion.classList.add("section-alt");
     }
 
