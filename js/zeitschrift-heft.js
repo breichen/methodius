@@ -72,8 +72,8 @@ function baueHeftSeite(ausgabe) {
     <section class="section">
       <div class="wrap">
         ${ZURUECK_LINK}
-        <p class="zeitschrift-heft-kopf">Zeitschrift für Angewandte Lebensführung</p>
-        <h1>Band ${zeitschriftEscape(ausgabe.band)}, Heft ${zeitschriftEscape(ausgabe.heft)}</h1>
+        <h1>Zeitschrift für Angewandte Lebensführung</h1>
+        <h2>Band ${zeitschriftEscape(ausgabe.band)}, Heft ${zeitschriftEscape(ausgabe.heft)}</h2>
         ${
           ausgabe.erstellt
             ? `<p class="zeitschrift-heft-datum">Erschienen: ${formatiereDatumDeutsch(ausgabe.erstellt)}</p>`

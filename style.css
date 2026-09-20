@@ -3134,15 +3134,6 @@ hr {
   font-size: .9rem;
 }
 
-.zeitschrift-heft-kopf {
-  margin: 0 0 8px 0;
-  font-size: .8rem;
-  font-weight: 600;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-}
-
 .zeitschrift-heft-datum {
   margin: 0 0 32px 0;
   color: var(--color-muted);
