@@ -93,7 +93,12 @@ async function erzeugeRatgeberNews(ratgeberListe) {
   return Promise.all(relevante.map(async ratgeber => {
 
     const eigeneDatei = `md/news-ratgeber/${ratgeber.slug}.md`;
-    const hatEigeneDatei = await dateiExistiert(eigeneDatei);
+    const bildPfad = `pics/ratgeber-mockup/${ratgeber.slug}.png`;
+
+    const [hatEigeneDatei, hatBild] = await Promise.all([
+      dateiExistiert(eigeneDatei),
+      dateiExistiert(bildPfad),
+    ]);
 
     return {
       datei: hatEigeneDatei
@@ -101,7 +106,7 @@ async function erzeugeRatgeberNews(ratgeberListe) {
         : "neuer-ratgeber-generisch.md",
       titel: `Neuer Ratgeber: ${ratgeber.titel}`,
       datum: ratgeber.erstellt,
-      bild: `pics/ratgeber-mockup/${ratgeber.slug}.png`,
+      ...(hatBild && { bild: bildPfad }),
       link: `buch.html?titel=${ratgeber.titel}`,
       linkText: "Zum Ratgeber",
       kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
@@ -154,8 +159,10 @@ function versieheMitKategorie(eintraege, kategorie) {
 // ordner: Name des Ordners, der für diese Kategorie sowohl die
 // .md-Dateien (unter md/, z.B. "../news-institutsleben") als auch
 // die Bilder (unter pics/, z.B. "pics/news-institutsleben") enthält.
-// datei und bild müssen in der JSON-Datei selbst nur den reinen
-// Dateinamen enthalten - der jeweilige Pfad wird hier ergänzt.
+// datei muss in der JSON-Datei selbst nur den reinen Dateinamen
+// enthalten - der jeweilige Pfad wird hier ergänzt. Ein Bild wird nur
+// gesetzt, wenn unter pics/<ordner>/<slug>.png tatsächlich eine Datei
+// existiert (genau wie bei erzeugePaperNews/erzeugeRatgeberNews oben).
 // Optional - ohne Angabe bleiben datei und bild unverändert.
 async function ladeJsonNews(pfad, kategorie, ordner) {
 
@@ -168,10 +175,16 @@ async function ladeJsonNews(pfad, kategorie, ordner) {
   const eintraege = await response.json();
 
   const eintraegeMitPfad = ordner
-    ? eintraege.map(eintrag => ({
-        ...eintrag,
-        datei: `../${ordner}/${eintrag.slug}.md`,
-        bild: `pics/${ordner}/${eintrag.slug}.png`,
+    ? await Promise.all(eintraege.map(async eintrag => {
+
+        const bildPfad = `pics/${ordner}/${eintrag.slug}.png`;
+        const hatBild = await dateiExistiert(bildPfad);
+
+        return {
+          ...eintrag,
+          datei: `../${ordner}/${eintrag.slug}.md`,
+          ...(hatBild && { bild: bildPfad }),
+        };
       }))
     : eintraege;
 
