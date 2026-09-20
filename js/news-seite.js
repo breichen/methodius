@@ -35,6 +35,17 @@ const NEWS_LINK_UND_BILD_NUR_BEI_MEHR = true;
 // false: alle Beiträge starten eingeklappt.
 const NEWS_ERSTEN_BEITRAG_AUSGEKLAPPT = true;
 
+// Singular-Label je Kategorie, das auf der ungefilterten Seite
+// (news.html, kein NEWS_SEITE_KATEGORIE gesetzt) rechts neben dem
+// Datum angezeigt wird - siehe ladeNewsBeitrag() unten. Die Werte
+// von NewsKategorie (js/news.js) selbst sind Plural, da sie auch als
+// Überschriften/Filterwerte verwendet werden.
+const NEWS_KATEGORIE_LABEL_SINGULAR = {
+  [NewsKategorie.VEROEFFENTLICHUNGEN]: "Veröffentlichung",
+  [NewsKategorie.INSTITUTSLEBEN]: "Institutsleben",
+  [NewsKategorie.KURIOSITAETEN]: "Alltagsstudie",
+};
+
 // Delegierter Klick-Handler für alle "Mehr"/"Weniger"-Buttons - EINMAL
 // registriert, funktioniert aber auch für Buttons, die erst später
 // (nach dem Laden der Beiträge) in den Container eingefügt werden.
@@ -179,7 +190,7 @@ async function ladeNews() {
 
   Promise.all(
     sichtbareNews.map((beitrag, index) =>
-      ladeNewsBeitrag(beitrag, index)
+      ladeNewsBeitrag(beitrag, index, !kategorieFilterAktiv)
     )
   )
     .then(beitragHtml => {
@@ -206,7 +217,7 @@ async function ladeNews() {
 }
 
 
-function ladeNewsBeitrag(beitrag, index) {
+function ladeNewsBeitrag(beitrag, index, zeigeKategorie) {
 
   const pfad =
     `md/news/${encodeURIComponent(beitrag.datei)}`;
@@ -309,6 +320,17 @@ function ladeNewsBeitrag(beitrag, index) {
 
       const hatBild = Boolean(beitrag.bild);
       const hatLink = Boolean(beitrag.link);
+
+      /*
+        Kategorie-Label (Singular) rechts neben dem Datum - nur auf der
+        ungefilterten Seite (news.html), siehe zeigeKategorie-Parameter
+        oben. Auf Kategorie-Unterseiten wäre es redundant, da dort
+        ohnehin nur eine einzige Kategorie gezeigt wird.
+      */
+      const kategorieLabelHtml =
+        zeigeKategorie && beitrag.kategorie
+          ? `<span class="news-kategorie-label">${NEWS_KATEGORIE_LABEL_SINGULAR[beitrag.kategorie] || beitrag.kategorie}</span>`
+          : "";
 
       // Ein Bild rechtfertigt für sich allein schon einen
       // "Mehr"-Button - ein Link dagegen NICHT: ein Beitrag, der nur
@@ -417,6 +439,7 @@ function ladeNewsBeitrag(beitrag, index) {
 
             <div class="news-meta">
               ${beitrag.datum ? formatiereDatumDeutsch(beitrag.datum) : ""}
+              ${kategorieLabelHtml ? ` · ${kategorieLabelHtml}` : ""}
             </div>
 
             <h2 class="news-titel">
