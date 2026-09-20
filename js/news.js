@@ -1,7 +1,7 @@
 const NewsKategorie = Object.freeze({
   VEROEFFENTLICHUNGEN: "Veröffentlichungen",
   INSTITUTSLEBEN: "Institutsleben",
-  KURIOSITAETEN: "Kuriositäten des Alltags",
+  KURIOSITAETEN: "Alltagsstudien",
 });
 
 /*
