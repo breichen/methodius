@@ -91,6 +91,7 @@ ABHAENGIGKEITEN = [
     ("zeitschrift", "markdown"),
     ("zeitschrift-ausgaben", "datumsformat"),
     ("zeitschrift-heft", "datumsformat"),
+    ("zeitschrift-hinweis", "datumsformat"),
 ]
 
 
