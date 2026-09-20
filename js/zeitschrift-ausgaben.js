@@ -34,7 +34,20 @@
 // Die Beiträge werden in der hier angegebenen Reihenfolge angezeigt.
 // "autoren" ist eine Liste mit einem Namen pro Eintrag. Ob alle Einträge
 // vollständig sind, prüft pruefe_zeitschrift.py.
-const zeitschriftAusgaben = [];
+const zeitschriftAusgaben = [
+   {
+     band: 1,
+     heft: 1,
+     erstellt: "2026-10-01",
+     beitraege: [
+       {
+         autoren: ["Erster Autor", "Zweiter Autor"],
+         titel: "Über das disziplinierte Nichtstun",
+         typ: "Forschungsartikel",
+         seiten: "1–12",
+       },
+     ],
+   },];
 
 // Alle bereits erschienenen Ausgaben, neueste (höchster Band, höchstes Heft) zuerst.
 function zeitschriftSichtbareAusgaben() {
