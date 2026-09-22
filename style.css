@@ -2496,6 +2496,7 @@ hr {
   max-width: 600px;
   height: auto;
   margin: 28px auto 0;
+  border-radius: 0;
   border: 1.5px solid var(--cover-border);
   box-shadow: var(--cover-shadow-lg);
 }
@@ -2617,18 +2618,6 @@ hr {
 */
 .news-link-bild-wrap:not([hidden]):has(img)+.news-mehr-button {
   margin-top: 20px;
-}
-
-
-/* Bild */
-
-.news-bild {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-top: 30px;
-  border-radius: 0;
-  border-bottom: 2px solid var(--color-accent);
 }
 
 
