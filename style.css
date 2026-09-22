@@ -2496,9 +2496,9 @@ hr {
   max-width: 600px;
   height: auto;
   margin: 28px auto 0;
-  border-radius: 4px;
+  border: 1.5px solid var(--cover-border);
+  box-shadow: var(--cover-shadow-lg);
 }
-
 
 /* Datum */
 
