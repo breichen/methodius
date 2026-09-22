@@ -281,3 +281,40 @@ else if (
     ?.remove();
 
 }
+
+/*
+  Färbt alle <section> der Seite abwechselnd ein
+  (hell, dunkel, hell, ...).
+
+  Maßgeblich ist die tatsächliche Reihenfolge der
+  noch vorhandenen Sections. Dadurch bleibt das
+  Muster auch dann korrekt, wenn einzelne Bereiche
+  entfernt wurden.
+*/
+function aktualisiereSectionFarben() {
+
+  const sektionen =
+    Array.from(
+      document.querySelectorAll("section")
+    );
+
+  let gezaehlt = 0;
+  let istAlt = false;
+
+  sektionen.forEach(sektion => {
+
+    sektion.classList.remove("section-alt");
+
+    if (!sektion.classList.contains("showcase")) {
+      istAlt = gezaehlt % 2 === 1;
+      gezaehlt++;
+    }
+
+    if (istAlt) {
+      sektion.classList.add("section-alt");
+    }
+
+  });
+}
+
+aktualisiereSectionFarben();
