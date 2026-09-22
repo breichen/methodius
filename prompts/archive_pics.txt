@@ -1,30 +1,98 @@
 Create an official institutional image of the Methodius Institute.
 
+The image may contain one to five people.
+
+==================================================
+PRIMARY VISUAL REFERENCE
+========================
+
+If reference portraits of Institute members are provided, they are the PRIMARY and AUTHORITATIVE reference for depicting those persons.
+
+The generated persons must be immediately recognizable as the same individuals shown in the supplied reference portraits.
+
+Preserve the person's distinctive external characteristics:
+
+* face shape
+* facial proportions
+* eyes
+* eyebrows
+* nose
+* mouth
+* jawline
+* ears
+* hairline
+* hairstyle
+* hair density and structure
+* facial hair
+* glasses and glasses shape
+* age
+* body proportions
+* characteristic physical features
+
+Do not average, merge, homogenize or reinterpret different reference persons.
+
+Each person must remain visually distinct from every other person.
+
+Do not make different people look like variations of the same generic character.
+
+The reference portraits are also the PRIMARY reference for the visual rendering style.
+
+Match their:
+
+* degree of realism
+* degree of abstraction
+* facial simplification
+* painterly quality
+* light and shadow treatment
+* tonal structure
+* edge treatment
+* color treatment
+* illustration technique
+* overall editorial aesthetic
+
+The scene may change completely, but the people must look as though they were taken directly from the same series of Institute portraits and placed into the new scene.
+
 ==================================================
 VISUAL UNIVERSE
-==================================================
+===============
 
-The image must belong to the exact same visual world as the Institute's publications, staff portraits and book covers.
+The image must belong to the exact same visual world as the Methodius Institute's staff portraits, publications and book covers.
+
+The visual language is:
+
+* premium editorial illustration
+* sophisticated institutional illustration
+* literary publishing aesthetic
+* intelligent
+* restrained
+* timeless
+* academic
+* slightly absurd
+* completely serious in presentation
 
 Visual references:
 
-- university annual reports
-- institutional documentation
-- official conference photography
-- scientific organizations
-- editorial magazine illustration
+* The Economist editorial illustration
+* Harvard Business Review illustration
+* Hanser Sachbuch
+* Penguin literary illustration
+* prestigious university annual reports
+* institutional publications
+* premium editorial portraiture
 
-The image documents an event of great importance to the Institute.
+IMPORTANT:
 
-The Institute treats ordinary events with excessive seriousness.
+These references describe the DESIGN LANGUAGE and editorial quality only.
 
-Humor must emerge entirely from the documented situation.
+They do NOT imply photography, photographic color, photorealism or realistic material rendering.
+
+The final image must unmistakably look like a professionally illustrated Methodius Institute publication.
 
 ==================================================
-COLOR PALETTE
-==================================================
+COLOR PALETTE — ABSOLUTE
+========================
 
-Use exclusively:
+Use ONLY the following five base colors:
 
 #F1ECE2
 #E7E0D2
@@ -32,28 +100,90 @@ Use exclusively:
 #5A5F72
 #B5292C
 
-No other colors.
+This is a HARD COLOR RESTRICTION.
 
-No realistic object colors.
+Do not introduce any additional hue.
 
-No realistic skin tones.
+Do not use realistic local colors.
 
-No yellow.
+All objects, people, clothing, architecture, furniture, documents and environmental elements must be rendered using the restricted Institute palette.
+
+Skin must NOT have realistic skin colors.
+
+Hair must NOT have realistic hair colors.
+
+Eyes must NOT have realistic eye colors.
+
+Metal must NOT have realistic metallic colors.
+
+Wood must NOT have realistic wood colors.
+
+Paper must NOT have realistic paper colors.
+
+Clothing must NOT have realistic clothing colors.
+
+The environment must NOT contain naturalistic colors.
+
+Use tonal variation, lightness, darkness, opacity and painterly transitions within the permitted palette rather than introducing additional colors.
+
+The image must visually read as a deliberately color-restricted editorial illustration.
+
+The palette must be immediately recognizable as the same palette used in the supplied Institute portraits.
+
+NO COLOR DRIFT.
+
+NO NATURALISTIC COLORIZATION.
+
+NO PHOTOGRAPHIC COLOR GRADING.
+
+Maximum red usage:
+
+5%
+
+#B5292C is an accent color only.
+
+Red must never dominate the image.
+
+==================================================
+STRICT COLOR EXCLUSIONS
+=======================
+
+Absolutely no:
+
+* realistic skin tones
+* peach
+* pink
+* orange
+* yellow
+* green
+* cyan
+* turquoise
+* purple
+* brown
+* natural blue
+* natural gray
+* gold
+* silver
+* bronze
+* beige outside the defined Institute palette
+* photographic color
+* color cast
+
+No yellow tint.
 
 No sepia.
 
-No archive tint.
+No warm archive tint.
 
-No vintage treatment.
+No vintage color grading.
 
-Maximum red usage:
-5%
+No faded photographic colors.
 
-The image must visually match the Institute's publications.
+No additional accent colors.
 
 ==================================================
 RENDERING
-==================================================
+=========
 
 Flat 2D editorial illustration.
 
@@ -63,25 +193,101 @@ Stylized realism.
 
 Painterly editorial rendering.
 
-Strong directional lighting.
+The rendering must match the supplied Institute portraits.
 
-Large tonal shapes.
+Strong directional light.
+
+Large illuminated surfaces.
+
+Large shadow masses.
+
+Soft tonal transitions.
 
 Minimal linework.
 
-Soft atmospheric depth.
+Controlled painterly surfaces.
 
-Readable faces.
+Simplified but highly recognizable facial features.
 
-Recognizable expressions.
+Visual weight comes from light, shadow and large tonal shapes.
 
-No photorealism.
+No photographic rendering.
 
-No simulated photography.
+No photorealistic rendering.
+
+No simulated camera photography.
+
+No realistic skin rendering.
+
+No realistic material rendering.
+
+No 3D-rendered appearance.
+
+No glossy digital-art appearance.
+
+No generic AI illustration appearance.
+
+The result should look like a carefully art-directed illustration created for a prestigious institutional publication.
+
+==================================================
+PERSON IDENTITY
+===============
+
+Every supplied person reference corresponds to one specific individual.
+
+Preserve identity with high priority.
+
+Do not beautify the person.
+
+Do not make the person younger.
+
+Do not make the person older.
+
+Do not change distinctive facial proportions.
+
+Do not change characteristic hair.
+
+Do not remove or add glasses unless explicitly requested.
+
+Do not replace a person's characteristic glasses with a generic model.
+
+Do not homogenize facial structures between people.
+
+Do not turn real reference persons into generic editorial characters.
+
+The person must remain recognizable even when the rendering is highly stylized.
+
+==================================================
+MULTIPLE PEOPLE
+===============
+
+If two to five reference persons are supplied:
+
+Treat every reference image as an independent identity reference.
+
+Maintain clear visual differences between all individuals.
+
+Differences may include:
+
+* facial structure
+* hairstyle
+* hairline
+* glasses
+* facial hair
+* age
+* body shape
+* posture
+* expression
+* clothing
+* gesture
+
+Do not accidentally make several people look like siblings, clones or variations of one person.
+
+Each person's defining characteristics must remain visible.
 
 ==================================================
 COMPOSITION
-==================================================
+===========
 
 Formal institutional composition.
 
@@ -89,210 +295,396 @@ People pose deliberately.
 
 Everyone appears convinced of the importance of the occasion.
 
+The composition should feel carefully staged and professionally art-directed.
+
 Strong hierarchy.
 
 Clear focal point.
 
 Controlled composition.
 
-No visual clutter.
+Readable silhouettes.
 
-Maximum 8 people.
+Balanced negative space.
 
-Symmetrical compositions preferred.
+No unnecessary visual clutter.
+
+The absurdity should arise from the situation being documented, not from cartoonish acting.
+
+Prefer compositions that could plausibly appear in an official annual report or institutional publication.
+
+Possible scenes include:
+
+* official group portrait
+* academic meeting
+* conference
+* award presentation
+* presentation of a study
+* institutional ceremony
+* research discussion
+* strategic planning meeting
+* team event
+* office scene
+* lecture
+* presentation
+* institutional announcement
+* unusual but completely seriously documented event
 
 ==================================================
-FACIAL EXPRESSIONS
-==================================================
+POSE AND EXPRESSION
+===================
 
-confident
-composed
-self-assured
-professional
-slightly pleased with the significance of the event
+Expressions should remain consistent with the supplied portraits and the Institute's visual language.
+
+Preferred qualities:
+
+* confident
+* composed
+* intelligent
+* calm
+* professional
+* self-assured
+* slightly pleased with the significance of the occasion
 
 Avoid:
 
-comedy reactions
-exaggeration
-cartoon humor
+* exaggerated comedy
+* exaggerated surprise
+* cartoon reactions
+* broad smiles
+* theatrical acting
+* caricature
+* slapstick
+* meme expressions
 
-==================================================
-EXAMPLES
-==================================================
-
-- annual conference
-- opening of a new department
-- presentation of a questionable study
-- certification ceremony
-- strategic planning retreat
-- award presentation
-- team-building workshop
-- official group portrait
+The people should behave as though the situation is completely serious.
 
 ==================================================
 ATMOSPHERE
-==================================================
+==========
 
-The image should look like a perfectly serious institutional document.
+The image should initially look like a perfectly serious institutional document.
 
-The absurdity comes solely from what is being documented.
+The viewer should first perceive:
 
-The viewer should initially believe they are looking at a real academic institution.
+prestige,
+authority,
+academic seriousness,
+professionalism.
 
-Only afterwards should the satire become apparent.
+Only afterwards should the absurdity become apparent.
 
-The image must feel like it was created by the same publisher, designer and art director who created the Institute's book covers.
+Humor must emerge entirely from the documented situation.
+
+Never communicate the joke through cartoon styling.
+
+Never communicate the joke through exaggerated facial expressions.
+
+Never make the image look intentionally silly.
+
+The Institute takes ordinary or questionable events with excessive seriousness.
 
 ==================================================
 INSTITUTE BRANDING
-==================================================
+==================
 
-The Methodius Institute has a recognizable institutional visual identity.
+If an Institute logo is supplied, use the uploaded Institute logo as the authoritative reference.
 
-The Institute logo and the official Institute ornament may appear in the scene.
+Use the supplied logo exactly as provided.
 
-They must be integrated naturally as part of the environment.
+Do not redesign it.
+
+Do not reinterpret it.
+
+Do not simplify it.
+
+Do not alter its proportions.
+
+Do not invent additional symbols.
+
+Integrate the logo naturally into the environment.
 
 Possible placements:
 
-- framed wall plaque
-- brass sign next to a door
-- conference banner
-- lectern emblem
-- presentation backdrop
-- annual report cover on a desk
-- institute folder
-- nameplate
-- event signage
+* framed wall plaque
+* sign
+* conference banner
+* lectern emblem
+* presentation backdrop
+* annual report
+* Institute folder
+* nameplate
+* event signage
+* stationery
 
-The branding should reinforce institutional credibility.
-
-It should never become the focal point of the image.
+The logo must remain secondary to the people and the scene.
 
 Maximum:
 
-- one logo application
-- one ornament application
+* one logo application
+* one ornament application
 
-The branding should appear intentional and professionally designed.
+Never create repeated logo patterns.
 
-It should look as if the Institute employs a dedicated communications department.
+Never use logo wallpaper.
 
-Avoid:
-
-- oversized logos
-- repeated logos
-- logo wallpaper
-- promotional appearance
-- advertising aesthetics
-
-For institutional events:
-
-The official Institute ornament should often appear as part of the event design.
-
-Examples:
-
-- conference backdrop
-- roll-up banner
-- podium decoration
-- commemorative plaque
-- event program booklet
-- certificate design
-
-The ornament should contribute to the impression that the Institute takes itself extremely seriously.
-
-Use the uploaded Institute logo and the Institute ornament described below exactly as provided.
-
-Do not redesign them.
-
-Do not reinterpret them.
-
-Preserve proportions and visual structure.
-
-Integrate them naturally into the scene as institutional branding.
+Never make the branding look like advertising.
 
 ==================================================
 METHODIUS ORNAMENT
-==================================================
+==================
 
-The Methodius Institute uses an official institutional ornament.
+The official Methodius Institute ornament consists of:
 
-The ornament consists of:
-
-- one small solid red diamond
-- rotated exactly 45 degrees
-- centered horizontally
-- a thin horizontal line extending to the left
-- a thin horizontal line extending to the right
-- perfect bilateral symmetry
+* one small solid red diamond
+* rotated exactly 45 degrees
+* centered horizontally
+* one thin horizontal line extending left
+* one thin horizontal line extending right
+* perfect bilateral symmetry
 
 Visual appearance:
 
 ———— ◇ ————
 
-The diamond and lines use the Institute accent red:
+The diamond and lines use:
 
 #B5292C
 
-The ornament is minimalist.
+The ornament is:
 
-Editorial rather than decorative.
+* minimalist
+* geometric
+* editorial
+* modern
+* academic
+* restrained
 
-Modern rather than historical.
+It communicates:
 
-Academic rather than ceremonial.
-
-The ornament should communicate:
-
-authority
-institutional confidence
-formal seriousness
-quiet self-importance
+* authority
+* institutional confidence
+* formal seriousness
+* quiet self-importance
 
 Avoid:
 
-coats of arms
-laurel wreaths
-crests
-ribbons
-shields
-medals
-classical university symbolism
-baroque decoration
+* coats of arms
+* laurel wreaths
+* crests
+* ribbons
+* shields
+* classical university symbolism
+* baroque decoration
+* ceremonial heraldry
 
-The ornament should always remain clean, geometric and restrained.
+Maximum one visible ornament.
 
-For institutional events, the ornament is frequently used as part of the Institute's official visual identity.
+The ornament must remain secondary to the people.
 
-Possible applications:
+If the ornament is not supplied as a reference image, reproduce only the simple geometric description above.
 
-- conference backdrop
-- podium decoration
-- presentation screen
-- event banner
-- certificate design
-- commemorative plaque
-- directional signage
-- annual conference materials
+==================================================
+LIGHTING
+========
 
-The ornament should help create the impression of a highly organized institution that takes its own procedures very seriously.
+Use strong, deliberate editorial lighting.
+
+Large areas of light and shadow.
+
+Lighting should support the restricted color palette.
+
+Do not introduce additional colors through lighting.
+
+No warm cinematic lighting.
+
+No orange highlights.
+
+No yellow highlights.
+
+No blue photographic color cast.
+
+No HDR appearance.
+
+No studio-photography appearance.
+
+Light should feel painted rather than photographed.
+
+==================================================
+MATERIALS AND ENVIRONMENT
+=========================
+
+All environmental elements must obey the same restricted palette.
+
+Objects should be simplified into large editorial tonal shapes.
+
+Avoid excessive texture.
+
+Avoid photographic surface detail.
+
+Avoid realistic reflections.
+
+Avoid realistic metallic effects.
+
+Avoid realistic wood grain.
+
+Avoid photographic paper texture.
+
+Avoid unnecessary micro-detail.
+
+The environment should support the people and the institutional narrative without competing with them.
+
+==================================================
+VISUAL CONSISTENCY
+==================
+
+The final image must look as though:
+
+the same illustrator,
+the same art director,
+the same publisher,
+the same color system,
+and the same visual identity
+
+created both the supplied staff portraits and this new image.
+
+The image must not look like a different illustration style merely because the scene is different.
+
+SCENE VARIATION IS ALLOWED.
+
+STYLE VARIATION IS NOT.
+
+PERSON IDENTITY VARIATION IS NOT.
+
+COLOR PALETTE VARIATION IS NOT.
 
 ==================================================
 NEGATIVE PROMPT
-==================================================
+===============
 
 No photography.
+
 No photorealism.
+
+No simulated photography.
+
+No realistic skin tones.
+
+No realistic object colors.
+
+No naturalistic color rendering.
+
+No color drift.
+
+No additional colors.
+
+No yellow.
+
+No orange.
+
+No green.
+
+No purple.
+
+No pink.
+
+No cyan.
+
+No turquoise.
+
+No brown.
+
+No gold.
+
+No silver.
+
+No realistic metallic colors.
+
+No realistic wood colors.
+
+No realistic skin rendering.
+
+No photographic lighting.
+
+No cinematic color grading.
+
+No HDR.
+
 No sepia.
-No archive texture.
+
+No archive tint.
+
 No vintage treatment.
-No yellow cast.
-No old paper.
-No historical effect.
+
+No old-paper effect.
+
+No historical color treatment.
+
+No warm color cast.
+
 No comic style.
+
+No cartoon style.
+
+No caricature.
+
 No parody illustration.
-No colorful objects.
+
+No exaggerated expressions.
+
+No slapstick.
+
+No meme aesthetic.
+
+No startup illustration style.
+
+No generic corporate stock illustration.
+
+No glossy 3D rendering.
+
+No plastic-looking surfaces.
+
+No generic AI art aesthetic.
+
+No colorful clothing.
+
+No colorful background.
+
 No secondary colors.
+
+No excessive red.
+
+No logo wallpaper.
+
+No oversized branding.
+
+No promotional advertising aesthetic.
+
 No visual clutter.
-No crowd scenes.
+
+No unnecessary objects.
+
+No crowd scene.
+
+==================================================
+FINAL PRIORITY
+==============
+
+When instructions conflict, follow this priority order:
+
+1. Preserve the identity of the supplied reference persons.
+2. Match the visual rendering style of the supplied Institute portraits.
+3. Enforce the five-color Institute palette.
+4. Preserve the Institute's restrained editorial aesthetic.
+5. Communicate the requested scene and situation.
+6. Integrate supplied Institute branding naturally.
+
+The final result must look like an authentic Methodius Institute institutional illustration:
+
+serious,
+prestigious,
+restrained,
+recognizable,
+color-restricted,
+editorial,
+and subtly absurd.
