@@ -23,31 +23,6 @@
   Kommentar bei "istStartseite" weiter unten.
 */
 
-function baueRatgeberUntermenue() {
-
-  const kategorien =
-    Object.entries(RatgeberKategorieInfo);
-
-  return `
-    <li>
-      <a href="alle-ratgeber.html">
-        Alle
-      </a>
-    </li>
-
-    ${kategorien.map(
-      ([kategorie, info]) => `
-        <li>
-          <a
-            href="alle-ratgeber.html?kategorie=${info.slug}">
-            ${kategorie}
-          </a>
-        </li>
-      `
-    ).join("")}
-  `;
-}
-
 function baueHeader() {
   return `
     <header class="site-header">

@@ -46,6 +46,9 @@ const NEWS_KATEGORIE_LABEL_SINGULAR = {
   [NewsKategorie.ALLTAGSSTUDIEN]: "Alltagsstudie",
 };
 
+let alleSichtbarenNews = [];
+let aktuelleNewsKategorie = "Alle";
+
 // Delegierter Klick-Handler für alle "Mehr"/"Weniger"-Buttons - EINMAL
 // registriert, funktioniert aber auch für Buttons, die erst später
 // (nach dem Laden der Beiträge) in den Container eingefügt werden.
@@ -144,33 +147,75 @@ newsContainer.addEventListener("keydown", event => {
 
 async function ladeNews() {
 
-  /*
-    Nur Beiträge anzeigen, die ein "datum" haben UND dessen Datum
-    bereits erreicht ist (heute oder in der Vergangenheit) - siehe
-    istDatumErreicht() in js/datumsformat.js. Beiträge ohne Datum
-    oder mit einem Datum in der Zukunft werden ausgeblendet. Der
-    neue Index in der gefilterten Liste bestimmt danach weiterhin
-    die Sektions-Abwechslung und welcher Beitrag initial
-    ausgeklappt startet.
+  try {
 
-    Zusätzlich: Ist auf der jeweiligen Seite eine Kategorie über die
-    globale Variable NEWS_SEITE_KATEGORIE vorgegeben (siehe z.B.
-    news-veroeffentlichungen.html), werden nur Beiträge dieser
-    Kategorie gezeigt. Ist die Variable nicht gesetzt (wie auf
-    news.html, der "Alles"-Ansicht), entfällt dieser Filter.
-  */
+    const alleNews = await ladeAlleNews();
+
+    /*
+      News einmalig vorbereiten:
+      - Beiträge ohne erreichtes Datum entfernen
+      - neueste Beiträge zuerst
+    */
+
+    alleSichtbarenNews = alleNews
+      .filter(beitrag =>
+        istDatumErreicht(beitrag.datum)
+      )
+      .sort(
+        (a, b) =>
+          new Date(b.datum) - new Date(a.datum)
+      );
+
+    /*
+      Falls die Seite eine feste Kategorie hat
+      (z.B. eine frühere Kategorie-Unterseite),
+      diese als Anfangsfilter verwenden.
+    */
+
+    if (
+      typeof NEWS_SEITE_KATEGORIE !== "undefined" &&
+      NEWS_SEITE_KATEGORIE !== null
+    ) {
+      aktuelleNewsKategorie = NEWS_SEITE_KATEGORIE;
+    }
+
+    await rendereGefilterteNews();
+
+  } catch (fehler) {
+
+    console.error(
+      "Fehler beim Laden der News:",
+      fehler
+    );
+
+    newsContainer.innerHTML = `
+      <p>
+        <em>
+          Die News konnten leider nicht geladen werden.
+        </em>
+      </p>
+    `;
+  }
+}
+
+async function rendereGefilterteNews() {
+
   const kategorieFilterAktiv =
-    typeof NEWS_SEITE_KATEGORIE !== "undefined" &&
-    NEWS_SEITE_KATEGORIE !== null;
+    aktuelleNewsKategorie !== "Alle";
 
-  const alleNews = await ladeAlleNews();
-  const sichtbareNews = alleNews.filter(
-    beitrag =>
-      istDatumErreicht(beitrag.datum) &&
-      (!kategorieFilterAktiv || beitrag.kategorie === NEWS_SEITE_KATEGORIE)
-  ).sort((a, b) => new Date(b.datum) - new Date(a.datum));
+  const sichtbareNews =
+    kategorieFilterAktiv
+
+      ? alleSichtbarenNews.filter(
+          beitrag =>
+            beitrag.kategorie === aktuelleNewsKategorie
+        )
+
+      : alleSichtbarenNews;
+
 
   if (sichtbareNews.length === 0) {
+
     newsContainer.innerHTML = `
       <p>
         ${
@@ -180,40 +225,26 @@ async function ladeNews() {
         }
       </p>
     `;
+
     return;
   }
 
-  /*
-    Nach Datum absteigend sortiert:
-    neueste Beiträge zuerst.
-  */
 
-  Promise.all(
-    sichtbareNews.map((beitrag, index) =>
-      ladeNewsBeitrag(beitrag, index, !kategorieFilterAktiv)
-    )
-  )
-    .then(beitragHtml => {
+  const beitragHtml =
+    await Promise.all(
+      sichtbareNews.map(
+        (beitrag, index) =>
+          ladeNewsBeitrag(
+            beitrag,
+            index,
+            !kategorieFilterAktiv
+          )
+      )
+    );
 
-      newsContainer.innerHTML =
-        beitragHtml.join("\n");
 
-    })
-    .catch(fehler => {
-
-      console.error(
-        "Fehler beim Laden der News:",
-        fehler
-      );
-
-      newsContainer.innerHTML = `
-        <p>
-          <em>
-            Die News konnten leider nicht geladen werden.
-          </em>
-        </p>
-      `;
-    });
+  newsContainer.innerHTML =
+    beitragHtml.join("\n");
 }
 
 
@@ -462,5 +493,83 @@ function ladeNewsBeitrag(beitrag, index, zeigeKategorie) {
     });
 }
 
+function baueAktuellesFilter() {
+
+  const section =
+    document.getElementById("aktuelles-filter");
+
+  const container =
+    document.getElementById("aktuelles-filter-container");
+
+  if (!section || !container) return;
+
+  const kategorien = [
+    NewsKategorie.RATGEBER,
+    NewsKategorie.FALLAKTEN,
+    NewsKategorie.ALLTAGSSTUDIEN,
+    NewsKategorie.PUBLIKATIONEN,
+    NewsKategorie.INSTITUTSLEBEN
+  ];
+  const filter = [
+    "Alle",
+    ...kategorien
+  ];
+
+  container.innerHTML = `
+
+    <p class="aktuelles-filter-label">
+      Nach Kategorie filtern
+    </p>
+
+    <div class="aktuelles-filter-liste">
+
+      ${filter.map(
+        eintrag => `
+
+          <button
+            type="button"
+            class="aktuelles-filter-button${eintrag === "ALLE" ? " aktiv" : ""}"
+            data-kategorie="${eintrag}">
+
+            <span>${eintrag}</span>
+
+          </button>
+
+        `
+      ).join("")}
+
+    </div>
+
+  `;
+
+  container
+    .querySelectorAll(".aktuelles-filter-button")
+    .forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        const kategorie =
+          button.dataset.kategorie;
+
+        container
+          .querySelectorAll(".aktuelles-filter-button")
+          .forEach(b =>
+            b.classList.remove("aktiv")
+          );
+
+        button.classList.add("aktiv");
+
+        filtereAktuelles(kategorie);
+
+      });
+
+    });
+}
+
+function filtereAktuelles(kategorie) {
+  aktuelleNewsKategorie = kategorie;
+  rendereGefilterteNews();
+}
 
 ladeNews();
+baueAktuellesFilter();
