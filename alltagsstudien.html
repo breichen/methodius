@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<!--
+  Übersicht aller Alltagsstudien.
+
+  Bereiche:
+  - Neueste
+  - Zufällige
+  - Thema vorschlagen
+  - Alle
+
+  Die einzelnen Studien werden über
+  js/alltagsstudien.js verwaltet.
+-->
+
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
+
+  <title>Alltagsstudien – Dr. Methodius</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <div id="header-platzhalter"></div>
+  <script src="js/header.js"></script>
+
+
+  <!-- ===== EINLEITUNG ===== -->
+
+  <section class="section">
+    <div class="wrap">
+
+      <h1>Alltagsstudien</h1>
+
+      <p>
+        Das Institut untersucht die kleinen und großen Phänomene
+        des alltäglichen Lebens, die anderen möglicherweise
+        entgehen.
+      </p>
+
+      <p>
+        Von auffälligen Verhaltensmustern über unerwartete
+        Zusammenhänge bis hin zu Beobachtungen, die einer
+        wissenschaftlichen Untersuchung eigentlich nicht bedürften:
+        Hier werden sie dokumentiert.
+      </p>
+
+      <p>
+        Klick auf eine Studie für die vollständige Untersuchung.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ===== NEUESTE ALLTAGSSTUDIEN ===== -->
+
+  <section id="neueste" class="section section-alt">
+    <div class="wrap">
+
+      <h2 id="neueste-titel">Neueste Alltagsstudien</h2>
+
+      <p id="neueste-text">
+        Die neuesten Beobachtungen aus dem Forschungsbereich
+        Alltagsleben.
+      </p>
+
+      <div id="neueste-alltagsstudien" class="alltagsstudien-register">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== ZUFÄLLIGE ALLTAGSSTUDIEN ===== -->
+
+  <section id="empfehlungen" class="section">
+    <div class="wrap">
+
+      <h2>Zufällige Alltagsstudien</h2>
+
+      <p>
+        Bis zu vier zufällig ausgewählte Untersuchungen –
+        weil man nie weiß, welche Erkenntnis man heute braucht.
+      </p>
+
+      <div id="zufaellige-alltagsstudien" class="alltagsstudien-register">
+      </div>
+
+      <p class="blaettern-wrap" style="margin-top: 2.5rem;">
+        <button type="button" id="zufalls-alltagsstudie-button" class="quiz-start-button">
+          🎲 Zufällige Studie öffnen
+        </button>
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ===== THEMA VORSCHLAGEN ===== -->
+
+  <section id="thema-anfragen" class="section section-alt">
+    <div class="wrap">
+
+      <h2>Studie vorschlagen</h2>
+
+      <p>
+        Du hast im Alltag etwas beobachtet, das dringend
+        wissenschaftlich untersucht werden sollte?
+        Schlage dem Institut eine Fragestellung für eine neue
+        Alltagsstudie vor.
+      </p>
+
+      <button type="button" class="quiz-start-button" data-tally-open="PdKjxb" data-tally-layout="modal"
+        data-tally-emoji-text="🔬" data-tally-emoji-animation="wave">
+        Studie vorschlagen
+      </button>
+
+    </div>
+  </section>
+
+
+  <!-- ===== ALLE ALLTAGSSTUDIEN ===== -->
+
+  <section id="alle-alltagsstudien-sektion" class="section">
+    <div class="wrap">
+
+      <h2>Alle Alltagsstudien</h2>
+
+      <p>
+        Die vollständige Sammlung aller bisher veröffentlichten
+        Alltagsstudien.
+      </p>
+
+      <div id="alle-alltagsstudien" class="alltagsstudien-register">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>&copy; 2026 Dr. Maximilian Methodius</p>
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+
+  <!-- ===== JAVASCRIPT ===== -->
+
+  <script src="js/konstanten.js"></script>
+  <script src="js/datumsformat.js"></script>
+  <script src="js/alltagsstudien.js"></script>
+  <script src="js/alltagsstudien-grid.js"></script>
+
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
+
+  <!-- Zufällige Studie öffnen -->
+
+  <script>
+    const button = document.getElementById("zufalls-alltagsstudie-button");
+
+    if (button) {
+      button.addEventListener("click", () => {
+
+        const auswahl = holeVerfuegbareAlltagsstudien();
+
+        if (!auswahl.length) return;
+
+        const zufallsStudie =
+          auswahl[Math.floor(Math.random() * auswahl.length)];
+
+        window.location.href =
+          `alltagsstudie.html?titel=${encodeURIComponent(zufallsStudie.slug)}`;
+      });
+    }
+  </script>
+
+</body>
+
+</html>

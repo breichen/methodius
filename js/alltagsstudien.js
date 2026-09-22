@@ -1,0 +1,105 @@
+/*
+  Liste aller Alltagsstudien.
+
+  Neue Studien einfach am ENDE der Liste hinzufügen.
+  Dadurch erscheinen sie automatisch unter "Neueste"
+  ganz vorne.
+
+  Erwartete Dateien:
+
+    pics/alltagsstudien/<slug>.png
+    md/alltagsstudien/<slug>.md
+
+  Optional:
+    datum
+    link
+    linkText
+
+  "datum" wird im ISO-Format YYYY-MM-DD erwartet.
+*/
+
+const alltagsstudienListe = [
+
+  {
+    slug: "hofer-limonade-preise",
+    titel: "Bemerkenswerte Preisgestaltung im Discounter",
+    datum: ""
+  },
+
+  {
+    slug: "amazon-cd-preise",
+    titel: "Preisabweichungen im Versandhandel",
+    datum: "",
+    link: "https://www.amazon.de/Shape-Fluidity-Digipak-Dool/dp/B08LS9VYGF/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=V5IBWTPQ120Z&dib=eyJ2IjoiMSJ9.5w82_zdt_kO8RzGRNLIo6xotFtzsR9VLpULHdVVCPqcznzdwNnU5XyYWYllIl368Atr9pWDmOnraBxUeoZop72-LWCsdt8RaBR0akJpXEpN-tP21LcNJZLglB4-WhM1B9hvB_DIyRXoWtkwYmdNatGYcTnvGEZqxTwGB4wrN6YiIX_hg47-4ezksixawYy3yvw4xyIvFpVfBPoe5J393igUhPFM9s3C2sbqeesIvYwlU.MpOwAxiTsuE27XJJHgDw8_csAPylUfKBEugTRve5CYI&dib_tag=se&keywords=dool+cd&qid=1788173090&sprefix=dool+cd%2Caps%2C109&sr=8-3",
+    linkText: "Überprüfe einen Preis"
+  },
+
+  {
+    slug: "amazon-cheap-cds",
+    titel: "Unstimmigkeit in der Produktsuche",
+    datum: "",
+    link: "https://www.amazon.de/s?i=popular&rh=n%3A255882%2Cp_36%3A-500&s=featured-rank&content-id=amzn1.sym.fc4f3753-af8e-4288-9354-f00cdcb2b673&pd_rd_r=90bcb95b-5d01-406b-a1b8-edb1ee93c9f9&pd_rd_w=M0pmc&pd_rd_wg=jTSWs&pf_rd_p=fc4f3753-af8e-4288-9354-f00cdcb2b673&pf_rd_r=NERF60648PVA1X44KV0X&ref=Oct_d_oup_S",
+    linkText: "Überprüfe die aktuellen Treffer"
+  },
+
+  {
+    slug: "windows-suche",
+    titel: "Auffälligkeiten bei der lokalen Programmsuche",
+    datum: ""
+  },
+
+  {
+    slug: "duschgel-kombination",
+    titel: 'Aus "2 in 1" wird "3 in 1"',
+    datum: ""
+  },
+
+  {
+    slug: "regierung-diskreditierung",
+    titel: "Rekursive Regierungskritik",
+    datum: ""
+  },
+
+  {
+    slug: "homeoffice-arbeitsunfall",
+    titel: "Arbeitsunfälle im Home-Office",
+    datum: ""
+  },
+
+  {
+    slug: "videoschiedsrichter",
+    titel: "Mögliche Kontrolle von Videoschiedsrichtern",
+    datum: ""
+  },
+
+  {
+    slug: "fussball-handball",
+    titel: "Unerwartete Korrelationen zwischen Sportarten",
+    datum: ""
+  },
+
+  {
+    slug: "englisch-jugendsprache",
+    titel: "Mögliche Korrelation zwischen Verwendung von Jugendsprache und Englischnote",
+    datum: ""
+  }
+
+];
+
+
+// Nur veröffentlichte Studien zurückgeben.
+//
+// Wie bei den Ratgebern gilt:
+// - Datum in der Vergangenheit/heute -> sichtbar
+// - Datum in der Zukunft -> unsichtbar
+// - leeres Datum -> aktuell ebenfalls unsichtbar,
+//   weil noch kein Veröffentlichungsdatum gesetzt wurde.
+
+function holeVerfuegbareAlltagsstudien() {
+
+  return alltagsstudienListe.filter(
+    studie =>
+      istDatumErreicht(studie.datum)
+  );
+
+}
