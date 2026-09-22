@@ -99,6 +99,12 @@
 
       <div id="zufaellige-empfehlungen" class="book-grid"></div>
 
+      <p class="blaettern-wrap" style="margin-top: 2.5rem;">
+        <button type="button" id="zufalls-ratgeber-button" class="quiz-start-button">
+          🎲 Zufälligen Ratgeber öffnen
+        </button>
+      </p>
+
     </div>
 
   </section>
@@ -160,6 +166,30 @@
   <script src="js/buchgrid.js"></script>
   <script src="js/allegrid.js"></script>
   <script async src="https://tally.so/widgets/embed.js"></script>
+
+  <!-- Button "Zufälligen Ratgeber öffnen" -> springt zu einem per Zufall
+       ausgewählten Ratgeber (dieselbe URL-Struktur wie überall sonst:
+       buch.html?titel=<slug>, siehe js/buch.js). Nutzt bewusst
+       holeGefilterteRatgeber() (aus js/ratgeber-filter.js) statt der
+       rohen ratgeberListe, damit sowohl das "erstellt"-Datum als auch
+       eine eventuell aktive Kategorie-Filterung (?kategorie=...)
+       berücksichtigt werden - der Button schlägt also nur Ratgeber vor,
+       die auf dieser Seite auch tatsächlich zu sehen sind. -->
+  <script>
+    document
+      .getElementById("zufalls-ratgeber-button")
+      .addEventListener("click", () => {
+        const auswahl = holeGefilterteRatgeber();
+
+        if (!auswahl.length) return;
+
+        const zufallsBuch =
+          auswahl[Math.floor(Math.random() * auswahl.length)];
+
+        window.location.href =
+          `buch.html?titel=${encodeURIComponent(zufallsBuch.slug)}`;
+      });
+  </script>
 
 </body>
 
