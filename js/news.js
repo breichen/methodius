@@ -29,16 +29,16 @@ const newsListe = [
 // Ratgeber-Einträge kommen automatisch aus ratgeberListe (ratgeber.js,
 // muss vor dieser Datei geladen sein - siehe erzeugeRatgeberNews unten).
 
-// Institutsleben- und Kuriositäten-Einträge liegen jeweils in einer
-// eigenen JSON-Datei (siehe data/institutsleben.json und
-// data/alltagsstudien.json) und werden in ladeAlleNews() dazugeladen.
+// Institutsleben-Einträge kommen aus der JSON-Datei
+// data/institutsleben.json und werden in ladeAlleNews() dazugeladen.
 
-
+// Alltagsstudien-Einträge kommen automatisch aus alltagsstudienListe
+// (alltagsstudien.js, muss vor dieser Datei geladen sein).
 
 
 // Erzeugt aus der Veröffentlichungsliste automatisch einen News-Eintrag
 // pro Paper. Für die Ankündigung wird die Paper-Datei selbst unter
-// md/news-papers/<paper.datei> verwendet, falls sie existiert -
+// md/news-papers/<paper.slug>.md verwendet, falls sie existiert -
 // andernfalls der generische Text md/news/neues-paper-generisch.md.
 async function erzeugePaperNews(veroeffentlichungen) {
 
@@ -69,36 +69,53 @@ async function erzeugePaperNews(veroeffentlichungen) {
 
 }
 
+
 // Prüft per HEAD-Request, ob unter dem gegebenen Pfad eine Datei
-// existiert (z.B. um pro Paper/Ratgeber eine eigene Ankündigungsdatei
-// zu verwenden, falls vorhanden).
+// existiert.
 async function dateiExistiert(pfad) {
+
   try {
-    const response = await fetch(pfad, { method: "HEAD" });
+
+    const response =
+      await fetch(
+        pfad,
+        { method: "HEAD" }
+      );
+
     return response.ok;
-  } catch {
-    return false;
+
   }
+  catch {
+
+    return false;
+
+  }
+
 }
 
+
 // Erzeugt aus ratgeberListe (ratgeber.js) automatisch einen News-Eintrag
-// pro Buch. Nur Bücher mit gesetztem "erstellt" tauchen auf (ohne
-// Datum kein Erscheinungsdatum für die News). Erwartet ein Mockup-Bild
-// unter pics/ratgeber-mockup/<slug>.png. Für die Ankündigung wird eine
-// eigene Datei unter md/news-ratgeber/<slug>.md verwendet, falls sie
-// existiert - andernfalls der generische Text
+// pro Buch. Nur Bücher mit gesetztem "erstellt" tauchen auf.
+// Erwartet ein Mockup-Bild unter pics/ratgeber-mockup/<slug>.png.
+// Für die Ankündigung wird eine eigene Datei unter
+// md/news-ratgeber/<slug>.md verwendet, falls sie existiert -
+// andernfalls der generische Text
 // md/news/neuer-ratgeber-generisch.md.
 async function erzeugeRatgeberNews(ratgeberListe) {
 
   return Promise.all(ratgeberListe.map(async ratgeber => {
 
-    const eigeneDatei = `md/news-ratgeber/${ratgeber.slug}.md`;
-    const bildPfad = `pics/ratgeber-mockup/${ratgeber.slug}.png`;
+    const eigeneDatei =
+      `md/news-ratgeber/${ratgeber.slug}.md`;
 
-    const [hatEigeneDatei, hatBild] = await Promise.all([
-      dateiExistiert(eigeneDatei),
-      dateiExistiert(bildPfad),
-    ]);
+    const bildPfad =
+      `pics/ratgeber-mockup/${ratgeber.slug}.png`;
+
+    const [hatEigeneDatei, hatBild] =
+      await Promise.all([
+        dateiExistiert(eigeneDatei),
+        dateiExistiert(bildPfad),
+      ]);
 
     return {
       datei: hatEigeneDatei
@@ -116,18 +133,22 @@ async function erzeugeRatgeberNews(ratgeberListe) {
 
 }
 
+
 // Erzeugt aus problemeListe (probleme.js) automatisch einen News-Eintrag
-// pro Fallakte. Nur Fallakten mit gesetztem "erstellt" tauchen auf
-// (ohne Datum kein Erscheinungsdatum für die News). Für die Ankündigung
-// wird eine eigene Datei unter md/news-probleme/<slug>.md verwendet,
-// falls sie existiert - andernfalls der generische Text
+// pro Fallakte. Nur Fallakten mit gesetztem "erstellt" tauchen auf.
+// Für die Ankündigung wird eine eigene Datei unter
+// md/news-probleme/<slug>.md verwendet, falls sie existiert -
+// andernfalls der generische Text
 // md/news/neue-fallakte-generisch.md.
 async function erzeugeProblemNews(problemeListe) {
 
   return Promise.all(problemeListe.map(async problem => {
 
-    const eigeneDatei = `md/news-probleme/${problem.slug}.md`;
-    const hatEigeneDatei = await dateiExistiert(eigeneDatei);
+    const eigeneDatei =
+      `md/news-probleme/${problem.slug}.md`;
+
+    const hatEigeneDatei =
+      await dateiExistiert(eigeneDatei);
 
     return {
       datei: hatEigeneDatei
@@ -144,87 +165,221 @@ async function erzeugeProblemNews(problemeListe) {
 
 }
 
+
 // Versieht eine Liste roher News-Einträge (ohne kategorie-Feld) mit
-// der übergebenen Kategorie. Wird für die ausgelagerten JSON-Dateien
-// (Institutsleben, Kuriositäten) verwendet.
-function versieheMitKategorie(eintraege, kategorie) {
-  return eintraege.map(eintrag => ({
-    ...eintrag,
-    kategorie,
-  }));
+// der übergebenen Kategorie. Wird für die ausgelagerte JSON-Datei
+// Institutsleben verwendet.
+function versieheMitKategorie(
+  eintraege,
+  kategorie
+) {
+
+  return eintraege.map(
+    eintrag => ({
+      ...eintrag,
+      kategorie,
+    })
+  );
+
 }
 
-// ordner: Name des Ordners, der für diese Kategorie sowohl die
-// .md-Dateien (unter md/, z.B. "../news-institutsleben") als auch
-// die Bilder (unter pics/, z.B. "pics/news-institutsleben") enthält.
-// datei muss in der JSON-Datei selbst nur den reinen Dateinamen
-// enthalten - der jeweilige Pfad wird hier ergänzt. Ein Bild wird nur
-// gesetzt, wenn unter pics/<ordner>/<slug>.png tatsächlich eine Datei
-// existiert (genau wie bei erzeugePaperNews/erzeugeRatgeberNews oben).
-// Optional - ohne Angabe bleiben datei und bild unverändert.
-async function ladeJsonNews(pfad, kategorie, ordner) {
 
-  const response = await fetch(pfad);
+// Lädt News-Einträge aus einer JSON-Datei.
+//
+// ordner: Name des Ordners, der für diese Kategorie sowohl die
+// .md-Dateien (unter md/) als auch die Bilder (unter pics/) enthält.
+//
+// datei muss in der JSON-Datei selbst nur den reinen Dateinamen
+// enthalten - der jeweilige Pfad wird hier ergänzt.
+//
+// Ein Bild wird nur gesetzt, wenn unter
+// pics/<ordner>/<slug>.png tatsächlich eine Datei existiert.
+//
+// Optional - ohne Angabe bleiben datei und bild unverändert.
+async function ladeJsonNews(
+  pfad,
+  kategorie,
+  ordner
+) {
+
+  const response =
+    await fetch(pfad);
 
   if (!response.ok) {
-    throw new Error(`News-Datei nicht gefunden: ${pfad}`);
+
+    throw new Error(
+      `News-Datei nicht gefunden: ${pfad}`
+    );
+
   }
 
-  const eintraege = await response.json();
+  const eintraege =
+    await response.json();
 
-  const eintraegeMitPfad = ordner
-    ? await Promise.all(eintraege.map(async eintrag => {
+  const eintraegeMitPfad =
+    ordner
 
-        const bildPfad = `pics/${ordner}/${eintrag.slug}.png`;
-        const hatBild = await dateiExistiert(bildPfad);
+      ? await Promise.all(
+          eintraege.map(
+            async eintrag => {
 
-        return {
-          ...eintrag,
-          datei: `../${ordner}/${eintrag.slug}.md`,
-          ...(hatBild && { bild: bildPfad }),
-        };
-      }))
-    : eintraege;
+              const bildPfad =
+                `pics/${ordner}/${eintrag.slug}.png`;
 
-  return versieheMitKategorie(eintraegeMitPfad, kategorie);
+              const hatBild =
+                await dateiExistiert(
+                  bildPfad
+                );
+
+              return {
+                ...eintrag,
+                datei:
+                  `../${ordner}/${eintrag.slug}.md`,
+                ...(hatBild && {
+                  bild: bildPfad
+                }),
+              };
+
+            }
+          )
+        )
+
+      : eintraege;
+
+  return versieheMitKategorie(
+    eintraegeMitPfad,
+    kategorie
+  );
 
 }
+
+
+// Erzeugt aus alltagsstudienListe automatisch einen News-Eintrag
+// pro Alltagsstudie.
+//
+// Die Markdown-Datei liegt unter:
+// md/alltagsstudien/<slug>.md
+//
+// Das optionale Bild liegt unter:
+// pics/alltagsstudien/<slug>.png
+//
+// Wenn ein Bild existiert, wird es als News-Bild übernommen.
+async function erzeugeAlltagsstudienNews(
+  alltagsstudienListe
+) {
+
+  return Promise.all(
+    alltagsstudienListe.map(
+      async studie => {
+
+        const bildPfad =
+          `pics/alltagsstudien/${studie.slug}.png`;
+
+        const hatBild =
+          await dateiExistiert(
+            bildPfad
+          );
+
+        return {
+          datei:
+            `../alltagsstudien/${studie.slug}.md`,
+
+          titel:
+            `Neue Alltagsstudie: ${studie.titel}`,
+
+          datum:
+            studie.datum,
+
+          ...(hatBild && {
+            bild: bildPfad
+          }),
+
+          link:
+            `alltagsstudie.html?titel=${encodeURIComponent(studie.slug)}`,
+
+          linkText:
+            "Zur Alltagsstudie",
+
+          kategorie:
+            NewsKategorie.ALLTAGSSTUDIEN,
+        };
+
+      }
+    )
+  );
+
+}
+
 
 async function ladeAlleNews() {
 
   const response =
-    await fetch("data/veroeffentlichungen.json");
+    await fetch(
+      "data/veroeffentlichungen.json"
+    );
 
   if (!response.ok) {
+
     throw new Error(
       "Veröffentlichungsdatei nicht gefunden"
     );
+
   }
 
   const veroeffentlichungen =
     await response.json();
 
+
   const paperNews =
-    await erzeugePaperNews(veroeffentlichungen);
+    await erzeugePaperNews(
+      veroeffentlichungen
+    );
+
 
   const ratgeberNews =
-    await erzeugeRatgeberNews(ratgeberListe);
+    await erzeugeRatgeberNews(
+      ratgeberListe
+    );
+
 
   const problemNews =
-    await erzeugeProblemNews(problemeListe);
+    await erzeugeProblemNews(
+      problemeListe
+    );
 
-  const [institutslebenNews, alltagsstudienNews] = await Promise.all([
-    ladeJsonNews("data/institutsleben.json", NewsKategorie.INSTITUTSLEBEN, "news-institutsleben"),
-    ladeJsonNews("data/alltagsstudien.json", NewsKategorie.ALLTAGSSTUDIEN, "alltagsstudien"),
+
+  const [
+    institutslebenNews,
+    alltagsstudienNews
+  ] = await Promise.all([
+
+    ladeJsonNews(
+      "data/institutsleben.json",
+      NewsKategorie.INSTITUTSLEBEN,
+      "news-institutsleben"
+    ),
+
+    erzeugeAlltagsstudienNews(
+      alltagsstudienListe
+    ),
+
   ]);
 
+
   return [
+
     ...newsListe,
+
     ...paperNews,
+
     ...ratgeberNews,
+
     ...problemNews,
+
     ...institutslebenNews,
+
     ...alltagsstudienNews,
+
   ];
 
 }
