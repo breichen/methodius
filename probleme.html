@@ -3,7 +3,9 @@
   Zeigt ALLE Probleme aus js/probleme.js als Fallakten-Übersicht,
   bzw. - analog zu alle-ratgeber.html - die Fallakten einer
   bestimmten Kategorie, gesteuert über den URL-Parameter
-  ?kategorie=... (siehe js/probleme-filter.js). Ein Filter-Grid zum
+  ?kategorie=... (siehe js/probleme-filter.js). Die Kategorien für
+  Fallakten sind ein eigenes, von den Ratgeber-Kategorien getrenntes
+  Enum (siehe js/probleme-kategorien.js). Ein Filter-Grid zum
   Auswählen einer Kategorie gibt es hier noch nicht.
   Anders als bei den Ratgebern gibt es hier keine Cover-Bilder - jede
   Karte zeigt stattdessen direkt Frage, Diagnose und Behandlung.
@@ -42,14 +44,14 @@
   <!-- ===== NAVIGATION ===== -->
   <!-- Header wird zentral aus js/header.js eingefügt -->
   <div id="header-platzhalter"></div>
+  <script src="js/ratgeber-kategorien.js"></script>
   <script src="js/header.js"></script>
 
   <!-- ===== EINLEITUNG ===== -->
   <section class="section">
     <div class="wrap">
       <h1 id="seiten-titel">Die Sprechstunde</h1>
-      <p id="seiten-einleitung">Hier landen Fragen, die Leser eingeschickt haben - und die <strong>Dr. Maximilian
-          Methodius</strong> mit der
+      <p id="seiten-einleitung">Hier landen Fragen, die Leser eingeschickt haben - und die <strong>Dr. Maximilian Methodius</strong> mit der
         gebotenen wissenschaftlichen Unbekümmertheit beantwortet.</p>
       <p>Jede Fallakte enthält eine Diagnose, eine Behandlung, eine wissenschaftliche Begründung (die diesen Namen
         nicht verdient) und eine Prognose. Klick auf eine Karte für die vollständige Akte.</p>
@@ -120,10 +122,12 @@
     </div>
   </footer>
 
-  <!-- Reihenfolge wichtig: erst die Datenliste, dann der Filter, der
-       sie auswertet, dann das Script, das die Karten daraus baut -->
+  <!-- Reihenfolge wichtig: erst die Datenliste und das (eigene)
+       Kategorien-Enum für Fallakten, dann der Filter, der beides
+       auswertet, dann das Script, das die Karten daraus baut -->
   <script src="js/datumsformat.js"></script>
   <script src="js/probleme.js"></script>
+  <script src="js/probleme-kategorien.js"></script>
   <script src="js/probleme-filter.js"></script>
   <script src="js/problemgrid.js"></script>
 
@@ -134,11 +138,16 @@
        Kategorie-Filterung (?kategorie=...) berücksichtigt werden -
        analog zu holeGefilterteRatgeber() in js/ratgeber-filter.js. Die
        Detailseite wird per ?slug=<slug> aufgerufen (siehe
-       js/problemgrid.js). -->
+       js/problemgrid.js).
+
+       Achtung: js/probleme-filter.js entfernt die ganze Section
+       "empfehlungen" (und damit diesen Button), wenn es nur wenige
+       Fallakten gibt - deshalb hier mit ?. absichern, statt den
+       Button ungeprüft anzusprechen. -->
   <script>
     document
       .getElementById("zufalls-problem-button")
-      .addEventListener("click", () => {
+      ?.addEventListener("click", () => {
         const sichtbareProbleme =
           holeGefilterteProbleme();
 

@@ -35,13 +35,12 @@
     ...
 
   Für die Übersicht wird momentan nur die Frage benötigt.
+
+  Setzt js/probleme-filter.js voraus (muss VOR diesem Script geladen
+  werden): von dort kommen sowohl holeGefilterteProbleme() (Filterung
+  nach "erstellt"-Datum und ggf. Kategorie, siehe dort) als auch die
+  Anzeige-Konstanten ANZAHL_NEUESTE_PROBLEME/ANZAHL_ZUFAELLIGE_PROBLEME.
 */
-
-
-// Wie viele Karten "Neueste Fallakten" bzw.
-// "Zufällige Empfehlungen" angezeigt werden.
-const ANZAHL_NEUESTE_PROBLEME = 3;
-const ANZAHL_ZUFAELLIGE_PROBLEME = 3;
 
 
 // ------------------------------------------------------------
@@ -266,29 +265,22 @@ document.addEventListener(
 
 
     /*
-      Alle Fallakten laden.
+      Nur die sichtbaren Fallakten laden: holeGefilterteProbleme()
+      (aus js/probleme-filter.js) berücksichtigt bereits sowohl das
+      "erstellt"-Datum (siehe istDatumErreicht() in
+      js/datumsformat.js) als auch eine eventuell über ?kategorie=...
+      aktive Kategorie-Filterung. Fallakten ohne erreichtes Datum
+      bzw. außerhalb der gefilterten Kategorie tauchen dadurch in
+      keiner der drei Übersichten auf.
     */
 
     Promise.all(
-      problemeListe.map(eintrag =>
+      holeGefilterteProbleme().map(eintrag =>
         ladeProblem(eintrag)
       )
     )
 
-      .then(probleme => {
-
-        /*
-          Nur Fallakten anzeigen, die ein "erstellt"-Datum
-          haben UND dessen Datum bereits erreicht ist (heute
-          oder in der Vergangenheit) - siehe istDatumErreicht()
-          in js/datumsformat.js. Fallakten ohne Datum oder mit
-          einem Datum in der Zukunft werden aus allen drei
-          Übersichten ausgeblendet.
-        */
-        const sichtbareProbleme =
-          probleme.filter(problem =>
-            istDatumErreicht(problem.erstellt)
-          );
+      .then(sichtbareProbleme => {
 
         // Alle Fallakten
         renderProblemKarten(

@@ -34,6 +34,25 @@
   (## Einsender), da er inhaltlich zur Fallakte gehört statt zu den
   Metadaten der Liste.
 
+  Optional lässt sich bei der Objekt-Schreibweise außerdem "kategorie"
+  angeben, um eine Fallakte einer Kategorie zuzuordnen. Verwendet wird
+  dabei ein EIGENES Kategorien-Enum für Fallakten (ProblemKategorie
+  aus js/probleme-kategorien.js), bewusst getrennt von den
+  Ratgeber-Kategorien (RatgeberKategorie aus
+  js/ratgeber-kategorien.js) - Fallakten müssen nicht dieselben
+  Kategorien haben wie Ratgeber:
+       { slug: "mein-fall", titel: "Mein Fall", erstellt: "2026-08-27", kategorie: ProblemKategorie.ALLGEMEIN }
+     Aktuell gibt es in js/probleme-kategorien.js nur den
+     Platzhalter-Typ ProblemKategorie.ALLGEMEIN ("Allgemein") - weitere
+     Kategorien lassen sich dort bei Bedarf einfach ergänzen.
+     "kategorie" ist komplett optional. Eine Fallakte ohne "kategorie"
+     erscheint weiterhin in "Alle Fallakten" etc., taucht aber in
+     keiner nach Kategorie gefilterten Ansicht auf (siehe
+     holeGefilterteProbleme() in js/probleme-filter.js). Ein
+     Filter-Grid zum Auswählen einer Kategorie gibt es für Fallakten
+     noch nicht - die Filterung lässt sich aber schon jetzt über den
+     URL-Parameter ?kategorie=... nutzen.
+
   Die Reihenfolge bestimmt die Fallnummer:
 
     erster Eintrag  -> Fall Nr. 001

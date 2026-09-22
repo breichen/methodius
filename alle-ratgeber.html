@@ -178,7 +178,7 @@
   <script>
     document
       .getElementById("zufalls-ratgeber-button")
-      .addEventListener("click", () => {
+      ?.addEventListener("click", () => {
         const auswahl = holeGefilterteRatgeber();
 
         if (!auswahl.length) return;
