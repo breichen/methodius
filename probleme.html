@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <!--
-  Zeigt ALLE Probleme aus js/probleme.js als Fallakten-Übersicht.
+  Zeigt ALLE Probleme aus js/probleme.js als Fallakten-Übersicht,
+  bzw. - analog zu alle-ratgeber.html - die Fallakten einer
+  bestimmten Kategorie, gesteuert über den URL-Parameter
+  ?kategorie=... (siehe js/probleme-filter.js). Ein Filter-Grid zum
+  Auswählen einer Kategorie gibt es hier noch nicht.
   Anders als bei den Ratgebern gibt es hier keine Cover-Bilder - jede
   Karte zeigt stattdessen direkt Frage, Diagnose und Behandlung.
   "Wissenschaftliche Begründung" und Prognose gibt es erst auf der
@@ -44,8 +48,9 @@
   <!-- ===== EINLEITUNG ===== -->
   <section class="section">
     <div class="wrap">
-      <h1>Die Sprechstunde</h1>
-      <p>Hier landen Fragen, die Leser eingeschickt haben - und die <strong>Dr. Maximilian Methodius</strong> mit der
+      <h1 id="seiten-titel">Die Sprechstunde</h1>
+      <p id="seiten-einleitung">Hier landen Fragen, die Leser eingeschickt haben - und die <strong>Dr. Maximilian
+          Methodius</strong> mit der
         gebotenen wissenschaftlichen Unbekümmertheit beantwortet.</p>
       <p>Jede Fallakte enthält eine Diagnose, eine Behandlung, eine wissenschaftliche Begründung (die diesen Namen
         nicht verdient) und eine Prognose. Klick auf eine Karte für die vollständige Akte.</p>
@@ -55,8 +60,8 @@
   <!-- ===== KAPITEL: NEUESTE FALLAKTEN ===== -->
   <section id="neueste-faelle" class="section section-alt">
     <div class="wrap">
-      <h2>Neueste Fallakten</h2>
-      <p>Die zuletzt eingesandten Probleme, derer Dr. Methodius sich angenommen hat.</p>
+      <h2 id="neueste-titel">Neueste Fallakten</h2>
+      <p id="neueste-text">Die zuletzt eingesandten Probleme, derer Dr. Methodius sich angenommen hat.</p>
       <!-- Dieser Container wird per JavaScript (js/problemgrid.js) automatisch befüllt -->
       <div id="neueste-probleme" class="problem-grid"></div>
     </div>
@@ -65,8 +70,8 @@
   <!-- ===== KAPITEL: ZUFÄLLIGE EMPFEHLUNGEN ===== -->
   <section id="empfehlungen" class="section">
     <div class="wrap">
-      <h2>Zufällige Empfehlungen</h2>
-      <p>Drei Fallakten, ausgewürfelt – lade die Seite neu für eine neue Auswahl.</p>
+      <h2 id="empfehlungen-titel">Zufällige Empfehlungen</h2>
+      <p id="empfehlungen-text">Drei Fallakten, ausgewürfelt – lade die Seite neu für eine neue Auswahl.</p>
       <div id="zufaellige-probleme" class="problem-grid"></div>
 
       <p class="blaettern-wrap" style="margin-top: 2.5rem;">
@@ -99,10 +104,10 @@
   </section>
 
   <!-- ===== KAPITEL: ALLE PROBLEME ===== -->
-  <section class="section">
+  <section id="alle-probleme-sektion" class="section">
     <div class="wrap">
-      <h2>Alle Fallakten</h2>
-      <p>Die vollständige Sammlung aller bisher behandelten Fälle.</p>
+      <h2 id="alle-titel">Alle Fallakten</h2>
+      <p id="alle-text">Die vollständige Sammlung aller bisher behandelten Fälle.</p>
 
       <!-- Wird per JavaScript (js/problemgrid.js) automatisch mit allen Problemen befüllt -->
       <div id="alle-probleme" class="problem-grid"></div>
@@ -116,24 +121,27 @@
     </div>
   </footer>
 
-  <!-- Reihenfolge wichtig: erst die Datenliste, dann das Script, das sie nutzt -->
+  <!-- Reihenfolge wichtig: erst die Datenliste, dann der Filter, der
+       sie auswertet, dann das Script, das die Karten daraus baut -->
   <script src="js/datumsformat.js"></script>
   <script src="js/probleme.js"></script>
+  <script src="js/probleme-filter.js"></script>
   <script src="js/problemgrid.js"></script>
 
   <!-- Button "Zufällige Fallakte öffnen" -> springt zu einer per Zufall
-       ausgewählten Fallakte. Analog zu holeGefilterteRatgeber() in
-       js/ratgeber-filter.js: erst nach "erstellt"-Datum filtern (siehe
-       istDatumErreicht() in js/datumsformat.js), damit nie eine noch
-       nicht veröffentlichte Fallakte verlinkt wird. Die Liste heißt
-       "problemeListe" (aus js/probleme.js), die Detailseite wird per
-       ?slug=<slug> aufgerufen (siehe js/problemgrid.js). -->
+       ausgewählten Fallakte. Nutzt bewusst holeGefilterteProbleme()
+       (aus js/probleme-filter.js) statt der rohen problemeListe, damit
+       sowohl das "erstellt"-Datum als auch eine eventuell aktive
+       Kategorie-Filterung (?kategorie=...) berücksichtigt werden -
+       analog zu holeGefilterteRatgeber() in js/ratgeber-filter.js. Die
+       Detailseite wird per ?slug=<slug> aufgerufen (siehe
+       js/problemgrid.js). -->
   <script>
     document
       .getElementById("zufalls-problem-button")
       .addEventListener("click", () => {
         const sichtbareProbleme =
-          problemeListe.filter(eintrag => istDatumErreicht(eintrag.erstellt));
+          holeGefilterteProbleme();
 
         if (!sichtbareProbleme.length) return;
 

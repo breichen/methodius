@@ -60,32 +60,40 @@ function baueHeader() {
         <nav>
           <ul>
             <li class="hat-untermenue">
-              <a href="news.html">Aktuelles</a>
+              <a href="news-alltagsstudien.html">Forschung</a>
               <ul class="untermenue">
-                <li><a href="news.html">Alles</a></li>
-                <li><a href="news-veroeffentlichungen.html">Veröffentlichungen</a></li>
-                <li><a href="news-institutsleben.html">Institutsleben</a></li>
                 <li><a href="news-alltagsstudien.html">Alltagsstudien</a></li>
               </ul>
             </li>
             <li class="hat-untermenue">
-              <a href="alle-ratgeber.html">Ratgeber</a>
+              <a href="alle-ratgeber.html">Beratung</a>
               <ul class="untermenue">
-                ${baueRatgeberUntermenue()}
+                <li><a href="alle-ratgeber.html">Ratgeber</a></li>
+                <li><a href="probleme.html">Fallakten</a></li>
               </ul>
             </li>
-            <li><a href="probleme.html">Fallakten</a></li>
-            <li><a href="autor.html">Biographie</a></li>
+            <li class="hat-untermenue">
+              <a href="studium.html">Studium</a>
+              <ul class="untermenue">
+                <li><a href="studium.html">Methodius-Studium</a></li>
+              </ul>
+            </li>
+            <li class="hat-untermenue">
+              <a href="zeitschrift.html">Publikationen</a>
+              <ul class="untermenue">
+                <li><a href="zeitschrift.html">Zeitschrift</a></li>
+                <li><a href="veroeffentlichungen.html">Publikationsliste</a></li>
+              </ul>
+            </li>
             <li class="hat-untermenue">
               <a href="institut.html">Institut</a>
               <ul class="untermenue">
-                <li><a href="institut.html">Methodius-Institut</a></li>
                 <li><a href="philosophie.html">Philosophie</a></li>
+                <li><a href="institut.html">Methodius-Institut</a></li>
+                <li><a href="autor.html">Dr. Methodius</a></li>
                 <li><a href="mitglieder.html">Mitglieder</a></li>
-                <li><a href="veroeffentlichungen.html">Publikationen</a></li>
+                <li><a href="news.html">Aktuelles</a></li>
                 <li><a href="institutsleben.html">Institutsleben</a></li>
-                <li><a href="studium.html">Methodius-Studium</a></li>
-                <li><a href="zeitschrift.html">Zeitschrift</a></li>
               </ul>
             </li>
           </ul>
