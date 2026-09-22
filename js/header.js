@@ -23,37 +23,6 @@
   Kommentar bei "istStartseite" weiter unten.
 */
 
-/*
-  Bewusst dieselbe Logik wie istDebugModusAktiv() in js/datumsformat.js
-  (siehe dort für Details) - hier lokal dupliziert, damit header.js
-  weiterhin auf JEDER Seite ohne zusätzliche Abhängigkeit funktioniert
-  (header.js wird auf allen Seiten VOR den meisten anderen Scripts
-  geladen, datumsformat.js aber nicht auf jeder Seite eingebunden).
-
-  Nur zum vorübergehenden Ausblenden des Zeitschrift-Menüpunkts
-  genutzt - siehe unten bei "hat-untermenue".
-*/
-function istDebugModusAktivHeader() {
-
-  const params = new URLSearchParams(window.location.search);
-
-  if (params.has("debug")) {
-    const aktiv = params.get("debug") !== "0" && params.get("debug") !== "false";
-    try {
-      localStorage.setItem("debugModus", aktiv ? "1" : "0");
-    } catch (fehler) {
-      // localStorage evtl. nicht verfügbar.
-    }
-    return aktiv;
-  }
-
-  try {
-    return localStorage.getItem("debugModus") === "1";
-  } catch (fehler) {
-    return false;
-  }
-}
-
 function baueRatgeberUntermenue() {
 
   const kategorien =
@@ -115,11 +84,7 @@ function baueHeader() {
                 <li><a href="veroeffentlichungen.html">Publikationen</a></li>
                 <li><a href="institutsleben.html">Institutsleben</a></li>
                 <li><a href="studium.html">Methodius-Studium</a></li>
-                ${
-                  istDebugModusAktivHeader()
-                    ? '<li><a href="zeitschrift.html">Zeitschrift</a></li>'
-                    : ""
-                }
+                <li><a href="zeitschrift.html">Zeitschrift</a></li>
               </ul>
             </li>
           </ul>

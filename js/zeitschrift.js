@@ -135,57 +135,35 @@ function baueCallForPapersSection() {
   `;
 }
 
-/*
-  Die Seite ist noch nicht offiziell veröffentlicht - solange der
-  Debug-Modus nicht aktiv ist (siehe istDebugModusAktiv() in
-  js/datumsformat.js), wird statt des eigentlichen Inhalts nur ein
-  Hinweis angezeigt. Einfach diesen Block entfernen, sobald die Seite
-  freigegeben werden soll.
-*/
-if (!istDebugModusAktiv()) {
+fetch("md/zeitschrift.md")
+.then(antwort => {
+  if (!antwort.ok) throw new Error("Datei nicht gefunden");
+  return antwort.text();
+})
+.then(markdown => {
 
-  container.innerHTML = `
+  const bloecke = parseMarkdownBloecke(markdown);
+
+  const einleitung = `
     <section class="section">
       <div class="wrap">
-        <h1>Zeitschrift für Angewandte Lebensführung</h1>
-        <p>Diese Seite ist derzeit noch nicht öffentlich verfügbar.</p>
+        ${bloecke.join("\n")}
       </div>
     </section>
   `;
 
-} else {
-
-  fetch("md/zeitschrift.md")
-  .then(antwort => {
-    if (!antwort.ok) throw new Error("Datei nicht gefunden");
-    return antwort.text();
-  })
-  .then(markdown => {
-
-    const bloecke = parseMarkdownBloecke(markdown);
-
-    const einleitung = `
-      <section class="section">
-        <div class="wrap">
-          ${bloecke.join("\n")}
-        </div>
-      </section>
-    `;
-
-    container.innerHTML =
-      einleitung +
-      baueAusgabenSection() +
-      baueCallForPapersSection();
-  })
-  .catch(() => {
-    container.innerHTML = `
-      <section class="section">
-        <div class="wrap">
-          <h1>Zeitschrift für Angewandte Lebensführung</h1>
-          <p>Der Einleitungstext konnte leider nicht geladen werden.</p>
-        </div>
-      </section>
-    ` + baueAusgabenSection() + baueCallForPapersSection();
-  });
-
-}
+  container.innerHTML =
+    einleitung +
+    baueAusgabenSection() +
+    baueCallForPapersSection();
+})
+.catch(() => {
+  container.innerHTML = `
+    <section class="section">
+      <div class="wrap">
+        <h1>Zeitschrift für Angewandte Lebensführung</h1>
+        <p>Der Einleitungstext konnte leider nicht geladen werden.</p>
+      </div>
+    </section>
+  ` + baueAusgabenSection() + baueCallForPapersSection();
+});
