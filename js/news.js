@@ -90,9 +90,7 @@ async function dateiExistiert(pfad) {
 // md/news/neuer-ratgeber-generisch.md.
 async function erzeugeRatgeberNews(ratgeberListe) {
 
-  const relevante = ratgeberListe.filter(ratgeber => ratgeber.erstellt);
-
-  return Promise.all(relevante.map(async ratgeber => {
+  return Promise.all(ratgeberListe.map(async ratgeber => {
 
     const eigeneDatei = `md/news-ratgeber/${ratgeber.slug}.md`;
     const bildPfad = `pics/ratgeber-mockup/${ratgeber.slug}.png`;
@@ -126,9 +124,7 @@ async function erzeugeRatgeberNews(ratgeberListe) {
 // md/news/neue-fallakte-generisch.md.
 async function erzeugeProblemNews(problemeListe) {
 
-  const relevante = problemeListe.filter(problem => problem.erstellt);
-
-  return Promise.all(relevante.map(async problem => {
+  return Promise.all(problemeListe.map(async problem => {
 
     const eigeneDatei = `md/news-probleme/${problem.slug}.md`;
     const hatEigeneDatei = await dateiExistiert(eigeneDatei);

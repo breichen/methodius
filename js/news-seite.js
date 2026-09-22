@@ -41,7 +41,9 @@ const NEWS_ERSTEN_BEITRAG_AUSGEKLAPPT = true;
 // von NewsKategorie (js/news.js) selbst sind Plural, da sie auch als
 // Überschriften/Filterwerte verwendet werden.
 const NEWS_KATEGORIE_LABEL_SINGULAR = {
-  [NewsKategorie.PUBLIKATIONEN]: "Publikationen",
+  [NewsKategorie.RATGEBER]: "Ratgeber",
+  [NewsKategorie.FALLAKTEN]: "Fallakte",
+  [NewsKategorie.PUBLIKATIONEN]: "Publikation",
   [NewsKategorie.INSTITUTSLEBEN]: "Institutsleben",
   [NewsKategorie.ALLTAGSSTUDIEN]: "Alltagsstudie",
 };
@@ -189,11 +191,19 @@ async function ladeNews() {
     );
 
     newsContainer.innerHTML = `
-      <p>
-        <em>
-          Die News konnten leider nicht geladen werden.
-        </em>
-      </p>
+      <section class="section">
+
+        <div class="wrap">
+
+          <p>
+            <em>
+              Die News konnten leider nicht geladen werden.
+            </em>
+          </p>
+
+        </div>
+
+      </section>
     `;
   }
 }
@@ -217,13 +227,21 @@ async function rendereGefilterteNews() {
   if (sichtbareNews.length === 0) {
 
     newsContainer.innerHTML = `
-      <p>
-        ${
-          kategorieFilterAktiv
-            ? "In dieser Kategorie gibt es derzeit keine Neuigkeiten."
-            : "Derzeit gibt es keine Neuigkeiten."
-        }
-      </p>
+      <section class="section">
+
+        <div class="wrap">
+
+          <p>
+            ${
+              kategorieFilterAktiv
+                ? "In dieser Kategorie gibt es derzeit keine Neuigkeiten."
+                : "Derzeit gibt es keine Neuigkeiten."
+            }
+          </p>
+
+        </div>
+
+      </section>
     `;
 
     return;
@@ -528,7 +546,7 @@ function baueAktuellesFilter() {
 
           <button
             type="button"
-            class="aktuelles-filter-button${eintrag === "ALLE" ? " aktiv" : ""}"
+            class="aktuelles-filter-button${eintrag === "Alle" ? " aktiv" : ""}"
             data-kategorie="${eintrag}">
 
             <span>${eintrag}</span>
