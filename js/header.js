@@ -89,8 +89,8 @@ function baueHeader() {
               <a href="institut.html">Institut</a>
               <ul class="untermenue">
                 <li><a href="philosophie.html">Philosophie</a></li>
-                <li><a href="institut.html">Methodius-Institut</a></li>
-                <li><a href="autor.html">Dr. Methodius</a></li>
+                <li><a href="institut.html">Über das Institut</a></li>
+                <li><a href="autor.html">Über Dr. Methodius</a></li>
                 <li><a href="mitglieder.html">Mitglieder</a></li>
                 <li><a href="news.html">Aktuelles</a></li>
                 <li><a href="institutsleben.html">Institutsleben</a></li>
