@@ -68,6 +68,13 @@
       <h2>Zufällige Empfehlungen</h2>
       <p>Drei Fallakten, ausgewürfelt – lade die Seite neu für eine neue Auswahl.</p>
       <div id="zufaellige-probleme" class="problem-grid"></div>
+
+      <p class="blaettern-wrap" style="margin-top: 2.5rem;">
+        <button type="button" id="zufalls-problem-button" class="quiz-start-button">
+          🎲 Zufällige Fallakte öffnen
+        </button>
+      </p>
+
     </div>
   </section>
 
@@ -113,6 +120,30 @@
   <script src="js/datumsformat.js"></script>
   <script src="js/probleme.js"></script>
   <script src="js/problemgrid.js"></script>
+
+  <!-- Button "Zufällige Fallakte öffnen" -> springt zu einer per Zufall
+       ausgewählten Fallakte. Analog zu holeGefilterteRatgeber() in
+       js/ratgeber-filter.js: erst nach "erstellt"-Datum filtern (siehe
+       istDatumErreicht() in js/datumsformat.js), damit nie eine noch
+       nicht veröffentlichte Fallakte verlinkt wird. Die Liste heißt
+       "problemeListe" (aus js/probleme.js), die Detailseite wird per
+       ?slug=<slug> aufgerufen (siehe js/problemgrid.js). -->
+  <script>
+    document
+      .getElementById("zufalls-problem-button")
+      .addEventListener("click", () => {
+        const sichtbareProbleme =
+          problemeListe.filter(eintrag => istDatumErreicht(eintrag.erstellt));
+
+        if (!sichtbareProbleme.length) return;
+
+        const zufallsProblem =
+          sichtbareProbleme[Math.floor(Math.random() * sichtbareProbleme.length)];
+
+        window.location.href =
+          `problem.html?slug=${encodeURIComponent(zufallsProblem.slug)}`;
+      });
+  </script>
 
 </body>
 
