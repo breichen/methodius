@@ -80,6 +80,7 @@ function baueHeader() {
               <a href="institut.html">Institut</a>
               <ul class="untermenue">
                 <li><a href="institut.html">Methodius-Institut</a></li>
+                <li><a href="philosophie.html">Philosophie</a></li>
                 <li><a href="mitglieder.html">Mitglieder</a></li>
                 <li><a href="veroeffentlichungen.html">Publikationen</a></li>
                 <li><a href="institutsleben.html">Institutsleben</a></li>
