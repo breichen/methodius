@@ -1,7 +1,7 @@
 const NewsKategorie = Object.freeze({
   VEROEFFENTLICHUNGEN: "Veröffentlichungen",
   INSTITUTSLEBEN: "Institutsleben",
-  KURIOSITAETEN: "Alltagsstudien",
+  ALLTAGSSTUDIEN: "Alltagsstudien",
 });
 
 /*
@@ -29,7 +29,7 @@ const newsListe = [
 
 // Institutsleben- und Kuriositäten-Einträge liegen jeweils in einer
 // eigenen JSON-Datei (siehe data/institutsleben.json und
-// data/kuriositaeten.json) und werden in ladeAlleNews() dazugeladen.
+// data/alltagsstudien.json) und werden in ladeAlleNews() dazugeladen.
 
 
 
@@ -215,9 +215,9 @@ async function ladeAlleNews() {
   const problemNews =
     await erzeugeProblemNews(problemeListe);
 
-  const [institutslebenNews, kuriositaetenNews] = await Promise.all([
+  const [institutslebenNews, alltagsstudienNews] = await Promise.all([
     ladeJsonNews("data/institutsleben.json", NewsKategorie.INSTITUTSLEBEN, "news-institutsleben"),
-    ladeJsonNews("data/kuriositaeten.json", NewsKategorie.KURIOSITAETEN, "news-kuriositaeten"),
+    ladeJsonNews("data/alltagsstudien.json", NewsKategorie.ALLTAGSSTUDIEN, "alltagsstudien"),
   ]);
 
   return [
@@ -226,7 +226,7 @@ async function ladeAlleNews() {
     ...ratgeberNews,
     ...problemNews,
     ...institutslebenNews,
-    ...kuriositaetenNews,
+    ...alltagsstudienNews,
   ];
 
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Checks whether every entry in data/kuriositaeten.json is complete and
+Checks whether every entry in data/alltagsstudien.json is complete and
 has all the files it needs elsewhere in the project. Never aborts on
 the first problem - it collects every error and warning and reports
 them all at the end.
@@ -10,9 +10,9 @@ Per entry the following is checked:
   * The properties slug, titel and datum are set         (error if not)
   * "link" and "linkText" come as a pair: if one is set,
     the other one has to be set too, and vice versa      (error if not)
-  * md/news-kuriositaeten/<slug>.md exists               (error if not)
+  * md/alltagsstudien/<slug>.md exists               (error if not)
   * ...and contains no heading at all                    (error if it does)
-  * pics/news-kuriositaeten/<slug>.png exists            (error if not, but only if
+  * pics/alltagsstudien/<slug>.png exists            (error if not, but only if
                                                           "datum" is set and not in
                                                           the future - else warning)
 
@@ -23,10 +23,10 @@ The "slug" (= file name without extension) names both the .md and the
 (or whitespace-only) string and not an empty list.
 
 Usage:
-    python pruefe_kuriositaeten.py [project-root]
+    python pruefe_alltagsstudien.py [project-root]
 
 If no argument is given, the current directory is used as the
-project root. The script expects data/kuriositaeten.json, md/ and
+project root. The script expects data/alltagsstudien.json, md/ and
 pics/ to exist directly below that root.
 
 This script reuses helpers from pruefe_papers.py and
@@ -103,21 +103,21 @@ def pruefe_eintrag(eintrag: dict, nummer: int, root: Path, meldungen: Meldungen)
         return
 
     # News markdown: always required, and must not contain a heading.
-    md_pfad = root / "md" / "news-kuriositaeten" / f"{slug}.md"
+    md_pfad = root / "md" / "alltagsstudien" / f"{slug}.md"
     if not md_pfad.is_file():
-        meldungen.fehler_melden(slug, f"md/news-kuriositaeten/{slug}.md fehlt.")
+        meldungen.fehler_melden(slug, f"md/alltagsstudien/{slug}.md fehlt.")
     else:
         pruefe_keine_ueberschrift(md_pfad, slug, root, meldungen)
 
     # Preview image: hard error only if "datum" is valid and not in the future.
     pruefe_datei_vorhanden(
-        root / "pics" / "news-kuriositaeten" / f"{slug}.png",
-        f"pics/news-kuriositaeten/{slug}.png",
+        root / "pics" / "alltagsstudien" / f"{slug}.png",
+        f"pics/alltagsstudien/{slug}.png",
         slug, datum, meldungen,
     )
 
 
-def lade_kuriositaeten(pfad: Path) -> list:
+def lade_alltagsstudien(pfad: Path) -> list:
     with pfad.open(encoding="utf-8-sig") as datei:
         daten = json.load(datei)
 
@@ -131,7 +131,7 @@ def lade_kuriositaeten(pfad: Path) -> list:
 def main():
 
     argparser = argparse.ArgumentParser(
-        description="Checks that all entries in kuriositaeten.json are "
+        description="Checks that all entries in alltagsstudien.json are "
                     "complete and have their required files."
     )
     argparser.add_argument(
@@ -143,14 +143,14 @@ def main():
     args = argparser.parse_args()
 
     root = Path(args.projekt_root).resolve()
-    json_pfad = root / "data" / "kuriositaeten.json"
+    json_pfad = root / "data" / "alltagsstudien.json"
 
     if not json_pfad.is_file():
         print(f"Datei nicht gefunden: {json_pfad}", file=sys.stderr)
         sys.exit(1)
 
     try:
-        eintraege = lade_kuriositaeten(json_pfad)
+        eintraege = lade_alltagsstudien(json_pfad)
     except json.JSONDecodeError as fehler:
         print(
             f"Ungültiges JSON in {json_pfad} (Zeile {fehler.lineno}, "

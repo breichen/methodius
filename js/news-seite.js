@@ -43,7 +43,7 @@ const NEWS_ERSTEN_BEITRAG_AUSGEKLAPPT = true;
 const NEWS_KATEGORIE_LABEL_SINGULAR = {
   [NewsKategorie.VEROEFFENTLICHUNGEN]: "Veröffentlichung",
   [NewsKategorie.INSTITUTSLEBEN]: "Institutsleben",
-  [NewsKategorie.KURIOSITAETEN]: "Alltagsstudie",
+  [NewsKategorie.ALLTAGSSTUDIEN]: "Alltagsstudie",
 };
 
 // Delegierter Klick-Handler für alle "Mehr"/"Weniger"-Buttons - EINMAL

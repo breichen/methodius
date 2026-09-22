@@ -65,7 +65,7 @@ function baueHeader() {
                 <li><a href="news.html">Alles</a></li>
                 <li><a href="news-veroeffentlichungen.html">Veröffentlichungen</a></li>
                 <li><a href="news-institutsleben.html">Institutsleben</a></li>
-                <li><a href="news-kuriositaeten.html">Alltagsstudien</a></li>
+                <li><a href="news-alltagsstudien.html">Alltagsstudien</a></li>
               </ul>
             </li>
             <li class="hat-untermenue">
