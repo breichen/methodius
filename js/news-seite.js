@@ -41,7 +41,7 @@ const NEWS_ERSTEN_BEITRAG_AUSGEKLAPPT = true;
 // von NewsKategorie (js/news.js) selbst sind Plural, da sie auch als
 // Überschriften/Filterwerte verwendet werden.
 const NEWS_KATEGORIE_LABEL_SINGULAR = {
-  [NewsKategorie.VEROEFFENTLICHUNGEN]: "Veröffentlichung",
+  [NewsKategorie.PUBLIKATIONEN]: "Publikationen",
   [NewsKategorie.INSTITUTSLEBEN]: "Institutsleben",
   [NewsKategorie.ALLTAGSSTUDIEN]: "Alltagsstudie",
 };

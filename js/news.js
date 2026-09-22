@@ -1,7 +1,9 @@
 const NewsKategorie = Object.freeze({
-  VEROEFFENTLICHUNGEN: "Veröffentlichungen",
-  INSTITUTSLEBEN: "Institutsleben",
+  RATGEBER: "Ratgeber",
+  FALLAKTEN: "Fallakten",
   ALLTAGSSTUDIEN: "Alltagsstudien",
+  PUBLIKATIONEN: "Publikationen",
+  INSTITUTSLEBEN: "Institutsleben",
 });
 
 /*
@@ -60,7 +62,7 @@ async function erzeugePaperNews(veroeffentlichungen) {
       ...(hatBild && { bild: bildPfad }),
       link: "veroeffentlichungen.html",
       linkText: "Zur Veröffentlichung",
-      kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
+      kategorie: NewsKategorie.PUBLIKATIONEN,
     };
 
   }));
@@ -109,7 +111,7 @@ async function erzeugeRatgeberNews(ratgeberListe) {
       ...(hatBild && { bild: bildPfad }),
       link: `buch.html?titel=${ratgeber.titel}`,
       linkText: "Zum Ratgeber",
-      kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
+      kategorie: NewsKategorie.RATGEBER,
     };
 
   }));
@@ -139,7 +141,7 @@ async function erzeugeProblemNews(problemeListe) {
       datum: problem.erstellt,
       link: `problem.html?slug=${problem.slug}`,
       linkText: "Zur Fallakte",
-      kategorie: NewsKategorie.VEROEFFENTLICHUNGEN,
+      kategorie: NewsKategorie.FALLAKTEN,
     };
 
   }));
