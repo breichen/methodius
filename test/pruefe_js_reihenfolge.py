@@ -52,7 +52,6 @@ ABHAENGIGKEITEN = [
     ("buchgrid", "konstanten"),
     ("buchgrid", "ratgeber-filter"),
     ("featured", "ratgeber"),
-    ("header", "ratgeber-kategorien"),
     ("institutseite", "markdown"),
     ("institutsleben", "datumsformat"),
     ("institutsleben", "foto-lightbox"),
