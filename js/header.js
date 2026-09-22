@@ -60,9 +60,9 @@ function baueHeader() {
         <nav>
           <ul>
             <li class="hat-untermenue">
-              <a href="news-alltagsstudien.html">Forschung</a>
+              Forschung
               <ul class="untermenue">
-                <li><a href="news-alltagsstudien.html">Alltagsstudien</a></li>
+                <li>Alltagsstudien</li>
               </ul>
             </li>
             <li class="hat-untermenue">
