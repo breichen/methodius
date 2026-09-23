@@ -51,6 +51,7 @@ function baueHeader() {
               <a href="studium.html">Studium</a>
               <ul class="untermenue">
                 <li><a href="studium.html">Methodius-Studium</a></li>
+                <li><a href="studienfortschritt.html">Studienfortschritt</a></li>
               </ul>
             </li>
             <li class="hat-untermenue">

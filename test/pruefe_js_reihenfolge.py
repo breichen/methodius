@@ -88,6 +88,8 @@ ABHAENGIGKEITEN = [
     ("ratgeber-filter", "ratgeber-kategorien"),
     ("showcase", "datumsformat"),
     ("showcase", "ratgeber"),
+    ("studienfortschritt", "ratgeber"),
+    ("studienfortschritt", "studium"),
     ("veroeffentlichungen-seite", "datumsformat"),
     ("zeitschrift", "datumsformat"),
     ("zeitschrift", "markdown"),

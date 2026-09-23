@@ -3432,6 +3432,10 @@ hr {
 }
 
 
+/* ==========================================
+   FOOTER
+   ========================================== */
+
 .footer-nav {
   display: flex;
   align-items: center;
@@ -3445,4 +3449,71 @@ hr {
 
 .footer-nav a:hover {
   text-decoration: underline;
+}
+
+
+/* ==========================================
+   STUDIENFORTSCHRITT
+   ========================================== */
+
+.studienfortschritt-zusammenfassung {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.studienfortschritt-zaehler {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.studienfortschritt-balken {
+  width: 100%;
+  height: 8px;
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(27, 35, 64, 0.12);
+}
+
+.studienfortschritt-balken-fuellung {
+  height: 100%;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.studienfortschritt-prozent {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.studienfortschritt-liste {
+  margin-top: 3rem;
+}
+
+.studienfortschritt-liste h2 {
+  margin-bottom: 1.5rem;
+}
+
+.studienfortschritt-eintrag {
+  padding: 18px 20px;
+  border-top: 1px solid rgba(27, 35, 64, 0.12);
+}
+
+.studienfortschritt-eintrag:last-child {
+  border-bottom: 1px solid rgba(27, 35, 64, 0.12);
+}
+
+.studienfortschritt-eintrag h3 {
+  margin: 0;
+}
+
+.studienfortschritt-status {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+}
+
+.studienfortschritt-eintrag:not(.abgeschlossen) {
+  opacity: 0.55;
+}
+
+.studienfortschritt-eintrag.abgeschlossen .studienfortschritt-status {
+  color: var(--color-accent);
 }
