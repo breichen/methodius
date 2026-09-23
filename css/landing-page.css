@@ -2,58 +2,34 @@
    LANDING PAGES
    ========================================================= */
 
-.landing-page {
-  width: min(1100px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 70px 0 100px;
-}
-
 
 /* ---------------------------------------------------------
-   HEADER
+   KICKER
    --------------------------------------------------------- */
-
-.landing-header {
-  max-width: 800px;
-  margin: 0 auto 55px;
-  text-align: center;
-}
 
 .landing-kicker {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 
   opacity: 0.65;
 }
 
-.landing-header h1 {
-  margin: 0 0 20px;
-
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.05;
-}
-
-.landing-header p {
-  max-width: 700px;
-  margin: 0 auto;
-
-  font-size: 1.15rem;
-  line-height: 1.7;
-}
-
 
 /* ---------------------------------------------------------
-   GRID
+   CARD-GRID
    --------------------------------------------------------- */
 
 .landing-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
   gap: 24px;
 }
 
@@ -67,139 +43,119 @@
   flex-direction: column;
 
   min-height: 280px;
-  padding: 32px;
 
-  color: inherit;
+  padding: 30px;
+
   text-decoration: none;
 
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 18px;
+  border-radius: 4px;
 
-  background: var(--card-background, #fff);
+  background: #fff;
 
   transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
+
 .landing-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 
   border-color: rgba(0, 0, 0, 0.25);
 
   box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.08);
+    0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.landing-card:focus-visible {
-  outline: 3px solid currentColor;
-  outline-offset: 4px;
-}
 
+/* ---------------------------------------------------------
+   CARD-KICKER
+   --------------------------------------------------------- */
 
 .landing-card-kicker {
+  display: block;
+
   margin-bottom: 12px;
 
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
-  opacity: 0.6;
+  opacity: 0.55;
 }
+
+
+/* ---------------------------------------------------------
+   CARD-TITEL
+   --------------------------------------------------------- */
 
 .landing-card h2 {
-  margin: 0 0 15px;
+  margin: 0 0 14px;
 
+  font-family: "Fraunces", serif;
   font-size: 1.65rem;
+  font-weight: 600;
   line-height: 1.15;
 }
+
+
+/* ---------------------------------------------------------
+   CARD-TEXT
+   --------------------------------------------------------- */
 
 .landing-card p {
   margin: 0;
 
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
   line-height: 1.65;
+
+  opacity: 0.78;
 }
+
+
+/* ---------------------------------------------------------
+   CARD-LINK
+   --------------------------------------------------------- */
 
 .landing-card-link {
   margin-top: auto;
   padding-top: 25px;
 
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  opacity: 0.8;
 }
 
 
 /* ---------------------------------------------------------
-   SINGLE CARD
+   MOBILE
    --------------------------------------------------------- */
 
-.landing-grid--single {
-  grid-template-columns: minmax(0, 700px);
-  justify-content: center;
-}
+@media (max-width: 900px) {
 
-.landing-grid--single .landing-card {
-  min-height: 250px;
-}
-
-
-/* ---------------------------------------------------------
-   THREE COLUMN GRID
-   --------------------------------------------------------- */
-
-.landing-grid--three {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-
-/* ---------------------------------------------------------
-   FEATURE CARD
-   --------------------------------------------------------- */
-
-.landing-card--featured {
-  grid-column: 1 / -1;
-  min-height: 240px;
-}
-
-
-/* ---------------------------------------------------------
-   RESPONSIVE
-   --------------------------------------------------------- */
-
-@media (max-width: 800px) {
-
-  .landing-page {
-    width: min(100% - 30px, 700px);
-    padding: 50px 0 70px;
+  .landing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .landing-grid,
-  .landing-grid--three {
+}
+
+
+@media (max-width: 600px) {
+
+  .landing-grid {
     grid-template-columns: 1fr;
   }
 
-  .landing-card--featured {
-    grid-column: auto;
-  }
-
-}
-
-
-@media (max-width: 500px) {
-
-  .landing-page {
-    width: calc(100% - 24px);
-  }
-
-  .landing-header {
-    margin-bottom: 40px;
-  }
-
   .landing-card {
-    min-height: 240px;
-    padding: 25px;
-    border-radius: 15px;
+    min-height: 0;
   }
 
 }
