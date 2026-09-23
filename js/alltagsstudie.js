@@ -131,6 +131,10 @@ else {
 
   }
 
+  if (studie.einsender) {
+    zeilen.push(`<p class="buch-datum">Vorgeschlagen von: ${studie.einsender}</p>`);
+  }
+
 
   meta.innerHTML =
     metaZeilen.join("\n");
