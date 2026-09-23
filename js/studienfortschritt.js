@@ -330,30 +330,20 @@ async function zeigeStudienfortschritt() {
     container.innerHTML = `
 
       <div class="studienfortschritt-uebersicht">
-
+        <h2>Dein Fortschritt</h2>
 
         <!-- GESAMT -->
 
         <div class="studienfortschritt-box">
 
-          <h2>Alle Lehrgänge</h2>
+            <h3>
+                Alle Lehrgänge · ${anzahlAbgeschlossen} / ${anzahlGesamt}
+            </h3>
 
-          <div class="studienfortschritt-kopf">
-
-            <strong>
-              ${anzahlAbgeschlossen} / ${anzahlGesamt}
-            </strong>
-
-            <span>
-              ${gesamtProzent} %
-            </span>
-
-          </div>
-
-          ${progressBar(
-            gesamtProzent,
-            "Gesamtfortschritt über alle Lehrgänge"
-          )}
+            ${progressBar(
+                gesamtProzent,
+                "Gesamtfortschritt über alle Lehrgänge"
+            )}
 
         </div>
 
@@ -362,29 +352,19 @@ async function zeigeStudienfortschritt() {
 
         <div class="studienfortschritt-box">
 
-          <h2>Methodius-Studium</h2>
+            <h3>
+                Methodius-Studium · ${studiumAbgeschlossen} / ${studiumGesamt}
+            </h3>
 
-          <div class="studienfortschritt-kopf">
+            ${progressBar(
+                studiumProzent,
+                "Fortschritt für das Methodius-Studium"
+            )}
 
-            <strong>
-              ${studiumAbgeschlossen} / ${studiumGesamt}
-            </strong>
-
-            <span>
-              ${studiumProzent} %
-            </span>
-
-          </div>
-
-          ${progressBar(
-            studiumProzent,
-            "Fortschritt für das Methodius-Studium"
-          )}
-
-          <p>
-            Maximal fünf Lehrgänge pro Kategorie
-            werden angerechnet.
-          </p>
+            <p>
+                Maximal fünf Lehrgänge pro Kategorie
+                werden angerechnet.
+            </p>
 
         </div>
 
@@ -393,7 +373,7 @@ async function zeigeStudienfortschritt() {
 
         <div class="studienfortschritt-box">
 
-          <h2>Nach Kategorien</h2>
+          <h3>Nach Kategorien</h3>
 
           <div class="studienfortschritt-kategorien">
 
