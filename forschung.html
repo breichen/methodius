@@ -3,78 +3,92 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
 
   <title>Forschung – Dr. Methodius</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Homemade+Apple&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="landing-page.css">
 </head>
 
-
 <body>
 
-  <!-- Deine bestehende Navigation hier einfügen -->
+  <div id="header-platzhalter"></div>
+  <script src="js/header.js"></script>
 
   <main>
 
-    <section class="landing-page">
+    <section class="section">
+      <div class="wrap">
 
-      <header class="landing-header">
+        <header class="landing-header">
 
-        <span class="landing-kicker">
-          Methodius-Institut
-        </span>
-
-        <h1>Forschung</h1>
-
-        <p>
-          Wir untersuchen, was andere einfach hinnehmen.
-          Denn nur weil etwas jeden Tag passiert, heißt das
-          noch lange nicht, dass wir wissen, warum.
-        </p>
-
-      </header>
-
-
-      <div class="landing-grid landing-grid--single">
-
-        <a
-          class="landing-card"
-          href="alltagsstudien.html">
-
-          <span class="landing-card-kicker">
-            Empirische Forschung
+          <span class="landing-kicker">
+            Forschung
           </span>
 
-          <h2>
-            Alltagsstudien
-          </h2>
+          <h1>Forschung</h1>
 
           <p>
-            Wissenschaftliche Untersuchungen zu den großen
-            und kleinen Phänomenen des alltäglichen Lebens –
-            und zu Fragen, die bislang erstaunlich selten
-            gestellt wurden.
+            Wir untersuchen, was andere einfach hinnehmen.
+            Denn nur weil etwas jeden Tag passiert, heißt das
+            noch lange nicht, dass wir wissen, warum.
           </p>
 
-          <span class="landing-card-link">
-            Zu den Alltagsstudien →
-          </span>
-
-        </a>
+        </header>
 
       </div>
+    </section>
 
+
+    <section class="section section-alt">
+      <div class="wrap">
+
+        <div class="landing-grid landing-grid--single">
+
+          <a
+            class="landing-card landing-card--featured"
+            href="alltagsstudien.html">
+
+            <span class="landing-card-kicker">
+              Alltagsforschung
+            </span>
+
+            <h2>
+              Alltagsstudien
+            </h2>
+
+            <p>
+              Wissenschaftliche Untersuchungen zu den kleinen
+              und großen Merkwürdigkeiten des täglichen Lebens.
+            </p>
+
+            <span class="landing-card-link">
+              Zu den Alltagsstudien →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
     </section>
 
   </main>
 
 
-  <!-- Dein bestehender Footer hier -->
+  <div id="footer-platzhalter"></div>
+  <script src="js/footer.js"></script>
 
 </body>
 
