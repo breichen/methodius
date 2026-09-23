@@ -35,13 +35,13 @@ function baueHeader() {
         <nav>
           <ul>
             <li class="hat-untermenue">
-              <a href="alle-ratgeber.html">Forschung</a>
+              <a href="forschung.html">Forschung</a>
               <ul class="untermenue">
                 <li><a href="alltagsstudien.html">Alltagsstudien</a></li>
               </ul>
             </li>
             <li class="hat-untermenue">
-              <a href="alle-ratgeber.html">Beratung</a>
+              <a href="beratung.html">Beratung</a>
               <ul class="untermenue">
                 <li><a href="alle-ratgeber.html">Ratgeber</a></li>
                 <li><a href="probleme.html">Fallakten</a></li>
@@ -54,7 +54,7 @@ function baueHeader() {
               </ul>
             </li>
             <li class="hat-untermenue">
-              <a href="zeitschrift.html">Publikationen</a>
+              <a href="publikationen.html">Publikationen</a>
               <ul class="untermenue">
                 <li><a href="zeitschrift.html">Zeitschrift</a></li>
                 <li><a href="veroeffentlichungen.html">Publikationsliste</a></li>
