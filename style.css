@@ -1107,6 +1107,13 @@ hr {
   color: white;
 }
 
+.quiz-ergebnis-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.0rem;
+  margin-top: 20px;
+}
+
 .quiz-score {
   display: table;
   margin: 0 auto 40px;
@@ -1137,7 +1144,7 @@ hr {
 
 .quiz-zurueck-button {
   display: block;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
   padding: 10px 28px;
   background: transparent;
   color: var(--color-accent);
