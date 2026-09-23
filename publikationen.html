@@ -3,107 +3,118 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
 
   <title>Publikationen – Dr. Methodius</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Homemade+Apple&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="landing-page.css">
 </head>
 
-
 <body>
 
-  <!-- Deine bestehende Navigation hier einfügen -->
+  <div id="header-platzhalter"></div>
+  <script src="js/header.js"></script>
 
   <main>
 
-    <section class="landing-page">
+    <section class="section">
+      <div class="wrap">
 
-      <header class="landing-header">
+        <header class="landing-header">
 
-        <span class="landing-kicker">
-          Methodius-Institut
-        </span>
-
-        <h1>Publikationen</h1>
-
-        <p>
-          Was wir erforschen, schreiben wir auf.
-          Forschungsergebnisse, Erkenntnisse und andere
-          schriftliche Erzeugnisse des Methodius-Instituts.
-        </p>
-
-      </header>
-
-
-      <div class="landing-grid">
-
-
-        <!-- ZEITSCHRIFT -->
-
-        <a
-          class="landing-card"
-          href="zeitschrift.html">
-
-          <span class="landing-card-kicker">
-            Periodikum
+          <span class="landing-kicker">
+            Publikationen
           </span>
 
-          <h2>
-            Zeitschrift
-          </h2>
+          <h1>Publikationen</h1>
 
           <p>
-            Aktuelle Beiträge, wissenschaftliche Erkenntnisse,
-            Beobachtungen und andere Veröffentlichungen aus
-            dem Umfeld des Methodius-Instituts.
+            Was wir erforschen, schreiben wir auf.
+            Was wir nicht erforschen, schreiben wir unter
+            Umständen trotzdem auf.
           </p>
 
-          <span class="landing-card-link">
-            Zur Zeitschrift →
-          </span>
-
-        </a>
-
-
-        <!-- PUBLIKATIONSLISTE -->
-
-        <a
-          class="landing-card"
-          href="veroeffentlichungen.html">
-
-          <span class="landing-card-kicker">
-            Bibliografie
-          </span>
-
-          <h2>
-            Publikationsliste
-          </h2>
-
-          <p>
-            Eine Übersicht über die Veröffentlichungen des
-            Methodius-Instituts und seiner Mitglieder.
-          </p>
-
-          <span class="landing-card-link">
-            Zur Publikationsliste →
-          </span>
-
-        </a>
-
+        </header>
 
       </div>
+    </section>
 
+
+    <section class="section section-alt">
+      <div class="wrap">
+
+        <div class="landing-grid">
+
+          <a
+            class="landing-card"
+            href="zeitschrift.html">
+
+            <span class="landing-card-kicker">
+              Zeitschrift
+            </span>
+
+            <h2>
+              Zeitschrift
+            </h2>
+
+            <p>
+              Aktuelle Beiträge, Untersuchungen und
+              wissenschaftlich relevante Beobachtungen
+              aus dem Methodius-Institut.
+            </p>
+
+            <span class="landing-card-link">
+              Zur Zeitschrift →
+            </span>
+
+          </a>
+
+
+          <a
+            class="landing-card"
+            href="veroeffentlichungen.html">
+
+            <span class="landing-card-kicker">
+              Archiv
+            </span>
+
+            <h2>
+              Publikationsliste
+            </h2>
+
+            <p>
+              Eine Übersicht über die Veröffentlichungen
+              und wissenschaftlichen Arbeiten des
+              Methodius-Instituts.
+            </p>
+
+            <span class="landing-card-link">
+              Zur Publikationsliste →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
     </section>
 
   </main>
 
 
-  <!-- Dein bestehender Footer hier -->
+  <div id="footer-platzhalter"></div>
+  <script src="js/footer.js"></script>
 
 </body>
 
