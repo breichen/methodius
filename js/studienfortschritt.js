@@ -65,7 +65,7 @@ async function zeigeStudienfortschritt() {
           <strong>
             ${anzahlGesamt}
           </strong>
-          Ratgebern abgeschlossen
+          Lehrgängen abgeschlossen
         </p>
 
 
@@ -95,7 +95,7 @@ async function zeigeStudienfortschritt() {
 
       <div class="studienfortschritt-liste">
 
-        <h2>Deine Ratgeber</h2>
+        <h2>Deine Lehrgänge</h2>
 
         ${ratgeber.map(
           buch => {
