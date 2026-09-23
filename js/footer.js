@@ -15,8 +15,17 @@ function baueFooter() {
 
         <p>&copy; 2026 Dr. Maximilian Methodius</p>
 
-        <a href="kontakt.html">Kontakt</a>
-        <a href="impressum.html">Impressum</a>
+        <nav class="footer-nav" aria-label="Footer-Navigation">
+
+          <a href="kontakt.html">
+            Kontakt
+          </a>
+
+          <a href="impressum.html">
+            Impressum
+          </a>
+
+        </nav>
 
       </div>
     </footer>
