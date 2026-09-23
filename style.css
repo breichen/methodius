@@ -3423,3 +3423,19 @@ hr {
   border: 1.5px solid var(--cover-border);
   box-shadow: var(--cover-shadow-lg);
 }
+
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
