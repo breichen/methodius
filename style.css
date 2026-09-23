@@ -3469,9 +3469,10 @@ hr {
 
 .studienfortschritt-balken {
   width: 100%;
-  height: 6px;
-  background: var(--color-bg-alt);
-  border: 1px solid rgba(27, 35, 64, 0.12);
+  height: 10px;
+  background: rgba(27, 35, 64, 0.1);
+  border: 1px solid rgba(27, 35, 64, 0.18);
+  overflow: hidden;
 }
 
 .studienfortschritt-balken-fuellung {
@@ -3482,40 +3483,6 @@ hr {
 
 .studienfortschritt-box p {
   margin-top: 0.75rem;
-}
-
-.studienfortschritt-liste {
-  margin-top: 3rem;
-}
-
-.studienfortschritt-liste h2 {
-  margin-bottom: 1.25rem;
-}
-
-.studienfortschritt-eintrag {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 0;
-  border-top: 1px solid rgba(27, 35, 64, 0.12);
-}
-
-.studienfortschritt-eintrag:last-child {
-  border-bottom: 1px solid rgba(27, 35, 64, 0.12);
-}
-
-.studienfortschritt-status {
-  flex: 0 0 18px;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-.studienfortschritt-eintrag:not(.abgeschlossen) {
-  opacity: 0.55;
-}
-
-.studienfortschritt-eintrag.abgeschlossen .studienfortschritt-status {
-  color: var(--color-accent);
 }
 
 .studienfortschritt-liste {
