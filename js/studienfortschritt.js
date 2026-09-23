@@ -1,9 +1,12 @@
 async function zeigeStudienfortschritt() {
 
-  const container =
-    document.getElementById("studienfortschritt");
+  const uebersichtContainer =
+    document.getElementById("studienfortschritt-uebersicht");
 
-  if (!container) return;
+  const listeContainer =
+    document.getElementById("studienfortschritt-liste");
+
+  if (!uebersichtContainer || !listeContainer) return;
 
 
   try {
@@ -327,76 +330,75 @@ async function zeigeStudienfortschritt() {
      * ---------------------------------------------------------
      */
 
-    container.innerHTML = `
+    uebersichtContainer.innerHTML = `
 
-      <div class="studienfortschritt-uebersicht">
-        <h2>Dein Fortschritt</h2>
+      <h2>Dein Fortschritt</h2>
 
-        <!-- GESAMT -->
+      <!-- GESAMT -->
 
-        <div class="studienfortschritt-box">
+      <div class="studienfortschritt-box">
 
-            <h3>
-                Alle Lehrgänge · ${anzahlAbgeschlossen} / ${anzahlGesamt}
-            </h3>
+          <h3>
+              Alle Lehrgänge · ${anzahlAbgeschlossen} / ${anzahlGesamt}
+          </h3>
 
-            ${progressBar(
-                gesamtProzent,
-                "Gesamtfortschritt über alle Lehrgänge"
-            )}
+          ${progressBar(
+              gesamtProzent,
+              "Gesamtfortschritt über alle Lehrgänge"
+          )}
 
-        </div>
-
-
-        <!-- STUDIUM -->
-
-        <div class="studienfortschritt-box">
-
-            <h3>
-                Methodius-Studium · ${studiumAbgeschlossen} / ${studiumGesamt}
-            </h3>
-
-            ${progressBar(
-                studiumProzent,
-                "Fortschritt für das Methodius-Studium"
-            )}
-
-            <p>
-                Maximal fünf Lehrgänge pro Kategorie
-                werden angerechnet.
-            </p>
-
-        </div>
+      </div>
 
 
-        <!-- KATEGORIEN -->
+      <!-- STUDIUM -->
 
-        <div class="studienfortschritt-box">
+      <div class="studienfortschritt-box">
 
-          <h3>Nach Kategorien</h3>
+          <h3>
+              Methodius-Studium · ${studiumAbgeschlossen} / ${studiumGesamt}
+          </h3>
 
-          <div class="studienfortschritt-kategorien">
+          ${progressBar(
+              studiumProzent,
+              "Fortschritt für das Methodius-Studium"
+          )}
 
-            ${kategorienHtml}
+          <p>
+              Maximal fünf Lehrgänge pro Kategorie
+              werden angerechnet.
+          </p>
 
-          </div>
+      </div>
+
+
+      <!-- KATEGORIEN -->
+
+      <div class="studienfortschritt-box">
+
+        <h3>Nach Kategorien</h3>
+
+        <div class="studienfortschritt-kategorien">
+
+          ${kategorienHtml}
 
         </div>
 
       </div>
 
+    `;
 
-      <!-- =====================================================
-           LEHRGÄNGE NACH KATEGORIE
-           ===================================================== -->
 
-      <div class="studienfortschritt-liste">
+    /*
+     * =====================================================
+     * LEHRGÄNGE NACH KATEGORIE
+     * =====================================================
+     */
 
-        <h2>Deine Lehrgänge</h2>
+    listeContainer.innerHTML = `
 
-        ${lehrgaengeHtml}
+      <h2>Deine Lehrgänge</h2>
 
-      </div>
+      ${lehrgaengeHtml}
 
     `;
 
@@ -409,7 +411,7 @@ async function zeigeStudienfortschritt() {
     );
 
 
-    container.innerHTML = `
+    const fehlermeldung = `
 
       <p>
         <em>
@@ -419,6 +421,9 @@ async function zeigeStudienfortschritt() {
       </p>
 
     `;
+
+    uebersichtContainer.innerHTML = fehlermeldung;
+    listeContainer.innerHTML = "";
 
   }
 
