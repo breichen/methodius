@@ -3469,10 +3469,9 @@ hr {
 
 .studienfortschritt-balken {
   width: 100%;
-  height: 10px;
-  background: rgba(27, 35, 64, 0.1);
-  border: 1px solid rgba(27, 35, 64, 0.18);
-  overflow: hidden;
+  height: 6px;
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(27, 35, 64, 0.12);
 }
 
 .studienfortschritt-balken-fuellung {
@@ -3551,4 +3550,17 @@ hr {
 
 .studienfortschritt-eintrag.abgeschlossen .studienfortschritt-status {
   color: var(--color-accent);
+}
+
+.studienfortschritt-link {
+  margin-left: auto;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.studienfortschritt-link:hover {
+  text-decoration: underline;
 }

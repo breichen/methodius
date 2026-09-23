@@ -294,6 +294,13 @@ async function zeigeStudienfortschritt() {
                           ${buch.lehrgang}
                         </span>
 
+                        <a
+                          class="studienfortschritt-link"
+                          href="buch.html?titel=${encodeURIComponent(buch.lehrgang)}"
+                        >
+                          Zum Ratgeber
+                        </a>
+
                       </div>
 
                     `;
