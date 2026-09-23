@@ -1,23 +1,38 @@
 /* =========================================================
    LANDING PAGES
+   Gemeinsames Layout für die Hauptbereiche
    ========================================================= */
 
 
 /* ---------------------------------------------------------
-   KICKER
+   EINLEITUNG
    --------------------------------------------------------- */
+
+.landing-header {
+  max-width: 760px;
+}
 
 .landing-kicker {
   display: block;
+
   margin-bottom: 10px;
 
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
+
   letter-spacing: 0.12em;
   text-transform: uppercase;
 
   opacity: 0.65;
+}
+
+.landing-header h1 {
+  margin-bottom: 20px;
+}
+
+.landing-header p {
+  max-width: 700px;
 }
 
 
@@ -28,9 +43,26 @@
 .landing-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 24px;
+
+  margin-top: 10px;
+}
+
+
+/* Drei Spalten */
+
+.landing-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+/* Eine Karte */
+
+.landing-grid--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 520px;
 }
 
 
@@ -46,12 +78,13 @@
 
   padding: 30px;
 
+  color: inherit;
   text-decoration: none;
+
+  background: #fff;
 
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-
-  background: #fff;
 
   transition:
     transform 0.2s ease,
@@ -124,6 +157,8 @@
    --------------------------------------------------------- */
 
 .landing-card-link {
+  display: block;
+
   margin-top: auto;
   padding-top: 25px;
 
@@ -136,12 +171,21 @@
 
 
 /* ---------------------------------------------------------
-   MOBILE
+   HERVORGEHOBENE KARTE
+   --------------------------------------------------------- */
+
+.landing-card--featured {
+  min-height: 320px;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE / TABLET
    --------------------------------------------------------- */
 
 @media (max-width: 900px) {
 
-  .landing-grid {
+  .landing-grid--three {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -150,11 +194,17 @@
 
 @media (max-width: 600px) {
 
-  .landing-grid {
+  .landing-grid,
+  .landing-grid--three {
     grid-template-columns: 1fr;
   }
 
-  .landing-card {
+  .landing-grid--single {
+    max-width: none;
+  }
+
+  .landing-card,
+  .landing-card--featured {
     min-height: 0;
   }
 
