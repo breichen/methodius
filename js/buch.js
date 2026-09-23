@@ -871,25 +871,48 @@ function zeigeQuizErgebnis(quiz) {
   const panel = document.getElementById("quiz-panel");
   const anzahl = quiz.fragen.length;
 
+  // Ratgeber als abgeschlossen speichern
+  if (buch?.id != null) {
+    markiereAlsAbgeschlossen(buch.id);
+  }
+
   panel.innerHTML = `
     <div class="quiz-ergebnis-abzeichen" aria-hidden="true">
       <svg viewBox="0 0 100 120" width="84" height="101">
-        <path d="M35 68 L18 116 L50 99 L82 116 L65 68 Z" fill="var(--color-accent-warm)"></path>
-        <circle cx="50" cy="45" r="40" fill="var(--color-accent)" stroke="#fff" stroke-width="4"></circle>
-        <path d="M50 24 L56.5 38.5 L72 40.5 L60.5 51 L63.5 66.5 L50 58.5 L36.5 66.5 L39.5 51 L28 40.5 L43.5 38.5 Z" fill="#fff"></path>
+        <path d="M35 68 L18 116 L50 99 L82 116 L65 68 Z"
+          fill="var(--color-accent-warm)">
+        </path>
+
+        <circle
+          cx="50"
+          cy="45"
+          r="40"
+          fill="var(--color-accent)"
+          stroke="#fff"
+          stroke-width="4">
+        </circle>
+
+        <path
+          d="M50 24 L56.5 38.5 L72 40.5 L60.5 51 L63.5 66.5 L50 58.5 L36.5 66.5 L39.5 51 L28 40.5 L43.5 38.5 Z"
+          fill="#fff">
+        </path>
       </svg>
     </div>
 
-    <p class="quiz-score">${anzahl}/${anzahl} Antworten richtig</p>
+    <p class="quiz-score">
+      ${anzahl}/${anzahl} Antworten richtig
+    </p>
 
     <div class="quiz-ergebnis-text">
       <p>
         Herzlichen Glückwunsch!
-        Du bist Experte zum Thema <strong>${buch.titel}</strong>!
+        Du bist Experte zum Thema
+        <strong>${buch.titel}</strong>!
       </p>
     </div>
 
     <div class="quiz-ergebnis-buttons">
+
       <button
         class="quiz-zurueck-button"
         id="quiz-zertifikat-button"
@@ -903,18 +926,28 @@ function zeigeQuizErgebnis(quiz) {
         type="button">
         Zurück
       </button>
+
     </div>
   `;
 
   document
     .getElementById("quiz-zurueck-button")
-    .addEventListener("click", schliesseQuiz);
+    .addEventListener(
+      "click",
+      schliesseQuiz
+    );
 
   document
     .getElementById("quiz-zertifikat-button")
-    .addEventListener("click", () => {
-      zeigeZertifikatDialog(anzahl, quiz);
-    });
+    .addEventListener(
+      "click",
+      () => {
+        zeigeZertifikatDialog(
+          anzahl,
+          quiz
+        );
+      }
+    );
 }
 
 function zeigeZertifikatDialog(anzahl, quiz) {
