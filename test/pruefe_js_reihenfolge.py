@@ -91,6 +91,8 @@ ABHAENGIGKEITEN = [
     ("studienfortschritt", "datumsformat"),
     ("studienfortschritt", "ratgeber"),
     ("studienfortschritt", "studium"),
+    ("studienfortschritt", "zertifikat"),
+    ("studium", "supabase"),
     ("veroeffentlichungen-seite", "datumsformat"),
     ("zeitschrift", "datumsformat"),
     ("zeitschrift", "markdown"),

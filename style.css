@@ -3531,3 +3531,21 @@ hr {
 .studienfortschritt-link:hover {
   text-decoration: underline;
 }
+
+/* .studienfortschritt-link wird für den Zertifikat-Button aus
+   studienfortschritt.js auch auf ein <button>-Element angewendet -
+   hier werden nur die nativen Button-Standards zurückgesetzt, Farbe/
+   Schriftgröße/Positionierung kommen weiterhin von der Regel oben. */
+button.studienfortschritt-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button.studienfortschritt-link:disabled {
+  opacity: 0.6;
+  cursor: default;
+  text-decoration: none;
+}

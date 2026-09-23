@@ -9,6 +9,67 @@ async function zeigeStudienfortschritt() {
   if (!uebersichtContainer || !listeContainer) return;
 
 
+  /*
+   * ---------------------------------------------------------
+   * FRAGENANZAHL ERMITTELN (für die Punktzahl-Zeile im Zertifikat)
+   * ---------------------------------------------------------
+   *
+   * Lädt das Markdown des Ratgebers nach und zählt die Fragen im
+   * BONUS-Abschnitt per Regex - dieselbe Zeilen-Konvention wie in
+   * js/buch.js (parseQuizAusBloecken): "**1. Frage-Text?**".
+   *
+   * Bewusst eine einfache, eigenständige Zählung statt der vollen
+   * Markdown-zu-HTML-Pipeline aus buch.js: Die wäre hier nur mit
+   * erheblichem Zusatzaufwand nutzbar (u.a. weil buch.js beim Laden
+   * sofort Code ausführt, der von Elementen der Buch-Seite ausgeht
+   * und auf dieser Seite crashen würde). Schlägt irgendetwas fehl
+   * (kein Fetch, kein BONUS-Abschnitt, kein Treffer), liefert die
+   * Funktion "null" - das Zertifikat lässt die Punktzahl-Zeile dann
+   * einfach weg, statt eine falsche Zahl zu zeigen.
+   */
+  async function holeFragenanzahl(lehrgang) {
+    try {
+
+      const pfad = encodeURIComponent(lehrgang);
+      const antwort = await fetch(`md/ratgeber/${pfad}.md`);
+
+      if (!antwort.ok) return null;
+
+      const markdown = await antwort.text();
+
+      const bonusMatch =
+        markdown.match(/^#\s*BONUS:.*$/m);
+
+      if (!bonusMatch) return null;
+
+      const abBonus =
+        markdown.slice(
+          bonusMatch.index + bonusMatch[0].length
+        );
+
+      const naechsteUeberschrift =
+        abBonus.match(/^#\s+.*$/m);
+
+      const bonusAbschnitt =
+        naechsteUeberschrift
+          ? abBonus.slice(0, naechsteUeberschrift.index)
+          : abBonus;
+
+      const fragen =
+        bonusAbschnitt.match(
+          /^\*\*\d+\.\s+.+\*\*\s*$/gm
+        );
+
+      return fragen && fragen.length > 0
+        ? fragen.length
+        : null;
+
+    } catch {
+      return null;
+    }
+  }
+
+
   try {
 
     /*
@@ -294,12 +355,26 @@ async function zeigeStudienfortschritt() {
                           ${buch.lehrgang}
                         </span>
 
-                        <a
-                          class="studienfortschritt-link"
-                          href="buch.html?titel=${encodeURIComponent(buch.lehrgang)}"
-                        >
-                          Zum Ratgeber
-                        </a>
+                        ${
+                          abgeschlossen
+                            ? `
+                              <button
+                                type="button"
+                                class="studienfortschritt-link studienfortschritt-zertifikat-button"
+                                data-buch-id="${buch.id}"
+                              >
+                                🎓 Zertifikat
+                              </button>
+                            `
+                            : `
+                              <a
+                                class="studienfortschritt-link"
+                                href="buch.html?titel=${encodeURIComponent(buch.lehrgang)}"
+                              >
+                                Zum Ratgeber
+                              </a>
+                            `
+                        }
 
                       </div>
 
@@ -408,6 +483,47 @@ async function zeigeStudienfortschritt() {
       ${lehrgaengeHtml}
 
     `;
+
+
+    /*
+     * =====================================================
+     * ZERTIFIKAT-BUTTONS
+     * =====================================================
+     *
+     * "ratgeber" enthält bereits nur die aktuell relevanten Bücher
+     * (siehe DATEN LADEN oben) - die Suche per buch.id darin reicht
+     * also aus, ohne erneut auf ratgeberListe zuzugreifen.
+     */
+
+    listeContainer
+      .querySelectorAll(".studienfortschritt-zertifikat-button")
+      .forEach(button => {
+
+        button.addEventListener("click", async () => {
+
+          const buch =
+            ratgeber.find(
+              b => Number(b.id) === Number(button.dataset.buchId)
+            );
+
+          if (!buch) return;
+
+          const textVorher = button.textContent;
+
+          button.disabled = true;
+          button.textContent = "Wird vorbereitet …";
+
+          const anzahl =
+            await holeFragenanzahl(buch.lehrgang);
+
+          button.disabled = false;
+          button.textContent = textVorher;
+
+          zeigeZertifikatDialog(buch.lehrgang, anzahl);
+
+        });
+
+      });
 
 
   } catch (fehler) {
