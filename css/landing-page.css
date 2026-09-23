@@ -2,64 +2,32 @@
    LANDING PAGES
    ========================================================= */
 
-
-/* ---------------------------------------------------------
-   EINLEITUNG
-   --------------------------------------------------------- */
-
 .landing-header {
   max-width: 760px;
 }
 
 
 /* ---------------------------------------------------------
-   CARD-GRID
+   KARTEN-GRID
    --------------------------------------------------------- */
 
 .landing-grid {
   display: grid;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 20px;
 }
 
 
-/* Drei Spalten */
-
-.landing-grid--three {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-
-/* Eine Karte */
-
-.landing-grid--single {
-  grid-template-columns: minmax(0, 1fr);
-  max-width: 520px;
-}
-
-
 /* ---------------------------------------------------------
-   RESPONSIVE
+   MOBILE
    --------------------------------------------------------- */
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
 
-  .landing-grid--three {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .landing-grid,
-  .landing-grid--three {
+  .landing-grid {
     grid-template-columns: 1fr;
-  }
-
-  .landing-grid--single {
-    max-width: none;
   }
 
 }
