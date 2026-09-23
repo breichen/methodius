@@ -21,7 +21,7 @@ function baueKontaktOptionen() {
       beschreibung:
         "Du hast ein alltägliches Problem, zu dem das Methodius-Institut einmal wissenschaftlich fundiert Stellung nehmen sollte?",
 
-      href: "ratgeber-vorschlagen.html"
+      tallyId: "WOVKGa"
     },
 
     {
@@ -30,7 +30,7 @@ function baueKontaktOptionen() {
       beschreibung:
         "Du stehst vor einer Frage, auf die du selbst keine zufriedenstellende Antwort findest? Schilder uns deinen Fall.",
 
-      href: "problem-einsenden.html"
+      tallyId: "VLObgg"
     },
 
     {
@@ -39,7 +39,7 @@ function baueKontaktOptionen() {
       beschreibung:
         "Du hast eine Beobachtung gemacht, die dringend empirisch untersucht werden sollte? Schlage uns eine Studie vor.",
 
-      href: "studie-vorschlagen.html"
+      tallyId: "PdKjxb"
     },
 
     {
@@ -48,7 +48,7 @@ function baueKontaktOptionen() {
       beschreibung:
         "Für sonstige Fragen, Anregungen und Anliegen kannst du unser allgemeines Kontaktformular nutzen.",
 
-      href: "https://tally.so/r/xXKrkk"
+      tallyId: "xXKrkk"
     }
 
   ];
@@ -70,7 +70,8 @@ function baueKontaktOptionen() {
 
           <a
             class="kategorie-card"
-            href="${option.href}">
+            data-tally-open="${option.tallyId}"
+            data-tally-layout="modal">
 
             <h3>${option.titel}</h3>
 
