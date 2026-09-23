@@ -48,7 +48,7 @@ function baueKontaktOptionen() {
       beschreibung:
         "Für sonstige Fragen, Anregungen und Anliegen kannst du unser allgemeines Kontaktformular nutzen.",
 
-      href: "https://tally.so/"
+      href: "https://tally.so/r/xXKrkk"
     }
 
   ];
