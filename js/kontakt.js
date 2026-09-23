@@ -68,7 +68,8 @@ function baueKontaktOptionen() {
       ${optionen.map(
         option => `
 
-          <a
+          <button
+            type="button"
             class="kategorie-card"
             data-tally-open="${option.tallyId}"
             data-tally-layout="modal">
@@ -79,7 +80,7 @@ function baueKontaktOptionen() {
               ${option.beschreibung}
             </p>
 
-          </a>
+          </button>
 
         `
       ).join("")}
