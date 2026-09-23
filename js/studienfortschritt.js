@@ -118,7 +118,7 @@ async function zeigeStudienfortschritt() {
                 <div>
 
                   <h3>
-                    ${buch.titel}
+                    ${buch.lehrgang}
                   </h3>
 
                   ${

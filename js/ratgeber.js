@@ -101,6 +101,7 @@ const ratgeberRohdaten = [
 // wird "slug" als Anzeige-Titel verwendet.
 const ratgeberListe = ratgeberRohdaten.map(eintrag =>
   typeof eintrag === "string"
-    ? { slug: eintrag, titel: eintrag }
-    : { ...eintrag, titel: eintrag.titel || eintrag.slug }
+    ? { slug: eintrag, titel: eintrag, lehrgang: eintrag }
+    : { ...eintrag, titel: eintrag.titel || eintrag.slug,
+       lehrgang: eintrag.lehrgang || eintrag.titel || eintrag.slug }
 );
