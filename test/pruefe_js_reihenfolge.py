@@ -48,6 +48,7 @@ ABHAENGIGKEITEN = [
     ("buch", "markdown"),
     ("buch", "ratgeber"),
     ("buch", "ratgeber-kategorien"),
+    ("buch", "studium"),
     ("buch", "teilen"),
     ("buchgrid", "konstanten"),
     ("buchgrid", "ratgeber-filter"),

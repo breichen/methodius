@@ -922,6 +922,13 @@ function zeigeQuizErgebnis(quiz) {
 
       <button
         class="quiz-zurueck-button"
+        id="quiz-studienfortschritt-button"
+        type="button">
+        Studienfortschritt
+      </button>
+
+      <button
+        class="quiz-zurueck-button"
         id="quiz-zurueck-button"
         type="button">
         Zurück
@@ -948,6 +955,13 @@ function zeigeQuizErgebnis(quiz) {
         );
       }
     );
+  
+  document
+    .getElementById("quiz-studienfortschritt-button")
+    .addEventListener("click", () => {
+      window.location.href =
+        "studienfortschritt.html";
+    });
 }
 
 function zeigeZertifikatDialog(anzahl, quiz) {
