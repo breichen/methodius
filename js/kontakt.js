@@ -87,6 +87,22 @@ function baueKontaktOptionen() {
     </div>
 
   `;
+
+
+  // Klick auf eine Card an Tally weitergeben
+  container.addEventListener("click", function (event) {
+
+    const card = event.target.closest("[data-tally-open]");
+
+    if (!card) return;
+
+    event.preventDefault();
+
+    const tallyId = card.dataset.tallyOpen;
+
+    Tally.openPopup(tallyId);
+
+  });
 }
 
 
