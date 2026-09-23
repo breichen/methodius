@@ -1,52 +1,88 @@
 async function zeigeStudienfortschritt() {
 
   const container =
-    document.getElementById(
-      "studienfortschritt"
-    );
+    document.getElementById("studienfortschritt");
 
   if (!container) return;
 
 
   try {
 
-    const [
-      ratgeber,
-      fortschritt
-    ] = await Promise.all([
+    /*
+     * ---------------------------------------------------------
+     * DATEN LADEN
+     * ---------------------------------------------------------
+     */
+
+    const [ratgeber, fortschritt] = await Promise.all([
 
       ratgeberListe.filter(
-            buch =>
-            istDatumErreicht(buch.erstellt)
-        ),
+        buch => istDatumErreicht(buch.erstellt)
+      ),
 
       holeStudienfortschritt()
 
     ]);
 
 
-    const abgeschlosseneIds =
-      new Set(
-        fortschritt.map(
-          eintrag =>
-            Number(eintrag.ratgeber_id)
+    /*
+     * ---------------------------------------------------------
+     * ABGESCHLOSSENE LEHRGÄNGE
+     * ---------------------------------------------------------
+     */
+
+    const abgeschlosseneIds = new Set(
+      fortschritt.map(
+        eintrag => Number(eintrag.ratgeber_id)
+      )
+    );
+
+
+    /*
+     * ---------------------------------------------------------
+     * KATEGORIEN
+     * ---------------------------------------------------------
+     *
+     * Die Reihenfolge kommt direkt aus RatgeberKategorie.
+     * Dadurch bleibt die Darstellung unabhängig von der
+     * Reihenfolge in ratgeberListe immer gleich.
+     */
+
+    const kategorien = Object.values(RatgeberKategorie)
+      .map(kategorie => ({
+
+        name: kategorie,
+
+        lehrgaenge: ratgeber.filter(
+          buch => buch.kategorie === kategorie
         )
+
+      }))
+      .filter(
+        gruppe => gruppe.lehrgaenge.length > 0
       );
 
+
+    /*
+     * ---------------------------------------------------------
+     * GESAMTFORTSCHRITT
+     * ---------------------------------------------------------
+     */
 
     const anzahlGesamt =
       ratgeber.length;
 
+
     const anzahlAbgeschlossen =
       ratgeber.filter(
-        ratgeber =>
+        buch =>
           abgeschlosseneIds.has(
-            Number(ratgeber.id)
+            Number(buch.id)
           )
       ).length;
 
 
-    const prozent =
+    const gesamtProzent =
       anzahlGesamt > 0
         ? Math.round(
             anzahlAbgeschlossen /
@@ -56,21 +92,67 @@ async function zeigeStudienfortschritt() {
         : 0;
 
 
-    container.innerHTML = `
+    /*
+     * ---------------------------------------------------------
+     * STUDIENFORTSCHRITT
+     * ---------------------------------------------------------
+     *
+     * Für den Abschluss zählen maximal fünf abgeschlossene
+     * Lehrgänge pro Kategorie.
+     */
 
-      <div class="studienfortschritt-zusammenfassung">
+    const anzahlStudienKategorien =
+      Object.values(RatgeberKategorie).length;
 
-        <p class="studienfortschritt-zaehler">
-          <strong>
-            ${anzahlAbgeschlossen}
-          </strong>
-          von
-          <strong>
-            ${anzahlGesamt}
-          </strong>
-          Lehrgängen abgeschlossen
-        </p>
 
+    const studiumGesamt =
+      anzahlStudienKategorien * 5;
+
+
+    let studiumAbgeschlossen = 0;
+
+
+    kategorien.forEach(
+      gruppe => {
+
+        const abgeschlossen =
+          gruppe.lehrgaenge.filter(
+            buch =>
+              abgeschlosseneIds.has(
+                Number(buch.id)
+              )
+          ).length;
+
+
+        studiumAbgeschlossen +=
+          Math.min(abgeschlossen, 5);
+
+      }
+    );
+
+
+    const studiumProzent =
+      studiumGesamt > 0
+        ? Math.round(
+            studiumAbgeschlossen /
+            studiumGesamt *
+            100
+          )
+        : 0;
+
+
+    /*
+     * ---------------------------------------------------------
+     * HILFSFUNKTION FÜR FORTSCHRITTSBALKEN
+     * ---------------------------------------------------------
+     */
+
+    function progressBar(
+      prozent,
+      label
+    ) {
+
+      return `
 
         <div
           class="studienfortschritt-balken"
@@ -78,7 +160,7 @@ async function zeigeStudienfortschritt() {
           aria-valuemin="0"
           aria-valuemax="100"
           aria-valuenow="${prozent}"
-          aria-label="Studienfortschritt"
+          aria-label="${label}"
         >
 
           <div
@@ -88,64 +170,251 @@ async function zeigeStudienfortschritt() {
 
         </div>
 
+      `;
 
-        <p class="studienfortschritt-prozent">
-          ${prozent} %
-        </p>
-
-      </div>
+    }
 
 
-      <div class="studienfortschritt-liste">
+    /*
+     * ---------------------------------------------------------
+     * KATEGORIEN-ÜBERSICHT
+     * ---------------------------------------------------------
+     */
 
-        <h2>Deine Lehrgänge</h2>
-
-        ${ratgeber.map(
-          buch => {
+    const kategorienHtml =
+      kategorien
+        .map(
+          gruppe => {
 
             const abgeschlossen =
-              abgeschlosseneIds.has(
-                Number(buch.id)
-              );
+              gruppe.lehrgaenge.filter(
+                buch =>
+                  abgeschlosseneIds.has(
+                    Number(buch.id)
+                  )
+              ).length;
+
+
+            const gesamt =
+              gruppe.lehrgaenge.length;
+
+
+            const prozent =
+              gesamt > 0
+                ? Math.round(
+                    abgeschlossen /
+                    gesamt *
+                    100
+                  )
+                : 0;
+
 
             return `
 
-              <div
-                class="studienfortschritt-eintrag${
-                  abgeschlossen
-                    ? " abgeschlossen"
-                    : ""
-                }"
-              >
+              <div class="studienfortschritt-kategorie">
 
-                <div>
+                <div class="studienfortschritt-kategorie-kopf">
 
-                  <h3>
-                    ${buch.lehrgang}
-                  </h3>
+                  <strong>
+                    ${gruppe.name}
+                  </strong>
 
-                  ${
-                    abgeschlossen
-                      ? `
-                        <p class="studienfortschritt-status">
-                          Abgeschlossen
-                        </p>
-                      `
-                      : `
-                        <p class="studienfortschritt-status">
-                          Noch nicht abgeschlossen
-                        </p>
-                      `
-                  }
+                  <span>
+                    ${abgeschlossen} / ${gesamt}
+                  </span>
 
                 </div>
+
+                ${progressBar(
+                  prozent,
+                  `Fortschritt ${gruppe.name}`
+                )}
 
               </div>
 
             `;
 
           }
-        ).join("")}
+        )
+        .join("");
+
+
+    /*
+     * ---------------------------------------------------------
+     * LEHRGÄNGE NACH KATEGORIE
+     * ---------------------------------------------------------
+     */
+
+    const lehrgaengeHtml =
+      kategorien
+        .map(
+          gruppe => {
+
+            const lehrgaenge =
+              gruppe.lehrgaenge
+                .map(
+                  buch => {
+
+                    const abgeschlossen =
+                      abgeschlosseneIds.has(
+                        Number(buch.id)
+                      );
+
+
+                    return `
+
+                      <div
+                        class="
+                          studienfortschritt-eintrag
+                          ${abgeschlossen
+                            ? "abgeschlossen"
+                            : ""}
+                        "
+                      >
+
+                        <span
+                          class="studienfortschritt-status"
+                          aria-label="${
+                            abgeschlossen
+                              ? "Abgeschlossen"
+                              : "Noch nicht abgeschlossen"
+                          }"
+                        >
+                          ${
+                            abgeschlossen
+                              ? "✓"
+                              : "○"
+                          }
+                        </span>
+
+                        <span class="studienfortschritt-lehrgang">
+                          ${buch.lehrgang}
+                        </span>
+
+                      </div>
+
+                    `;
+
+                  }
+                )
+                .join("");
+
+
+            return `
+
+              <section class="studienfortschritt-kategorie-liste">
+
+                <h3>
+                  ${gruppe.name}
+                </h3>
+
+                <div class="studienfortschritt-lehrgaenge">
+                  ${lehrgaenge}
+                </div>
+
+              </section>
+
+            `;
+
+          }
+        )
+        .join("");
+
+
+    /*
+     * ---------------------------------------------------------
+     * HTML AUSGEBEN
+     * ---------------------------------------------------------
+     */
+
+    container.innerHTML = `
+
+      <div class="studienfortschritt-uebersicht">
+
+
+        <!-- GESAMT -->
+
+        <div class="studienfortschritt-box">
+
+          <h2>Alle Lehrgänge</h2>
+
+          <div class="studienfortschritt-kopf">
+
+            <strong>
+              ${anzahlAbgeschlossen} / ${anzahlGesamt}
+            </strong>
+
+            <span>
+              ${gesamtProzent} %
+            </span>
+
+          </div>
+
+          ${progressBar(
+            gesamtProzent,
+            "Gesamtfortschritt über alle Lehrgänge"
+          )}
+
+        </div>
+
+
+        <!-- STUDIUM -->
+
+        <div class="studienfortschritt-box">
+
+          <h2>Methodius-Studium</h2>
+
+          <div class="studienfortschritt-kopf">
+
+            <strong>
+              ${studiumAbgeschlossen} / ${studiumGesamt}
+            </strong>
+
+            <span>
+              ${studiumProzent} %
+            </span>
+
+          </div>
+
+          ${progressBar(
+            studiumProzent,
+            "Fortschritt für das Methodius-Studium"
+          )}
+
+          <p>
+            Maximal fünf Lehrgänge pro Kategorie
+            werden angerechnet.
+          </p>
+
+        </div>
+
+
+        <!-- KATEGORIEN -->
+
+        <div class="studienfortschritt-box">
+
+          <h2>Nach Kategorien</h2>
+
+          <div class="studienfortschritt-kategorien">
+
+            ${kategorienHtml}
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           LEHRGÄNGE NACH KATEGORIE
+           ===================================================== -->
+
+      <div class="studienfortschritt-liste">
+
+        <h2>Deine Lehrgänge</h2>
+
+        ${lehrgaengeHtml}
 
       </div>
 
@@ -158,6 +427,7 @@ async function zeigeStudienfortschritt() {
       "Fehler beim Anzeigen des Studienfortschritts:",
       fehler
     );
+
 
     container.innerHTML = `
 
