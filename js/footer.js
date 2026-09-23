@@ -13,26 +13,13 @@ function baueFooter() {
 
       <div class="wrap footer-row">
 
-        <p>
-          &copy; 2026 Dr. Maximilian Methodius
-        </p>
+        <p>&copy; 2026 Dr. Maximilian Methodius</p>
 
-        <nav class="footer-nav" aria-label="Footer-Navigation">
-
-          <a href="kontakt.html">
-            Kontakt
-          </a>
-
-          <a href="impressum.html">
-            Impressum
-          </a>
-
-        </nav>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
 
       </div>
-
     </footer>
-
   `;
 }
 
