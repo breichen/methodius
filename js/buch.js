@@ -907,7 +907,7 @@ function zeigeQuizErgebnis(quiz) {
       <p>
         Herzlichen Glückwunsch!
         Du bist Experte zum Thema
-        <strong>${buch.titel}</strong>!
+        <strong>${buch.lehrgang}</strong>!
       </p>
     </div>
 
