@@ -69,6 +69,7 @@ function baueHeader() {
                 <li><a href="mitglieder.html">Mitglieder</a></li>
                 <li><a href="news.html">Aktuelles</a></li>
                 <li><a href="institutsleben.html">Institutsleben</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
               </ul>
             </li>
           </ul>
