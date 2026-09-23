@@ -15,7 +15,10 @@ async function zeigeStudienfortschritt() {
       fortschritt
     ] = await Promise.all([
 
-      ratgeberListe,
+      ratgeberListe.filter(
+            buch =>
+            istDatumErreicht(buch.erstellt)
+        ),
 
       holeStudienfortschritt()
 
