@@ -1050,6 +1050,15 @@ hr {
   margin: 0;
 }
 
+.quiz-option-flipbook {
+  display: flex;
+  gap: 0.5em;
+}
+
+.quiz-box-flipbook {
+  flex-shrink: 0; /* keep the box from being squeezed by long option text */
+}
+
 .quiz-option {
   display: flex;
   align-items: center;
