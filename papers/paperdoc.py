@@ -6,7 +6,7 @@ paper.md format
 ----------------
 
     ---
-    journal: aevidence
+    journal: Archiv für Ausreichende Evidenz
     title: Titel des Beitrags
     subtitle: Optionaler Untertitel
     shorttitle: Kurztitel für die Kopfzeile
@@ -58,6 +58,31 @@ class PaperDocError(ValueError):
 
 
 REQUIRED_FIELDS = ("journal", "title", "authors", "abstract")
+
+# Maps the full journal name (as written in a paper.md's frontmatter) to the
+# corresponding template's slug, i.e. the folder/class name under
+# templates_dir (templates/<slug>/<slug>.cls).
+JOURNAL_SLUGS = {
+    "Schriftenreihe des Methodius-Instituts": "methodiusschriften",
+    "Journal für Praktische Fehlorientierung": "fehlorientierung",
+    "Archiv für Ausreichende Evidenz": "aevidence",
+    "Methodenhefte der Alltagshermeneutik": "alltagshermeneutik",
+    "Zeitschrift für Alternative Körperkomposition": "koerperkomposition",
+    "Statistische Irrtümer Quarterly": "irrtuemer",
+    "Annalen der Bedeutungsüberhöhung": "bedeutungsueberhoehung",
+    "Praxisjournal für Evidenznahe Belehrung": "evidenznahebelehrung",
+    "Berichte aus der Überdeutungsforschung": "ueberdeutungsforschung",
+    "Journal of Recursive Self-Improvement Studies": "recursiveselfimprovement",
+    "Zeitschrift für Selektive Beratung": "selektiveberatung",
+    "Kritik & Evidenz": "kritikevidenz",
+    "Wochenanfangsforschung Quarterly": "wochenanfangsforschung",
+    "Journal für Praktische Distanzpflege": "distanzpflege",
+    "Zeitschrift für Populäre Grundgesamtheiten": "grundgesamtheiten",
+    "Mitteilungen zur Dynamischen Überzeugungsforschung": "ueberzeugungsforschung",
+    "Archiv für Aufgeschobene Vorhaben": "aufgeschobenevorhaben",
+    "Jahrbuch für Strategische Untätigkeit": "strategischeuntaetigkeit",
+    "Zeitschrift für Angewandte Problemunterlassung": "problemunterlassung",
+}
 
 # Fields that map directly to a same-named \fieldname{...} command in the
 # .cls files, emitted only if present.
@@ -239,16 +264,37 @@ def build_paper_meta(data: dict, source: Path) -> PaperMeta:
     )
 
 
-def validate_journal(journal: str, templates_dir: Path) -> None:
-    candidate = templates_dir / journal / f"{journal}.cls"
+def resolve_journal_slug(journal: str) -> str:
+    """Look up the template slug for a full journal name.
+
+    Raises a PaperDocError listing the known journal names if `journal`
+    isn't in JOURNAL_SLUGS (e.g. a typo, or a journal not yet templated).
+    """
+    slug = JOURNAL_SLUGS.get(journal)
+    if slug is not None:
+        return slug
+    known = "\n".join(f"  - {name}" for name in sorted(JOURNAL_SLUGS))
+    raise PaperDocError(
+        f"Unbekanntes journal: '{journal}'. Bekannte Journalnamen:\n{known}"
+    )
+
+
+def validate_journal(journal: str, templates_dir: Path) -> str:
+    """Resolve `journal` to its slug and confirm the .cls file exists.
+
+    Returns the resolved slug on success.
+    """
+    slug = resolve_journal_slug(journal)
+    candidate = templates_dir / slug / f"{slug}.cls"
     if candidate.exists():
-        return
+        return slug
     available = sorted(
         p.name for p in templates_dir.iterdir()
         if p.is_dir() and (p / f"{p.name}.cls").exists()
     ) if templates_dir.is_dir() else []
     raise PaperDocError(
-        f"Unbekanntes journal: '{journal}'. "
+        f"journal '{journal}' wird als '{slug}' geführt, aber "
+        f"{candidate} wurde nicht gefunden. "
         f"Verfügbare Templates: {', '.join(available) or '(keine gefunden)'}"
     )
 
@@ -376,12 +422,13 @@ def markdown_to_latex(body: str) -> str:
 # main.tex assembly
 # ---------------------------------------------------------------------------
 
-def build_tex(meta: PaperMeta, body_latex: str, source_name: str) -> str:
+def build_tex(meta: PaperMeta, body_latex: str, source_name: str, slug: str) -> str:
     lines: list[str] = []
     lines.append(f"% AUTO-GENERATED von generate.py aus {source_name}.")
     lines.append("% Bitte NICHT von Hand bearbeiten – Änderungen gehen beim")
     lines.append("% nächsten Lauf verloren. Bearbeite stattdessen die .md-Datei.")
-    lines.append(f"\\documentclass{{{meta.journal}}}")
+    lines.append(f"% journal: {meta.journal}  (Template: {slug})")
+    lines.append(f"\\documentclass{{{slug}}}")
     lines.append("")
 
     if meta.volume:
@@ -437,6 +484,6 @@ def convert_paper_md(md_path: Path, templates_dir: Path) -> str:
     frontmatter_text, body_text = split_frontmatter(text)
     data = parse_frontmatter(frontmatter_text)
     meta = build_paper_meta(data, md_path)
-    validate_journal(meta.journal, templates_dir)
+    slug = validate_journal(meta.journal, templates_dir)
     body_latex = markdown_to_latex(body_text)
-    return build_tex(meta, body_latex, md_path.name)
+    return build_tex(meta, body_latex, md_path.name, slug)
