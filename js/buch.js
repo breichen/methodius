@@ -315,6 +315,20 @@ function nummeriereQuizFragenImFlipbook(bloecke) {
 
   return bloecke.map((block, i) => {
     if (i <= bonusStart || i >= bonusEnde) return block;
+ 
+    // Answer options: "<p>☐ A<br>☐ B</p>" -> one flex row per option, so
+    // wrapped lines stay to the right of the box (hanging indent).
+    if (block.startsWith("<p>☐")) {
+      const optionenHtml = block
+        .replace(/^<p>/, "")
+        .replace(/<\/p>$/, "")
+        .split("<br>")
+        .map(o => o.replace(/^☐\s*/, "").trim())
+        .filter(Boolean)
+        .map(o => `<span class="quiz-option-flipbook"><span class="quiz-box-flipbook">☐</span><span>${o}</span></span>`)
+        .join("");
+      return `<p class="quiz-optionen-flipbook">${optionenHtml}</p>`;
+    }
 
     const match = block.match(/^<p><strong>(\d+)\.\s*(.+?)<\/strong><\/p>$/);
     if (!match) return block;
