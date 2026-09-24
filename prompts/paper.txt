@@ -269,7 +269,7 @@ Das spätere Layout wird vollständig von `paperdoc.py` und dem jeweiligen Journ
 8. UMFANG
    =========
 
-Der Artikel muss umfangreich genug sein, um nach der automatischen Verarbeitung ungefähr **drei A4-Seiten in einem zweispaltigen wissenschaftlichen Layout** zu füllen.
+Der Artikel muss umfangreich genug sein, um nach der automatischen Verarbeitung ungefähr **sechs A4-Seiten in einem zweispaltigen wissenschaftlichen Layout** zu füllen.
 
 Schreibe daher keinen kurzen Artikel und keinen erweiterten Abstract.
 
