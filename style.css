@@ -1056,7 +1056,8 @@ hr {
 }
 
 .quiz-box-flipbook {
-  flex-shrink: 0; /* keep the box from being squeezed by long option text */
+  flex-shrink: 0;
+  /* keep the box from being squeezed by long option text */
 }
 
 .quiz-option {
@@ -1072,7 +1073,8 @@ hr {
   appearance: none;
   width: 16px;
   height: 16px;
-  flex-shrink: 0; /* keep the box at 16px when the label text wraps */
+  flex-shrink: 0;
+  /* keep the box at 16px when the label text wraps */
   margin: 0;
   border: 2px solid var(--color-accent);
   border-radius: 0;
@@ -3505,7 +3507,7 @@ hr {
 
 .studienfortschritt-eintrag {
   display: flex;
-  flex-wrap: wrap; /* lets the details panel sit on its own line */
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   padding: 9px 0;
@@ -3531,9 +3533,28 @@ hr {
   color: var(--color-accent);
 }
 
+
+/* Lehrgangstitel */
+button.studienfortschritt-toggle {
+  flex: 1 1 0;
+  min-width: 0;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+
+/* Rechter Link / Zertifikat */
 .studienfortschritt-link {
-  margin-left: auto;
   flex: 0 0 auto;
+  margin-left: auto;
+
   white-space: nowrap;
   font-size: 0.85rem;
   color: var(--color-accent);
@@ -3544,10 +3565,8 @@ hr {
   text-decoration: underline;
 }
 
-/* .studienfortschritt-link wird für den Zertifikat-Button aus
-   studienfortschritt.js auch auf ein <button>-Element angewendet -
-   hier werden nur die nativen Button-Standards zurückgesetzt, Farbe/
-   Schriftgröße/Positionierung kommen weiterhin von der Regel oben. */
+
+/* Zertifikat-Button */
 button.studienfortschritt-link {
   background: none;
   border: none;
@@ -3562,17 +3581,8 @@ button.studienfortschritt-link:disabled {
   text-decoration: none;
 }
 
-button.studienfortschritt-toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-}
 
-/* Small chevron: pointing right when collapsed, down when expanded */
+/* Chevron */
 button.studienfortschritt-toggle::after {
   content: "▾";
   display: inline-block;
@@ -3583,12 +3593,14 @@ button.studienfortschritt-toggle::after {
 }
 
 button.studienfortschritt-toggle[aria-expanded="true"]::after {
-  transform: rotate(180deg); /* flip to point up when expanded */
+  transform: rotate(180deg);
 }
 
+
+/* Detailbereich */
 .studienfortschritt-details {
   flex: 0 0 100%;
-  padding: 4px 0 2px 28px; /* 18px status column + 10px gap */
+  padding: 4px 0 2px 28px;
   font-size: 0.85rem;
 }
 
