@@ -65,8 +65,8 @@ function ladeAlleVeroeffentlichungen() {
                 veroeffentlichung.journal
                   ? `
                     <p class="institut-veroeffentlichung-journal">
-                      <em>${veroeffentlichung.journal}</em>,
-                      ${veroeffentlichung.seite_start}&ndash;${veroeffentlichung.seite_ende}
+                      <em>${veroeffentlichung.journal}</em>${veroeffentlichung.band != null ? `, Bd. ${veroeffentlichung.band}` : ""}${veroeffentlichung.heft != null ? `, Heft ${veroeffentlichung.heft}` : ""}${veroeffentlichung.seite_start != null && veroeffentlichung.seite_ende != null ? `,
+                           ${veroeffentlichung.seite_start}&ndash;${veroeffentlichung.seite_ende}` : ""}
                     </p>
                   `
                   : ""
