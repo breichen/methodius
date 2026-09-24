@@ -4,6 +4,7 @@ import sys
 import random
 import os
 import re
+from pathlib import Path
 
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
@@ -15,7 +16,12 @@ from reportlab.lib.units import mm
 # KONFIGURATION
 # ==================================================
 
-LOGO_DATEI = "assets/favicon/methodius-512x512-nobg.png"
+# Projekt-Root = eine Ebene über diesem Skript (python/urkunde.py -> Root)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+LOGO_DATEI = PROJECT_ROOT / "assets" / "favicon" / "methodius-512x512-nobg.png"
+SIGNATUR_DATEI = PROJECT_ROOT / "assets" / "signatur" / "methodius-signatur.png"
+AUSGABE_ORDNER = PROJECT_ROOT / "out" / "urkunden"
 
 BLAU = colors.HexColor("#1f2747")
 ROT = colors.HexColor("#B5292C")
@@ -101,21 +107,17 @@ def generiere_urkunde(name):
 
     urkundennummer = f"MRV-{random.randint(100000, 999999)}"
 
-    os.makedirs(
-        "out/urkunden",
-        exist_ok=True
-    )
+    os.makedirs(AUSGABE_ORDNER, exist_ok=True)
 
     dateiname = (
-        f"out/urkunden/"
-        f"urkunde_{urkundennummer}_"
-        f"{dateiname_sicher(name)}.pdf"
+        AUSGABE_ORDNER
+        / f"urkunde_{urkundennummer}_{dateiname_sicher(name)}.pdf"
     )
 
     w, h = A4
 
     c = canvas.Canvas(
-        dateiname,
+        str(dateiname),
         pagesize=A4
     )
 
@@ -153,7 +155,7 @@ def generiere_urkunde(name):
     # --------------------------------------------------
 
     c.drawImage(
-        LOGO_DATEI,
+        str(LOGO_DATEI),
         w / 2 - 15 * mm,
         h - 55 * mm,
         width=30 * mm,
@@ -311,14 +313,14 @@ def generiere_urkunde(name):
     # Signatur
     # --------------------------------------------------
 
-    SIGNATUR_DATEI = "assets/signatur/methodius-signatur.png"
+    SIGNATUR_DATEI = PROJECT_ROOT / "assets" / "signatur" / "methodius-signatur.png"
     SIGNATUR_ORIG_W = 457
     SIGNATUR_ORIG_H = 65
     SIGNATUR_WIDTH = 60 * mm
     SIGNATUR_HEIGH = SIGNATUR_WIDTH * SIGNATUR_ORIG_H / SIGNATUR_ORIG_W
 
     c.drawImage(
-        SIGNATUR_DATEI,
+        str(SIGNATUR_DATEI),
         w / 2 - 30 * mm,
         h - 255 * mm,
         width=SIGNATUR_WIDTH,
