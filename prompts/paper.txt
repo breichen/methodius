@@ -31,6 +31,7 @@ Die Datei beginnt mit einer Frontmatter, die sich **bis einschließlich des Abst
 
 ---
 
+slug: kontrollierte-fehlberatung-lebenshilfe
 journal: Zeitschrift für Angewandte Problemunterlassung
 title: Zur kontrollierten Fehlberatung als angewandte Lebenshilfe
 subtitle: Ein konzeptioneller und empirischer Beitrag zur systematischen Optimierung alltagspraktischer Fehlentscheidungen
