@@ -351,9 +351,14 @@ async function zeigeStudienfortschritt() {
                           }
                         </span>
 
-                        <span class="studienfortschritt-lehrgang">
+                        <button
+                          type="button"
+                          class="studienfortschritt-lehrgang studienfortschritt-toggle"
+                          aria-expanded="false"
+                          aria-controls="studienfortschritt-details-${buch.id}"
+                        >
                           ${buch.lehrgang}
-                        </span>
+                        </button>
 
                         ${
                           abgeschlossen
@@ -375,6 +380,17 @@ async function zeigeStudienfortschritt() {
                               </a>
                             `
                         }
+ 
+                        <div
+                          class="studienfortschritt-details"
+                          id="studienfortschritt-details-${buch.id}"
+                          hidden
+                        >
+                          ${abgeschlossen ? "Abgeschlossen" : "Abzuschließen"}
+                          durch die Prüfung nach der Lektüre des Ratgebers
+                          „<a href="buch.html?titel=${encodeURIComponent(buch.titel)}">${buch.titel}</a>“
+                        </div>
+
 
                       </div>
 
@@ -514,6 +530,34 @@ async function zeigeStudienfortschritt() {
       ${lehrgaengeHtml}
 
     `;
+	
+	    /*
+     * =====================================================
+     * AUF-/ZUKLAPPEN DER LEHRGANGS-ZEILEN
+     * =====================================================
+     */
+
+    listeContainer
+      .querySelectorAll(".studienfortschritt-eintrag")
+      .forEach(eintrag => {
+
+        const toggle = eintrag.querySelector(".studienfortschritt-toggle");
+        const details = eintrag.querySelector(".studienfortschritt-details");
+
+        eintrag.addEventListener("click", e => {
+
+          // Links, the certificate button and the details text keep
+          // their own behaviour and must not toggle the row.
+          if (e.target.closest("a, .studienfortschritt-zertifikat-button, .studienfortschritt-details")) return;
+
+          const offen = toggle.getAttribute("aria-expanded") === "true";
+
+          toggle.setAttribute("aria-expanded", String(!offen));
+          details.hidden = offen;
+
+        });
+
+      });
 
 
     /*
