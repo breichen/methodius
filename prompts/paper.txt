@@ -1,0 +1,564 @@
+Erzeuge den vollständigen Inhalt eines satirischen wissenschaftlichen Fachartikels für das Methodius-Institut.
+
+Das Ergebnis muss als direkt verwendbare `paper.md`-Datei für das Python-Skript `paperdoc.py` geeignet sein.
+
+==================================================
+
+1. AUSGABE
+   ==================================================
+
+Gib das fertige Ergebnis **ausschließlich in einem einzigen kopierbaren Textfeld** aus.
+
+Das Textfeld muss den vollständigen Inhalt der späteren `paper.md` enthalten.
+
+Es darf **keinen erläuternden Text außerhalb dieses Feldes** geben.
+
+Keine Einleitung wie:
+
+„Hier ist das Paper:“
+
+Keine abschließende Erklärung.
+
+Keine Kommentare.
+
+Der Inhalt des Feldes muss direkt als `paper.md` gespeichert werden können.
+
+==================================================
+2. FRONTMATTER – EXAKTE STRUKTUR
+================================
+
+Die Datei beginnt mit einer Frontmatter, die sich **bis einschließlich des Abstracts exakt an folgendem Beispiel orientiert**:
+
+---
+
+journal: Zeitschrift für Angewandte Problemunterlassung
+title: Zur kontrollierten Fehlberatung als angewandte Lebenshilfe
+subtitle: Ein konzeptioneller und empirischer Beitrag zur systematischen Optimierung alltagspraktischer Fehlentscheidungen
+shorttitle: Kontrollierte Fehlberatung
+authors:
+  - Dr. Maximilian Methodius
+  - Prof. Dr. Hildegard Wankelmuth
+keywords:
+  - Fehlberatung
+  - angewandte Lebenshilfe
+  - Alltagsentscheidungen
+  - Beratungseffekte
+  - Entscheidungsqualität
+volume: 1
+issue: 1
+year: 2026
+date: 16.10.2026
+pages: 1--13
+abstract: |
+  Die vorliegende Untersuchung befasst sich mit der Frage, unter welchen Bedingungen eine gezielt fehlerhafte Beratung einen höheren praktischen Nutzen entfalten kann als eine inhaltlich korrekte, jedoch entscheidungsintensivierende Beratung. Ausgangspunkt ist die Beobachtung, dass ein erheblicher Anteil alltäglicher Beratungsanlässe nicht durch einen Mangel an verfügbaren Informationen, sondern durch eine Überversorgung mit Entscheidungsmöglichkeiten gekennzeichnet ist. In einer explorativen Studie mit sieben Versuchspersonen wurde untersucht, wie sich drei Beratungsformen – sachlich korrekte Beratung, bewusst unvollständige Beratung und kontrollierte Fehlberatung – auf Entscheidungsdauer, wahrgenommene Sicherheit und nachträgliche Zufriedenheit auswirken. Die Ergebnisse zeigen eine deutliche Verkürzung der Entscheidungsdauer unter kontrollierter Fehlberatung bei gleichzeitig erhöhtem subjektivem Sicherheitsempfinden. Die beobachtete Fehlentscheidungsquote war zwar höher als unter korrekter Beratung, blieb jedoch unterhalb der vorab definierten praktischen Relevanzschwelle. Die Befunde werden dahingehend interpretiert, dass Beratung nicht ausschließlich an der sachlichen Richtigkeit ihrer Inhalte gemessen werden sollte, sondern auch an ihrer Fähigkeit, Entscheidungsvorgänge zu beenden. Die Studie liefert damit erste Hinweise auf ein eigenständiges Anwendungsfeld der kontrollierten Fehlberatung als ressourcenorientierte Form der angewandten Lebenshilfe.
+---
+
+### HARTE FORMATVORGABE
+
+Der Bereich von der ersten Zeile `---` bis zur abschließenden Zeile `---` nach dem Abstract muss **hinsichtlich Struktur, Reihenfolge, Einrückung, Leerzeichen und Zeilenumbrüchen exakt dem obigen Muster entsprechen.**
+
+Insbesondere:
+
+* Die erste Zeile ist exakt `---`.
+* Danach folgt jedes Feld in einer eigenen Zeile.
+* Zwischen den einzelnen Feldern werden keine zusätzlichen Leerzeilen eingefügt.
+* `authors:` steht allein in einer Zeile.
+* Jeder Autor steht in der folgenden Zeile mit **genau zwei Leerzeichen** Einrückung, gefolgt von `- `.
+* `keywords:` steht allein in einer Zeile.
+* Jedes Keyword steht in der folgenden Zeile mit **genau zwei Leerzeichen** Einrückung, gefolgt von `- `.
+* `abstract: |` steht allein in einer Zeile.
+* Der Abstract beginnt in der unmittelbar folgenden Zeile mit **genau zwei Leerzeichen** Einrückung.
+* Der gesamte Abstract wird als zusammenhängender Absatz geschrieben.
+* Innerhalb des Abstracts keine zusätzlichen Leerzeilen.
+* Nach dem letzten Satz des Abstracts folgt unmittelbar die abschließende Zeile `---`.
+* Zwischen Abstract und abschließendem `---` befindet sich keine Leerzeile.
+* Die Reihenfolge der Felder bleibt exakt gleich.
+* Es dürfen keine zusätzlichen Frontmatter-Felder eingefügt werden.
+* Es dürfen keine Felder entfernt werden.
+
+Die **Werte** der Felder werden natürlich an das jeweilige Paper angepasst.
+
+==================================================
+3. JOURNAL
+==========
+
+WICHTIG:
+
+`journal` enthält **nicht** den Namen eines technischen Templates oder ein internes Kürzel.
+
+`journal` enthält immer den **vollständig ausgeschriebenen Namen der fiktiven wissenschaftlichen Zeitschrift**.
+
+Beispiel:
+
+`journal: Zeitschrift für Angewandte Problemunterlassung`
+
+ist korrekt.
+
+Nicht:
+
+`journal: zapp`
+
+Nicht:
+
+`journal: applied_evidence`
+
+Nicht:
+
+`journal: aevidence`
+
+Der vollständige Journalname soll wie der Name einer real existierenden, seriösen wissenschaftlichen Fachzeitschrift wirken.
+
+Der Name darf satirisch sein, soll aber auf den ersten Blick wie eine wissenschaftliche Zeitschrift klingen.
+
+Der Inhalt nach dem Bindestrich bzw. die konkreten Werte der Frontmatter sind grundsätzlich variabel und müssen passend zum jeweiligen Paper neu erzeugt werden.
+
+==================================================
+4. BEDEUTUNG DER FRONTMATTER-FELDER
+===================================
+
+Verwende folgende Struktur:
+
+journal:
+Der vollständige Name der fiktiven wissenschaftlichen Zeitschrift.
+
+title:
+Der vollständige Titel des Papers.
+
+subtitle:
+Ein wissenschaftlich klingender Untertitel, sofern passend.
+
+shorttitle:
+Eine kurze wissenschaftliche Bezeichnung des Papers.
+
+authors:
+Die vorgegebenen Autoren in der vorgegebenen Reihenfolge.
+
+keywords:
+Fünf passende wissenschaftliche Schlagwörter.
+
+volume:
+Plausibler Band.
+
+issue:
+Plausible Ausgabe.
+
+year:
+Erscheinungsjahr.
+
+date:
+Plausibles Veröffentlichungsdatum.
+
+pages:
+Plausibler Seitenbereich.
+
+abstract:
+Vollständiger wissenschaftlicher Abstract.
+
+Die bibliografischen Angaben müssen untereinander konsistent sein.
+
+==================================================
+5. ABSTRACT
+===========
+
+Der Abstract muss vollständig im Frontmatter stehen.
+
+Er soll ungefähr die Qualität und Struktur des Beispiels besitzen.
+
+Er soll insbesondere enthalten:
+
+* Ausgangsproblem
+* Forschungsfrage
+* Untersuchungsansatz
+* Stichprobe bzw. Datenbasis
+* zentrale Methode
+* wichtigste Ergebnisse
+* Interpretation
+* Bedeutung der Ergebnisse
+
+Der Abstract muss bereits konkrete satirische Details enthalten.
+
+Er darf aber niemals wie eine Comedy-Zusammenfassung wirken.
+
+Die Autoren formulieren ihn vollständig ernst.
+
+Die Satire entsteht dadurch, dass eine banale oder absurde Forschungsfrage mit wissenschaftlicher Präzision behandelt wird.
+
+==================================================
+6. NACH DEM FRONTMATTER
+=======================
+
+Nach dem abschließenden `---` beginnt der eigentliche Artikel als Markdown.
+
+Verwende ausschließlich Markdown, das von `paperdoc.py` unterstützt wird.
+
+Insbesondere:
+
+* `##` für Hauptüberschriften
+* `###` für Unterüberschriften
+* `####` für weitere Untergliederungen
+* `**Text**` für Fettdruck
+* `*Text*` für Kursivschrift
+* `-` für Aufzählungen
+* `1.` für nummerierte Listen
+
+Kein HTML.
+
+Kein Roh-LaTeX.
+
+Keine Markdown-Tabellen.
+
+Keine grafischen Elemente.
+
+Keine künstlichen Layoutanweisungen.
+
+Das spätere Layout wird vollständig von `paperdoc.py` und dem jeweiligen Journal-Template erzeugt.
+
+==================================================
+7. UMFANG
+=========
+
+Der Artikel muss umfangreich genug sein, um nach der automatischen Verarbeitung ungefähr **drei A4-Seiten in einem zweispaltigen wissenschaftlichen Layout** zu füllen.
+
+Schreibe daher keinen kurzen Artikel und keinen erweiterten Abstract.
+
+Der Umfang soll dem eines vollständigen kurzen wissenschaftlichen Forschungsartikels entsprechen.
+
+Der Text soll ausreichend Substanz besitzen für:
+
+## Einleitung
+
+## Methodik
+
+## Ergebnisse
+
+## Diskussion
+
+## Limitationen
+
+## Fazit
+
+Je nach Thema können weitere sinnvolle Unterabschnitte hinzukommen.
+
+Die konkrete Gliederung darf variieren.
+
+Vom Master Prompt vorgegebene Überschriften müssen berücksichtigt werden.
+
+==================================================
+8. INHALTLICHE KOHÄRENZ
+=======================
+
+Das gesamte Paper muss dieselbe Studie beschreiben.
+
+Titel, Forschungsfrage, Hypothesen, Stichprobe, Methodik, Variablen, Ergebnisse, statistische Kennzahlen, Diskussion und Fazit müssen logisch zusammenpassen.
+
+Keine widersprüchlichen Stichprobengrößen.
+
+Keine Variablen, die vorher nicht eingeführt wurden.
+
+Keine Ergebnisse zu Hypothesen, die nie formuliert wurden.
+
+Keine Methoden, die später nicht verwendet werden.
+
+Die Studie soll trotz ihrer Absurdität wie ein tatsächlich durchgeführtes Forschungsprojekt wirken.
+
+==================================================
+9. WISSENSCHAFTLICHE HALTUNG
+============================
+
+Die Autoren nehmen ihre Forschung vollständig ernst.
+
+Sie erkennen die Absurdität ihrer Untersuchung nicht.
+
+Vermeide Formulierungen wie:
+
+* „Natürlich ist diese Studie absurd.“
+* „Die Autoren mussten selbst lachen.“
+* „Dies ist eine satirische Untersuchung.“
+* „Wie absurd dies auch erscheinen mag ...“
+* „Ironischerweise ...“
+* „Zur Belustigung der Forschenden ...“
+
+Die Komik darf niemals erklärt werden.
+
+Der Leser soll sie selbst erkennen.
+
+==================================================
+10. SATIRISCHER FORSCHUNGSGEGENSTAND
+====================================
+
+Untersuche ein banales, absurdes oder gesellschaftlich komisches Alltagsphänomen mit maximalem wissenschaftlichem Ernst.
+
+Geeignete Themen sind beispielsweise:
+
+* alltägliche Entscheidungen
+* Ausreden
+* Büroverhalten
+* digitale Kommunikation
+* Körperpflege
+* Sport
+* Essen
+* Technik
+* Sprache
+* Freizeit
+* Terminplanung
+* Haushaltsfragen
+* soziale Konventionen
+* unnötige Produktentscheidungen
+* Wartezeiten
+* zwischenmenschliche Routinen
+
+Die Studie soll nicht einfach einen Witz erzählen.
+
+Aus dem banalen Gegenstand soll eine scheinbar ernsthafte Forschungsfrage entstehen.
+
+==================================================
+11. METHODISCHE SATIRE
+======================
+
+Die Methodik soll unnötig präzise und wissenschaftlich wirken.
+
+Mögliche Elemente:
+
+* kleine Stichproben
+* Forschende als Versuchspersonen
+* fragwürdige Kontrollgruppen
+* Randomisierung unnötiger Vorgänge
+* Doppelblindverfahren für triviale Untersuchungen
+* absurd kurze „Langzeitstudien“
+* selbst entwickelte Skalen
+* künstliche Indizes
+* überpräzise Messungen
+* komplizierte statistische Modelle
+* fragwürdige Ausschlusskriterien
+* nachträgliche Parameteranpassungen
+* Replikationen unter nahezu identischen Bedingungen
+* Meta-Analysen aus wenigen Vorarbeiten
+
+Die Methodik soll immer zum jeweiligen Thema passen.
+
+Nicht wahllos möglichst viele Gags einbauen.
+
+==================================================
+12. STATISTISCHE SATIRE
+=======================
+
+Statistische Ergebnisse sollen präzise und glaubwürdig formuliert werden.
+
+Geeignet sind:
+
+* sehr kleine Stichproben
+* überpräzise p-Werte
+* Konfidenzintervalle
+* Effektstärken
+* Korrelationen
+* künstliche Indizes
+* statistisch signifikante, aber praktisch belanglose Effekte
+* mathematisch aufwendige Modelle für triviale Phänomene
+
+Die Zahlen müssen innerhalb des Papers konsistent bleiben.
+
+Die statistische Präzision soll einen Kontrast zur praktischen Bedeutungslosigkeit der Ergebnisse erzeugen.
+
+==================================================
+13. ERGEBNISSE
+==============
+
+Die Ergebnisse sollen konkrete Zahlen und Beobachtungen enthalten.
+
+Nicht lediglich:
+
+„Die Hypothese wurde bestätigt.“
+
+Stattdessen sollen beispielsweise konkrete Stichprobengrößen, Mittelwerte, Prozentsätze, Zeitangaben, Effektstärken oder statistische Kennwerte verwendet werden.
+
+Die Ergebnisse sollen wissenschaftlich beeindruckend erscheinen, obwohl die eigentliche Erkenntnis banal ist.
+
+==================================================
+14. DISKUSSION
+==============
+
+Die Autoren interpretieren die Ergebnisse vollkommen ernst.
+
+Aus kleinen oder trivialen Beobachtungen dürfen weitreichende wissenschaftliche Schlussfolgerungen abgeleitet werden.
+
+Eine banale Alltagshandlung kann beispielsweise als bislang unterschätzter gesellschaftlicher Faktor interpretiert werden.
+
+Die Diskussion darf die Grenzen der Studie erwähnen, soll aber dennoch den Eindruck vermitteln, dass die Ergebnisse wissenschaftlich bedeutsam sind.
+
+==================================================
+15. LIMITATIONEN
+================
+
+Die Limitationen sollen realistisch und zugleich subtil satirisch sein.
+
+Beispielsweise:
+
+* geringe Stichprobe
+* kurze Beobachtungsdauer
+* fehlende externe Validierung
+* interne Versuchspersonen
+* subjektive Messgrößen
+* unzureichende Kontrollgruppe
+* fehlende Replikation
+
+Die Autoren sollen diese Einschränkungen nicht als Beweis dafür interpretieren, dass ihre Studie wertlos ist.
+
+Stattdessen wird weitere Forschung vorgeschlagen.
+
+==================================================
+16. LITERATUR
+=============
+
+Verwende einen glaubwürdigen wissenschaftlichen Literaturapparat.
+
+Die Literatur darf vollständig fiktiv sein.
+
+Keine real existierenden wissenschaftlichen Arbeiten kopieren.
+
+Die Literatur soll inhaltlich zur Studie passen.
+
+Fiktive Vorarbeiten dürfen ebenfalls banale oder absurde Forschungsgegenstände behandeln.
+
+Die Literatur soll nicht wie eine Liste von Witzen wirken.
+
+Sie soll wie ein tatsächlich existierender wissenschaftlicher Forschungsstand erscheinen.
+
+==================================================
+17. SPRACHE
+===========
+
+Verwende:
+
+* sachliche Sprache
+* formale wissenschaftliche Sprache
+* präzise Terminologie
+* distanzierte Darstellung
+* methodische Genauigkeit
+
+Vermeide:
+
+* Umgangssprache
+* offensichtliche Comedy
+* Slapstick
+* Meme-Sprache
+* direkte Leseransprache
+* erklärende Pointen
+* übertriebene Wortspiele
+
+Die Komik soll aus dem wissenschaftlichen Inhalt entstehen.
+
+==================================================
+18. POINTIERUNG
+===============
+
+Jede größere Sektion soll mindestens ein konkretes satirisches Detail enthalten.
+
+Besonders wirkungsvoll sind:
+
+* unnötig präzise Messungen
+* lächerlich kleine Stichproben
+* wissenschaftlich formulierte Selbstverständlichkeiten
+* überkomplexe Methoden
+* statistisch signifikante Banalitäten
+* absurde Kontrollgruppen
+* kurze „Langzeitstudien“
+* Replikationen derselben Situation
+* künstlich entwickelte Indizes
+* weitreichende Schlussfolgerungen aus minimalen Daten
+
+Die Details müssen jeweils zum Thema passen.
+
+==================================================
+19. METHODIUS-INSTITUT
+======================
+
+Falls eine Affiliation genannt wird, darf ausschließlich folgende Institution verwendet werden:
+
+Methodius-Institut für angewandte Lebenswissenschaften
+
+Falls ein Ort genannt wird:
+
+Neu-Koorrelationsburg
+
+Keine anderen Universitäten, Institute oder Forschungseinrichtungen erfinden.
+
+Keine E-Mail-Adressen.
+
+==================================================
+20. INDIVIDUALITÄT
+==================
+
+Jedes Paper soll eigenständig wirken.
+
+Nicht immer dieselben:
+
+* Stichprobengrößen
+* statistischen Witze
+* Methoden
+* Formulierungen
+* Literaturmuster
+* Schlussfolgerungen
+
+Die satirischen Elemente müssen aus dem jeweiligen Forschungsgegenstand entstehen.
+
+==================================================
+21. ÜBERSCHRIFTEN
+=================
+
+Verwende Markdown-Überschriften ab Ebene `##`.
+
+Beispielsweise:
+
+## Einleitung
+
+### Forschungsfrage
+
+### Hypothesen
+
+## Methodik
+
+### Stichprobe
+
+### Studiendesign
+
+### Datenerhebung
+
+## Ergebnisse
+
+### Primäre Analyse
+
+## Diskussion
+
+### Interpretation
+
+### Limitationen
+
+## Fazit
+
+Die konkrete Struktur darf angepasst werden.
+
+Vom jeweiligen Master Prompt vorgegebene Überschriften haben Vorrang.
+
+==================================================
+22. ABSCHLIESSENDE AUSGABEREGEL
+===============================
+
+Das gesamte Ergebnis muss in **einem einzigen kopierbaren Feld** ausgegeben werden.
+
+Innerhalb dieses Feldes befindet sich ausschließlich die fertige `paper.md`.
+
+Keine Erklärung vor dem Feld.
+
+Keine Erklärung nach dem Feld.
+
+Keine zusätzliche Formatierung außerhalb des Feldes.
+
+Die erste Zeile muss exakt sein:
+
+---
+
+Die Frontmatter muss bis einschließlich Abstract exakt dem oben vorgegebenen Format entsprechen.
+
+Nach dem abschließenden `---` folgt der vollständige Markdown-Artikel.
+
+Die Datei muss unmittelbar als `paper.md` gespeichert und anschließend von `paperdoc.py` verarbeitet werden können.
