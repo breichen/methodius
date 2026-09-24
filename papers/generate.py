@@ -5,8 +5,13 @@ Methodius Paper Generator
 Usage:
     python generate.py papers/example-aevidence/main.tex
     python generate.py papers/example-aevidence/main.tex --spread
+    python generate.py papers/mein-satire-artikel/paper.md
 
 The script:
+0. if given a paper.md (frontmatter + Markdown) instead of a .tex file,
+   first generates a main.tex from it next to the source file — this is
+   the "extra first output" step, also copied to output/tex/ so it's
+   visible alongside the PDF/PNG outputs,
 1. finds the journal template (templates/<name>/<name>.cls) that the paper's
    \\documentclass refers to and makes it visible to LaTeX,
 2. compiles the LaTeX file twice with LuaLaTeX,
@@ -17,6 +22,9 @@ The script:
      spread. If the paper only has one page, a blank second page is added
      so the spread still looks like a real double page. This mode needs
      Pillow (`pip install Pillow`).
+
+paper.md is optional: a hand-written main.tex can still be passed directly
+and is compiled exactly as before. See paperdoc.py for the paper.md format.
 """
 
 from __future__ import annotations
@@ -28,10 +36,13 @@ import shutil
 import subprocess
 from pathlib import Path
 
+import paperdoc
+
 
 ROOT = Path(__file__).resolve().parent
 OUT_PDF = ROOT / "output" / "pdf"
 OUT_PNG = ROOT / "output" / "png"
+OUT_TEX = ROOT / "output" / "tex"
 TEMPLATES_DIR = ROOT / "templates"
 
 DOCUMENTCLASS_RE = re.compile(r"\\documentclass(?:\[[^\]]*\])?\{([^}]+)\}")
@@ -227,13 +238,29 @@ def render_spread_png(pdf: Path, output_png: Path) -> bool:
         shutil.rmtree(tmp_dir, ignore_errors=True)
 
 
+def generate_tex_from_markdown(md_path: Path) -> Path:
+    """Convert a paper.md into main.tex next to it; return the new .tex path.
+
+    Raises paperdoc.PaperDocError with a human-readable message on anything
+    wrong with the paper.md's structure or content.
+    """
+    tex_source = paperdoc.convert_paper_md(md_path, TEMPLATES_DIR)
+    tex_path = md_path.parent / "main.tex"
+    tex_path.write_text(tex_source, encoding="utf-8")
+    return tex_path
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Compile a Methodius paper and render a PNG preview."
     )
     parser.add_argument(
-        "tex_file",
-        help="Path to the paper's main.tex, e.g. papers/example-aevidence/main.tex",
+        "input_file",
+        help=(
+            "Path to the paper's main.tex, or to a paper.md "
+            "(frontmatter + Markdown, see paperdoc.py) that main.tex is "
+            "generated from, e.g. papers/example-aevidence/main.tex"
+        ),
     )
     parser.add_argument(
         "--spread",
@@ -247,25 +274,38 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    tex = Path(args.tex_file).resolve()
-    if not tex.exists():
-        print(f"File not found: {tex}")
+    source = Path(args.input_file).resolve()
+    if not source.exists():
+        print(f"File not found: {source}")
         return 2
 
-    if tex.suffix.lower() != ".tex":
-        print("The input must be a .tex file.")
+    if source.suffix.lower() == ".md":
+        try:
+            tex = generate_tex_from_markdown(source)
+        except paperdoc.PaperDocError as exc:
+            print(f"ERROR: {exc}")
+            return 1
+        OUT_TEX.mkdir(parents=True, exist_ok=True)
+        tex_copy = OUT_TEX / f"{tex.parent.name}.tex"
+        shutil.copy2(tex, tex_copy)
+        print(f"Erzeugt: {tex} (aus {source.name})")
+        print(f"  Kopie: {tex_copy}")
+        print()
+    elif source.suffix.lower() == ".tex":
+        tex = source
+    else:
+        print("The input must be a .tex or a paper.md file.")
         return 2
 
     workdir = tex.parent
     stem = tex.stem
     pdf = workdir / f"{stem}.pdf"
 
-    # Every paper is conventionally called main.tex, so using tex.stem alone
-    # for the output filename would make every paper overwrite the same
-    # output/pdf/main.pdf and output/png/main.png. Use the paper's own
-    # folder name instead (e.g. "example-aevidence") when the file is
-    # actually called "main", so each paper gets its own output file.
-    output_name = workdir.name if stem == "main" else stem
+    # Papers live in their own folder by convention (papers/<name>/...), so
+    # that folder name is used for the output filename — this keeps every
+    # paper's output distinct even though the .tex file itself is always
+    # called main.tex (whether hand-written or generated from paper.md).
+    output_name = workdir.name
 
     if not shutil.which("lualatex"):
         print("ERROR: lualatex was not found in PATH.")
