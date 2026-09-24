@@ -44,6 +44,8 @@ OUT_PDF = ROOT / "output" / "pdf"
 OUT_PNG = ROOT / "output" / "png"
 OUT_TEX = ROOT / "output" / "tex"
 TEMPLATES_DIR = ROOT / "templates"
+DATA_DIR = ROOT / "data"
+PUBLICATIONS_PATH = DATA_DIR / "veroeffentlichungen.json"
 
 DOCUMENTCLASS_RE = re.compile(r"\\documentclass(?:\[[^\]]*\])?\{([^}]+)\}")
 
@@ -241,10 +243,14 @@ def render_spread_png(pdf: Path, output_png: Path) -> bool:
 def generate_tex_from_markdown(md_path: Path) -> Path:
     """Convert a paper.md into main.tex next to it; return the new .tex path.
 
+    Fields the paper.md omits (title, authors, volume, issue, year, date,
+    pages) are looked up in PUBLICATIONS_PATH via the paper.md's `slug`,
+    see paperdoc.py.
+
     Raises paperdoc.PaperDocError with a human-readable message on anything
     wrong with the paper.md's structure or content.
     """
-    tex_source = paperdoc.convert_paper_md(md_path, TEMPLATES_DIR)
+    tex_source = paperdoc.convert_paper_md(md_path, TEMPLATES_DIR, PUBLICATIONS_PATH)
     tex_path = md_path.parent / "main.tex"
     tex_path.write_text(tex_source, encoding="utf-8")
     return tex_path

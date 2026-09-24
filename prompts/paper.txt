@@ -24,8 +24,27 @@ Keine Kommentare.
 Der Inhalt des Feldes muss direkt als `paper.md` gespeichert werden können.
 
 ==================================================
-2. FRONTMATTER – EXAKTE STRUKTUR
-================================
+
+2. EINGABEDATEN
+   ================
+
+Für das Paper werden folgende Werte vorgegeben:
+
+* `slug`
+* `journal`
+
+Der Wert von `slug` wird dem Prompt mitgegeben und muss **eins zu eins übernommen werden**.
+
+Der Wert von `journal` wird dem Prompt mitgegeben und muss **eins zu eins übernommen werden**.
+
+Erfinde oder verändere diese beiden Werte nicht.
+
+Alle übrigen bibliografischen Angaben werden vom Modell passend zum jeweiligen Paper selbst erzeugt.
+
+==================================================
+
+3. FRONTMATTER – EXAKTE STRUKTUR
+   =================================
 
 Die Datei beginnt mit einer Frontmatter, die sich **bis einschließlich des Abstracts exakt an folgendem Beispiel orientiert**:
 
@@ -37,21 +56,23 @@ title: Zur kontrollierten Fehlberatung als angewandte Lebenshilfe
 subtitle: Ein konzeptioneller und empirischer Beitrag zur systematischen Optimierung alltagspraktischer Fehlentscheidungen
 shorttitle: Kontrollierte Fehlberatung
 authors:
-  - Dr. Maximilian Methodius
-  - Prof. Dr. Hildegard Wankelmuth
-keywords:
-  - Fehlberatung
-  - angewandte Lebenshilfe
-  - Alltagsentscheidungen
-  - Beratungseffekte
-  - Entscheidungsqualität
-volume: 1
-issue: 1
-year: 2026
-date: 16.10.2026
-pages: 1--13
-abstract: |
+
+* Dr. Maximilian Methodius
+* Prof. Dr. Hildegard Wankelmuth
+  keywords:
+* Fehlberatung
+* angewandte Lebenshilfe
+* Alltagsentscheidungen
+* Beratungseffekte
+* Entscheidungsqualität
+  volume: 1
+  issue: 1
+  year: 2026
+  date: 16.10.2026
+  pages: 1--13
+  abstract: |
   Die vorliegende Untersuchung befasst sich mit der Frage, unter welchen Bedingungen eine gezielt fehlerhafte Beratung einen höheren praktischen Nutzen entfalten kann als eine inhaltlich korrekte, jedoch entscheidungsintensivierende Beratung. Ausgangspunkt ist die Beobachtung, dass ein erheblicher Anteil alltäglicher Beratungsanlässe nicht durch einen Mangel an verfügbaren Informationen, sondern durch eine Überversorgung mit Entscheidungsmöglichkeiten gekennzeichnet ist. In einer explorativen Studie mit sieben Versuchspersonen wurde untersucht, wie sich drei Beratungsformen – sachlich korrekte Beratung, bewusst unvollständige Beratung und kontrollierte Fehlberatung – auf Entscheidungsdauer, wahrgenommene Sicherheit und nachträgliche Zufriedenheit auswirken. Die Ergebnisse zeigen eine deutliche Verkürzung der Entscheidungsdauer unter kontrollierter Fehlberatung bei gleichzeitig erhöhtem subjektivem Sicherheitsempfinden. Die beobachtete Fehlentscheidungsquote war zwar höher als unter korrekter Beratung, blieb jedoch unterhalb der vorab definierten praktischen Relevanzschwelle. Die Befunde werden dahingehend interpretiert, dass Beratung nicht ausschließlich an der sachlichen Richtigkeit ihrer Inhalte gemessen werden sollte, sondern auch an ihrer Fähigkeit, Entscheidungsvorgänge zu beenden. Die Studie liefert damit erste Hinweise auf ein eigenständiges Anwendungsfeld der kontrollierten Fehlberatung als ressourcenorientierte Form der angewandten Lebenshilfe.
+
 ---
 
 ### HARTE FORMATVORGABE
@@ -77,17 +98,90 @@ Insbesondere:
 * Es dürfen keine zusätzlichen Frontmatter-Felder eingefügt werden.
 * Es dürfen keine Felder entfernt werden.
 
-Die **Werte** der Felder werden natürlich an das jeweilige Paper angepasst.
+Die **Werte** der Felder werden an das jeweilige Paper angepasst.
+
+### WICHTIG ZU DEN VORGEGEBENEN EINGABEDATEN
+
+Der Wert von `slug` muss exakt dem mitgegebenen Wert entsprechen.
+
+Beispiel:
+
+Wenn als Eingabe
+
+`slug: kontrollierte-fehlberatung-lebenshilfe`
+
+vorgegeben ist, muss im Frontmatter exakt
+
+`slug: kontrollierte-fehlberatung-lebenshilfe`
+
+stehen.
+
+Keine Änderung der Schreibweise.
+
+Keine Übersetzung.
+
+Keine Umwandlung.
+
+Keine automatische Generierung eines neuen Slugs.
+
+Dasselbe gilt für `journal`.
+
+Der mitgegebene Journalname wird exakt übernommen.
 
 ==================================================
-3. JOURNAL
-==========
+
+4. VON DIR ZU ERZEUGENDE FRONTMATTER-FELDER
+   =============================================
+
+Erzeuge für das jeweilige Paper passende Werte für:
+
+`title:`
+Der vollständige Titel des Papers.
+
+`subtitle:`
+Ein wissenschaftlich klingender Untertitel, sofern passend.
+
+`shorttitle:`
+Eine kurze wissenschaftliche Bezeichnung des Papers.
+
+`authors:`
+Passende Autoren aus dem Methodius-Institut.
+
+`keywords:`
+Fünf passende wissenschaftliche Schlagwörter.
+
+`volume:`
+Ein plausibler Band.
+
+`issue:`
+Eine plausible Ausgabe.
+
+`year:`
+Ein plausibles Erscheinungsjahr.
+
+`date:`
+Ein plausibles Veröffentlichungsdatum im Format `TT.MM.JJJJ`.
+
+`pages:`
+Ein plausibler Seitenbereich im Format `Start--Ende`.
+
+`abstract:`
+Ein vollständiger wissenschaftlicher Abstract.
+
+Die bibliografischen Angaben müssen untereinander konsistent sein.
+
+`slug` und `journal` werden dagegen vorgegeben und dürfen nicht verändert werden.
+
+==================================================
+
+5. JOURNAL
+   ===========
 
 WICHTIG:
 
-`journal` enthält **nicht** den Namen eines technischen Templates oder ein internes Kürzel.
+Der Wert für `journal` wird vorgegeben und muss **eins zu eins übernommen** werden.
 
-`journal` enthält immer den **vollständig ausgeschriebenen Namen der fiktiven wissenschaftlichen Zeitschrift**.
+`journal` enthält den **vollständig ausgeschriebenen Namen der fiktiven wissenschaftlichen Zeitschrift**.
 
 Beispiel:
 
@@ -111,55 +205,10 @@ Der vollständige Journalname soll wie der Name einer real existierenden, seriö
 
 Der Name darf satirisch sein, soll aber auf den ersten Blick wie eine wissenschaftliche Zeitschrift klingen.
 
-Der Inhalt nach dem Bindestrich bzw. die konkreten Werte der Frontmatter sind grundsätzlich variabel und müssen passend zum jeweiligen Paper neu erzeugt werden.
-
 ==================================================
-4. BEDEUTUNG DER FRONTMATTER-FELDER
-===================================
 
-Verwende folgende Struktur:
-
-journal:
-Der vollständige Name der fiktiven wissenschaftlichen Zeitschrift.
-
-title:
-Der vollständige Titel des Papers.
-
-subtitle:
-Ein wissenschaftlich klingender Untertitel, sofern passend.
-
-shorttitle:
-Eine kurze wissenschaftliche Bezeichnung des Papers.
-
-authors:
-Die vorgegebenen Autoren in der vorgegebenen Reihenfolge.
-
-keywords:
-Fünf passende wissenschaftliche Schlagwörter.
-
-volume:
-Plausibler Band.
-
-issue:
-Plausible Ausgabe.
-
-year:
-Erscheinungsjahr.
-
-date:
-Plausibles Veröffentlichungsdatum.
-
-pages:
-Plausibler Seitenbereich.
-
-abstract:
-Vollständiger wissenschaftlicher Abstract.
-
-Die bibliografischen Angaben müssen untereinander konsistent sein.
-
-==================================================
-5. ABSTRACT
-===========
+6. ABSTRACT
+   ===========
 
 Der Abstract muss vollständig im Frontmatter stehen.
 
@@ -185,8 +234,9 @@ Die Autoren formulieren ihn vollständig ernst.
 Die Satire entsteht dadurch, dass eine banale oder absurde Forschungsfrage mit wissenschaftlicher Präzision behandelt wird.
 
 ==================================================
-6. NACH DEM FRONTMATTER
-=======================
+
+7. NACH DEM FRONTMATTER
+   =======================
 
 Nach dem abschließenden `---` beginnt der eigentliche Artikel als Markdown.
 
@@ -215,8 +265,9 @@ Keine künstlichen Layoutanweisungen.
 Das spätere Layout wird vollständig von `paperdoc.py` und dem jeweiligen Journal-Template erzeugt.
 
 ==================================================
-7. UMFANG
-=========
+
+8. UMFANG
+   =========
 
 Der Artikel muss umfangreich genug sein, um nach der automatischen Verarbeitung ungefähr **drei A4-Seiten in einem zweispaltigen wissenschaftlichen Layout** zu füllen.
 
@@ -245,8 +296,9 @@ Die konkrete Gliederung darf variieren.
 Vom Master Prompt vorgegebene Überschriften müssen berücksichtigt werden.
 
 ==================================================
-8. INHALTLICHE KOHÄRENZ
-=======================
+
+9. INHALTLICHE KOHÄRENZ
+   =======================
 
 Das gesamte Paper muss dieselbe Studie beschreiben.
 
@@ -263,8 +315,9 @@ Keine Methoden, die später nicht verwendet werden.
 Die Studie soll trotz ihrer Absurdität wie ein tatsächlich durchgeführtes Forschungsprojekt wirken.
 
 ==================================================
-9. WISSENSCHAFTLICHE HALTUNG
-============================
+
+10. WISSENSCHAFTLICHE HALTUNG
+    =============================
 
 Die Autoren nehmen ihre Forschung vollständig ernst.
 
@@ -284,8 +337,9 @@ Die Komik darf niemals erklärt werden.
 Der Leser soll sie selbst erkennen.
 
 ==================================================
-10. SATIRISCHER FORSCHUNGSGEGENSTAND
-====================================
+
+11. SATIRISCHER FORSCHUNGSGEGENSTAND
+    ====================================
 
 Untersuche ein banales, absurdes oder gesellschaftlich komisches Alltagsphänomen mit maximalem wissenschaftlichem Ernst.
 
@@ -313,8 +367,9 @@ Die Studie soll nicht einfach einen Witz erzählen.
 Aus dem banalen Gegenstand soll eine scheinbar ernsthafte Forschungsfrage entstehen.
 
 ==================================================
-11. METHODISCHE SATIRE
-======================
+
+12. METHODISCHE SATIRE
+    ======================
 
 Die Methodik soll unnötig präzise und wissenschaftlich wirken.
 
@@ -340,8 +395,9 @@ Die Methodik soll immer zum jeweiligen Thema passen.
 Nicht wahllos möglichst viele Gags einbauen.
 
 ==================================================
-12. STATISTISCHE SATIRE
-=======================
+
+13. STATISTISCHE SATIRE
+    =======================
 
 Statistische Ergebnisse sollen präzise und glaubwürdig formuliert werden.
 
@@ -361,8 +417,9 @@ Die Zahlen müssen innerhalb des Papers konsistent bleiben.
 Die statistische Präzision soll einen Kontrast zur praktischen Bedeutungslosigkeit der Ergebnisse erzeugen.
 
 ==================================================
-13. ERGEBNISSE
-==============
+
+14. ERGEBNISSE
+    ==============
 
 Die Ergebnisse sollen konkrete Zahlen und Beobachtungen enthalten.
 
@@ -375,8 +432,9 @@ Stattdessen sollen beispielsweise konkrete Stichprobengrößen, Mittelwerte, Pro
 Die Ergebnisse sollen wissenschaftlich beeindruckend erscheinen, obwohl die eigentliche Erkenntnis banal ist.
 
 ==================================================
-14. DISKUSSION
-==============
+
+15. DISKUSSION
+    ==============
 
 Die Autoren interpretieren die Ergebnisse vollkommen ernst.
 
@@ -387,8 +445,9 @@ Eine banale Alltagshandlung kann beispielsweise als bislang unterschätzter gese
 Die Diskussion darf die Grenzen der Studie erwähnen, soll aber dennoch den Eindruck vermitteln, dass die Ergebnisse wissenschaftlich bedeutsam sind.
 
 ==================================================
-15. LIMITATIONEN
-================
+
+16. LIMITATIONEN
+    ================
 
 Die Limitationen sollen realistisch und zugleich subtil satirisch sein.
 
@@ -407,8 +466,9 @@ Die Autoren sollen diese Einschränkungen nicht als Beweis dafür interpretieren
 Stattdessen wird weitere Forschung vorgeschlagen.
 
 ==================================================
-16. LITERATUR
-=============
+
+17. LITERATUR
+    =============
 
 Verwende einen glaubwürdigen wissenschaftlichen Literaturapparat.
 
@@ -425,8 +485,9 @@ Die Literatur soll nicht wie eine Liste von Witzen wirken.
 Sie soll wie ein tatsächlich existierender wissenschaftlicher Forschungsstand erscheinen.
 
 ==================================================
-17. SPRACHE
-===========
+
+18. SPRACHE
+    ===========
 
 Verwende:
 
@@ -449,8 +510,9 @@ Vermeide:
 Die Komik soll aus dem wissenschaftlichen Inhalt entstehen.
 
 ==================================================
-18. POINTIERUNG
-===============
+
+19. POINTIERUNG
+    ===============
 
 Jede größere Sektion soll mindestens ein konkretes satirisches Detail enthalten.
 
@@ -470,8 +532,9 @@ Besonders wirkungsvoll sind:
 Die Details müssen jeweils zum Thema passen.
 
 ==================================================
-19. METHODIUS-INSTITUT
-======================
+
+20. METHODIUS-INSTITUT
+    ======================
 
 Falls eine Affiliation genannt wird, darf ausschließlich folgende Institution verwendet werden:
 
@@ -486,8 +549,9 @@ Keine anderen Universitäten, Institute oder Forschungseinrichtungen erfinden.
 Keine E-Mail-Adressen.
 
 ==================================================
-20. INDIVIDUALITÄT
-==================
+
+21. INDIVIDUALITÄT
+    ==================
 
 Jedes Paper soll eigenständig wirken.
 
@@ -503,8 +567,9 @@ Nicht immer dieselben:
 Die satirischen Elemente müssen aus dem jeweiligen Forschungsgegenstand entstehen.
 
 ==================================================
-21. ÜBERSCHRIFTEN
-=================
+
+22. ÜBERSCHRIFTEN
+    =================
 
 Verwende Markdown-Überschriften ab Ebene `##`.
 
@@ -541,8 +606,9 @@ Die konkrete Struktur darf angepasst werden.
 Vom jeweiligen Master Prompt vorgegebene Überschriften haben Vorrang.
 
 ==================================================
-22. ABSCHLIESSENDE AUSGABEREGEL
-===============================
+
+23. ABSCHLIESSENDE AUSGABEREGEL
+    ===============================
 
 Das gesamte Ergebnis muss in **einem einzigen kopierbaren Feld** ausgegeben werden.
 
