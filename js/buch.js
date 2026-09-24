@@ -19,7 +19,7 @@ function baueDatumsHinweis(buch) {
   const zeilen = [];
 
   // Bandnummer anhand der Reihenfolge in ratgeberListe bestimmen
-  const bandnummer = ratgeberListe.findIndex(r => r.slug === buch.slug) + 1;
+  const bandnummer = buch.id;
 
   if (bandnummer > 0) {
     zeilen.push(`<p class="buch-datum">BAND ${bandnummer}</p>`);
