@@ -369,7 +369,7 @@ async function zeigeStudienfortschritt() {
                             : `
                               <a
                                 class="studienfortschritt-link"
-                                href="buch.html?titel=${encodeURIComponent(buch.lehrgang)}"
+                                href="buch.html?titel=${encodeURIComponent(buch.titel)}"
                               >
                                 Zum Ratgeber
                               </a>
