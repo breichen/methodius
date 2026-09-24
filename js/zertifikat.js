@@ -346,3 +346,377 @@ function erstelleZertifikat(name, lehrgang, anzahl) {
 
   });
 }
+
+
+/*
+ * ============================================================
+ * URKUNDE (für das komplett abgeschlossene Methodius-Studium)
+ * ============================================================
+ *
+ * Portierung von python/urkunde.py nach JavaScript, damit die
+ * Urkunde direkt im Browser als echtes PDF erzeugt wird (mit
+ * jsPDF) statt als Screenshot-PNG - läuft komplett clientseitig,
+ * ohne eigenes Backend, und funktioniert daher auch auf GitHub
+ * Pages.
+ *
+ * Layout, Farben, Schriften und Texte sind bewusst 1:1 aus dem
+ * Python-Script übernommen. Einzige strukturelle Änderung: reportlab
+ * zählt y-Koordinaten von unten nach oben (Ursprung unten links),
+ * jsPDF von oben nach unten (Ursprung oben links). Die Hilfsfunktion
+ * yBasis()/yOben() unten übernimmt genau diese Umrechnung, damit die
+ * Positionsangaben unten exakt den "h - X * mm"-Werten aus
+ * urkunde.py entsprechen.
+ *
+ * Nutzt denselben Dialog-Rahmen wie das Einzel-Zertifikat oben
+ * (baueZertifikatGeruest / #zertifikat-overlay).
+ *
+ * Voraussetzung: Das jsPDF-Skript muss vor dieser Datei geladen sein
+ * (siehe <script>-Tag in der jeweiligen HTML-Seite).
+ */
+
+// Öffnet den Namens-Dialog für die Urkunde.
+function zeigeUrkundeDialog() {
+  const overlay = baueZertifikatGeruest();
+  const panel = document.getElementById("zertifikat-panel");
+
+  panel.innerHTML = `
+    <h3>Urkunde erstellen</h3>
+
+    <p>
+      Bitte gib deinen Namen ein, der auf der Urkunde erscheinen soll.
+    </p>
+
+    <p class="quiz-zertifikat-hinweis">
+      Name des zukünftigen Urkundenträgers:
+    </p>
+
+    <input
+      id="zertifikat-name"
+      type="text"
+      placeholder="Max Mustermann"
+      class="quiz-name-input">
+
+    <div class="quiz-ergebnis-buttons">
+      <button id="zertifikat-erstellen" class="quiz-zurueck-button" type="button">
+        Urkunde herunterladen
+      </button>
+
+      <button id="zertifikat-abbrechen" class="quiz-zurueck-button" type="button">
+        Abbrechen
+      </button>
+    </div>
+  `;
+
+  overlay.classList.add("is-open");
+
+  document
+    .getElementById("zertifikat-abbrechen")
+    .addEventListener("click", () => overlay.classList.remove("is-open"));
+
+  document
+    .getElementById("zertifikat-erstellen")
+    .addEventListener("click", () => {
+
+      const name =
+        document.getElementById("zertifikat-name").value.trim();
+
+      if (!name) {
+        alert("Bitte gib einen Namen ein.");
+        return;
+      }
+
+      overlay.classList.remove("is-open");
+      erstelleUrkunde(name);
+
+    });
+}
+
+// Lädt ein Bild von der eigenen Seite und wandelt es in eine
+// Data-URL um, damit jsPDF es per addImage() einbetten kann.
+async function ladeBildAlsDataUrl(pfad) {
+  const antwort = await fetch(pfad);
+  const blob = await antwort.blob();
+
+  return await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
+// Entspricht dateiname_sicher() aus urkunde.py.
+function dateinameSicher(text) {
+
+  const ersetzungen = {
+    "ä": "ae", "ö": "oe", "ü": "ue",
+    "Ä": "Ae", "Ö": "Oe", "Ü": "Ue",
+    "ß": "ss"
+  };
+
+  const ersetzt =
+    text.replace(
+      /[äöüÄÖÜß]/g,
+      zeichen => ersetzungen[zeichen]
+    );
+
+  return ersetzt.replace(/[^A-Za-z0-9_-]/g, "_");
+}
+
+// Erzeugt die Urkunde als PDF (per jsPDF) und startet den Download.
+async function erstelleUrkunde(name) {
+
+  const { jsPDF } = window.jspdf;
+
+  const MM = 2.8346456692913385; // = reportlab.lib.units.mm
+  const BLAU = "#1f2747";
+  const ROT = "#B5292C";
+  const BEIGE = "#f7f4ec";
+  const GRAU = "#666666";
+
+  const urkundennummer =
+    "MRV-" + (100000 + Math.floor(Math.random() * 900000));
+
+  const doc = new jsPDF({ unit: "pt", format: "a4" });
+
+  const w = doc.internal.pageSize.getWidth();
+  const h = doc.internal.pageSize.getHeight();
+
+  // Rechnet reportlab-y-Werte (Ursprung unten links, wie in
+  // urkunde.py) in jsPDF-y-Werte (Ursprung oben links) um.
+  const yBasis = yRL => h - yRL;
+  const yOben = (yRL, hoehe) => h - yRL - hoehe;
+
+  // --------------------------------------------------
+  // Hintergrund
+  // --------------------------------------------------
+
+  doc.setFillColor(BEIGE);
+  doc.rect(0, 0, w, h, "F");
+
+  // --------------------------------------------------
+  // Rahmen
+  // --------------------------------------------------
+
+  doc.setDrawColor(ROT);
+  doc.setLineWidth(4);
+  doc.rect(15 * MM, 15 * MM, w - 30 * MM, h - 30 * MM, "S");
+
+  // --------------------------------------------------
+  // Logo
+  // --------------------------------------------------
+
+  try {
+    const logo =
+      await ladeBildAlsDataUrl(
+        "assets/favicon/methodius-512x512-nobg.png"
+      );
+
+    doc.addImage(
+      logo,
+      "PNG",
+      w / 2 - 15 * MM,
+      yOben(h - 55 * MM, 30 * MM),
+      30 * MM,
+      30 * MM
+    );
+  } catch {
+    // Kein Logo verfügbar - Urkunde trotzdem ohne Logo erzeugen.
+  }
+
+  // --------------------------------------------------
+  // Institut
+  // --------------------------------------------------
+
+  doc.setTextColor(BLAU);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(16);
+
+  doc.text(
+    "METHODIUS-INSTITUT",
+    w / 2,
+    yBasis(h - 65 * MM),
+    { align: "center" }
+  );
+
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+
+  doc.text(
+    "für angewandte Lebenswissenschaften",
+    w / 2,
+    yBasis(h - 72 * MM),
+    { align: "center" }
+  );
+
+  // --------------------------------------------------
+  // Titel
+  // --------------------------------------------------
+
+  doc.setTextColor(ROT);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(28);
+
+  doc.text(
+    "URKUNDE",
+    w / 2,
+    yBasis(h - 100 * MM),
+    { align: "center" }
+  );
+
+  // --------------------------------------------------
+  // Text
+  // --------------------------------------------------
+
+  doc.setTextColor(BLAU);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(12);
+
+  doc.text(
+    "Hiermit wird bestätigt, dass",
+    w / 2,
+    yBasis(h - 120 * MM),
+    { align: "center" }
+  );
+
+  // --------------------------------------------------
+  // Name
+  // --------------------------------------------------
+
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(24);
+
+  doc.text(
+    name,
+    w / 2,
+    yBasis(h - 145 * MM),
+    { align: "center" }
+  );
+
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(12);
+
+  doc.text(
+    "nach Erfüllung sämtlicher Anforderungen des Methodius-Studiums",
+    w / 2,
+    yBasis(h - 165 * MM),
+    { align: "center" }
+  );
+
+  doc.text(
+    "der akademische Grad",
+    w / 2,
+    yBasis(h - 172 * MM),
+    { align: "center" }
+  );
+
+  // --------------------------------------------------
+  // Grad
+  // --------------------------------------------------
+
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(18);
+
+  doc.text(
+    "Magister der angewandten Lebenswissenschaften",
+    w / 2,
+    yBasis(h - 195 * MM),
+    { align: "center" }
+  );
+
+  doc.setFont("helvetica", "italic");
+  doc.setFontSize(14);
+
+  doc.text(
+    "(Mag. rer. vit.)",
+    w / 2,
+    yBasis(h - 203 * MM),
+    { align: "center" }
+  );
+
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(12);
+
+  doc.text(
+    "verliehen wird.",
+    w / 2,
+    yBasis(h - 220 * MM),
+    { align: "center" }
+  );
+
+  // --------------------------------------------------
+  // Urkundennummer
+  // --------------------------------------------------
+
+  doc.setFontSize(9);
+
+  doc.text(
+    `Urkundennummer: ${urkundennummer}`,
+    w / 2,
+    yBasis(h - 230 * MM),
+    { align: "center" }
+  );
+
+  // --------------------------------------------------
+  // Signatur
+  // --------------------------------------------------
+
+  const SIGNATUR_ORIG_W = 457;
+  const SIGNATUR_ORIG_H = 65;
+  const SIGNATUR_WIDTH = 60 * MM;
+  const SIGNATUR_HEIGHT =
+    SIGNATUR_WIDTH * SIGNATUR_ORIG_H / SIGNATUR_ORIG_W;
+
+  try {
+    const signatur =
+      await ladeBildAlsDataUrl(
+        "assets/signatur/methodius-signatur.png"
+      );
+
+    doc.addImage(
+      signatur,
+      "PNG",
+      w / 2 - 30 * MM,
+      yOben(h - 255 * MM, SIGNATUR_HEIGHT),
+      SIGNATUR_WIDTH,
+      SIGNATUR_HEIGHT
+    );
+  } catch {
+    // Keine Signatur verfügbar - Urkunde trotzdem ohne Bild erzeugen.
+  }
+
+  doc.setFontSize(11);
+
+  doc.text(
+    "Dr. Maximilien Methodius, Institutsleiter",
+    w / 2,
+    yBasis(h - 262 * MM),
+    { align: "center" }
+  );
+
+  // --------------------------------------------------
+  // Hinweis
+  // --------------------------------------------------
+
+  doc.setTextColor(GRAU);
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(8);
+
+  doc.text(
+    "Der verliehene Grad ist weder staatlich anerkannt noch von erkennbarem praktischem Nutzen.",
+    w / 2,
+    yBasis(25 * MM),
+    { align: "center" }
+  );
+
+  doc.text(
+    "Sein ideeller Wert wird vom Institut jedoch als außerordentlich hoch eingeschätzt.",
+    w / 2,
+    yBasis(21 * MM),
+    { align: "center" }
+  );
+
+  doc.save(
+    `urkunde_${urkundennummer}_${dateinameSicher(name)}.pdf`
+  );
+}

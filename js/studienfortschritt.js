@@ -369,7 +369,7 @@ async function zeigeStudienfortschritt() {
                             : `
                               <a
                                 class="studienfortschritt-link"
-                                href="buch.html?titel=${encodeURIComponent(buch.titel)}"
+                                href="buch.html?titel=${encodeURIComponent(buch.lehrgang)}"
                               >
                                 Zum Ratgeber
                               </a>
@@ -450,6 +450,20 @@ async function zeigeStudienfortschritt() {
               werden angerechnet.
           </p>
 
+          ${
+            studiumAbgeschlossen === studiumGesamt
+              ? `
+                <button
+                  type="button"
+                  id="urkunde-button"
+                  class="quiz-zurueck-button"
+                >
+                  🎓 Urkunde herunterladen
+                </button>
+              `
+              : ""
+          }
+
       </div>
 
 
@@ -468,6 +482,23 @@ async function zeigeStudienfortschritt() {
       </div>
 
     `;
+
+
+    /*
+     * =====================================================
+     * URKUNDE-BUTTON
+     * =====================================================
+     */
+
+    const urkundeButton =
+      document.getElementById("urkunde-button");
+
+    if (urkundeButton) {
+      urkundeButton.addEventListener(
+        "click",
+        () => zeigeUrkundeDialog()
+      );
+    }
 
 
     /*
