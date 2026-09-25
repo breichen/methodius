@@ -5,11 +5,10 @@ ready-to-compile main.tex for one of the Methodius journal templates.
 paper.md format
 ----------------
 
-The short form — everything but `journal`, `slug` and `abstract` is looked
-up in data/veroeffentlichungen.json via `slug`:
+The short form — everything but `slug` and `abstract` is looked up in
+data/veroeffentlichungen.json via `slug`:
 
     ---
-    journal: Archiv für Ausreichende Evidenz
     slug: empirische-plausibilitaet-datenlage
     abstract: |
       Zusammenfassung des Beitrags. Kann sich über
@@ -25,8 +24,8 @@ up in data/veroeffentlichungen.json via `slug`:
     - Ein Punkt
     - Noch ein Punkt
 
-`title`, `authors`, `volume`, `issue`, `year`, `date` and `pages` are filled
-in from the veroeffentlichungen.json entry whose `slug` matches (its
+journal`, `title`, `authors`, `volume`, `issue`, `year`, `date` and `pages` are
+filled in from the veroeffentlichungen.json entry whose `slug` matches (its
 `band`/`heft` fields become `volume`/`issue`, `seite_start`/`seite_ende`
 become `pages`, and `datum` becomes both `date` and `year`). Any of them can
 still be given directly in the frontmatter — an explicit value always wins
@@ -34,8 +33,8 @@ over the looked-up one, so a paper.md can override a single field (e.g. a
 corrected `pages:`) without repeating everything else:
 
     ---
-    journal: Archiv für Ausreichende Evidenz
     slug: empirische-plausibilitaet-datenlage
+    journal: Archiv für Ausreichende Evidenz   # overrides the looked-up journal
     pages: 35--52        # overrides the looked-up value
     subtitle: Optionaler Untertitel
     shorttitle: Kurztitel für die Kopfzeile
@@ -48,11 +47,11 @@ corrected `pages:`) without repeating everything else:
 
     ...
 
-`journal`, `slug` and `abstract` are always required — `slug` because
-without it no lookup is possible. Everything else is optional; the
-underlying .cls files fall back to sensible defaults (and `keywords` is
-simply omitted from the output if not given — veroeffentlichungen.json has
-no keywords field, so these are never looked up, only hand-written).
+`slug` and `abstract` are always required — `slug` because without it no
+lookup is possible. Everything else is optional; the underlying .cls files fall
+back to sensible defaults (and `keywords` is simply omitted from the output if
+not given — veroeffentlichungen.json has no keywords field, so these are never
+looked up, only hand-written).
 
 This is intentionally NOT a general-purpose YAML/Markdown implementation —
 just enough of both to cover the fields and formatting a satire paper
@@ -74,7 +73,9 @@ class PaperDocError(ValueError):
 
 
 # `slug` is required (not just "title"/"authors") because without it the
-# data/veroeffentlichungen.json lookup can't happen at all.
+# data/veroeffentlichungen.json lookup can't happen at all. `journal` is no
+# longer required either — it, too, is normally looked up via `slug` (see
+# _PUBLICATION_LOOKUP_FIELDS below).
 REQUIRED_FIELDS = ("slug", "abstract")
 
 # Fields that, when missing from the frontmatter, are filled in from the
@@ -396,6 +397,14 @@ def build_paper_meta(data: dict, source: Path, data_path: Path) -> PaperMeta:
             f"oder den JSON-Eintrag ergänzen."
         )
 
+    journal = resolved("journal")
+    if journal is None:
+        raise PaperDocError(
+            f"{source}: 'journal' fehlt und der Eintrag zu slug '{slug}' in "
+            f"{data_path.name} hat kein 'journal'-Feld. Bitte 'journal' "
+            f"angeben oder den JSON-Eintrag ergänzen."
+        )
+
     authors_fm = data.get("authors")
     if authors_fm:
         if not isinstance(authors_fm, list):
@@ -416,13 +425,6 @@ def build_paper_meta(data: dict, source: Path, data_path: Path) -> PaperMeta:
     keywords = data.get("keywords", [])
     if keywords and not isinstance(keywords, list):
         raise PaperDocError(f"{source}: 'keywords' muss eine Liste sein.")
-
-    journal = resolved("journal")
-    if journal is None:
-        raise PaperDocError(
-            f"{source}: 'journal' fehlt und der Eintrag zu slug '{slug}' "
-            f"in {data_path.name} hat kein 'journal'-Feld."
-        )
 
     return PaperMeta(
         journal=journal,

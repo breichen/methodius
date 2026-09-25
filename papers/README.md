@@ -48,7 +48,6 @@ und fülle Frontmatter und Text aus:
 ```markdown
 ---
 slug: empirische-plausibilitaet-datenlage
-journal: Archiv für Ausreichende Evidenz
 subtitle: Ein optionaler Untertitel
 shorttitle: Kurztitel für die Kopfzeile
 keywords:
@@ -67,11 +66,30 @@ Hier steht dein Text, mit **fett**, *kursiv* und ganz normalen Absätzen.
 - funktionieren
 ```
 
-Pflichtfelder sind `slug` und `abstract` — alles
-andere ist optional; die Templates füllen sinnvolle Standardwerte, wo
-nichts angegeben wurde. Fehlt ein Pflichtfeld oder ist `journal` unbekannt,
-bricht der Generator mit einer klaren Fehlermeldung ab, bevor überhaupt
-LaTeX aufgerufen wird.
+Pflichtfelder sind nur `slug` und `abstract`. Alles andere — `journal`,
+`title`, `authors`, `volume`, `issue`, `year`, `date`, `pages` — wird über
+`slug` aus `data/veroeffentlichungen.json` nachgeschlagen. Ein Feld direkt
+im Frontmatter anzugeben überschreibt immer den nachgeschlagenen Wert, du
+kannst also z. B. nur `journal:` oder nur `pages:` gezielt überschreiben,
+ohne den Rest zu wiederholen:
+
+```markdown
+---
+slug: empirische-plausibilitaet-datenlage
+journal: Kritik & Evidenz   # überschreibt das Journal aus der JSON
+pages: 35--52               # überschreibt die Seitenzahl aus der JSON
+abstract: |
+  Hier steht der Abstract.
+---
+```
+
+`keywords` kommt nie aus der JSON (dort nicht vorgesehen) und wird, wenn
+weggelassen, im PDF einfach nicht angezeigt.
+
+Fehlt `slug` oder `abstract`, ist `slug` in `veroeffentlichungen.json`
+nicht zu finden, oder lässt sich weder aus Frontmatter noch JSON ein
+`journal`/`title`/`authors` ermitteln, bricht der Generator mit einer
+klaren Fehlermeldung ab, bevor überhaupt LaTeX aufgerufen wird.
 
 Unterstützt werden `##`/`###`/`####`-Überschriften, Absätze, `**fett**`,
 `*kursiv*`, `` `code` ``, sowie einfache `-`/`1.`-Listen (auch über mehrere
@@ -282,6 +300,40 @@ Ein Beitrag zur empirischen Plausibilität.
 ```
 
 Für umfangreichere Papers kann später problemlos BibLaTeX ergänzt werden.
+ 
+## Wichtig für alle `.cls`-Templates: optionale Felder korrekt speichern
+
+Da `journal`, `keywords`, `date`, `pages` usw. jetzt öfter mal fehlen
+(weil sie schlicht nicht in `veroeffentlichungen.json` stehen), muss jedes
+`.cls`-Template optionale Metadatenfelder so definieren, dass ein
+**nie aufgerufener** Setter nicht crasht. Das bisher verwendete Muster
+
+```latex
+\newcommand{\articlekeywords}{}
+\renewcommand{\articlekeywords}[1]{\gdef\articlekeywords{#1}}
+```
+
+ist dafür ungeeignet: Wird `\articlekeywords{...}` nie aufgerufen, bleibt
+`\articlekeywords` als 1-Parameter-Makro stehen (nicht als leerer Wert!),
+und ein späteres `\ifx\articlekeywords\empty` oder ein bloßes
+`\articlekeywords` im Fließtext bricht die Kompilierung mit einem
+kryptischen `minipage`/`center`-Fehler ab.
+
+Verwende stattdessen für jedes optionale Feld zwei getrennte Makros — ein
+Speicher-Makro mit garantiertem Leer-Default, und den öffentlichen Setter,
+der nur dieses Speicher-Makro füllt (genau das Muster, das `\subtitle`/
+`\@subtitle` bereits richtig macht):
+
+```latex
+\def\StoredArticlekeywords{}
+\newcommand{\articlekeywords}[1]{\gdef\StoredArticlekeywords{#1}}
+```
+
+und dann überall im Template `\StoredArticlekeywords` statt
+`\articlekeywords` zum *Lesen* verwenden (in `\ifx`-Prüfungen und bei der
+Anzeige) — der Setter-Aufruf `\articlekeywords{...}` in `main.tex` bleibt
+davon unberührt. Betrifft mindestens: `journalvolume`, `journalissue`,
+`journalyear`, `articledate`, `articlepages`, `articlekeywords`.
 
 ## Eigene Templates hinzufügen
 
