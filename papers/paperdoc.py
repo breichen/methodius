@@ -756,7 +756,10 @@ def _write_generated_script(script_path: Path, code: str) -> None:
     Only writes if the content actually changed, so the file's mtime stays
     put when the paper.md's code block is unchanged — that's what lets
     _run_figure_script's "skip if output is newer than script" check go on
-    working for inline code exactly as it does for an external file.
+    working for inline code exactly as it does for an external file. This
+    is also why generated scripts are kept on disk (in their own
+    generated/ folder, see _figure_to_latex) rather than cleaned up after
+    the run: deleting them would throw away that caching on every build.
     """
     header = (
         "# AUTO-GENERATED von generate.py aus einem eingebetteten\n"
@@ -771,7 +774,7 @@ def _write_generated_script(script_path: Path, code: str) -> None:
 
 
 def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path,
-                      inline_code: str | None = None) -> str:
+                      slug_prefix: str, inline_code: str | None = None) -> str:
     caption = match.group("caption").strip()
     image_path_str = match.group("path").strip()
     attrs = _parse_figure_attrs(match.group("attrs"))
@@ -787,7 +790,13 @@ def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path,
         )
 
     if inline_code is not None:
-        generated_script = resolved_path.with_suffix(".generated.py")
+        # Own folder per erzeugtem Dateityp (wie output/tex, output/pdf,
+        # output/png auf Projektebene): der generierte Code liegt nicht
+        # zwischen den händisch gepflegten Bildern in figures/, sondern in
+        # einem eigenen generated/-Ordner neben dem Paper, mit dem Slug als
+        # Dateinamens-Präfix, damit er eindeutig einem Paper zuzuordnen ist.
+        generated_dir = paper_dir / "generated"
+        generated_script = generated_dir / f"{slug_prefix}-{resolved_path.stem}.generated.py"
         _write_generated_script(generated_script, inline_code)
         _run_figure_script(
             str(generated_script.relative_to(paper_dir)),
@@ -823,14 +832,20 @@ def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path,
     return "\n".join(lines)
 
 
-def markdown_to_latex(body: str, source: Path) -> str:
+def markdown_to_latex(body: str, source: Path, slug: str | None = None) -> str:
     """Convert the small Markdown subset described in the module docstring.
 
     `source` is the paper.md path: its parent directory is where relative
     figure paths (e.g. "figures/diagramm.png") are resolved from, and it's
     used to name the file in error messages (missing image, bad label).
+
+    `slug` prefixes any auto-generated figure script's filename (see
+    _figure_to_latex) so it stays identifiable on its own. Falls back to
+    the paper's folder name if not given — the same fallback generate.py
+    uses for naming its own output files when no slug is known.
     """
     paper_dir = source.parent
+    slug_prefix = slug or paper_dir.name
 
     # Normalize line endings and split into blank-line-separated blocks,
     # while keeping heading lines and standalone figures as their own
@@ -899,7 +914,7 @@ def markdown_to_latex(body: str, source: Path) -> str:
                 inline_code = _is_fenced_code_block(blocks[idx + 1])
                 if inline_code is not None:
                     consumed = 2  # the ``` block right after belongs to this figure
-            out.append(_figure_to_latex(figure, paper_dir, source, inline_code=inline_code))
+            out.append(_figure_to_latex(figure, paper_dir, source, slug_prefix, inline_code=inline_code))
             idx += consumed
             continue
 
@@ -1066,6 +1081,6 @@ def convert_paper_md(
     data = parse_frontmatter(frontmatter_text)
     meta = build_paper_meta(data, md_path, data_path)
     template_slug = validate_journal(meta.journal, templates_dir)
-    body_latex = markdown_to_latex(body_text, md_path)
+    body_latex = markdown_to_latex(body_text, md_path, slug=meta.slug)
     tex_source = build_tex(meta, body_latex, md_path.name, template_slug)
     return tex_source, meta.slug

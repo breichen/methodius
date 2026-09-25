@@ -197,12 +197,22 @@ fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
 
 Der Code-Block wird genau wie die externe Variante behandelt: er läuft mit
 dem Paper-Ordner als Arbeitsverzeichnis und bekommt den Zielpfad als
-`sys.argv[1]`. Intern wird er dazu als `figures/pwerte.generated.py`
-neben das Bild geschrieben — diese Datei wird nur überschrieben, wenn sich
-der Code tatsächlich geändert hat, damit das Neuer-als-Skript-Caching von
-oben weiter funktioniert. Du kannst `figures/*.generated.py` bei Bedarf in
-die `.gitignore` aufnehmen, da sie deterministisch aus der `paper.md`
-regeneriert wird.
+`sys.argv[1]`. Intern wird er dazu nicht in `figures/` abgelegt (dort
+sollen nur echte Bilddateien liegen), sondern in einem eigenen
+`generated/`-Ordner direkt neben `figures/`, mit dem Slug des Papers als
+Dateinamens-Präfix — z. B. `generated/mein-slug-pwerte.generated.py` für
+die Abbildung `figures/pwerte.png`. Das entspricht demselben Muster, das
+`output/tex/`, `output/pdf/` und `output/png/` auf Projektebene für die
+fertigen Ausgabedateien verwenden: ein eigener Ordner pro Dateityp,
+Dateiname beginnt mit dem Slug.
+
+Diese generierte Datei wird bewusst **nicht** nach dem Lauf wieder
+gelöscht, sondern nur überschrieben, wenn sich der Code tatsächlich
+geändert hat — genau das lässt das Neuer-als-Skript-Caching von oben auch
+für eingebetteten Code weiter funktionieren. Ein Aufräumen nach jedem Lauf
+würde dieses Caching bei jedem Build wieder zunichtemachen. Du kannst
+`generated/` bei Bedarf in die `.gitignore` aufnehmen, da sein Inhalt
+deterministisch aus der `paper.md` regeneriert wird.
 
 Beide Varianten schließen sich pro Abbildung gegenseitig aus: `script=...`
 **und** ein eingebetteter Code-Block gleichzeitig ist ein Fehler, genau wie
