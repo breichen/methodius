@@ -54,7 +54,7 @@ not given — veroeffentlichungen.json has no keywords field, so these are never
 looked up, only hand-written).
 
 Abbildungen können optional von einem Python-Skript erzeugt werden, statt
-als fertige Bilddatei im Repo zu liegen:
+als fertige Bilddatei im Repo zu liegen — entweder als externe Datei:
 
     ![Verteilung der p-Werte über alle Studien](figures/pwerte.png){#fig:pwerte width=80% script=figures/pwerte.py}
 
@@ -68,6 +68,26 @@ die Bilddatei erzeugen, PNG oder PDF). Existiert die Bilddatei schon und
 ist neuer als das Skript, wird sie nicht neu erzeugt. Schlägt das Skript
 fehl oder erzeugt es die Datei nicht, bricht der Generator mit einer
 klaren Fehlermeldung ab, bevor LaTeX aufgerufen wird.
+
+Oder als eingebetteter Code-Block direkt unter der Abbildung, ohne
+Leerzeile dazwischen (dann kein `script=` angeben):
+
+    ![Verteilung der p-Werte über alle Studien](figures/pwerte.png){#fig:pwerte width=80%}
+    ```python
+    import sys
+    import matplotlib.pyplot as plt
+
+    fig, ax = plt.subplots()
+    ax.plot([1, 2, 3], [0.9, 0.4, 0.02])
+    fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
+    ```
+
+Der Code-Block wird 1:1 wie die externe Variante behandelt: er wird als
+`<bildname>.generated.py` neben das Bild geschrieben (nur überschrieben,
+wenn sich der Code tatsächlich geändert hat, damit das Neuer-als-Skript-
+Caching weiter funktioniert) und genauso ausgeführt. `script=...` und ein
+eingebetteter Code-Block schließen sich pro Abbildung gegenseitig aus, und
+ein Code-Block, der nicht direkt auf eine Abbildung folgt, ist ein Fehler.
 
 This is intentionally NOT a general-purpose YAML/Markdown implementation —
 just enough of both to cover the fields and formatting a satire paper
@@ -580,6 +600,15 @@ _FIGURE_RE = re.compile(
     r"(?:\{(?P<attrs>[^}]*)\})?$"
 )
 
+# A fenced code block, used to embed a figure's diagram script directly in
+# the paper.md instead of pointing at an external script= file:
+#   ```python
+#   ...
+#   ```
+# Must directly follow a figure line (no blank line in between) to be
+# recognized as that figure's script — see _is_fenced_code_block().
+_CODE_FENCE_RE = re.compile(r"^```(\w+)?\s*$")
+
 # Cross-reference to a figure/table label in running text: @fig:some-id or
 # @tab:some-id, turned into \ref{fig:some-id} / \ref{tab:some-id}.
 _CROSSREF_RE = re.compile(r"@((?:fig|tab):[\w-]+)")
@@ -707,7 +736,42 @@ def _run_figure_script(script_str: str, resolved_path: Path, paper_dir: Path,
         )
 
 
-def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path) -> str:
+def _is_fenced_code_block(block: list[str]) -> str | None:
+    """If `block` is a fenced code block (```[lang] ... ```), return the
+    code inside (fence lines stripped); else None."""
+    if len(block) < 2:
+        return None
+    if not _CODE_FENCE_RE.match(block[0].strip()):
+        return None
+    if block[-1].strip() != "```":
+        return None
+    return "\n".join(block[1:-1])
+
+
+def _write_generated_script(script_path: Path, code: str) -> None:
+    """Write an inline figure code block out to `script_path` so it can run
+    through the same _run_figure_script() machinery as an external script=
+    file.
+
+    Only writes if the content actually changed, so the file's mtime stays
+    put when the paper.md's code block is unchanged — that's what lets
+    _run_figure_script's "skip if output is newer than script" check go on
+    working for inline code exactly as it does for an external file.
+    """
+    header = (
+        "# AUTO-GENERATED von generate.py aus einem eingebetteten\n"
+        "# Code-Block in der paper.md. Bitte nicht von Hand bearbeiten –\n"
+        "# Änderungen gehen beim nächsten Lauf verloren.\n\n"
+    )
+    content = header + code + ("\n" if not code.endswith("\n") else "")
+    if script_path.exists() and script_path.read_text(encoding="utf-8") == content:
+        return  # unchanged — keep the existing mtime so caching still works
+    script_path.parent.mkdir(parents=True, exist_ok=True)
+    script_path.write_text(content, encoding="utf-8")
+
+
+def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path,
+                      inline_code: str | None = None) -> str:
     caption = match.group("caption").strip()
     image_path_str = match.group("path").strip()
     attrs = _parse_figure_attrs(match.group("attrs"))
@@ -715,7 +779,21 @@ def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path) -> str:
     resolved_path = paper_dir / image_path_str
 
     script_str = attrs.get("script")
-    if script_str:
+    if script_str and inline_code is not None:
+        raise PaperDocError(
+            f"{source}: Abbildung '{image_path_str}' hat sowohl "
+            f"'script=...' als auch einen eingebetteten Python-Code-Block "
+            f"— bitte nur eine der beiden Varianten verwenden."
+        )
+
+    if inline_code is not None:
+        generated_script = resolved_path.with_suffix(".generated.py")
+        _write_generated_script(generated_script, inline_code)
+        _run_figure_script(
+            str(generated_script.relative_to(paper_dir)),
+            resolved_path, paper_dir, source, image_path_str,
+        )
+    elif script_str:
         _run_figure_script(script_str, resolved_path, paper_dir, source, image_path_str)
 
     if not resolved_path.exists():
@@ -763,13 +841,32 @@ def markdown_to_latex(body: str, source: Path) -> str:
 
     blocks: list[list[str]] = []
     current: list[str] = []
+    in_fence = False
     for line in lines:
-        if line.strip() == "":
+        stripped = line.strip()
+        if in_fence:
+            # Inside a ``` fence, blank lines don't split the block (a
+            # Python script legitimately has blank lines between imports,
+            # functions, etc.) — only the closing ``` ends it.
+            current.append(line)
+            if stripped == "```":
+                in_fence = False
+                blocks.append(current)
+                current = []
+            continue
+        if stripped == "":
             if current:
                 blocks.append(current)
                 current = []
             continue
-        if _HEADING_RE.match(line) or _FIGURE_RE.match(line.strip()):
+        if _CODE_FENCE_RE.match(stripped):
+            if current:
+                blocks.append(current)
+                current = []
+            current.append(line)
+            in_fence = True
+            continue
+        if _HEADING_RE.match(line) or _FIGURE_RE.match(stripped):
             if current:
                 blocks.append(current)
                 current = []
@@ -778,6 +875,8 @@ def markdown_to_latex(body: str, source: Path) -> str:
         current.append(line)
     if current:
         blocks.append(current)
+    if in_fence:
+        raise PaperDocError(f"{source}: Ein ```-Code-Block wurde nicht geschlossen.")
 
     out: list[str] = []
     idx = 0
@@ -794,9 +893,23 @@ def markdown_to_latex(body: str, source: Path) -> str:
 
         figure = _FIGURE_RE.match(block[0].strip()) if len(block) == 1 else None
         if figure:
-            out.append(_figure_to_latex(figure, paper_dir, source))
-            idx += 1
+            inline_code = None
+            consumed = 1
+            if idx + 1 < len(blocks):
+                inline_code = _is_fenced_code_block(blocks[idx + 1])
+                if inline_code is not None:
+                    consumed = 2  # the ``` block right after belongs to this figure
+            out.append(_figure_to_latex(figure, paper_dir, source, inline_code=inline_code))
+            idx += consumed
             continue
+
+        if _is_fenced_code_block(block) is not None:
+            raise PaperDocError(
+                f"{source}: Ein ```-Code-Block wurde gefunden, der nicht "
+                f"direkt einer Abbildung folgt. Code-Blöcke werden nur "
+                f"unterstützt, um direkt unter einer Abbildung ({{...}}) "
+                f"deren Diagramm-Skript einzubetten."
+            )
 
         if (
             len(block) >= 2

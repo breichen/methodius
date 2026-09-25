@@ -175,6 +175,41 @@ der Generator mit einer klaren Fehlermeldung (inkl. Skript-Traceback) ab,
 bevor überhaupt LaTeX aufgerufen wird — genau wie beim fehlenden-Bild-Fall
 oben.
 
+#### Diagramme: Code direkt in der paper.md statt in einer eigenen .py-Datei
+
+Statt auf `script=pfad/zu/datei.py` zu verweisen, kannst du den Python-Code
+auch direkt unter der Abbildungszeile einbetten — ohne Leerzeile
+dazwischen, sonst wird der Code-Block nicht mehr eindeutig dieser
+Abbildung zugeordnet:
+
+```markdown
+![Verteilung der p-Werte über alle Studien](figures/pwerte.png){#fig:pwerte width=80%}
+```python
+import sys
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+ax.plot([1, 2, 3], [0.9, 0.4, 0.02])
+ax.set_ylabel("p-Wert")
+fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
+```
+```
+
+Der Code-Block wird genau wie die externe Variante behandelt: er läuft mit
+dem Paper-Ordner als Arbeitsverzeichnis und bekommt den Zielpfad als
+`sys.argv[1]`. Intern wird er dazu als `figures/pwerte.generated.py`
+neben das Bild geschrieben — diese Datei wird nur überschrieben, wenn sich
+der Code tatsächlich geändert hat, damit das Neuer-als-Skript-Caching von
+oben weiter funktioniert. Du kannst `figures/*.generated.py` bei Bedarf in
+die `.gitignore` aufnehmen, da sie deterministisch aus der `paper.md`
+regeneriert wird.
+
+Beide Varianten schließen sich pro Abbildung gegenseitig aus: `script=...`
+**und** ein eingebetteter Code-Block gleichzeitig ist ein Fehler, genau wie
+ein Code-Block, der nicht direkt auf eine Abbildung folgt. Welche Variante
+du wählst, kannst du pro Abbildung frei entscheiden — beide funktionieren
+im selben Paper nebeneinander.
+
 #### Querverweise
 
 Im Fließtext auf eine Tabelle oder Abbildung verweisen:
