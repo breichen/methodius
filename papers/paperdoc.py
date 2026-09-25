@@ -53,6 +53,22 @@ back to sensible defaults (and `keywords` is simply omitted from the output if
 not given — veroeffentlichungen.json has no keywords field, so these are never
 looked up, only hand-written).
 
+Abbildungen können optional von einem Python-Skript erzeugt werden, statt
+als fertige Bilddatei im Repo zu liegen:
+
+    ![Verteilung der p-Werte über alle Studien](figures/pwerte.png){#fig:pwerte width=80% script=figures/pwerte.py}
+
+Ist `script=...` gesetzt, wird das Skript vor dem Kompilieren als
+
+    python <script> <absoluter Ausgabepfad>
+
+mit dem Paper-Ordner als Arbeitsverzeichnis ausgeführt (Skript bekommt den
+Zielpfad — hier `figures/pwerte.png` — als sys.argv[1] und muss dort exakt
+die Bilddatei erzeugen, PNG oder PDF). Existiert die Bilddatei schon und
+ist neuer als das Skript, wird sie nicht neu erzeugt. Schlägt das Skript
+fehl oder erzeugt es die Datei nicht, bricht der Generator mit einer
+klaren Fehlermeldung ab, bevor LaTeX aufgerufen wird.
+
 This is intentionally NOT a general-purpose YAML/Markdown implementation —
 just enough of both to cover the fields and formatting a satire paper
 typically needs, without adding a dependency beyond the Python standard
@@ -64,6 +80,8 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
+import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -634,12 +652,72 @@ def _figure_width_to_latex(width: str | None) -> str:
     return width  # a raw LaTeX length such as "5cm" or "0.8\\textwidth"
 
 
+def _run_figure_script(script_str: str, resolved_path: Path, paper_dir: Path,
+                        source: Path, image_path_str: str) -> None:
+    """Run the Python script behind a `script=...` figure attribute.
+
+    Contract: the script is invoked as
+        python <script> <absolute output path>
+    with the paper's own folder (`paper_dir`) as working directory (so a
+    script can e.g. open "data/messwerte.csv" relative to the paper, just
+    like figure paths are resolved). It must write the image (PNG or PDF)
+    to exactly the path it receives as its one argument — that path is the
+    already-resolved target of the `![...](...)` this attribute is on, so
+    the script never needs to hardcode or guess it.
+
+    Runs unconditionally unless the output already exists and is newer
+    than the script (mtime), in which case it's skipped — same idea as a
+    Makefile, so unrelated edits elsewhere in the paper don't force every
+    diagram to be recomputed on each build.
+    """
+    resolved_script = paper_dir / script_str
+    if not resolved_script.exists():
+        raise PaperDocError(
+            f"{source}: Diagramm-Skript nicht gefunden: {resolved_script} "
+            f"(referenziert als 'script={script_str}' bei '{image_path_str}')"
+        )
+
+    if (
+        resolved_path.exists()
+        and resolved_path.stat().st_mtime >= resolved_script.stat().st_mtime
+    ):
+        return  # output is already up to date, no need to re-run
+
+    resolved_path.parent.mkdir(parents=True, exist_ok=True)
+
+    print(f"$ python {resolved_script.relative_to(paper_dir)} -> {image_path_str}")
+    result = subprocess.run(
+        [sys.executable, str(resolved_script), str(resolved_path)],
+        cwd=paper_dir,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        tail = "\n".join(result.stderr.strip().splitlines()[-20:])
+        raise PaperDocError(
+            f"{source}: Diagramm-Skript '{script_str}' ist fehlgeschlagen "
+            f"(Exit-Code {result.returncode}):\n{tail}"
+        )
+    if not resolved_path.exists():
+        raise PaperDocError(
+            f"{source}: Diagramm-Skript '{script_str}' wurde erfolgreich "
+            f"ausgeführt, hat aber keine Datei unter '{resolved_path}' "
+            f"erzeugt. Das Skript muss sein einziges Kommandozeilen-"
+            f"argument (sys.argv[1]) als Ausgabepfad verwenden."
+        )
+
+
 def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path) -> str:
     caption = match.group("caption").strip()
     image_path_str = match.group("path").strip()
     attrs = _parse_figure_attrs(match.group("attrs"))
 
     resolved_path = paper_dir / image_path_str
+
+    script_str = attrs.get("script")
+    if script_str:
+        _run_figure_script(script_str, resolved_path, paper_dir, source, image_path_str)
+
     if not resolved_path.exists():
         raise PaperDocError(
             f"{source}: Bilddatei nicht gefunden: {resolved_path} "

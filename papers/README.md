@@ -131,6 +131,50 @@ LaTeX-Lauf, ob sie existiert, und bricht sonst mit einer klaren
 Fehlermeldung ab. `{#fig:...}` und `width=...` (z. B. `80%` oder `5cm`)
 sind optional; ohne `width` wird die volle Spalten-/Textbreite verwendet.
 
+#### Diagramme aus Python generieren
+
+Statt einer fertigen Bilddatei kann eine Abbildung auch von einem
+Python-Skript erzeugt werden, das im Zuge der Generierung läuft:
+
+```markdown
+![Verteilung der p-Werte über alle Studien](figures/pwerte.png){#fig:pwerte width=80% script=figures/pwerte.py}
+```
+
+Der Pfad in `![...](...)` bleibt der Zielpfad der Bilddatei (relativ zum
+Paper-Ordner, wie bisher) — `script=` gibt zusätzlich ein Python-Skript an
+(ebenfalls relativ zum Paper-Ordner), das diese Datei erst erzeugt. Vor
+dem LaTeX-Lauf ruft der Generator es auf als:
+
+```bash
+python figures/pwerte.py /absoluter/pfad/zu/figures/pwerte.png
+```
+
+mit dem Paper-Ordner als Arbeitsverzeichnis — das Skript bekommt seinen
+Ausgabepfad also als `sys.argv[1]` und muss dort exakt die Bilddatei
+(PNG oder PDF) ablegen, z. B. mit Matplotlib:
+
+```python
+import sys
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+ax.plot([1, 2, 3], [0.9, 0.4, 0.02])
+ax.set_ylabel("p-Wert")
+fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
+```
+
+Weil das Skript relativ zum Paper-Ordner läuft, kann es dort z. B. auch
+eine `data/messwerte.csv` einlesen, genau wie Bildpfade auch relativ zum
+Paper-Ordner aufgelöst werden.
+
+Existiert die Zieldatei schon und ist neuer als das Skript, wird sie
+**nicht** neu erzeugt (wie bei einem Makefile) — ein Re-Run über alle
+Diagramme erzwingst du, indem du die erzeugte(n) Bilddatei(en) löschst.
+Schlägt das Skript fehl oder legt es die erwartete Datei nicht an, bricht
+der Generator mit einer klaren Fehlermeldung (inkl. Skript-Traceback) ab,
+bevor überhaupt LaTeX aufgerufen wird — genau wie beim fehlenden-Bild-Fall
+oben.
+
 #### Querverweise
 
 Im Fließtext auf eine Tabelle oder Abbildung verweisen:
