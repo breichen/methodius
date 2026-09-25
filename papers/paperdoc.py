@@ -615,6 +615,12 @@ def build_tex(meta: PaperMeta, body_latex: str, source_name: str, template_slug:
         lines.append(f"\\articledate{{{meta.date}}}")
     if meta.pages:
         lines.append(f"\\articlepages{{{meta.pages}}}")
+
+        # Seitenzähler auf die erste Seite des Beitrags setzen
+        start_page = meta.pages.split("--", 1)[0].strip()
+        if start_page.isdigit():
+            lines.append(f"\\setcounter{{page}}{{{start_page}}}")
+
     lines.append("")
 
     lines.append(f"\\title{{{escape_latex(meta.title)}}}")
@@ -665,12 +671,15 @@ def convert_paper_md(
     folder.
 
     `data_path` is the veroeffentlichungen.json used to resolve a paper.md's
-    `slug`, if given. Defaults to data/veroeffentlichungen.json next to
-    `templates_dir` (i.e. templates_dir.parent / "data" / ...), which
-    matches this project's layout; pass it explicitly to override.
+    `slug`, if given. Defaults to data/veroeffentlichungen.json at the
+    project root — i.e. templates_dir.parent.parent / "data" / ..., since
+    `templates_dir` (e.g. .../papers/templates) lives inside the "papers"
+    folder alongside the paper folders and these .py files, while "data" is
+    a sibling of "papers" one level further up, not of "templates" itself.
+    Pass `data_path` explicitly to override.
     """
     if data_path is None:
-        data_path = templates_dir.parent / "data" / DEFAULT_PUBLICATIONS_FILENAME
+        data_path = templates_dir.parent.parent / "data" / DEFAULT_PUBLICATIONS_FILENAME
     text = md_path.read_text(encoding="utf-8")
     frontmatter_text, body_text = split_frontmatter(text)
     data = parse_frontmatter(frontmatter_text)
