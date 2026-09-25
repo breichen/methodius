@@ -62,7 +62,7 @@ OUT_PDF = ROOT / "output" / "pdf"
 OUT_PNG = ROOT / "output" / "png"
 OUT_TEX = ROOT / "output" / "tex"
 TEMPLATES_DIR = ROOT / "templates"
-DATA_DIR = ROOT / "data"
+DATA_DIR = ROOT.parent / "data"
 PUBLICATIONS_PATH = DATA_DIR / "veroeffentlichungen.json"
 
 DOCUMENTCLASS_RE = re.compile(r"\\documentclass(?:\[[^\]]*\])?\{([^}]+)\}")
