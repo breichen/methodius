@@ -23,6 +23,15 @@ The script:
      so the spread still looks like a real double page. This mode needs
      Pillow (`pip install Pillow`).
 
+Every output file (the main.tex copy in output/tex, the PDF, the PNG) is
+named after the paper's own slug (its `slug:` field, from paper.md /
+data/veroeffentlichungen.json) rather than its folder, so a paper's outputs
+stay identifiably its own wherever the folder is named. This works for a
+plain main.tex too, as long as it still carries the "% slug: ..." comment
+a paper.md-based generation writes into it; without that comment (a fully
+hand-written main.tex with no paper.md in its history), the folder name is
+used instead, exactly as before.
+
 paper.md is optional: a hand-written main.tex can still be passed directly
 and is compiled exactly as before. See paperdoc.py for the paper.md format.
 """
@@ -48,6 +57,7 @@ DATA_DIR = ROOT / "data"
 PUBLICATIONS_PATH = DATA_DIR / "veroeffentlichungen.json"
 
 DOCUMENTCLASS_RE = re.compile(r"\\documentclass(?:\[[^\]]*\])?\{([^}]+)\}")
+SLUG_COMMENT_RE = re.compile(r"^%\s*slug:\s*(\S+)\s*$", re.MULTILINE)
 
 PNG_DPI = 180
 SPINE_WIDTH_FRACTION = 0.018  # spine width relative to a single page's width
@@ -66,6 +76,18 @@ def find_documentclass(tex: Path) -> str | None:
     """Extract the class name from \\documentclass{...} in the .tex file."""
     text = tex.read_text(encoding="utf-8", errors="ignore")
     match = DOCUMENTCLASS_RE.search(text)
+    return match.group(1).strip() if match else None
+
+
+def find_paper_slug(tex: Path) -> str | None:
+    """Extract the paper's slug from a "% slug: ..." comment in the .tex file.
+
+    That comment is only present in main.tex files generated from a
+    paper.md (see paperdoc.build_tex); a hand-written main.tex has none,
+    and this returns None.
+    """
+    text = tex.read_text(encoding="utf-8", errors="ignore")
+    match = SLUG_COMMENT_RE.search(text)
     return match.group(1).strip() if match else None
 
 
@@ -240,20 +262,21 @@ def render_spread_png(pdf: Path, output_png: Path) -> bool:
         shutil.rmtree(tmp_dir, ignore_errors=True)
 
 
-def generate_tex_from_markdown(md_path: Path) -> Path:
-    """Convert a paper.md into main.tex next to it; return the new .tex path.
+def generate_tex_from_markdown(md_path: Path) -> tuple[Path, str]:
+    """Convert a paper.md into main.tex next to it; return (.tex path, slug).
 
     Fields the paper.md omits (title, authors, volume, issue, year, date,
     pages) are looked up in PUBLICATIONS_PATH via the paper.md's `slug`,
-    see paperdoc.py.
+    see paperdoc.py. The returned slug is the paper's own identifier (its
+    `slug:` field), used to name output files after the paper itself.
 
     Raises paperdoc.PaperDocError with a human-readable message on anything
     wrong with the paper.md's structure or content.
     """
-    tex_source = paperdoc.convert_paper_md(md_path, TEMPLATES_DIR, PUBLICATIONS_PATH)
+    tex_source, slug = paperdoc.convert_paper_md(md_path, TEMPLATES_DIR, PUBLICATIONS_PATH)
     tex_path = md_path.parent / "main.tex"
     tex_path.write_text(tex_source, encoding="utf-8")
-    return tex_path
+    return tex_path, slug
 
 
 def main() -> int:
@@ -285,20 +308,27 @@ def main() -> int:
         print(f"File not found: {source}")
         return 2
 
+    slug: str | None = None
+
     if source.suffix.lower() == ".md":
         try:
-            tex = generate_tex_from_markdown(source)
+            tex, slug = generate_tex_from_markdown(source)
         except paperdoc.PaperDocError as exc:
             print(f"ERROR: {exc}")
             return 1
         OUT_TEX.mkdir(parents=True, exist_ok=True)
-        tex_copy = OUT_TEX / f"{tex.parent.name}.tex"
+        tex_copy = OUT_TEX / f"{slug}.tex"
         shutil.copy2(tex, tex_copy)
         print(f"Erzeugt: {tex} (aus {source.name})")
         print(f"  Kopie: {tex_copy}")
         print()
     elif source.suffix.lower() == ".tex":
         tex = source
+        # No paper.md was involved this run, but the .tex may still carry
+        # the "% slug: ..." comment from an earlier paper.md-based
+        # generation — reuse it so output filenames stay stable across
+        # both entry points for the same paper.
+        slug = find_paper_slug(tex)
     else:
         print("The input must be a .tex or a paper.md file.")
         return 2
@@ -307,11 +337,13 @@ def main() -> int:
     stem = tex.stem
     pdf = workdir / f"{stem}.pdf"
 
-    # Papers live in their own folder by convention (papers/<name>/...), so
-    # that folder name is used for the output filename — this keeps every
-    # paper's output distinct even though the .tex file itself is always
-    # called main.tex (whether hand-written or generated from paper.md).
-    output_name = workdir.name
+    # Output files are named after the paper's own slug (from paper.md /
+    # veroeffentlichungen.json) whenever one is known, so every paper keeps
+    # a stable, unique output name regardless of its folder. Only a
+    # hand-written main.tex with no paper.md history falls back to the
+    # folder name (papers live in their own folder by convention,
+    # papers/<name>/..., which then still keeps outputs distinct).
+    output_name = slug or workdir.name
 
     if not shutil.which("lualatex"):
         print("ERROR: lualatex was not found in PATH.")

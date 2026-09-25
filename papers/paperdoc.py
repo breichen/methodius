@@ -134,6 +134,7 @@ OPTIONAL_SCALAR_FIELDS = {
 @dataclass
 class PaperMeta:
     journal: str
+    slug: str
     title: str
     authors: list[str]
     abstract: str
@@ -417,6 +418,7 @@ def build_paper_meta(data: dict, source: Path, data_path: Path) -> PaperMeta:
 
     return PaperMeta(
         journal=str(data["journal"]).strip(),
+        slug=slug.strip(),
         title=title,
         authors=authors,
         abstract=str(data["abstract"]),
@@ -589,13 +591,18 @@ def markdown_to_latex(body: str) -> str:
 # main.tex assembly
 # ---------------------------------------------------------------------------
 
-def build_tex(meta: PaperMeta, body_latex: str, source_name: str, slug: str) -> str:
+def build_tex(meta: PaperMeta, body_latex: str, source_name: str, template_slug: str) -> str:
     lines: list[str] = []
     lines.append(f"% AUTO-GENERATED von generate.py aus {source_name}.")
     lines.append("% Bitte NICHT von Hand bearbeiten – Änderungen gehen beim")
     lines.append("% nächsten Lauf verloren. Bearbeite stattdessen die .md-Datei.")
-    lines.append(f"% journal: {meta.journal}  (Template: {slug})")
-    lines.append(f"\\documentclass{{{slug}}}")
+    lines.append(f"% journal: {meta.journal}  (Template: {template_slug})")
+    # `slug` (the paper's own identifier, from veroeffentlichungen.json) is
+    # emitted as a machine-readable comment so generate.py can name output
+    # files after it even when compiling this main.tex directly, without
+    # going back through the original paper.md.
+    lines.append(f"% slug: {meta.slug}")
+    lines.append(f"\\documentclass{{{template_slug}}}")
     lines.append("")
 
     if meta.volume:
@@ -649,8 +656,13 @@ def convert_paper_md(
     md_path: Path,
     templates_dir: Path,
     data_path: Path | None = None,
-) -> str:
-    """Read a paper.md file and return the generated main.tex source.
+) -> tuple[str, str]:
+    """Read a paper.md file and return (main.tex source, paper slug).
+
+    The paper slug (`meta.slug`, from the paper.md's `slug:` field) is
+    returned alongside the .tex source so callers — namely generate.py —
+    can use it to name output files after the paper rather than after its
+    folder.
 
     `data_path` is the veroeffentlichungen.json used to resolve a paper.md's
     `slug`, if given. Defaults to data/veroeffentlichungen.json next to
@@ -663,6 +675,7 @@ def convert_paper_md(
     frontmatter_text, body_text = split_frontmatter(text)
     data = parse_frontmatter(frontmatter_text)
     meta = build_paper_meta(data, md_path, data_path)
-    slug = validate_journal(meta.journal, templates_dir)
+    template_slug = validate_journal(meta.journal, templates_dir)
     body_latex = markdown_to_latex(body_text)
-    return build_tex(meta, body_latex, md_path.name, slug)
+    tex_source = build_tex(meta, body_latex, md_path.name, template_slug)
+    return tex_source, meta.slug
