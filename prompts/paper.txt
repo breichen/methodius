@@ -179,14 +179,40 @@ Insbesondere:
 * `*Text*` für Kursivschrift
 * `-` für Aufzählungen
 * `1.` für nummerierte Listen
+* GitHub-Markdown-Tabellen für tabellarische Ergebnisse, mit optionaler Caption-Zeile direkt danach:
+
+  | Bedingung | n | Signifikant? |
+  | --- | :---: | ---: |
+  | Kontrolle | 24 | nein |
+
+  Table: Kurze Bildunterschrift {#tab:eindeutiges-label}
+
+  Die Trennzeile legt die Spaltenausrichtung fest (`---` links, `:---:` zentriert, `---:` rechts). Das Label in `{#tab:...}` ist optional, muss aber gesetzt sein, wenn im Fließtext per `@tab:...` auf die Tabelle verwiesen wird.
+
+* Abbildungen als alleinstehender Absatz (nichts sonst im selben Absatz) im Format:
+
+  ![Aussagekräftige Bildunterschrift](figures/eindeutiger-dateiname.png){#fig:eindeutiges-label width=70%}
+
+  Jede Abbildung MUSS ihr erzeugendes Diagramm-Skript direkt im selben Absatz mitliefern — ohne Leerzeile zwischen Abbildungszeile und Codeblock — als eingebetteten Python-Codeblock:
+
+  ![Aussagekräftige Bildunterschrift](figures/eindeutiger-dateiname.png){#fig:eindeutiges-label width=70%}
+  ```python
+  import sys
+  import matplotlib.pyplot as plt
+
+  # Werte exakt identisch zu den im Fließtext berichteten Zahlen
+  fig, ax = plt.subplots()
+  # ... Diagramm aufbauen ...
+  fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
+  ```
+
+  Das Skript nimmt seinen Ausgabepfad als `sys.argv[1]` entgegen und erzeugt dort exakt die Bilddatei (PNG oder PDF) — es wird von `paperdoc.py` automatisch ausgeführt. Es dürfen keine Abbildungen referenziert werden, deren Bilddatei nicht auf diese Weise (oder alternativ über `script=pfad/zu/datei.py` im Attribut-Block) erzeugt wird — es gibt keine fertigen, händisch bereitgestellten Bilddateien.
+
+* Querverweise im Fließtext auf `@tab:label` bzw. `@fig:label` (z. B. „wie in Tabelle @tab:ergebnisse ersichtlich“) — das Wort „Tabelle“/„Abbildung“ davor wird selbst geschrieben, `@tab:.../@fig:...` steht nur für die Nummer.
 
 Kein HTML.
 
 Kein Roh-LaTeX.
-
-Keine Markdown-Tabellen.
-
-Keine grafischen Elemente.
 
 Keine künstlichen Layoutanweisungen.
 
@@ -358,6 +384,19 @@ Nicht lediglich:
 Stattdessen sollen beispielsweise konkrete Stichprobengrößen, Mittelwerte, Prozentsätze, Zeitangaben, Effektstärken oder statistische Kennwerte verwendet werden.
 
 Die Ergebnisse sollen wissenschaftlich beeindruckend erscheinen, obwohl die eigentliche Erkenntnis banal ist.
+
+Der Ergebnisteil muss eine angemessene Anzahl an Tabellen und Abbildungen nach dem in Abschnitt 7 beschriebenen Schema enthalten:
+
+* **eine bis zwei Tabellen**, die die zentralen Kennzahlen zusammenfassen (z. B. je Bedingung/Gruppe: n, Mittelwert, Streuungsmaß, p-Wert o. Ä.),
+* **eine bis zwei Abbildungen**, die einen zentralen Befund visualisieren (z. B. ein Balken- oder Liniendiagramm der wichtigsten Kennzahl über die Bedingungen hinweg).
+
+Mehr als drei Tabellen/Abbildungen insgesamt wirken für ein sechsseitiges Paper überladen und sollen vermieden werden. Ein Paper ganz ohne Tabelle oder Abbildung wirkt dagegen unvollständig für ein Journal, das tabellarische und grafische Auswertungen erwartet — mindestens eine Tabelle **oder** Abbildung ist daher Pflicht, im Regelfall beides.
+
+Jede Tabelle und jede Abbildung muss:
+
+* im Fließtext unmittelbar vor oder nach ihrem Auftreten mit `@tab:...` bzw. `@fig:...` referenziert werden,
+* exakt dieselben Zahlen zeigen, die im Fließtext berichtet werden (keine Abweichungen zwischen Text, Tabelle und Abbildung),
+* inhaltlich zum jeweiligen satirischen Forschungsgegenstand passen und nicht generisch wirken.
 
 ==================================================
 
