@@ -31,13 +31,10 @@ Der Inhalt des Feldes muss direkt als `paper.md` gespeichert werden können.
 Für das Paper werden folgende Werte vorgegeben:
 
 * `slug`
-* `journal`
 
 Der Wert von `slug` wird dem Prompt mitgegeben und muss **eins zu eins übernommen werden**.
 
-Der Wert von `journal` wird dem Prompt mitgegeben und muss **eins zu eins übernommen werden**.
-
-Erfinde oder verändere diese beiden Werte nicht.
+Erfinde oder verändere diesen Wert nicht.
 
 Alle übrigen bibliografischen Angaben werden vom Modell passend zum jeweiligen Paper selbst erzeugt.
 
