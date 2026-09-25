@@ -525,6 +525,12 @@ def _inline_to_latex(text: str) -> str:
         lambda m: stash(r"\texttt{" + escape_latex(m.group(1)) + "}"),
         text,
     )
+    # Cross-reference to a figure/table, e.g. "Tabelle @tab:ergebnisse".
+    text = re.sub(
+        _CROSSREF_RE,
+        lambda m: stash(r"\ref{" + m.group(1) + "}"),
+        text,
+    )
 
     text = escape_latex(text)
 
@@ -539,11 +545,142 @@ _NUMBERED_RE = re.compile(r"^\d+\.\s+(.*)$")
 
 _SECTION_COMMANDS = {2: "section", 3: "subsection", 4: "subsubsection"}
 
+# A GFM-style table separator row: cells of dashes, optionally colon-flanked
+# for alignment, e.g. "---", ":---", "---:", ":---:", separated by "|".
+_TABLE_SEPARATOR_RE = re.compile(r"^\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?$")
 
-def markdown_to_latex(body: str) -> str:
-    """Convert the small Markdown subset described in the module docstring."""
+# A caption line for the table immediately above it, Pandoc-style:
+#   Table: Caption text {#tab:some-id}
+# The {#tab:...} part is optional.
+_TABLE_CAPTION_RE = re.compile(r"^Table:\s*(.*?)\s*(?:\{#(tab:[\w-]+)\})?\s*$")
+
+# A standalone image, Pandoc's "implicit figure" syntax:
+#   ![Caption text](path/to/file.png){#fig:some-id width=80%}
+# The {...} attribute block is optional; so is the caption (empty [] is OK).
+_FIGURE_RE = re.compile(
+    r"^!\[(?P<caption>[^\]]*)\]\((?P<path>[^\s)]+)(?:\s+\"[^\"]*\")?\)"
+    r"(?:\{(?P<attrs>[^}]*)\})?$"
+)
+
+# Cross-reference to a figure/table label in running text: @fig:some-id or
+# @tab:some-id, turned into \ref{fig:some-id} / \ref{tab:some-id}.
+_CROSSREF_RE = re.compile(r"@((?:fig|tab):[\w-]+)")
+
+
+def _split_table_row(line: str) -> list[str]:
+    """Split a "| a | b |" (or "a | b") row into ["a", "b"], honoring \\|."""
+    line = line.strip().replace(r"\|", "\x01")
+    if line.startswith("|"):
+        line = line[1:]
+    if line.endswith("|"):
+        line = line[:-1]
+    return [cell.replace("\x01", "|").strip() for cell in line.split("|")]
+
+
+def _table_column_alignment(separator_cells: list[str]) -> list[str]:
+    """Map GFM separator cells (---, :---, ---:, :---:) to LaTeX l/c/r."""
+    aligns = []
+    for cell in separator_cells:
+        cell = cell.strip()
+        left, right = cell.startswith(":"), cell.endswith(":")
+        aligns.append("c" if left and right else "r" if right else "l")
+    return aligns
+
+
+def _table_to_latex(rows: list[list[str]], aligns: list[str],
+                     caption: str | None, label: str | None) -> str:
+    ncols = len(rows[0])
+    col_spec = "".join((aligns + ["l"] * ncols)[:ncols])
+    lines = ["\\begin{table}[htbp]", "  \\centering"]
+    if caption:
+        lines.append(f"  \\caption{{{_inline_to_latex(caption)}}}")
+    if label:
+        lines.append(f"  \\label{{{label}}}")
+    lines.append(f"  \\begin{{tabular}}{{{col_spec}}}")
+    lines.append("    \\toprule")
+    lines.append("    " + " & ".join(_inline_to_latex(c) for c in rows[0]) + r" \\")
+    lines.append("    \\midrule")
+    for row in rows[1:]:
+        lines.append("    " + " & ".join(_inline_to_latex(c) for c in row) + r" \\")
+    lines.append("    \\bottomrule")
+    lines.append("  \\end{tabular}")
+    lines.append("\\end{table}")
+    return "\n".join(lines)
+
+
+def _parse_figure_attrs(attrs_str: str | None) -> dict[str, str]:
+    """Parse a Pandoc-style {#id key=value key2="quoted value"} block."""
+    result: dict[str, str] = {}
+    if not attrs_str:
+        return result
+    token_re = re.compile(r'#([\w:-]+)|([\w-]+)=("([^"]*)"|\S+)')
+    for m in token_re.finditer(attrs_str):
+        if m.group(1):
+            result["id"] = m.group(1)
+        else:
+            result[m.group(2)] = m.group(4) if m.group(4) is not None else m.group(3)
+    return result
+
+
+def _figure_width_to_latex(width: str | None) -> str:
+    if not width:
+        return "\\linewidth"
+    width = width.strip()
+    if width.endswith("%"):
+        try:
+            return f"{float(width[:-1]) / 100:g}\\linewidth"
+        except ValueError:
+            return "\\linewidth"
+    return width  # a raw LaTeX length such as "5cm" or "0.8\\textwidth"
+
+
+def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path) -> str:
+    caption = match.group("caption").strip()
+    image_path_str = match.group("path").strip()
+    attrs = _parse_figure_attrs(match.group("attrs"))
+
+    resolved_path = paper_dir / image_path_str
+    if not resolved_path.exists():
+        raise PaperDocError(
+            f"{source}: Bilddatei nicht gefunden: {resolved_path} "
+            f"(referenziert als '{image_path_str}')"
+        )
+
+    label = attrs.get("id")
+    if label and not label.startswith("fig:"):
+        raise PaperDocError(
+            f"{source}: Abbildungs-Label muss mit 'fig:' beginnen, nicht "
+            f"'{label}' (in {match.group(0)!r})."
+        )
+
+    width_latex = _figure_width_to_latex(attrs.get("width"))
+    lines = [
+        "\\begin{figure}[htbp]",
+        "  \\centering",
+        f"  \\includegraphics[width={width_latex}]{{{image_path_str}}}",
+    ]
+    if caption:
+        lines.append(f"  \\caption{{{_inline_to_latex(caption)}}}")
+    if label:
+        lines.append(f"  \\label{{{label}}}")
+    lines.append("\\end{figure}")
+    return "\n".join(lines)
+
+
+def markdown_to_latex(body: str, source: Path) -> str:
+    """Convert the small Markdown subset described in the module docstring.
+
+    `source` is the paper.md path: its parent directory is where relative
+    figure paths (e.g. "figures/diagramm.png") are resolved from, and it's
+    used to name the file in error messages (missing image, bad label).
+    """
+    paper_dir = source.parent
+
     # Normalize line endings and split into blank-line-separated blocks,
-    # while keeping heading lines as their own single-line blocks.
+    # while keeping heading lines and standalone figures as their own
+    # single-line blocks (a figure must stand alone in its paragraph, per
+    # Pandoc's "implicit figure" convention, so it's detected the same way
+    # a heading is: nothing else is allowed to share its block).
     lines = body.replace("\r\n", "\n").split("\n")
 
     blocks: list[list[str]] = []
@@ -554,7 +691,7 @@ def markdown_to_latex(body: str) -> str:
                 blocks.append(current)
                 current = []
             continue
-        if _HEADING_RE.match(line):
+        if _HEADING_RE.match(line) or _FIGURE_RE.match(line.strip()):
             if current:
                 blocks.append(current)
                 current = []
@@ -565,34 +702,77 @@ def markdown_to_latex(body: str) -> str:
         blocks.append(current)
 
     out: list[str] = []
-    for block in blocks:
+    idx = 0
+    while idx < len(blocks):
+        block = blocks[idx]
+
         heading = _HEADING_RE.match(block[0]) if len(block) == 1 else None
         if heading:
             level = len(heading.group(1))
             command = _SECTION_COMMANDS.get(level, "subsubsection")
             out.append(f"\\{command}{{{_inline_to_latex(heading.group(2).strip())}}}")
+            idx += 1
             continue
 
-        if all(_BULLET_RE.match(l.strip()) for l in block):
-            items = [_BULLET_RE.match(l.strip()).group(1) for l in block]
-            out.append(
-                "\\begin{itemize}\n"
-                + "\n".join(f"  \\item {_inline_to_latex(item)}" for item in items)
-                + "\n\\end{itemize}"
-            )
+        figure = _FIGURE_RE.match(block[0].strip()) if len(block) == 1 else None
+        if figure:
+            out.append(_figure_to_latex(figure, paper_dir, source))
+            idx += 1
             continue
 
-        if all(_NUMBERED_RE.match(l.strip()) for l in block):
-            items = [_NUMBERED_RE.match(l.strip()).group(1) for l in block]
-            out.append(
-                "\\begin{enumerate}\n"
-                + "\n".join(f"  \\item {_inline_to_latex(item)}" for item in items)
-                + "\n\\end{enumerate}"
-            )
+        if (
+            len(block) >= 2
+            and "|" in block[0]
+            and _TABLE_SEPARATOR_RE.match(block[1].strip())
+        ):
+            header = _split_table_row(block[0])
+            aligns = _table_column_alignment(_split_table_row(block[1]))
+            rows = [header] + [_split_table_row(l) for l in block[2:]]
+
+            caption = label = None
+            if idx + 1 < len(blocks) and len(blocks[idx + 1]) == 1:
+                cap_match = _TABLE_CAPTION_RE.match(blocks[idx + 1][0].strip())
+                if cap_match:
+                    caption = cap_match.group(1).strip() or None
+                    label = cap_match.group(2)
+                    idx += 1  # this block was the caption, consume it too
+
+            out.append(_table_to_latex(rows, aligns, caption, label))
+            idx += 1
             continue
+
+        # A new list item starts on a line matching the marker; any line
+        # that doesn't (a wrapped continuation line) is appended to the
+        # current item, so multi-line items are not mistaken for prose.
+        first_stripped = block[0].strip()
+        is_bullet_list = bool(_BULLET_RE.match(first_stripped))
+        is_numbered_list = bool(_NUMBERED_RE.match(first_stripped))
+        if is_bullet_list or is_numbered_list:
+            item_re = _BULLET_RE if is_bullet_list else _NUMBERED_RE
+            items: list[str] = []
+            for line in block:
+                stripped = line.strip()
+                match = item_re.match(stripped)
+                if match:
+                    items.append(match.group(1))
+                elif items:
+                    items[-1] += " " + stripped
+                else:
+                    items = []
+                    break
+            if items:
+                env = "itemize" if is_bullet_list else "enumerate"
+                out.append(
+                    f"\\begin{{{env}}}\n"
+                    + "\n".join(f"  \\item {_inline_to_latex(item)}" for item in items)
+                    + f"\n\\end{{{env}}}"
+                )
+                idx += 1
+                continue
 
         paragraph = " ".join(l.strip() for l in block)
         out.append(_inline_to_latex(paragraph))
+        idx += 1
 
     return "\n\n".join(out)
 
@@ -695,6 +875,6 @@ def convert_paper_md(
     data = parse_frontmatter(frontmatter_text)
     meta = build_paper_meta(data, md_path, data_path)
     template_slug = validate_journal(meta.journal, templates_dir)
-    body_latex = markdown_to_latex(body_text)
+    body_latex = markdown_to_latex(body_text, md_path)
     tex_source = build_tex(meta, body_latex, md_path.name, template_slug)
     return tex_source, meta.slug

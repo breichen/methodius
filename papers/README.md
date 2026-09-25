@@ -93,9 +93,55 @@ klaren Fehlermeldung ab, bevor überhaupt LaTeX aufgerufen wird.
 
 Unterstützt werden `##`/`###`/`####`-Überschriften, Absätze, `**fett**`,
 `*kursiv*`, `` `code` ``, sowie einfache `-`/`1.`-Listen (auch über mehrere
-Zeilen umgebrochen). Für alles Speziellere (Tabellen, Fußnoten, Zitate,
-Abbildungen) schreibst du diesen einen Absatz direkt als `main.tex`, siehe
+Zeilen umgebrochen) — und, wie unten beschrieben, Tabellen und Abbildungen.
+Für alles darüber hinaus (Fußnoten, Zitate, mehrspaltige Abbildungslayouts
+o. ä.) schreibst du diesen einen Absatz direkt als `main.tex`, siehe
 "Fortgeschritten: main.tex direkt schreiben" weiter unten.
+
+#### Tabellen
+
+Normale GitHub-Markdown-Tabellen, mit optionaler Caption direkt danach:
+
+```markdown
+| Bedingung | n | Signifikant? |
+| --- | :---: | ---: |
+| Kontrolle | 24 | nein |
+| Intervention | 24 | knapp |
+
+Table: Ergebnisse nach Bedingung {#tab:ergebnisse}
+```
+
+Die Trennzeile bestimmt die Spaltenausrichtung: `---` = links (Standard),
+`:---:` = zentriert, `---:` = rechts. Die `Table:`-Zeile ist optional; auch
+`{#tab:...}` darin ist optional (ohne Label keine Referenzierbarkeit, aber
+weiterhin eine nummerierte Tabelle mit Caption).
+
+#### Abbildungen
+
+Ein Bild, das allein in seinem Absatz steht, wird automatisch zur
+captionierten Abbildung (Alt-Text = Caption):
+
+```markdown
+![Verteilung der p-Werte über alle Studien](figures/pwerte.png){#fig:pwerte width=80%}
+```
+
+Die Bilddatei liegt relativ zum Paper-Ordner, z. B. unter
+`papers/mein-paper/figures/pwerte.png` — der Generator prüft vor dem
+LaTeX-Lauf, ob sie existiert, und bricht sonst mit einer klaren
+Fehlermeldung ab. `{#fig:...}` und `width=...` (z. B. `80%` oder `5cm`)
+sind optional; ohne `width` wird die volle Spalten-/Textbreite verwendet.
+
+#### Querverweise
+
+Im Fließtext auf eine Tabelle oder Abbildung verweisen:
+
+```markdown
+Wie in Tabelle @tab:ergebnisse zu sehen, ...
+Siehe Abbildung @fig:pwerte für Details.
+```
+
+`@tab:xyz` / `@fig:xyz` werden zu `\ref{tab:xyz}` / `\ref{fig:xyz}` — das
+Wort "Tabelle"/"Abbildung" davor schreibst du selbst, wie in LaTeX üblich.
 
 ### 2. Journal auswählen
 
