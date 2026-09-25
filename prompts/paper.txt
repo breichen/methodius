@@ -48,26 +48,15 @@ Die Datei beginnt mit einer Frontmatter, die sich **bis einschließlich des Abst
 ---
 
 slug: kontrollierte-fehlberatung-lebenshilfe
-journal: Zeitschrift für Angewandte Problemunterlassung
-title: Zur kontrollierten Fehlberatung als angewandte Lebenshilfe
 subtitle: Ein konzeptioneller und empirischer Beitrag zur systematischen Optimierung alltagspraktischer Fehlentscheidungen
 shorttitle: Kontrollierte Fehlberatung
-authors:
-
-* Dr. Maximilian Methodius
-* Prof. Dr. Hildegard Wankelmuth
-  keywords:
-* Fehlberatung
-* angewandte Lebenshilfe
-* Alltagsentscheidungen
-* Beratungseffekte
-* Entscheidungsqualität
-  volume: 1
-  issue: 1
-  year: 2026
-  date: 16.10.2026
-  pages: 1--13
-  abstract: |
+keywords:
+  - Fehlberatung
+  - angewandte Lebenshilfe
+  - Alltagsentscheidungen
+  - Beratungseffekte
+  - Entscheidungsqualität
+abstract: |
   Die vorliegende Untersuchung befasst sich mit der Frage, unter welchen Bedingungen eine gezielt fehlerhafte Beratung einen höheren praktischen Nutzen entfalten kann als eine inhaltlich korrekte, jedoch entscheidungsintensivierende Beratung. Ausgangspunkt ist die Beobachtung, dass ein erheblicher Anteil alltäglicher Beratungsanlässe nicht durch einen Mangel an verfügbaren Informationen, sondern durch eine Überversorgung mit Entscheidungsmöglichkeiten gekennzeichnet ist. In einer explorativen Studie mit sieben Versuchspersonen wurde untersucht, wie sich drei Beratungsformen – sachlich korrekte Beratung, bewusst unvollständige Beratung und kontrollierte Fehlberatung – auf Entscheidungsdauer, wahrgenommene Sicherheit und nachträgliche Zufriedenheit auswirken. Die Ergebnisse zeigen eine deutliche Verkürzung der Entscheidungsdauer unter kontrollierter Fehlberatung bei gleichzeitig erhöhtem subjektivem Sicherheitsempfinden. Die beobachtete Fehlentscheidungsquote war zwar höher als unter korrekter Beratung, blieb jedoch unterhalb der vorab definierten praktischen Relevanzschwelle. Die Befunde werden dahingehend interpretiert, dass Beratung nicht ausschließlich an der sachlichen Richtigkeit ihrer Inhalte gemessen werden sollte, sondern auch an ihrer Fähigkeit, Entscheidungsvorgänge zu beenden. Die Studie liefert damit erste Hinweise auf ein eigenständiges Anwendungsfeld der kontrollierten Fehlberatung als ressourcenorientierte Form der angewandten Lebenshilfe.
 
 ---
@@ -121,10 +110,6 @@ Keine Umwandlung.
 
 Keine automatische Generierung eines neuen Slugs.
 
-Dasselbe gilt für `journal`.
-
-Der mitgegebene Journalname wird exakt übernommen.
-
 ==================================================
 
 4. VON DIR ZU ERZEUGENDE FRONTMATTER-FELDER
@@ -132,75 +117,21 @@ Der mitgegebene Journalname wird exakt übernommen.
 
 Erzeuge für das jeweilige Paper passende Werte für:
 
-`title:`
-Der vollständige Titel des Papers.
-
 `subtitle:`
 Ein wissenschaftlich klingender Untertitel, sofern passend.
 
 `shorttitle:`
 Eine kurze wissenschaftliche Bezeichnung des Papers.
 
-`authors:`
-Passende Autoren aus dem Methodius-Institut.
-
 `keywords:`
 Fünf passende wissenschaftliche Schlagwörter.
-
-`volume:`
-Ein plausibler Band.
-
-`issue:`
-Eine plausible Ausgabe.
-
-`year:`
-Ein plausibles Erscheinungsjahr.
-
-`date:`
-Ein plausibles Veröffentlichungsdatum im Format `TT.MM.JJJJ`.
-
-`pages:`
-Ein plausibler Seitenbereich im Format `Start--Ende`.
 
 `abstract:`
 Ein vollständiger wissenschaftlicher Abstract.
 
 Die bibliografischen Angaben müssen untereinander konsistent sein.
 
-`slug` und `journal` werden dagegen vorgegeben und dürfen nicht verändert werden.
-
-==================================================
-
-5. JOURNAL
-   ===========
-
-WICHTIG:
-
-Der Wert für `journal` wird vorgegeben und muss **eins zu eins übernommen** werden.
-
-`journal` enthält den **vollständig ausgeschriebenen Namen der fiktiven wissenschaftlichen Zeitschrift**.
-
-Beispiel:
-
-`journal: Zeitschrift für Angewandte Problemunterlassung`
-
-ist korrekt.
-
-Nicht:
-
-`journal: zapp`
-
-Nicht:
-
-`journal: applied_evidence`
-
-Nicht:
-
-`journal: aevidence`
-
-Der vollständige Journalname soll wie der Name einer real existierenden, seriösen wissenschaftlichen Fachzeitschrift wirken.
-
-Der Name darf satirisch sein, soll aber auf den ersten Blick wie eine wissenschaftliche Zeitschrift klingen.
+`slug` wird dagegen vorgegeben und darf nicht verändert werden.
 
 ==================================================
 
