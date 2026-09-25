@@ -44,43 +44,67 @@ function ladeAlleVeroeffentlichungen() {
         return;
       }
 
-      container.innerHTML =
-        sichtbareVeroeffentlichungen
-          .map(veroeffentlichung => `
-            <article class="institut-veroeffentlichung">
+      // Check PDF availability for every entry before rendering, so
+      // the icon is present from the start instead of popping in
+      // after the fact.
+      Promise.all(
+        sichtbareVeroeffentlichungen.map(
+          veroeffentlichung => prüfePdfExistenz(veroeffentlichung.slug)
+        )
+      ).then(pdfVorhandenListe => {
 
-              <p class="institut-veroeffentlichung-datum">
-                ${formatiereDatumDeutsch(veroeffentlichung.datum)}
-              </p>
+        container.innerHTML =
+          sichtbareVeroeffentlichungen
+            .map((veroeffentlichung, index) => `
+              <article class="institut-veroeffentlichung">
 
-              <p class="institut-veroeffentlichung-autoren">
-                ${veroeffentlichung.autoren.join(", ")}
-              </p>
+                <p class="institut-veroeffentlichung-datum">
+                  ${formatiereDatumDeutsch(veroeffentlichung.datum)}
+                </p>
 
-              <h3>
-                ${veroeffentlichung.titel}
-              </h3>
+                <p class="institut-veroeffentlichung-autoren">
+                  ${veroeffentlichung.autoren.join(", ")}
+                </p>
 
-              ${
-                veroeffentlichung.journal
-                  ? `
-                    <p class="institut-veroeffentlichung-journal">
-                      <em>${veroeffentlichung.journal}</em>${veroeffentlichung.band != null ? `, Bd. ${veroeffentlichung.band}` : ""}${veroeffentlichung.heft != null ? `, Heft ${veroeffentlichung.heft}` : ""}${veroeffentlichung.seite_start != null && veroeffentlichung.seite_ende != null ? `,
-                           ${veroeffentlichung.seite_start}&ndash;${veroeffentlichung.seite_ende}` : ""}
-                    </p>
-                  `
-                  : ""
-              }
+                <h3>
+                  ${veroeffentlichung.titel}
+                  ${
+                    pdfVorhandenListe[index]
+                      ? `
+                        <a
+                          href="pdf/papers/${veroeffentlichung.slug}.pdf"
+                          target="_blank"
+                          rel="noopener"
+                          class="institut-veroeffentlichung-pdf-link"
+                          aria-label="PDF in neuem Tab öffnen"
+                          title="PDF öffnen"
+                        >📄</a>
+                      `
+                      : ""
+                  }
+                </h3>
 
-              ${
-                veroeffentlichung.beschreibung
-                  ? `<p>${veroeffentlichung.beschreibung}</p>`
-                  : ""
-              }
+                ${
+                  veroeffentlichung.journal
+                    ? `
+                      <p class="institut-veroeffentlichung-journal">
+                        <em>${veroeffentlichung.journal}</em>${veroeffentlichung.band != null ? `, Bd. ${veroeffentlichung.band}` : ""}${veroeffentlichung.heft != null ? `, Heft ${veroeffentlichung.heft}` : ""}${veroeffentlichung.seite_start != null && veroeffentlichung.seite_ende != null ? `,
+                               ${veroeffentlichung.seite_start}&ndash;${veroeffentlichung.seite_ende}` : ""}
+                      </p>
+                    `
+                    : ""
+                }
 
-            </article>
-          `)
-          .join("\n");
+                ${
+                  veroeffentlichung.beschreibung
+                    ? `<p>${veroeffentlichung.beschreibung}</p>`
+                    : ""
+                }
+
+              </article>
+            `)
+            .join("\n");
+      });
     })
     .catch(fehler => {
 
@@ -96,6 +120,17 @@ function ladeAlleVeroeffentlichungen() {
         </p>
       `;
     });
+}
+
+// Checks whether a PDF exists for a given publication slug under
+// pdf/papers/. Uses HEAD so the file itself isn't downloaded just to
+// test for its presence.
+function prüfePdfExistenz(slug) {
+  if (!slug) return Promise.resolve(false);
+
+  return fetch(`pdf/papers/${slug}.pdf`, { method: "HEAD" })
+    .then(antwort => antwort.ok)
+    .catch(() => false);
 }
 
 ladeAlleVeroeffentlichungen();
