@@ -149,7 +149,21 @@ Diese Hochrechnung wurde nicht als primärer Endpunkt betrachtet, da sie auf der
 
 Abbildung @fig:entscheidungsdauer stellt diesen Unterschied zwischen den drei Bedingungen grafisch gegenüber.
 
-![Mittlere Entscheidungsdauer je Beratungsbedingung](figures/entscheidungsdauer.png){#fig:entscheidungsdauer width=70% script=figures/entscheidungsdauer.py}
+![Mittlere Entscheidungsdauer je Beratungsbedingung](figures/entscheidungsdauer.png){#fig:entscheidungsdauer width=70%}
+```python
+import sys
+import matplotlib.pyplot as plt
+
+bedingungen = ["Sachlich korrekte\nBeratung", "Unvollständige\nBeratung", "Kontrollierte\nFehlberatung"]
+werte = [31.4, 44.7, 12.8]
+
+fig, ax = plt.subplots(figsize=(6, 4))
+ax.bar(bedingungen, werte, color="#4a6fa5")
+ax.set_ylabel("Entscheidungsdauer (s)")
+ax.set_title("Mittlere Entscheidungsdauer je Beratungsbedingung")
+fig.tight_layout()
+fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
+```
 
 ### Subjektive Entscheidungssicherheit
 
