@@ -1,3 +1,3 @@
-Dr. Konrad P. Huber und Dr. Maximilian Methodius haben das Paper *Empirische Plausibilität bei unvollständiger Datenlage* veröffentlicht.
+Ein neues Paper von Prof. Dr. Hildegard Wankelmuth mit dem Titel *Zur Überinterpretation alltäglicher Müdigkeit als Zeichen persönlicher Entwicklung* ist erschienen.
 
-Die Arbeit beschäftigt sich mit der Frage, wann ein Ergebnis überzeugend genug klingt. Dabei wird insbesondere untersucht, welche Rolle fehlende Informationen für die Überzeugungskraft eines Ergebnisses spielen.
+Darin wird ein Deutungsmodell für die wissenschaftliche Interpretation gewöhnlicher Erschöpfungszustände entwickelt. Müdigkeit wird dabei unter anderem als möglicher Hinweis auf tiefgreifende persönliche Veränderungsprozesse betrachtet.
