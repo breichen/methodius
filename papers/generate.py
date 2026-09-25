@@ -15,6 +15,15 @@ The script:
 1. finds the journal template (templates/<name>/<name>.cls) that the paper's
    \\documentclass refers to and makes it visible to LaTeX,
 2. compiles the LaTeX file twice with LuaLaTeX,
+2b. checks the compiled PDF's real page count against the end page declared
+    in \\articlepages{start--end}. If they disagree, the true end page
+    (start + actual page count - 1) is written back into main.tex and the
+    file is recompiled — but only for a main.tex paperdoc.py generated
+    (marked "AUTO-GENERATED"); a hand-written main.tex is only warned
+    about, never rewritten. Either way, an unmissable console banner marks
+    the mismatch so 'seite_ende' in data/veroeffentlichungen.json (and any
+    later paper's 'seite_start' in the same Heft) doesn't quietly drift out
+    of sync with what the PDF actually contains,
 3. copies the resulting PDF to output/pdf,
 4. renders a PNG preview if ImageMagick or pdftoppm is available:
    - by default, just the first page;
@@ -58,6 +67,8 @@ PUBLICATIONS_PATH = DATA_DIR / "veroeffentlichungen.json"
 
 DOCUMENTCLASS_RE = re.compile(r"\\documentclass(?:\[[^\]]*\])?\{([^}]+)\}")
 SLUG_COMMENT_RE = re.compile(r"^%\s*slug:\s*(\S+)\s*$", re.MULTILINE)
+GENERATED_MARKER_RE = re.compile(r"^%\s*AUTO-GENERATED\b", re.MULTILINE)
+ARTICLEPAGES_RE = re.compile(r"\\articlepages\{\s*(\d+)\s*(?:--\s*(\d+)\s*)?\}")
 
 PNG_DPI = 180
 SPINE_WIDTH_FRACTION = 0.018  # spine width relative to a single page's width
@@ -89,6 +100,137 @@ def find_paper_slug(tex: Path) -> str | None:
     text = tex.read_text(encoding="utf-8", errors="ignore")
     match = SLUG_COMMENT_RE.search(text)
     return match.group(1).strip() if match else None
+
+
+def is_generated_tex(tex: Path) -> bool:
+    """True if `tex` carries the "% AUTO-GENERATED ..." marker paperdoc.py
+    writes, i.e. it's safe to rewrite automatically (it will just be
+    regenerated from paper.md next time anyway)."""
+    text = tex.read_text(encoding="utf-8", errors="ignore")
+    return GENERATED_MARKER_RE.search(text) is not None
+
+
+def find_declared_page_range(tex: Path) -> tuple[int, int] | None:
+    """Read the (start, end) page numbers from \\articlepages{...} in `tex`.
+
+    A single-page \\articlepages{5} (no "--end") is read as (5, 5). Returns
+    None if the paper doesn't declare \\articlepages at all.
+    """
+    text = tex.read_text(encoding="utf-8", errors="ignore")
+    match = ARTICLEPAGES_RE.search(text)
+    if not match:
+        return None
+    start = int(match.group(1))
+    end = int(match.group(2)) if match.group(2) else start
+    return start, end
+
+
+def get_pdf_page_count(pdf: Path) -> int | None:
+    """Return the actual number of pages in `pdf`, or None if it can't be
+    determined (neither pdfinfo nor ImageMagick available)."""
+    if shutil.which("pdfinfo"):
+        result = subprocess.run(
+            ["pdfinfo", str(pdf)], capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            match = re.search(r"^Pages:\s+(\d+)\s*$", result.stdout, re.MULTILINE)
+            if match:
+                return int(match.group(1))
+
+    if shutil.which("magick"):
+        result = subprocess.run(
+            ["magick", "identify", str(pdf)], capture_output=True, text=True
+        )
+        if result.returncode == 0:
+            lines = [line for line in result.stdout.splitlines() if line.strip()]
+            if lines:
+                return len(lines)
+
+    return None
+
+
+def print_unmissable(*lines: str) -> None:
+    """Print a warning banner that is hard to scroll past or miss."""
+    width = max(70, max((len(line) for line in lines), default=0) + 4)
+    bar = "!" * width
+    print()
+    print(bar)
+    for line in lines:
+        print(f"!! {line}")
+    print(bar)
+    print()
+
+
+def reconcile_page_range(tex: Path, pdf: Path, env: dict) -> None:
+    """Correct \\articlepages's end page to match the PDF's real last page.
+
+    The paper's declared page range (\\articlepages{start--end}) ultimately
+    comes from data/veroeffentlichungen.json's seite_start/seite_ende,
+    which are hand-maintained and easily out of sync with however many
+    pages the paper actually renders to. Rather than trust that end page
+    blindly, this recomputes it from the compiled PDF's real page count and,
+    if it changed, rewrites the .tex and recompiles so the PDF's own "S.
+    x-y" line matches what it actually is — then prints an unmissable
+    reminder that veroeffentlichungen.json (and any later paper in the same
+    Heft, whose own seite_start likely assumed the old end page) needs a
+    matching update.
+
+    Only rewrites .tex files carrying the "AUTO-GENERATED" marker (i.e.
+    ones paperdoc.py produced from a paper.md) — a hand-written main.tex is
+    never modified automatically, only warned about.
+    """
+    declared = find_declared_page_range(tex)
+    if declared is None:
+        return  # paper doesn't use \articlepages at all — nothing to check
+
+    declared_start, declared_end = declared
+    actual_pages = get_pdf_page_count(pdf)
+    if actual_pages is None:
+        print(
+            "Hinweis: Seitenzahl des PDFs konnte nicht ermittelt werden "
+            "(weder pdfinfo noch ImageMagick gefunden) — Abgleich mit "
+            "\\articlepages übersprungen."
+        )
+        return
+
+    actual_end = declared_start + actual_pages - 1
+    if actual_end == declared_end:
+        return  # already consistent, nothing to do
+
+    if is_generated_tex(tex):
+        text = tex.read_text(encoding="utf-8")
+        new_text = ARTICLEPAGES_RE.sub(
+            f"\\\\articlepages{{{declared_start}--{actual_end}}}", text, count=1
+        )
+        tex.write_text(new_text, encoding="utf-8")
+        try:
+            compile_tex(tex, env)
+        except LatexError as exc:
+            print_unmissable(
+                "SEITENZAHL-ABGLEICH FEHLGESCHLAGEN",
+                f"\\articlepages wurde auf {declared_start}--{actual_end} korrigiert,",
+                "aber der Rekompilierungslauf ist fehlgeschlagen:",
+                str(exc),
+            )
+            return
+        print_unmissable(
+            "SEITENZAHL WURDE AUTOMATISCH KORRIGIERT",
+            f"Projektdaten sagten S. {declared_start}--{declared_end} "
+            f"({declared_end - declared_start + 1} Seiten),",
+            f"tatsächlich erzeugt: {actual_pages} Seite(n) -> S. {declared_start}--{actual_end}.",
+            f"main.tex wurde angepasst und neu kompiliert.",
+            "BITTE 'seite_ende' in data/veroeffentlichungen.json nachziehen",
+            "(und ggf. 'seite_start' nachfolgender Beiträge im selben Heft)!",
+        )
+    else:
+        print_unmissable(
+            "SEITENZAHL STIMMT NICHT MEHR",
+            f"\\articlepages sagt S. {declared_start}--{declared_end}, das PDF hat aber "
+            f"{actual_pages} Seite(n) (-> S. {declared_start}--{actual_end}).",
+            "main.tex ist handgeschrieben und wurde NICHT automatisch geändert.",
+            "Bitte \\articlepages hier sowie 'seite_ende' in "
+            "data/veroeffentlichungen.json von Hand anpassen!",
+        )
 
 
 def find_template_dir(class_name: str) -> Path | None:
@@ -374,6 +516,11 @@ def main() -> int:
     if not pdf.exists():
         print("ERROR: LaTeX reported success but did not produce a PDF.")
         return 1
+
+    # Reconcile \articlepages's end page with the PDF's real last page
+    # before anything gets copied to output/, so target_pdf/target_png
+    # below always reflect the corrected version.
+    reconcile_page_range(tex, pdf, env)
 
     OUT_PDF.mkdir(parents=True, exist_ok=True)
     OUT_PNG.mkdir(parents=True, exist_ok=True)
