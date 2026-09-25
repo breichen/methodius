@@ -75,7 +75,7 @@ class PaperDocError(ValueError):
 
 # `slug` is required (not just "title"/"authors") because without it the
 # data/veroeffentlichungen.json lookup can't happen at all.
-REQUIRED_FIELDS = ("journal", "slug", "abstract")
+REQUIRED_FIELDS = ("slug", "abstract")
 
 # Fields that, when missing from the frontmatter, are filled in from the
 # matching data/veroeffentlichungen.json entry (looked up via `slug`).
@@ -83,6 +83,7 @@ REQUIRED_FIELDS = ("journal", "slug", "abstract")
 # returned by lookup_publication() below (see that function for how the
 # JSON's own field names, e.g. `band`/`heft`, get there).
 _PUBLICATION_LOOKUP_FIELDS = {
+    "journal": "journal_name",
     "title": "titel",
     "volume": "volume",
     "issue": "issue",
@@ -416,8 +417,15 @@ def build_paper_meta(data: dict, source: Path, data_path: Path) -> PaperMeta:
     if keywords and not isinstance(keywords, list):
         raise PaperDocError(f"{source}: 'keywords' muss eine Liste sein.")
 
+    journal = resolved("journal")
+    if journal is None:
+        raise PaperDocError(
+            f"{source}: 'journal' fehlt und der Eintrag zu slug '{slug}' "
+            f"in {data_path.name} hat kein 'journal'-Feld."
+        )
+
     return PaperMeta(
-        journal=str(data["journal"]).strip(),
+        journal=journal,
         slug=slug.strip(),
         title=title,
         authors=authors,
