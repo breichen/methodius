@@ -6,10 +6,13 @@ Methodius-Instituts.
 Die Idee:
 
 - Das **Journal-Template** bestimmt das Erscheinungsbild.
-- Die eigentliche `.tex`-Datei enthält möglichst wenig Layout-Code.
-- Für ein neues Paper kopierst du nur `papers/_template/main.tex`,
-  wählst eine Journal-Klasse und ersetzt den Beispieltext.
-- Der Generator kann PDF und PNG der ersten Seite erzeugen.
+- Für ein neues Paper schreibst du Text + Metadaten in einer einfachen
+  `paper.md`-Datei (Frontmatter + Markdown) — kein LaTeX nötig.
+- Der Generator erzeugt daraus zuerst ein `main.tex` und kompiliert es dann
+  zu PDF und PNG.
+- Für Sonderfälle (Tabellen, Fußnoten, sehr spezielle Formatierung) kannst
+  du weiterhin direkt ein `main.tex` von Hand schreiben und kompilieren —
+  beide Wege funktionieren nebeneinander.
 
 ## Voraussetzungen
 
@@ -24,7 +27,114 @@ Empfohlen:
 
 Die Templates verwenden `fontspec` und werden daher mit **LuaLaTeX** gesetzt.
 
-## Schnellstart
+## Schnellstart (empfohlen): `paper.md`
+
+### 1. Ein Paper anlegen
+
+Kopiere:
+
+```text
+papers/_template/paper.md
+```
+
+nach:
+
+```text
+papers/mein-paper/paper.md
+```
+
+und fülle Frontmatter und Text aus:
+
+```markdown
+---
+slug: empirische-plausibilitaet-datenlage
+journal: Archiv für Ausreichende Evidenz
+subtitle: Ein optionaler Untertitel
+shorttitle: Kurztitel für die Kopfzeile
+keywords:
+  - Begriff 1
+  - Begriff 2
+abstract: |
+  Hier steht der Abstract. Kann sich über mehrere
+  Zeilen erstrecken.
+---
+
+## Einleitung
+
+Hier steht dein Text, mit **fett**, *kursiv* und ganz normalen Absätzen.
+
+- Auch Aufzählungen
+- funktionieren
+```
+
+Pflichtfelder sind `slug` und `abstract` — alles
+andere ist optional; die Templates füllen sinnvolle Standardwerte, wo
+nichts angegeben wurde. Fehlt ein Pflichtfeld oder ist `journal` unbekannt,
+bricht der Generator mit einer klaren Fehlermeldung ab, bevor überhaupt
+LaTeX aufgerufen wird.
+
+Unterstützt werden `##`/`###`/`####`-Überschriften, Absätze, `**fett**`,
+`*kursiv*`, `` `code` ``, sowie einfache `-`/`1.`-Listen (auch über mehrere
+Zeilen umgebrochen). Für alles Speziellere (Tabellen, Fußnoten, Zitate,
+Abbildungen) schreibst du diesen einen Absatz direkt als `main.tex`, siehe
+"Fortgeschritten: main.tex direkt schreiben" weiter unten.
+
+### 2. Journal auswählen
+
+Der Wert von `journal:` in der Frontmatter entspricht dem Ordnernamen unter
+`templates/`:
+
+```text
+aevidence        Archiv für Ausreichende Evidenz
+alltagsforschung Zeitschrift für Alltagsforschung
+praxisplaus      Annalen der Praktischen Plausibilität
+...
+```
+
+Das zum Journal passende Template wird automatisch ausgewählt.
+
+### 3. Generieren und kompilieren
+
+```bash
+python generate.py papers/mein-paper/paper.md
+```
+
+Das erzeugt in einem Rutsch:
+
+```text
+papers/mein-paper/main.tex     ← generiertes LaTeX (1. Output, zum Nachsehen/Debuggen)
+output/tex/mein-paper.tex      ← Kopie davon, neben den anderen Outputs
+output/pdf/mein-paper.pdf
+output/png/mein-paper.png
+```
+
+Das generierte `main.tex` trägt einen Hinweis-Kommentar, dass es
+automatisch erzeugt wurde — Änderungen daran gehen beim nächsten Lauf
+verloren. Wenn du mehr Kontrolle brauchst, bearbeite entweder die
+`paper.md` weiter, oder wechsle für dieses eine Paper auf ein von Hand
+gepflegtes `main.tex` (siehe unten).
+
+### 4. Doppelseiten-Vorschau (`--spread`)
+
+Für einen News-Feed-Look wie eine aufgeschlagene Zeitschrift kannst du statt
+der ersten Seite allein ein Doppelseiten-Bild erzeugen lassen:
+
+```bash
+python generate.py papers/mein-paper/paper.md --spread
+```
+
+Das zeigt Seite 1 und Seite 2 nebeneinander, mit einem dezenten Schatten in
+der Mitte ("Falz"). Hat das Paper nur eine Seite, wird automatisch eine
+leere zweite Seite ergänzt, damit das Bild trotzdem wie eine echte
+Doppelseite aussieht. Dieser Modus benötigt zusätzlich Pillow
+(`pip install Pillow`).
+
+## Fortgeschritten: `main.tex` direkt schreiben
+
+Für Sonderfälle, die der Markdown-Konverter nicht abdeckt (Tabellen,
+Fußnoten, Literaturverzeichnis, Abbildungen mit besonderem Layout, o. ä.),
+kannst du ein Paper weiterhin komplett als LaTeX schreiben und genauso mit
+`generate.py` kompilieren:
 
 ### 1. Ein Paper anlegen
 
@@ -68,14 +178,6 @@ In der ersten Zeile steht die Journal-Klasse:
 \documentclass{aevidence}
 ```
 
-Mögliche Templates:
-
-```text
-aevidence       Archiv für Ausreichende Evidenz
-alltagsforschung Zeitschrift für Alltagsforschung
-praxisplaus     Annalen der Praktischen Plausibilität
-```
-
 Du kannst also z. B. aus
 
 ```latex
@@ -102,34 +204,13 @@ lualatex main.tex
 Der zweite Durchlauf sorgt dafür, dass Seitenzahlen und Querverweise sauber
 gesetzt werden.
 
-Oder mit dem Generator:
+Oder mit dem Generator, genau wie bei `paper.md` (nur ohne den
+Konvertierungsschritt davor):
 
 ```bash
 python generate.py papers/mein-paper/main.tex
-```
-
-Der Generator schreibt die Ergebnisse nach:
-
-```text
-output/
-├── pdf/
-└── png/
-```
-
-### 4. Doppelseiten-Vorschau (`--spread`)
-
-Für einen News-Feed-Look wie eine aufgeschlagene Zeitschrift kannst du statt
-der ersten Seite allein ein Doppelseiten-Bild erzeugen lassen:
-
-```bash
 python generate.py papers/mein-paper/main.tex --spread
 ```
-
-Das zeigt Seite 1 und Seite 2 nebeneinander, mit einem dezenten Schatten in
-der Mitte ("Falz"). Hat das Paper nur eine Seite, wird automatisch eine
-leere zweite Seite ergänzt, damit das Bild trotzdem wie eine echte
-Doppelseite aussieht. Dieser Modus benötigt zusätzlich Pillow
-(`pip install Pillow`).
 
 ## Die drei mitgelieferten Journals
 
