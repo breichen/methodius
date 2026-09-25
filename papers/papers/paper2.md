@@ -1,23 +1,14 @@
 ---
 
-journal: aevidence
-title: Zur kontrollierten Fehlberatung als angewandte Lebenshilfe
+slug: empirische-plausibilitaet-datenlage
 subtitle: Ein konzeptioneller und empirischer Beitrag zur systematischen Optimierung alltagspraktischer Fehlentscheidungen
 shorttitle: Kontrollierte Fehlberatung
-authors:
-  - Dr. Maximilian Methodius
-  - Prof. Dr. Hildegard Wankelmuth
 keywords:
   - Fehlberatung
   - angewandte Lebenshilfe
   - Alltagsentscheidungen
   - Beratungseffekte
   - Entscheidungsqualität
-volume: 1
-issue: 1
-year: 2026
-date: 16.10.2026
-pages: 1--13
 abstract: |
   Die vorliegende Untersuchung befasst sich mit der Frage, unter welchen Bedingungen eine gezielt fehlerhafte Beratung einen höheren praktischen Nutzen entfalten kann als eine inhaltlich korrekte, jedoch entscheidungsintensivierende Beratung. Ausgangspunkt ist die Beobachtung, dass ein erheblicher Anteil alltäglicher Beratungsanlässe nicht durch einen Mangel an verfügbaren Informationen, sondern durch eine Überversorgung mit Entscheidungsmöglichkeiten gekennzeichnet ist. In einer explorativen Studie mit sieben Versuchspersonen wurde untersucht, wie sich drei Beratungsformen – sachlich korrekte Beratung, bewusst unvollständige Beratung und kontrollierte Fehlberatung – auf Entscheidungsdauer, wahrgenommene Sicherheit und nachträgliche Zufriedenheit auswirken. Die Ergebnisse zeigen eine deutliche Verkürzung der Entscheidungsdauer unter kontrollierter Fehlberatung bei gleichzeitig erhöhtem subjektivem Sicherheitsempfinden. Die beobachtete Fehlentscheidungsquote war zwar höher als unter korrekter Beratung, blieb jedoch unterhalb der vorab definierten praktischen Relevanzschwelle. Die Befunde werden dahingehend interpretiert, dass Beratung nicht ausschließlich an der sachlichen Richtigkeit ihrer Inhalte gemessen werden sollte, sondern auch an ihrer Fähigkeit, Entscheidungsvorgänge zu beenden. Die Studie liefert damit erste Hinweise auf ein eigenständiges Anwendungsfeld der kontrollierten Fehlberatung als ressourcenorientierte Form der angewandten Lebenshilfe.
 ---
