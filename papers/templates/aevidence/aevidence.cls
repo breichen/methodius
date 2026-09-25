@@ -50,27 +50,27 @@
 \renewcommand{\footrulewidth}{0pt}
 
 \newcommand{\journalname}{Archiv für Ausreichende Evidenz}
-\newcommand{\journalvolume}{}
-\renewcommand{\journalvolume}[1]{\gdef\journalvolume{#1}}
-\newcommand{\journalissue}{}
-\renewcommand{\journalissue}[1]{\gdef\journalissue{#1}}
-\newcommand{\journalyear}{}
-\renewcommand{\journalyear}[1]{\gdef\journalyear{#1}}
-\newcommand{\articledate}{}
-\renewcommand{\articledate}[1]{\gdef\articledate{#1}}
-\newcommand{\articlepages}{}
-\renewcommand{\articlepages}[1]{\gdef\articlepages{#1}}
+\def\StoredJournalvolume{}
+\newcommand{\journalvolume}[1]{\gdef\StoredJournalvolume{#1}}
+\def\StoredJournalissue{}
+\newcommand{\journalissue}[1]{\gdef\StoredJournalissue{#1}}
+\def\StoredJournalyear{}
+\newcommand{\journalyear}[1]{\gdef\StoredJournalyear{#1}}
+\def\StoredArticledate{}
+\newcommand{\articledate}[1]{\gdef\StoredArticledate{#1}}
+\def\StoredArticlepages{}
+\newcommand{\articlepages}[1]{\gdef\StoredArticlepages{#1}}
 \newcommand{\shorttitle}{}
-\newcommand{\articlekeywords}{}
-\renewcommand{\articlekeywords}[1]{\gdef\articlekeywords{#1}}
+\def\StoredArticlekeywords{}
+\newcommand{\articlekeywords}[1]{\gdef\StoredArticlekeywords{#1}}
 
 \newcommand{\maketitleblock}{%
   \twocolumn[
     \begin{center}
       {\small\scshape
       \journalname\quad ·\quad
-      Bd.~\journalvolume, Heft~\journalissue\quad ·\quad
-      \journalyear
+      Bd.~\StoredJournalvolume, Heft~\StoredJournalissue\quad ·\quad
+      \StoredJournalyear
       }
 
       \vspace{12mm}
@@ -86,11 +86,11 @@
 
       {\normalsize\begin{tabular}[t]{c}\@author\end{tabular}\par}
 
-      \ifx\articledate\empty\else
+      \ifx\StoredArticledate\empty\else
         \vspace{2mm}
-        {\small Eingegangen: \articledate
-        \ifx\articlepages\empty\else\quad ·\quad
-        S.~\articlepages\fi}
+        {\small Eingegangen: \StoredArticledate
+        \ifx\StoredArticlepages\empty\else\quad ·\quad
+        S.~\StoredArticlepages\fi}
       \fi
 
       \vspace{8mm}
@@ -105,12 +105,12 @@
         \end{minipage}
       \fi
 
-      \ifx\articlekeywords\empty\else
+      \ifx\StoredArticlekeywords\empty\else
         \vspace{3mm}
         \begin{minipage}{0.91\textwidth}
           \small
           \textbf{Schlüsselwörter:}\enspace
-          \articlekeywords
+          \StoredArticlekeywords
         \end{minipage}
       \fi
 
