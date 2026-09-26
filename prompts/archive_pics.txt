@@ -666,6 +666,59 @@ No unnecessary objects.
 
 No crowd scene.
 
+[Der bestehende Prompt bleibt vollständig unverändert.]
+
+==================================================
+OUTPUT DIMENSIONS
+=================
+
+The final generated image MUST have exactly:
+
+1536 × 1024 pixels
+
+This is a HARD OUTPUT REQUIREMENT.
+
+Aspect ratio:
+
+3:2
+
+Do not generate a square image.
+
+Do not generate a portrait-oriented image.
+
+Do not generate a 16:9 image.
+
+Do not crop or resize the composition in a way that changes the intended 3:2 composition.
+
+The entire composition must be designed natively for the 1536 × 1024 canvas.
+
+Important compositional elements, including faces, people, logos and institutional ornamentation, must remain safely within the visible image area and must not be unintentionally cropped by the image boundaries.
+
+==================================================
+FINAL PRIORITY
+==============
+
+When instructions conflict, follow this priority order:
+
+1. Preserve the identity of the supplied reference persons.
+2. Match the visual rendering style of the supplied Institute portraits.
+3. Enforce the five-color Institute palette.
+4. Preserve the Institute's restrained editorial aesthetic.
+5. Communicate the requested scene and situation.
+6. Integrate supplied Institute branding naturally.
+7. Preserve the required output dimensions of 1536 × 1024 pixels.
+
+The final result must look like an authentic Methodius Institute institutional illustration:
+
+serious,
+prestigious,
+restrained,
+recognizable,
+color-restricted,
+editorial,
+and subtly absurd.
+
+
 ==================================================
 FINAL PRIORITY
 ==============
