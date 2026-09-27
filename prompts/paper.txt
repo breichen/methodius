@@ -4,8 +4,7 @@ Das Ergebnis muss als direkt verwendbare `paper.md`-Datei für das Python-Skript
 
 ==================================================
 
-1. AUSGABE
-   ==================================================
+1. # AUSGABE
 
 Gib das fertige Ergebnis **ausschließlich in einem einzigen kopierbaren Textfeld** aus.
 
@@ -23,10 +22,38 @@ Keine Kommentare.
 
 Der Inhalt des Feldes muss direkt als `paper.md` gespeichert werden können.
 
+### WICHTIGE AUSGABEREGEL FÜR EINGEBETTETE CODEBLÖCKE
+
+Da die fertige `paper.md` selbst eingebettete Python-Codeblöcke enthalten kann, muss das gesamte Ergebnis im Chat mit einer **äußeren Markdown-Codebegrenzung aus exakt vier Backticks** ausgegeben werden.
+
+Die Regel lautet:
+
+````text
+---
+slug: ...
+...
+```python
+...
+```
+...
+````
+
+Dabei gilt zwingend:
+
+* Die **äußere Begrenzung** besteht aus **genau vier Backticks** und umschließt das gesamte Ergebnis.
+* Die äußere Begrenzung beginnt unmittelbar vor der ersten Zeile der `paper.md`.
+* Die äußere Begrenzung endet erst nach der letzten Zeile der vollständigen `paper.md`.
+* Innerhalb der `paper.md` verwendete Python-Codeblöcke bestehen weiterhin aus **genau drei Backticks**.
+* Die drei Backticks der eingebetteten Python-Codeblöcke sind **Bestandteil der `paper.md`**.
+* Die vier äußeren Backticks sind **nicht Bestandteil der `paper.md`**. Sie dienen ausschließlich dazu, die vollständige Datei im Chat sicher als ein einziges kopierbares Feld darzustellen.
+* Es darf **niemals** ein äußerer Codeblock mit drei Backticks verwendet werden, wenn die `paper.md` selbst drei Backticks für Python enthält.
+* Nach dem Kopieren wird ausschließlich die äußere Begrenzung aus vier Backticks entfernt. Alles innerhalb dieser Begrenzung bleibt unverändert Bestandteil der `paper.md`.
+* Die erste Zeile **innerhalb** der äußeren Vier-Backtick-Begrenzung muss exakt `---` sein.
+* Die äußere Vier-Backtick-Begrenzung darf an keiner anderen Stelle geschlossen oder neu geöffnet werden.
+
 ==================================================
 
-2. EINGABEDATEN
-   ================
+2. # EINGABEDATEN
 
 Für das Paper werden folgende Werte vorgegeben:
 
@@ -40,8 +67,7 @@ Alle übrigen bibliografischen Angaben werden vom Modell passend zum jeweiligen 
 
 ==================================================
 
-3. FRONTMATTER – EXAKTE STRUKTUR
-   =================================
+3. # FRONTMATTER – EXAKTE STRUKTUR
 
 Die Datei beginnt mit einer Frontmatter, die sich **bis einschließlich des Abstracts exakt an folgendem Beispiel orientiert**:
 
@@ -51,12 +77,13 @@ slug: kontrollierte-fehlberatung-lebenshilfe
 subtitle: Ein konzeptioneller und empirischer Beitrag zur systematischen Optimierung alltagspraktischer Fehlentscheidungen
 shorttitle: Kontrollierte Fehlberatung
 keywords:
-  - Fehlberatung
-  - angewandte Lebenshilfe
-  - Alltagsentscheidungen
-  - Beratungseffekte
-  - Entscheidungsqualität
-abstract: |
+
+* Fehlberatung
+* angewandte Lebenshilfe
+* Alltagsentscheidungen
+* Beratungseffekte
+* Entscheidungsqualität
+  abstract: |
   Die vorliegende Untersuchung befasst sich mit der Frage, unter welchen Bedingungen eine gezielt fehlerhafte Beratung einen höheren praktischen Nutzen entfalten kann als eine inhaltlich korrekte, jedoch entscheidungsintensivierende Beratung. Ausgangspunkt ist die Beobachtung, dass ein erheblicher Anteil alltäglicher Beratungsanlässe nicht durch einen Mangel an verfügbaren Informationen, sondern durch eine Überversorgung mit Entscheidungsmöglichkeiten gekennzeichnet ist. In einer explorativen Studie mit sieben Versuchspersonen wurde untersucht, wie sich drei Beratungsformen – sachlich korrekte Beratung, bewusst unvollständige Beratung und kontrollierte Fehlberatung – auf Entscheidungsdauer, wahrgenommene Sicherheit und nachträgliche Zufriedenheit auswirken. Die Ergebnisse zeigen eine deutliche Verkürzung der Entscheidungsdauer unter kontrollierter Fehlberatung bei gleichzeitig erhöhtem subjektivem Sicherheitsempfinden. Die beobachtete Fehlentscheidungsquote war zwar höher als unter korrekter Beratung, blieb jedoch unterhalb der vorab definierten praktischen Relevanzschwelle. Die Befunde werden dahingehend interpretiert, dass Beratung nicht ausschließlich an der sachlichen Richtigkeit ihrer Inhalte gemessen werden sollte, sondern auch an ihrer Fähigkeit, Entscheidungsvorgänge zu beenden. Die Studie liefert damit erste Hinweise auf ein eigenständiges Anwendungsfeld der kontrollierten Fehlberatung als ressourcenorientierte Form der angewandten Lebenshilfe.
 
 ---
@@ -112,8 +139,7 @@ Keine automatische Generierung eines neuen Slugs.
 
 ==================================================
 
-4. VON DIR ZU ERZEUGENDE FRONTMATTER-FELDER
-   =============================================
+4. # VON DIR ZU ERZEUGENDE FRONTMATTER-FELDER
 
 Erzeuge für das jeweilige Paper passende Werte für:
 
@@ -135,8 +161,7 @@ Die bibliografischen Angaben müssen untereinander konsistent sein.
 
 ==================================================
 
-6. ABSTRACT
-   ===========
+6. # ABSTRACT
 
 Der Abstract muss vollständig im Frontmatter stehen.
 
@@ -163,8 +188,7 @@ Die Satire entsteht dadurch, dass eine banale oder absurde Forschungsfrage mit w
 
 ==================================================
 
-7. NACH DEM FRONTMATTER
-   =======================
+7. # NACH DEM FRONTMATTER
 
 Nach dem abschließenden `---` beginnt der eigentliche Artikel als Markdown.
 
@@ -173,17 +197,24 @@ Verwende ausschließlich Markdown, das von `paperdoc.py` unterstützt wird.
 Insbesondere:
 
 * `##` für Hauptüberschriften
+
 * `###` für Unterüberschriften
+
 * `####` für weitere Untergliederungen
+
 * `**Text**` für Fettdruck
+
 * `*Text*` für Kursivschrift
+
 * `-` für Aufzählungen
+
 * `1.` für nummerierte Listen
+
 * GitHub-Markdown-Tabellen für tabellarische Ergebnisse, mit optionaler Caption-Zeile direkt danach:
 
-  | Bedingung | n | Signifikant? |
-  | --- | :---: | ---: |
-  | Kontrolle | 24 | nein |
+  | Bedingung |  n  | Signifikant? |
+  | --------- | :-: | -----------: |
+  | Kontrolle |  24 |         nein |
 
   Table: Kurze Bildunterschrift {#tab:eindeutiges-label}
 
@@ -196,6 +227,7 @@ Insbesondere:
   Jede Abbildung MUSS ihr erzeugendes Diagramm-Skript direkt im selben Absatz mitliefern — ohne Leerzeile zwischen Abbildungszeile und Codeblock — als eingebetteten Python-Codeblock:
 
   ![Aussagekräftige Bildunterschrift](figures/eindeutiger-dateiname.png){#fig:eindeutiges-label width=70%}
+
   ```python
   import sys
   import matplotlib.pyplot as plt
@@ -207,6 +239,41 @@ Insbesondere:
   ```
 
   Das Skript nimmt seinen Ausgabepfad als `sys.argv[1]` entgegen und erzeugt dort exakt die Bilddatei (PNG oder PDF) — es wird von `paperdoc.py` automatisch ausgeführt. Es dürfen keine Abbildungen referenziert werden, deren Bilddatei nicht auf diese Weise (oder alternativ über `script=pfad/zu/datei.py` im Attribut-Block) erzeugt wird — es gibt keine fertigen, händisch bereitgestellten Bilddateien.
+
+### TECHNISCHE REGEL FÜR EINGEBETTETE PYTHON-BLÖCKE
+
+Die vollständige `paper.md` wird im Chat durch einen **äußeren Markdown-Codeblock mit exakt vier Backticks** geschützt.
+
+Daher müssen eingebettete Python-Codeblöcke innerhalb der `paper.md` **immer exakt drei Backticks** verwenden.
+
+Beispiel:
+
+````text
+![Aussagekräftige Bildunterschrift](figures/eindeutiger-dateiname.png){#fig:eindeutiges-label width=70%}
+```python
+import sys
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
+```
+````
+
+Dabei gilt:
+
+* Die **drei Backticks** vor `python` sind Bestandteil der `paper.md`.
+
+* Die **drei Backticks** nach dem Python-Code sind ebenfalls Bestandteil der `paper.md`.
+
+* Innerhalb eines Python-Codeblocks dürfen keine zusätzlichen Markdown-Codebegrenzungen verwendet werden.
+
+* Die **vier äußeren Backticks** dienen ausschließlich als Chat-Wrapper für die gesamte `paper.md`.
+
+* Die vier äußeren Backticks dürfen niemals in die eigentliche `paper.md` übernommen werden.
+
+* Beim Erzeugen der `paper.md` müssen die drei Backticks der Python-Blöcke vollständig erhalten bleiben.
+
+* Es darf kein äußerer Drei-Backtick-Codeblock verwendet werden, da dieser die eingebetteten Python-Blöcke vorzeitig schließen würde.
 
 * Querverweise im Fließtext auf `@tab:label` bzw. `@fig:label` (z. B. „wie in Tabelle @tab:ergebnisse ersichtlich“) — das Wort „Tabelle“/„Abbildung“ davor wird selbst geschrieben, `@tab:.../@fig:...` steht nur für die Nummer.
 
@@ -226,8 +293,7 @@ Das spätere Layout wird vollständig von `paperdoc.py` und dem jeweiligen Journ
 
 ==================================================
 
-8. UMFANG
-   =========
+8. # UMFANG
 
 Der Artikel muss umfangreich genug sein, um nach der automatischen Verarbeitung ungefähr **sechs A4-Seiten in einem zweispaltigen wissenschaftlichen Layout** zu füllen.
 
@@ -257,8 +323,7 @@ Vom Master Prompt vorgegebene Überschriften müssen berücksichtigt werden.
 
 ==================================================
 
-9. INHALTLICHE KOHÄRENZ
-   =======================
+9. # INHALTLICHE KOHÄRENZ
 
 Das gesamte Paper muss dieselbe Studie beschreiben.
 
@@ -276,8 +341,7 @@ Die Studie soll trotz ihrer Absurdität wie ein tatsächlich durchgeführtes For
 
 ==================================================
 
-10. WISSENSCHAFTLICHE HALTUNG
-    =============================
+10. # WISSENSCHAFTLICHE HALTUNG
 
 Die Autoren nehmen ihre Forschung vollständig ernst.
 
@@ -298,8 +362,7 @@ Der Leser soll sie selbst erkennen.
 
 ==================================================
 
-11. SATIRISCHER FORSCHUNGSGEGENSTAND
-    ====================================
+11. # SATIRISCHER FORSCHUNGSGEGENSTAND
 
 Untersuche ein banales, absurdes oder gesellschaftlich komisches Alltagsphänomen mit maximalem wissenschaftlichem Ernst.
 
@@ -328,8 +391,7 @@ Aus dem banalen Gegenstand soll eine scheinbar ernsthafte Forschungsfrage entste
 
 ==================================================
 
-12. METHODISCHE SATIRE
-    ======================
+12. # METHODISCHE SATIRE
 
 Die Methodik soll unnötig präzise und wissenschaftlich wirken.
 
@@ -356,8 +418,7 @@ Nicht wahllos möglichst viele Gags einbauen.
 
 ==================================================
 
-13. STATISTISCHE SATIRE
-    =======================
+13. # STATISTISCHE SATIRE
 
 Statistische Ergebnisse sollen präzise und glaubwürdig formuliert werden.
 
@@ -378,8 +439,7 @@ Die statistische Präzision soll einen Kontrast zur praktischen Bedeutungslosigk
 
 ==================================================
 
-14. ERGEBNISSE
-    ==============
+14. # ERGEBNISSE
 
 Die Ergebnisse sollen konkrete Zahlen und Beobachtungen enthalten.
 
@@ -406,8 +466,7 @@ Jede Tabelle und jede Abbildung muss:
 
 ==================================================
 
-15. DISKUSSION
-    ==============
+15. # DISKUSSION
 
 Die Autoren interpretieren die Ergebnisse vollkommen ernst.
 
@@ -419,8 +478,7 @@ Die Diskussion darf die Grenzen der Studie erwähnen, soll aber dennoch den Eind
 
 ==================================================
 
-16. LIMITATIONEN
-    ================
+16. # LIMITATIONEN
 
 Die Limitationen sollen realistisch und zugleich subtil satirisch sein.
 
@@ -440,8 +498,7 @@ Stattdessen wird weitere Forschung vorgeschlagen.
 
 ==================================================
 
-17. LITERATUR
-    =============
+17. # LITERATUR
 
 Verwende einen glaubwürdigen wissenschaftlichen Literaturapparat.
 
@@ -471,8 +528,7 @@ Erfinde die Quellen so, dass sie unterschiedliche Rollen im Text erfüllen (z. B
 
 ==================================================
 
-18. SPRACHE
-    ===========
+18. # SPRACHE
 
 Verwende:
 
@@ -496,8 +552,7 @@ Die Komik soll aus dem wissenschaftlichen Inhalt entstehen.
 
 ==================================================
 
-19. POINTIERUNG
-    ===============
+19. # POINTIERUNG
 
 Jede größere Sektion soll mindestens ein konkretes satirisches Detail enthalten.
 
@@ -518,8 +573,7 @@ Die Details müssen jeweils zum Thema passen.
 
 ==================================================
 
-20. METHODIUS-INSTITUT
-    ======================
+20. # METHODIUS-INSTITUT
 
 Falls eine Affiliation genannt wird, darf ausschließlich folgende Institution verwendet werden:
 
@@ -535,8 +589,7 @@ Keine E-Mail-Adressen.
 
 ==================================================
 
-21. INDIVIDUALITÄT
-    ==================
+21. # INDIVIDUALITÄT
 
 Jedes Paper soll eigenständig wirken.
 
@@ -553,8 +606,7 @@ Die satirischen Elemente müssen aus dem jeweiligen Forschungsgegenstand entsteh
 
 ==================================================
 
-22. ÜBERSCHRIFTEN
-    =================
+22. # ÜBERSCHRIFTEN
 
 Verwende Markdown-Überschriften ab Ebene `##`.
 
@@ -594,8 +646,7 @@ Vom jeweiligen Master Prompt vorgegebene Überschriften haben Vorrang.
 
 ==================================================
 
-23. ABSCHLIESSENDE AUSGABEREGEL
-    ===============================
+23. # ABSCHLIESSENDE AUSGABEREGEL
 
 Das gesamte Ergebnis muss in **einem einzigen kopierbaren Feld** ausgegeben werden.
 
@@ -607,12 +658,55 @@ Keine Erklärung nach dem Feld.
 
 Keine zusätzliche Formatierung außerhalb des Feldes.
 
-Die erste Zeile muss exakt sein:
+### ÄUSSERE CHAT-BEGRENZUNG
 
+Die **gesamte fertige `paper.md` muss im Chat mit exakt vier Backticks als äußerer Markdown-Codeblock umschlossen werden.**
+
+Das Schema lautet zwingend:
+
+````text
 ---
+slug: ...
+subtitle: ...
+shorttitle: ...
+keywords:
+  - ...
+abstract: |
+  ...
+---
+## Einleitung
+
+...
+
+![Abbildung](figures/abbildung.png){#fig:abbildung width=70%}
+```python
+import sys
+...
+fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
+```
+
+...
+
+## Literatur
+
+...
+````
+
+Dabei gelten folgende Regeln:
+
+1. Die äußere Begrenzung verwendet **exakt vier Backticks**.
+2. Die äußere Begrenzung beginnt unmittelbar vor der ersten `paper.md`-Zeile.
+3. Die erste Zeile innerhalb der äußeren Begrenzung ist exakt `---`.
+4. Die äußere Begrenzung wird erst nach der letzten Zeile der vollständigen `paper.md` geschlossen.
+5. Eingebettete Python-Codeblöcke verwenden **exakt drei Backticks**.
+6. Die drei Backticks der Python-Codeblöcke gehören zur `paper.md`.
+7. Die vier äußeren Backticks gehören **nicht** zur `paper.md`.
+8. Niemals die gesamte `paper.md` mit drei Backticks umschließen.
+9. Niemals die äußeren vier Backticks innerhalb der eigentlichen `paper.md` wiederholen.
+10. Es darf keine Erklärung, kein Kommentar und kein zusätzlicher Text außerhalb des äußeren Vier-Backtick-Blocks ausgegeben werden.
 
 Die Frontmatter muss bis einschließlich Abstract exakt dem oben vorgegebenen Format entsprechen.
 
 Nach dem abschließenden `---` folgt der vollständige Markdown-Artikel.
 
-Die Datei muss unmittelbar als `paper.md` gespeichert und anschließend von `paperdoc.py` verarbeitet werden können.
+Nach Entfernung **ausschließlich der äußeren vier Backticks** muss der verbleibende Inhalt unmittelbar als `paper.md` gespeichert und anschließend von `paperdoc.py` verarbeitet werden können.
