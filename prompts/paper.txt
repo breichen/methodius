@@ -210,6 +210,12 @@ Insbesondere:
 
 * Querverweise im Fließtext auf `@tab:label` bzw. `@fig:label` (z. B. „wie in Tabelle @tab:ergebnisse ersichtlich“) — das Wort „Tabelle“/„Abbildung“ davor wird selbst geschrieben, `@tab:.../@fig:...` steht nur für die Nummer.
 
+* Literatureinträge als eigener Absatz, beginnend mit dem Key in eckigen Klammern:
+
+  [@muster2024] Muster, M. (2024). Ein Beitrag zur empirischen Plausibilität. *Archiv für Ausreichende Evidenz*, 12(3), 45--61.
+
+  Zitiert wird im Fließtext mit `@cite:key`, mehrere Quellen gleichzeitig kommagetrennt mit `@cite:key1,key2` — niemals mit eckigen Klammern im Fließtext (die sind ausschließlich der Eintrags-Definition vorbehalten). Jeder im Fließtext verwendete `@cite:key` MUSS einen exakt passenden `[@key]`-Eintrag haben, sonst bricht `paperdoc.py` die Verarbeitung ab.
+
 Kein HTML.
 
 Kein Roh-LaTeX.
@@ -451,6 +457,18 @@ Die Literatur soll nicht wie eine Liste von Witzen wirken.
 
 Sie soll wie ein tatsächlich existierender wissenschaftlicher Forschungsstand erscheinen.
 
+### Umfang und Zitierhäufigkeit
+
+Erzeuge **fünf bis acht fiktive Quellen** als `[@key]`-Literatureinträge (Schema siehe Abschnitt 7), üblicherweise gesammelt unter einer abschließenden `## Literatur`-Überschrift.
+
+Jede dieser Quellen muss mindestens einmal im Fließtext mit `@cite:key` zitiert werden — ein Literatureintrag ohne zugehörige Zitation im Text wirkt unbelegt und ist zu vermeiden.
+
+Zitiere **durchgehend über den ganzen Artikel verteilt**, nicht nur gehäuft in einem einzigen Abschnitt — insbesondere in der Einleitung (Forschungsstand, Herleitung der Fragestellung), der Diskussion (Einordnung der eigenen Befunde) und, falls passend, in der Methodik (Anschluss an frühere Verfahren).
+
+**Mindestens zwei bis drei der Quellen sollen mehrfach zitiert werden** (an unterschiedlichen Stellen im Artikel, z. B. einmal in der Einleitung und erneut in der Diskussion) — das ist im echten wissenschaftlichen Schreiben der Normalfall für zentrale Vorarbeiten und macht den Literaturapparat glaubwürdiger als lauter Einmalnennungen. Mehrfachzitate derselben Quelle können auch als kombinierte Zitation erscheinen, z. B. `@cite:muster2024,huber2025`, wenn zwei Quellen an derselben Stelle dieselbe Aussage stützen.
+
+Erfinde die Quellen so, dass sie unterschiedliche Rollen im Text erfüllen (z. B. eine Quelle, die die Grundlagenmethode etabliert hat, eine weitere, die einen widersprechenden Befund berichtet, eine dritte, die einen verwandten, aber nicht identischen Gegenstand untersucht) — das ergibt organische Mehrfachnennungen statt beliebiger Wiederholung.
+
 ==================================================
 
 18. SPRACHE
@@ -567,6 +585,8 @@ Beispielsweise:
 ### Limitationen
 
 ## Fazit
+
+## Literatur
 
 Die konkrete Struktur darf angepasst werden.
 
