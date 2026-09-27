@@ -103,7 +103,12 @@ braucht irgendwo im Paper genau einen passenden `[@key]`-Eintrag, sonst
 bricht die Konvertierung mit einer klaren Fehlermeldung ab (ebenso bei
 einem doppelt definierten Key). Alle `[@key]`-Einträge werden unabhängig
 von ihrer Position im Markdown gesammelt und am Ende des Artikels zu einem
-einzigen `thebibliography`-Block zusammengefasst.
+einzigen `thebibliography`-Block zusammengefasst — dieser Block druckt
+seine Überschrift selbst. Eine eigene `## Literatur`-Überschrift kann
+trotzdem als Marker im paper.md stehen (rein zur Orientierung beim
+Schreiben); sie wird beim Konvertieren stillschweigend übersprungen und
+landet nicht im generierten LaTeX, damit die Überschrift nicht doppelt
+erscheint.
 
 This is intentionally NOT a general-purpose YAML/Markdown implementation —
 just enough of both to cover the fields and formatting a satire paper
@@ -606,6 +611,16 @@ _NUMBERED_RE = re.compile(r"^\d+\.\s+(.*)$")
 
 _SECTION_COMMANDS = {2: "section", 3: "subsection", 4: "subsubsection"}
 
+# A "## Literatur" heading is the documented convention for marking where
+# the bibliography entries go (see module docstring above), but the
+# thebibliography environment generated further down already prints its
+# own heading (via \refname/\bibname in the .cls). Emitting \section{...}
+# for this heading as well would print "Literatur" twice — once numbered
+# from this heading, once unnumbered from thebibliography. So this exact
+# heading text (level 2, case-insensitive) is dropped during conversion;
+# it exists in paper.md purely as a marker for the author, not as output.
+_BIB_HEADING_TEXT = "literatur"
+
 # A GFM-style table separator row: cells of dashes, optionally colon-flanked
 # for alignment, e.g. "---", ":---", "---:", ":---:", separated by "|".
 _TABLE_SEPARATOR_RE = re.compile(r"^\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?$")
@@ -985,8 +1000,14 @@ def markdown_to_latex(body: str, source: Path, slug: str | None = None) -> str:
         heading = _HEADING_RE.match(block[0]) if len(block) == 1 else None
         if heading:
             level = len(heading.group(1))
+            heading_text = heading.group(2).strip()
+            if level == 2 and heading_text.lower() == _BIB_HEADING_TEXT:
+                # Skip: thebibliography prints its own "Literatur" heading
+                # further down, see _BIB_HEADING_TEXT above.
+                idx += 1
+                continue
             command = _SECTION_COMMANDS.get(level, "subsubsection")
-            out.append(f"\\{command}{{{_inline_to_latex(heading.group(2).strip())}}}")
+            out.append(f"\\{command}{{{_inline_to_latex(heading_text)}}}")
             idx += 1
             continue
 

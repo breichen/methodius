@@ -259,7 +259,15 @@ Reihenfolge spielt keine Rolle — eine Zitation darf im Text vor ihrem
 Alle `[@key]`-Einträge im Paper werden unabhängig von ihrer Position im
 Markdown gesammelt und am Ende des Artikels zu einem einzigen
 `thebibliography`-Block zusammengefasst — üblicherweise schreibst du sie
-daher direkt unter eine `## Literatur`-Überschrift als letzten Abschnitt.
+daher als letzten Abschnitt ans Ende der `paper.md`.
+
+Du kannst diesen Abschnitt optional mit einer eigenen `## Literatur`-
+Überschrift einleiten, rein zur Orientierung beim Schreiben — diese
+Überschrift wird beim Konvertieren aber stillschweigend übersprungen und
+taucht nicht im PDF auf. Grund: `thebibliography` druckt seine Überschrift
+("Literatur") ohnehin automatisch selbst; ohne diesen Schritt stünde
+"Literatur" doppelt im PDF (einmal nummeriert aus der `##`-Überschrift,
+einmal unnummeriert aus `thebibliography`).
 
 Fehlt zu einem `@cite:key` der passende `[@key]`-Eintrag, oder ist ein Key
 doppelt definiert, bricht der Generator mit einer klaren Fehlermeldung ab,
