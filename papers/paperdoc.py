@@ -89,11 +89,27 @@ Caching weiter funktioniert) und genauso ausgeführt. `script=...` und ein
 eingebetteter Code-Block schließen sich pro Abbildung gegenseitig aus, und
 ein Code-Block, der nicht direkt auf eine Abbildung folgt, ist ein Fehler.
 
+Literatur und Zitate werden ebenfalls direkt im Markdown geschrieben, ohne
+main.tex. Ein Literatureintrag steht als eigener Absatz, beginnend mit
+seinem Key in eckigen Klammern:
+
+    [@muster] Muster, M. (2026). Ein Beitrag zur empirischen
+    Plausibilität. *Archiv für Ausreichende Evidenz*, 14(2), 12--19.
+
+Im Fließtext wird mit `@cite:key` zitiert (mehrere Keys kommagetrennt:
+`@cite:muster,huber2025`) — unabhängig davon, ob die Zitation vor oder
+nach dem zugehörigen `[@key]`-Eintrag im Dokument steht. Jeder `@cite:`-Key
+braucht irgendwo im Paper genau einen passenden `[@key]`-Eintrag, sonst
+bricht die Konvertierung mit einer klaren Fehlermeldung ab (ebenso bei
+einem doppelt definierten Key). Alle `[@key]`-Einträge werden unabhängig
+von ihrer Position im Markdown gesammelt und am Ende des Artikels zu einem
+einzigen `thebibliography`-Block zusammengefasst.
+
 This is intentionally NOT a general-purpose YAML/Markdown implementation —
 just enough of both to cover the fields and formatting a satire paper
 typically needs, without adding a dependency beyond the Python standard
-library. Anything more exotic (tables, footnotes, citations, raw LaTeX)
-should go directly into a hand-written main.tex instead.
+library. Anything more exotic (footnotes, raw LaTeX, BibTeX-managed
+bibliographies) should go directly into a hand-written main.tex instead.
 """
 
 from __future__ import annotations
@@ -569,6 +585,12 @@ def _inline_to_latex(text: str) -> str:
         lambda m: stash(r"\ref{" + m.group(1) + "}"),
         text,
     )
+    # Citation(s), e.g. "... belegt @cite:muster." or "@cite:muster,huber2025".
+    text = re.sub(
+        _CITE_RE,
+        lambda m: stash(r"\cite{" + m.group(1) + "}"),
+        text,
+    )
 
     text = escape_latex(text)
 
@@ -612,6 +634,20 @@ _CODE_FENCE_RE = re.compile(r"^```(\w+)?\s*$")
 # Cross-reference to a figure/table label in running text: @fig:some-id or
 # @tab:some-id, turned into \ref{fig:some-id} / \ref{tab:some-id}.
 _CROSSREF_RE = re.compile(r"@((?:fig|tab):[\w-]+)")
+
+# One or more citations in running text: @cite:muster or the multi-key form
+# @cite:muster,huber2025, turned into \cite{muster} / \cite{muster,huber2025}.
+# Each key must have a matching [@key] bibliography entry (see _BIB_ENTRY_RE)
+# somewhere in the paper — checked once after the whole body is converted.
+_CITE_RE = re.compile(r"@cite:([\w,-]+)")
+
+# A bibliography entry, one per paragraph, Pandoc-citation-style:
+#   [@muster] Muster, M. (2026). Ein Beitrag zur ... *Archiv*, 14(2), 12--19.
+# Deliberately bracket-based (unlike @cite:key above) so a citation and an
+# entry definition can never be confused for one another. Collected across
+# the whole body — wherever they appear — into one \begin{thebibliography}
+# block emitted at the end of the article; see markdown_to_latex().
+_BIB_ENTRY_RE = re.compile(r"^\[@(?P<key>[\w-]+)\]\s+(?P<text>.+)$", re.DOTALL)
 
 
 def _split_table_row(line: str) -> list[str]:
@@ -847,6 +883,14 @@ def markdown_to_latex(body: str, source: Path, slug: str | None = None) -> str:
     paper_dir = source.parent
     slug_prefix = slug or paper_dir.name
 
+    # Collected up front (on the raw body) rather than while walking blocks,
+    # since a citation may textually appear before its [@key] entry further
+    # down — that's normal and fine for LaTeX's \cite/\bibitem, but we still
+    # want to catch a genuinely undefined key with a clear error below.
+    cited_keys: set[str] = set()
+    for m in _CITE_RE.finditer(body):
+        cited_keys.update(k.strip() for k in m.group(1).split(","))
+
     # Normalize line endings and split into blank-line-separated blocks,
     # while keeping heading lines and standalone figures as their own
     # single-line blocks (a figure must stand alone in its paragraph, per
@@ -894,6 +938,8 @@ def markdown_to_latex(body: str, source: Path, slug: str | None = None) -> str:
         raise PaperDocError(f"{source}: Ein ```-Code-Block wurde nicht geschlossen.")
 
     out: list[str] = []
+    bib_entries: list[tuple[str, str]] = []
+    seen_bib_keys: set[str] = set()
     idx = 0
     while idx < len(blocks):
         block = blocks[idx]
@@ -977,8 +1023,40 @@ def markdown_to_latex(body: str, source: Path, slug: str | None = None) -> str:
                 continue
 
         paragraph = " ".join(l.strip() for l in block)
+
+        bib_match = _BIB_ENTRY_RE.match(paragraph)
+        if bib_match:
+            key = bib_match.group("key")
+            if key in seen_bib_keys:
+                raise PaperDocError(
+                    f"{source}: Literatureintrag [@{key}] ist mehrfach definiert "
+                    f"— jeder Key darf nur einen Eintrag haben."
+                )
+            seen_bib_keys.add(key)
+            bib_entries.append((key, bib_match.group("text").strip()))
+            idx += 1
+            continue
+
         out.append(_inline_to_latex(paragraph))
         idx += 1
+
+    unknown_cites = sorted(cited_keys - seen_bib_keys)
+    if unknown_cites:
+        raise PaperDocError(
+            f"{source}: Zitiert mit @cite:{', @cite:'.join(unknown_cites)}, "
+            f"aber kein passender Literatureintrag [@{unknown_cites[0]}] "
+            f"gefunden. Jeder @cite:-Key braucht einen Eintrag im Format "
+            f"'[@{unknown_cites[0]}] Autor, Titel, ...' irgendwo im Paper."
+        )
+
+    if bib_entries:
+        bib_lines = [f"\\begin{{thebibliography}}{{{len(bib_entries)}}}", ""]
+        for key, text in bib_entries:
+            bib_lines.append(f"\\bibitem{{{key}}}")
+            bib_lines.append(_inline_to_latex(text))
+            bib_lines.append("")
+        bib_lines.append("\\end{thebibliography}")
+        out.append("\n".join(bib_lines).rstrip())
 
     return "\n\n".join(out)
 

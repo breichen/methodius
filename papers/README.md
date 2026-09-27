@@ -10,7 +10,8 @@ Die Idee:
   `paper.md`-Datei (Frontmatter + Markdown) — kein LaTeX nötig.
 - Der Generator erzeugt daraus zuerst ein `main.tex` und kompiliert es dann
   zu PDF und PNG.
-- Für Sonderfälle (Tabellen, Fußnoten, sehr spezielle Formatierung) kannst
+- Für Sonderfälle (Fußnoten, BibTeX-verwaltete Literatur, sehr spezielle
+  Formatierung) kannst
   du weiterhin direkt ein `main.tex` von Hand schreiben und kompilieren —
   beide Wege funktionieren nebeneinander.
 
@@ -232,6 +233,41 @@ Siehe Abbildung @fig:pwerte für Details.
 `@tab:xyz` / `@fig:xyz` werden zu `\ref{tab:xyz}` / `\ref{fig:xyz}` — das
 Wort "Tabelle"/"Abbildung" davor schreibst du selbst, wie in LaTeX üblich.
 
+#### Literatur und Zitate
+
+Ein Literatureintrag steht als eigener Absatz (durch Leerzeilen von allem
+anderen getrennt), beginnend mit seinem Key in eckigen Klammern:
+
+```markdown
+[@muster] Muster, M. (2026). Ein Beitrag zur empirischen Plausibilität.
+*Archiv für Ausreichende Evidenz*, 14(2), 12--19.
+
+[@huber2025] Huber, K. P. (2025). Zur Systematik der Alltagsentscheidung.
+*Zeitschrift für Alltagsforschung*, 3(1), 5--22.
+```
+
+Im Fließtext wird mit `@cite:key` zitiert, mehrere Keys kommagetrennt:
+
+```markdown
+Bereits @cite:muster konnte zeigen, dass ... Andere Autoren
+(@cite:huber2025,muster) kamen zu ähnlichen Schlüssen.
+```
+
+`@cite:key` wird zu `\cite{key}`, `@cite:a,b` zu `\cite{a,b}`. Die
+Reihenfolge spielt keine Rolle — eine Zitation darf im Text vor ihrem
+`[@key]`-Eintrag stehen, genau wie bei `\ref`/`\label` in LaTeX üblich.
+Alle `[@key]`-Einträge im Paper werden unabhängig von ihrer Position im
+Markdown gesammelt und am Ende des Artikels zu einem einzigen
+`thebibliography`-Block zusammengefasst — üblicherweise schreibst du sie
+daher direkt unter eine `## Literatur`-Überschrift als letzten Abschnitt.
+
+Fehlt zu einem `@cite:key` der passende `[@key]`-Eintrag, oder ist ein Key
+doppelt definiert, bricht der Generator mit einer klaren Fehlermeldung ab,
+bevor überhaupt LaTeX aufgerufen wird — genau wie bei einer fehlenden
+Bilddatei oben. Für einen BibTeX-verwalteten Literaturapparat (z. B. bei
+sehr vielen Quellen über mehrere Papers hinweg) schreibst du das Paper
+stattdessen als reines `main.tex`, siehe unten.
+
 ### 2. Journal auswählen
 
 Der Wert von `journal:` in der Frontmatter entspricht dem Ordnernamen unter
@@ -284,10 +320,10 @@ Doppelseite aussieht. Dieser Modus benötigt zusätzlich Pillow
 
 ## Fortgeschritten: `main.tex` direkt schreiben
 
-Für Sonderfälle, die der Markdown-Konverter nicht abdeckt (Tabellen,
-Fußnoten, Literaturverzeichnis, Abbildungen mit besonderem Layout, o. ä.),
-kannst du ein Paper weiterhin komplett als LaTeX schreiben und genauso mit
-`generate.py` kompilieren:
+Für Sonderfälle, die der Markdown-Konverter nicht abdeckt (Fußnoten,
+BibTeX-verwaltete Literaturverzeichnisse, Abbildungen mit besonderem
+Layout, o. ä.), kannst du ein Paper weiterhin komplett als LaTeX schreiben
+und genauso mit `generate.py` kompilieren:
 
 ### 1. Ein Paper anlegen
 
@@ -421,7 +457,12 @@ ab.
 
 ## Literatur
 
-Ein einfaches Literaturverzeichnis funktioniert ohne BibTeX:
+Der einfachste Weg ist Literatur direkt in der `paper.md` zu schreiben, wie
+oben unter "Literatur und Zitate" beschrieben — kein main.tex nötig.
+
+Für ein von Hand geschriebenes `main.tex` (oder einen BibTeX-verwalteten
+Literaturapparat) funktioniert ein einfaches Literaturverzeichnis auch
+ohne BibTeX:
 
 ```latex
 \begin{thebibliography}{9}
