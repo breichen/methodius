@@ -115,6 +115,7 @@ bibliographies) should go directly into a hand-written main.tex instead.
 from __future__ import annotations
 
 import json
+import math
 import re
 import subprocess
 import sys
@@ -670,23 +671,60 @@ def _table_column_alignment(separator_cells: list[str]) -> list[str]:
     return aligns
 
 
+# Maps a GFM alignment letter to the wrapping, ragged-* column type that
+# build_tex() defines via \newcolumntype (see there). Plain l/c/r columns
+# size themselves to their widest cell — which, for a table with a
+# long-winded header, easily blows past \linewidth, especially in a
+# two-column layout where \linewidth is only half the page. L/C/R are
+# tabularx's paragraph-mode X columns instead: they wrap their content,
+# so a wordy header grows *taller* rather than pushing the table wider.
+_COLUMN_TYPE_FOR_ALIGN = {"l": "L", "c": "C", "r": "R"}
+
+
+def _column_width_ratios(rows: list[list[str]], ncols: int) -> list[float]:
+    """Relative width factor per column, for tabularx's \\hsize=<f>\\hsize trick.
+
+    Each column's factor is derived from its longest cell (header included,
+    since that's usually the culprit) via a square root, which spreads the
+    available width across columns without simply handing almost all of it
+    to whichever single header happens to be the wordiest — a column with
+    4x the characters of another ends up only ~2x as wide, not 4x, leaving
+    every other column enough room to stay readable. Ratios are normalized
+    to average 1.0; tabularx only cares about them relative to each other.
+    """
+    max_len = [1] * ncols
+    for row in rows:
+        for j, cell in enumerate(row[:ncols]):
+            max_len[j] = max(max_len[j], len(cell))
+    weights = [math.sqrt(n) for n in max_len]
+    mean_weight = sum(weights) / ncols
+    return [w / mean_weight for w in weights]
+
+
 def _table_to_latex(rows: list[list[str]], aligns: list[str],
                      caption: str | None, label: str | None) -> str:
     ncols = len(rows[0])
-    col_spec = "".join((aligns + ["l"] * ncols)[:ncols])
+    aligns = (aligns + ["l"] * ncols)[:ncols]
+    ratios = _column_width_ratios(rows, ncols)
+
+    col_spec = "".join(
+        f">{{\\hsize={ratio:.2f}\\hsize}}{_COLUMN_TYPE_FOR_ALIGN.get(a, 'L')}"
+        for a, ratio in zip(aligns, ratios)
+    )
+
     lines = ["\\begin{table}[htbp]", "  \\centering"]
     if caption:
         lines.append(f"  \\caption{{{_inline_to_latex(caption)}}}")
     if label:
         lines.append(f"  \\label{{{label}}}")
-    lines.append(f"  \\begin{{tabular}}{{{col_spec}}}")
+    lines.append(f"  \\begin{{tabularx}}{{\\linewidth}}{{{col_spec}}}")
     lines.append("    \\toprule")
     lines.append("    " + " & ".join(_inline_to_latex(c) for c in rows[0]) + r" \\")
     lines.append("    \\midrule")
     for row in rows[1:]:
         lines.append("    " + " & ".join(_inline_to_latex(c) for c in row) + r" \\")
     lines.append("    \\bottomrule")
-    lines.append("  \\end{tabular}")
+    lines.append("  \\end{tabularx}")
     lines.append("\\end{table}")
     return "\n".join(lines)
 
@@ -1077,6 +1115,25 @@ def build_tex(meta: PaperMeta, body_latex: str, source_name: str, template_slug:
     # going back through the original paper.md.
     lines.append(f"% slug: {meta.slug}")
     lines.append(f"\\documentclass{{{template_slug}}}")
+    lines.append("")
+
+    # Tabellen aus Markdown werden als tabularx gesetzt (siehe
+    # _table_to_latex), damit lange Kopfzeilen umbrechen, statt die Tabelle
+    # in die Breite zu treiben — v.a. wichtig im zweispaltigen Satz, wo
+    # \linewidth nur eine halbe Seite breit ist. array wird für die
+    # >{...}-Spaltenmodifikatoren benötigt, tabularx für die X-Spalten
+    # samt \hsize-Gewichtungstrick, den _column_width_ratios() nutzt.
+    # \newcolumntype names must be single characters (the tabular preamble
+    # parser reads the column spec one character at a time), so L/C/R is
+    # the natural, conventional choice — but if a journal template already
+    # defines its own L/C/R for something else, this silently overrides it
+    # for the rest of the document. Rename here (and in _table_to_latex's
+    # _COLUMN_TYPE_FOR_ALIGN) if that's ever a problem for a given template.
+    lines.append("\\usepackage{array}")
+    lines.append("\\usepackage{tabularx}")
+    lines.append("\\newcolumntype{L}{>{\\raggedright\\arraybackslash}X}")
+    lines.append("\\newcolumntype{C}{>{\\centering\\arraybackslash}X}")
+    lines.append("\\newcolumntype{R}{>{\\raggedleft\\arraybackslash}X}")
     lines.append("")
 
     if meta.volume:
