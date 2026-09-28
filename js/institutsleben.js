@@ -5,7 +5,7 @@ function ladeInstitutsfotos() {
 
   if (!container) return;
 
-  fetch("data/fotos.json")
+  fetch("data/institutsleben.json")
     .then(antwort => {
 
       if (!antwort.ok) {
@@ -18,7 +18,7 @@ function ladeInstitutsfotos() {
 
       const sichtbareFotos =
         fotos.filter(
-          foto => istDatumErreicht(foto.datum)
+          foto => foto.galerie === true && istDatumErreicht(foto.datum)
         );
 
       if (sichtbareFotos.length === 0) {
