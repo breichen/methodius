@@ -62,10 +62,10 @@ Ist `script=...` gesetzt, wird das Skript vor dem Kompilieren als
 
     python <script> <absoluter Ausgabepfad>
 
-mit dem Paper-Ordner als Arbeitsverzeichnis ausgeführt (Skript bekommt den
+mit dem Ordner der .md-Datei als Arbeitsverzeichnis ausgeführt (Skript bekommt den
 Zielpfad — hier `figures/pwerte.png` — als sys.argv[1] und muss dort exakt
 die Bilddatei erzeugen, PNG oder PDF). Das Bild entsteht in einem
-temporären Build-Ordner, der nach dem Lauf gelöscht wird — im Paper-Ordner
+temporären Build-Ordner, der nach dem Lauf gelöscht wird — im Ordner der .md-Datei
 bleibt nichts zurück, und das Skript läuft bei jedem Build neu. Schlägt das
 Skript fehl oder erzeugt es die Datei nicht, bricht der Generator mit einer
 klaren Fehlermeldung ab, bevor LaTeX aufgerufen wird.

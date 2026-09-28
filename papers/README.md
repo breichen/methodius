@@ -30,20 +30,24 @@ Die Templates verwenden `fontspec` und werden daher mit **LuaLaTeX** gesetzt.
 
 ## Projektstruktur
 
-Die `paper.md`-Dateien liegen im Ordner `md/papers/`, der **parallel** zum
-Ordner `papers/` (mit `generate.py`, `paperdoc.py`, `templates/` und
-`output/`) liegt:
+Die Markdown-Dateien der Papers liegen **direkt** im Ordner `md/papers/`,
+jede mit ihrem eigenen Namen (`mein-paper.md`, `anderes-paper.md`, ...).
+Dieser Ordner liegt **parallel** zum Ordner `papers/` (mit `generate.py`,
+`paperdoc.py`, `templates/` und `output/`):
 
 ```text
 <projekt>/
 ├── papers/          generate.py, paperdoc.py, templates/, output/
 ├── md/
-│   └── papers/      <paper>/paper.md, <paper>/figures/, ...
+│   └── papers/      mein-paper.md, anderes-paper.md, figures/, ...
 └── data/            veroeffentlichungen.json
 ```
 
-Bilder, Daten und Skripte eines Papers liegen relativ zu seiner `paper.md`,
-also ebenfalls unter `md/papers/<paper>/`.
+In diesem README steht `paper.md` als allgemeiner Begriff für die
+Markdown-Datei eines Papers — der tatsächliche Dateiname ist frei wählbar.
+Bilder, Daten und Skripte werden relativ zum Ordner der Markdown-Datei
+aufgelöst, also relativ zu `md/papers/` (z. B. `md/papers/figures/`).
+Verwenden mehrere Papers denselben Bildpfad, teilen sie sich die Datei.
 
 ## Schnellstart (empfohlen): `paper.md`
 
@@ -52,13 +56,13 @@ also ebenfalls unter `md/papers/<paper>/`.
 Kopiere:
 
 ```text
-md/papers/_template/paper.md
+md/papers/_template.md
 ```
 
 nach:
 
 ```text
-md/papers/mein-paper/paper.md
+md/papers/mein-paper.md
 ```
 
 und fülle Frontmatter und Text aus:
@@ -143,8 +147,8 @@ captionierten Abbildung (Alt-Text = Caption):
 ![Verteilung der p-Werte über alle Studien](figures/pwerte.png){#fig:pwerte width=80%}
 ```
 
-Die Bilddatei liegt relativ zum Paper-Ordner, z. B. unter
-`md/papers/mein-paper/figures/pwerte.png` — der Generator prüft vor dem
+Die Bilddatei liegt relativ zum Ordner der Markdown-Datei, z. B. unter
+`md/papers/figures/pwerte.png` — der Generator prüft vor dem
 LaTeX-Lauf, ob sie existiert, und bricht sonst mit einer klaren
 Fehlermeldung ab. `{#fig:...}` und `width=...` (z. B. `80%` oder `5cm`)
 sind optional; ohne `width` wird die volle Spalten-/Textbreite verwendet.
@@ -159,15 +163,15 @@ Python-Skript erzeugt werden, das im Zuge der Generierung läuft:
 ```
 
 Der Pfad in `![...](...)` bleibt der Zielpfad der Bilddatei (relativ zum
-Paper-Ordner, wie bisher) — `script=` gibt zusätzlich ein Python-Skript an
-(ebenfalls relativ zum Paper-Ordner), das diese Datei erst erzeugt. Vor
+Ordner der Markdown-Datei, wie bisher) — `script=` gibt zusätzlich ein Python-Skript an
+(ebenfalls relativ zum Ordner der Markdown-Datei), das diese Datei erst erzeugt. Vor
 dem LaTeX-Lauf ruft der Generator es auf als:
 
 ```bash
 python figures/pwerte.py /absoluter/pfad/zu/figures/pwerte.png
 ```
 
-mit dem Paper-Ordner als Arbeitsverzeichnis — das Skript bekommt seinen
+mit dem Ordner der Markdown-Datei als Arbeitsverzeichnis — das Skript bekommt seinen
 Ausgabepfad also als `sys.argv[1]` und muss dort exakt die Bilddatei
 (PNG oder PDF) ablegen, z. B. mit Matplotlib:
 
@@ -181,14 +185,14 @@ ax.set_ylabel("p-Wert")
 fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
 ```
 
-Weil das Skript relativ zum Paper-Ordner läuft, kann es dort z. B. auch
+Weil das Skript relativ zum Ordner der Markdown-Datei läuft, kann es dort z. B. auch
 eine `data/messwerte.csv` einlesen, genau wie Bildpfade auch relativ zum
-Paper-Ordner aufgelöst werden.
+Ordner der Markdown-Datei aufgelöst werden.
 
 Das Bild entsteht in einem temporären Ordner, der nach dem Lauf wieder
 gelöscht wird (siehe "Was nach dem Lauf übrig bleibt" unten) — im
-Paper-Ordner bleibt also nichts zurück, und das Skript läuft dafür bei
-jedem Build neu. Ein Bild, das im Paper-Ordner schon von Hand abgelegt
+Ordner der Markdown-Datei bleibt also nichts zurück, und das Skript läuft dafür bei
+jedem Build neu. Ein Bild, das im Ordner der Markdown-Datei schon von Hand abgelegt
 ist, wird nie überschrieben. Schlägt das Skript fehl oder legt es die
 erwartete Datei nicht an, bricht der Generator mit einer klaren
 Fehlermeldung (inkl. Skript-Traceback) ab, bevor überhaupt LaTeX
@@ -215,11 +219,11 @@ fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
 ```
 
 Der Code-Block wird genau wie die externe Variante behandelt: er läuft mit
-dem Paper-Ordner als Arbeitsverzeichnis und bekommt den Zielpfad als
+dem Ordner der Markdown-Datei als Arbeitsverzeichnis und bekommt den Zielpfad als
 `sys.argv[1]`. Intern wird er dazu als Datei (z. B.
 `generated/mein-slug-pwerte.generated.py` für die Abbildung
 `figures/pwerte.png`) in denselben temporären Ordner geschrieben wie das
-erzeugte Bild und mit diesem nach dem Lauf gelöscht. Im Paper-Ordner
+erzeugte Bild und mit diesem nach dem Lauf gelöscht. Im Ordner der Markdown-Datei
 entsteht weder ein `generated/`-Ordner noch sonst eine Datei.
 
 Beide Varianten schließen sich pro Abbildung gegenseitig aus: `script=...`
@@ -303,10 +307,11 @@ Das zum Journal passende Template wird automatisch ausgewählt.
 python generate.py mein-paper
 ```
 
-Der Generator sucht die `paper.md` automatisch in `md/papers/`; genauso
-funktioniert `python generate.py mein-paper/paper.md`. Auch ein voller Pfad
-(absolut oder relativ zum aktuellen Verzeichnis), z. B.
-`python generate.py md/papers/mein-paper/paper.md`, wird akzeptiert.
+Der Generator sucht die Markdown-Datei automatisch in `md/papers/`
+(`mein-paper` → `md/papers/mein-paper.md`); genauso funktioniert
+`python generate.py mein-paper.md`. Auch ein voller Pfad (absolut oder
+relativ zum aktuellen Verzeichnis), z. B.
+`python generate.py md/papers/mein-paper.md`, wird akzeptiert.
 
 #### Alle Papers auf einmal
 
@@ -320,10 +325,11 @@ python generate.py --spread     # Doppelseiten-Vorschau für alle
 
 Dabei gilt:
 
-- Verarbeitet wird jeder Unterordner von `md/papers/`, der eine `paper.md`
-  enthält, in alphabetischer Reihenfolge.
-- Ordner, deren Name mit `_` oder `.` beginnt (z. B. `_template`), werden
-  übersprungen, ebenso Ordner ohne `paper.md`.
+- Verarbeitet wird jede `.md`-Datei, die direkt in `md/papers/` liegt, in
+  alphabetischer Reihenfolge. Unterordner (z. B. `figures/`) und andere
+  Dateitypen werden nicht durchsucht bzw. ignoriert.
+- Dateien, deren Name mit `_` oder `.` beginnt (z. B. `_template.md`),
+  werden übersprungen.
 - Die Papers werden nacheinander und unabhängig voneinander gebaut: Schlägt
   eines fehl, laufen die übrigen trotzdem weiter. Am Ende steht eine
   Zusammenfassung mit OK/FEHLER pro Paper; der Exit-Code ist 1, sobald
@@ -342,10 +348,10 @@ python generate.py --md-dir ../andere-papers              # alle Papers dort
 python generate.py mein-paper --md-dir ../andere-papers   # ein Paper dort
 ```
 
-Der Ordner enthält wie `md/papers/` je Paper einen Unterordner mit
-`paper.md`. Bei einem einzelnen Paper wird der Ordnername darin
-nachgeschlagen; ein voller Pfad zur `paper.md` funktioniert weiterhin
-unabhängig von `--md-dir`.
+Der Ordner enthält wie `md/papers/` die Markdown-Dateien direkt (und ggf.
+`figures/` usw. für deren Bilder). Bei einem einzelnen Paper wird der
+Dateiname (mit oder ohne `.md`) darin nachgeschlagen; ein voller Pfad zur
+Markdown-Datei funktioniert weiterhin unabhängig von `--md-dir`.
 
 Das erzeugt in einem Rutsch:
 
@@ -358,7 +364,7 @@ output/png/mein-paper.png
 Das generierte LaTeX trägt einen Hinweis-Kommentar, dass es automatisch
 erzeugt wurde — Änderungen an `output/tex/mein-paper.tex` gehen beim
 nächsten Lauf verloren. Wenn du mehr Kontrolle brauchst, bearbeite
-entweder die `paper.md` weiter, oder wechsle für dieses eine Paper auf ein
+entweder die Markdown-Datei weiter, oder wechsle für dieses eine Paper auf ein
 von Hand gepflegtes `main.tex` (siehe unten).
 
 #### Was nach dem Lauf übrig bleibt
@@ -373,7 +379,7 @@ am Ende jedes Laufs wieder gelöscht — auch bei Fehlern und bei Strg+C:
 - von Diagramm-Skripten erzeugte Bilder und eingebettete Code-Blöcke,
 - Zwischenbilder der Doppelseiten-Vorschau (`--spread`).
 
-Der Paper-Ordner (`paper.md`, `figures/`, ein von Hand geschriebenes
+Der Ordner der Markdown-Datei (die `.md`-Dateien, `figures/`, ein von Hand geschriebenes
 `main.tex` usw.) wird vom Generator nur gelesen, nie beschrieben. Auch
 `__pycache__`-Ordner legt der Generator nicht an.
 

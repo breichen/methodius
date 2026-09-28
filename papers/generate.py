@@ -6,31 +6,34 @@ Usage:
     python generate.py                            # ALL papers in md/papers/
     python generate.py --md-dir pfad/zum/ordner   # all papers in another folder
     python generate.py mein-satire-artikel
-    python generate.py mein-satire-artikel/paper.md --spread
+    python generate.py mein-satire-artikel.md --spread
     python generate.py papers/example-aevidence/main.tex
 
-paper.md files live in md/papers/<paper>/paper.md, a folder parallel to
-the papers/ folder this script sits in:
+The Markdown files of the papers lie directly in md/papers/, each with its
+own name (mein-satire-artikel.md, ...) — a folder parallel to the papers/
+folder this script sits in:
 
     <project>/
         papers/      generate.py, paperdoc.py, templates/, output/, ...
-        md/papers/   <paper>/paper.md, <paper>/figures/, ...
+        md/papers/   mein-satire-artikel.md, anderes-paper.md, figures/, ...
         data/        veroeffentlichungen.json
 
-For a paper.md, the input can therefore be just the paper's folder name
-("mein-satire-artikel") or "<folder>/paper.md" — both are looked up in
-md/papers/ first. A full path (absolute, or relative to the current
-directory) to any paper.md or main.tex works as well.
+For a Markdown paper, the input can therefore be just the file name, with
+or without the ".md" ("mein-satire-artikel" or "mein-satire-artikel.md") —
+it is looked up in md/papers/ first. A full path (absolute, or relative to
+the current directory) to any .md or main.tex works as well.
 
-Without any input, every paper in the folder is processed: each
-subfolder of md/papers/ that contains a paper.md, in alphabetical order.
-Folders whose name starts with "_" or "." (e.g. the "_template" folder)
-are skipped. Papers are built one after the other and independently — one
-that fails doesn't stop the others; a summary at the end lists the
-results and the exit code is 1 if any paper failed. --md-dir PATH points
-the generator at a different folder than md/papers/ (for the batch run
-and for looking up a single paper's folder name alike). --spread applies
-to every paper of the run.
+Without any input, every paper in the folder is processed: each .md file
+directly in md/papers/, in alphabetical order. Files whose name starts
+with "_" or "." (e.g. "_template.md") are skipped. Papers are built one
+after the other and independently — one that fails doesn't stop the
+others; a summary at the end lists the results and the exit code is 1 if
+any paper failed. --md-dir PATH points the generator at a different folder
+than md/papers/ (for the batch run and for looking up a single paper's
+file name alike). --spread applies to every paper of the run.
+
+Relative paths inside a Markdown file (figures, script data) are resolved
+from the folder the .md file lies in, i.e. md/papers/ itself.
 
 The script:
 0. if given a paper.md (frontmatter + Markdown) instead of a .tex file,
@@ -74,8 +77,8 @@ main.pdf, images and scripts generated from figure code blocks, page
 previews for --spread — is written to a temporary folder (in the system's
 temp directory, not in the project) that is deleted at the end of every
 run, successful or not. Python doesn't write __pycache__ folders either.
-The paper folder itself (paper.md, figures/, a hand-written main.tex, ...)
-is only ever read, never written to.
+The folder the paper lies in (the .md files, figures/, a hand-written
+main.tex, ...) is only ever read, never written to.
 
 paper.md is optional: a hand-written main.tex can still be passed directly
 and is compiled exactly as before. See paperdoc.py for the paper.md format.
@@ -601,37 +604,40 @@ def resolve_input_path(arg: str, md_dir: Path) -> tuple[Path | None, list[Path]]
     """Resolve the command-line input to an existing file.
 
     Relative inputs are looked up in `md_dir` (md/papers/ by default, or
-    whatever --md-dir says) first, so a paper.md can be given as just
-    "<folder>" or "<folder>/paper.md"; the path as given (relative to the
-    current directory, or absolute) is the fallback and still works for any
-    paper.md / main.tex anywhere. A folder resolves to the paper.md inside
-    it.
+    whatever --md-dir says) first, so a paper can be given as just its file
+    name — "mein-paper" or "mein-paper.md". The path as given (relative to
+    the current directory, or absolute) is the fallback and still works for
+    any .md / main.tex anywhere.
 
     Returns (resolved path or None, every candidate that was tried) — the
     latter for the "not found" message.
     """
     given = Path(arg)
-    candidates = [given] if given.is_absolute() else [md_dir / given, given]
+    if given.is_absolute():
+        candidates = [given]
+    else:
+        candidates = [md_dir / given]
+        if given.suffix.lower() not in (".md", ".tex"):
+            candidates.append(md_dir / f"{given}.md")  # "mein-paper" -> mein-paper.md
+        candidates.append(given)
     for candidate in candidates:
-        if candidate.is_dir():
-            candidate = candidate / "paper.md"
         if candidate.is_file():
             return candidate.resolve(), candidates
     return None, candidates
 
 
 def find_papers(md_dir: Path) -> list[Path]:
-    """All <md_dir>/<paper>/paper.md files, sorted by folder name.
+    """All .md files directly in `md_dir`, sorted by file name.
 
-    Folders starting with "_" or "." (the "_template" folder, hidden
-    folders) are not papers and are skipped.
+    Files starting with "_" or "." (a "_template.md", hidden files) are not
+    papers and are skipped. Subfolders (figures/, ...) are not searched.
     """
     return sorted(
-        folder / "paper.md"
-        for folder in md_dir.iterdir()
-        if folder.is_dir()
-        and not folder.name.startswith(("_", "."))
-        and (folder / "paper.md").is_file()
+        path
+        for path in md_dir.iterdir()
+        if path.is_file()
+        and path.suffix.lower() == ".md"
+        and not path.name.startswith(("_", "."))
     )
 
 
@@ -655,7 +661,7 @@ def build_all(papers: list[Path], spread: bool) -> int:
     if all succeeded, else 1."""
     results: list[tuple[str, int]] = []
     for number, paper in enumerate(papers, start=1):
-        name = paper.parent.name
+        name = paper.stem
         print()
         print("=" * 70)
         print(f"[{number}/{len(papers)}] {name}")
@@ -684,11 +690,11 @@ def main() -> int:
         nargs="?",
         default=None,
         help=(
-            "A paper.md (frontmatter + Markdown, see paperdoc.py) — given "
-            "as the paper's folder name or '<folder>/paper.md', looked up "
-            "in md/papers/, e.g. mein-paper — or the path to a "
-            "hand-written main.tex, e.g. papers/example-aevidence/main.tex. "
-            "Omit it to process every paper in the folder."
+            "A Markdown paper (frontmatter + Markdown, see paperdoc.py) — "
+            "given as its file name in md/papers/, with or without '.md', "
+            "e.g. mein-paper — or the path to a hand-written main.tex, "
+            "e.g. papers/example-aevidence/main.tex. Omit it to process "
+            "every .md file in the folder."
         ),
     )
     parser.add_argument(
@@ -696,9 +702,9 @@ def main() -> int:
         metavar="PATH",
         default=None,
         help=(
-            f"Folder that holds the paper folders (<paper>/paper.md). "
+            f"Folder that holds the Markdown papers (<paper>.md). "
             f"Default: {MD_DIR}. Used for the run over all papers and for "
-            f"looking up a single paper's folder name."
+            f"looking up a single paper's file name."
         ),
     )
     parser.add_argument(
@@ -724,8 +730,8 @@ def main() -> int:
         papers = find_papers(md_dir)
         if not papers:
             print(f"Keine Papers gefunden in {md_dir}")
-            print("(gesucht: <ordner>/paper.md; Ordner mit '_' oder '.' am "
-                  "Anfang werden übersprungen)")
+            print("(gesucht: *.md direkt in diesem Ordner; Dateien mit '_' "
+                  "oder '.' am Anfang werden übersprungen)")
             return 0
         if not shutil.which("lualatex"):
             # Checked once up front instead of once per paper.
@@ -734,7 +740,7 @@ def main() -> int:
             return 1
         print(f"{len(papers)} Paper(s) in {md_dir}:")
         for paper in papers:
-            print(f"  - {paper.parent.name}")
+            print(f"  - {paper.name}")
         return build_all(papers, args.spread)
 
     source, tried = resolve_input_path(args.input_file, md_dir)
@@ -742,9 +748,8 @@ def main() -> int:
         print(f"File not found: {args.input_file}")
         print("Looked for:")
         for candidate in tried:
-            shown = candidate / "paper.md" if candidate.is_dir() else candidate
-            print(f"  {shown}")
-        print(f"(paper.md files belong in {md_dir})")
+            print(f"  {candidate}")
+        print(f"(Markdown papers belong directly in {md_dir})")
         return 2
 
     return run_build(source, args.spread)
