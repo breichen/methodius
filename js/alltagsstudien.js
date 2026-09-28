@@ -82,6 +82,18 @@ const alltagsstudienListe = [
     slug: "englisch-jugendsprache",
     titel: "Mögliche Korrelation zwischen Verwendung von Jugendsprache und Englischnote",
     datum: ""
+  },
+
+  {
+    slug: "unterscheidung-satire-nachrichten",
+    titel: "Schwierige Unterscheidung von Satire- und Nachrichtensendungen",
+    datum: ""
+  },
+
+  {
+    slug: "scientology-flyer",
+    titel: "Immense Verbesserung dank Scientology",
+    datum: ""
   }
 
 ];

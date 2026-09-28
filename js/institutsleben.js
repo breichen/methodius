@@ -1,6 +1,10 @@
 const container =
   document.getElementById("institutsleben-galerie");
 
+function bildPfad(foto) {
+  return `pics/news-institutsleben/${foto.slug}.png`;
+}
+
 function ladeInstitutsfotos() {
 
   if (!container) return;
@@ -41,9 +45,9 @@ function ladeInstitutsfotos() {
 
               <img
                 class="institutsfoto-klickbar"
-                src="${foto.bild}"
+                src="${bildPfad(foto)}"
                 alt="${foto.titel}"
-                data-bild="${foto.bild}"
+                data-bild="${bildPfad(foto)}"
                 data-titel="${foto.titel}"
                 loading="lazy">
 
