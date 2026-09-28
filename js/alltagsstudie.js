@@ -132,7 +132,7 @@ else {
   }
 
   if (studie.einsender) {
-    zeilen.push(`<p class="buch-datum">Vorgeschlagen von: ${studie.einsender}</p>`);
+    metaZeilen.push(`<p class="buch-datum">Vorgeschlagen von: ${studie.einsender}</p>`);
   }
 
 
@@ -472,5 +472,98 @@ else {
     `;
 
   }
+
+  /* ========================================
+     TEILEN-BUTTON
+     (rechts neben "Alle Alltagsstudien")
+     ======================================== */
+
+  const fusszeile =
+    document.getElementById(
+      "alltagsstudie-fusszeile"
+    );
+
+  fusszeile.insertAdjacentHTML(
+    "beforeend",
+    `
+      <button
+        type="button"
+        id="teilen-button"
+        class="teilen-button"
+      >
+        🔗 Teilen
+      </button>
+    `
+  );
+
+
+  const teilenButton =
+    document.getElementById(
+      "teilen-button"
+    );
+
+
+  teilenButton.addEventListener(
+    "click",
+    async () => {
+
+      const url =
+        window.location.href;
+
+
+      /*
+        Auf Smartphones: natives Teilen-Menü.
+      */
+
+      if (navigator.share) {
+
+        try {
+
+          await navigator.share({
+            title: studie.titel,
+            url
+          });
+
+          return;
+
+        } catch (fehler) {
+
+          // Abbruch durch die Person: nichts weiter tun
+          if (fehler.name === "AbortError") return;
+
+        }
+
+      }
+
+
+      /*
+        Sonst: Link in die Zwischenablage kopieren.
+      */
+
+      try {
+
+        await navigator.clipboard.writeText(url);
+
+        teilenButton.textContent =
+          "✓ Link kopiert";
+
+        setTimeout(() => {
+
+          teilenButton.textContent =
+            "🔗 Teilen";
+
+        }, 2000);
+
+      } catch (fehler) {
+
+        window.prompt(
+          "Link zum Kopieren:",
+          url
+        );
+
+      }
+
+    }
+  );
 
 }
