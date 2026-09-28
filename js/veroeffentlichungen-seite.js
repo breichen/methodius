@@ -3,10 +3,6 @@
   zeigt sie vollständig an (im Gegensatz zu js/institutseite.js, das
   auf der Institutsseite nur die INSTITUT_VEROEFFENTLICHUNGEN_ANZAHL
   neuesten zeigt und hierher verlinkt).
-
-  Die JSON-Datei ist bereits nach Datum absteigend sortiert, sodass die
-  neueste Veröffentlichung oben steht - hier wird daher keine weitere
-  Sortierung vorgenommen.
 */
 
 const container = document.getElementById("veroeffentlichungen-liste");
@@ -30,9 +26,13 @@ function ladeAlleVeroeffentlichungen() {
       // js/institutseite.js und istDatumErreicht() in
       // js/datumsformat.js): Veröffentlichungen mit einem Datum in
       // der Zukunft werden noch nicht angezeigt.
-      const sichtbareVeroeffentlichungen = veroeffentlichungen.filter(
-        veroeffentlichung => istDatumErreicht(veroeffentlichung.datum)
-      );
+      // Newest first, same as on the person detail pages. Sorted
+      // explicitly so the page doesn't depend on the JSON order.
+      const sichtbareVeroeffentlichungen = veroeffentlichungen
+        .filter(
+          veroeffentlichung => istDatumErreicht(veroeffentlichung.datum)
+        )
+        .sort((a, b) => new Date(b.datum) - new Date(a.datum));
 
       if (sichtbareVeroeffentlichungen.length === 0) {
         container.innerHTML = `
