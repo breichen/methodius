@@ -308,6 +308,45 @@ funktioniert `python generate.py mein-paper/paper.md`. Auch ein voller Pfad
 (absolut oder relativ zum aktuellen Verzeichnis), z. B.
 `python generate.py md/papers/mein-paper/paper.md`, wird akzeptiert.
 
+#### Alle Papers auf einmal
+
+Ohne Angabe eines Papers verarbeitet der Generator **alle** Papers im
+Ordner:
+
+```bash
+python generate.py
+python generate.py --spread     # Doppelseiten-Vorschau für alle
+```
+
+Dabei gilt:
+
+- Verarbeitet wird jeder Unterordner von `md/papers/`, der eine `paper.md`
+  enthält, in alphabetischer Reihenfolge.
+- Ordner, deren Name mit `_` oder `.` beginnt (z. B. `_template`), werden
+  übersprungen, ebenso Ordner ohne `paper.md`.
+- Die Papers werden nacheinander und unabhängig voneinander gebaut: Schlägt
+  eines fehl, laufen die übrigen trotzdem weiter. Am Ende steht eine
+  Zusammenfassung mit OK/FEHLER pro Paper; der Exit-Code ist 1, sobald
+  mindestens ein Paper fehlgeschlagen ist, sonst 0.
+- Jedes Paper bekommt wie gewohnt seine eigenen Dateien in `output/tex/`,
+  `output/pdf/` und `output/png/` (benannt nach dem `slug`) und räumt
+  seinen temporären Ordner selbst wieder auf.
+
+#### Anderen Ordner verwenden: `--md-dir`
+
+Mit `--md-dir` zeigst du dem Generator einen anderen Ordner als
+`md/papers/` (Pfad absolut oder relativ zum aktuellen Verzeichnis):
+
+```bash
+python generate.py --md-dir ../andere-papers              # alle Papers dort
+python generate.py mein-paper --md-dir ../andere-papers   # ein Paper dort
+```
+
+Der Ordner enthält wie `md/papers/` je Paper einen Unterordner mit
+`paper.md`. Bei einem einzelnen Paper wird der Ordnername darin
+nachgeschlagen; ein voller Pfad zur `paper.md` funktioniert weiterhin
+unabhängig von `--md-dir`.
+
 Das erzeugt in einem Rutsch:
 
 ```text

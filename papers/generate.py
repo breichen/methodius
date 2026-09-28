@@ -3,6 +3,8 @@
 Methodius Paper Generator
 
 Usage:
+    python generate.py                            # ALL papers in md/papers/
+    python generate.py --md-dir pfad/zum/ordner   # all papers in another folder
     python generate.py mein-satire-artikel
     python generate.py mein-satire-artikel/paper.md --spread
     python generate.py papers/example-aevidence/main.tex
@@ -19,6 +21,16 @@ For a paper.md, the input can therefore be just the paper's folder name
 ("mein-satire-artikel") or "<folder>/paper.md" — both are looked up in
 md/papers/ first. A full path (absolute, or relative to the current
 directory) to any paper.md or main.tex works as well.
+
+Without any input, every paper in the folder is processed: each
+subfolder of md/papers/ that contains a paper.md, in alphabetical order.
+Folders whose name starts with "_" or "." (e.g. the "_template" folder)
+are skipped. Papers are built one after the other and independently — one
+that fails doesn't stop the others; a summary at the end lists the
+results and the exit code is 1 if any paper failed. --md-dir PATH points
+the generator at a different folder than md/papers/ (for the batch run
+and for looking up a single paper's folder name alike). --spread applies
+to every paper of the run.
 
 The script:
 0. if given a paper.md (frontmatter + Markdown) instead of a .tex file,
@@ -585,20 +597,21 @@ def build(source: Path, spread: bool, build_dir: Path) -> int:
     return 0
 
 
-def resolve_input_path(arg: str) -> tuple[Path | None, list[Path]]:
+def resolve_input_path(arg: str, md_dir: Path) -> tuple[Path | None, list[Path]]:
     """Resolve the command-line input to an existing file.
 
-    Relative inputs are looked up in MD_DIR (md/papers/) first, so a
-    paper.md can be given as just "<folder>" or "<folder>/paper.md"; the
-    path as given (relative to the current directory, or absolute) is the
-    fallback and still works for any paper.md / main.tex anywhere. A
-    folder resolves to the paper.md inside it.
+    Relative inputs are looked up in `md_dir` (md/papers/ by default, or
+    whatever --md-dir says) first, so a paper.md can be given as just
+    "<folder>" or "<folder>/paper.md"; the path as given (relative to the
+    current directory, or absolute) is the fallback and still works for any
+    paper.md / main.tex anywhere. A folder resolves to the paper.md inside
+    it.
 
     Returns (resolved path or None, every candidate that was tried) — the
     latter for the "not found" message.
     """
     given = Path(arg)
-    candidates = [given] if given.is_absolute() else [MD_DIR / given, given]
+    candidates = [given] if given.is_absolute() else [md_dir / given, given]
     for candidate in candidates:
         if candidate.is_dir():
             candidate = candidate / "paper.md"
@@ -607,18 +620,85 @@ def resolve_input_path(arg: str) -> tuple[Path | None, list[Path]]:
     return None, candidates
 
 
+def find_papers(md_dir: Path) -> list[Path]:
+    """All <md_dir>/<paper>/paper.md files, sorted by folder name.
+
+    Folders starting with "_" or "." (the "_template" folder, hidden
+    folders) are not papers and are skipped.
+    """
+    return sorted(
+        folder / "paper.md"
+        for folder in md_dir.iterdir()
+        if folder.is_dir()
+        and not folder.name.startswith(("_", "."))
+        and (folder / "paper.md").is_file()
+    )
+
+
+def run_build(source: Path, spread: bool) -> int:
+    """build() with its own scratch folder.
+
+    All intermediate files live in one scratch folder outside the project,
+    removed in `finally` so it disappears on success, on errors and on
+    Ctrl+C alike. Only output/{tex,pdf,png} keep anything.
+    """
+    build_dir = Path(tempfile.mkdtemp(prefix="methodius-build-"))
+    try:
+        return build(source, spread, build_dir)
+    finally:
+        shutil.rmtree(build_dir, ignore_errors=True)
+
+
+def build_all(papers: list[Path], spread: bool) -> int:
+    """Build every paper in `papers`, one after the other, independently:
+    a failing paper is reported and skipped, the rest still run. Returns 0
+    if all succeeded, else 1."""
+    results: list[tuple[str, int]] = []
+    for number, paper in enumerate(papers, start=1):
+        name = paper.parent.name
+        print()
+        print("=" * 70)
+        print(f"[{number}/{len(papers)}] {name}")
+        print("=" * 70)
+        results.append((name, run_build(paper, spread)))
+
+    failed = [name for name, code in results if code != 0]
+    print()
+    print("=" * 70)
+    print(f"Fertig: {len(results) - len(failed)} von {len(results)} Papers erfolgreich.")
+    for name, code in results:
+        print(f"  {'OK    ' if code == 0 else 'FEHLER'}  {name}")
+    print("=" * 70)
+    return 1 if failed else 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Compile a Methodius paper and render a PNG preview."
+        description=(
+            "Compile Methodius papers and render PNG previews. Without an "
+            "input, all papers in md/papers/ are processed."
+        )
     )
     parser.add_argument(
         "input_file",
+        nargs="?",
+        default=None,
         help=(
             "A paper.md (frontmatter + Markdown, see paperdoc.py) — given "
             "as the paper's folder name or '<folder>/paper.md', looked up "
             "in md/papers/, e.g. mein-paper — or the path to a "
-            "hand-written main.tex, e.g. "
-            "papers/example-aevidence/main.tex"
+            "hand-written main.tex, e.g. papers/example-aevidence/main.tex. "
+            "Omit it to process every paper in the folder."
+        ),
+    )
+    parser.add_argument(
+        "--md-dir",
+        metavar="PATH",
+        default=None,
+        help=(
+            f"Folder that holds the paper folders (<paper>/paper.md). "
+            f"Default: {MD_DIR}. Used for the run over all papers and for "
+            f"looking up a single paper's folder name."
         ),
     )
     parser.add_argument(
@@ -633,24 +713,41 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    source, tried = resolve_input_path(args.input_file)
+    md_dir = Path(args.md_dir).expanduser().resolve() if args.md_dir else MD_DIR
+
+    if args.input_file is None:
+        # No paper given: process everything in md_dir.
+        if not md_dir.is_dir():
+            print(f"Folder not found: {md_dir}")
+            print("Pass the folder with --md-dir PATH, or name a paper.")
+            return 2
+        papers = find_papers(md_dir)
+        if not papers:
+            print(f"Keine Papers gefunden in {md_dir}")
+            print("(gesucht: <ordner>/paper.md; Ordner mit '_' oder '.' am "
+                  "Anfang werden übersprungen)")
+            return 0
+        if not shutil.which("lualatex"):
+            # Checked once up front instead of once per paper.
+            print("ERROR: lualatex was not found in PATH.")
+            print("Install TeX Live or MiKTeX and make sure LuaLaTeX is available.")
+            return 1
+        print(f"{len(papers)} Paper(s) in {md_dir}:")
+        for paper in papers:
+            print(f"  - {paper.parent.name}")
+        return build_all(papers, args.spread)
+
+    source, tried = resolve_input_path(args.input_file, md_dir)
     if source is None:
         print(f"File not found: {args.input_file}")
         print("Looked for:")
         for candidate in tried:
             shown = candidate / "paper.md" if candidate.is_dir() else candidate
             print(f"  {shown}")
-        print(f"(paper.md files belong in {MD_DIR})")
+        print(f"(paper.md files belong in {md_dir})")
         return 2
 
-    # All intermediate files live in one scratch folder outside the
-    # project, removed in `finally` so it disappears on success, on
-    # errors and on Ctrl+C alike. Only output/{tex,pdf,png} keep anything.
-    build_dir = Path(tempfile.mkdtemp(prefix="methodius-build-"))
-    try:
-        return build(source, args.spread, build_dir)
-    finally:
-        shutil.rmtree(build_dir, ignore_errors=True)
+    return run_build(source, args.spread)
 
 
 if __name__ == "__main__":
