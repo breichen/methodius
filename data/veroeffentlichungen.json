@@ -231,7 +231,7 @@
         "band": 4,
         "heft": 1,
         "seite_start": 7,
-        "seite_ende": 22,
+        "seite_ende": 15,
         "slug": "das-machen-doch-alle"
     },
     {
@@ -246,7 +246,7 @@
         "band": 6,
         "heft": 4,
         "seite_start": 251,
-        "seite_ende": 269,
+        "seite_ende": 259,
         "slug": "spontane-meinungsrevisionen-im-alltag"
     },
     {
@@ -260,7 +260,7 @@
         "band": 18,
         "heft": 1,
         "seite_start": 1,
-        "seite_ende": 12,
+        "seite_ende": 6,
         "slug": "gruende-heute-nichts-anzufangen"
     },
     {
@@ -275,7 +275,7 @@
         "band": 9,
         "heft": 2,
         "seite_start": 33,
-        "seite_ende": 51,
+        "seite_ende": 38,
         "slug": "produktive-vermeidung-von-produktivitaet"
     },
     {
@@ -290,7 +290,7 @@
         "band": 12,
         "heft": 3,
         "seite_start": 201,
-        "seite_ende": 216,
+        "seite_ende": 210,
         "slug": "problem-geloest-werden-muss"
     }
 ]
