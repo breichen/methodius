@@ -9,9 +9,9 @@ Usage:
 
 The script:
 0. if given a paper.md (frontmatter + Markdown) instead of a .tex file,
-   first generates a main.tex from it next to the source file — this is
-   the "extra first output" step, also copied to output/tex/ so it's
-   visible alongside the PDF/PNG outputs,
+   first generates a main.tex from it — this is the "extra first output"
+   step, copied to output/tex/ so it's visible alongside the PDF/PNG
+   outputs,
 1. finds the journal template (templates/<name>/<name>.cls) that the paper's
    \\documentclass refers to and makes it visible to LaTeX,
 2. compiles the LaTeX file twice with LuaLaTeX,
@@ -41,6 +41,17 @@ a paper.md-based generation writes into it; without that comment (a fully
 hand-written main.tex with no paper.md in its history), the folder name is
 used instead, exactly as before.
 
+Nothing is left behind outside output/: the only files this script leaves
+on disk are output/tex/<slug>.tex, output/pdf/<slug>.pdf and
+output/png/<slug>.png. Everything else it produces on the way — the
+generated main.tex, LaTeX's .aux/.log/.out files and the intermediate
+main.pdf, images and scripts generated from figure code blocks, page
+previews for --spread — is written to a temporary folder (in the system's
+temp directory, not in the project) that is deleted at the end of every
+run, successful or not. Python doesn't write __pycache__ folders either.
+The paper folder itself (paper.md, figures/, a hand-written main.tex, ...)
+is only ever read, never written to.
+
 paper.md is optional: a hand-written main.tex can still be passed directly
 and is compiled exactly as before. See paperdoc.py for the paper.md format.
 """
@@ -52,7 +63,14 @@ import os
 import re
 import shutil
 import subprocess
+import sys
+import tempfile
 from pathlib import Path
+
+# Must be set before `import paperdoc`: otherwise Python writes a
+# __pycache__/ folder with paperdoc's bytecode next to this script, which
+# would be a leftover file outside output/.
+sys.dont_write_bytecode = True
 
 import paperdoc
 
@@ -161,7 +179,8 @@ def print_unmissable(*lines: str) -> None:
     print()
 
 
-def reconcile_page_range(tex: Path, pdf: Path, env: dict) -> None:
+def reconcile_page_range(tex: Path, pdf: Path, env: dict,
+                         workdir: Path, outdir: Path) -> bool:
     """Correct \\articlepages's end page to match the PDF's real last page.
 
     The paper's declared page range (\\articlepages{start--end}) ultimately
@@ -176,12 +195,16 @@ def reconcile_page_range(tex: Path, pdf: Path, env: dict) -> None:
     matching update.
 
     Only rewrites .tex files carrying the "AUTO-GENERATED" marker (i.e.
-    ones paperdoc.py produced from a paper.md) — a hand-written main.tex is
-    never modified automatically, only warned about.
+    ones paperdoc.py produced from a paper.md, living in the temporary
+    build folder) — a hand-written main.tex is never modified, only warned
+    about.
+
+    Returns True if `tex` was rewritten (the caller then refreshes its
+    copy in output/tex), else False.
     """
     declared = find_declared_page_range(tex)
     if declared is None:
-        return  # paper doesn't use \articlepages at all — nothing to check
+        return False  # paper doesn't use \articlepages at all — nothing to check
 
     declared_start, declared_end = declared
     actual_pages = get_pdf_page_count(pdf)
@@ -191,11 +214,11 @@ def reconcile_page_range(tex: Path, pdf: Path, env: dict) -> None:
             "(weder pdfinfo noch ImageMagick gefunden) — Abgleich mit "
             "\\articlepages übersprungen."
         )
-        return
+        return False
 
     actual_end = declared_start + actual_pages - 1
     if actual_end == declared_end:
-        return  # already consistent, nothing to do
+        return False  # already consistent, nothing to do
 
     if is_generated_tex(tex):
         text = tex.read_text(encoding="utf-8")
@@ -204,7 +227,7 @@ def reconcile_page_range(tex: Path, pdf: Path, env: dict) -> None:
         )
         tex.write_text(new_text, encoding="utf-8")
         try:
-            compile_tex(tex, env)
+            compile_tex(tex, env, workdir, outdir)
         except LatexError as exc:
             print_unmissable(
                 "SEITENZAHL-ABGLEICH FEHLGESCHLAGEN",
@@ -212,16 +235,17 @@ def reconcile_page_range(tex: Path, pdf: Path, env: dict) -> None:
                 "aber der Rekompilierungslauf ist fehlgeschlagen:",
                 str(exc),
             )
-            return
+            return True
         print_unmissable(
             "SEITENZAHL WURDE AUTOMATISCH KORRIGIERT",
             f"Projektdaten sagten S. {declared_start}--{declared_end} "
             f"({declared_end - declared_start + 1} Seiten),",
             f"tatsächlich erzeugt: {actual_pages} Seite(n) -> S. {declared_start}--{actual_end}.",
-            f"main.tex wurde angepasst und neu kompiliert.",
+            f"Das generierte LaTeX wurde angepasst und neu kompiliert.",
             "BITTE 'seite_ende' in data/veroeffentlichungen.json nachziehen",
             "(und ggf. 'seite_start' nachfolgender Beiträge im selben Heft)!",
         )
+        return True
     else:
         print_unmissable(
             "SEITENZAHL STIMMT NICHT MEHR",
@@ -231,6 +255,7 @@ def reconcile_page_range(tex: Path, pdf: Path, env: dict) -> None:
             "Bitte \\articlepages hier sowie 'seite_ende' in "
             "data/veroeffentlichungen.json von Hand anpassen!",
         )
+        return False
 
 
 def find_template_dir(class_name: str) -> Path | None:
@@ -249,31 +274,45 @@ def find_template_dir(class_name: str) -> Path | None:
     return None
 
 
-def build_texinputs(template_dir: Path | None) -> dict:
-    """Return an environment with TEXINPUTS extended by the template dir.
+def build_texinputs(template_dir: Path | None, build_dir: Path) -> dict:
+    """Return an environment with TEXINPUTS extended by the build and
+    template folders.
+
+    `build_dir` comes first so images produced during this run (figure
+    scripts, see paperdoc) are found there; `template_dir` provides the
+    journal's .cls. LaTeX itself runs with the paper folder as working
+    directory, so hand-maintained figures/inputs resolve relative to it as
+    usual.
 
     The trailing path separator keeps the normal TeX search path intact
     (an empty TEXINPUTS component means "use the default"), so other
     packages are still found as usual.
     """
     env = os.environ.copy()
-    if template_dir:
-        sep = ";" if os.name == "nt" else ":"
-        existing = env.get("TEXINPUTS", "")
-        env["TEXINPUTS"] = f"{template_dir}{os.sep}{sep}{existing}"
+    sep = ";" if os.name == "nt" else ":"
+    existing = env.get("TEXINPUTS", "")
+    dirs = [build_dir] + ([template_dir] if template_dir else [])
+    prefix = sep.join(f"{d}{os.sep}" for d in dirs)
+    env["TEXINPUTS"] = f"{prefix}{sep}{existing}"
     return env
 
 
-def tail_of_log(workdir: Path, stem: str, lines: int = 25) -> str:
-    log_path = workdir / f"{stem}.log"
+def tail_of_log(outdir: Path, stem: str, lines: int = 25) -> str:
+    log_path = outdir / f"{stem}.log"
     if not log_path.exists():
-        return "(no main.log was produced)"
+        return f"(no {stem}.log was produced)"
     content = log_path.read_text(encoding="utf-8", errors="ignore").splitlines()
     return "\n".join(content[-lines:])
 
 
-def compile_tex(tex: Path, env: dict) -> None:
-    workdir = tex.parent
+def compile_tex(tex: Path, env: dict, workdir: Path, outdir: Path) -> None:
+    """Compile `tex` twice with lualatex.
+
+    lualatex runs with `workdir` (the paper's own folder) as cwd, so
+    relative paths in the .tex (figures, \\input) resolve as they always
+    did — but every file LaTeX *writes* (.aux, .log, .out, the .pdf) goes
+    to `outdir` via -output-directory, so nothing lands in the paper folder.
+    """
     try:
         # Two passes for stable page numbers / references.
         for _ in range(2):
@@ -282,7 +321,8 @@ def compile_tex(tex: Path, env: dict) -> None:
                     "lualatex",
                     "-interaction=nonstopmode",
                     "-halt-on-error",
-                    tex.name,
+                    f"-output-directory={outdir}",
+                    str(tex),
                 ],
                 workdir,
                 env=env,
@@ -291,7 +331,7 @@ def compile_tex(tex: Path, env: dict) -> None:
         raise LatexError(
             f"lualatex failed (exit code {exc.returncode}).\n"
             f"--- tail of {tex.stem}.log ---\n"
-            f"{tail_of_log(workdir, tex.stem)}\n"
+            f"{tail_of_log(outdir, tex.stem)}\n"
             f"--- end of log ---"
         ) from exc
 
@@ -357,8 +397,9 @@ def render_spread_png(pdf: Path, output_png: Path) -> bool:
         print("Install it with: pip install Pillow  (add --break-system-packages on Linux if needed)")
         return False
 
-    tmp_dir = output_png.parent / ".spread-tmp"
-    tmp_dir.mkdir(parents=True, exist_ok=True)
+    # System temp dir, not output/png: the two single-page renders must not
+    # even briefly (or after a crash) sit in the project's output folders.
+    tmp_dir = Path(tempfile.mkdtemp(prefix="methodius-spread-"))
     left_tmp = tmp_dir / f"{output_png.stem}-p1.png"
     right_tmp = tmp_dir / f"{output_png.stem}-p2.png"
 
@@ -404,8 +445,13 @@ def render_spread_png(pdf: Path, output_png: Path) -> bool:
         shutil.rmtree(tmp_dir, ignore_errors=True)
 
 
-def generate_tex_from_markdown(md_path: Path) -> tuple[Path, str]:
-    """Convert a paper.md into main.tex next to it; return (.tex path, slug).
+def generate_tex_from_markdown(md_path: Path, build_dir: Path) -> tuple[Path, str]:
+    """Convert a paper.md into main.tex inside `build_dir`; return
+    (.tex path, slug).
+
+    The .tex is written to the temporary build folder, not next to the
+    paper.md — output/tex/<slug>.tex (copied by main()) is its only
+    lasting copy.
 
     Fields the paper.md omits (title, authors, volume, issue, year, date,
     pages) are looked up in PUBLICATIONS_PATH via the paper.md's `slug`,
@@ -415,10 +461,114 @@ def generate_tex_from_markdown(md_path: Path) -> tuple[Path, str]:
     Raises paperdoc.PaperDocError with a human-readable message on anything
     wrong with the paper.md's structure or content.
     """
-    tex_source, slug = paperdoc.convert_paper_md(md_path, TEMPLATES_DIR, PUBLICATIONS_PATH)
-    tex_path = md_path.parent / "main.tex"
+    tex_source, slug = paperdoc.convert_paper_md(
+        md_path, TEMPLATES_DIR, PUBLICATIONS_PATH, build_dir=build_dir
+    )
+    tex_path = build_dir / "main.tex"
     tex_path.write_text(tex_source, encoding="utf-8")
     return tex_path, slug
+
+
+def build(source: Path, spread: bool, build_dir: Path) -> int:
+    """Do the actual work for one input file. Everything written along the
+    way (except the three files in output/) goes into `build_dir`, which
+    main() deletes afterwards."""
+    slug: str | None = None
+
+    if source.suffix.lower() == ".md":
+        try:
+            tex, slug = generate_tex_from_markdown(source, build_dir)
+        except paperdoc.PaperDocError as exc:
+            print(f"ERROR: {exc}")
+            return 1
+        OUT_TEX.mkdir(parents=True, exist_ok=True)
+        tex_copy = OUT_TEX / f"{slug}.tex"
+        # Copied right away (not only at the end) so that a failed LaTeX
+        # run still leaves the generated .tex behind for debugging.
+        shutil.copy2(tex, tex_copy)
+        print(f"Erzeugt: {tex_copy} (aus {source.name})")
+        print()
+    elif source.suffix.lower() == ".tex":
+        tex = source
+        # No paper.md was involved this run, but the .tex may still carry
+        # the "% slug: ..." comment from an earlier paper.md-based
+        # generation — reuse it so output filenames stay stable across
+        # both entry points for the same paper.
+        slug = find_paper_slug(tex)
+        tex_copy = None
+    else:
+        print("The input must be a .tex or a paper.md file.")
+        return 2
+
+    # LaTeX runs with the paper's own folder as cwd, so relative figure
+    # paths etc. resolve exactly as before; its output goes to build_dir.
+    workdir = source.parent
+    pdf = build_dir / f"{tex.stem}.pdf"
+
+    # Output files are named after the paper's own slug (from paper.md /
+    # veroeffentlichungen.json) whenever one is known, so every paper keeps
+    # a stable, unique output name regardless of its folder. Only a
+    # hand-written main.tex with no paper.md history falls back to the
+    # folder name (papers live in their own folder by convention,
+    # papers/<name>/..., which then still keeps outputs distinct).
+    output_name = slug or workdir.name
+
+    if not shutil.which("lualatex"):
+        print("ERROR: lualatex was not found in PATH.")
+        print("Install TeX Live or MiKTeX and make sure LuaLaTeX is available.")
+        return 1
+
+    # Figure out which journal template (.cls) this paper needs. lualatex is
+    # run with `workdir` (the paper's own folder) as cwd, so without help it
+    # never finds templates/<name>/<name>.cls, which lives elsewhere. We
+    # detect the class from \documentclass{...} and add its folder to
+    # TEXINPUTS so LaTeX's normal file search picks it up.
+    class_name = find_documentclass(tex)
+    template_dir = find_template_dir(class_name) if class_name else None
+
+    if class_name and not template_dir:
+        print(f"ERROR: No template found for \\documentclass{{{class_name}}}.")
+        print(f"Expected a file at templates/{class_name}/{class_name}.cls")
+        return 1
+
+    env = build_texinputs(template_dir, build_dir)
+
+    try:
+        compile_tex(tex, env, workdir, build_dir)
+    except LatexError as exc:
+        print(f"ERROR: {exc}")
+        return 1
+
+    if not pdf.exists():
+        print("ERROR: LaTeX reported success but did not produce a PDF.")
+        return 1
+
+    # Reconcile \articlepages's end page with the PDF's real last page
+    # before anything gets copied to output/, so target_pdf/target_png
+    # below always reflect the corrected version.
+    if reconcile_page_range(tex, pdf, env, workdir, build_dir) and tex_copy is not None:
+        shutil.copy2(tex, tex_copy)  # keep output/tex in sync with the PDF
+
+    OUT_PDF.mkdir(parents=True, exist_ok=True)
+    OUT_PNG.mkdir(parents=True, exist_ok=True)
+
+    target_pdf = OUT_PDF / f"{output_name}.pdf"
+    shutil.copy2(pdf, target_pdf)
+
+    target_png = OUT_PNG / f"{output_name}.png"
+    rendered = render_spread_png(pdf, target_png) if spread else render_png(pdf, target_png)
+
+    print()
+    print("Created:")
+    print(f"  PDF: {target_pdf}")
+
+    if rendered:
+        print(f"  PNG: {target_png}")
+    else:
+        print("  PNG: not created")
+        print("  Install pdftoppm (Poppler) or ImageMagick to enable PNG previews.")
+
+    return 0
 
 
 def main() -> int:
@@ -450,98 +600,14 @@ def main() -> int:
         print(f"File not found: {source}")
         return 2
 
-    slug: str | None = None
-
-    if source.suffix.lower() == ".md":
-        try:
-            tex, slug = generate_tex_from_markdown(source)
-        except paperdoc.PaperDocError as exc:
-            print(f"ERROR: {exc}")
-            return 1
-        OUT_TEX.mkdir(parents=True, exist_ok=True)
-        tex_copy = OUT_TEX / f"{slug}.tex"
-        shutil.copy2(tex, tex_copy)
-        print(f"Erzeugt: {tex} (aus {source.name})")
-        print(f"  Kopie: {tex_copy}")
-        print()
-    elif source.suffix.lower() == ".tex":
-        tex = source
-        # No paper.md was involved this run, but the .tex may still carry
-        # the "% slug: ..." comment from an earlier paper.md-based
-        # generation — reuse it so output filenames stay stable across
-        # both entry points for the same paper.
-        slug = find_paper_slug(tex)
-    else:
-        print("The input must be a .tex or a paper.md file.")
-        return 2
-
-    workdir = tex.parent
-    stem = tex.stem
-    pdf = workdir / f"{stem}.pdf"
-
-    # Output files are named after the paper's own slug (from paper.md /
-    # veroeffentlichungen.json) whenever one is known, so every paper keeps
-    # a stable, unique output name regardless of its folder. Only a
-    # hand-written main.tex with no paper.md history falls back to the
-    # folder name (papers live in their own folder by convention,
-    # papers/<name>/..., which then still keeps outputs distinct).
-    output_name = slug or workdir.name
-
-    if not shutil.which("lualatex"):
-        print("ERROR: lualatex was not found in PATH.")
-        print("Install TeX Live or MiKTeX and make sure LuaLaTeX is available.")
-        return 1
-
-    # Figure out which journal template (.cls) this paper needs. lualatex is
-    # run with `workdir` (the paper's own folder) as cwd, so without help it
-    # never finds templates/<name>/<name>.cls, which lives elsewhere. We
-    # detect the class from \documentclass{...} and add its folder to
-    # TEXINPUTS so LaTeX's normal file search picks it up.
-    class_name = find_documentclass(tex)
-    template_dir = find_template_dir(class_name) if class_name else None
-
-    if class_name and not template_dir:
-        print(f"ERROR: No template found for \\documentclass{{{class_name}}}.")
-        print(f"Expected a file at templates/{class_name}/{class_name}.cls")
-        return 1
-
-    env = build_texinputs(template_dir)
-
+    # All intermediate files live in one scratch folder outside the
+    # project, removed in `finally` so it disappears on success, on
+    # errors and on Ctrl+C alike. Only output/{tex,pdf,png} keep anything.
+    build_dir = Path(tempfile.mkdtemp(prefix="methodius-build-"))
     try:
-        compile_tex(tex, env)
-    except LatexError as exc:
-        print(f"ERROR: {exc}")
-        return 1
-
-    if not pdf.exists():
-        print("ERROR: LaTeX reported success but did not produce a PDF.")
-        return 1
-
-    # Reconcile \articlepages's end page with the PDF's real last page
-    # before anything gets copied to output/, so target_pdf/target_png
-    # below always reflect the corrected version.
-    reconcile_page_range(tex, pdf, env)
-
-    OUT_PDF.mkdir(parents=True, exist_ok=True)
-    OUT_PNG.mkdir(parents=True, exist_ok=True)
-
-    target_pdf = OUT_PDF / f"{output_name}.pdf"
-    shutil.copy2(pdf, target_pdf)
-
-    target_png = OUT_PNG / f"{output_name}.png"
-    rendered = render_spread_png(pdf, target_png) if args.spread else render_png(pdf, target_png)
-
-    print()
-    print("Created:")
-    print(f"  PDF: {target_pdf}")
-
-    if rendered:
-        print(f"  PNG: {target_png}")
-    else:
-        print("  PNG: not created")
-        print("  Install pdftoppm (Poppler) or ImageMagick to enable PNG previews.")
-
-    return 0
+        return build(source, args.spread, build_dir)
+    finally:
+        shutil.rmtree(build_dir, ignore_errors=True)
 
 
 if __name__ == "__main__":

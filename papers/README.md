@@ -168,13 +168,14 @@ Weil das Skript relativ zum Paper-Ordner läuft, kann es dort z. B. auch
 eine `data/messwerte.csv` einlesen, genau wie Bildpfade auch relativ zum
 Paper-Ordner aufgelöst werden.
 
-Existiert die Zieldatei schon und ist neuer als das Skript, wird sie
-**nicht** neu erzeugt (wie bei einem Makefile) — ein Re-Run über alle
-Diagramme erzwingst du, indem du die erzeugte(n) Bilddatei(en) löschst.
-Schlägt das Skript fehl oder legt es die erwartete Datei nicht an, bricht
-der Generator mit einer klaren Fehlermeldung (inkl. Skript-Traceback) ab,
-bevor überhaupt LaTeX aufgerufen wird — genau wie beim fehlenden-Bild-Fall
-oben.
+Das Bild entsteht in einem temporären Ordner, der nach dem Lauf wieder
+gelöscht wird (siehe "Was nach dem Lauf übrig bleibt" unten) — im
+Paper-Ordner bleibt also nichts zurück, und das Skript läuft dafür bei
+jedem Build neu. Ein Bild, das im Paper-Ordner schon von Hand abgelegt
+ist, wird nie überschrieben. Schlägt das Skript fehl oder legt es die
+erwartete Datei nicht an, bricht der Generator mit einer klaren
+Fehlermeldung (inkl. Skript-Traceback) ab, bevor überhaupt LaTeX
+aufgerufen wird — genau wie beim fehlenden-Bild-Fall oben.
 
 #### Diagramme: Code direkt in der paper.md statt in einer eigenen .py-Datei
 
@@ -198,22 +199,11 @@ fig.savefig(sys.argv[1], dpi=300, bbox_inches="tight")
 
 Der Code-Block wird genau wie die externe Variante behandelt: er läuft mit
 dem Paper-Ordner als Arbeitsverzeichnis und bekommt den Zielpfad als
-`sys.argv[1]`. Intern wird er dazu nicht in `figures/` abgelegt (dort
-sollen nur echte Bilddateien liegen), sondern in einem eigenen
-`generated/`-Ordner direkt neben `figures/`, mit dem Slug des Papers als
-Dateinamens-Präfix — z. B. `generated/mein-slug-pwerte.generated.py` für
-die Abbildung `figures/pwerte.png`. Das entspricht demselben Muster, das
-`output/tex/`, `output/pdf/` und `output/png/` auf Projektebene für die
-fertigen Ausgabedateien verwenden: ein eigener Ordner pro Dateityp,
-Dateiname beginnt mit dem Slug.
-
-Diese generierte Datei wird bewusst **nicht** nach dem Lauf wieder
-gelöscht, sondern nur überschrieben, wenn sich der Code tatsächlich
-geändert hat — genau das lässt das Neuer-als-Skript-Caching von oben auch
-für eingebetteten Code weiter funktionieren. Ein Aufräumen nach jedem Lauf
-würde dieses Caching bei jedem Build wieder zunichtemachen. Du kannst
-`generated/` bei Bedarf in die `.gitignore` aufnehmen, da sein Inhalt
-deterministisch aus der `paper.md` regeneriert wird.
+`sys.argv[1]`. Intern wird er dazu als Datei (z. B.
+`generated/mein-slug-pwerte.generated.py` für die Abbildung
+`figures/pwerte.png`) in denselben temporären Ordner geschrieben wie das
+erzeugte Bild und mit diesem nach dem Lauf gelöscht. Im Paper-Ordner
+entsteht weder ein `generated/`-Ordner noch sonst eine Datei.
 
 Beide Varianten schließen sich pro Abbildung gegenseitig aus: `script=...`
 **und** ein eingebetteter Code-Block gleichzeitig ist ein Fehler, genau wie
@@ -299,17 +289,36 @@ python generate.py papers/mein-paper/paper.md
 Das erzeugt in einem Rutsch:
 
 ```text
-papers/mein-paper/main.tex     ← generiertes LaTeX (1. Output, zum Nachsehen/Debuggen)
-output/tex/mein-paper.tex      ← Kopie davon, neben den anderen Outputs
+output/tex/mein-paper.tex      ← generiertes LaTeX (zum Nachsehen/Debuggen)
 output/pdf/mein-paper.pdf
 output/png/mein-paper.png
 ```
 
-Das generierte `main.tex` trägt einen Hinweis-Kommentar, dass es
-automatisch erzeugt wurde — Änderungen daran gehen beim nächsten Lauf
-verloren. Wenn du mehr Kontrolle brauchst, bearbeite entweder die
-`paper.md` weiter, oder wechsle für dieses eine Paper auf ein von Hand
-gepflegtes `main.tex` (siehe unten).
+Das generierte LaTeX trägt einen Hinweis-Kommentar, dass es automatisch
+erzeugt wurde — Änderungen an `output/tex/mein-paper.tex` gehen beim
+nächsten Lauf verloren. Wenn du mehr Kontrolle brauchst, bearbeite
+entweder die `paper.md` weiter, oder wechsle für dieses eine Paper auf ein
+von Hand gepflegtes `main.tex` (siehe unten).
+
+#### Was nach dem Lauf übrig bleibt
+
+Nur die drei Dateien in `output/tex/`, `output/pdf/` und `output/png/`.
+Alles, was der Generator unterwegs braucht, entsteht in einem temporären
+Ordner im Temp-Verzeichnis des Betriebssystems (nicht im Projekt) und wird
+am Ende jedes Laufs wieder gelöscht — auch bei Fehlern und bei Strg+C:
+
+- das erzeugte `main.tex` (aus der `paper.md`),
+- LaTeX-Hilfsdateien (`.aux`, `.log`, `.out`) und das Zwischen-PDF,
+- von Diagramm-Skripten erzeugte Bilder und eingebettete Code-Blöcke,
+- Zwischenbilder der Doppelseiten-Vorschau (`--spread`).
+
+Der Paper-Ordner (`paper.md`, `figures/`, ein von Hand geschriebenes
+`main.tex` usw.) wird vom Generator nur gelesen, nie beschrieben. Auch
+`__pycache__`-Ordner legt der Generator nicht an.
+
+Einzige Ausnahme außerhalb des Projekts: LuaLaTeX pflegt seinen eigenen
+Schrift-Cache im Benutzerverzeichnis (TeX-Live-Standardverhalten, nicht
+vom Generator steuerbar).
 
 ### 4. Doppelseiten-Vorschau (`--spread`)
 
@@ -399,7 +408,9 @@ lualatex main.tex
 ```
 
 Der zweite Durchlauf sorgt dafür, dass Seitenzahlen und Querverweise sauber
-gesetzt werden.
+gesetzt werden. (Diese manuellen Aufrufe legen die üblichen LaTeX-
+Hilfsdateien wie `main.aux` und `main.log` im Paper-Ordner ab — der
+Generator-Aufruf weiter unten tut das nicht.)
 
 Oder mit dem Generator, genau wie bei `paper.md` (nur ohne den
 Konvertierungsschritt davor):

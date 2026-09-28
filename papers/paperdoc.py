@@ -64,9 +64,10 @@ Ist `script=...` gesetzt, wird das Skript vor dem Kompilieren als
 
 mit dem Paper-Ordner als Arbeitsverzeichnis ausgeführt (Skript bekommt den
 Zielpfad — hier `figures/pwerte.png` — als sys.argv[1] und muss dort exakt
-die Bilddatei erzeugen, PNG oder PDF). Existiert die Bilddatei schon und
-ist neuer als das Skript, wird sie nicht neu erzeugt. Schlägt das Skript
-fehl oder erzeugt es die Datei nicht, bricht der Generator mit einer
+die Bilddatei erzeugen, PNG oder PDF). Das Bild entsteht in einem
+temporären Build-Ordner, der nach dem Lauf gelöscht wird — im Paper-Ordner
+bleibt nichts zurück, und das Skript läuft bei jedem Build neu. Schlägt das
+Skript fehl oder erzeugt es die Datei nicht, bricht der Generator mit einer
 klaren Fehlermeldung ab, bevor LaTeX aufgerufen wird.
 
 Oder als eingebetteter Code-Block direkt unter der Abbildung, ohne
@@ -83,9 +84,8 @@ Leerzeile dazwischen (dann kein `script=` angeben):
     ```
 
 Der Code-Block wird 1:1 wie die externe Variante behandelt: er wird als
-`<bildname>.generated.py` neben das Bild geschrieben (nur überschrieben,
-wenn sich der Code tatsächlich geändert hat, damit das Neuer-als-Skript-
-Caching weiter funktioniert) und genauso ausgeführt. `script=...` und ein
+`<slug>-<bildname>.generated.py` in den temporären Build-Ordner geschrieben
+(und mit ihm nach dem Lauf gelöscht) und genauso ausgeführt. `script=...` und ein
 eingebetteter Code-Block schließen sich pro Abbildung gegenseitig aus, und
 ein Code-Block, der nicht direkt auf eine Abbildung folgt, ist ein Fehler.
 
@@ -121,6 +121,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import re
 import subprocess
 import sys
@@ -770,7 +771,8 @@ def _figure_width_to_latex(width: str | None) -> str:
     return width  # a raw LaTeX length such as "5cm" or "0.8\\textwidth"
 
 
-def _run_figure_script(script_str: str, resolved_path: Path, paper_dir: Path,
+def _run_figure_script(resolved_script: Path, script_label: str,
+                        resolved_path: Path, paper_dir: Path,
                         source: Path, image_path_str: str) -> None:
     """Run the Python script behind a `script=...` figure attribute.
 
@@ -783,42 +785,41 @@ def _run_figure_script(script_str: str, resolved_path: Path, paper_dir: Path,
     already-resolved target of the `![...](...)` this attribute is on, so
     the script never needs to hardcode or guess it.
 
-    Runs unconditionally unless the output already exists and is newer
-    than the script (mtime), in which case it's skipped — same idea as a
-    Makefile, so unrelated edits elsewhere in the paper don't force every
-    diagram to be recomputed on each build.
+    `resolved_path` normally lies inside generate.py's temporary build
+    folder (see markdown_to_latex's `build_dir`), not in the paper folder,
+    so nothing this script produces stays behind after the run. The script
+    is therefore always re-run — there is no "output already up to date"
+    shortcut, because the output never outlives a single build.
     """
-    resolved_script = paper_dir / script_str
     if not resolved_script.exists():
         raise PaperDocError(
             f"{source}: Diagramm-Skript nicht gefunden: {resolved_script} "
-            f"(referenziert als 'script={script_str}' bei '{image_path_str}')"
+            f"(referenziert als 'script={script_label}' bei '{image_path_str}')"
         )
-
-    if (
-        resolved_path.exists()
-        and resolved_path.stat().st_mtime >= resolved_script.stat().st_mtime
-    ):
-        return  # output is already up to date, no need to re-run
 
     resolved_path.parent.mkdir(parents=True, exist_ok=True)
 
-    print(f"$ python {resolved_script.relative_to(paper_dir)} -> {image_path_str}")
+    print(f"$ python {script_label} -> {image_path_str}")
+    # PYTHONDONTWRITEBYTECODE: a script that imports a local module must
+    # not leave a __pycache__ folder behind in the paper folder.
+    script_env = os.environ.copy()
+    script_env["PYTHONDONTWRITEBYTECODE"] = "1"
     result = subprocess.run(
         [sys.executable, str(resolved_script), str(resolved_path)],
         cwd=paper_dir,
         capture_output=True,
         text=True,
+        env=script_env,
     )
     if result.returncode != 0:
         tail = "\n".join(result.stderr.strip().splitlines()[-20:])
         raise PaperDocError(
-            f"{source}: Diagramm-Skript '{script_str}' ist fehlgeschlagen "
+            f"{source}: Diagramm-Skript '{script_label}' ist fehlgeschlagen "
             f"(Exit-Code {result.returncode}):\n{tail}"
         )
     if not resolved_path.exists():
         raise PaperDocError(
-            f"{source}: Diagramm-Skript '{script_str}' wurde erfolgreich "
+            f"{source}: Diagramm-Skript '{script_label}' wurde erfolgreich "
             f"ausgeführt, hat aber keine Datei unter '{resolved_path}' "
             f"erzeugt. Das Skript muss sein einziges Kommandozeilen-"
             f"argument (sys.argv[1]) als Ausgabepfad verwenden."
@@ -842,13 +843,9 @@ def _write_generated_script(script_path: Path, code: str) -> None:
     through the same _run_figure_script() machinery as an external script=
     file.
 
-    Only writes if the content actually changed, so the file's mtime stays
-    put when the paper.md's code block is unchanged — that's what lets
-    _run_figure_script's "skip if output is newer than script" check go on
-    working for inline code exactly as it does for an external file. This
-    is also why generated scripts are kept on disk (in their own
-    generated/ folder, see _figure_to_latex) rather than cleaned up after
-    the run: deleting them would throw away that caching on every build.
+    `script_path` lies inside generate.py's temporary build folder and is
+    deleted together with it after the run, so no generated script stays
+    behind in the paper folder.
     """
     header = (
         "# AUTO-GENERATED von generate.py aus einem eingebetteten\n"
@@ -856,18 +853,25 @@ def _write_generated_script(script_path: Path, code: str) -> None:
         "# Änderungen gehen beim nächsten Lauf verloren.\n\n"
     )
     content = header + code + ("\n" if not code.endswith("\n") else "")
-    if script_path.exists() and script_path.read_text(encoding="utf-8") == content:
-        return  # unchanged — keep the existing mtime so caching still works
     script_path.parent.mkdir(parents=True, exist_ok=True)
     script_path.write_text(content, encoding="utf-8")
 
 
 def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path,
-                      slug_prefix: str, inline_code: str | None = None) -> str:
+                      slug_prefix: str, inline_code: str | None = None,
+                      build_dir: Path | None = None) -> str:
     caption = match.group("caption").strip()
     image_path_str = match.group("path").strip()
     attrs = _parse_figure_attrs(match.group("attrs"))
 
+    # Hand-maintained images live in the paper folder and are only read.
+    # Anything a script/code block *produces* (and the generated script
+    # itself) goes to `build_dir` — generate.py's temporary folder, deleted
+    # after the run — so nothing is left behind in the paper folder. The
+    # LaTeX run finds such an image through TEXINPUTS (build_dir comes
+    # first, see generate.build_texinputs). Without a build_dir (paperdoc
+    # used on its own) the paper folder is used, as before.
+    out_root = build_dir if build_dir is not None else paper_dir
     resolved_path = paper_dir / image_path_str
 
     script_str = attrs.get("script")
@@ -879,20 +883,24 @@ def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path,
         )
 
     if inline_code is not None:
-        # Own folder per erzeugtem Dateityp (wie output/tex, output/pdf,
-        # output/png auf Projektebene): der generierte Code liegt nicht
-        # zwischen den händisch gepflegten Bildern in figures/, sondern in
-        # einem eigenen generated/-Ordner neben dem Paper, mit dem Slug als
-        # Dateinamens-Präfix, damit er eindeutig einem Paper zuzuordnen ist.
-        generated_dir = paper_dir / "generated"
-        generated_script = generated_dir / f"{slug_prefix}-{resolved_path.stem}.generated.py"
+        # Generated code goes to its own generated/ folder inside the
+        # temporary build folder, with the slug as filename prefix.
+        resolved_path = out_root / image_path_str
+        generated_script = (
+            out_root / "generated"
+            / f"{slug_prefix}-{resolved_path.stem}.generated.py"
+        )
         _write_generated_script(generated_script, inline_code)
         _run_figure_script(
-            str(generated_script.relative_to(paper_dir)),
+            generated_script, f"generated/{generated_script.name}",
             resolved_path, paper_dir, source, image_path_str,
         )
     elif script_str:
-        _run_figure_script(script_str, resolved_path, paper_dir, source, image_path_str)
+        resolved_path = out_root / image_path_str
+        _run_figure_script(
+            paper_dir / script_str, script_str,
+            resolved_path, paper_dir, source, image_path_str,
+        )
 
     if not resolved_path.exists():
         raise PaperDocError(
@@ -921,7 +929,8 @@ def _figure_to_latex(match: re.Match, paper_dir: Path, source: Path,
     return "\n".join(lines)
 
 
-def markdown_to_latex(body: str, source: Path, slug: str | None = None) -> str:
+def markdown_to_latex(body: str, source: Path, slug: str | None = None,
+                      build_dir: Path | None = None) -> str:
     """Convert the small Markdown subset described in the module docstring.
 
     `source` is the paper.md path: its parent directory is where relative
@@ -932,6 +941,11 @@ def markdown_to_latex(body: str, source: Path, slug: str | None = None) -> str:
     _figure_to_latex) so it stays identifiable on its own. Falls back to
     the paper's folder name if not given — the same fallback generate.py
     uses for naming its own output files when no slug is known.
+
+    `build_dir` is a scratch folder (generate.py passes a temporary one it
+    deletes after the run) for everything conversion itself produces:
+    images made by figure scripts and generated script files. None = write
+    next to the paper (only for standalone use of this module).
     """
     paper_dir = source.parent
     slug_prefix = slug or paper_dir.name
@@ -1019,7 +1033,10 @@ def markdown_to_latex(body: str, source: Path, slug: str | None = None) -> str:
                 inline_code = _is_fenced_code_block(blocks[idx + 1])
                 if inline_code is not None:
                     consumed = 2  # the ``` block right after belongs to this figure
-            out.append(_figure_to_latex(figure, paper_dir, source, slug_prefix, inline_code=inline_code))
+            out.append(_figure_to_latex(
+                figure, paper_dir, source, slug_prefix,
+                inline_code=inline_code, build_dir=build_dir,
+            ))
             idx += consumed
             continue
 
@@ -1214,6 +1231,7 @@ def convert_paper_md(
     md_path: Path,
     templates_dir: Path,
     data_path: Path | None = None,
+    build_dir: Path | None = None,
 ) -> tuple[str, str]:
     """Read a paper.md file and return (main.tex source, paper slug).
 
@@ -1229,6 +1247,9 @@ def convert_paper_md(
     folder alongside the paper folders and these .py files, while "data" is
     a sibling of "papers" one level further up, not of "templates" itself.
     Pass `data_path` explicitly to override.
+
+    `build_dir` is the scratch folder for figure-script output, see
+    markdown_to_latex().
     """
     if data_path is None:
         data_path = templates_dir.parent.parent / "data" / DEFAULT_PUBLICATIONS_FILENAME
@@ -1237,6 +1258,8 @@ def convert_paper_md(
     data = parse_frontmatter(frontmatter_text)
     meta = build_paper_meta(data, md_path, data_path)
     template_slug = validate_journal(meta.journal, templates_dir)
-    body_latex = markdown_to_latex(body_text, md_path, slug=meta.slug)
+    body_latex = markdown_to_latex(
+        body_text, md_path, slug=meta.slug, build_dir=build_dir
+    )
     tex_source = build_tex(meta, body_latex, md_path.name, template_slug)
     return tex_source, meta.slug
