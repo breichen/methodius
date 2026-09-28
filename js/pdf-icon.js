@@ -26,3 +26,22 @@ const PDF_ICON_SVG = `
     <path d="M15 2v5h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
   </svg>
 `;
+
+// Renders the action row with the PDF link, or an empty string if no
+// PDF exists. Shared by veroeffentlichungen-seite.js and
+// mitarbeiter-detail.js so the markup only lives in one place.
+function erzeugePdfLink(slug, vorhanden) {
+  if (!vorhanden) return "";
+
+  return `
+    <p class="institut-veroeffentlichung-links">
+      <a
+        href="pdf/papers/${slug}.pdf"
+        target="_blank"
+        rel="noopener"
+        class="institut-veroeffentlichung-pdf-link"
+        aria-label="PDF in neuem Tab öffnen"
+      >${PDF_ICON_SVG}<span>PDF</span></a>
+    </p>
+  `;
+}

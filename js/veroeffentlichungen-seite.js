@@ -68,20 +68,6 @@ function ladeAlleVeroeffentlichungen() {
 
                 <h3>
                   ${veroeffentlichung.titel}
-                  ${
-                    pdfVorhandenListe[index]
-                      ? `
-                        <a
-                          href="pdf/papers/${veroeffentlichung.slug}.pdf"
-                          target="_blank"
-                          rel="noopener"
-                          class="institut-veroeffentlichung-pdf-link"
-                          aria-label="PDF in neuem Tab öffnen"
-                          title="PDF öffnen"
-                        >${PDF_ICON_SVG}</a>
-                      `
-                      : ""
-                  }
                 </h3>
 
                 ${
@@ -100,6 +86,8 @@ function ladeAlleVeroeffentlichungen() {
                     ? `<p>${veroeffentlichung.beschreibung}</p>`
                     : ""
                 }
+
+                ${erzeugePdfLink(veroeffentlichung.slug, pdfVorhandenListe[index])}
 
               </article>
             `)
