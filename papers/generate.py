@@ -3,9 +3,22 @@
 Methodius Paper Generator
 
 Usage:
+    python generate.py mein-satire-artikel
+    python generate.py mein-satire-artikel/paper.md --spread
     python generate.py papers/example-aevidence/main.tex
-    python generate.py papers/example-aevidence/main.tex --spread
-    python generate.py papers/mein-satire-artikel/paper.md
+
+paper.md files live in md/papers/<paper>/paper.md, a folder parallel to
+the papers/ folder this script sits in:
+
+    <project>/
+        papers/      generate.py, paperdoc.py, templates/, output/, ...
+        md/papers/   <paper>/paper.md, <paper>/figures/, ...
+        data/        veroeffentlichungen.json
+
+For a paper.md, the input can therefore be just the paper's folder name
+("mein-satire-artikel") or "<folder>/paper.md" — both are looked up in
+md/papers/ first. A full path (absolute, or relative to the current
+directory) to any paper.md or main.tex works as well.
 
 The script:
 0. if given a paper.md (frontmatter + Markdown) instead of a .tex file,
@@ -81,6 +94,7 @@ OUT_PNG = ROOT / "output" / "png"
 OUT_TEX = ROOT / "output" / "tex"
 TEMPLATES_DIR = ROOT / "templates"
 DATA_DIR = ROOT.parent / "data"
+MD_DIR = ROOT.parent / "md" / "papers"  # <project>/md/papers, parallel to papers/
 PUBLICATIONS_PATH = DATA_DIR / "veroeffentlichungen.json"
 
 DOCUMENTCLASS_RE = re.compile(r"\\documentclass(?:\[[^\]]*\])?\{([^}]+)\}")
@@ -571,6 +585,28 @@ def build(source: Path, spread: bool, build_dir: Path) -> int:
     return 0
 
 
+def resolve_input_path(arg: str) -> tuple[Path | None, list[Path]]:
+    """Resolve the command-line input to an existing file.
+
+    Relative inputs are looked up in MD_DIR (md/papers/) first, so a
+    paper.md can be given as just "<folder>" or "<folder>/paper.md"; the
+    path as given (relative to the current directory, or absolute) is the
+    fallback and still works for any paper.md / main.tex anywhere. A
+    folder resolves to the paper.md inside it.
+
+    Returns (resolved path or None, every candidate that was tried) — the
+    latter for the "not found" message.
+    """
+    given = Path(arg)
+    candidates = [given] if given.is_absolute() else [MD_DIR / given, given]
+    for candidate in candidates:
+        if candidate.is_dir():
+            candidate = candidate / "paper.md"
+        if candidate.is_file():
+            return candidate.resolve(), candidates
+    return None, candidates
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Compile a Methodius paper and render a PNG preview."
@@ -578,9 +614,11 @@ def main() -> int:
     parser.add_argument(
         "input_file",
         help=(
-            "Path to the paper's main.tex, or to a paper.md "
-            "(frontmatter + Markdown, see paperdoc.py) that main.tex is "
-            "generated from, e.g. papers/example-aevidence/main.tex"
+            "A paper.md (frontmatter + Markdown, see paperdoc.py) — given "
+            "as the paper's folder name or '<folder>/paper.md', looked up "
+            "in md/papers/, e.g. mein-paper — or the path to a "
+            "hand-written main.tex, e.g. "
+            "papers/example-aevidence/main.tex"
         ),
     )
     parser.add_argument(
@@ -595,9 +633,14 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    source = Path(args.input_file).resolve()
-    if not source.exists():
-        print(f"File not found: {source}")
+    source, tried = resolve_input_path(args.input_file)
+    if source is None:
+        print(f"File not found: {args.input_file}")
+        print("Looked for:")
+        for candidate in tried:
+            shown = candidate / "paper.md" if candidate.is_dir() else candidate
+            print(f"  {shown}")
+        print(f"(paper.md files belong in {MD_DIR})")
         return 2
 
     # All intermediate files live in one scratch folder outside the

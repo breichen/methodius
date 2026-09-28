@@ -28,6 +28,23 @@ Empfohlen:
 
 Die Templates verwenden `fontspec` und werden daher mit **LuaLaTeX** gesetzt.
 
+## Projektstruktur
+
+Die `paper.md`-Dateien liegen im Ordner `md/papers/`, der **parallel** zum
+Ordner `papers/` (mit `generate.py`, `paperdoc.py`, `templates/` und
+`output/`) liegt:
+
+```text
+<projekt>/
+├── papers/          generate.py, paperdoc.py, templates/, output/
+├── md/
+│   └── papers/      <paper>/paper.md, <paper>/figures/, ...
+└── data/            veroeffentlichungen.json
+```
+
+Bilder, Daten und Skripte eines Papers liegen relativ zu seiner `paper.md`,
+also ebenfalls unter `md/papers/<paper>/`.
+
 ## Schnellstart (empfohlen): `paper.md`
 
 ### 1. Ein Paper anlegen
@@ -35,13 +52,13 @@ Die Templates verwenden `fontspec` und werden daher mit **LuaLaTeX** gesetzt.
 Kopiere:
 
 ```text
-papers/_template/paper.md
+md/papers/_template/paper.md
 ```
 
 nach:
 
 ```text
-papers/mein-paper/paper.md
+md/papers/mein-paper/paper.md
 ```
 
 und fülle Frontmatter und Text aus:
@@ -127,7 +144,7 @@ captionierten Abbildung (Alt-Text = Caption):
 ```
 
 Die Bilddatei liegt relativ zum Paper-Ordner, z. B. unter
-`papers/mein-paper/figures/pwerte.png` — der Generator prüft vor dem
+`md/papers/mein-paper/figures/pwerte.png` — der Generator prüft vor dem
 LaTeX-Lauf, ob sie existiert, und bricht sonst mit einer klaren
 Fehlermeldung ab. `{#fig:...}` und `width=...` (z. B. `80%` oder `5cm`)
 sind optional; ohne `width` wird die volle Spalten-/Textbreite verwendet.
@@ -283,8 +300,13 @@ Das zum Journal passende Template wird automatisch ausgewählt.
 ### 3. Generieren und kompilieren
 
 ```bash
-python generate.py papers/mein-paper/paper.md
+python generate.py mein-paper
 ```
+
+Der Generator sucht die `paper.md` automatisch in `md/papers/`; genauso
+funktioniert `python generate.py mein-paper/paper.md`. Auch ein voller Pfad
+(absolut oder relativ zum aktuellen Verzeichnis), z. B.
+`python generate.py md/papers/mein-paper/paper.md`, wird akzeptiert.
 
 Das erzeugt in einem Rutsch:
 
@@ -326,7 +348,7 @@ Für einen News-Feed-Look wie eine aufgeschlagene Zeitschrift kannst du statt
 der ersten Seite allein ein Doppelseiten-Bild erzeugen lassen:
 
 ```bash
-python generate.py papers/mein-paper/paper.md --spread
+python generate.py mein-paper --spread
 ```
 
 Das zeigt Seite 1 und Seite 2 nebeneinander, mit einem dezenten Schatten in
