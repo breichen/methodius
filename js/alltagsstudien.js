@@ -94,6 +94,18 @@ const alltagsstudienListe = [
     slug: "scientology-flyer",
     titel: "Immense Verbesserung dank Scientology",
     datum: ""
+  },
+
+  {
+    slug: "kassa-warteschlangen",
+    titel: "Die Wahl der falschen Supermarktkasse",
+    datum: ""
+  },
+
+  {
+    slug: "verkehr-fahrbahnen",
+    titel: "Die Wahl der falschen Fahrbahn im Straßenverkehr",
+    datum: ""
   }
 
 ];
