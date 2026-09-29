@@ -16,6 +16,10 @@
   <meta name="description" content="{{ seitenBeschreibung }}">
   <link rel="canonical" href="{{ seitenUrl }}">
 
+  {%- if robots %}
+  <meta name="robots" content="{{ robots }}">
+  {%- endif %}
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:locale" content="de_DE">

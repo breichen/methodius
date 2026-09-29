@@ -12,6 +12,7 @@ eleventyComputed:
   ogCard: summary_large_image
   ogImageWidth: 1536
   ogImageHeight: 1024
+  robots: "{% if not buch.veroeffentlicht %}noindex{% endif %}"
 vendorJs:
 - supabase-js.js
 - html2canvas.min.js

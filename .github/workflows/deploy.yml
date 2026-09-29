@@ -3,6 +3,8 @@ name: Website veröffentlichen
 on:
   push:
     branches: [master]
+  schedule:
+    - cron: "5 0 * * *"   # täglich kurz nach Mitternacht (UTC)
   workflow_dispatch:
 
 permissions:

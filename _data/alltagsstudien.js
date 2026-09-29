@@ -1,7 +1,11 @@
 import { readFileSync } from "node:fs";
 
-// Liest die Studienliste aus dem Browser-Skript, damit sie nur
-// an EINER Stelle gepflegt werden muss.
 const code = readFileSync("js/alltagsstudien.js", "utf8");
+const liste = new Function(`${code}\nreturn alltagsstudienListe;`)();
 
-export default new Function(`${code}\nreturn alltagsstudienListe;`)();
+const heute = new Date().toLocaleDateString("sv-SE");
+
+export default liste.map(studie => ({
+  ...studie,
+  veroeffentlicht: Boolean(studie.datum) && studie.datum <= heute
+}));

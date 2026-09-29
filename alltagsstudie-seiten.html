@@ -12,6 +12,7 @@ eleventyComputed:
   ogCard: summary_large_image
   ogImageWidth: 1536
   ogImageHeight: 1024
+  robots: "{% if not studie.veroeffentlicht %}noindex{% endif %}"
 extraJs:
 - markdown.js
 - datumsformat.js
