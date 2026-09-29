@@ -27,6 +27,8 @@ Besonderes Augenmerk gilt dabei der Frage, warum Menschen ihr Leben regelmäßig
 
 Die Antwort darauf konnte bislang nicht abschließend geklärt werden. Die Forschung wird daher fortgesetzt.
 
+[Alle Forschungsgebiete im Überblick →](forschungsgebiete.html)
+
 ## Das Team
 
 ## Eine unabhängige wissenschaftliche Einrichtung
