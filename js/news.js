@@ -295,7 +295,7 @@ async function erzeugeAlltagsstudienNews(
           }),
 
           link:
-            `alltagsstudie.html?titel=${encodeURIComponent(studie.slug)}`,
+            `alltagsstudie-${studie.slug}.html`,
 
           linkText:
             "Zur Alltagsstudie",

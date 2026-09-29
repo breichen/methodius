@@ -1,0 +1,43 @@
+---
+layout: base.njk
+pagination:
+  data: alltagsstudien
+  size: 1
+  alias: studie
+permalink: "alltagsstudie-{{ studie.slug }}.html"
+eleventyComputed:
+  title: "{{ studie.titel }}"
+extraJs:
+- markdown.js
+- datumsformat.js
+- alltagsstudien.js
+- alltagsstudie.js
+---
+<main id="alltagsstudie-inhalt" data-slug="{{ studie.slug }}">
+
+  <section class="section">
+    <div class="wrap">
+      <div id="alltagsstudie-meta"></div>
+
+      <h1 id="alltagsstudie-titel">
+        {{ studie.titel }}
+      </h1>
+
+      <div id="alltagsstudie-bild" class="alltagsstudie-bild">
+      </div>
+
+      <div id="alltagsstudie-text">
+        <p>Lade Studie …</p>
+      </div>
+
+      <div id="alltagsstudie-link" class="alltagsstudie-link">
+      </div>
+
+      <p class="blaettern-wrap" style="margin-top: 3rem;" id="alltagsstudie-fusszeile">
+        <a href="alltagsstudien.html" class="blaettern-link">
+          ← Alle Alltagsstudien
+        </a>
+      </p>
+    </div>
+  </section>
+</main>

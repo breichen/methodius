@@ -2,7 +2,7 @@
   Zeigt eine einzelne Alltagsstudie.
 
   URL:
-    alltagsstudie.html?titel=<slug>
+    alltagsstudie-${slug}.html
 
   Die Studie besteht aus:
   - Titel
@@ -15,26 +15,17 @@
 */
 
 
-const parameter =
-  new URLSearchParams(
-    window.location.search
-  );
+const parameter = new URLSearchParams(window.location.search);
 
+const container = document.getElementById("alltagsstudie-inhalt");
 
-const slug =
-  parameter.get("titel");
+const slug = container.dataset.slug || parameter.get("titel");
 
 
 const studie =
   alltagsstudienListe.find(
     eintrag =>
       eintrag.slug === slug
-  );
-
-
-const container =
-  document.getElementById(
-    "alltagsstudie-inhalt"
   );
 
 

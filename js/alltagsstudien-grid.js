@@ -55,7 +55,7 @@ function baueAlltagsstudienZeile(studie, nummer) {
   return `
     <a
       class="alltagsstudie-register-zeile"
-      href="alltagsstudie.html?titel=${pfad}">
+      href="alltagsstudie-${studie.slug}.html">
 
       <span class="alltagsstudie-register-nummer">
         AS-${String(nummer).padStart(3, "0")}
