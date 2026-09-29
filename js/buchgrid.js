@@ -10,7 +10,7 @@ function baueBuchKachel(buch) {
   // Ohne das findet der Browser Dateien mit solchen Zeichen im Namen nicht zuverlässig.
   const pfad = encodeURIComponent(buch.slug);
   return `
-    <a class="book-card" href="ratgeber-${buch.id}.html">
+    <a class="book-card" href="ratgeber-${buch.urlSlug}.html">
       <img src="pics/ratgeber-front/${pfad}.png" alt="Cover: ${buch.titel}">
     </a>
   `;

@@ -4,7 +4,7 @@ pagination:
   data: ratgeber
   size: 1
   alias: buch
-permalink: "ratgeber-{{ buch.id }}.html"
+permalink: "ratgeber-{{ buch.urlSlug }}.html"
 eleventyComputed:
   title: "{{ buch.titel }}"
   description: "Ratgeber Nummer {{ buch.id }} des Methodius-Instituts – eine wissenschaftlich fundierte Betrachtung eines Problems, das vermutlich keines gewesen wäre."

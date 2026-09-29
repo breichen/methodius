@@ -14,7 +14,7 @@ function zeigeFeatured() {
   document.getElementById("featured-cover").src = `pics/ratgeber/${pfad}.png`;
   document.getElementById("featured-cover").alt = `Cover: ${buch.titel}`;
   document.getElementById("featured-title").textContent = buch.titel;
-  document.getElementById("featured-card").href = `ratgeber-${buch.id}.html`;
+  document.getElementById("featured-card").href = `ratgeber-${buch.urlSlug}.html`;
 
   const istAktuellster = featuredIndex === ratgeberListe.length - 1;
   document.getElementById("featured-index").textContent = istAktuellster

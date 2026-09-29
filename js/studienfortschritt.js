@@ -374,7 +374,7 @@ async function zeigeStudienfortschritt() {
                             : `
                               <a
                                 class="studienfortschritt-link"
-                                href="ratgeber-${buch.id}.html"
+                                href="ratgeber-${buch.urlSlug}.html"
                               >
                                 Zum Ratgeber
                               </a>
@@ -388,7 +388,7 @@ async function zeigeStudienfortschritt() {
                         >
                           ${abgeschlossen ? "Abgeschlossen" : "Abzuschließen"}
                           durch die Prüfung nach der Lektüre des Ratgebers
-                          „<a href="ratgeber-${buch.id}.html">${buch.titel}</a>“
+                          „<a href="ratgeber-${buch.urlSlug}.html">${buch.titel}</a>“
                         </div>
 
 
