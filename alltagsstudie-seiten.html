@@ -7,6 +7,11 @@ pagination:
 permalink: "alltagsstudie-{{ studie.slug }}.html"
 eleventyComputed:
   title: "{{ studie.titel }}"
+  description: "Alltagsstudie des Methodius-Instituts – eine wissenschaftliche Untersuchung eines alltäglichen Phänomens, dessen Bedeutung bislang unterschätzt wurde."
+  ogImage: "/pics/alltagsstudien/{{ studie.slug | urlencode }}.png"
+  ogCard: summary_large_image
+  ogImageWidth: 1536
+  ogImageHeight: 1024
 extraJs:
 - markdown.js
 - datumsformat.js
