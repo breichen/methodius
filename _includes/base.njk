@@ -9,6 +9,24 @@
 
   <title>{{ title }} – Dr. Methodius</title>
 
+  {%- set seitenBeschreibung = description or site.description %}
+  {%- set seitenBild = site.url + (ogImage or site.image) %}
+  {%- set seitenUrl = site.url + page.url %}
+
+  <meta name="description" content="{{ seitenBeschreibung }}">
+  <link rel="canonical" href="{{ seitenUrl }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="{{ ogTitle or title }} – {{ site.name }}">
+  <meta property="og:description" content="{{ seitenBeschreibung }}">
+  <meta property="og:url" content="{{ seitenUrl }}">
+  <meta property="og:image" content="{{ seitenBild }}">
+
+  {%- set karte = ogCard or "summary" %}
+  <meta name="twitter:card" content="{{ karte }}">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
