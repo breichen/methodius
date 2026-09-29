@@ -1,0 +1,27 @@
+---
+layout: base.njk
+pagination:
+  data: probleme
+  size: 1
+  alias: fall
+permalink: "problem-{{ fall.slug }}.html"
+eleventyComputed:
+  title: "{{ fall.titel }}"
+  description: "Fallakte des Methodius-Institut – eine dokumentierte Untersuchung eines bemerkenswerten Falls aus dem Alltag."
+  robots: "{% if not fall.veroeffentlicht %}noindex{% endif %}"
+extraJs:
+- probleme.js
+- markdown.js
+- teilen.js
+- kommentare.js
+- datumsformat.js
+- ratgeber-kategorien.js
+- problem.js
+---
+<section class="section">
+  <div class="wrap">
+    <div id="problem-inhalt" data-slug="{{ fall.slug }}">
+      <p>Lade Fallakte …</p>
+    </div>
+  </div>
+</section>

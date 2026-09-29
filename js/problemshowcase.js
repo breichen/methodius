@@ -142,11 +142,7 @@ document.addEventListener(
             `„${problem.frage}“`;
 
           link.href =
-            `problem.html?slug=${
-              encodeURIComponent(
-                problem.slug
-              )
-            }`;
+            `problem-${problem.slug}.html`;
 
 
           /*

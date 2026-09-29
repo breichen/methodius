@@ -156,7 +156,7 @@ async function erzeugeProblemNews(problemeListe) {
         : "neue-fallakte-generisch.md",
       titel: `Neue Fallakte: ${problem.titel}`,
       datum: problem.erstellt,
-      link: `problem.html?slug=${problem.slug}`,
+      link: `problem-${problem.slug}.html`,
       linkText: "Zur Fallakte",
       kategorie: NewsKategorie.FALLAKTEN,
     };

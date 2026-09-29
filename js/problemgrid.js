@@ -157,7 +157,7 @@ function baueProblemKarte(problem, fallnummer) {
   return `
     <a
       class="problem-card-link"
-      href="problem.html?slug=${encodeURIComponent(problem.slug)}"
+      href="problem-${problem.slug}.html"
     >
       <article class="problem-card">
 

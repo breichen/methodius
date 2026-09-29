@@ -1,11 +1,11 @@
 /*
   Lädt eine Fallakte aus einer Markdown-Datei und zeigt sie vollständig an.
 
-  Die Fallakte wird über ?slug=... ausgewählt.
+  Die Fallakte wird über problem-{slug}... ausgewählt.
 
   Beispiel:
 
-    problem.html?slug=ans-bett-gebunden
+    problem-ans-bett-gebunden.html
 
   Titel, Erstellungs- und Aktualisierungsdatum kommen aus
   problemeListe (siehe js/probleme.js). Der eigentliche Inhalt
@@ -30,7 +30,7 @@ const parameter =
   );
 
 const slugParam =
-  parameter.get("slug");
+  container.dataset.slug || parameter.get("slug");
 
 
 if (!slugParam) {
