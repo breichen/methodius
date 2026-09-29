@@ -106,7 +106,13 @@ const alltagsstudienListe = [
     slug: "verkehr-fahrbahnen",
     titel: "Die Wahl der falschen Fahrbahn im Straßenverkehr",
     datum: ""
-  }
+  },
+
+  {
+    slug: "diskret-telefonieren",
+    titel: "Mögliche Innovationen zur diskreten Telefonie",
+    datum: ""
+  },
 
 ];
 
