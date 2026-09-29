@@ -8,6 +8,8 @@ permalink: "problem-{{ fall.slug }}.html"
 eleventyComputed:
   title: "{{ fall.titel }}"
   description: "Fallakte des Methodius-Institut – eine dokumentierte Untersuchung eines bemerkenswerten Falls aus dem Alltag."
+  ogImage: "/pics/problem-og/{{ fall.slug }}.jpg"
+  ogCard: summary_large_image
   robots: "{% if not fall.veroeffentlicht %}noindex{% endif %}"
 extraJs:
 - probleme.js
