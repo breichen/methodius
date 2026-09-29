@@ -15,6 +15,7 @@ const ENTFERNE_ANFUEHRUNGSZEICHEN = false;
 // Zeilenumbrüchen über drei Zeilen geht).
 function inlineFormat(text) {
   return text
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>')
     .replace(/\*\*([\s\S]+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*([\s\S]+?)\*/g, "<em>$1</em>");
 }
