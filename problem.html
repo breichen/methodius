@@ -1,68 +1,26 @@
-<!DOCTYPE html>
+---
+layout: base.njk
+title: Fallakte
+extraJs:
+- probleme.js
+- markdown.js
+- teilen.js
+- kommentare.js
+- datumsformat.js
+- ratgeber-kategorien.js
+- problem.js
+---
 <!--
   Zeigt EIN einzelnes Problem aus js/probleme.js an, ausgewählt über
   ?titel=... in der URL (siehe js/problem.js). Enthält - anders als
   die Übersicht in probleme.html - zusätzlich die "Wissenschaftliche
   Begründung" und die Prognose.
 -->
-<html lang="de">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
-
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
-
-  <!-- Android / PWA -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/methodius-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/methodius-512x512.png">
-
-  <!-- Titel wird von js/problem.js dynamisch gesetzt, sobald das Problem geladen ist -->
-  <title>Fallakte – Dr. Methodius</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <!-- Header wird zentral aus js/header.js eingefügt -->
-  <div id="header-platzhalter"></div>
-  <script src="js/header.js"></script>
-
-  <section class="section">
-    <div class="wrap">
-      <!-- Wird per JavaScript (js/problem.js) automatisch mit der Fallakte befüllt -->
-      <div id="problem-inhalt">
-        <p>Lade Fallakte …</p>
-      </div>
+<section class="section">
+  <div class="wrap">
+    <!-- Wird per JavaScript (js/problem.js) automatisch mit der Fallakte befüllt -->
+    <div id="problem-inhalt">
+      <p>Lade Fallakte …</p>
     </div>
-  </section>
-
-  <div id="footer-platzhalter"></div>
-  <script src="js/footer.js"></script>
-
-  <!-- Reihenfolge wichtig: erst die Datenliste, dann markdown.js (liefert
-       parseMarkdownBloecke, wird von js/kommentare.js gebraucht), dann
-       die restlichen Scripts -->
-  <script src="js/probleme.js"></script>
-  <script src="js/markdown.js"></script>
-  <script src="js/teilen.js"></script>
-  <script src="js/kommentare.js"></script>
-  <script src="js/datumsformat.js"></script>
-  <script src="js/ratgeber-kategorien.js"></script>
-  <script src="js/problem.js"></script>
-
-</body>
-
-</html>
+  </div>
+</section>

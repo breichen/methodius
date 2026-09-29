@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+---
+layout: base.njk
+title: Ratgeber
+extraCss:
+- landing-page.css
+extraJs:
+- ratgeber-kategorien.js
+- ratgeber.js
+- markdown.js
+- teilen.js
+- kommentare.js
+- datumsformat.js
+- supabase.js
+- studium.js
+- buch.js
+---
 <!--
   Diese Seite ist ein WIEDERVERWENDBARES TEMPLATE für alle Bücher.
   Sie liest den Buchtitel aus der URL (z.B. buch.html?titel=der-perfekte-sonntag),
@@ -10,65 +25,15 @@
   NICHT wenn du die Datei per Doppelklick öffnest (file://-Adresse). Der Browser
   blockiert das Nachladen lokaler Dateien aus Sicherheitsgründen sonst.
 -->
-<html lang="de">
+<div id="buch-inhalt">
+  <section class="section">
+    <div class="wrap">
+      <p>Lade Ratgeber …</p>
+    </div>
+  </section>
+</div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
-
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
-
-  <!-- Android / PWA -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/methodius-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/methodius-512x512.png">
-
-  <title>Ratgeber – Dr. Methodius</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Homemade+Apple&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <!-- Header wird zentral aus js/header.js eingefügt -->
-  <div id="header-platzhalter"></div>
-  <script src="js/header.js"></script>
-
-  <div id="buch-inhalt">
-    <section class="section">
-      <div class="wrap">
-        <p>Lade Ratgeber …</p>
-      </div>
-    </section>
-  </div>
-
-  <div id="footer-platzhalter"></div>
-  <script src="js/footer.js"></script>
-
-  <!-- Reihenfolge wichtig: erst die Datenliste, dann markdown.js (liefert
+<!-- Reihenfolge wichtig: erst die Datenliste, dann markdown.js (liefert
        parseMarkdownBloecke), dann dieses Script -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script src="js/ratgeber-kategorien.js"></script>
-  <script src="js/ratgeber.js"></script>
-  <script src="js/markdown.js"></script>
-  <script src="js/teilen.js"></script>
-  <script src="js/kommentare.js"></script>
-  <script src="js/datumsformat.js"></script>
-  <script src="js/supabase.js"></script>
-  <script src="js/studium.js"></script>
-  <script src="js/buch.js"></script>
-
-</body>
-
-</html>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>

@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+---
+layout: base.njk
+title: Probleme
+tally: true
+extraJs:
+- ratgeber-kategorien.js
+- datumsformat.js
+- probleme.js
+- probleme-kategorien.js
+- probleme-filter.js
+- problemgrid.js
+---
 <!--
   Zeigt ALLE Probleme aus js/probleme.js als Fallakten-Übersicht,
   bzw. - analog zu alle-ratgeber.html - die Fallakten einer
@@ -12,121 +23,75 @@
   "Wissenschaftliche Begründung" und Prognose gibt es erst auf der
   vollständigen Fallakte (problem.html).
 -->
-<html lang="de">
+<!-- ===== EINLEITUNG ===== -->
+<section class="section">
+  <div class="wrap">
+    <h1 id="seiten-titel">Die Sprechstunde</h1>
+    <p id="seiten-einleitung">Hier landen Fragen, die Leser eingeschickt haben - und die <strong>Dr. Maximilian
+        Methodius</strong> mit der
+      gebotenen wissenschaftlichen Unbekümmertheit beantwortet.</p>
+    <p>Jede Fallakte enthält eine Diagnose, eine Behandlung, eine wissenschaftliche Begründung (die diesen Namen
+      nicht verdient) und eine Prognose. Klick auf eine Karte für die vollständige Akte.</p>
+  </div>
+</section>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
+<!-- ===== KAPITEL: NEUESTE FALLAKTEN ===== -->
+<section id="neueste-faelle" class="section section-alt">
+  <div class="wrap">
+    <h2 id="neueste-titel">Neueste Fallakten</h2>
+    <p id="neueste-text">Die zuletzt eingesandten Probleme, derer Dr. Methodius sich angenommen hat.</p>
+    <!-- Dieser Container wird per JavaScript (js/problemgrid.js) automatisch befüllt -->
+    <div id="neueste-probleme" class="problem-grid"></div>
+  </div>
+</section>
 
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
+<!-- ===== KAPITEL: ZUFÄLLIGE EMPFEHLUNGEN ===== -->
+<section id="empfehlungen" class="section">
+  <div class="wrap">
+    <h2 id="empfehlungen-titel">Zufällige Empfehlungen</h2>
+    <p id="empfehlungen-text">Drei Fallakten, ausgewürfelt – lade die Seite neu für eine neue Auswahl.</p>
+    <div id="zufaellige-probleme" class="problem-grid"></div>
 
-  <!-- Android / PWA -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/methodius-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/methodius-512x512.png">
-
-  <title>Probleme – Dr. Methodius</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <!-- Header wird zentral aus js/header.js eingefügt -->
-  <div id="header-platzhalter"></div>
-  <script src="js/ratgeber-kategorien.js"></script>
-  <script src="js/header.js"></script>
-
-  <!-- ===== EINLEITUNG ===== -->
-  <section class="section">
-    <div class="wrap">
-      <h1 id="seiten-titel">Die Sprechstunde</h1>
-      <p id="seiten-einleitung">Hier landen Fragen, die Leser eingeschickt haben - und die <strong>Dr. Maximilian Methodius</strong> mit der
-        gebotenen wissenschaftlichen Unbekümmertheit beantwortet.</p>
-      <p>Jede Fallakte enthält eine Diagnose, eine Behandlung, eine wissenschaftliche Begründung (die diesen Namen
-        nicht verdient) und eine Prognose. Klick auf eine Karte für die vollständige Akte.</p>
-    </div>
-  </section>
-
-  <!-- ===== KAPITEL: NEUESTE FALLAKTEN ===== -->
-  <section id="neueste-faelle" class="section section-alt">
-    <div class="wrap">
-      <h2 id="neueste-titel">Neueste Fallakten</h2>
-      <p id="neueste-text">Die zuletzt eingesandten Probleme, derer Dr. Methodius sich angenommen hat.</p>
-      <!-- Dieser Container wird per JavaScript (js/problemgrid.js) automatisch befüllt -->
-      <div id="neueste-probleme" class="problem-grid"></div>
-    </div>
-  </section>
-
-  <!-- ===== KAPITEL: ZUFÄLLIGE EMPFEHLUNGEN ===== -->
-  <section id="empfehlungen" class="section">
-    <div class="wrap">
-      <h2 id="empfehlungen-titel">Zufällige Empfehlungen</h2>
-      <p id="empfehlungen-text">Drei Fallakten, ausgewürfelt – lade die Seite neu für eine neue Auswahl.</p>
-      <div id="zufaellige-probleme" class="problem-grid"></div>
-
-      <p class="blaettern-wrap" style="margin-top: 2.5rem;">
-        <button type="button" id="zufalls-problem-button" class="quiz-start-button">
-          🎲 Zufällige Fallakte öffnen
-        </button>
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ===== KAPITEL: FRAG DR. METHODIUS ===== -->
-  <section id="problem-einsenden" class="section section-alt">
-    <div class="wrap">
-      <h2>Frag Dr. Methodius!</h2>
-      <p>Du hast ein Problem, das dich schon seit Tagen, Wochen oder vielleicht sogar Jahren beschäftigt? Dann ist jetzt
-        der richtige Zeitpunkt, es einem ausgewiesenen Experten vorzulegen.</p>
-      <p>Schreib Dr. Methodius, was dich beschäftigt. Er wird deine Schilderung mit seinem Team gewissenhaft prüfen und
-        herausfinden,
-        was wirklich dahintersteckt.
-
-      <p>Die interessantesten Fälle werden hier veröffentlicht – selbstverständlich mit der gebotenen wissenschaftlichen
-        Distanz und, wenn gewünscht, anonym.</p>
-
-      <button type="button" class="quiz-start-button" data-tally-open="VLObgg" data-tally-layout="modal">
-        Problem einsenden
+    <p class="blaettern-wrap" style="margin-top: 2.5rem;">
+      <button type="button" id="zufalls-problem-button" class="quiz-start-button">
+        🎲 Zufällige Fallakte öffnen
       </button>
-    </div>
-  </section>
+    </p>
 
-  <!-- ===== KAPITEL: ALLE PROBLEME ===== -->
-  <section id="alle-probleme-sektion" class="section">
-    <div class="wrap">
-      <h2 id="alle-titel">Alle Fallakten</h2>
-      <p id="alle-text">Die vollständige Sammlung aller bisher behandelten Fälle.</p>
+  </div>
+</section>
 
-      <!-- Wird per JavaScript (js/problemgrid.js) automatisch mit allen Problemen befüllt -->
-      <div id="alle-probleme" class="problem-grid"></div>
-    </div>
-  </section>
+<!-- ===== KAPITEL: FRAG DR. METHODIUS ===== -->
+<section id="problem-einsenden" class="section section-alt">
+  <div class="wrap">
+    <h2>Frag Dr. Methodius!</h2>
+    <p>Du hast ein Problem, das dich schon seit Tagen, Wochen oder vielleicht sogar Jahren beschäftigt? Dann ist jetzt
+      der richtige Zeitpunkt, es einem ausgewiesenen Experten vorzulegen.</p>
+    <p>Schreib Dr. Methodius, was dich beschäftigt. Er wird deine Schilderung mit seinem Team gewissenhaft prüfen und
+      herausfinden,
+      was wirklich dahintersteckt.
 
-  <div id="footer-platzhalter"></div>
-  <script src="js/footer.js"></script>
+    <p>Die interessantesten Fälle werden hier veröffentlicht – selbstverständlich mit der gebotenen wissenschaftlichen
+      Distanz und, wenn gewünscht, anonym.</p>
 
-  <!-- Reihenfolge wichtig: erst die Datenliste und das (eigene)
-       Kategorien-Enum für Fallakten, dann der Filter, der beides
-       auswertet, dann das Script, das die Karten daraus baut -->
-  <script src="js/datumsformat.js"></script>
-  <script src="js/probleme.js"></script>
-  <script src="js/probleme-kategorien.js"></script>
-  <script src="js/probleme-filter.js"></script>
-  <script src="js/problemgrid.js"></script>
+    <button type="button" class="quiz-start-button" data-tally-open="VLObgg" data-tally-layout="modal">
+      Problem einsenden
+    </button>
+  </div>
+</section>
 
-  <!-- Button "Zufällige Fallakte öffnen" -> springt zu einer per Zufall
+<!-- ===== KAPITEL: ALLE PROBLEME ===== -->
+<section id="alle-probleme-sektion" class="section">
+  <div class="wrap">
+    <h2 id="alle-titel">Alle Fallakten</h2>
+    <p id="alle-text">Die vollständige Sammlung aller bisher behandelten Fälle.</p>
+
+    <!-- Wird per JavaScript (js/problemgrid.js) automatisch mit allen Problemen befüllt -->
+    <div id="alle-probleme" class="problem-grid"></div>
+  </div>
+</section>
+
+<!-- Button "Zufällige Fallakte öffnen" -> springt zu einer per Zufall
        ausgewählten Fallakte. Nutzt bewusst holeGefilterteProbleme()
        (aus js/probleme-filter.js) statt der rohen problemeListe, damit
        sowohl das "erstellt"-Datum als auch eine eventuell aktive
@@ -139,23 +104,19 @@
        "empfehlungen" (und damit diesen Button), wenn es nur wenige
        Fallakten gibt - deshalb hier mit ?. absichern, statt den
        Button ungeprüft anzusprechen. -->
-  <script>
-    document
-      .getElementById("zufalls-problem-button")
-      ?.addEventListener("click", () => {
-        const sichtbareProbleme =
-          holeGefilterteProbleme();
+<script>
+  document
+    .getElementById("zufalls-problem-button")
+    ?.addEventListener("click", () => {
+      const sichtbareProbleme =
+        holeGefilterteProbleme();
 
-        if (!sichtbareProbleme.length) return;
+      if (!sichtbareProbleme.length) return;
 
-        const zufallsProblem =
-          sichtbareProbleme[Math.floor(Math.random() * sichtbareProbleme.length)];
+      const zufallsProblem =
+        sichtbareProbleme[Math.floor(Math.random() * sichtbareProbleme.length)];
 
-        window.location.href =
-          `problem.html?slug=${encodeURIComponent(zufallsProblem.slug)}`;
-      });
-  </script>
-
-</body>
-
-</html>
+      window.location.href =
+        `problem.html?slug=${encodeURIComponent(zufallsProblem.slug)}`;
+    });
+</script>

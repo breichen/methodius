@@ -25,6 +25,12 @@ export default function (eleventyConfig) {
     return (data) => `${data.page.filePathStem}.html`;
   });
 
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@supabase/supabase-js/dist/umd/supabase.js": "vendor/supabase-js.js",
+    "node_modules/html2canvas/dist/html2canvas.min.js": "vendor/html2canvas.min.js",
+    "node_modules/jspdf/dist/jspdf.umd.min.js": "vendor/jspdf.umd.min.js"
+  });
+
   return {
     // Nur .html und .njk werden als Seiten verarbeitet.
     // Deine .md-Dateien in md/ bleiben Rohdaten (werden von deinem JS geladen).

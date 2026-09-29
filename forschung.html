@@ -1,84 +1,54 @@
-<!DOCTYPE html>
-<html lang="de">
+---
+layout: base.njk
+title: Forschung
+extraCss:
+- landing-page.css
+---
+<main>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <section class="section">
+    <div class="wrap">
 
-  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
+      <header class="landing-header">
 
-  <title>Forschung – Dr. Methodius</title>
+        <h1>Forschung</h1>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Homemade+Apple&display=swap"
-    rel="stylesheet">
+        <p>
+          Wir untersuchen, was andere einfach hinnehmen.
+          Denn nur weil etwas jeden Tag passiert, heißt das
+          noch lange nicht, dass wir wissen, warum.
+        </p>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/landing-page.css">
-</head>
+      </header>
 
-<body>
+    </div>
+  </section>
 
-  <div id="header-platzhalter"></div>
-  <script src="js/header.js"></script>
 
-  <main>
+  <section class="section section-alt">
+    <div class="wrap">
 
-    <section class="section">
-      <div class="wrap">
+      <div class="landing-grid landing-grid--single">
 
-        <header class="landing-header">
-
-          <h1>Forschung</h1>
-
+        <a class="kategorie-card" href="forschungsgebiete.html">
+          <h3>Forschungsgebiete</h3>
           <p>
-            Wir untersuchen, was andere einfach hinnehmen.
-            Denn nur weil etwas jeden Tag passiert, heißt das
-            noch lange nicht, dass wir wissen, warum.
+            Von angewandter Fehlberatung bis strategischer Faulheit:
+            womit sich das Institut beschäftigt und warum bislang
+            niemand zu einem Ergebnis gekommen ist.
           </p>
+        </a>
 
-        </header>
+        <a class="kategorie-card" href="alltagsstudien.html">
+          <h3>Alltagsstudien</h3>
+          <p>
+            Wissenschaftliche Untersuchungen zu den kleinen
+            und großen Merkwürdigkeiten des täglichen Lebens.
+          </p>
+        </a>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-
-    <section class="section section-alt">
-      <div class="wrap">
-
-        <div class="landing-grid landing-grid--single">
-
-          <a class="kategorie-card" href="forschungsgebiete.html">
-            <h3>Forschungsgebiete</h3>
-            <p>
-              Von angewandter Fehlberatung bis strategischer Faulheit:
-              womit sich das Institut beschäftigt und warum bislang
-              niemand zu einem Ergebnis gekommen ist.
-            </p>
-          </a>
-
-          <a class="kategorie-card" href="alltagsstudien.html">
-            <h3>Alltagsstudien</h3>
-            <p>
-              Wissenschaftliche Untersuchungen zu den kleinen
-              und großen Merkwürdigkeiten des täglichen Lebens.
-            </p>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-
-  <div id="footer-platzhalter"></div>
-  <script src="js/footer.js"></script>
-
-</body>
-
-</html>
+</main>

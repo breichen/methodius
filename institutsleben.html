@@ -1,71 +1,42 @@
-<!DOCTYPE html>
-<html lang="de">
+---
+layout: base.njk
+title: Institutsleben
+extraJs:
+- datumsformat.js
+- foto-lightbox.js
+- institutsleben.js
+---
+<section class="section">
+  <div class="wrap">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Institutsleben</h1>
 
-  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
+    <p>
+      Eindrücke aus dem Alltag des Methodius-Instituts.
+    </p>
 
-  <title>Institutsleben – Dr. Methodius</title>
+  </div>
+</section>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Homemade+Apple&display=swap"
-    rel="stylesheet">
+<section class="section section-alt">
+  <div class="wrap">
 
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <div id="header-platzhalter"></div>
-  <script src="js/header.js"></script>
-
-  <section class="section">
-    <div class="wrap">
-
-      <h1>Institutsleben</h1>
-
-      <p>
-        Eindrücke aus dem Alltag des Methodius-Instituts.
-      </p>
-
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="wrap">
-
-      <div id="institutsleben-galerie">
-        <p>Fotos werden geladen …</p>
-      </div>
-
-    </div>
-  </section>
-
-  <div id="footer-platzhalter"></div>
-  <script src="js/footer.js"></script>
-
-  <script src="js/datumsformat.js"></script>
-  <script src="js/foto-lightbox.js"></script>
-  <script src="js/institutsleben.js"></script>
-
-  <div id="foto-lightbox" class="foto-lightbox">
-
-    <button type="button" class="foto-lightbox-schliessen" aria-label="Bild schließen">
-      ×
-    </button>
-
-    <img id="foto-lightbox-bild" alt="">
-
-    <div id="foto-lightbox-beschriftung" class="foto-lightbox-beschriftung">
+    <div id="institutsleben-galerie">
+      <p>Fotos werden geladen …</p>
     </div>
 
   </div>
-</body>
+</section>
 
-</html>
+<div id="foto-lightbox" class="foto-lightbox">
+
+  <button type="button" class="foto-lightbox-schliessen" aria-label="Bild schließen">
+    ×
+  </button>
+
+  <img id="foto-lightbox-bild" alt="">
+
+  <div id="foto-lightbox-beschriftung" class="foto-lightbox-beschriftung">
+  </div>
+
+</div>

@@ -30,9 +30,16 @@
   {% include "footer.njk" %}
 
   <script src="{{ '/js/menu.js' | url }}"></script>
+  {%- for js in vendorJs %}
+  <script src="{{ ('/vendor/' + js) | url }}"></script>
+  {%- endfor %}
   {%- for js in extraJs %}
   <script src="{{ ('/js/' + js) | url }}"></script>
   {%- endfor %}
+
+  {%- if tally %}
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  {%- endif %}
 
 </body>
 
