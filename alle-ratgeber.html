@@ -127,7 +127,7 @@ extraJs:
 
 <!-- Button "Zufälligen Ratgeber öffnen" -> springt zu einem per Zufall
        ausgewählten Ratgeber (dieselbe URL-Struktur wie überall sonst:
-       buch.html?titel=<slug>, siehe js/buch.js). Nutzt bewusst
+       ratgeber-${id}.html, siehe js/buch.js). Nutzt bewusst
        holeGefilterteRatgeber() (aus js/ratgeber-filter.js) statt der
        rohen ratgeberListe, damit sowohl das "erstellt"-Datum als auch
        eine eventuell aktive Kategorie-Filterung (?kategorie=...)
@@ -145,6 +145,6 @@ extraJs:
         auswahl[Math.floor(Math.random() * auswahl.length)];
 
       window.location.href =
-        `buch.html?titel=${encodeURIComponent(zufallsBuch.slug)}`;
+        `ratgeber-${zufallsBuch.id}.html`;
     });
 </script>

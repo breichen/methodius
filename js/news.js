@@ -124,7 +124,7 @@ async function erzeugeRatgeberNews(ratgeberListe) {
       titel: `Neuer Ratgeber: ${ratgeber.titel}`,
       datum: ratgeber.erstellt,
       ...(hatBild && { bild: bildPfad }),
-      link: `buch.html?titel=${ratgeber.titel}`,
+      link: `ratgeber-${ratgeber.id}.html`,
       linkText: "Zum Ratgeber",
       kategorie: NewsKategorie.RATGEBER,
     };

@@ -48,7 +48,7 @@
 
     cover.src = `pics/ratgeber-mockup/${pfad}.png`;
     cover.alt = `Cover: ${buch.titel}`;
-    link.href = `buch.html?titel=${pfad}`;
+    link.href = `ratgeber-${buch.id}.html`;
 
     prevBtn.disabled = index <= 0;
     nextBtn.disabled = index >= chronologie.length - 1;

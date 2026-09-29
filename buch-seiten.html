@@ -1,0 +1,37 @@
+---
+layout: base.njk
+pagination:
+  data: ratgeber
+  size: 1
+  alias: buch
+permalink: "ratgeber-{{ buch.id }}.html"
+eleventyComputed:
+  title: "{{ buch.titel }}"
+  description: "Ratgeber Nummer {{ buch.id }} des Methodius-Instituts – eine wissenschaftlich fundierte Betrachtung eines Problems, das vermutlich keines gewesen wäre."
+  ogImage: "/pics/ratgeber-mockup/{{ buch.slug | urlencode }}.png"
+  ogCard: summary_large_image
+  ogImageWidth: 1536
+  ogImageHeight: 1024
+vendorJs:
+- supabase-js.js
+- html2canvas.min.js
+extraCss:
+- landing-page.css
+extraJs:
+- ratgeber-kategorien.js
+- ratgeber.js
+- markdown.js
+- teilen.js
+- kommentare.js
+- datumsformat.js
+- supabase.js
+- studium.js
+- buch.js
+---
+<div id="buch-inhalt" data-slug="{{ buch.slug }}">
+  <section class="section">
+    <div class="wrap">
+      <p>Lade Ratgeber …</p>
+    </div>
+  </section>
+</div>

@@ -22,10 +22,14 @@
   <meta property="og:title" content="{{ ogTitle or title }} – {{ site.name }}">
   <meta property="og:description" content="{{ seitenBeschreibung }}">
   <meta property="og:url" content="{{ seitenUrl }}">
-  <meta property="og:image" content="{{ seitenBild }}">
 
   {%- set karte = ogCard or "summary" %}
+
   <meta name="twitter:card" content="{{ karte }}">
+  <meta property="og:image" content="{{ seitenBild }}">
+  <meta property="og:image:width" content="{{ ogImageWidth or 256 }}">
+  <meta property="og:image:height" content="{{ ogImageHeight or 256 }}">
+  <meta property="og:image:alt" content="{{ ogImageAlt or title }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

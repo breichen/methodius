@@ -50,9 +50,9 @@ function baueDatumsHinweis(buch) {
     : "";
 }
 
-// URL-Parameter auslesen, z.B. "der-perfekte-sonntag" aus buch.html?titel=der-perfekte-sonntag
+// URL-Parameter auslesen, z.B. "der-perfekte-sonntag" aus ratgeber-1.html
 const parameter = new URLSearchParams(window.location.search);
-const slug = parameter.get("titel");
+const slug = container.dataset.slug || parameter.get("titel");
 const buch = ratgeberListe.find(b => b.slug === slug);
 
 if (!buch) {
