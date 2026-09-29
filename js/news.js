@@ -61,7 +61,7 @@ async function erzeugePaperNews(veroeffentlichungen) {
       datum: paper.datum,
       ...(hatBild && { bild: bildPfad }),
       link: "veroeffentlichungen.html",
-      linkText: "Zur Veröffentlichung",
+      linkText: "Zu den Veröffentlichungen",
       kategorie: NewsKategorie.PUBLIKATIONEN,
     };
 
