@@ -1,0 +1,42 @@
+[
+  {
+    "titel": "Forschung", "href": "/forschung.html",
+    "unterpunkte": [
+      { "titel": "Forschungsgebiete", "href": "/forschungsgebiete.html" },
+      { "titel": "Alltagsstudien", "href": "/alltagsstudien.html" }
+    ]
+  },
+  {
+    "titel": "Beratung", "href": "/beratung.html",
+    "unterpunkte": [
+      { "titel": "Ratgeber", "href": "/alle-ratgeber.html" },
+      { "titel": "Fallakten", "href": "/probleme.html" }
+    ]
+  },
+  {
+    "titel": "Studium", "href": "/studium.html",
+    "unterpunkte": [
+      { "titel": "Methodius-Studium", "href": "/methodius-studium.html" },
+      { "titel": "Studienfortschritt", "href": "/studienfortschritt.html" }
+    ]
+  },
+  {
+    "titel": "Publikationen", "href": "/publikationen.html",
+    "unterpunkte": [
+      { "titel": "Zeitschrift", "href": "/zeitschrift.html" },
+      { "titel": "Publikationsliste", "href": "/veroeffentlichungen.html" }
+    ]
+  },
+  {
+    "titel": "Institut", "href": "/institut.html",
+    "unterpunkte": [
+      { "titel": "Philosophie", "href": "/philosophie.html" },
+      { "titel": "Über das Institut", "href": "/ueber-das-institut.html" },
+      { "titel": "Über Dr. Methodius", "href": "/autor.html" },
+      { "titel": "Mitglieder", "href": "/mitglieder.html" },
+      { "titel": "Aktuelles", "href": "/news.html" },
+      { "titel": "Institutsleben", "href": "/institutsleben.html" },
+      { "titel": "Kontakt", "href": "/kontakt.html" }
+    ]
+  }
+]

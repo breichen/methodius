@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="wrap">
+    <a href="{{ '/index.html' | url }}" class="logo">
+      <img src="{{ '/assets/favicon/methodius-512x512.png' | url }}" alt="" class="logo-icon">
+      <span>Dr. Methodius</span>
+    </a>
+
+    <nav>
+      <ul>
+        {%- for punkt in navigation %}
+        <li class="hat-untermenue">
+          <a href="{{ punkt.href | url }}"{% if page.url == punkt.href %} aria-current="page"{% endif %}>{{ punkt.titel }}</a>
+          <ul class="untermenue">
+            {%- for unter in punkt.unterpunkte %}
+            <li><a href="{{ unter.href | url }}"{% if page.url == unter.href %} aria-current="page"{% endif %}>{{ unter.titel }}</a></li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
