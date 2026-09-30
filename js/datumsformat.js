@@ -51,7 +51,22 @@ function formatiereDatumDeutsch(isoDatum) {
   bis er wieder ausgeschaltet wird - praktisch beim lokalen Testen mit
   `python3 -m http.server`.
 */
+function istLokaleEntwicklung() {
+
+  const host = window.location.hostname;
+
+  return (
+    host === "localhost" ||
+    host === "127.0.0.1" ||
+    host === "[::1]" ||
+    /^192\.168\./.test(host)   // Handy-Test im Heimnetz; bei Bedarf löschen
+  );
+}
+
 function istDebugModusAktiv() {
+
+  // Auf der veröffentlichten Seite gibt es keinen Debug-Modus.
+  if (!istLokaleEntwicklung()) return false;
 
   const params = new URLSearchParams(window.location.search);
 
