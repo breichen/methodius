@@ -2690,8 +2690,24 @@ hr {
 }
 
 /* Aktuelles carousel */
-.aktuelles-slide .news-titel::before { display: none; }
-.aktuelles-slide .news-titel { margin-top: 20px; }
+.aktuelles-slide .news-titel::before {
+  display: none;
+}
+
+.aktuelles-slide .news-titel {
+  margin-top: 20px;
+}
+
+.aktuelles-slide {
+  text-align: center;
+}
+
+.aktuelles-slide .news-text {
+  max-width: 520px;
+  /* optional: Zeilenlänge begrenzen */
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ============================================
    INSTITUT – VERÖFFENTLICHUNGEN
