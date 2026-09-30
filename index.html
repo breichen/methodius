@@ -1,393 +1,346 @@
-<!DOCTYPE html>
-<!-- 
-  Willkommen! Das ist dein erstes eigenes Website-Grundgerüst.
-  Ändere einfach die Texte, speichere die Datei und lade die Seite
-  im Browser neu (F5) – so lernst du am schnellsten.
--->
-<html lang="de">
+---
+layout: base.njk
+title: Dr. Methodius
+tally: true
+extraCss:
+- landing-page.css
+extraJs:
+- markdown.js
+- konstanten.js
+- datumsformat.js
+- ratgeber-kategorien.js
+- ratgeber.js
+- probleme.js
+- alltagsstudien.js
+- news.js
+- ratgeber-filter.js
+- foto-lightbox.js
+- problemshowcase.js
+- news-startseite.js
+- showcase.js
+- buchgrid.js
+---
+<!-- ===== HERO-BEREICH (erster Eindruck) ===== -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Ratgeber für ein Leben, das nicht immer ganz so ernst genommen werden muss</p>
+    <h1>Willkommen bei Dr. Methodius</h1>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/methodius-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/methodius-16x16.png">
-
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/methodius-180x180.png">
-
-  <!-- Android / PWA -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/methodius-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/methodius-512x512.png">
-
-  <title>Dr. Methodius – Ratgeber gegen den Strom</title>
-
-  <!-- Zwei Google-Schriftarten laden: eine für Überschriften, eine für Fließtext -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Homemade+Apple&display=swap"
-    rel="stylesheet">
-
-  <!-- Verknüpfung zur separaten CSS-Datei, die das Aussehen steuert -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/landing-page.css">
-</head>
-
-<body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <!-- Header wird zentral aus js/header.js eingefügt -->
-  <div id="header-platzhalter"></div>
-  <script src="js/header.js"></script>
-
-
-  <!-- ===== HERO-BEREICH (erster Eindruck) ===== -->
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Ratgeber für ein Leben, das nicht immer ganz so ernst genommen werden muss</p>
-      <h1>Willkommen bei Dr. Methodius</h1>
-
-      <div class="autor-box">
-        <img class="autor-foto" src="pics/team/Methodius-nah.png" alt="Porträt von Dr. Maximilian Methodius">
-        <div>
-          <p class="autor-name">Dr. Maximilian Methodius</p>
-          <p class="autor-tagline">Experte in allen Gebieten, Spezialist für ungewöhnliche Lösungen und anerkannter
-            Fachmann für die großen und kleinen Probleme des modernen Lebens.</p>
-        </div>
+    <div class="autor-box">
+      <img class="autor-foto" src="pics/team/Methodius-nah.png" alt="Porträt von Dr. Maximilian Methodius">
+      <div>
+        <p class="autor-name">Dr. Maximilian Methodius</p>
+        <p class="autor-tagline">Experte in allen Gebieten, Spezialist für ungewöhnliche Lösungen und anerkannter
+          Fachmann für die großen und kleinen Probleme des modernen Lebens.</p>
       </div>
-
-      <p class="hero-text">Das Leben ist nicht immer leicht.</p>
-      <p class="hero-text">
-        Es gibt Termine, Rechnungen, Verpflichtungen, Nachrichten, die man beantworten sollte,
-        und Menschen, die einem erklären möchten, wie man sein Leben endlich richtig führt.
-      </p>
-      <p class="hero-text">Und dann wäre da noch das Internet.</p>
-
-      <!-- Kurze, stakkatoartige Zeilen -> eigene CSS-Klasse "poem-lines" -->
-      <p class="poem-lines">
-        Alle optimieren sich.<br>
-        Alle werden produktiver.<br>
-        Alle ernähren sich perfekt.<br>
-        Alle machen Sport.<br>
-        Alle meditieren.<br>
-        Alle haben ihre Ziele gefunden.<br>
-        Alle schwimmen mit dem Strom.
-      </p>
-
-      <p class="hero-text"><strong>Wir nicht.</strong></p>
-      <p class="hero-text">Denn manchmal ist es viel gesünder, einfach einmal quer zu schwimmen.</p>
-
-      <p class="grid-link"><a href="philosophie.html">Mehr über die Philosophie des Instituts →</a></p>
-
     </div>
-  </section>
 
-  <!-- ===== HAUPTBEREICHE ===== -->
-  <section class="section section-alt">
-    <div class="wrap">
-  
-      <header class="landing-header">
-  
-        <h2>Das Methodius-Institut</h2>
-  
+    <p class="hero-text">Das Leben ist nicht immer leicht.</p>
+    <p class="hero-text">
+      Es gibt Termine, Rechnungen, Verpflichtungen, Nachrichten, die man beantworten sollte,
+      und Menschen, die einem erklären möchten, wie man sein Leben endlich richtig führt.
+    </p>
+    <p class="hero-text">Und dann wäre da noch das Internet.</p>
+
+    <!-- Kurze, stakkatoartige Zeilen -> eigene CSS-Klasse "poem-lines" -->
+    <p class="poem-lines">
+      Alle optimieren sich.<br>
+      Alle werden produktiver.<br>
+      Alle ernähren sich perfekt.<br>
+      Alle machen Sport.<br>
+      Alle meditieren.<br>
+      Alle haben ihre Ziele gefunden.<br>
+      Alle schwimmen mit dem Strom.
+    </p>
+
+    <p class="hero-text"><strong>Wir nicht.</strong></p>
+    <p class="hero-text">Denn manchmal ist es viel gesünder, einfach einmal quer zu schwimmen.</p>
+
+    <p class="grid-link"><a href="philosophie.html">Mehr über die Philosophie des Instituts →</a></p>
+
+  </div>
+</section>
+
+<!-- ===== HAUPTBEREICHE ===== -->
+<section class="section section-alt">
+  <div class="wrap">
+
+    <header class="landing-header">
+
+      <h2>Das Methodius-Institut</h2>
+
+      <p>
+        Forschung, Beratung, Studium und Publikationen –
+        hier findest du die wichtigsten Bereiche des Instituts.
+      </p>
+
+    </header>
+
+
+    <div class="landing-grid">
+
+      <a class="kategorie-card" href="forschung.html">
+        <h3>Forschung</h3>
         <p>
-          Forschung, Beratung, Studium und Publikationen –
-          hier findest du die wichtigsten Bereiche des Instituts.
+          Wissenschaftliche Untersuchungen zu den kleinen
+          und großen Merkwürdigkeiten des täglichen Lebens.
         </p>
-  
-      </header>
-  
-  
-      <div class="landing-grid">
-  
-        <a class="kategorie-card" href="forschung.html">
-          <h3>Forschung</h3>
-          <p>
-            Wissenschaftliche Untersuchungen zu den kleinen
-            und großen Merkwürdigkeiten des täglichen Lebens.
-          </p>
-        </a>
-  
-  
-        <a class="kategorie-card" href="beratung.html">
-          <h3>Beratung</h3>
-          <p>
-            Wissenschaftlich fundierte Antworten auf die großen
-            und kleinen Fragen des modernen Lebens.
-          </p>
-        </a>
-  
-  
-        <a class="kategorie-card" href="studium.html">
-          <h3>Studium</h3>
-          <p>
-            Akademische Weiterbildung für alle, die ihr Wissen
-            über das Leben vertiefen möchten.
-          </p>
-        </a>
-  
-  
-        <a class="kategorie-card" href="publikationen.html">
-          <h3>Publikationen</h3>
-          <p>
-            Ratgeber, Fachzeitschriften und weitere
-            wissenschaftliche Arbeiten des Instituts.
-          </p>
-        </a>
-  
-  
-        <a class="kategorie-card" href="institut.html">
-          <h3>Institut</h3>
-          <p>
-            Philosophie, Geschichte, Mitglieder und Einblicke
-            in das Leben hinter dem Methodius-Institut.
-          </p>
-        </a>
-  
-      </div>
-  
-    </div>
-  </section>
+      </a>
 
-  <!-- ===== AKTUELLES ===== -->
-  <section id="aktuelles" class="section section-alt">
-    <div class="wrap">
-      <h2>Aktuelles</h2>
 
-      <div class="showcase-box">
-        <button class="showcase-arrow" id="aktuelles-prev" aria-label="Neuerer Beitrag">&#8249;</button>
-        <div id="news-startseite">
-          <!-- Wird von news-startseite.js befüllt -->
-        </div>
-        <button class="showcase-arrow" id="aktuelles-next" aria-label="Älterer Beitrag">&#8250;</button>
-      </div>
+      <a class="kategorie-card" href="beratung.html">
+        <h3>Beratung</h3>
+        <p>
+          Wissenschaftlich fundierte Antworten auf die großen
+          und kleinen Fragen des modernen Lebens.
+        </p>
+      </a>
 
-      <p class="grid-link">
-        <a href="news.html">Alle News ansehen →</a>
-      </p>
-    </div>
-  </section>
 
-  <!-- ===== RATGEBER GEGEN DEN STROM ===== -->
-  <section class="section">
-    <div class="wrap">
-      <h2>Ratgeber gegen den Strom</h2>
+      <a class="kategorie-card" href="studium.html">
+        <h3>Studium</h3>
+        <p>
+          Akademische Weiterbildung für alle, die ihr Wissen
+          über das Leben vertiefen möchten.
+        </p>
+      </a>
 
-      <p>Das Methodius-Institut veröffentlicht regelmäßig wissenschaftlich anmutende Handreichungen zur Bewältigung der
-        Herausforderungen des Alltags.</p>
 
-      <p>Die vorgestellten Methoden wurden weder geprüft noch empfohlen, wirken aber auf den ersten Blick erstaunlich
-        überzeugend.</p>
+      <a class="kategorie-card" href="publikationen.html">
+        <h3>Publikationen</h3>
+        <p>
+          Ratgeber, Fachzeitschriften und weitere
+          wissenschaftliche Arbeiten des Instituts.
+        </p>
+      </a>
 
-      <p>Sämtliche Ratgeber dienen der geistigen Horizonterweiterung und möglicherweise der Unterhaltung.</p>
 
-      <p class="grid-link"><a href="alle-ratgeber.html">Alle Ratgeber ansehen →</a></p>
-    </div>
-  </section>
+      <a class="kategorie-card" href="institut.html">
+        <h3>Institut</h3>
+        <p>
+          Philosophie, Geschichte, Mitglieder und Einblicke
+          in das Leben hinter dem Methodius-Institut.
+        </p>
+      </a>
 
-  <!-- ===== SHOWCASE: AKTUELLSTER RATGEBER ZUM DURCHKLICKEN ===== -->
-  <section id="ratgeber-showcase" class="section showcase">
-    <div class="wrap">
-      <p class="showcase-eyebrow">Der aktuellste Ratgeber</p>
-      <div class="showcase-box">
-        <button class="showcase-arrow" id="showcase-prev" aria-label="Vorheriger Ratgeber">&#8249;</button>
-        <a class="showcase-link" id="showcase-link" href="#">
-          <img class="showcase-cover" id="showcase-cover" src="" alt="">
-        </a>
-        <button class="showcase-arrow" id="showcase-next" aria-label="Nächster Ratgeber">&#8250;</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== KAPITEL: THEMA ANFRAGEN ===== -->
-  <section id="thema-anfragen" class="section section-alt">
-    <div class="wrap">
-      <h2>Schlag ein Thema vor!</h2>
-      <p>Dein Lieblingsthema wurde noch nicht gegen den Strom gebürstet? Schlag uns vor, wovon der nächste Ratgeber
-        handeln soll.</p>
-      <button type="button" class="quiz-start-button" data-tally-open="WOVKGa" data-tally-layout="modal">
-        Thema vorschlagen
-      </button>
-    </div>
-  </section>
-
-  <!-- ===== METHODIUS-STUDIUM ===== -->
-  <section id="studium" class="section">
-    <div class="wrap">
-
-      <h2>Das Methodius-Studium</h2>
-
-      <p>
-        Viele Leser sammeln bereits die Zertifikate der
-        Methodius-Lehrgänge. Das Institut empfiehlt dies ausdrücklich.
-      </p>
-
-      <p>
-        Wer in allen Modulen ausreichende Studienleistungen nachweisen
-        kann, hat die Möglichkeit, den akademischen Grad
-      </p>
-
-      <blockquote>
-        <strong>Magister der angewandten Lebenswissenschaften</strong><br>
-        <em>(Mag. rer. vit.)</em>
-      </blockquote>
-
-      <p>
-        zu beantragen.
-      </p>
-
-      <p class="grid-link">
-        <a href="studium.html">
-          Mehr über das Methodius-Studium erfahren →
-        </a>
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ===== KAPITEL: PROBLEME / FALLAKTEN ===== -->
-  <section id="probleme-hinweis" class="section section-alt">
-    <div class="wrap">
-      <h2>Die Sprechstunde für Alltagsprobleme</h2>
-      <p>Nicht jedes Problem braucht gleich einen ganzen Ratgeber. Manchmal reicht eine schnelle, fachlich
-        völlig unbelegte Ferndiagnose.</p>
-      <p>In der Sprechstunde beantwortet Dr. Methodius eingesandte Fragen direkt - inklusive Diagnose,
-        Behandlung, wissenschaftlicher Begründung und Prognose.</p>
-      <p class="grid-link"><a href="probleme.html">Alle Fallakten ansehen →</a></p>
-    </div>
-  </section>
-
-  <!-- ===== SHOWCASE: AKTUELLSTER FALL ===== -->
-  <section id="problem-showcase" class="section section-alt showcase">
-    <div class="wrap">
-      <p class="showcase-eyebrow">Der aktuellste Fall</p>
-      <div class="showcase-box">
-        <button class="showcase-arrow" id="problem-showcase-prev" aria-label="Vorheriger Fall">&#8249;</button>
-        <a class="problem-card-link problem-showcase-link" id="problem-showcase-link" href="#">
-          <div class="problem-card">
-            <p class="problem-fallnummer" id="problem-showcase-fallnummer"></p>
-            <h3 class="problem-titel" id="problem-showcase-title"></h3>
-            <p class="problem-frage" id="problem-showcase-frage"></p>
-          </div>
-        </a>
-        <button class="showcase-arrow" id="problem-showcase-next" aria-label="Nächster Fall">&#8250;</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== KAPITEL: FRAG DR. METHODIUS ===== -->
-  <section id="problem-einsenden" class="section">
-    <div class="wrap">
-      <h2>Frag Dr. Methodius!</h2>
-      <p>Du hast ein Problem, das dich schon seit Tagen, Wochen oder vielleicht sogar Jahren beschäftigt? Dann ist jetzt
-        der richtige Zeitpunkt, es einem ausgewiesenen Experten vorzulegen.</p>
-      <p>Schreib Dr. Methodius, was dich beschäftigt. Er wird deine Schilderung mit seinem Team gewissenhaft prüfen und
-        herausfinden,
-        was wirklich dahintersteckt.
-
-      <p>Die interessantesten Fälle werden hier veröffentlicht – selbstverständlich mit der gebotenen wissenschaftlichen
-        Distanz und, wenn gewünscht, anonym.</p>
-
-      <button type="button" class="quiz-start-button" data-tally-open="VLObgg" data-tally-layout="modal">
-        Problem einsenden
-      </button>
-    </div>
-  </section>
-
-  <!-- ===== KAPITEL: ALLTAGSSTUDIEN ===== -->
-  <section id="alltagsstudien-hinweis" class="section section-alt">
-    <div class="wrap">
-      <h2>Alltagsstudien</h2>
-
-      Manche Fragen sind zu klein für einen Ratgeber und zu alltäglich für die Wissenschaft – und gerade deshalb
-      verdienen sie eine gründliche Untersuchung.</p>
-      <p> Das Methodius-Institut geht diesen und anderen Phänomenen des täglichen Lebens systematisch auf den Grund –
-        mit wissenschaftlicher Neugier, fragwürdiger Methodik und gelegentlich überraschenden Ergebnissen. </p>
-
-      <p class="grid-link">
-        <a href="alltagsstudien.html">
-          Zu den Alltagsstudien →
-        </a>
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== ZEITSCHRIFT FÜR ANGEWANDTE LEBENSFÜHRUNG ===== -->
-  <section class="section section-alt">
-    <div class="wrap">
-
-      <h2>Zeitschrift für Angewandte Lebensführung</h2>
-
-      <p>
-        Neben Ratgebern und Fallakten veröffentlicht das
-        Methodius-Institut auch eine eigene, wissenschaftlich
-        anmutende Fachzeitschrift – das offizielle Publikationsorgan
-        für alle, die ihre Erkenntnisse zur angewandten
-        Lebensführung mit der Welt teilen möchten.
-      </p>
-
-      <p class="grid-link">
-        <a href="zeitschrift.html">
-          Zur Zeitschrift für Angewandte Lebensführung →
-        </a>
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ===== ÜBER DEN AUTOR ===== -->
-  <section id="autor" class="section">
-    <div class="wrap">
-      <p class="poem-lines">
-        <strong>Schwimm gegen den Strom.</strong><br>
-        <strong>Lach ein bisschen.</strong><br>
-        <strong>Und mach dir nicht zu viele Gedanken.</strong>
-      </p>
-
-      <p>Denn davon gibt es ohnehin schon genug.</p>
-
-      <p class="autor-signatur">Maximilian Methodius</p>
-      <p><strong>Dr. Maximilian Methodius</strong></p>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <div id="footer-platzhalter"></div>
-  <script src="js/footer.js"></script>
-  
-  <!-- Reihenfolge wichtig: erst die Datenliste, dann das Script, das sie nutzt -->
-  <script src="js/markdown.js"></script>
-  <script src="js/konstanten.js"></script>
-  <script src="js/datumsformat.js"></script>
-  <script src="js/ratgeber-kategorien.js"></script>
-  <script src="js/ratgeber.js"></script>
-  <script src="js/probleme.js"></script>
-  <script src="js/alltagsstudien.js"></script>
-  <script src="js/news.js"></script>
-  <script src="js/ratgeber-filter.js"></script>
-  <script src="js/foto-lightbox.js"></script>
-  <script src="js/problemshowcase.js"></script>
-  <script src="js/news-startseite.js"></script>
-  <script src="js/showcase.js"></script>
-  <script src="js/buchgrid.js"></script>
-
-  <!-- Tally-Widget: öffnet das Popup-Formular für "Thema anfragen" -->
-  <script async src="https://tally.so/widgets/embed.js"></script>
-
-  <div id="foto-lightbox" class="foto-lightbox">
-
-    <button type="button" class="foto-lightbox-schliessen" aria-label="Bild schließen">
-      ×
-    </button>
-
-    <img id="foto-lightbox-bild" alt="">
-
-    <div id="foto-lightbox-beschriftung" class="foto-lightbox-beschriftung">
     </div>
 
   </div>
+</section>
 
-</body>
+<!-- ===== AKTUELLES ===== -->
+<section id="aktuelles" class="section section-alt">
+  <div class="wrap">
+    <h2>Aktuelles</h2>
 
-</html>
+    <div class="showcase-box">
+      <button class="showcase-arrow" id="aktuelles-prev" aria-label="Neuerer Beitrag">&#8249;</button>
+      <div id="news-startseite">
+        <!-- Wird von news-startseite.js befüllt -->
+      </div>
+      <button class="showcase-arrow" id="aktuelles-next" aria-label="Älterer Beitrag">&#8250;</button>
+    </div>
+
+    <p class="grid-link">
+      <a href="news.html">Alle News ansehen →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== RATGEBER GEGEN DEN STROM ===== -->
+<section class="section">
+  <div class="wrap">
+    <h2>Ratgeber gegen den Strom</h2>
+
+    <p>Das Methodius-Institut veröffentlicht regelmäßig wissenschaftlich anmutende Handreichungen zur Bewältigung der
+      Herausforderungen des Alltags.</p>
+
+    <p>Die vorgestellten Methoden wurden weder geprüft noch empfohlen, wirken aber auf den ersten Blick erstaunlich
+      überzeugend.</p>
+
+    <p>Sämtliche Ratgeber dienen der geistigen Horizonterweiterung und möglicherweise der Unterhaltung.</p>
+
+    <p class="grid-link"><a href="alle-ratgeber.html">Alle Ratgeber ansehen →</a></p>
+  </div>
+</section>
+
+<!-- ===== SHOWCASE: AKTUELLSTER RATGEBER ZUM DURCHKLICKEN ===== -->
+<section id="ratgeber-showcase" class="section showcase">
+  <div class="wrap">
+    <p class="showcase-eyebrow">Der aktuellste Ratgeber</p>
+    <div class="showcase-box">
+      <button class="showcase-arrow" id="showcase-prev" aria-label="Vorheriger Ratgeber">&#8249;</button>
+      <a class="showcase-link" id="showcase-link" href="#">
+        <img class="showcase-cover" id="showcase-cover" src="" alt="">
+      </a>
+      <button class="showcase-arrow" id="showcase-next" aria-label="Nächster Ratgeber">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KAPITEL: THEMA ANFRAGEN ===== -->
+<section id="thema-anfragen" class="section section-alt">
+  <div class="wrap">
+    <h2>Schlag ein Thema vor!</h2>
+    <p>Dein Lieblingsthema wurde noch nicht gegen den Strom gebürstet? Schlag uns vor, wovon der nächste Ratgeber
+      handeln soll.</p>
+    <button type="button" class="quiz-start-button" data-tally-open="WOVKGa" data-tally-layout="modal">
+      Thema vorschlagen
+    </button>
+  </div>
+</section>
+
+<!-- ===== METHODIUS-STUDIUM ===== -->
+<section id="studium" class="section">
+  <div class="wrap">
+
+    <h2>Das Methodius-Studium</h2>
+
+    <p>
+      Viele Leser sammeln bereits die Zertifikate der
+      Methodius-Lehrgänge. Das Institut empfiehlt dies ausdrücklich.
+    </p>
+
+    <p>
+      Wer in allen Modulen ausreichende Studienleistungen nachweisen
+      kann, hat die Möglichkeit, den akademischen Grad
+    </p>
+
+    <blockquote>
+      <strong>Magister der angewandten Lebenswissenschaften</strong><br>
+      <em>(Mag. rer. vit.)</em>
+    </blockquote>
+
+    <p>
+      zu beantragen.
+    </p>
+
+    <p class="grid-link">
+      <a href="studium.html">
+        Mehr über das Methodius-Studium erfahren →
+      </a>
+    </p>
+
+  </div>
+</section>
+
+<!-- ===== KAPITEL: PROBLEME / FALLAKTEN ===== -->
+<section id="probleme-hinweis" class="section section-alt">
+  <div class="wrap">
+    <h2>Die Sprechstunde für Alltagsprobleme</h2>
+    <p>Nicht jedes Problem braucht gleich einen ganzen Ratgeber. Manchmal reicht eine schnelle, fachlich
+      völlig unbelegte Ferndiagnose.</p>
+    <p>In der Sprechstunde beantwortet Dr. Methodius eingesandte Fragen direkt - inklusive Diagnose,
+      Behandlung, wissenschaftlicher Begründung und Prognose.</p>
+    <p class="grid-link"><a href="probleme.html">Alle Fallakten ansehen →</a></p>
+  </div>
+</section>
+
+<!-- ===== SHOWCASE: AKTUELLSTER FALL ===== -->
+<section id="problem-showcase" class="section section-alt showcase">
+  <div class="wrap">
+    <p class="showcase-eyebrow">Der aktuellste Fall</p>
+    <div class="showcase-box">
+      <button class="showcase-arrow" id="problem-showcase-prev" aria-label="Vorheriger Fall">&#8249;</button>
+      <a class="problem-card-link problem-showcase-link" id="problem-showcase-link" href="#">
+        <div class="problem-card">
+          <p class="problem-fallnummer" id="problem-showcase-fallnummer"></p>
+          <h3 class="problem-titel" id="problem-showcase-title"></h3>
+          <p class="problem-frage" id="problem-showcase-frage"></p>
+        </div>
+      </a>
+      <button class="showcase-arrow" id="problem-showcase-next" aria-label="Nächster Fall">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KAPITEL: FRAG DR. METHODIUS ===== -->
+<section id="problem-einsenden" class="section">
+  <div class="wrap">
+    <h2>Frag Dr. Methodius!</h2>
+    <p>Du hast ein Problem, das dich schon seit Tagen, Wochen oder vielleicht sogar Jahren beschäftigt? Dann ist jetzt
+      der richtige Zeitpunkt, es einem ausgewiesenen Experten vorzulegen.</p>
+    <p>Schreib Dr. Methodius, was dich beschäftigt. Er wird deine Schilderung mit seinem Team gewissenhaft prüfen und
+      herausfinden,
+      was wirklich dahintersteckt.
+
+    <p>Die interessantesten Fälle werden hier veröffentlicht – selbstverständlich mit der gebotenen wissenschaftlichen
+      Distanz und, wenn gewünscht, anonym.</p>
+
+    <button type="button" class="quiz-start-button" data-tally-open="VLObgg" data-tally-layout="modal">
+      Problem einsenden
+    </button>
+  </div>
+</section>
+
+<!-- ===== KAPITEL: ALLTAGSSTUDIEN ===== -->
+<section id="alltagsstudien-hinweis" class="section section-alt">
+  <div class="wrap">
+    <h2>Alltagsstudien</h2>
+
+    Manche Fragen sind zu klein für einen Ratgeber und zu alltäglich für die Wissenschaft – und gerade deshalb
+    verdienen sie eine gründliche Untersuchung.</p>
+    <p> Das Methodius-Institut geht diesen und anderen Phänomenen des täglichen Lebens systematisch auf den Grund –
+      mit wissenschaftlicher Neugier, fragwürdiger Methodik und gelegentlich überraschenden Ergebnissen. </p>
+
+    <p class="grid-link">
+      <a href="alltagsstudien.html">
+        Zu den Alltagsstudien →
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== ZEITSCHRIFT FÜR ANGEWANDTE LEBENSFÜHRUNG ===== -->
+<section class="section section-alt">
+  <div class="wrap">
+
+    <h2>Zeitschrift für Angewandte Lebensführung</h2>
+
+    <p>
+      Neben Ratgebern und Fallakten veröffentlicht das
+      Methodius-Institut auch eine eigene, wissenschaftlich
+      anmutende Fachzeitschrift – das offizielle Publikationsorgan
+      für alle, die ihre Erkenntnisse zur angewandten
+      Lebensführung mit der Welt teilen möchten.
+    </p>
+
+    <p class="grid-link">
+      <a href="zeitschrift.html">
+        Zur Zeitschrift für Angewandte Lebensführung →
+      </a>
+    </p>
+
+  </div>
+</section>
+
+<!-- ===== ÜBER DEN AUTOR ===== -->
+<section id="autor" class="section">
+  <div class="wrap">
+    <p class="poem-lines">
+      <strong>Schwimm gegen den Strom.</strong><br>
+      <strong>Lach ein bisschen.</strong><br>
+      <strong>Und mach dir nicht zu viele Gedanken.</strong>
+    </p>
+
+    <p>Denn davon gibt es ohnehin schon genug.</p>
+
+    <p class="autor-signatur">Maximilian Methodius</p>
+    <p><strong>Dr. Maximilian Methodius</strong></p>
+  </div>
+</section>
+
+<!-- Tally-Widget: öffnet das Popup-Formular für "Thema anfragen" -->
+
+<div id="foto-lightbox" class="foto-lightbox">
+
+  <button type="button" class="foto-lightbox-schliessen" aria-label="Bild schließen">
+    ×
+  </button>
+
+  <img id="foto-lightbox-bild" alt="">
+
+  <div id="foto-lightbox-beschriftung" class="foto-lightbox-beschriftung">
+  </div>
+
+</div>
