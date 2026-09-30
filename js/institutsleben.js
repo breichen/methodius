@@ -2,7 +2,7 @@ const container =
   document.getElementById("institutsleben-galerie");
 
 function bildPfad(foto) {
-  return `pics/news-institutsleben/${foto.slug}.png`;
+  return `pics/institutsleben/${foto.slug}.png`;
 }
 
 function ladeInstitutsfotos() {

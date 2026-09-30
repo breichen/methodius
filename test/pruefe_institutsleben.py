@@ -12,7 +12,7 @@ Per entry the following is checked:
     the other one has to be set too, and vice versa      (error if not)
   * md/news-institutsleben/<slug>.md exists              (error if not)
   * ...and contains no heading at all                    (error if it does)
-  * pics/news-institutsleben/<slug>.png exists           (error if not, but only if
+  * pics/institutsleben/<slug>.png exists           (error if not, but only if
                                                           "datum" is set and not in
                                                           the future - else warning)
 
@@ -111,8 +111,8 @@ def pruefe_eintrag(eintrag: dict, nummer: int, root: Path, meldungen: Meldungen)
 
     # Preview image: hard error only if "datum" is valid and not in the future.
     pruefe_datei_vorhanden(
-        root / "pics" / "news-institutsleben" / f"{slug}.png",
-        f"pics/news-institutsleben/{slug}.png",
+        root / "pics" / "institutsleben" / f"{slug}.png",
+        f"pics/institutsleben/{slug}.png",
         slug, datum, meldungen,
     )
 
