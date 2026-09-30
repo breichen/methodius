@@ -6,7 +6,7 @@ export default function (eleventyConfig) {
   // ---------------------------------------------------------------
   const unveraendert = [
     "style.css", "CNAME",
-    "css", "js", "assets", "data", "md", "pics", "pdf", "out"
+    "css", "js", "assets", "data", "md", "pics", "pdf"
   ];
   unveraendert.forEach(pfad => eleventyConfig.addPassthroughCopy(pfad));
 
