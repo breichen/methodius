@@ -1,3 +1,5 @@
+import { readdirSync } from "node:fs";
+
 export default function (eleventyConfig) {
 
   // ---------------------------------------------------------------
@@ -6,9 +8,26 @@ export default function (eleventyConfig) {
   // ---------------------------------------------------------------
   const unveraendert = [
     "style.css", "CNAME",
-    "css", "js", "assets", "data", "md", "pics", "pdf"
+    "css", "js", "assets", "data", "md", "pdf"
   ];
   unveraendert.forEach(pfad => eleventyConfig.addPassthroughCopy(pfad));
+
+  // ---------------------------------------------------------------
+  // pics: alles kopieren, außer Arbeitsordner (Rohfassungen, Entwürfe ...)
+  // ---------------------------------------------------------------
+  const picsAusgeschlossen = new Set([
+    "ratgeber-back-finalized", "ratgeber-back-todo",
+    "ratgeber-back-nologo",    "ratgeber-back-raw",
+    "ratgeber-front-finalized", "ratgeber-front-todo",
+    "ratgeber-front-nologo",    "ratgeber-front-raw",
+    "ratgeber-teaser-finalized", "ratgeber-teaser-todo",
+    "ratgeber-teaser",           "ratgeber-teaser-raw"
+  ]);
+
+  for (const eintrag of readdirSync("pics", { withFileTypes: true })) {
+    if (picsAusgeschlossen.has(eintrag.name)) continue;
+    eleventyConfig.addPassthroughCopy(`pics/${eintrag.name}`);
+  }
 
   // ---------------------------------------------------------------
   // 2) Was ist nur Arbeitsmaterial und soll NICHT in die Website?
