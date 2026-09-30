@@ -189,6 +189,23 @@ function starteAktuellesKarussell(beitraege) {
 }
 
 
+// Singular form of the news category, used above each slide.
+const AKTUELLES_KATEGORIE_SINGULAR = {
+  [NewsKategorie.RATGEBER]: "Ratgeber",
+  [NewsKategorie.FALLAKTEN]: "Fallakte",
+  [NewsKategorie.ALLTAGSSTUDIEN]: "Alltagsstudie",
+  [NewsKategorie.PUBLIKATIONEN]: "Publikation",
+  [NewsKategorie.INSTITUTSLEBEN]: "Institutsleben",
+};
+
+function aktuellesKategorie(beitrag) {
+
+  return AKTUELLES_KATEGORIE_SINGULAR[beitrag.kategorie]
+    || beitrag.kategorie
+    || "";
+}
+
+
 function aktuellesEscape(text) {
 
   return String(text ?? "").replace(/[&<>"']/g, zeichen => ({
@@ -264,7 +281,7 @@ async function baueAktuellesSlide(beitrag) {
     visual = `
       <div class="problem-showcase-link">
         <div class="problem-card">
-          <p class="problem-fallnummer">${aktuellesEscape(beitrag.kategorie)}</p>
+          <p class="problem-fallnummer">${aktuellesEscape(aktuellesKategorie(beitrag))}</p>
           <h3 class="problem-titel">${kurztitel}</h3>
         </div>
       </div>
@@ -286,7 +303,7 @@ async function baueAktuellesSlide(beitrag) {
     : "";
 
   const datum = beitrag.datum ? formatiereDatumDeutsch(beitrag.datum) : "";
-  const meta = [beitrag.kategorie, datum].filter(Boolean).join(" · ");
+  const meta = [aktuellesKategorie(beitrag), datum].filter(Boolean).join(" · ");
 
   return `
     <article class="news-beitrag news-startseiten-beitrag aktuelles-slide">
@@ -345,7 +362,7 @@ async function baueAktuellesFallkarte(beitrag) {
 }
 
 
-// First two markdown blocks of the news file, cached per file.
+// First markdown block (first paragraph) of the news file, cached per file.
 async function ladeAktuellesTeaser(beitrag) {
 
   if (aktuellesTeaserCache[beitrag.datei] !== undefined) {
@@ -364,7 +381,7 @@ async function ladeAktuellesTeaser(beitrag) {
 
     const markdown = await antwort.text();
 
-    const html = parseMarkdownBloecke(markdown).slice(0, 2).join("\n");
+    const html = parseMarkdownBloecke(markdown).slice(0, 1).join("\n");
 
     aktuellesTeaserCache[beitrag.datei] = html;
 
