@@ -90,6 +90,15 @@ const aktuellesNext = document.getElementById("aktuelles-next");
 // Teaser texts already fetched, keyed by file name.
 const aktuellesTeaserCache = {};
 
+// Singular form of the news category, used above each slide.
+const AKTUELLES_KATEGORIE_SINGULAR = {
+  [NewsKategorie.RATGEBER]: "Ratgeber",
+  [NewsKategorie.FALLAKTEN]: "Fallakte",
+  [NewsKategorie.ALLTAGSSTUDIEN]: "Alltagsstudie",
+  [NewsKategorie.PUBLIKATIONEN]: "Publikation",
+  [NewsKategorie.INSTITUTSLEBEN]: "Institutsleben",
+};
+
 
 async function ladeAktuellsteNews() {
 
@@ -188,15 +197,6 @@ function starteAktuellesKarussell(beitraege) {
   zeige();
 }
 
-
-// Singular form of the news category, used above each slide.
-const AKTUELLES_KATEGORIE_SINGULAR = {
-  [NewsKategorie.RATGEBER]: "Ratgeber",
-  [NewsKategorie.FALLAKTEN]: "Fallakte",
-  [NewsKategorie.ALLTAGSSTUDIEN]: "Alltagsstudie",
-  [NewsKategorie.PUBLIKATIONEN]: "Publikation",
-  [NewsKategorie.INSTITUTSLEBEN]: "Institutsleben",
-};
 
 function aktuellesKategorie(beitrag) {
 
@@ -321,10 +321,16 @@ async function baueAktuellesSlide(beitrag) {
 
 
 // Case card identical to the one in the case showcase (index.html).
-// Returns null if the case cannot be found, so the caller can fall back.
+// Returns null if the case cannot be built, so the caller can fall back
+// to the plain text card.
 async function baueAktuellesFallkarte(beitrag) {
 
   try {
+
+    // ladeShowcaseFallakte() lives in js/problemshowcase.js
+    if (typeof ladeShowcaseFallakte !== "function") {
+      return null;
+    }
 
     const eintrag = problemeListe.find(p => p.slug === beitrag.slug);
 
@@ -341,7 +347,7 @@ async function baueAktuellesFallkarte(beitrag) {
     return `
       <a
         class="problem-card-link problem-showcase-link"
-        href="problem.html?slug=${encodeURIComponent(problem.slug)}"
+        href="${aktuellesEscape(beitrag.link)}"
       >
         <div class="problem-card">
           <p class="problem-fallnummer">Fall Nr. ${fallnummer}</p>
