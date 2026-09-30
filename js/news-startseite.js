@@ -18,12 +18,12 @@
     - optionales Bild
 
   Darstellung je Beitrag:
-    - Ratgeber mit Cover: Cover als Link zum Ratgeber
     - Fallakten: dieselbe Karte wie im Fallakten-Showcase
       (braucht ladeShowcaseFallakte() aus js/problemshowcase.js,
       deshalb dort vorher einbinden)
-    - alle anderen mit Bild: Bild (klickbar, Lightbox)
-    - ohne Bild: Textkarte mit Kategorie und Titel
+    - mit Bild: das Bild ist der Link zum Beitrag (ohne Link: Lightbox)
+    - ohne Bild: Textkarte mit Kategorie und Titel, ebenfalls ein Link
+    - einen separaten Textlink pro Beitrag gibt es nicht
 */
 
 const newsStartseiteContainer =
@@ -244,62 +244,61 @@ async function baueAktuellesSlide(beitrag) {
     }
   }
 
-  // 2) Ratgeber with cover: cover links straight to the book
-  if (!visual && beitrag.kategorie === NewsKategorie.RATGEBER && beitrag.bild) {
-
-    visual = `
-      <a class="showcase-link" href="${aktuellesEscape(beitrag.link)}">
-        <img
-          class="showcase-cover"
-          src="${aktuellesEscape(beitrag.bild)}"
-          alt="Cover: ${kurztitel}"
-        >
-      </a>
-    `;
-  }
-
-  // 3) Any other post with an image: clickable image (lightbox)
+  // 2) Post with an image: the image links to the post. Only a post
+  //    without a link keeps the old behaviour (lightbox on click).
   if (!visual && beitrag.bild) {
 
-    visual = `
-      <img
-        class="news-bild institutsfoto-klickbar"
-        src="${aktuellesEscape(beitrag.bild)}"
-        alt="${titel}"
-        data-bild="${aktuellesEscape(beitrag.bild)}"
-        data-titel="${titel}"
-        loading="lazy"
-        tabindex="0"
-      >
-    `;
-    zeigeTitel = true;
+    const istRatgeber = beitrag.kategorie === NewsKategorie.RATGEBER;
+    const alt = istRatgeber ? `Cover: ${kurztitel}` : titel;
+
+    visual = beitrag.link
+      ? `
+        <a class="showcase-link" href="${aktuellesEscape(beitrag.link)}">
+          <img
+            class="showcase-cover"
+            src="${aktuellesEscape(beitrag.bild)}"
+            alt="${alt}"
+          >
+        </a>
+      `
+      : `
+        <img
+          class="news-bild institutsfoto-klickbar"
+          src="${aktuellesEscape(beitrag.bild)}"
+          alt="${alt}"
+          data-bild="${aktuellesEscape(beitrag.bild)}"
+          data-titel="${titel}"
+          loading="lazy"
+          tabindex="0"
+        >
+      `;
+
+    // The cover of a book already shows its title
+    zeigeTitel = !istRatgeber;
   }
 
-  // 4) No image at all: text card with category and title
+  // 3) No image at all: text card with category and title
   if (!visual) {
 
-    visual = `
-      <div class="problem-showcase-link">
-        <div class="problem-card">
-          <p class="problem-fallnummer">${aktuellesEscape(aktuellesKategorie(beitrag))}</p>
-          <h3 class="problem-titel">${kurztitel}</h3>
-        </div>
+    const karte = `
+      <div class="problem-card">
+        <p class="problem-fallnummer">${aktuellesEscape(aktuellesKategorie(beitrag))}</p>
+        <h3 class="problem-titel">${kurztitel}</h3>
       </div>
     `;
+
+    visual = beitrag.link
+      ? `
+        <a
+          class="problem-card-link problem-showcase-link"
+          href="${aktuellesEscape(beitrag.link)}"
+        >${karte}</a>
+      `
+      : `<div class="problem-showcase-link">${karte}</div>`;
   }
 
   const teaserHtml = zeigeTeaser
     ? await ladeAktuellesTeaser(beitrag)
-    : "";
-
-  const linkHtml = beitrag.link
-    ? `
-      <p class="news-link-wrap">
-        <a href="${aktuellesEscape(beitrag.link)}" class="news-link">
-          ${aktuellesEscape(beitrag.linkText || "Zum Beitrag")} →
-        </a>
-      </p>
-    `
     : "";
 
   const datum = beitrag.datum ? formatiereDatumDeutsch(beitrag.datum) : "";
@@ -315,8 +314,6 @@ async function baueAktuellesSlide(beitrag) {
       ${zeigeTitel ? `<h3 class="news-titel">${titel}</h3>` : ""}
 
       ${teaserHtml ? `<div class="news-text">${teaserHtml}</div>` : ""}
-
-      ${linkHtml}
 
     </article>
   `;
