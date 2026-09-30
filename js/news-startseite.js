@@ -1,5 +1,6 @@
 /*
-  Zeigt den aktuellsten News-Beitrag auf der Startseite.
+  Zeigt die neuesten News-Beiträge auf der Startseite als Karussell
+  (Pfeile links/rechts, Start beim neuesten Beitrag).
 
   Verwendet werden:
     - ladeAlleNews() aus js/news.js (kombiniert die manuelle
@@ -16,7 +17,13 @@
     - optionalen Link
     - optionales Bild
 
-  Der Beitrag wird bewusst kompakter dargestellt als auf news.html.
+  Darstellung je Beitrag:
+    - Ratgeber mit Cover: Cover als Link zum Ratgeber
+    - Fallakten: dieselbe Karte wie im Fallakten-Showcase
+      (braucht ladeShowcaseFallakte() aus js/problemshowcase.js,
+      deshalb dort vorher einbinden)
+    - alle anderen mit Bild: Bild (klickbar, Lightbox)
+    - ohne Bild: Textkarte mit Kategorie und Titel
 */
 
 const newsStartseiteContainer =
@@ -74,171 +81,300 @@ if (newsStartseiteContainer) {
 }
 
 
+// Number of latest posts that can be paged through on the home page.
+const AKTUELLES_ANZAHL = 6;
+
+const aktuellesPrev = document.getElementById("aktuelles-prev");
+const aktuellesNext = document.getElementById("aktuelles-next");
+
+// Teaser texts already fetched, keyed by file name.
+const aktuellesTeaserCache = {};
+
+
 async function ladeAktuellsteNews() {
 
   if (!newsStartseiteContainer) {
     return;
   }
 
-  const alleNews = await ladeAlleNews();
+  const bereich = document.getElementById("aktuelles");
 
-  /*
-    Nur Beiträge berücksichtigen, die ein "datum" haben UND dessen
-    Datum bereits erreicht ist (heute oder in der Vergangenheit) -
-    siehe istDatumErreicht() in js/datumsformat.js. Beiträge ohne
-    Datum oder mit einem Datum in der Zukunft werden ignoriert.
+  try {
 
-    Anders als bei der früher direkt verwendeten (manuellen)
-    newsListe steht der neueste Beitrag hier NICHT automatisch an
-    erster Stelle - die einzelnen Quellen (Papers, Ratgeber,
-    Fallakten, Institutsleben, Kuriositäten) werden von
-    ladeAlleNews() einfach hintereinandergehängt. Deshalb wird hier
-    zusätzlich nach Datum absteigend sortiert, genau wie in
-    js/news-seite.js.
-  */
-  const sichtbareNews = alleNews
-    .filter(beitrag => istDatumErreicht(beitrag.datum))
-    .sort((a, b) => new Date(b.datum) - new Date(a.datum));
+    const alleNews = await ladeAlleNews();
 
-  if (sichtbareNews.length === 0) {
-    newsStartseiteContainer.innerHTML = "";
-    return;
+    /*
+      Nur Beiträge mit erreichtem Datum (siehe istDatumErreicht() in
+      js/datumsformat.js), neueste zuerst. ladeAlleNews() hängt die
+      einzelnen Quellen nur aneinander, deshalb wird hier nach Datum
+      absteigend sortiert, genau wie in js/news-seite.js.
+    */
+    const beitraege = alleNews
+      .filter(beitrag => istDatumErreicht(beitrag.datum))
+      .sort((a, b) => new Date(b.datum) - new Date(a.datum))
+      .slice(0, AKTUELLES_ANZAHL);
+
+    if (beitraege.length === 0) {
+      if (bereich) bereich.style.display = "none";
+      return;
+    }
+
+    starteAktuellesKarussell(beitraege);
+
+  } catch (fehler) {
+
+    console.error("Fehler beim Laden der aktuellen News:", fehler);
+
+    newsStartseiteContainer.innerHTML = `
+      <p>
+        <em>
+          Die aktuellen News konnten leider nicht geladen werden.
+        </em>
+      </p>
+    `;
+
+    if (aktuellesPrev) aktuellesPrev.disabled = true;
+    if (aktuellesNext) aktuellesNext.disabled = true;
   }
-
-  // Nach der Sortierung oben ist der erste Eintrag der aktuellste.
-  const beitrag = sichtbareNews[0];
-
-  ladeNewsStartseitenBeitrag(beitrag)
-    .then(html => {
-      newsStartseiteContainer.innerHTML = html;
-    })
-    .catch(fehler => {
-
-      console.error(
-        "Fehler beim Laden der aktuellsten News:",
-        fehler
-      );
-
-      newsStartseiteContainer.innerHTML = `
-        <p>
-          <em>
-            Die aktuellen News konnten leider nicht geladen werden.
-          </em>
-        </p>
-      `;
-    });
 }
 
 
-function ladeNewsStartseitenBeitrag(beitrag) {
+/*
+  Index 0 = neuester Beitrag. Linker Pfeil: zu neueren Beiträgen,
+  rechter Pfeil: zu älteren (wie bei den beiden Showcases).
+*/
+function starteAktuellesKarussell(beitraege) {
 
-  const pfad =
-    `md/news/${encodeURIComponent(beitrag.datei)}`;
+  let index = 0;
+  let anfrage = 0; // guards against out-of-order async renders
 
-  return fetch(pfad)
-    .then(antwort => {
+  async function zeige() {
 
-      if (!antwort.ok) {
-        throw new Error(
-          `News-Datei nicht gefunden: ${beitrag.datei}`
-        );
+    const meineAnfrage = ++anfrage;
+
+    aktuellesPrev.disabled = index <= 0;
+    aktuellesNext.disabled = index >= beitraege.length - 1;
+
+    try {
+
+      const html = await baueAktuellesSlide(beitraege[index]);
+
+      if (meineAnfrage !== anfrage) {
+        return;
       }
 
-      return antwort.text();
-    })
-    .then(markdown => {
+      newsStartseiteContainer.innerHTML = html;
 
-      /*
-        Markdown wie auf der eigentlichen News-Seite
-        in HTML umwandeln.
-      */
+    } catch (fehler) {
 
-      const bloecke =
-        parseMarkdownBloecke(markdown);
+      console.error("Fehler beim Anzeigen des Beitrags:", fehler);
+    }
+  }
 
-      /*
-        Für die Startseite nur die ersten beiden
-        Markdown-Blöcke anzeigen.
+  aktuellesPrev.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      zeige();
+    }
+  });
 
-        Dadurch wird aus einem längeren News-Beitrag
-        ein kurzer Teaser.
-      */
+  aktuellesNext.addEventListener("click", () => {
+    if (index < beitraege.length - 1) {
+      index++;
+      zeige();
+    }
+  });
 
-      const teaserBloecke =
-        bloecke.slice(0, 2);
-
-      const textHtml =
-        teaserBloecke.join("\n");
-
-
-      /*
-        Optionaler Link.
-      */
-
-      let linkHtml = "";
-
-      if (beitrag.link) {
-
-        linkHtml = `
-          <p class="news-link-wrap">
-            <a
-              href="${beitrag.link}"
-              class="news-link"
-            >
-              ${beitrag.linkText || "Zum Beitrag"} →
-            </a>
-          </p>
-        `;
-      }
+  zeige();
+}
 
 
-      /*
-        Optionales Bild.
+function aktuellesEscape(text) {
 
-        Wie bei news.html steht das Bild am Ende
-        des Beitrags.
-      */
-
-      let bildHtml = "";
-
-      if (beitrag.bild && !beitrag.bild.startsWith("pics/ratgeber-mockup/")) {
-
-        bildHtml = `
-          <img
-            class="news-bild institutsfoto-klickbar"
-            src="${beitrag.bild}"
-            alt="${beitrag.titel}"
-            data-bild="${beitrag.bild}"
-            data-titel="${beitrag.titel}"
-            loading="lazy"
-            tabindex="0"
-          >
-        `;
-      }
+  return String(text ?? "").replace(/[&<>"']/g, zeichen => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  }[zeichen]));
+}
 
 
-      return `
-        <article class="news-beitrag news-startseiten-beitrag">
+// "Neuer Ratgeber: Titel" -> "Titel"
+function aktuellesKurztitel(titel) {
 
-          <div class="news-meta">
-            ${beitrag.datum ? formatiereDatumDeutsch(beitrag.datum) : ""}
-          </div>
+  return String(titel || "").replace(/^Neu(?:e|er|es)\s[^:]{1,30}:\s*/, "");
+}
 
-          <h3 class="news-titel">
-            ${beitrag.titel}
-          </h3>
 
-          <div class="news-text">
-            ${textHtml}
-          </div>
+async function baueAktuellesSlide(beitrag) {
 
-          ${linkHtml}
+  const titel = aktuellesEscape(beitrag.titel);
+  const kurztitel = aktuellesEscape(aktuellesKurztitel(beitrag.titel));
 
-          ${bildHtml}
+  let visual = null;
+  let zeigeTitel = false;
+  let zeigeTeaser = true;
 
-        </article>
-      `;
-    });
+  // 1) Fallakte: same card as in the case showcase
+  if (beitrag.kategorie === NewsKategorie.FALLAKTEN && beitrag.slug) {
+
+    visual = await baueAktuellesFallkarte(beitrag);
+
+    if (visual) {
+      zeigeTeaser = false;
+    }
+  }
+
+  // 2) Ratgeber with cover: cover links straight to the book
+  if (!visual && beitrag.kategorie === NewsKategorie.RATGEBER && beitrag.bild) {
+
+    visual = `
+      <a class="showcase-link" href="${aktuellesEscape(beitrag.link)}">
+        <img
+          class="showcase-cover"
+          src="${aktuellesEscape(beitrag.bild)}"
+          alt="Cover: ${kurztitel}"
+        >
+      </a>
+    `;
+  }
+
+  // 3) Any other post with an image: clickable image (lightbox)
+  if (!visual && beitrag.bild) {
+
+    visual = `
+      <img
+        class="news-bild institutsfoto-klickbar"
+        src="${aktuellesEscape(beitrag.bild)}"
+        alt="${titel}"
+        data-bild="${aktuellesEscape(beitrag.bild)}"
+        data-titel="${titel}"
+        loading="lazy"
+        tabindex="0"
+      >
+    `;
+    zeigeTitel = true;
+  }
+
+  // 4) No image at all: text card with category and title
+  if (!visual) {
+
+    visual = `
+      <div class="problem-showcase-link">
+        <div class="problem-card">
+          <p class="problem-fallnummer">${aktuellesEscape(beitrag.kategorie)}</p>
+          <h3 class="problem-titel">${kurztitel}</h3>
+        </div>
+      </div>
+    `;
+  }
+
+  const teaserHtml = zeigeTeaser
+    ? await ladeAktuellesTeaser(beitrag)
+    : "";
+
+  const linkHtml = beitrag.link
+    ? `
+      <p class="news-link-wrap">
+        <a href="${aktuellesEscape(beitrag.link)}" class="news-link">
+          ${aktuellesEscape(beitrag.linkText || "Zum Beitrag")} →
+        </a>
+      </p>
+    `
+    : "";
+
+  const datum = beitrag.datum ? formatiereDatumDeutsch(beitrag.datum) : "";
+  const meta = [beitrag.kategorie, datum].filter(Boolean).join(" · ");
+
+  return `
+    <article class="news-beitrag news-startseiten-beitrag aktuelles-slide">
+
+      <div class="news-meta">${aktuellesEscape(meta)}</div>
+
+      ${visual}
+
+      ${zeigeTitel ? `<h3 class="news-titel">${titel}</h3>` : ""}
+
+      ${teaserHtml ? `<div class="news-text">${teaserHtml}</div>` : ""}
+
+      ${linkHtml}
+
+    </article>
+  `;
+}
+
+
+// Case card identical to the one in the case showcase (index.html).
+// Returns null if the case cannot be found, so the caller can fall back.
+async function baueAktuellesFallkarte(beitrag) {
+
+  try {
+
+    const eintrag = problemeListe.find(p => p.slug === beitrag.slug);
+
+    if (!eintrag) {
+      return null;
+    }
+
+    const problem = await ladeShowcaseFallakte(eintrag);
+
+    const fallnummer = String(
+      problemeListe.findIndex(p => p.slug === problem.slug) + 1
+    ).padStart(3, "0");
+
+    return `
+      <a
+        class="problem-card-link problem-showcase-link"
+        href="problem.html?slug=${encodeURIComponent(problem.slug)}"
+      >
+        <div class="problem-card">
+          <p class="problem-fallnummer">Fall Nr. ${fallnummer}</p>
+          <h3 class="problem-titel">${aktuellesEscape(problem.titel)}</h3>
+          <p class="problem-frage">„${aktuellesEscape(problem.frage)}“</p>
+        </div>
+      </a>
+    `;
+
+  } catch (fehler) {
+
+    console.warn("Fallakte konnte nicht geladen werden:", fehler);
+    return null;
+  }
+}
+
+
+// First two markdown blocks of the news file, cached per file.
+async function ladeAktuellesTeaser(beitrag) {
+
+  if (aktuellesTeaserCache[beitrag.datei] !== undefined) {
+    return aktuellesTeaserCache[beitrag.datei];
+  }
+
+  try {
+
+    const antwort = await fetch(
+      `md/news/${encodeURIComponent(beitrag.datei)}`
+    );
+
+    if (!antwort.ok) {
+      throw new Error(`News-Datei nicht gefunden: ${beitrag.datei}`);
+    }
+
+    const markdown = await antwort.text();
+
+    const html = parseMarkdownBloecke(markdown).slice(0, 2).join("\n");
+
+    aktuellesTeaserCache[beitrag.datei] = html;
+
+    return html;
+
+  } catch (fehler) {
+
+    console.warn(fehler);
+    return "";
+  }
 }
 
 

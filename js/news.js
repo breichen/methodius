@@ -124,7 +124,7 @@ async function erzeugeRatgeberNews(ratgeberListe) {
       titel: `Neuer Ratgeber: ${ratgeber.titel}`,
       datum: ratgeber.erstellt,
       ...(hatBild && { bild: bildPfad }),
-      link: `ratgeber-${ratgeber.urlSlug}.html`,
+      link: `buch.html?titel=${ratgeber.titel}`,
       linkText: "Zum Ratgeber",
       kategorie: NewsKategorie.RATGEBER,
     };
@@ -156,7 +156,8 @@ async function erzeugeProblemNews(problemeListe) {
         : "neue-fallakte-generisch.md",
       titel: `Neue Fallakte: ${problem.titel}`,
       datum: problem.erstellt,
-      link: `problem-${problem.slug}.html`,
+      slug: problem.slug,
+      link: `problem.html?slug=${problem.slug}`,
       linkText: "Zur Fallakte",
       kategorie: NewsKategorie.FALLAKTEN,
     };
@@ -295,7 +296,7 @@ async function erzeugeAlltagsstudienNews(
           }),
 
           link:
-            `alltagsstudie-${studie.slug}.html`,
+            `alltagsstudie.html?titel=${encodeURIComponent(studie.slug)}`,
 
           linkText:
             "Zur Alltagsstudie",
