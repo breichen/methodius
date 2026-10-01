@@ -3,7 +3,7 @@
 Markdown-Ratgeber -> PDF im Stil der Flipbook-Ansicht der Website.
 
 Voraussetzungen:
-    pip install markdown beautifulsoup4 playwright
+    pip install markdown beautifulsoup4 playwright pdfplumber
     python -m playwright install chromium
 
 Beispiele (aus dem Verzeichnis des Scripts):
@@ -498,38 +498,6 @@ def wrap_first_page(html_text: str) -> str:
     return str(soup)
 
 
-def wrap_last_page(html_text: str) -> str:
-    """
-    Schiebt die Autoren-Signatur (.autor-abschluss) an den unteren Rand
-    der Seite, auf der sie landet.
-
-    Nur der Signatur-Block selbst wird in einen Flexbox-Wrapper mit voller
-    Seitenhöhe gepackt - NICHT das gesamte letzte Kapitel. Grund: Flexbox-
-    Container brechen beim PDF-Export in Chromium nicht zuverlässig über
-    mehrere Seiten um; war zu viel Text (inkl. Quiz-Box) im Wrapper, wurde
-    der Container zusammengequetscht und Text ragte in die Quiz-Box hinein.
-
-    Der kleine Wrapper hier ist dagegen immer kurz genug, um auf eine
-    einzelne Seite zu passen. Passt er nicht mehr auf die aktuelle Seite,
-    sorgt 'break-inside: avoid' dafür, dass er komplett auf eine neue Seite
-    rutscht - und wird dort dank 'margin-top: auto' an den unteren Rand
-    gedrückt. Passt er noch auf die aktuelle Seite, bleibt er dort und wird
-    an deren unteres Ende gedrückt.
-    """
-    bs4 = __import__("bs4")
-    soup = bs4.BeautifulSoup(html_text, "html.parser")
-
-    target = soup.find(class_="autor-abschluss")
-    if target is None:
-        return str(soup)
-
-    wrapper = soup.new_tag("div", attrs={"class": "last-page-fill"})
-    target.insert_before(wrapper)
-    wrapper.append(target.extract())
-
-    return str(soup)
-
-
 def process_blockquotes(html_text: str) -> str:
     if not ENTFERNE_ANFUEHRUNGSZEICHEN:
         return html_text
@@ -556,6 +524,7 @@ def make_html(
     image_uri: str,
     new_page_per_chapter: bool,
     a5: bool,
+    sig_push_px: float = 0.0,
 ) -> str:
     page_width, page_height = page_size(a5)
     content_margin = "20mm" if not a5 else "14mm"
@@ -877,7 +846,10 @@ def make_html(
 
   .autor-abschluss {{
     margin-top: 48px;
-    padding-top: 18px;
+    /* sig_push_px is measured in a first render pass (see main) and pushes the
+       signature to the bottom of the page it lands on. Padding is used instead
+       of margin because margins are truncated at the top of a page. */
+    padding-top: {18 + sig_push_px:.1f}px;
     break-inside: avoid;
     page-break-inside: avoid;
   }}
@@ -1083,6 +1055,25 @@ async def create_pdf(
         await browser.close()
 
 
+def measure_last_page(pdf_path: Path, a5: bool) -> tuple[float, int]:
+    """Return (free space in CSS px below the last content on the last page,
+    page count). Needs: pip install pdfplumber"""
+    import logging
+    import pdfplumber
+    
+    # pdfminer warns about missing FontBBox entries in Chromium PDFs (harmless).
+    logging.getLogger("pdfminer").setLevel(logging.ERROR)
+
+    bottom_margin_mm = 18 if a5 else 24  # must match make_html
+    with pdfplumber.open(pdf_path) as pdf:
+        page = pdf.pages[-1]
+        limit = page.height - bottom_margin_mm / 25.4 * 72  # pt
+        # Ignore the footer (page number), which sits below the content area.
+        bottoms = [w["bottom"] for w in page.extract_words() if w["bottom"] <= limit]
+        free_pt = limit - max(bottoms) if bottoms else 0.0
+        return max(0.0, free_pt) / 72 * 96, len(pdf.pages)
+
+
 def add_chapter_breaks(html_text: str) -> str:
     soup = __import__("bs4").BeautifulSoup(html_text, "html.parser")
 
@@ -1145,16 +1136,24 @@ def main() -> int:
             )
             html_text = wrap_first_page(html_text)
             html_text = wrap_quiz_boxes(html_text)
-            html_text = wrap_last_page(html_text)
 
             temp_html = output.with_suffix(".pdf_work.html")
-            temp_html.write_text(
-                make_html(html_text, image_uri, args.new_page_per_chapter, args.a5),
-                encoding="utf-8",
-            )
+            def render(push_px: float) -> None:
+                temp_html.write_text(
+                    make_html(html_text, image_uri, args.new_page_per_chapter, args.a5, push_px),
+                    encoding="utf-8",
+                )
+                asyncio.run(create_pdf(temp_html, output, args.a5))
 
             try:
-                asyncio.run(create_pdf(temp_html, output, args.a5))
+                # Pass 1: natural layout. Pass 2: push the signature block to the
+                # bottom of the last page (only if the page count stays the same).
+                render(0.0)
+                free_px, pages = measure_last_page(output, args.a5)
+                if free_px > 40:
+                    render(free_px - 12)  # 12 px safety so it never spills over
+                    if measure_last_page(output, args.a5)[1] != pages:
+                        render(0.0)
             finally:
                 try:
                     temp_html.unlink()
