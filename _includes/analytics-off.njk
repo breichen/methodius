@@ -4,24 +4,25 @@ permalink: /analytics-off/
 
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
   <title>Analytics deaktiviert</title>
 </head>
 
 <body>
 
-  <p>Analytics wurde für diesen Browser deaktiviert.</p>
-  <p><a href="/">Zur Startseite</a></p>
-
   <script>
     localStorage.setItem('cloudflare-analytics-disabled', 'true');
-
-    setTimeout(function () {
-      window.location.href = '/';
-    }, 500);
+    window.location.replace('{{ "/" | url }}');
   </script>
 
+  <noscript>
+    <p>JavaScript ist deaktiviert. Bitte aktiviere JavaScript, um Analytics für diesen Browser zu deaktivieren.</p>
+  </noscript>
+
 </body>
+
 </html>
