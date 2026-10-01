@@ -1,0 +1,27 @@
+---
+permalink: /analytics-off/
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>Analytics deaktiviert</title>
+</head>
+
+<body>
+
+  <p>Analytics wurde für diesen Browser deaktiviert.</p>
+  <p><a href="/">Zur Startseite</a></p>
+
+  <script>
+    localStorage.setItem('cloudflare-analytics-disabled', 'true');
+
+    setTimeout(function () {
+      window.location.href = '/';
+    }, 500);
+  </script>
+
+</body>
+</html>
