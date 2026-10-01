@@ -1,0 +1,14 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for seite in collections.all %}
+{%- if seite.url and not seite.data.robots and seite.data.sitemap !== false %}
+  <url>
+    <loc>{{ site.url }}{{ seite.url }}</loc>
+  </url>
+{%- endif %}
+{%- endfor %}
+</urlset>
