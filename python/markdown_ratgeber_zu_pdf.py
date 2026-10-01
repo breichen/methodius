@@ -753,6 +753,18 @@ def make_html(
     break-inside: avoid;
     page-break-inside: avoid;
   }}
+ 
+  /* Long lists may break across pages (individual <li> stay intact).
+     Keep the first two and last two items together, and keep the intro
+     paragraph with the first items. */
+  ul:has(> li:nth-child(8)),
+  ol:has(> li:nth-child(8)) {{
+    break-inside: auto;
+    page-break-inside: auto;
+  }}
+  li:first-child {{ break-after: avoid; }}
+  li:nth-last-child(2) {{ break-after: avoid; }}
+  p:has(+ ul), p:has(+ ol) {{ break-after: avoid; }}
 
   li::before {{
     content: "";
