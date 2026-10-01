@@ -172,6 +172,13 @@ def normalise_headings(html_text: str, new_page_per_chapter: bool) -> str:
       zugunsten einer unmittelbar folgenden h2 entfernt.
     """
     soup = __import__("bs4").BeautifulSoup(html_text, "html.parser")
+
+    # Markdown "---" separators become invisible <hr> elements that still
+    # carry 32px margins. At a page bottom they spill onto a new page and the
+    # forced chapter break then adds a second, blank page. Drop them.
+    for hr in soup.find_all("hr"):
+        hr.decompose()
+
     headings = soup.find_all(["h1", "h2"])
 
     if not headings:
@@ -552,6 +559,7 @@ def make_html(
 ) -> str:
     page_width, page_height = page_size(a5)
     content_margin = "20mm" if not a5 else "14mm"
+    chapter_margin = "14mm" if not a5 else "12mm"
     # We have the page number at the bottom.
     bottom_margin = "24mm" if not a5 else "18mm"
 
@@ -639,7 +647,7 @@ def make_html(
     letter-spacing: -0.03em;
     color: var(--color-text);
 
-    margin: 9mm 0 7mm;
+    margin: {chapter_margin} 0 7mm;
     padding-bottom: 7px;
 
     position: relative;
@@ -893,6 +901,15 @@ def make_html(
   .chapter-start {{
     break-before: page;
     page-break-before: always;
+  }}
+ 
+  /* Avoid blank pages: when the text ends flush with the page bottom, the
+     trailing margin of the last block before a forced break overflows and
+     Chromium inserts an empty page. The second selector also covers margins
+     of the last child that collapse through the parent (e.g. the last <li>). */
+  :has(+ .chapter-start),
+  :has(+ .chapter-start) > :last-child {{
+    margin-bottom: 0;
   }}
 
   /* Erste Seite: h1 bleibt oben, der Rest (Untertitel/h2, Autorenbox)
