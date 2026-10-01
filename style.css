@@ -3665,3 +3665,168 @@ button.studienfortschritt-toggle[aria-expanded="true"]::after {
 .studienfortschritt-details a:hover {
   text-decoration: underline;
 }
+
+/* =========================================================
+   Methodius-ABC
+   ========================================================= */
+
+.abc-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 2rem 0 3.5rem;
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+}
+
+.abc-navigation a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+
+  color: var(--color-text);
+  background: transparent;
+
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.abc-navigation a:hover,
+.abc-navigation a:focus {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+
+/* =========================================================
+   Alphabetische Bereiche
+   ========================================================= */
+
+.abc-bereich {
+  margin-bottom: 4rem;
+  scroll-margin-top: 7rem;
+}
+
+.abc-bereich>h2 {
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.7rem;
+
+  border-bottom: 1px solid var(--color-border);
+
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   Einzelne Begriffe
+   ========================================================= */
+
+.abc-bereich details {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.abc-bereich details:first-of-type {
+  border-top: 1px solid var(--color-border);
+}
+
+.abc-bereich summary {
+  position: relative;
+
+  padding: 1rem 2.5rem 1rem 0;
+
+  cursor: pointer;
+  list-style: none;
+
+  color: var(--color-text);
+
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.abc-bereich summary::-webkit-details-marker {
+  display: none;
+}
+
+.abc-bereich summary::after {
+  content: "+";
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: var(--color-muted);
+
+  font-size: 1.2rem;
+  font-weight: 300;
+
+  transition: transform 0.2s ease;
+}
+
+.abc-bereich details[open] summary::after {
+  content: "−";
+}
+
+.abc-bereich summary:hover {
+  color: var(--color-accent);
+}
+
+.abc-bereich summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.abc-bereich details p {
+  max-width: 850px;
+  margin: 0;
+  padding: 0 2.5rem 1.25rem 0;
+
+  color: var(--color-muted);
+
+  font-family: var(--font-body);
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   Zurück zum Alphabet
+   ========================================================= */
+
+.abc-zurueck {
+  display: inline-block;
+
+  margin-top: 1.25rem;
+
+  color: var(--color-muted);
+
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  text-decoration: none;
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.abc-zurueck:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
