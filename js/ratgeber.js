@@ -38,7 +38,7 @@
 */
 const ratgeberRohdaten = [
 
-  {id: 1, slug: "Abnehmen dank Muskelabbau", urlSlug: "abnehmen-dank-muskelabbau", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
+  {id: 1, slug: "Abnehmen dank Muskelabbau", urlSlug: "abnehmen-dank-muskelabbau", erstellt: "2026-10-02", kategorie: RatgeberKategorie.LEBEN},
   {id: 2, slug: "Freunde verlieren leicht gemacht", urlSlug: "freunde-verlieren", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
   {id: 3, slug: "Das perfekte Leben auf Social Media", urlSlug: "perfektes-leben-social-media", lehrgang: "Perfekte Selbstdarstellung in sozialen Medien", erstellt: "", kategorie: RatgeberKategorie.MEDIEN},
   {id: 4, slug: "Die Kunst, beschäftigt auszusehen", urlSlug: "beschaeftigt-aussehen", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
