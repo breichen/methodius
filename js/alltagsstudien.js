@@ -114,6 +114,12 @@ const alltagsstudienListe = [
     datum: ""
   },
 
+  {
+    slug: "institut-professorentitel",
+    titel: "Mögliche Verbesserung der Außenwahrnehmung durch Professorentitel",
+    datum: ""
+  },
+
 ];
 
 
