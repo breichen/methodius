@@ -126,6 +126,90 @@ const alltagsstudienListe = [
     datum: ""
   },
 
+  {
+    slug: "verzoegerung-im-betriebsablauf",
+    titel: "Die ominöse Verzögerung im Betriebsablauf",
+    datum: ""
+  },
+
+  {
+    slug: "frisch-gewischt",
+    titel: "Warnungen vor frisch gewischtem Boden",
+    datum: ""
+  },
+
+  {
+    slug: "allgemeine-geschaeftsbedingungen",
+    titel: "Details von allgemeinen Geschäftsbedingungen",
+    datum: ""
+  },
+
+  {
+    slug: "foerderantraege",
+    titel: "Förderantrag für Studie über Förderanträge",
+    datum: ""
+  },
+
+    {
+    slug: "kaffee-studien",
+    titel: "Wechselnde Wirkungen von Kaffee je nach Studienlage",
+    datum: ""
+  },
+
+  {
+    slug: "selbstevaluation-institut",
+    titel: "Unabhängige Evaluation des Instituts durch das Institut",
+    datum: ""
+  },
+
+  {
+    slug: "arzt-oder-apotheker",
+    titel: "Mögliche Informationskreisläufe zwischen Arzt und Apotheker",
+    datum: ""
+  },
+
+  {
+    slug: "hotline-warteschleife",
+    titel: "Die Wichtigkeit von Anliegen in der Warteschleife",
+    datum: ""
+  },
+
+  {
+    slug: "zeitmanagement-seminar",
+    titel: "Überziehung von Zeitmanagement-Seminaren",
+    datum: ""
+  },
+
+  {
+    slug: "shrinkflation",
+    titel: "Gleichbleibende Preise bei sinkendem Gegenwert",
+    datum: ""
+  },
+
+  {
+    slug: "cookie-banner",
+    titel: "Mögliche Benachteiligung bei Ablehnung von Cookies",
+    datum: ""
+  },
+
+  {
+    slug: "wetter-app-regenwahrscheinlichkeit",
+    titel: "Regen trotz 0 % Regenwahrscheinlichkeit",
+    datum: ""
+  },
+
+  {
+    slug: "fortschrittsbalken-99-prozent",
+    titel: "Die Dauer des letzten Prozents",
+    datum: ""
+  },
+  
+  {
+    slug: "regenschirm-entscheidung",
+    titel: "Veränderung der Regenwahrscheinlichkeit durch Verzicht auf den Regenschirm",
+    datum: ""
+  },
+
 ];
 
 

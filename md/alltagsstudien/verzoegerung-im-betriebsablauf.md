@@ -1,0 +1,11 @@
+Dr. Friedrich Unbedacht, wissenschaftlicher Beirat des Methodius-Instituts, möchte untersuchen, welcher ominöse Betriebsablauf dafür verantwortlich ist, dass sich Zugverspätungen so zuverlässig einstellen, obwohl die Züge selbst nach Angaben der Bahngesellschaft grundsätzlich nach Fahrplan verkehren sollen.
+
+Nach ersten Überlegungen sei zunächst unklar, um welchen konkreten Betriebsablauf es sich dabei überhaupt handle. Zwar werde bei Verspätungen regelmäßig darauf verwiesen, dass sich ein bestimmter „Betriebsablauf“ verzögert habe, bislang sei jedoch nicht hinreichend erforscht, was dieser Betriebsablauf eigentlich sei, wo er sich befinde und weshalb er offenbar bevorzugt dann Verzögerungen aufweise, wenn ein Zug pünktlich abfahren müsse.
+
+„Wir wissen erstaunlich wenig über diesen Betriebsablauf“, so Unbedacht. „Man spricht ständig von ihm, aber niemand scheint ihn jemals gesehen zu haben.“
+
+Besonders interessant findet Unbedacht die Frage, ob es sich beim Betriebsablauf um einen eigenständigen Vorgang oder möglicherweise um eine Sammelbezeichnung für eine Vielzahl kleinerer Abläufe handelt, die sich gegenseitig behindern. Denkbar wäre beispielsweise, dass der Betriebsablauf zunächst auf einen anderen Betriebsablauf warten müsse, der seinerseits auf einen dritten Betriebsablauf warte. In diesem Fall könnte es sich um ein komplexes System handeln, in dem letztlich sämtliche Betriebsabläufe darauf warten, dass irgendein anderer Betriebsablauf endlich seinen Betriebsablauf abschließt.
+
+Unbedacht plant zunächst eine theoretische Untersuchung. Hierzu soll der Begriff „Betriebsablauf“ in sämtlichen verfügbaren Verspätungsbegründungen erfasst und hinsichtlich seiner Häufigkeit, Dauer und Verantwortlichkeit analysiert werden. Sollte sich dabei herausstellen, dass der Betriebsablauf immer dann als Erklärung herangezogen wird, wenn eine konkrete Erklärung nicht unmittelbar verfügbar ist, wäre nach Einschätzung Unbedachts ein bemerkenswertes wissenschaftliches Phänomen entdeckt.
+
+Unbedacht meint: „Die entscheidende Frage wäre, ob sich der Betriebsablauf während unserer Untersuchung ebenfalls verzögert.“ Das Methodius-Institut prüfe daher vorsorglich, ob die Studie nicht bereits einige Minuten später beginnen könne.
