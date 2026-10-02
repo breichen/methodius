@@ -210,6 +210,12 @@ const alltagsstudienListe = [
     datum: ""
   },
 
+  {
+    slug: "iq-entwicklung",
+    titel: "Möglicher Anstieg des IQ durch Beibehaltung der eigenen Intelligenz",
+    datum: ""
+  },
+
 ];
 
 
