@@ -120,6 +120,12 @@ const alltagsstudienListe = [
     datum: ""
   },
 
+  {
+    slug: "ungewoehnliche-gliedmassen",
+    titel: "Zunahme von Fällen von Menschen mit einer ungewöhnlichen Anzahl von Gliedmaßen",
+    datum: ""
+  },
+
 ];
 
 
