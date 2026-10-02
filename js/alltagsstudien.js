@@ -194,7 +194,7 @@ const alltagsstudienListe = [
 
   {
     slug: "wetter-app-regenwahrscheinlichkeit",
-    titel: "Regen trotz 0 % Regenwahrscheinlichkeit",
+    titel: "Regen trotz 0% Regenwahrscheinlichkeit",
     datum: ""
   },
 
