@@ -264,9 +264,15 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-   {
+  {
     slug: "unbemannter-raumflug",
     titel: "Mögliche Unbemanntheit eines rein weiblich besetzten Raumflugs",
+    datum: ""
+  },
+
+  {
+    slug: "zug-durchsage",
+    titel: "Verhalten bei Zugdurchsagen ohne Kinderwagen",
     datum: ""
   },
 
