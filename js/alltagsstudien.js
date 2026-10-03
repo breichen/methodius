@@ -21,6 +21,12 @@
 const alltagsstudienListe = [
 
   {
+    slug: "unterscheidung-satire-nachrichten",
+    titel: "Schwierige Unterscheidung von Satire- und Nachrichtensendungen",
+    datum: "2026-10-03"
+  },
+
+  {
     slug: "hofer-limonade-preise",
     titel: "Bemerkenswerte Preisgestaltung im Discounter",
     datum: ""
@@ -81,12 +87,6 @@ const alltagsstudienListe = [
   {
     slug: "englisch-jugendsprache",
     titel: "Mögliche Korrelation zwischen Verwendung von Jugendsprache und Englischnote",
-    datum: ""
-  },
-
-  {
-    slug: "unterscheidung-satire-nachrichten",
-    titel: "Schwierige Unterscheidung von Satire- und Nachrichtensendungen",
     datum: ""
   },
 
