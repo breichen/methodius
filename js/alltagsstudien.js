@@ -318,6 +318,60 @@ const alltagsstudienListe = [
     datum: ""
   },
 
+   {
+    slug: "elfmeter-tormann",
+    titel: "Das Bewegungsparadoxon beim Elfmeter",
+    datum: ""
+  },
+
+  {
+    slug: "wegweiser-gehzeit",
+    titel: "Überschätzte Gehzeiten auf Wegweisern",
+    datum: ""
+  },
+
+  {
+    slug: "trainer-vom-sofa",
+    titel: "Treffsicherheit von Trainern vom Sofa",
+    datum: ""
+  },
+
+  {
+    slug: "abseitsregel",
+    titel: "Erklärbarkeit der Abseitsregel",
+    datum: ""
+  },
+
+  {
+    slug: "kommentatorfloskeln",
+    titel: "„Das Spiel ist noch nicht entschieden“",
+    datum: ""
+  },
+
+  {
+    slug: "tennis-zaehlweise",
+    titel: "Warum 40 und nicht 45?",
+    datum: ""
+  },
+
+  {
+    slug: "marathon-distanz",
+    titel: "Die ungeklärten 195 Meter beim Marathon",
+    datum: ""
+  },
+
+  {
+    slug: "fussball-maenner-frauen",
+    titel: "Zuschauerpräferenzen zwischen Männer- und Frauenfußball",
+    datum: ""
+  },
+
+  {
+    slug: "koalitionsparteien-zukunft",
+    titel: "Erforderliche Zahl von Koalitionsparteien in der Zukunft",
+    datum: ""
+  },
+
 ];
 
 
