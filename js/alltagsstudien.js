@@ -276,6 +276,12 @@ const alltagsstudienListe = [
     datum: ""
   },
 
+  {
+    slug: "flugzeug-aussteigen",
+    titel: "Zeitgewinn und Zeitverlust beim Aussteigen aus dem Flugzeug",
+    datum: ""
+  },
+
 ];
 
 
