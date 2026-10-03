@@ -282,6 +282,42 @@ const alltagsstudienListe = [
     datum: ""
   },
 
+   {
+    slug: "captcha-menschentest",
+    titel: "Menschlichkeitstests, die Menschen nicht bestehen",
+    datum: ""
+  },
+
+  {
+    slug: "wlan-passwort",
+    titel: "Lesbarkeit von Router-Passwörtern",
+    datum: ""
+  },
+
+  {
+    slug: "hier-oeffnen",
+    titel: "Die Wirksamkeit der Aufschrift „Hier öffnen“",
+    datum: ""
+  },
+
+  {
+    slug: "paketzustellung",
+    titel: "Das Anwesenheitsparadoxon bei der Paketzustellung",
+    datum: ""
+  },
+
+  {
+    slug: "pizzakarton",
+    titel: "Altpapier oder Restmüll: Der Pizzakarton",
+    datum: ""
+  },
+
+  {
+    slug: "tueren-schliessen-knopf",
+    titel: "Wirkung des „Türen schließen“-Knopfes im Aufzug",
+    datum: ""
+  },
+
 ];
 
 
