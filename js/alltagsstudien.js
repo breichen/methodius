@@ -144,7 +144,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  {
+  { // TODO: Methodius pic
     slug: "foerderantraege",
     titel: "Förderantrag für Studie über Förderanträge",
     datum: ""
@@ -156,7 +156,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "selbstevaluation-institut",
     titel: "Unabhängige Evaluation des Instituts durch das Institut",
     datum: ""
@@ -168,13 +168,13 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "hotline-warteschleife",
     titel: "Die Wichtigkeit von Anliegen in der Warteschleife",
     datum: ""
   },
 
-  {
+  { // TODO: Methodius pic
     slug: "zeitmanagement-seminar",
     titel: "Überziehung von Zeitmanagement-Seminaren",
     datum: ""
@@ -186,7 +186,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "cookie-banner",
     titel: "Mögliche Benachteiligung bei Ablehnung von Cookies",
     datum: ""
@@ -210,163 +210,163 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  {
+  { // TODO: Methodius pic
     slug: "iq-entwicklung",
     titel: "Möglicher Anstieg des IQ durch Beibehaltung der eigenen Intelligenz",
     datum: ""
   },
 
-   {
+   { // TODO: Huber pic
     slug: "usb-stecker",
     titel: "Die dritte Seite des USB-Steckers",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "selbstbedienungskassa",
     titel: "Arbeitsleistung von Kundschaft an der Selbstbedienungskassa",
     datum: ""
   },
 
-  {
+  { // TODO: Wankelmuth pic
     slug: "uebrige-schrauben",
     titel: "Übrig gebliebene Schrauben nach dem Möbelaufbau",
     datum: ""
   },
 
-  {
+  { // TODO: Wankelmuth pic
     slug: "verschwundene-socken",
     titel: "Das Verschwinden einzelner Socken",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "vielleicht-spaeter",
     titel: "Die Dauer von „Später erinnern“",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "newsletter-abmeldung",
     titel: "Abmeldung von nie abonnierten Newslettern",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "baustelle-ohne-arbeiter",
     titel: "Beobachtungen auf einer Baustelle ohne Arbeiter",
     datum: ""
   },
 
-  {
+  { // TODO: Methodius pic
     slug: "fitnessstudio-mitgliedschaft",
     titel: "Fitness durch Mitgliedschaft",
     datum: ""
   },
 
-  {
+  { // TODO: Wankelmuth pic
     slug: "unbemannter-raumflug",
     titel: "Mögliche Unbemanntheit eines rein weiblich besetzten Raumflugs",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "zug-durchsage",
     titel: "Verhalten bei Zugdurchsagen ohne Kinderwagen",
     datum: ""
   },
 
-  {
+  { // TODO: Huber pic
     slug: "flugzeug-aussteigen",
     titel: "Zeitgewinn und Zeitverlust beim Aussteigen aus dem Flugzeug",
     datum: ""
   },
 
-   {
+   { // TODO: Methodius pic
     slug: "captcha-menschentest",
     titel: "Menschlichkeitstests, die Menschen nicht bestehen",
     datum: ""
   },
 
-  {
+  { // TODO: Huber pic
     slug: "wlan-passwort",
     titel: "Lesbarkeit von Router-Passwörtern",
     datum: ""
   },
 
-  {
+  { // TODO: Wankelmuth pic
     slug: "hier-oeffnen",
     titel: "Die Wirksamkeit der Aufschrift „Hier öffnen“",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "paketzustellung",
     titel: "Das Anwesenheitsparadoxon bei der Paketzustellung",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "pizzakarton",
     titel: "Altpapier oder Restmüll: Der Pizzakarton",
     datum: ""
   },
 
-  {
+  { // TODO: Huber pic
     slug: "tueren-schliessen-knopf",
     titel: "Wirkung des „Türen schließen“-Knopfes im Aufzug",
     datum: ""
   },
 
-   {
+  { // TODO: Huber pic
     slug: "elfmeter-tormann",
     titel: "Das Bewegungsparadoxon beim Elfmeter",
     datum: ""
   },
 
-  {
+  { // TODO: Wankelmuth pic
     slug: "wegweiser-gehzeit",
     titel: "Überschätzte Gehzeiten auf Wegweisern",
     datum: ""
   },
 
-  {
+  { // TODO: Wankelmuth pic
     slug: "trainer-vom-sofa",
     titel: "Treffsicherheit von Trainern vom Sofa",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "abseitsregel",
     titel: "Erklärbarkeit der Abseitsregel",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "kommentatorfloskeln",
     titel: "„Das Spiel ist noch nicht entschieden“",
     datum: ""
   },
 
-  {
+  { // TODO: Methodius pic
     slug: "tennis-zaehlweise",
     titel: "Warum 40 und nicht 45?",
     datum: ""
   },
 
-  {
+  { // TODO: Methodius pic
     slug: "marathon-distanz",
     titel: "Die ungeklärten 195 Meter beim Marathon",
     datum: ""
   },
 
-  {
+  { // TODO: Huber pic
     slug: "fussball-maenner-frauen",
     titel: "Zuschauerpräferenzen zwischen Männer- und Frauenfußball",
     datum: ""
   },
 
-  {
+  { // TODO: Unbedacht pic
     slug: "koalitionsparteien-zukunft",
     titel: "Erforderliche Zahl von Koalitionsparteien in der Zukunft",
     datum: ""
