@@ -258,7 +258,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Methodius pic
+  {
     slug: "fitnessstudio-mitgliedschaft",
     titel: "Fitness durch Mitgliedschaft",
     datum: ""
