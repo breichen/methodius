@@ -216,6 +216,60 @@ const alltagsstudienListe = [
     datum: ""
   },
 
+   {
+    slug: "usb-stecker",
+    titel: "Die dritte Seite des USB-Steckers",
+    datum: ""
+  },
+
+  {
+    slug: "selbstbedienungskassa",
+    titel: "Arbeitsleistung von Kundschaft an der Selbstbedienungskassa",
+    datum: ""
+  },
+
+  {
+    slug: "uebrige-schrauben",
+    titel: "Übrig gebliebene Schrauben nach dem Möbelaufbau",
+    datum: ""
+  },
+
+  {
+    slug: "verschwundene-socken",
+    titel: "Das Verschwinden einzelner Socken",
+    datum: ""
+  },
+
+  {
+    slug: "vielleicht-spaeter",
+    titel: "Die Dauer von „Später erinnern“",
+    datum: ""
+  },
+
+  {
+    slug: "newsletter-abmeldung",
+    titel: "Abmeldung von nie abonnierten Newslettern",
+    datum: ""
+  },
+
+  {
+    slug: "baustelle-ohne-arbeiter",
+    titel: "Beobachtungen auf einer Baustelle ohne Arbeiter",
+    datum: ""
+  },
+
+  {
+    slug: "fitnessstudio-mitgliedschaft",
+    titel: "Fitness durch Mitgliedschaft",
+    datum: ""
+  },
+
+   {
+    slug: "unbemannter-raumflug",
+    titel: "Mögliche Unbemanntheit eines rein weiblich besetzten Raumflugs",
+    datum: ""
+  },
+
 ];
 
 
