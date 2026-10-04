@@ -1,0 +1,38 @@
+---
+layout: base.njk
+pagination:
+  data: personalDesMonats
+  size: 1
+  alias: person
+permalink: "personal-des-monats-{{ person.slug }}.html"
+title: Personal des Monats
+description: Eine Person des Methodius-Instituts, die sonst niemand auf dem Schirm hat – und genau deshalb ausgezeichnet wurde.
+eleventyComputed:
+  robots: "{% if not person.veroeffentlicht %}noindex{% endif %}"
+extraJs:
+- datumsformat.js
+- markdown.js
+- personal-des-monats.js
+---
+<!--
+  Eine Seite pro Eintrag in data/personal-des-monats.json
+  (Eleventy-Pagination, wie bei buch-seiten.html). Der eigentliche Inhalt
+  wird im Browser aus md/personal-des-monats/<slug>.md geladen und von
+  js/personal-des-monats.js eingesetzt.
+
+  Ist "datum" leer oder liegt es in der Zukunft, zeigt die Seite nur
+  "nicht gefunden" (außer im lokalen Debug-Modus).
+
+  Die Daten kommen aus _data/personalDesMonats.js, die
+  data/personal-des-monats.json einliest und pro Eintrag das Feld
+  "veroeffentlicht" ergänzt (datum gesetzt und nicht in der Zukunft).
+  Unveröffentlichte Seiten werden per noindex von Suchmaschinen
+  ausgenommen.
+-->
+<div id="personal-inhalt" data-slug="{{ person.slug }}">
+  <section class="section">
+    <div class="wrap">
+      <p>Lade Personal …</p>
+    </div>
+  </section>
+</div>

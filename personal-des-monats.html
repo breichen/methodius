@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: Personal des Monats
+description: Die Auszeichnung des Methodius-Instituts für Menschen (und gelegentlich Geräte), die sonst niemand auf dem Schirm hat.
+extraCss:
+- personal-des-monats.css
+extraJs:
+- datumsformat.js
+- markdown.js
+- personal-des-monats.js
+---
+<!--
+  Übersicht aller bereits ernannten "Personal des Monats".
+
+  Datenquelle: data/personal-des-monats.json  ([{ "slug": "...", "datum": "YYYY-MM-DD" }, ...])
+  Einträge ohne "datum" oder mit einem Datum in der Zukunft werden NICHT
+  angezeigt. Im lokalen Debug-Modus (?debug=1, siehe datumsformat.js)
+  erscheinen ALLE Einträge, die unveröffentlichten gestrichelt und mit
+  dem Zusatz "nicht veröffentlicht".
+  Name und Stellenbezeichnung stammen aus der jeweiligen Markdown-Datei
+  (md/personal-des-monats/<slug>.md): erste "# "-Zeile bzw. die Zeile
+  "**Stellenbezeichnung:** ...".
+
+  Die Karten verlinken auf die pro Person erzeugte Seite
+  personal-des-monats-<slug>.html (siehe personal-des-monats-seite.html).
+  Die Kartenstile (.personal-grid, .personal-karte ...) stehen in style.css.
+-->
+<!-- ===== EINLEITUNG ===== -->
+<section class="section">
+  <div class="wrap">
+
+    <h1>Personal des Monats</h1>
+
+    <p>
+      Jeden Monat zeichnet das Methodius-Institut eine Person aus,
+      die sonst nirgends auf dieser Website genannt wird – und ohne die
+      trotzdem nichts funktionieren würde.
+    </p>
+
+    <p>
+      Klick auf eine Karte, um zu erfahren, wer es war, was sie oder er
+      geleistet hat und womit das Institut dafür dankt.
+    </p>
+
+  </div>
+</section>
+
+<!-- ===== KAPITEL: ALLE AUSGEZEICHNETEN ===== -->
+<section id="personal-sektion" class="section section-alt">
+  <div class="wrap">
+
+    <h2>Bisher ausgezeichnet</h2>
+
+    <div id="personal-liste" class="personal-grid">
+      <p>Lade Personal …</p>
+    </div>
+
+  </div>
+</section>
