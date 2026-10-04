@@ -46,6 +46,7 @@ const NEWS_KATEGORIE_LABEL_SINGULAR = {
   [NewsKategorie.PUBLIKATIONEN]: "Publikation",
   [NewsKategorie.INSTITUTSLEBEN]: "Institutsleben",
   [NewsKategorie.ALLTAGSSTUDIEN]: "Alltagsstudie",
+  [NewsKategorie.PERSONAL]: "Personal des Monats",
 };
 
 let alleSichtbarenNews = [];
@@ -271,17 +272,24 @@ function ladeNewsBeitrag(beitrag, index, zeigeKategorie) {
   const pfad =
     `md/news/${encodeURIComponent(beitrag.datei)}`;
 
-  return fetch(pfad)
-    .then(antwort => {
+  // Beiträge mit eigenem Feld "text" (z.B. Personal des Monats, siehe
+  // js/news.js) brauchen keine Markdown-Datei unter md/news/.
+  const markdownQuelle =
+    beitrag.text !== undefined
+      ? Promise.resolve(beitrag.text)
+      : fetch(pfad)
+          .then(antwort => {
 
-      if (!antwort.ok) {
-        throw new Error(
-          `News-Datei nicht gefunden: ${beitrag.datei}`
-        );
-      }
+            if (!antwort.ok) {
+              throw new Error(
+                `News-Datei nicht gefunden: ${beitrag.datei}`
+              );
+            }
 
-      return antwort.text();
-    })
+            return antwort.text();
+          });
+
+  return markdownQuelle
     .then(markdown => {
 
       const bloecke =
@@ -526,7 +534,8 @@ function baueAktuellesFilter() {
     NewsKategorie.FALLAKTEN,
     NewsKategorie.ALLTAGSSTUDIEN,
     NewsKategorie.PUBLIKATIONEN,
-    NewsKategorie.INSTITUTSLEBEN
+    NewsKategorie.INSTITUTSLEBEN,
+    NewsKategorie.PERSONAL
   ];
   const filter = [
     "Alle",

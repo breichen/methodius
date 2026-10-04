@@ -150,8 +150,9 @@ function ladePersonalBild(slug, name) {
     const bild = new Image();
 
     bild.onload = () => {
-      // Vorhandene Porträt-Klasse aus style.css (220 px breit, Akzentkante)
-      bild.className = "mitarbeiter-bild";
+      // Vorhandene Klasse aus style.css: bis 600 px breit, zentriert,
+      // gleicher Rahmen/Schatten wie die Bilder auf der News-Seite.
+      bild.className = "news-bild";
       bild.alt = `Bild: ${name}`;
       platz.appendChild(bild);
       platz.hidden = false;
@@ -210,7 +211,7 @@ function baueDetailSections(bloecke, eintrag) {
       <div class="wrap">
         ${index === 0 ? datumsHtml : ""}
         ${gruppe.join("\n")}
-        ${index === 0 ? '<div id="personal-bild" class="personal-bild" style="margin-top: 24px;" hidden></div>' : ""}
+        ${index === 0 ? '<div id="personal-bild" class="personal-bild" hidden></div>' : ""}
       </div>
     </section>
   `);

@@ -156,7 +156,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "selbstevaluation-institut",
     titel: "Unabhängige Evaluation des Instituts durch das Institut",
     datum: ""

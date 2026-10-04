@@ -97,6 +97,7 @@ const AKTUELLES_KATEGORIE_SINGULAR = {
   [NewsKategorie.ALLTAGSSTUDIEN]: "Alltagsstudie",
   [NewsKategorie.PUBLIKATIONEN]: "Publikation",
   [NewsKategorie.INSTITUTSLEBEN]: "Institutsleben",
+  [NewsKategorie.PERSONAL]: "Personal des Monats",
 };
 
 
@@ -367,6 +368,14 @@ async function baueAktuellesFallkarte(beitrag) {
 
 // First markdown block (first paragraph) of the news file, cached per file.
 async function ladeAktuellesTeaser(beitrag) {
+
+  // Beiträge mit eigenem Feld "text" (z.B. Personal des Monats, siehe
+  // js/news.js) haben keine Datei unter md/news/ - ihr Text steht direkt
+  // im Eintrag. Das muss VOR dem Cache-Zugriff stehen, da diese
+  // Beiträge keinen Dateinamen als Cache-Schlüssel haben.
+  if (beitrag.text !== undefined) {
+    return parseMarkdownBloecke(beitrag.text).slice(0, 1).join("\n");
+  }
 
   if (aktuellesTeaserCache[beitrag.datei] !== undefined) {
     return aktuellesTeaserCache[beitrag.datei];

@@ -4,6 +4,7 @@ const NewsKategorie = Object.freeze({
   ALLTAGSSTUDIEN: "Alltagsstudien",
   PUBLIKATIONEN: "Publikationen",
   INSTITUTSLEBEN: "Institutsleben",
+  PERSONAL: "Personal des Monats",
 });
 
 /*
@@ -34,6 +35,9 @@ const newsListe = [
 
 // Alltagsstudien-Einträge kommen automatisch aus alltagsstudienListe
 // (alltagsstudien.js, muss vor dieser Datei geladen sein).
+
+// Personal-des-Monats-Einträge kommen aus der JSON-Datei
+// data/personal-des-monats.json (siehe erzeugePersonalNews unten).
 
 
 // Erzeugt aus der Veröffentlichungsliste automatisch einen News-Eintrag
@@ -312,6 +316,133 @@ async function erzeugeAlltagsstudienNews(
 }
 
 
+// Name und Stellenbezeichnung einer Person aus
+// md/personal-des-monats/<slug>.md ("# Name" und
+// "**Stellenbezeichnung:** ..."). Fehlt die Datei, dient der Slug als Name.
+async function ladePersonalKopfdaten(slug) {
+
+  try {
+
+    const response =
+      await fetch(
+        `md/personal-des-monats/${encodeURIComponent(slug)}.md`
+      );
+
+    if (!response.ok) {
+      throw new Error("Markdown nicht gefunden");
+    }
+
+    const markdown = await response.text();
+
+    const name =
+      (markdown.match(/^#\s+(.+)$/m) || [])[1];
+
+    const stelle =
+      (markdown.match(/^\*\*Stellenbezeichnung:\*\*\s*(.+)$/m) || [])[1];
+
+    return {
+      name: name ? name.trim() : slug,
+      stelle: stelle ? stelle.trim() : "",
+    };
+
+  }
+  catch {
+
+    return { name: slug, stelle: "" };
+
+  }
+
+}
+
+
+// Erzeugt aus data/personal-des-monats.json automatisch einen
+// News-Eintrag pro ernannter Person. Einträge ohne "datum" tauchen nicht
+// auf (ohne Datum gibt es nichts zu berichten); Einträge mit Datum in der
+// Zukunft werden - wie bei allen News - erst von den Seiten ausgeblendet
+// (istDatumErreicht()).
+//
+// Ein optionales Bild (z.B. die Überreichung der Auszeichnung, Querformat)
+// wird übernommen, wenn unter pics/personal-des-monats/<slug>.png
+// eine Datei existiert.
+//
+// Text und Link werden aus den Daten abgeleitet: Statt einer Datei unter
+// md/news/ bekommt der Eintrag das Feld "text" (ein Markdown-Absatz),
+// das news-seite.js und news-startseite.js direkt verwenden.
+// Schlägt das Laden fehl, bleiben die übrigen News davon unberührt.
+async function erzeugePersonalNews() {
+
+  try {
+
+    const response =
+      await fetch(
+        "data/personal-des-monats.json"
+      );
+
+    if (!response.ok) {
+
+      throw new Error(
+        "Personal-des-Monats-Datei nicht gefunden"
+      );
+
+    }
+
+    const eintraege =
+      await response.json();
+
+    return Promise.all(
+      eintraege
+        .map(async eintrag => {
+
+          const bildPfad =
+            `pics/personal-des-monats/${eintrag.slug}.png`;
+
+          const [{ name, stelle }, hatBild] =
+            await Promise.all([
+              ladePersonalKopfdaten(eintrag.slug),
+              dateiExistiert(bildPfad),
+            ]);
+
+          // "2026-10" (ohne Tag) -> "2026-10-01", damit
+          // formatiereDatumDeutsch() und der Datumsvergleich passen.
+          const datum =
+            /^\d{4}-\d{2}$/.test(eintrag.datum)
+              ? `${eintrag.datum}-01`
+              : eintrag.datum;
+
+          const stellenText =
+            stelle ? ` – ${stelle}` : "";
+
+          return {
+            titel: `Neues Personal des Monats: ${name}`,
+            datum,
+            text:
+              `Ausgezeichnet wurde: **${name}**${stellenText}. ` +
+              "Was dafür den Ausschlag gab und womit das Institut " +
+              "dankt, erfährst du auf der Seite zur Auszeichnung.",
+            ...(hatBild && { bild: bildPfad }),
+            link: `personal-des-monats-${eintrag.slug}.html`,
+            linkText: "Zum Personal des Monats",
+            kategorie: NewsKategorie.PERSONAL,
+          };
+
+        })
+    );
+
+  }
+  catch (fehler) {
+
+    console.warn(
+      "Personal des Monats konnte nicht geladen werden:",
+      fehler
+    );
+
+    return [];
+
+  }
+
+}
+
+
 async function ladeAlleNews() {
 
   const response =
@@ -351,7 +482,8 @@ async function ladeAlleNews() {
 
   const [
     institutslebenNews,
-    alltagsstudienNews
+    alltagsstudienNews,
+    personalNews
   ] = await Promise.all([
 
     ladeJsonNews(
@@ -363,6 +495,8 @@ async function ladeAlleNews() {
     erzeugeAlltagsstudienNews(
       alltagsstudienListe
     ),
+
+    erzeugePersonalNews(),
 
   ]);
 
@@ -380,6 +514,8 @@ async function ladeAlleNews() {
     ...institutslebenNews,
 
     ...alltagsstudienNews,
+
+    ...personalNews,
 
   ];
 
