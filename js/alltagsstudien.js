@@ -168,7 +168,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "hotline-warteschleife",
     titel: "Die Wichtigkeit von Anliegen in der Warteschleife",
     datum: ""
