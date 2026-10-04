@@ -372,6 +372,42 @@ const alltagsstudienListe = [
     datum: ""
   },
 
+  { // TODO: Huber pic
+    slug: "nichtwaehler-partei",
+    titel: "Die Partei der Nichtwähler",
+    datum: ""
+  },
+
+  { // TODO: Wankelmuth pic
+    slug: "wahlversprechen-halbwertszeit",
+    titel: "Die Halbwertszeit von Wahlversprechen",
+    datum: ""
+  },
+
+  { // TODO: Wankelmuth pic
+    slug: "interviews-antworten",
+    titel: "Antwortquote in politischen Interviews",
+    datum: ""
+  },
+
+  { // TODO: Unbedacht pic
+    slug: "wahlprogramm",
+    titel: "Lesbarkeit und Zustimmung bei Wahlprogrammen",
+    datum: ""
+  },
+
+  { // TODO: Unbedacht pic
+    slug: "arbeitsgruppe",
+    titel: "Arbeitsgruppen zur Prüfung von Arbeitsgruppen",
+    datum: ""
+  },
+
+  { // TODO: Methodius pic
+    slug: "parteitag-zustimmung",
+    titel: "Die 1,7 Prozent beim Parteitag",
+    datum: ""
+  },
+
 ];
 
 
