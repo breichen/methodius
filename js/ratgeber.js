@@ -40,9 +40,9 @@ const ratgeberRohdaten = [
 
   {id: 1, slug: "Abnehmen dank Muskelabbau", urlSlug: "abnehmen-dank-muskelabbau", erstellt: "2026-10-02", kategorie: RatgeberKategorie.LEBEN},
   {id: 2, slug: "Freunde verlieren leicht gemacht", urlSlug: "freunde-verlieren", erstellt: "2026-10-04", kategorie: RatgeberKategorie.GESELLSCHAFT},
-  {id: 3, slug: "Das perfekte Leben auf Social Media", urlSlug: "perfektes-leben-social-media", lehrgang: "Perfekte Selbstdarstellung in sozialen Medien", erstellt: "", kategorie: RatgeberKategorie.MEDIEN},
-  {id: 4, slug: "Die Kunst, beschäftigt auszusehen", urlSlug: "beschaeftigt-aussehen", erstellt: "", kategorie: RatgeberKategorie.ALLTAG_BERUF},
-  {id: 5, slug: "KI (gar nicht) sicher nutzen", urlSlug: "ki-gar-nicht-sicher-nutzen", erstellt: "", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
+  {id: 3, slug: "Das perfekte Leben auf Social Media", urlSlug: "perfektes-leben-social-media", lehrgang: "Perfekte Selbstdarstellung in sozialen Medien", erstellt: "2026-10-06", kategorie: RatgeberKategorie.MEDIEN},
+  {id: 4, slug: "Die Kunst, beschäftigt auszusehen", urlSlug: "beschaeftigt-aussehen", erstellt: "2026-10-08", kategorie: RatgeberKategorie.ALLTAG_BERUF},
+  {id: 5, slug: "KI (gar nicht) sicher nutzen", urlSlug: "ki-gar-nicht-sicher-nutzen", erstellt: "2026-10-10", kategorie: RatgeberKategorie.WISSEN_TECHNIK},
   {id: 6, slug: "Moderne Kunst interpretieren", urlSlug: "moderne-kunst-interpretieren", erstellt: "", kategorie: RatgeberKategorie.KUNST_KULTUR},
   {id: 7, slug: "Vom Millionär zum Tellerwäscher in nur 7 Tagen", urlSlug: "millionaer-zum-tellerwaescher", lehrgang: "Strategischer finanzieller und sozialer Abstieg", erstellt: "", kategorie: RatgeberKategorie.LEBEN},
   {id: 8, slug: "In 12 einfachen Schritten zum US-Präsidenten", urlSlug: "us-praesident-in-12-schritten", lehrgang: "Grundlagen des politischen Aufstiegs", erstellt: "", kategorie: RatgeberKategorie.GESELLSCHAFT},
