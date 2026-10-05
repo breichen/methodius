@@ -27,7 +27,7 @@ const alltagsstudienListe = [
   },
 
   {
-    slug: "hofer-limonade-preise",
+    slug: "limonade-preise",
     titel: "Bemerkenswerte Preisgestaltung im Discounter",
     datum: "2026-10-05"
   },
