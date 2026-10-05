@@ -1,4 +1,4 @@
-Dr. Konrad P. Huber hat beim Einkauf in einem Discounter eine bemerkenswerte Preisgestaltung festgestellt. Eine 1,5-Liter-Flasche Limonade kostete 2,49 €, während für zwei Liter desselben Getränks lediglich 1,99 € verlangt wurden – in beiden Fällen ohne Aktionspreis.
+Dr. Konrad P. Huber, Leiter der Abteilung für Statistik und empirische Plausibilität am Methodius-Institut, hat beim Einkauf in einem Discounter eine bemerkenswerte Preisgestaltung festgestellt. Eine 1,5-Liter-Flasche Limonade kostete 2,49 €, während für zwei Liter desselben Getränks lediglich 1,99 € verlangt wurden – in beiden Fällen ohne Aktionspreis.
 
 Rechnerisch ergibt sich für die kleinere Flasche ein Literpreis von 1,66 €, für die größere von rund 1,00 €. Die kleinere Flasche ist damit pro Liter etwa zwei Drittel teurer. Anders ausgedrückt zahlt man für einen halben Liter weniger Limonade 50 Cent mehr.
 
