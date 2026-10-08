@@ -144,7 +144,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Methodius pic
+  {
     slug: "foerderantraege",
     titel: "Förderantrag für Studie über Förderanträge",
     datum: ""
@@ -174,7 +174,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Methodius pic
+  {
     slug: "zeitmanagement-seminar",
     titel: "Überziehung von Zeitmanagement-Seminaren",
     datum: ""
@@ -186,7 +186,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "cookie-banner",
     titel: "Mögliche Benachteiligung bei Ablehnung von Cookies",
     datum: ""
@@ -210,37 +210,37 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Methodius pic
+  {
     slug: "iq-entwicklung",
     titel: "Möglicher Anstieg des IQ durch Beibehaltung der eigenen Intelligenz",
     datum: ""
   },
 
-   { // TODO: Huber pic
+   {
     slug: "usb-stecker",
     titel: "Die dritte Seite des USB-Steckers",
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "selbstbedienungskassa",
     titel: "Arbeitsleistung von Kundschaft an der Selbstbedienungskassa",
     datum: ""
   },
 
-  { // TODO: Wankelmuth pic
+  {
     slug: "uebrige-schrauben",
     titel: "Übrig gebliebene Schrauben nach dem Möbelaufbau",
     datum: ""
   },
 
-  { // TODO: Wankelmuth pic
+  {
     slug: "verschwundene-socken",
     titel: "Das Verschwinden einzelner Socken",
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "vielleicht-spaeter",
     titel: "Die Dauer von „Später erinnern“",
     datum: ""
@@ -264,7 +264,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Wankelmuth pic
+  {
     slug: "unbemannter-raumflug",
     titel: "Mögliche Unbemanntheit eines rein weiblich besetzten Raumflugs",
     datum: ""
@@ -294,7 +294,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Wankelmuth pic
+  {
     slug: "hier-oeffnen",
     titel: "Die Wirksamkeit der Aufschrift „Hier öffnen“",
     datum: ""
