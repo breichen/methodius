@@ -246,13 +246,13 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "newsletter-abmeldung",
     titel: "Abmeldung von nie abonnierten Newslettern",
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "baustelle-ohne-arbeiter",
     titel: "Beobachtungen auf einer Baustelle ohne Arbeiter",
     datum: ""
@@ -270,13 +270,13 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "zug-durchsage",
     titel: "Verhalten bei Zugdurchsagen ohne Kinderwagen",
     datum: ""
   },
 
-  { // TODO: Huber pic
+  {
     slug: "flugzeug-aussteigen",
     titel: "Zeitgewinn und Zeitverlust beim Aussteigen aus dem Flugzeug",
     datum: ""
@@ -288,7 +288,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Huber pic
+  {
     slug: "wlan-passwort",
     titel: "Lesbarkeit von Router-Passwörtern",
     datum: ""
@@ -324,7 +324,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Wankelmuth pic
+  {
     slug: "wegweiser-gehzeit",
     titel: "Überschätzte Gehzeiten auf Wegweisern",
     datum: ""
