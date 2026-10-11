@@ -300,25 +300,25 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  { 
     slug: "paketzustellung",
     titel: "Das Anwesenheitsparadoxon bei der Paketzustellung",
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "pizzakarton",
     titel: "Altpapier oder Restmüll: Der Pizzakarton",
     datum: ""
   },
 
-  { // TODO: Huber pic
+  {
     slug: "tueren-schliessen-knopf",
     titel: "Wirkung des „Türen schließen“-Knopfes im Aufzug",
     datum: ""
   },
 
-  { // TODO: Huber pic
+  {
     slug: "elfmeter-tormann",
     titel: "Das Bewegungsparadoxon beim Elfmeter",
     datum: ""
@@ -330,7 +330,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Wankelmuth pic
+  {
     slug: "trainer-vom-sofa",
     titel: "Treffsicherheit von Trainern vom Sofa",
     datum: ""
@@ -342,7 +342,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "kommentatorfloskeln",
     titel: "„Das Spiel ist noch nicht entschieden“",
     datum: ""
@@ -366,7 +366,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "koalitionsparteien-zukunft",
     titel: "Erforderliche Zahl von Koalitionsparteien in der Zukunft",
     datum: ""
@@ -378,13 +378,13 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Wankelmuth pic
+  {
     slug: "wahlversprechen-halbwertszeit",
     titel: "Die Halbwertszeit von Wahlversprechen",
     datum: ""
   },
 
-  { // TODO: Wankelmuth pic
+  {
     slug: "interviews-antworten",
     titel: "Antwortquote in politischen Interviews",
     datum: ""
