@@ -282,7 +282,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-   { // TODO: Methodius pic
+   {
     slug: "captcha-menschentest",
     titel: "Menschlichkeitstests, die Menschen nicht bestehen",
     datum: ""
@@ -336,7 +336,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "abseitsregel",
     titel: "Erklärbarkeit der Abseitsregel",
     datum: ""
@@ -348,19 +348,19 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Methodius pic
+  {
     slug: "tennis-zaehlweise",
     titel: "Warum 40 und nicht 45?",
     datum: ""
   },
 
-  { // TODO: Methodius pic
+  {
     slug: "marathon-distanz",
     titel: "Die ungeklärten 195 Meter beim Marathon",
     datum: ""
   },
 
-  { // TODO: Huber pic
+  {
     slug: "fussball-maenner-frauen",
     titel: "Zuschauerpräferenzen zwischen Männer- und Frauenfußball",
     datum: ""
@@ -372,7 +372,7 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Huber pic
+  {
     slug: "nichtwaehler-partei",
     titel: "Die Partei der Nichtwähler",
     datum: ""
@@ -390,19 +390,19 @@ const alltagsstudienListe = [
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "wahlprogramm",
     titel: "Lesbarkeit und Zustimmung bei Wahlprogrammen",
     datum: ""
   },
 
-  { // TODO: Unbedacht pic
+  {
     slug: "arbeitsgruppe",
     titel: "Arbeitsgruppen zur Prüfung von Arbeitsgruppen",
     datum: ""
   },
 
-  { // TODO: Methodius pic
+  {
     slug: "parteitag-zustimmung",
     titel: "Die 1,7 Prozent beim Parteitag",
     datum: ""
