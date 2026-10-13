@@ -3874,3 +3874,60 @@ button.studienfortschritt-toggle[aria-expanded="true"]::after {
   color: var(--color-accent);
   border-color: var(--color-accent);
 }
+
+
+/* Partner universities: responsive card grid */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.partner-karte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+
+/* Logos are square SVGs; keep them from stretching */
+.partner-karte img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+}
+
+.partner-karte h3 {
+  margin: 0 0 0.25rem;
+}
+
+.partner-ort {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+/* Definition list: label above value, left-aligned inside a centered card */
+.partner-daten {
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+.partner-daten dt {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.partner-daten dd {
+  margin: 0.15rem 0 0;
+}
