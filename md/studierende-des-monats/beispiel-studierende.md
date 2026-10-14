@@ -4,7 +4,7 @@
 
 ## Zur Person
 
-Dies ist ein Platzhaltertext für den Eintrag „Studierende des Monats“. Er ist nur im Debug-Modus sichtbar. Ersetze ihn durch die Geschichte der ausgezeichneten Person.
+Dies ist ein Platzhaltertext für den Eintrag „Studierende Person des Monats“. Er ist nur im Debug-Modus sichtbar. Ersetze ihn durch die Geschichte der ausgezeichneten Person.
 
 ## Die Leistung
 

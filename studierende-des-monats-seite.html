@@ -5,7 +5,7 @@ pagination:
   size: 1
   alias: person
 permalink: "studierende-des-monats-{{ person.slug }}.html"
-title: Studierende des Monats
+title: Studierende Person des Monats
 description: Eine Auszeichnung des Methodius-Instituts für Studierende, die ihr Studium mit bemerkenswerter Eigenwilligkeit betreiben.
 eleventyComputed:
   robots: "{% if not person.veroeffentlicht %}noindex{% endif %}"
@@ -40,7 +40,7 @@ extraJs:
 <div id="personal-inhalt" data-slug="{{ person.slug }}">
   <section class="section">
     <div class="wrap">
-      <p>Lade Studierende …</p>
+      <p>Lade studierende Person …</p>
     </div>
   </section>
 </div>
