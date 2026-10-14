@@ -42,7 +42,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 LOGO_DATEI = PROJECT_ROOT / "assets" / "favicon" / "methodius-512x512-nobg.png"
 SIGNATUR_DATEI = PROJECT_ROOT / "assets" / "signatur" / "methodius-signatur.png"
-AUSGABE_ORDNER = PROJECT_ROOT / "out" / "urkunden"
+AUSGABE_ORDNER = PROJECT_ROOT / "out" / "urkunden-studierende"
 
 BLAU = colors.HexColor("#1f2747")
 ROT = colors.HexColor("#B5292C")
@@ -239,13 +239,13 @@ def generiere_urkunde(name, monat, grund=None):
         c.drawCentredString(w / 2, h - y, zeile)
         y += 6.5 * mm
 
-    c.drawCentredString(w / 2, h - y, "vom Methodius-Institut ausgezeichnet wird als")
+    c.drawCentredString(w / 2, h - y, "als")
 
     # --------------------------------------------------
     # Auszeichnung
     # --------------------------------------------------
 
-    y += 15 * mm
+    y += 13 * mm
 
     c.setFont("Helvetica-Bold", 20)
     c.drawCentredString(w / 2, h - y, "Studierende Person des Monats")
@@ -254,6 +254,11 @@ def generiere_urkunde(name, monat, grund=None):
 
     c.setFont("Helvetica-Oblique", 14)
     c.drawCentredString(w / 2, h - y, f"({monat_jahr(monat)})")
+
+    y += 13 * mm
+
+    c.setFont("Helvetica", 12)
+    c.drawCentredString(w / 2, h - y, "ausgezeichnet wird.")
 
     # --------------------------------------------------
     # Urkundennummer
