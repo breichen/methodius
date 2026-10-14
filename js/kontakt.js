@@ -49,7 +49,7 @@ function baueKontaktOptionen() {
         "Du hast im Methodius-Studium Außergewöhnliches geleistet – oder zumindest etwas, das wir so nennen? Dann bewirb dich.",
 
       // Dieselbe Tally-ID wie der Button auf studierende-des-monats.html
-      tallyId: "HIER-TALLY-ID",
+      tallyId: "jadNJE",
 
       // Nur im Debug-Modus sichtbar. Zum Veröffentlichen diese Zeile
       // (und das Komma davor) löschen.
