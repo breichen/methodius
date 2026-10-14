@@ -4,7 +4,7 @@
 
 ## Zur Person
 
-Kafka ist seit 2019 am Institut beschäftigt, ohne dass je ein Arbeitsvertrag unterzeichnet wurde. Ihr Aufgabengebiet umfasst das Liegen auf wichtigen Dokumenten, das Ignorieren von Gästen und das gelegentliche Herunterwerfen von Gegenständen zur Überprüfung der Schwerkraft. Fragen zu ihrer Arbeitszeit werden nicht beantwortet.
+Kafka ist seit der Gründung am Institut beschäftigt, ohne dass je ein Arbeitsvertrag unterzeichnet wurde. Ihr Aufgabengebiet umfasst das Liegen auf wichtigen Dokumenten, das Ignorieren von Gästen und das gelegentliche Herunterwerfen von Gegenständen zur Überprüfung der Schwerkraft. Fragen zu ihrer Arbeitszeit werden nicht beantwortet.
 
 ## Begründung der Wahl
 
