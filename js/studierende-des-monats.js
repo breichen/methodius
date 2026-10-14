@@ -9,7 +9,7 @@
 
   Datenquellen:
     data/studierende-des-monats.json        [{ "slug": "...", "datum": "YYYY-MM-DD" }]
-    md/studierende-des-monats/<slug>.md     "# Name", "**Lehrgang:** ...",
+    md/studierende-des-monats/<slug>.md     "# Name", "**Begründung:** ...",
                                             dann "## Zur Person" usw.
     pics/studierende-des-monats/<slug>.<png|jpg|jpeg|webp>   (optional)
 
@@ -95,14 +95,14 @@ async function ladeStudierendeMarkdown(slug) {
   return antwort.text();
 }
 
-// Name = erste "# "-Zeile, Lehrgang = Zeile "**Lehrgang:** ..."
+// Name = erste "# "-Zeile, Begründung = Zeile "**Begründung:** ..."
 function extrahiereStudierendeKopfdaten(markdown, slug) {
   const name = (markdown.match(/^#\s+(.+)$/m) || [])[1];
-  const lehrgang = (markdown.match(/^\*\*Lehrgang:\*\*\s*(.+)$/m) || [])[1];
+  const begruendung = (markdown.match(/^\*\*Begründung:\*\*\s*(.+)$/m) || [])[1];
 
   return {
     name: name ? name.trim() : slug,
-    lehrgang: lehrgang ? lehrgang.trim() : ""
+    begruendung: begruendung ? begruendung.trim() : ""
   };
 }
 
@@ -124,7 +124,7 @@ async function initStudierendeListe(container) {
 
     const karten = await Promise.all(
       eintraege.map(async eintrag => {
-        let kopf = { name: eintrag.slug, lehrgang: "" };
+        let kopf = { name: eintrag.slug, begruendung: "" };
 
         try {
           kopf = extrahiereStudierendeKopfdaten(
@@ -141,7 +141,7 @@ async function initStudierendeListe(container) {
           <a class="personal-karte${entwurf ? " personal-karte-entwurf" : ""}" href="studierende-des-monats-${encodeURIComponent(eintrag.slug)}.html">
             <span class="personal-karte-monat">${formatiereMonatJahr(eintrag.datum)}${entwurf ? " · nicht veröffentlicht" : ""}</span>
             <span class="personal-karte-name">${kopf.name}</span>
-            <span class="personal-karte-stelle">${kopf.lehrgang}</span>
+            <span class="personal-karte-stelle">${kopf.begruendung}</span>
           </a>
         `;
       })
@@ -162,7 +162,7 @@ async function initStudierendeListe(container) {
    ============================================ */
 
 // Sucht ein Bild zum Slug und setzt es in den Platzhalter #personal-bild
-// (steht unter dem Lehrgang). Der Platzhalter ist anfangs "hidden" und
+// (steht unter der Begründung). Der Platzhalter ist anfangs "hidden" und
 // wird nur eingeblendet, wenn ein Bild wirklich geladen werden konnte.
 function ladeStudierendeBild(slug, name) {
   const platz = document.getElementById("personal-bild");
@@ -203,7 +203,7 @@ function zeigeStudierendeNichtGefunden(container) {
 }
 
 // Teilt die Markdown-Blöcke in Gruppen: erste Gruppe = Überschrift
-// samt Lehrgang, danach eine Gruppe pro "## "-Kapitel.
+// samt Begründung, danach eine Gruppe pro "## "-Kapitel.
 // Jede Gruppe wird eine eigene Section (abwechselnd mit section-alt).
 function baueStudierendeDetailSections(bloecke, eintrag) {
   const gruppen = [];

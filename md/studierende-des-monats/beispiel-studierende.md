@@ -1,6 +1,6 @@
 # Beispiel Studierende
 
-**Lehrgang:** Grundlagen der strategischen Unwissenheit
+**Begründung:** Für die konsequente Verweigerung jeglicher Lernziele
 
 ## Zur Person
 
