@@ -43,15 +43,36 @@ function baueKontaktOptionen() {
     },
 
     {
+      titel: "Als studierende Person des Monats bewerben",
+
+      beschreibung:
+        "Du hast im Methodius-Studium Außergewöhnliches geleistet – oder zumindest etwas, das wir so nennen? Dann bewirb dich.",
+
+      // Dieselbe Tally-ID wie der Button auf studierende-des-monats.html
+      tallyId: "HIER-TALLY-ID",
+
+      // Nur im Debug-Modus sichtbar. Zum Veröffentlichen diese Zeile
+      // (und das Komma davor) löschen.
+      nurDebug: true
+    },
+
+    {
       titel: "Allgemeine Anfrage",
 
       beschreibung:
         "Für sonstige Fragen, Anregungen und Anliegen kannst du unser allgemeines Kontaktformular nutzen.",
 
       tallyId: "xXKrkk"
-    }
+    },
 
   ];
+
+
+  // Optionen mit "nurDebug" erscheinen nur im Debug-Modus
+  // (istDebugModusAktiv() kommt aus js/datumsformat.js).
+  const sichtbareOptionen = optionen.filter(
+    option => !option.nurDebug || istDebugModusAktiv()
+  );
 
 
   container.innerHTML = `
@@ -65,7 +86,7 @@ function baueKontaktOptionen() {
 
     <div class="kategorie-grid">
 
-      ${optionen.map(
+      ${sichtbareOptionen.map(
         option => `
 
           <a
