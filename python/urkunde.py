@@ -333,7 +333,7 @@ def generiere_urkunde(name):
     c.drawCentredString(
         w / 2,
         h - 262 * mm,
-        "Dr. Maximilien Methodius, Institutsleiter"
+        "Dr. Maximilian Methodius, Institutsleiter"
     )
 
     # --------------------------------------------------

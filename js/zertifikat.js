@@ -688,7 +688,7 @@ async function erstelleUrkunde(name) {
   doc.setFontSize(11);
 
   doc.text(
-    "Dr. Maximilien Methodius, Institutsleiter",
+    "Dr. Maximilian Methodius, Institutsleiter",
     w / 2,
     yBasis(h - 262 * MM),
     { align: "center" }
