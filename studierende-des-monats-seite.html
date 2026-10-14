@@ -1,0 +1,46 @@
+---
+layout: base.njk
+pagination:
+  data: studierendeDesMonats
+  size: 1
+  alias: person
+permalink: "studierende-des-monats-{{ person.slug }}.html"
+title: Studierende des Monats
+description: Eine Auszeichnung des Methodius-Instituts für Studierende, die ihr Studium mit bemerkenswerter Eigenwilligkeit betreiben.
+eleventyComputed:
+  robots: "{% if not person.veroeffentlicht %}noindex{% endif %}"
+extraCss:
+- personal-des-monats.css
+extraJs:
+- datumsformat.js
+- markdown.js
+- studierende-des-monats.js
+---
+<!--
+  Eine Seite pro Eintrag in data/studierende-des-monats.json
+  (Eleventy-Pagination, wie bei personal-des-monats-seite.html). Der
+  eigentliche Inhalt wird im Browser aus
+  md/studierende-des-monats/<slug>.md geladen und von
+  js/studierende-des-monats.js eingesetzt.
+
+  Ist "datum" leer oder liegt es in der Zukunft, zeigt die Seite nur
+  "nicht gefunden" (außer im lokalen Debug-Modus). Solange
+  STUDIERENDE_NUR_DEBUG in der JS-Datei true ist, gilt das für ALLE
+  Einträge, auch für bereits datierte.
+
+  Die Daten kommen aus _data/studierendeDesMonats.js, die
+  data/studierende-des-monats.json einliest und pro Eintrag das Feld
+  "veroeffentlicht" ergänzt. Unveröffentlichte Seiten werden per
+  noindex von Suchmaschinen ausgenommen.
+
+  ACHTUNG beim Veröffentlichen: Sobald STUDIERENDE_NUR_DEBUG auf false
+  steht, sind datierte Einträge öffentlich - das noindex hier hängt nur
+  am Datum.
+-->
+<div id="personal-inhalt" data-slug="{{ person.slug }}">
+  <section class="section">
+    <div class="wrap">
+      <p>Lade Studierende …</p>
+    </div>
+  </section>
+</div>

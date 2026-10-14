@@ -12,7 +12,7 @@
           <a href="{{ punkt.href | url }}"{% if page.url == punkt.href %} aria-current="page"{% endif %}>{{ punkt.titel }}</a>
           <ul class="untermenue">
             {%- for unter in punkt.unterpunkte %}
-            <li><a href="{{ unter.href | url }}"{% if page.url == unter.href %} aria-current="page"{% endif %}>{{ unter.titel }}</a></li>
+            <li{% if unter.nurDebug %} data-nur-debug hidden{% endif %}><a href="{{ unter.href | url }}"{% if page.url == unter.href %} aria-current="page"{% endif %}>{{ unter.titel }}</a></li>
             {%- endfor %}
           </ul>
         </li>

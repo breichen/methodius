@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: Studierende des Monats
+description: Die Auszeichnung des Methodius-Instituts für Studierende, die ihr Studium mit bemerkenswerter Eigenwilligkeit betreiben.
+robots: noindex
+sitemap: false
+tally: true
+extraCss:
+- personal-des-monats.css
+extraJs:
+- datumsformat.js
+- markdown.js
+- studierende-des-monats.js
+---
+<!--
+  Übersicht aller bereits ernannten "Studierende des Monats".
+
+  AKTUELL NUR IM DEBUG-MODUS SICHTBAR:
+    - Der Inhalt (#studierende-seite) ist anfangs "hidden" und wird von
+      js/studierende-des-monats.js nur eingeblendet, wenn der Debug-Modus
+      aktiv ist (siehe STUDIERENDE_NUR_DEBUG in der JS-Datei).
+    - "robots: noindex" und "sitemap: false" im Front Matter halten die
+      Seite aus Suchmaschinen heraus.
+  ZUM VERÖFFENTLICHEN: STUDIERENDE_NUR_DEBUG in der JS-Datei auf false
+  setzen, "robots: noindex" und "sitemap: false" hier entfernen und
+  "nurDebug" in _data/navigation.json sowie "data-nur-debug hidden" in
+  studium.html löschen.
+
+  Datenquelle: data/studierende-des-monats.json
+    ([{ "slug": "...", "datum": "YYYY-MM-DD" }, ...])
+  Einträge ohne "datum" oder mit einem Datum in der Zukunft werden NICHT
+  angezeigt. Im lokalen Debug-Modus (?debug=1, siehe datumsformat.js)
+  erscheinen ALLE Einträge, die unveröffentlichten gestrichelt und mit
+  dem Zusatz "nicht veröffentlicht".
+  Name und Lehrgang stammen aus der jeweiligen Markdown-Datei
+  (md/studierende-des-monats/<slug>.md): erste "# "-Zeile bzw. die Zeile
+  "**Lehrgang:** ...".
+
+  Die Karten verlinken auf die pro Eintrag erzeugte Seite
+  studierende-des-monats-<slug>.html (siehe studierende-des-monats-seite.html).
+  Die Kartenstile (.personal-grid, .personal-karte ...) werden bewusst
+  von "Personal des Monats" mitbenutzt (css/personal-des-monats.css).
+-->
+<div id="studierende-seite" hidden>
+
+  <!-- ===== EINLEITUNG ===== -->
+  <section class="section">
+    <div class="wrap">
+
+      <h1>Studierende des Monats</h1>
+
+      <p>
+        Jeden Monat zeichnet das Methodius-Institut Studierende aus,
+        die ihr Studium mit bemerkenswerter Konsequenz betreiben –
+        wenn auch nicht unbedingt in die vorgesehene Richtung.
+      </p>
+
+      <p>
+        Klick auf eine Karte, um zu erfahren, wer es war, was geleistet
+        wurde und womit das Institut dafür dankt.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ===== KAPITEL: ALLE AUSGEZEICHNETEN ===== -->
+  <section id="personal-sektion" class="section section-alt">
+    <div class="wrap">
+
+      <h2>Bisher ausgezeichnet</h2>
+
+      <div id="personal-liste" class="personal-grid">
+        <p>Lade Studierende …</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== KAPITEL: BEWERBUNG ===== -->
+  <section class="section">
+    <div class="wrap">
+
+      <h2>Selbst bewerben</h2>
+
+      <p>
+        Du hast im Methodius-Studium Außergewöhnliches geleistet –
+        oder zumindest etwas, das wir so nennen? Dann bewirb dich als
+        Studierende des Monats. Das Institut prüft jede Bewerbung
+        mit der gebotenen wissenschaftlichen Ernsthaftigkeit.
+      </p>
+
+      <!-- TODO: Tally-Formular anlegen und die ID unten eintragen -->
+      <button type="button" class="quiz-start-button"
+              data-tally-open="HIER-TALLY-ID" data-tally-layout="modal">
+        Jetzt bewerben
+      </button>
+
+    </div>
+  </section>
+
+</div>

@@ -3,6 +3,8 @@ layout: base.njk
 title: Studium
 extraCss:
   - landing-page.css
+extraJs:
+  - datumsformat.js
 ---
 <main>
 
@@ -48,6 +50,17 @@ extraCss:
           <p>
             Übersicht über absolvierte Lehrgänge, erworbene Zertifikate
             und den aktuellen Stand des eigenen Methodius-Studiums.
+          </p>
+        </a>
+
+        <!-- Nur im Debug-Modus sichtbar (siehe js/menu.js). Zum
+             Veröffentlichen "data-nur-debug hidden" entfernen. -->
+        <a class="kategorie-card" href="studierende-des-monats.html" data-nur-debug hidden>
+          <h3>Studierende des Monats</h3>
+          <p>
+            Die monatliche Auszeichnung für Studierende mit
+            bemerkenswerter Eigenwilligkeit. Bewerbung ausdrücklich
+            erwünscht.
           </p>
         </a>
 

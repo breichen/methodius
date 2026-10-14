@@ -38,6 +38,11 @@
       {
         "titel": "Studienfortschritt",
         "href": "/studienfortschritt.html"
+      },
+      {
+        "titel": "Studierende des Monats",
+        "href": "/studierende-des-monats.html",
+        "nurDebug": true
       }
     ]
   },
